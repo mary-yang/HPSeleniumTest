@@ -1,0 +1,64 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/Summary of Benefit/LinkRegression/IFPLinkRegression</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">links verification2</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${URL}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//div[@id='planMarketingMaterial']/div[1]/a@href</td>
+	<td>${ex_sblink}</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//div[@id='planMarketingMaterial']/div[2]/a@href</td>
+	<td>${ex_brochure}</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[@id='planMarketingMaterial']/div[1]/a@href</td>
+	<td>sblink</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[@id='planMarketingMaterial']/div[2]/a@href</td>
+	<td>brochure</td>
+</tr>
+<tr>
+       <td>IF</td>
+	<td>verifyElementPresent('link=Covered Drugs')</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyAttribute</td>
+	<td>//div[@id='planMarketingMaterial']/div[3]/a@href</td>
+	<td>${ex_drug}</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[@id='planMarketingMaterial']/div[3]/a@href</td>
+	<td>druglink</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	

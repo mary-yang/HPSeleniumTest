@@ -1,0 +1,238 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/Dental/dental_census</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">dental_census</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/dental-insurance/california-quote</td>
+	<td></td>
+</tr>
+<!--delayed popup
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/dental_delayed_popup</td>
+	<td></td>
+</tr>
+-->
+<tr>
+	<td>click</td>
+	<td>id=helpTab</td>
+	<td></td>
+</tr>
+<!--census-->
+<tr>
+	<td>verifyText</td>
+	<td>id=census-text-wrapper</td>
+	<td>Find dental insurance for a 35 year old individualDate of BirthAPPLICANT+ Spouse+ ChildUpdate Results<br /><br /><br /> living in californiaZip Code<br /><br />Update Results</td>
+</tr>
+<!--census-zip code-->
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-location-container']/span/span[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=responsive-zip-input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=responsive-zip-input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=responsive-zip-input</td>
+	<td>90001</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-location-collapse']/div/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='js-location-container']/span/span[2]/a</td>
+	<td>Firestone Park, CA</td>
+</tr>
+<!--applicant-->
+<tr>
+	<td>click</td>
+	<td>link=35 year old individual</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=dob-P-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-P-0</td>
+	<td>10101980</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-applicants-collapse']/div/div/button[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.js-collapse-toggle.census-section-toggle</td>
+	<td>36 year old individual</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.js-collapse-toggle.census-section-toggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[contains(text(),'+ Spouse')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>//button[contains(text(),'+ Spouse')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//button[contains(text(),'+ Spouse')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'+ Spouse')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=dob-S-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-S-1</td>
+	<td>10101978</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-applicants-collapse']/div/div/button[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.js-collapse-toggle.census-section-toggle</td>
+	<td>Family of 2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.js-collapse-toggle.census-section-toggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[contains(text(),'+ Child')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>//button[contains(text(),'+ Child')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//button[contains(text(),'+ Child')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'+ Child')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=dob-C-2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-C-2</td>
+	<td>01012010</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-applicants-collapse']/div/div/button[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.js-collapse-toggle.census-section-toggle</td>
+	<td>Family of 3</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	

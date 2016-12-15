@@ -1,0 +1,175 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression - TS/Dental/dental_flow</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DT_deatil_apply</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://52.90.125.215:3000/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://52.90.125.215:3000/dental-insurance/quote?zip=${zipcode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.amount</td>
+	<td>price</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.planName</td>
+	<td>plan_name</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=p.planText</td>
+	<td>plan_type</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=p.planCost</td>
+	<td></td>
+</tr>
+<!--plan detail-->
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.planName</td>
+	<td>${plan_name}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.amount</td>
+	<td>${price}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div/div[3]/div[2]</td>
+	<td>${plan_type}</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.details-section-header</td>
+	<td>Benefits &amp; Coverage</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=+ See All Coverage Details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#fullDetailsCollapse &gt; h2.details-section-header</td>
+	<td>Cost &amp; Coverage</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=+ See All Coverage Details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section[3]/h2</td>
+	<td>Dentist Directory</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='detailsContainer']/div[3]/div[2]/article/section[4]/h2</td>
+	<td>Similar Plans</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='detailsContainer']/div[3]/div[2]/article/section[5]/h2</td>
+	<td>Related Articles</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='detailsContainer']/div[3]/div[2]/article/section[6]/h2</td>
+	<td>Related Searches</td>
+</tr>
+<!--apply page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>${plan_name}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=dd</td>
+	<td>${price}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='planSummary']/div[2]/dl/dd[2]</td>
+	<td>${plan_type}</td>
+</tr>
+<!-- Dental apply is disabled on 2016/04
+<tr>
+	<td>verifyVisible</td>
+	<td>link=CONTINUE ONLINE</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//a[@class='button btn applyButton dental js-continue-online']/@href</td>
+	<td>herf</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${herf}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${herf}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2</td>
+	<td>Information on your chosen plan...</td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Continue Searching</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Continue Searching</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Get ${state} Dental Insurance Quotes - Healthpocket</td>
+	<td></td>
+</tr>
+-->
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	

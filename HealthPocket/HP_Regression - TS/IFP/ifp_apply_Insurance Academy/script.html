@@ -1,0 +1,226 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression - TS/IFP/ifp_apply_Insurance Academy</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ifp_apply</td></tr>
+</thead><tbody>
+<!--PT#81143184-->
+<tr>
+	<td>open</td>
+	<td>http://52.90.125.215:3000/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://52.90.125.215:3000/individual-health-insurance/quote/2016?zip=${zipcode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.amount</td>
+	<td>price</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//span/img@alt</td>
+	<td>carrier</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.planName</td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//ul[@id='plans']/li[2]/a/span[3]/span</td>
+	<td>level</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.planType.planSection &gt; p</td>
+	<td>type</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.deductible.planSection &gt; p</td>
+	<td>deductible</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.oopMax.planSection &gt; p</td>
+	<td>oop</td>
+</tr>
+<!--detail-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//ul[@id='plans']/li[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.planName</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.amount</td>
+	<td>${price}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div/div/div[2]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div/div[3]/div[2]</td>
+	<td>2015</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div/div[6]/div[2]</td>
+	<td>${level}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div/div[7]/div[2]</td>
+	<td>${type}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div/div[8]/div[2]</td>
+	<td>${deductible}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div/div[9]/div[2]</td>
+	<td>${oop}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div/div[2]/div[2]</td>
+	<td>id</td>
+</tr>
+<!--docker-->
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div/div[4]/div[2]</td>
+	<td>insurance_type</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.docker-title</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.docker-subtitle</td>
+	<td>${insurance_type}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=strong</td>
+	<td>Don't overpay for your Health Insurance.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.docker-phone-copy</td>
+	<td>Call Toll Free</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.docker-phone-number</td>
+	<td>(800) 984-8015</td>
+</tr>
+<!--delayed popup
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/ifp_delayed_popup</td>
+	<td></td>
+</tr>
+-->
+<!--apply-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${deductible}'.replace(',','').replace('.00','')</td>
+	<td>deductible1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${oop}'.replace(',','')</td>
+	<td>oop1</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//div[@id='planSummary']/div[2]/dl/dd@title</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='planSummary']/div[2]/dl/dd[2]</td>
+	<td>${id}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='planSummary']/div[2]/dl/dd[3]</td>
+	<td>${type}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='planSummary']/div[2]/dl/dd[4]</td>
+	<td>${deductible1}*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='planSummary']/div[2]/dl/dd[5]</td>
+	<td>${oop1}*</td>
+</tr>
+<!----------------------
+<tr>
+	<td>verifyVisible</td>
+	<td>link=CONTINUE ONLINE</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='callText']/div/p[2]</td>
+	<td>(800) 984-8015</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[@id='online']/div/a@href</td>
+	<td>aaaa</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${aaaa}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${aaaa}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.pull-right.header-phone</td>
+	<td>Call Now *</td>
+</tr>
+-------------------------->
+</tbody></table>
+</body>
+</html>
+	

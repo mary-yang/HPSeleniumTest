@@ -1,0 +1,9 @@
+id,state,zip,Plan Category,Plan Type,HP ID (may be blank),Company Name (normalized),Plan Name,ex_enlink,ex_splink,enlink,splink
+H1997-002-0,WA,98019,PARTCRX,HMO,RegenceBlueShield_WA,Regence BlueShield,Regence BlueAdvantage HMO (HMO),https://www.regence.com/documents/10192/1954828/Summary+of+benefits+-+Blue+MedAdvantage+%28HMO%29/2e7d25ee-6774-4c36-a8f2-de07e7b8f5ec,,${enlink},${splink}
+H5009-001-0,WA,98305,PARTC,PPO,RegenceBlueShield_WA,Regence BlueShield,Regence MedAdvantage Basic (PPO),https://www.regence.com/documents/10192/1964881/Summary+of+benefits+-+MedAdvantage+%28PPO%29%20%2B%20Rx/54aea8ef-404c-4483-b0ce-7b38fb34a1c6,,${enlink},${splink}
+H5009-002-0,WA,98305,PARTCRX,PPO,RegenceBlueShield_WA,Regence BlueShield,Regence MedAdvantage + Rx Classic (PPO),https://www.regence.com/documents/10192/1964881/Summary+of+benefits+-+MedAdvantage+%28PPO%29%20%2B%20Rx/54aea8ef-404c-4483-b0ce-7b38fb34a1c6,,${enlink},${splink}
+H1286-002-0,WA,99014,PARTCRX,HMO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete Plan 1 (HMO),https://www.uhcmedicaresolutions.com/alphadog/AAWA15HM3576651_001,,${enlink},${splink}
+H1286-003-0,WA,99014,PARTC,HMO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete Essential (HMO),https://www.uhcmedicaresolutions.com/alphadog/AAWA15HM3576652_001,,${enlink},${splink}
+H1286-009-0,WA,99014,PARTCRX,HMO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete Plan 2 (HMO),https://www.uhcmedicaresolutions.com/alphadog/AAWA15HM3576653_001,,${enlink},${splink}
+H5005-011-0,WA,98607,PARTCRX,HMO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete Plan 1 (HMO),https://www.uhcmedicaresolutions.com/alphadog/AAWA15HM3576768_002,,${enlink},${splink}
+H5005-019-0,WA,98607,PARTCRX,HMO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete Plan 3 (HMO),https://www.uhcmedicaresolutions.com/alphadog/AAWA15HM3576769_002,,${enlink},${splink}

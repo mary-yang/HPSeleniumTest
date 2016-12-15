@@ -1,0 +1,385 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/Medicare/medicare_quote page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">0000</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicare/quote/2016?zip=90001</td>
+	<td></td>
+</tr>
+<!--delayed popup
+<tr>
+	<td>include</td>
+	<td>HealthPocket/include/medicare_delayed_popup</td>
+	<td></td>
+</tr>
+-->
+<!--默认选项-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='sort']/div/button</td>
+	<td>Est. Annual Cost</td>
+</tr>
+
+<!--narrow by tool-->
+<!--cost-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle cost']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyChecked</td>
+	<td>css=div.filters &gt; ul &gt; li &gt; #priceRange-viewAll</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.glossaryWrapper &gt; p.emphasize</td>
+	<td>Estimated Annual Cost</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=priceRange-100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=$100 to $400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=removeAllFilters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading &gt; strong</td>
+	<td>21 Medicare Plans Found</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//*[@id='filterPlanRanges']/div[2]/ul/li/a/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--insurance-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle carriers']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#filterCarriers &gt; div.dropdown-menu &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//*[@id='filterCarriers']/div[1]/div[1]/ul[1]/li/label/span[1][text()='Anthem Blue Cross']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=//*[@id='filterCarriers']/div[2]/ul/li/a/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//*[@id='filterCarriers']/div[2]/ul/li/a/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<!--score-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle planPersonalScore']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#filterPersonalScore &gt; div.dropdown-menu &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterPersonalScore &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#planPersonalScoreGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>PERSONAL SCORE</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterPersonalScore &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=planPersonalScore-5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=9 and 10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.personalScore.rating-9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=p.personalScore.rating-9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=p &gt; div.qualityScoreBody</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p &gt; div.qualityScoreBody &gt; p.scoreHeading</td>
+	<td>PERSONAL SCORE: 9</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=p &gt; div.qualityScoreBody &gt; a.accordion-toggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//a[contains(text(),'Learn more')])[2]</td>
+	<td>Learn more</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=p &gt; button.close</td>
+	<td></td>
+</tr>
+<!--coverage type-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle planTypes']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#filterPlanTypes &gt; div.dropdown-menu &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#filterPlanTypes &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#planTypesGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>COVERAGE TYPE</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=HealthPocket Medicare Buyer’s Guide</td>
+	<td>HealthPocket Medicare Buyer’s Guide</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#filterPlanTypes &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<!--Premium-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle premium']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#filterPlanPremium &gt; div.dropdown-menu &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#filterPlanPremium &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#planPremiumGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>PREMIUM</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#filterPlanPremium &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=planPremiumRange-10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=$10 to $30</td>
+	<td></td>
+</tr>
+<!--remove all filter-->
+<tr>
+	<td>clickAt</td>
+	<td>id=removeAllFilters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<!--Deductible-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle deductible']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.dropdown-menu.pull-right &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=div.dropdown-menu.pull-right &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#planDeductibleGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>Deductible</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=div.dropdown-menu.pull-right &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=deductibleRange-200</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//ul[@id='plans']/li/a/span/p[contains(text(),'$200')]</td>
+	<td></td>
+</tr>
+<!--CMS Rating-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle cmsRating']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#planCmsRange &gt; div.dropdown-menu.pull-right &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#planCmsRange &gt; div.dropdown-menu.pull-right &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#planCmsRangeGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>CMS Rating</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#planCmsRange &gt; div.dropdown-menu.pull-right &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='planCmsRange']/div/div/ul/li/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=1 star &amp; Up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=removeAllFilters</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	

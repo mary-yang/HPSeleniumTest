@@ -1,0 +1,167 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Compare Rates/Family/HII/Companian</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>https://www.hiiquote.com/quote/quote.php?Plan_ID=87&amp;code=A11030010000000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='TabbedPanels1']/div/div/table/tbody/tr/td/table/tbody/tr/td[2]/a/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://www.hiiquote.com/quote/quote.php?Plan_ID=87&amp;code=A11030010000000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=State_Code</td>
+	<td>label=${state}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Zip_Code</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=Applicant_Gender</td>
+	<td>label=Male</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=Applicant_Age</td>
+	<td>label=31</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=Spouse_Flag</td>
+	<td>label=Yes</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=Spouse_Age</td>
+	<td>label=31</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=Spouse_Gender</td>
+	<td>label=Female</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=Children_Count</td>
+	<td>label=1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=Child_Gender1</td>
+	<td>label=Male</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Child_DOB1</td>
+	<td>01-01-2010</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=Ideminity_Benefit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote Now</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=Coinsurance_Option1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>$7,500</td>
+	<td>de1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[descendant::td[2][contains(text(),&quot;${de1}&quot;)]]/td[4]/img</td>
+	<td></td>
+</tr>
+<!---------------------------------------------------------------点no--------------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//tbody/tr/td[3][descendant::strong[contains(text(),'No')]]/input&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody/tr/td[3][descendant::strong[contains(text(),'No')]]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//table/tbody/tr[1]/td/table/tbody/tr[2]/td/table/tbody/tr[4]/td[descendant::strong[contains(text(),'No')]]/input&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table/tbody/tr[1]/td/table/tbody/tr[2]/td/table/tbody/tr[4]/td[descendant::strong[contains(text(),'No')]]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!------------------------------------------------------------点no---end-------------------------->
+<tr>
+	<td>storeText</td>
+	<td>//table/tbody/tr[11]/td/div/table/tbody/tr[descendant::td[2][contains(text(),&quot;${de1}&quot;)]]/td[3]</td>
+	<td>HII_P1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//table/tbody/tr[11]/td/div/table/tbody/tr/td/div[@style=&quot;display: block;&quot;]/table/tbody/tr[descendant::td[1][contains(text(),&quot;Total Initial Due&quot;)]]/td[2]/span</td>
+	<td>HII_P</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HII_P}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HII_P1}</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+
+	

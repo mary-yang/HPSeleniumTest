@@ -1,0 +1,9 @@
+id,state,zip,Plan Category,Plan Type,HP ID (may be blank),Company Name (normalized),Plan Name,ex_enlink,ex_splink,enlink,splink
+H9954-002-0,IN,46743,PARTCRX,HMO,AnthemBCBS,Anthem BCBS,Anthem MediBlue Select (HMO),https://www.anthem.com/shop/content/olspublic/pdf/2015/english/HMO_Kit_Md_Bl_Sel_All_IN.pdf,,${enlink},${splink}
+H9954-004-0,IN,46743,PARTCRX,HMO SNP,AnthemBCBS,Anthem BCBS,Anthem Dual Advantage (HMO SNP),https://www.anthem.com/shop/content/olspublic/pdf/2015/english/HMO_Kit_Md_Bl_Sel_All_IN.pdf,,${enlink},${splink}
+H1607-012-0,IN,47435,PARTCRX,PPO,AnthemBCBS,Anthem BCBS,Anthem Medicare Preferred Standard (PPO),https://www.anthem.com/shop/content/olspublic/pdf/2015/english/PPO_Kit_Md_Pref_Sta_IN.pdf,,${enlink},${splink}
+H9954-005-0,IN,46544,PARTCRX,HMO,AnthemBCBS,Anthem BCBS,Anthem MediBlue Select (HMO),https://www.anthem.com/shop/content/olspublic/pdf/2015/english/PPO_Kit_Md_Pref_Sta_IN.pdf,,${enlink},${splink}
+H1509-001-0,IN,46780,PARTCRX,PPO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete Choice (PPO),https://www.uhcmedicaresolutions.com/alphadog/AAIN15PP3576656_001,,${enlink},${splink}
+H1509-009-0,IN,47612,PARTCRX,PPO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete Choice (PPO),https://www.uhcmedicaresolutions.com/alphadog/AAIN15PP3576657_001,,${enlink},${splink}
+H1509-010-0,IN,46075,PARTCRX,PPO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete Choice (PPO),https://www.uhcmedicaresolutions.com/alphadog/AAIN15PP3576658_001,,${enlink},${splink}
+H1509-011-0,IN,46743,PARTCRX,PPO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete Focus (PPO),https://www.uhcmedicaresolutions.com/alphadog/AAIN15PP3576659_001,,${enlink},${splink}

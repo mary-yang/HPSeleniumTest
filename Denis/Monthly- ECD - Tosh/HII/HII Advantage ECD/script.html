@@ -1,0 +1,167 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Compare Rates - TS/Monthly- ECD/HII/HII Advantage ECD</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>https://www.hiiquote.com/quote/quote.php?Plan_ID=85&amp;code=A11030010000000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='TabbedPanels1']/div/div/table/tbody/tr/td/table/tbody/tr/td[2]/a/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://www.hiiquote.com/quote/quote.php?Plan_ID=85&amp;code=A11030010000000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=State_Code</td>
+	<td>label=${state}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Zip_Code</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img.ui-datepicker-trigger</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.ui-icon.ui-icon-circle-triangle-e</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=Applicant_Gender</td>
+	<td>label=Male</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Applicant_DOB</td>
+	<td>03-06-1995</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=Ideminity_Benefit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Quote Now</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=Coinsurance_Option1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@id='view_all_plan_buttom']/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//*[@id='ResultPage']//tr[descendant::td[contains(text(),'$7,500')]]/td[4]/img)[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>Rates</td>
+	<td>de1</td>
+</tr>
+<!---------------------------------------------------------------点no--------------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//tbody/tr/td[3][descendant::strong[contains(text(),'No')]]/input&quot;)</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>//tbody/tr/td[3][descendant::strong[contains(text(),'No')]]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//table/tbody/tr[1]/td/table/tbody/tr[2]/td/table/tbody/tr[4]/td[descendant::strong[contains(text(),'No')]]/input&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table/tbody/tr[1]/td/table/tbody/tr[2]/td/table/tbody/tr[4]/td[descendant::strong[contains(text(),'No')]]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!------------------------------------------------------------点no---end-------------------------->
+<tr>
+	<td>storeText</td>
+	<td>xpath=//div[@style='display: block;']//tr[descendant::td[contains(text(),'${de1}')]]/td/span</td>
+	<td>HII_P_Initial</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//div[@style='display: block;']//tr[descendant::td[contains(text(),'Thereafter Monthly Due: ')]]/td/span</td>
+	<td>HII_P_Monthly</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HII_P_Initial}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HII_P_Monthly}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+	
+	

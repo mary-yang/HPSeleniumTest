@@ -1,0 +1,6 @@
+ENV,url,city_name,state,state1,zipcode,quote,banner,detail,apply,mc_docker
+www,http://www.healthpocket.com/,Anchorage,Alaska,AK,99504,(800) 823-4790,(800) 823-4790,(800) 823-4790,(800) 823-4790,(800) 823-4790
+www,http://www.healthpocket.com/,Los Angeles,California,CA,90011,(800) 895-7124,(800) 895-7124,(800) 895-7124,(800) 895-7124,(800) 942-8708
+www,http://www.healthpocket.com/,Jacksonville,Florida,FL,33186,(800) 895-7124,(800) 895-7124,(800) 895-7124,(800) 895-7124,(800) 942-8708
+www,http://www.healthpocket.com/,New York,New York,NY,11226,(800) 895-7124,(800) 895-7124,(800) 895-7124,(800) 895-7124,(800) 942-8708
+www,http://www.healthpocket.com/,Sioux Falls,South Dakota,SD,57106,(800) 823-4790,(800) 823-4790,(800) 823-4790,(800) 823-4790,(800) 823-4790

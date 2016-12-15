@@ -1,0 +1,216 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Denis/Appcreation/perfcreateapp</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Appcreate</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var d = new Date(); d.getHours() +':'+ d.getMinutes() +':'+ d.getSeconds();</td>
+	<td>timestart</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${timestart}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/apply/hccadvantage-co-20-1000?utm_source=healthpocket&utm_campaign=continue_online&census[location][zip]=80219&census[member][0][role]=P&census[member][0][dob]=1980-10-10&census[member][0][gender]=M</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@id='js-upsell-modal']/div[2]/div/div/div/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+ <td>include</td>
+ <td>AHI/Include/Underwriting</td>
+ <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-172']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-173']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-177']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-178']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-179']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-180']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 2. Applicant Info</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@value='']</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=07</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=member-P-1-lbs</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>address</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>test.perf@suryani.cn</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>city</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>619-437-0209</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 3. Payment &amp; Billing</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4111 1231 2312 3123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-first</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-last</td>
+	<td>Last</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-month</td>
+	<td>label=12</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-year</td>
+	<td>label=2026</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=credit-payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=consent-checkbox-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-signature-tab</td>
+	<td></td>
+</tr>
+<!---------------------------------
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+------------------------------------>
+<tr>
+	<td>storeEval</td>
+	<td>var d = new Date(); d.getHours() +':'+ d.getMinutes() +':'+ d.getSeconds();</td>
+	<td>timeend</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${timeend}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	

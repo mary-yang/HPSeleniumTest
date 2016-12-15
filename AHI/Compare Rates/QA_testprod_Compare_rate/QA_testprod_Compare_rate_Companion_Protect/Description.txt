@@ -1,0 +1,2 @@
+1. each zip code has 5 case (different census)
+2. including monthly

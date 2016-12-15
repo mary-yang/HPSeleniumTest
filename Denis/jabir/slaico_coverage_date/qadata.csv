@@ -1,0 +1,3 @@
+"coverage_date_start","coverage_date_end","zip_code"
+"${the_first_coverage_start_date}","${the_first_coverage_end_date}",""
+"${coverage_last_start_date}","${coverage_last_end_date}",""

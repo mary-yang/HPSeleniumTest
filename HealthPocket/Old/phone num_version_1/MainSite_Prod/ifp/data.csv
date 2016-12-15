@@ -1,0 +1,6 @@
+ENV,url,city_name,state,state1,zipcode,quote,detail,apply,banner,ifp_docker
+www,http://www.healthpocket.com/,Anchorage,Alaska,AK,99504,(800) 471-6156,(800) 520-0394,(800) 562-9619,(800) 798-8321,(800) 597-5140
+www,http://www.healthpocket.com/,Los Angeles,California,CA,90011,(800) 471-6156,(800) 520-0394,(800) 562-9619,(800) 798-8321,(800) 597-5140
+www,http://www.healthpocket.com/,Jacksonville,Florida,FL,33186,(800) 471-6156,(800) 520-0394,(800) 562-9619,(800) 798-8321,(800) 597-5140
+www,http://www.healthpocket.com/,New York,New York,NY,11226,(800) 471-6156,(800) 520-0394,(800) 562-9619,(800) 798-8321,(800) 597-5140
+www,http://www.healthpocket.com/,Sioux Falls,South Dakota,SD,57106,(800) 471-6156,(800) 520-0394,(800) 562-9619,(800) 798-8321,(800) 597-5140

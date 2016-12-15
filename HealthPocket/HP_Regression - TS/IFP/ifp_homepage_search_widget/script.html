@@ -1,0 +1,71 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression - TS/IFP/ifp_homepage_search_widget</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ifp02</td></tr>
+</thead><tbody>
+<!--go to IFP quote from homepage with different value-->
+<tr>
+	<td>open</td>
+	<td>http://52.90.125.215:3000/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://52.90.125.215:3000/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=location</td>
+	<td>${input}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='inputs']/div[2]/div/div/ul/li[3]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=findPlans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading &gt; strong</td>
+	<td>* Medicare Plans Found*</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	

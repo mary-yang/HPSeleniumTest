@@ -1,0 +1,59 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Denis/HealthPocket/damon/medigap_trubridge/No Trubridge</title>
+</head>
+<body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">b</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicare-medigap/quote?zip=${zipcode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=.//*[@id='globalPhoneNumber']/span</td>
+	<td>num</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='plans']/ul/li[1]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='detailsContainer']/div[3]/div[2]/article/section[2]/div[3]/div[1]/div[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='applyBody']/h3</td>
+	<td>Ways to Apply or Learn More</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='callText']/div/p[2]</td>
+	<td>${num}</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+
+	
+	
+
+	
+	
+	

@@ -1,0 +1,67 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/phone num_version_2/Mainsite_Prod/SBG/dbg_detail_apply</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">sbg_detail_apply</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/small-business-health-insurance/quote?zip=${zipcode}</td>
+	<td></td>
+</tr>
+<!--detail-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.planName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p/span</td>
+	<td>${detail}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.phone.desktopOnly</td>
+	<td>${detail}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.desktopOnly</td>
+	<td>${detail}</td>
+</tr>
+
+<!--apply-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p/span</td>
+	<td>${apply}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='callText']/div/p[2]</td>
+	<td>${apply}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.desktopOnly</td>
+	<td>${apply}</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	

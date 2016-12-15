@@ -1,0 +1,136 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Denis/HealthPocket/damon/89025836</title>
+</head>
+<body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">89025836</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://pengujian.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://pengujian.healthpocket.com/individual-health-insurance/quote/2015?zip=${zipcode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=div.popup-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.pull-right.popup-close-control</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//p[@id='globalPhoneNumber']/span</td>
+	<td>num</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//ul[@id='plans']/li[5]/p/span[2]</td>
+	<td>${num}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='plans']/li[5]/p/span[1]</td>
+	<td>Got a tax penalty for being uninsured in 2014? Call</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=li.newPlanContainer.metal &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=html/body/div[3]/div/div/div[2]/p[1]/strong</td>
+	<td>Got a tax penalty for being uninsured in 2014? Call</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=More</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Find Plans by Doctor')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/div[7]/div[2]/ul/li[1]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=html body#hp-default.dr-details.hasDocker div.docker-container div.js-docker.docker div.docker-inner.row-fluid div.span4.docker-phone-section p.js-docker-cta.docker-countdown strong</td>
+	<td>Got a tax penalty for being uninsured in 2014? Call</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://pengujian.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://pengujian.healthpocket.com/city-healthplan-finder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${city_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Obamacare')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=div.popup-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.pull-right.popup-close-control</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=html/body/div[3]/div/div/div[2]/p[1]/strong</td>
+	<td>Got a tax penalty for being uninsured in 2014? Call</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+
+	
+	

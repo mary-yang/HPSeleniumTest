@@ -1,0 +1,55 @@
+provider,Plan_name,quote_testprod_rate,quote_QA_rate,QA_Apply_page_rate,testprod_Apply_page_rate,zipcode,Primary_dob,Primary_gender,Spouse_dob,Spouse_gender,Spouse,Spouse_enable,Child_dob,Child_gender,Child,Child_enable
+Companion Protect,Foundation Dental - Protector I,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},60001,1980/1/1,F,,,,,,,,
+Companion Protect,Foundation Dental - Defender,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},60001,1980/1/1,F,1980/1/1,M,S,1,,,,
+Companion Protect,Foundation Dental - Protector I and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},60001,1980/1/1,F,1980/1/1,M,S,1,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Guardian,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},60001,1980/1/1,F,,,,,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Defender and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},60001,1980/1/1,F,,,,,1997/1/1,M,C,2
+Companion Protect,Foundation Dental - Guardian and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},60001,1980/1/1,F,,,,,1997/1/1,M,C,2
+Companion Protect,Foundation Dental - Protector I,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},35215,1980/1/1,F,,,,,,,,
+Companion Protect,Foundation Dental - Defender,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},35215,1980/1/1,F,1980/1/1,M,S,1,,,,
+Companion Protect,Foundation Dental - Protector I and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},35215,1980/1/1,F,1980/1/1,M,S,1,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Guardian,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},35215,1980/1/1,F,,,,,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Defender and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},35215,1980/1/1,F,,,,,1997/1/1,M,C,2
+Companion Protect,Foundation Dental - Guardian and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},35215,1980/1/1,F,,,,,1997/1/1,M,C,2
+Companion Protect,Foundation Dental - Protector I,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},85364,1980/1/1,F,,,,,,,,
+Companion Protect,Foundation Dental - Defender,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},85364,1980/1/1,F,1980/1/1,M,S,1,,,,
+Companion Protect,Foundation Dental - Protector I and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},85364,1980/1/1,F,1980/1/1,M,S,1,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Guardian,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},85364,1980/1/1,F,,,,,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Defender and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},85364,1980/1/1,F,,,,,1997/1/1,M,C,2
+Companion Protect,Foundation Dental - Guardian and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},85364,1980/1/1,F,,,,,1997/1/1,M,C,2
+Companion Protect,Foundation Dental - Protector I,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},20015,1980/1/1,F,,,,,,,,
+Companion Protect,Foundation Dental - Defender,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},20015,1980/1/1,F,1980/1/1,M,S,1,,,,
+Companion Protect,Foundation Dental - Protector I and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},20015,1980/1/1,F,1980/1/1,M,S,1,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Guardian,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},20015,1980/1/1,F,,,,,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Defender and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},20015,1980/1/1,F,,,,,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Guardian and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},20015,1980/1/1,F,,,,,1997/1/1,M,C,2
+Companion Protect,Foundation Dental - Protector I,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},50317,1980/1/1,F,,,,,,,,
+Companion Protect,Foundation Dental - Defender,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},50317,1980/1/1,F,1980/1/1,M,S,1,,,,
+Companion Protect,Foundation Dental - Protector I and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},50317,1980/1/1,F,1980/1/1,M,S,1,,,,
+Companion Protect,Foundation Dental - Guardian,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},50317,1980/1/1,F,1980/1/1,M,S,1,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Defender and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},50317,1980/1/1,F,,,,,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Guardian and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},50317,1980/1/1,F,,,,,1997/1/1,M,C,2
+Companion Protect,Foundation Dental - Protector I,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},39503,1980/1/1,F,,,,,,,,
+Companion Protect,Foundation Dental - Defender,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},39503,1980/1/1,F,1980/1/1,M,S,1,,,,
+Companion Protect,Foundation Dental - Protector I and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},39503,1980/1/1,F,1980/1/1,M,S,1,,,,
+Companion Protect,Foundation Dental - Guardian,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},39503,1980/1/1,F,1980/1/1,M,S,1,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Defender and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},39503,1980/1/1,F,,,,,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Guardian and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},39503,1980/1/1,F,,,,,1997/1/1,M,C,2
+Companion Protect,Foundation Dental - Protector I,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},43228,1980/1/1,F,,,,,,,,
+Companion Protect,Foundation Dental - Defender,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},43228,1980/1/1,F,,,,,,,,
+Companion Protect,Foundation Dental - Protector I and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},43228,1980/1/1,F,1980/1/1,M,S,1,,,,
+Companion Protect,Foundation Dental - Guardian,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},43228,1980/1/1,F,1980/1/1,M,S,1,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Defender and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},43228,1980/1/1,F,,,,,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Guardian and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},43228,1980/1/1,F,,,,,1997/1/1,M,C,2
+Companion Protect,Foundation Dental - Protector I,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},73160,1980/1/1,F,,,,,,,,
+Companion Protect,Foundation Dental - Defender,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},73160,1980/1/1,F,1980/1/1,M,S,1,,,,
+Companion Protect,Foundation Dental - Protector I and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},73160,1980/1/1,F,1980/1/1,M,S,1,,,,
+Companion Protect,Foundation Dental - Guardian,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},73160,1980/1/1,F,1980/1/1,M,S,1,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Defender and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},73160,1980/1/1,F,,,,,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Guardian and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},73160,1980/1/1,F,,,,,1997/1/1,M,C,2
+Companion Protect,Foundation Dental - Protector I,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},19120,1980/1/1,F,,,,,,,,
+Companion Protect,Foundation Dental - Defender,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},19120,1980/1/1,F,1980/1/1,M,S,1,,,,
+Companion Protect,Foundation Dental - Protector I and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},19120,1980/1/1,F,1980/1/1,M,S,1,,,,
+Companion Protect,Foundation Dental - Guardian,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},19120,1980/1/1,F,1980/1/1,M,S,1,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Defender and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},19120,1980/1/1,F,,,,,2000/1/1,M,C,2
+Companion Protect,Foundation Dental - Guardian and Foundation Vision,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},19120,1980/1/1,F,,,,,1997/1/1,M,C,2

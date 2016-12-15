@@ -1,0 +1,36 @@
+id,state,zip,Plan Category,Plan Type,HP ID (may be blank),Company Name (normalized),Plan Name,ex_enlink,ex_splink,enlink,splink
+H3931-055-0,PA,18036,PARTC,HMO,Aetna_Med,Aetna,Aetna Medicare Basic Plan (HMO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/pa-hmo-sb-bucks-chester-delaware-2015.pdf,,${enlink},${splink}
+H3931-004-0,PA,18036,PARTCRX,HMO,Aetna_Med,Aetna,Aetna Medicare Premier Plan (HMO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/pa-hmo-sb-bucks-chester-delaware-2015.pdf,,${enlink},${splink}
+H3931-064-0,PA,18036,PARTCRX,HMO,Aetna_Med,Aetna,Aetna Medicare Standard Plan (HMO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/pa-hmo-sb-bucks-chester-delaware-2015.pdf,,${enlink},${splink}
+H3931-070-0,PA,17026,PARTCRX,HMO,Aetna_Med,Aetna,Aetna Medicare Standard Plan (HMO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/pa-hmo-sb-central-northeast-2015.pdf,,${enlink},${splink}
+H3931-054-0,PA,17026,PARTC,HMO,Aetna_Med,Aetna,Aetna Medicare Basic Plan (HMO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/pa-hmo-sb-central-northeast-2015.pdf,,${enlink},${splink}
+H3931-091-0,PA,17001,PARTCRX,HMO,Aetna_Med,Aetna,Aetna Medicare PinnacleHealth Prime Plan (HMO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/pa-hmo-sb-cumberland-dauphin-2015.pdf,,${enlink},${splink}
+H3931-084-0,PA,18054,PARTCRX,HMO,Aetna_Med,Aetna,Aetna Medicare Premier Plan (HMO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/pa-hmo-sb-montgomery-2015.pdf,,${enlink},${splink}
+H3931-083-0,PA,18054,PARTCRX,HMO,Aetna_Med,Aetna,Aetna Medicare Standard Plan (HMO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/pa-hmo-sb-montgomery-2015.pdf,,${enlink},${splink}
+H3931-065-0,PA,19128,PARTCRX,HMO,Aetna_Med,Aetna,Aetna Medicare Standard Plan (HMO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/pa-hmo-sb-philadelphia-2015.pdf,,${enlink},${splink}
+H3931-058-0,PA,19128,PARTCRX,HMO,Aetna_Med,Aetna,Aetna Medicare Premier Plan (HMO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/pa-hmo-sb-philadelphia-2015.pdf,,${enlink},${splink}
+H5521-012-0,PA,17026,PARTCRX,PPO,Aetna_Med,Aetna,Aetna Medicare Premier Plan (PPO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/pa-ppo-sb-central-northeast-2015.pdf,,${enlink},${splink}
+H4102-030-0,PA,17026,PARTCRX,HMO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete (HMO),https://www.uhcmedicaresolutions.com/alphadog/AAPA15HM3576731_001,,${enlink},${splink}
+H3921-001-0,PA,17506,PARTCRX,PPO,UnitedHealthcare_Med,UnitedHealthcare,UnitedHealthcare MedicareComplete Choice (PPO),https://www.uhcmedicaresolutions.com/alphadog/UHPA15PP3576726_001,,${enlink},${splink}
+H3959-041-0,PA,17310,PARTC,HMO,CoventryHealthCare,Coventry Health Care,Advantra Basic Medical (HMO),http://coventry-medicare.coventryhealthcare.com/A300534,,${enlink},${splink}
+H3959-035-0,PA,18036,PARTCRX,HMO SNP,CoventryHealthCare,Coventry Health Care,Advantra Cares (HMO SNP),http://coventry-medicare.coventryhealthcare.com/A300529,,${enlink},${splink}
+H3959-032-0,PA,15832,PARTCRX,HMO,CoventryHealthCare,Coventry Health Care,Advantra Silver Plus (HMO),http://coventry-medicare.coventryhealthcare.com/A300527,,${enlink},${splink}
+H3959-037-0,PA,16611,PARTCRX,HMO,CoventryHealthCare,Coventry Health Care,Advantra Northern Pennsylvania Gold (HMO),http://coventry-medicare.coventryhealthcare.com/A300531,,${enlink},${splink}
+H3959-002-0,PA,15613,PARTCRX,HMO,CoventryHealthCare,Coventry Health Care,Advantra Gold (HMO),http://coventry-medicare.coventryhealthcare.com/A300525,,${enlink},${splink}
+H3959-039-0,PA,17310,PARTCRX,HMO,CoventryHealthCare,Coventry Health Care,Advantra Silver Plus (HMO),http://coventry-medicare.coventryhealthcare.com/A300533,,${enlink},${splink}
+H3959-036-0,PA,17310,PARTCRX,HMO SNP,CoventryHealthCare,Coventry Health Care,Advantra Cares (HMO SNP),http://coventry-medicare.coventryhealthcare.com/A300530,,${enlink},${splink}
+H3959-038-0,PA,19128,PARTCRX,HMO,CoventryHealthCare,Coventry Health Care,Advantra UCPN Plus (HMO),http://coventry-medicare.coventryhealthcare.com/A300532,,${enlink},${splink}
+H3959-031-0,PA,12719,PARTCRX,HMO,CoventryHealthCare,Coventry Health Care,Advantra Silver (HMO),http://coventry-medicare.coventryhealthcare.com/A300526,,${enlink},${splink}
+H3959-010-0,PA,15003,PARTCRX,HMO,CoventryHealthCare,Coventry Health Care,Advantra Silver (HMO),http://coventry-medicare.coventryhealthcare.com/A300523,,${enlink},${splink}
+H3959-001-0,PA,15003,PARTCRX,HMO,CoventryHealthCare,Coventry Health Care,Advantra Gold (HMO),http://coventry-medicare.coventryhealthcare.com/A300522,,${enlink},${splink}
+H3959-011-0,PA,17310,PARTCRX,HMO,CoventryHealthCare,Coventry Health Care,Advantra Silver (HMO),http://coventry-medicare.coventryhealthcare.com/A300524,,${enlink},${splink}
+H3959-033-0,PA,18036,PARTCRX,HMO,CoventryHealthCare,Coventry Health Care,Advantra Silver (HMO),http://coventry-medicare.coventryhealthcare.com/A300528,,${enlink},${splink}
+H5522-014-0,PA,12719,PARTCRX,PPO,CoventryHealthCare,Coventry Health Care,Advantra Gold (PPO),http://coventry-medicare.coventryhealthcare.com/A300549,,${enlink},${splink}
+H5522-001-0,PA,15003,PARTCRX,PPO,CoventryHealthCare,Coventry Health Care,Advantra Gold (PPO),http://coventry-medicare.coventryhealthcare.com/A300547,,${enlink},${splink}
+H5522-005-0,PA,15613,PARTCRX,PPO,CoventryHealthCare,Coventry Health Care,Advantra Silver (PPO),http://coventry-medicare.coventryhealthcare.com/A300555,,${enlink},${splink}
+H5522-013-0,PA,17310,PARTCRX,PPO,CoventryHealthCare,Coventry Health Care,Advantra Silver Plus (PPO),http://coventry-medicare.coventryhealthcare.com/A300548,,${enlink},${splink}
+H5522-004-0,PA,17310,PARTCRX,PPO,CoventryHealthCare,Coventry Health Care,Advantra Silver (PPO),http://coventry-medicare.coventryhealthcare.com/A300554,,${enlink},${splink}
+H5522-002-0,PA,17310,PARTCRX,PPO,CoventryHealthCare,Coventry Health Care,Advantra Gold (PPO),http://coventry-medicare.coventryhealthcare.com/A300553,,${enlink},${splink}
+H5522-017-0,PA,17310,PARTCRX,PPO,CoventryHealthCare,Coventry Health Care,AdvantraOne (PPO),http://coventry-medicare.coventryhealthcare.com/A300551,,${enlink},${splink}
+H5522-018-0,PA,15003,PARTCRX,PPO,CoventryHealthCare,Coventry Health Care,ADVANTRA SILVER (PPO),http://coventry-medicare.coventryhealthcare.com/A300552,,${enlink},${splink}
+H5522-015-0,PA,18036,PARTCRX,PPO,CoventryHealthCare,Coventry Health Care,Advantra Gold (PPO),http://coventry-medicare.coventryhealthcare.com/A300550,,${enlink},${splink}

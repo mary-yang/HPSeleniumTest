@@ -1,0 +1,4 @@
+"state","zipcode","carrierid","uri","AutoEmail"
+"CT","06606","carrier-premierstm-","${uri}","${AutoEmail}"
+"GA","30301","carrier-premierstm-","${uri}","${AutoEmail}"
+"FL","32099","carrier-premierstm-","${uri}","${AutoEmail}"

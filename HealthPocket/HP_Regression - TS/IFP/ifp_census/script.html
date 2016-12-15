@@ -1,0 +1,294 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression - TS/IFP/ifp_census</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ifp09</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://52.90.125.215:3000/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://52.90.125.215:3000/individual-health-insurance/california-quote/2016</td>
+	<td></td>
+</tr>
+<!--delayed popup
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/ifp_delayed_popup</td>
+	<td></td>
+</tr>
+-->
+<!--census-->
+<tr>
+	<td>verifyText</td>
+	<td>id=census-title</td>
+	<td>Find health insurance plans for a:</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=a.sprite-dark-info.glossary</td>
+	<td></td>
+</tr>
+<!--applicant-->
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='js-member-container']/span/span[2]/a</td>
+	<td>35 year old individual</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=35 year old individual</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-P-0</td>
+	<td>10/10/1980</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='js-member-container']/span/span[2]/a</td>
+	<td>35 year old individual</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-member-container']/span/span[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=dob-S-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-S-1</td>
+	<td>11/11/1978</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='js-member-container']/span/span[2]/a</td>
+	<td>Family of 2</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<!--location-->
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='js-location-container']/span/span[2]/a</td>
+	<td>California</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-location-container']/span/span[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=responsive-zip-input</td>
+	<td>90001</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-location-collapse']/div/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='js-location-container']/span/span[2]/a</td>
+	<td>Firestone Park , CA</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<!--subsidy-->
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='js-subsidy-container']/span/span[2]/a</td>
+	<td>does not qualify</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=does not qualify</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=household-income-label</td>
+	<td>Annual Household Income</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=applicant-tab-income-input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=applicant-tab-income-input</td>
+	<td>20000</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='js-subsidy-container']/span/span</td>
+	<td>who qualifies for a</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='js-subsidy-container']/span/span[2]/a</td>
+	<td>* tax subsidy,</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<!--current plan-->
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='js-current-plan-container']/span/span</td>
+	<td>and currently</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.missing</td>
+	<td>does not have health insurance.</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=span.missing</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=select.span12.js-carriers-dropdown</td>
+	<td>label=Cigna</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[8]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+        <td>xpath=//div[4]/div/div/li[4]/span/span[2]/a</td>	
+	<td>Cigna California Bronze Plan*</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	

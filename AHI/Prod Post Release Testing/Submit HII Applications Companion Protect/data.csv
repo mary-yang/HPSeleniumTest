@@ -1,0 +1,4 @@
+"state","zipcode","carrierid","planname","mo","uri","DOB"
+"##UT","84101","carrier-hccadvantage-","${planname}","${mo}","${uri}","01/01/1985"
+"##UT","84101","carrier-hccflexible-","${planname}","${mo}","${uri}","01/01/1985"
+"IL","60001","carrier-companionprotect-","${planname}","${mo}","${uri}","01/01/1985"

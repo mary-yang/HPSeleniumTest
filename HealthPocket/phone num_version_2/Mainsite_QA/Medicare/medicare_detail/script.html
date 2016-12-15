@@ -1,0 +1,63 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/phone num_version_2/Mainsite_Prod/Medicare/medicare_detail</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">medicare_detail</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicare/quote/2015?zip=${zipcode}</td>
+	<td></td>
+</tr>
+<!--detail-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//ul[@id='plans']/li[2]/a</td>
+	<td></td>
+</tr>
+<!--delayed popup-->
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/medicare_delayed_popup</td>
+	<td></td>
+</tr>
+<!--
+<tr>
+	<td>verifyText</td>
+	<td>css=p.phone.desktopOnly</td>
+	<td>${detail}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.desktopOnly</td>
+	<td>${detail}</td>
+</tr>
+-->
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=span.docker-phone-number</td>
+	<td>${detail}</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	

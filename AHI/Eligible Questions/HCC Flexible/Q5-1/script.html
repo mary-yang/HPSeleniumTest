@@ -1,0 +1,200 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Question/HCC Flexible/Q5-1</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote & Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-primary-age.census-age-input</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=p-gender-m</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//div[@id='js-quote-filters']/div/ul/li[2]/label[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=.//*[@id='js-quote-plans-container']/ul/li[*]/div/div[1][h3[contains(text(),'HCC Flexible')]]/h3[1]</td>
+	<td>plan</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-quote-plans-container']/ul/li[*]/div/div[1][h3[contains(text(),'HCC Flexible')]]/a[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryDOB</td>
+	<td>01/01/1980</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<!-- -------
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>title=Short Term Health Insurance, Affordable Health Plans, Affordable Obamacare Supplemental Health Insurance - AgileHealthInsurance.com</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>selectWindow</td>
+	<td>_blank</td>
+	<td></td>
+</tr>
+-->
+<tr>
+	<td>verifyText</td>
+	<td>xpath=/html/body/div[3]/form/div/div[1]/div/div/div[1]/ul/li[1]/p</td>
+	<td>${Q1}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=/html/body/div[3]/form/div/div[1]/div/div/div[1]/ul/li[1]/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=/html/body/div[3]/form/div/div[1]/div/div/div[1]/ul/li[2]/p</td>
+	<td>${Q2}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=/html/body/div[3]/form/div/div[1]/div/div/div[1]/ul/li[2]/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=/html/body/div[3]/form/div/div[1]/div/div/div[1]/ul/li[3]/p</td>
+	<td>${Q3}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=/html/body/div[3]/form/div/div[1]/div/div/div[1]/ul/li[3]/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=/html/body/div[3]/form/div/div[1]/div/div/div[1]/ul/li[4]/p</td>
+	<td>${Q4}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=/html/body/div[3]/form/div/div[1]/div/div/div[1]/ul/li[4]/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=/html/body/div[3]/form/div/div[1]/div/div/div[1]/ul/li[5]/p</td>
+	<td>${Q5}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=/html/body/div[3]/form/div/div[1]/div/div/div[1]/ul/li[5]/div/button[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.emphasize.heading</td>
+	<td>Congratulations, you have met all of the eligibility requirements. Please continue on to the next step of the application.</td>
+</tr>
+	</tbody>
+</table>
+</body>
+</html>
+	
+
+	
+	

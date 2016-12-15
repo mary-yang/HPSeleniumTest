@@ -1,0 +1,4 @@
+id,state,zip,Plan Category,Plan Type,HP ID (may be blank),Company Name (normalized),Plan Name,ex_enlink,ex_splink,enlink,splink
+H4102-001-0,RI,2806,PARTCRX,HMO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete Plan 2 (HMO),https://www.uhcmedicaresolutions.com/alphadog/AARI15HM3576729_001,,${enlink},${splink}
+H4102-025-0,RI,2806,PARTC,HMO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete Essential (HMO),https://www.uhcmedicaresolutions.com/alphadog/AARI15HM3576730_003,,${enlink},${splink}
+H4102-032-0,RI,2806,PARTCRX,HMO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete Plan 1 (HMO),https://www.uhcmedicaresolutions.com/alphadog/AARI15HM3576733_001,,${enlink},${splink}

@@ -1,0 +1,7 @@
+1 single male 45 years
+zip:32099
+DOB:12/21/1969
+Coverage from 07/17/2015 to 08/17/2015
+Coverage Duration on HII: 31 days
+
+Compare  premium for all available states between AHI and HII

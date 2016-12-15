@@ -1,0 +1,2 @@
+Dental is not available in: AK CO KS MD ME MI MT NC NH SD VT WA
+Vision is not available in : AK AR CO FL GA KS MA MD ME MI MT NC NH NJ SD UT VA VT WA

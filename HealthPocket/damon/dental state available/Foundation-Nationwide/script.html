@@ -1,0 +1,117 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Denis/HealthPocket/damon/dental state available/Foundation-Nationwide</title>
+</head>
+<body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">dental_usa plus</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://pengujian.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://pengujian.healthpocket.com/dental-insurance/quote?zip=${zipcode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/dental_delayed_popup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterCarriers']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=carrier-Nationwide</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=carrier-Nationwide</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>id=carrier-Nationwide</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=carrier-Nationwide</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterFees']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=enrollmentFees-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=enrollmentFees-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>id=enrollmentFees-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=enrollmentFees-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeXpathCount</td>
+	<td>.//*[@id='plans']/ul/li[*]/a/span[3]/p[contains(text(),'PPO')]</td>
+	<td>count1</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>.//*[@id='plans']/ul/li[*]/a/span[3]/p[contains(text(),'Indemnity')]</td>
+	<td>count2</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+
+	
+	
+
+	

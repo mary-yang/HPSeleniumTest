@@ -1,0 +1,3 @@
+"ENV","url","city_name","state","state1","zipcode","quote","detail","apply","banner","ifp_docker"
+"${ENV}","http://${ENV}.healthpocket.com/","Burlington","Vermont","VT","05401","(800) 471-6156","(800) 520-0394","(800) 562-9619","(800) 798-8321","(800) 597-5140"
+"${ENV}","http://${ENV}.healthpocket.com/","Chevy Chase","District Of Columbia","DC","20015","(800) 471-6156","(800) 520-0394","(800) 562-9619","(800) 798-8321","(800) 597-5140"

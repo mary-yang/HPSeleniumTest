@@ -1,0 +1,501 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Disclaimer/DE/HCC Advantage</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>http://praetemptatus.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://praetemptatus.agilehealthinsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Start Your Free Quote</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Enter applicant information to compare health insurance in your area.</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-primary-age.census-age-input</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=p-gender-m</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=p-smoker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.census-section-inner.see-plans-container</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/quote</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.js-clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='js-quote-plans-container']/ul/li[*]/div/div[1][h3[contains(text(),'HCC Advantage')]]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>null</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>_blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>-------------</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 1. Eligibility</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[1]/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[2]/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[3]/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[4]/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[5]/div/button[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[1]/p</td>
+	<td>exact:1. Will any applicant have other health insurance in force on the policy effective date or be eligible for Medicaid?</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[2]/p</td>
+	<td>exact:2. Are you or any applicant: Now pregnant, an expectant father, in process of adoption, or undergoing infertility treatment? Over 300 pounds if male or over 250 pounds if female?</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[3]/p</td>
+	<td>exact:3. Within the last 5 years has any applicant been diagnosed, treated, or taken medication for or experienced signs or symptoms of any of the following: cancer or tumor, stroke, heart disease including heart attack, chest pain or had heart surgery, COPD (chronic obstructive pulmonary disease) or emphysema, Crohn's disease, liver disorder, degenerative disc disease or herniation/bulge, rheumatoid arthritis, kidney disorder, diabetes, degenerative joint disease of the knee, alcohol abuse or chemical dependency, or any neurological disorder?</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[4]/p</td>
+	<td>exact:4. Within the last 5 years has any applicant been diagnosed or treated by a physician or medical practitioner for Acquired Immune Deficiency Syndrome (AIDS) or tested positive for Human Immunodeficiency Virus (HIV)? Residents of WI do not need to disclose HIV test results.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[5]/p</td>
+	<td>exact:5. If you are not a US Citizen, do you expect to legally reside in the US for the duration of the policy?</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 2. Applicant Info</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@value='']</td>
+	<td>Denis</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@value=''])[2]</td>
+	<td>Yu</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=07</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=member-P-1-lbs</td>
+	<td>label=20</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>444 Castro Street STE 710 Mountain View</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>denis.yu@suryani.cn</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>Los Angeles</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>465-465-4550</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=beneficiary-firstName</td>
+	<td>Damon</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=beneficiary-lastName</td>
+	<td>Zheng</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=beneficiary-relationship</td>
+	<td>brother</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-beneficiary-firstName</td>
+	<td>Nova</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-beneficiary-lastName</td>
+	<td>Li</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-relationship</td>
+	<td>Sister</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 3. Payment &amp; Billing</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-name</td>
+	<td>Denis Yu</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-name</td>
+	<td>Denis Yu</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=credit-card-number</td>
+	<td>4111 1111 1111 1111</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-year</td>
+	<td>label=2024</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=textarea.credit-card-authorization-disclaimer</td>
+	<td>I am signing up for an automatic payment plan. I agree HII Insurance Solutions or its authorized agent may automatically debit my bank account or Credit Card for the amount due on or around the payment due date. I can cancel this automatic payment at any time by calling or writing HII Insurance Solutions or its authorized agent at least 30 days prior to the next due date. I agree that HII Insurance Solutions or my financial institution can cancel automatic payment for my account for any reason, at any time, with or without prior notice to me. I understand that $25.00 will be charged for each transaction rejected for insufficient funds. I acknowledge that the origination of these debits to my account must comply with U.S. laws. I agree that this agreement remains in effect until canceled by HII Insurance Solutions or my financial institution or me. I have a copy of this agreement and I know I can also contact HII Insurance Solutions or its agent for a copy.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 4. Review Your Application</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='js-application-review']/section[4]/div/div/div/label/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAllWindowNames</td>
+	<td>Names</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Names}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>_blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.disclaimer-label</td>
+	<td>Acknowledgements</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.discliamer-text</td>
+	<td>I accept and acknowledge that Short-Term health insurance is a temporary plan designed for people who do not currently have health insurance and are waiting for longer term, major medical insurance coverage. Short-term policies do not cover pre-existing conditions. The health insurance plans sold through this Website do not meet the minimum essential coverage under the Patient Protection &amp; Affordable Care Act and you may incur a penalty and be assessed a fee with your federal tax return if you only purchase such plans.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[3]</td>
+	<td>I accept and acknowledge that I must understand and agree with the terms of the insurance policy, paying attention to the effective date, premium amount, waiting period, benefits, limitations, exclusions, and riders, if applicable in your state.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[4]</td>
+	<td>I accept and acknowledge that the quotes or rates shown above are estimates only. My premium is subject to change based on the optional benefits I selected, if any, and other relevant factors, such as changes in rates that take effect before my coverage start date. The insurance company always determines my actual premium. Insurance companies reserve the right to change the terms of a policy upon proper notification. These rates may include monthly administration fees or Membership dues.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[5]</td>
+	<td>I accept and acknowledge that coverage effective date is dependent upon approval of my application, which may include qualifying for the coverage and receipt of payment, and may be different than my requested date. The coverage effective date once the application is approved by the carrier may be pushed forward due to each carrier's deadlines and processing times.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[6]</td>
+	<td>I accept and acknowledge that each insurance carrier may have unique Notices and Disclaimers. I will check below for information regarding the plans and carriers I selected.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[7]</td>
+	<td>I accept and acknowledge that in several states, these plans are available only to members of an association, an independent consumer organization. If I am not already a member of the association, I must join in order to be eligible for these plans.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[8]</td>
+	<td>I accept and acknowledge that if I am not completely satisfied, I can cancel this coverage within the 10-Day Free Look provision, shown in the Certificate of Insurance, for a refund of premiums.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[9]</td>
+	<td>I accept and acknowledge that I must not cancel any health insurance coverage that I currently have or decline cobra benefits until I receive an approval letter and insurance policy (also known as an insurance contract or certificate) from the insurance company that I have selected.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[10]</td>
+	<td>I accept and acknowledge that the quotes or rates shown above are for my requested effective date ONLY. If the actual effective date of my policy is different from the requested effective date, the actual premium of my policy may differ from the quote or rate above. The change in amount may be due to premium increases or policy changes from the insurance company and/or one or more family members having a birthday. (Rates are highly dependent on age.) The carrier I selected may not guarantee their rates for any period of time.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[11]</td>
+	<td>I accept and acknowledge that carriers cannot guarantee the availability of a provider (or providers), and may add, delete or change a participating provider (or providers) at any time without prior notice to me. I must contact my chosen carrier for updated information before using the services of any provider.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[12]</td>
+	<td>I accept and acknowledge that the Copayment, Deductible, and Coinsurance amounts are my share of the costs for covered benefits.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p</td>
+	<td>Additional Benefit Options</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p[2]</td>
+	<td>I accept and acknowledge that TelaDoc and Cigna Dental Network are optional benefits and are not affiliated with any of the insurance companies. These benefits can be canceled at any time within their 30-Day Free-Look provision for a full refund.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p[3]</td>
+	<td>I accept and acknowledge that Teladoc &amp; Cigna Dental Network Access are not insurance benefits. These are lifestyle benefits and are not affiliated with any of the insurance companies.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[3]/p</td>
+	<td>Agile Discount Rx Disclaimer</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[3]/p[2]</td>
+	<td>Agile Discount Rx Disclaimer: DISCOUNT ONLY. NOT INSURANCE. Discounts are available exclusively through participating pharmacies and providers. The range of the discounts will vary depending on the type of provider and services rendered. This program does not make payments directly to providers. Members are required to pay for all health care services. You may cancel your registration at any time or file a complaint by contacting Customer Care at (800) 314-5594. All prescription drugs are eligible for discount.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[4]/p</td>
+	<td>Authorization for Automatic Bank Draft or Credit Card Payment</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[4]/p[2]</td>
+	<td>I am signing up for an automatic payment plan. I agree Health Insurance Innovations, HII or its authorized agent may automatically debit my bank account or Credit Card for the amount due on or around the payment due date. I can cancel this automatic payment at any time by calling or writing HII or its authorized agent at least 30 days prior to the next due date. I agree that HII or my financial institution can cancel automatic payment for my account for any reason, at any time, with or without prior notice to me. I understand that $25.00 will be charged for each transaction rejected for insufficient funds. I acknowledge that the origination of these debits to my account must comply with U.S. laws. I agree that this agreement remains in effect until canceled by HII or my financial institution or me. I have a copy of this agreement and I know I can also contact HII or its agent for a copy.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[5]/p</td>
+	<td>Fraud Warning</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[5]/p[2]</td>
+	<td>Any person who knowingly and with intent to injure, defraud, or deceive any insurance company files a statement of claim containing false, incomplete, or misleading information is guilty of a felony of the third degree.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[6]/p</td>
+	<td>Authorization And Agreement</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[6]/p[2]</td>
+	<td>I hereby request coverage under a policy underwritten by HCC Life Insurance Company. I understand this insurance contains a Pre-existing Condition exclusion, a Pre-certification Penalty and other restrictions and exclusions. I agree that coverage will not become effective for me or any dependent whose medical status, prior to the effective date, has changed and therefore results in a &ldquo;yes&rdquo; answer to any of the medical questions on this application. If my medical status changes in this way, coverage will be declined for all individuals included on this application. I understand that if I have elected the Monthly Payment option, my credit card will be charged each month on the due date of the premium for 6 months. I understand that I may terminate the scheduled payments by notifying HCC Life in writing at least one business day prior to the next scheduled payment date. I understand that this coverage is not renewable or extendable. I understand that the information contained herein is a summary of the coverage offered in the policy and that I may obtain a complete copy of the policy upon request to HCC Life. I understand that HCC Life, as underwriter of the plan, is solely liable for the coverage and benefits provided under the insurance. I understand and agree that the insurance agent/broker, if any, assisting with this application is a representative of the applicant. If signed by a representative of the applicant, the undersigned represents his/her capacity to so act. If signed as guardian or proxy of the applicant, the undersigned represents his/her capacity to so act. By acceptance of coverage and/or submission of any claim for benefits, the applicant ratifies the authority of the signer to so act and bind the applicant. Statements in this application are representations and not warranties.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[7]/p</td>
+	<td>Underwritten by: HCC Flexible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[7]/p[2]</td>
+	<td>Legal Disclaimer: Not all coverages or products may be available in all jurisdictions. The description of coverage on this site is for informational purposes only. Actual Coverages will vary based on local law requirements and the terms and conditions of the policy issued. The information described herein does not amend, or otherwise affect the terms and conditions of any insurance policy issued by HCC Life Insurance Company. Full details of the coverage are contained in policy form number HCCL STTMM IND</td>
+</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+
+	
+	
+	
+	
+	
+	
+	
+	

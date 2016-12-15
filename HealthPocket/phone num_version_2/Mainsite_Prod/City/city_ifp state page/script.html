@@ -1,0 +1,57 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/phone num_version_2/Mainsite_Prod/City/city_ifp state page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">city_ifp state page</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/city-healthplan-finder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${city_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Obamacare')])[2]</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@class='city-plans']/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p/span</td>
+	<td>${seo}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='helpTabContainer']/div[2]/p[3]</td>
+	<td>${seo}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.desktopOnly</td>
+	<td>${seo}</td>
+</tr>
+
+
+</tbody></table>
+</body>
+</html>
+
+	

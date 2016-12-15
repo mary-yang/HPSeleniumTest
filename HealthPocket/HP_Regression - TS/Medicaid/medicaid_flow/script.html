@@ -1,0 +1,165 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression - TS/Medicaid/medicaid_flow</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">medicaid_flow</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://52.90.125.215:3000/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://52.90.125.215:3000/medicaid-public-plans/list?zip=90001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=helpTab</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForAttribute</td>
+	<td>id=helpTabContainer@class</td>
+	<td>hpAnalytics open</td>
+</tr>
+<!--detail page-->
+<tr>
+	<td>storeText</td>
+	<td>css=h4.planName &gt; a</td>
+	<td>plan_name</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=p.planCost</td>
+	<td>price</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Program Details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.planName</td>
+	<td>${plan_name}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.amount</td>
+	<td>${price}</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=pageBreadcrumb</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=« Back to Public Programs</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//div[@class='details-back']/a@href</td>
+	<td>/medicaid-public-plans/list/</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/h2</td>
+	<td>Program Details</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div.details-section-content</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section[2]/h2</td>
+	<td>Physician Finder</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div.details-physician-section-content</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='detailsContainer']/div[3]/div[2]/article/section[3]/h2</td>
+	<td>Related Searches</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=relatedSearchLinks</td>
+	<td></td>
+</tr>
+<!--apply page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=Continue Searching</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//a[@class='continueSearch medicaid']@href</td>
+	<td>/medicaid-public-plans/list</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div.planSummaryBottom</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='planSummary']/div[2]/p</td>
+	<td>${plan_name}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='planSummary']/div[2]/dl/dd[2]/span</td>
+	<td>${price}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=View More Details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=applyFooter</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View More Details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	

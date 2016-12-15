@@ -1,0 +1,5 @@
+id,state,zip,Plan Category,Plan Type,HP ID (may be blank),Company Name (normalized),Plan Name,ex_enlink,ex_splink,enlink,splink
+H1230-001-0,HI,96707,PARTCRX,HMO,KaiserPermanente,Kaiser Permanente,Kaiser Permanente Senior Advantage Enhanced (HMO),https://medicare.kaiserpermanente.org/medicare/pdfs/2015/hi_SB_basic_enhanced.pdf,,${enlink},${splink}
+H1230-003-0,HI,96707,PARTCRX,HMO,KaiserPermanente,Kaiser Permanente,Kaiser Permanente Senior Advantage Basic (HMO),https://medicare.kaiserpermanente.org/medicare/pdfs/2015/hi_SB_basic_enhanced.pdf,,${enlink},${splink}
+H5424-001-0,HI,96707,PARTCRX,PPO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete Choice Plan 1 (PPO),https://www.uhcmedicaresolutions.com/alphadog/AAHI15PP3576795_001,,${enlink},${splink}
+H5424-003-0,HI,96707,PARTC,PPO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete Choice Essential (PPO),https://www.uhcmedicaresolutions.com/alphadog/AAHI15PP3576796_003,,${enlink},${splink}

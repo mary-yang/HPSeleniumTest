@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pengujian.healthpocket.com" />
+<title>city01</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">city01</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/city-healthplan-finder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Find Health Insurance Plans In Your City - Healthpocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading</td>
+	<td>Find Health Insurance by City</td>
+</tr>
+<!--city quote widget-->
+<tr>
+	<td>clickAt</td>
+	<td>id=location</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=location</td>
+	<td>${city_name}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//*[@id='s2id_city-quote-productLine']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=select2-drop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//*[@id='select2-drop']/ul/li[1]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.city-quote-widget-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='cityQuoteContainer']/h1</td>
+	<td>Compare Every Medicare Insurance Plan in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/medicare_delayed_popup</td>
+	<td></td>
+</tr>
+<!--select a carrier-->
+<tr>
+	<td>clickAt</td>
+	<td>link=Select a carrier</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=select2-drop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=input.select2-input.select2-focused</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.select2-input.select2-focused</td>
+	<td>blue cross</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//*[@id='select2-drop']/ul/li/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@class='btn city-quote-widget-submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Anthem Blue Cross Medicare in ${city_name}, ${state1} - Find Anthem Blue Cross Medicare Plans in ${city_name} - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading.cityPage</td>
+	<td>Compare Every Anthem Blue Cross Medicare Insurance Plan in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=img.carrier-logo-image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.count &gt; strong</td>
+	<td>* Anthem Blue Cross Medicare Plans Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.doctor-count &gt; strong</td>
+	<td>* Medicare Doctors Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.city-resource-header</td>
+	<td>Showing * of * Anthem Blue Cross Medicare plans found in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all Medicare plans in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Medicare plans in ${city_name}, ${state1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Medicare plans in California</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

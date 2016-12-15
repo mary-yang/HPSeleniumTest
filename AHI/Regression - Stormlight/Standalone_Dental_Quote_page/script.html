@@ -1,0 +1,117 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression/Standalone_Dental_Quote_page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Standalone_Dental</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>var d = new Date();(d.getMonth()+2) +'/'+ '01' +'/'+ d.getFullYear();</td>
+	<td>today</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/dental-insurance-quotes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>60001</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>10/10/1980</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gender-m-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=${planname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/ul/li</td>
+	<td>Deductible*$0</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/ul/li[2]</td>
+	<td>Max Benefit*$500</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/ul/li[3]</td>
+	<td>Preventative Expenses*100% Covered</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/ul/li[4]</td>
+	<td>Vision Coverage*No</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/div[2]/ul/li</td>
+	<td>Basic Service Waiting Period:*NA*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/div[2]/ul/li[2]</td>
+	<td>Basic Service Expenses:*PPO Discount*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/div[2]/ul/li[3]</td>
+	<td>Major Service Expenses:*PPO Discount*</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

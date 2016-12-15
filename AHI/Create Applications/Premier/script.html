@@ -1,0 +1,437 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Create Applications/Premier</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote & Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare health insurance plans in your area.</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-primary-age.census-age-input</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=p-gender-m</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/quote</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.js-clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=carrier-premierstm-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h3.quote-plan-name</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.quote-plan-price</td>
+	<td>mo</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=See All Details &raquo;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>${planname}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=plan-details-primary-apply</td>
+	<td>Apply - ${mo}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${mo}'.match(/\d+.\d+/)</td>
+	<td>mo1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primaryDOB</td>
+	<td>03/06/1985</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=primaryDOB</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=strong</td>
+	<td>${planname}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='applyPlanSummary']/ul/li[4]</td>
+	<td>Monthly Premium: $${mo1}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; var tmp="FN"; for (i=0;i<8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
+	<td>FirstName</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; var tmp="LN"; for (i=0;i<8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
+	<td>LastName</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; var tmp=""; for (i=0;i<8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
+	<td>Add</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; var tmp=""; for (i=0;i<8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
+	<td>City</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x="123456789"; var tmp=""; for (i=0;i<3;i++) tmp+=x.charAt(Math.ceil(8*Math.random()));tmp;}</td>
+	<td>tel1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x="123456789"; var tmp=""; for (i=0;i<3;i++) tmp+=x.charAt(Math.ceil(8*Math.random()));tmp;}</td>
+	<td>tel2</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x="123456789"; var tmp=""; for (i=0;i<4;i++) tmp+=x.charAt(Math.ceil(8*Math.random()));tmp;}</td>
+	<td>tel3</td>
+</tr>
+<tr>
+	<td>storeExpression</td>
+	<td>${tel1}-${tel2}-${tel3}</td>
+	<td>Tel</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${FirstName} ${LastName};${Add};${City};${Tel}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>genCCNumber</td>
+	<td>Visa</td>
+	<td>ccnumber</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${ccnumber}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[1]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[2]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[3]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[4]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[5]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[6]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[7]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 2. Applicant Info</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@value='']</td>
+	<td>${FirstName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@value=''])[2]</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=07</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=member-P-1-lbs</td>
+	<td>21</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=member-P-1-ssn</td>
+	<td>111-11-1111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 3. Payment &amp; Billing</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-first</td>
+	<td>${FirstName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-last</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=credit-card-number</td>
+	<td>${ccnumber}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-year</td>
+	<td>label=2024</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 4. Review Your Application</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=agile-terms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=carrier-authorization</td>
+	<td>${FirstName} ${LastName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=form-authorization</td>
+	<td>${FirstName} ${LastName}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Confirmation</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#js-app-page-summary &gt; p.emphasize</td>
+	<td>Your Documents and ID Card</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=js-app-print</td>
+	<td>Print This Page</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-application-confirmation']/section[2]/div/div/table/tbody/tr[4]/td[2]</td>
+	<td>${planname}</td>
+</tr>
+<!--
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-application-confirmation']/section[2]/div/div/table/tbody/tr[2]/td[2]</td>
+	<td>javascript{''+'0'+((new Date()).getMonth()+1)+'/'+((new Date()).getDate()+2)+'/'+(new Date()).getFullYear()}</td>
+</tr>
+-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-application-confirmation']/section[2]/div/div/table/tbody/tr[8]/td[2]</td>
+	<td>$${mo1}</td>
+</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,261 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/Short Term/st_ihc flow</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">st_ihc_flow</td></tr>
+</thead><tbody>
+<!--Short Term-->
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/short-term-medical-insurance/quote?zip=35215</td>
+	<td></td>
+</tr>
+<!--delayed popup
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/st_delayed_popup</td>
+	<td></td>
+</tr>
+-->
+<!--census-->
+<tr>
+	<td>click</td>
+	<td>link=35 year old individual</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=dob-P-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-P-0</td>
+	<td>10101980</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-applicants-collapse']/div/div/button[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<!--ads-->
+<tr>
+	<td>verifyText</td>
+	<td>css=h4</td>
+	<td>Ads by Bankrate</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=applyAds</td>
+	<td></td>
+</tr>
+<!--IHC Plan-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterCarriers']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=carrier-IHCGroup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=carrier-IHCGroup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<!--detail page-->
+<tr>
+	<td>storeText</td>
+	<td>css=span.amount</td>
+	<td>price1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.planName</td>
+	<td>plan_name1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.cost.planSection</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.planName</td>
+	<td>${plan_name1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.amount</td>
+	<td>${price1}</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>css=div.details-benefit-label.span6 &gt; span.glossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.popover-title</td>
+	<td>Insurance Provider</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div[3]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.popover-title</td>
+	<td>Plan Type</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div[4]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div[4]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.popover-title</td>
+	<td>Deductible</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div[5]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div[5]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.popover-title</td>
+	<td>Coinsurance</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div[6]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div[6]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.popover-title</td>
+	<td>Coverage Max</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div[7]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div[7]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#fullDetailsCollapse &gt; h2.details-section-header</td>
+	<td>Cost &amp; Coverage</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section[3]/h2</td>
+	<td>Physician Directory</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section[4]/h2</td>
+	<td>Community Q&amp;A</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=askQuestion</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section[5]/h2</td>
+	<td>Similar Plans</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section[6]/h2</td>
+	<td>Related Articles</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section[7]/h2</td>
+	<td>Related Searches</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.popover-title</td>
+	<td>Application Fee</td>
+</tr>
+<!--apply page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>${plan_name1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=dd</td>
+	<td>${price1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='callText']/div/p[2]</td>
+	<td>(800) 984-8015</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	

@@ -1,0 +1,303 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Denis/AHI Regression -TS/Census</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+Census Page</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>http://ahi-tosh.herokuapp.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://ahi-tosh.herokuapp.com/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote &amp; Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare Health Insurance Quotes*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.header-phone.reset</td>
+	<td>(800) 314-5594</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.header-phone-text.reset</td>
+	<td>Licensed Agents Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.census-main-subheading</td>
+	<td>This information is needed to get accurate health insurance quotes. It will be kept private, secure and never sold.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='census-start-section']/div/div</td>
+	<td>Please provide a valid zip code.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[4]</td>
+	<td>Please select a gender.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='census-member-section-0']/div/div/div/div[2]</td>
+	<td>Please enter a valid birth date between 2 and 64 yrs.</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>35216</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/2014</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.js-add-spouse.census-add-spouse</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='js-census-childOnlyApp']/p</td>
+	<td>With the absence of an adult applicant, insurance quotes and policies for applicants under 18 yrs of age must be submitted individually.</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://ahi-tosh.herokuapp.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://ahi-tosh.herokuapp.com/health-insurance-quotes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>90001</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1985</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.js-add-spouse.census-add-spouse</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-1']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-1</td>
+	<td>01/01/1985</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-1</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.js-add-children.census-add-children</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='census-member-section-2']/header/div</td>
+	<td>Child:</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-2</td>
+	<td>01/01/2010</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-2</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-2']/div/div/div[2]/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-start-section']/header/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=a.glossary-x.js-popover-x</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.glossary-x.js-popover-x</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/header/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=a.glossary-x.js-popover-x</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.glossary-x.js-popover-x</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-1']/header/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=a.glossary-x.js-popover-x</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.glossary-x.js-popover-x</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-2']/header/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=a.glossary-x.js-popover-x</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.glossary-x.js-popover-x</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/quote*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*health-insurance-quotes*</td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+	
+	
+	

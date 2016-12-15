@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="HttpUnitThreadsNum">2</entry>
+<entry key="SeleniumRCThreadsNum">5</entry>
+<entry key="SmtpServer">mail.suryani.cn</entry>
+<entry key="SmtpUser">qa.yees</entry>
+<entry key="SmtpPswd">Temp#1122</entry>
+<entry key="EmailFrom">qa.yees@suryani.cn</entry>
+</properties>

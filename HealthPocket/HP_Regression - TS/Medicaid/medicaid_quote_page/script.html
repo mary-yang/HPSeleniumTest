@@ -1,0 +1,147 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression - TS/Medicaid/medicaid_quote_page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">medicaid_quote_page</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://52.90.125.215:3000/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://52.90.125.215:3000/medicaid-public-plans/california-quote</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=helpTab</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForAttribute</td>
+	<td>id=helpTabContainer@class</td>
+	<td>hpAnalytics open</td>
+</tr>
+<!--header-->
+<tr>
+	<td>verifyVisible</td>
+	<td>id=searchPlans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='pageBreadcrumb']/a</td>
+	<td>Home</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='pageBreadcrumb']/span</td>
+	<td>Public Health Insurance Programs</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='planTypes']/label/input</td>
+	<td>plan_count</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='pageHeader']/h3</td>
+	<td>${plan_count} Medicaid &amp; Public Health Programs Found in California</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//a[contains(text(),'Select')]</td>
+	<td>${plan_count}</td>
+</tr>
+<!--demographics-->
+<tr>
+	<td>click</td>
+	<td>//label[contains(text(),'Disabled')]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=clearDemographics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyChecked</td>
+	<td>//label[contains(text(),'Disabled')]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=quoteDisclaimer</td>
+	<td></td>
+</tr>
+<!--clear filter-->
+<tr>
+	<td>click</td>
+	<td>id=clearDemographics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.resultsRange</td>
+	<td>Showing ${plan_count} results</td>
+</tr>
+<!--zip-->
+<tr>
+	<td>open</td>
+	<td>http://pengujian.healthpocket.com/medicaid-public-plans/list?zip=90001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=zipcode</td>
+	<td>90001</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.pageHeading</td>
+	<td>${plan_count} Medicaid &amp; Public Health Programs Found in California</td>
+</tr>
+<!--select button-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=Continue Searching</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	

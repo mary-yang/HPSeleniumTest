@@ -1,0 +1,81 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Denis/HealthPocket/dental state available/USA Plus</title>
+</head>
+<body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">usa plus available</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/dental-insurance/quote?zip=${zipcode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/dental_delayed_popup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterCarriers']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//input[contains(@data-id,'USAPlusAmeritas')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>//input[contains(@data-id,'USAPlusAmeritas')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//input[contains(@data-id,'USAPlusAmeritas')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[contains(@data-id,'USAPlusAmeritas')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>.//*[@id='plans']/ul/li[*]/a/span[3]/p[contains(text(),'Scheduled')]</td>
+	<td>count1</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>.//*[@id='plans']/ul/li[*]/a/span[3]/p[contains(text(),'Indemnity')]</td>
+	<td>count2</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+
+	
+
+	
+	

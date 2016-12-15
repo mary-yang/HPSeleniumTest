@@ -1,0 +1,4 @@
+"state","zipcode","carrierid","planname","mo","uri","DOB"
+"FL","60001","carrier-hccadvantage-","${planname}","${mo}","${uri}","01/01/1985"
+"##FL","32099","carrier-hccflexible-","${planname}","${mo}","${uri}","01/01/1985"
+"##FL","32099","carrier-companionprotect-","${planname}","${mo}","${uri}","01/01/1985"

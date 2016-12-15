@@ -1,0 +1,6 @@
+"ENV","url","city_name","state","state1","zipcode","quote","detail","apply","ihc"
+"${ENV}","http://${ENV}.healthpocket.com/","Anchorage","Alaska","AK","99504","(800) 892-9683","(800) 892-9683","(800) 892-9683","(800) 354-0872"
+"${ENV}","http://${ENV}.healthpocket.com/","Los Angeles","California","CA","90011","(800) 892-9683","(800) 892-9683","(800) 892-9683","(800) 354-0872"
+"${ENV}","http://${ENV}.healthpocket.com/","Jacksonville","Florida","FL","33186","(800) 892-9683","(800) 892-9683","(800) 892-9683","(800) 354-0872"
+"##www","http://www.healthpocket.com/","New York","New York","NY","11226","(800) 892-9683","(800) 892-9683","(800) 892-9683","(800) 354-0872"
+"${ENV}","http://${ENV}.healthpocket.com/","Sioux Falls","South Dakota","SD","57106","(800) 892-9683","(800) 892-9683","(800) 892-9683","(800) 354-0872"

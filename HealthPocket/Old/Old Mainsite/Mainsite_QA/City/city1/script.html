@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://54.164.192.83/" />
+<title>city1</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">city1</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/city-healthplan-finder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.emphasize</td>
+	<td>${city}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='helpTabContainer']/div[2]/p[3]</td>
+	<td>${city}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.page-footer-phone-number &gt; span.desktopOnly</td>
+	<td>${city}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${city_name}</td>
+	<td></td>
+</tr>
+<!--medicare tab-->
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/medicare_delayed_popup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='helpTabContainer']/div[2]/p[3]</td>
+	<td>${mc_city}</td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=span.emphasize.planCount.desktopOnly</td>
+	<td>${mc_banner}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.page-footer-phone-number &gt; span.desktopOnly</td>
+	<td>${mc_city}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=span.docker-phone-number</td>
+	<td>${mc_city}</td>
+</tr>
+<!--obamacare tab-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Obamacare')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/ifp_delayed_popup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p/span</td>
+	<td>${city}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='helpTabContainer']/div[2]/p[3]</td>
+	<td>${city}</td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=span.emphasize.planCount</td>
+	<td>${banner}</td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=span.phone-number</td>
+	<td>${city}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.page-footer-phone-number &gt; span.desktopOnly</td>
+	<td>${city}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=span.docker-phone-number</td>
+	<td>${city}</td>
+</tr>
+<!--SBG tab-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Small Business')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p/span</td>
+	<td>${sbg}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='helpTabContainer']/div[2]/p[3]</td>
+	<td>${sbg}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.desktopOnly</td>
+	<td>${sbg}</td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/sbg_delayed_popup</td>
+	<td></td>
+</tr>
+<!--dental tab-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Dental')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p/span</td>
+	<td>${dental}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='helpTabContainer']/div[2]/p[3]</td>
+	<td>${dental}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.desktopOnly</td>
+	<td>${dental}</td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/dental_delayed_popup</td>
+	<td></td>
+</tr>
+<!--short term-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Short Term')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p/span</td>
+	<td>${st}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='helpTabContainer']/div[2]/p[3]</td>
+	<td>${st}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.desktopOnly</td>
+	<td>${st}</td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/st_delayed_popup</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

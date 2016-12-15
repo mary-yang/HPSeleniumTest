@@ -1,0 +1,535 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/Medigap/medigap_quote_page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">medigap08</td></tr>
+</thead><tbody>
+<!--medigap quote page narrow by and sort by-->
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicare-medigap/quote?zip=90001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.pageHeading &gt; strong</td>
+	<td>11 Medigap Plan Types Found in</td>
+</tr>
+<!--sort by-->
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td>Popularity</td>
+</tr>
+<!--narrow by-->
+<!--type-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle type']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyChecked</td>
+	<td>id=planType-viewAll</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.emphasize</td>
+	<td>Plan Types</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=Medigap Plan K</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=K</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon-remove-sign</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span.sprite-medsupp-F</td>
+	<td></td>
+</tr>
+<!--premium-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle cost']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#filterMonthlyCost &gt; div.dropdown-menu &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyChecked</td>
+	<td>id=premium-viewAll</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#filterMonthlyCost &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#premiumGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>Premium</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#filterMonthlyCost &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=premium-from $106</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--change sort by to Premium-->
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.dropdown-menu.open</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Premium</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td>Premium</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.planCost</td>
+	<td>from $106</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle cost']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.selectedFilterLabel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--part A Deductible-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle planPersonalScore']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#filterPartADeductible &gt; div.dropdown-menu &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterPartADeductible &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#partADeductibleGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>Part A Deductible</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterPartADeductible &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=partA-$0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=$0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='plans']/ul/li/a/span[3]/p</td>
+	<td>$0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=$0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='plans']/ul/li/a/span[3]/p</td>
+	<td>$1,260</td>
+</tr>
+<!--part B Deductible-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle partBDeductible']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#filterPartBDeductible &gt; div.dropdown-menu &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterPartBDeductible &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#partBDeductibleGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>PART B DEDUCTIBLE</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterPartBDeductible &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=partBDeductible-$147</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=$147</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='plans']/ul/li/a/span[4]/p</td>
+	<td>$147</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=$147</td>
+	<td></td>
+</tr>
+<!--Excess Charges-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle partBExcess']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#filterpartBExcess &gt; div.dropdown-menu &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterpartBExcess &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#partBExcessGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>Part B Excess Charges</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterpartBExcess &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=partBExcess-100% Covered</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=100% Covered</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='plans']/ul/li/a/span[5]/p</td>
+	<td>100% Covered</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=100% Covered</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--Skilled Nurding-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle deductible']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.dropdown-menu.pull-right &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='skilledNurse']/div/div[2]/div/p/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#nursingGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>Skilled Nursing</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='skilledNurse']/div/div[2]/div/p/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=nursing-100% Covered</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=100% Covered</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='plans']/ul/li/a/span[6]/p</td>
+	<td>100% Covered</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=100% Covered</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='plans']/ul/li/a/span[6]/p</td>
+	<td>100% Covered</td>
+</tr>
+<!--Foreign Travel-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#foreignTravel &gt; div.dropdown-menu.pull-right &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#foreignTravel &gt; div.dropdown-menu.pull-right &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#foreignTravelGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>Foreign Travel</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#foreignTravel &gt; div.dropdown-menu.pull-right &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=foreignTravel-80% Covered</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=80% Covered</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='plans']/ul/li/a/span[7]/p</td>
+	<td>80% Covered</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=80% Covered</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='plans']/ul/li/a/span[7]/p</td>
+	<td>80% Covered</td>
+</tr>
+<!--Out-of-Pocket Cap-->
+<tr>
+	<td>clickAt</td>
+	<td>//button[@class='btn dropdown-toggle oopMax']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#filterOOPMax &gt; div.dropdown-menu.pull-right &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterOOPMax &gt; div.dropdown-menu.pull-right &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#moopGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>Out-of-Pocket Cap</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterOOPMax &gt; div.dropdown-menu.pull-right &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=moop-None</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=None</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='plans']/ul/li/a/span[8]/p</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=None</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='plans']/ul/li/a/span[8]/p</td>
+	<td>None</td>
+</tr>
+</tbody></table>
+</body>
+</html>	
+	
+	
+	
+	
+	
+	

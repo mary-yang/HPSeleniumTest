@@ -1,0 +1,92 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/phone num_version_2/Co-brand_Prod/Medicaid/medicaid_flow</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicaid-public-plans/list?zip=${zipcode}</td>
+	<td></td>
+</tr>
+<!--quote-->
+<tr>
+	<td>click</td>
+	<td>id=helpTab</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p/span</td>
+	<td>${quote}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='helpTabNumbers']/p[2]</td>
+	<td>${quote}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.desktopOnly</td>
+	<td>${quote}</td>
+</tr>
+<!--detail-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Program Details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p/span</td>
+	<td>${detail}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='helpTabNumbers']/p[2]</td>
+	<td>${detail}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.desktopOnly</td>
+	<td>${detail}</td>
+</tr>
+<!--apply-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p/span</td>
+	<td>${apply}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='callText']/div/p[2]</td>
+	<td>${apply}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.desktopOnly</td>
+	<td>${apply}</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	

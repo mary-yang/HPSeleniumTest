@@ -1,0 +1,2 @@
+id,state,zip,Plan Category,Plan Type,HP ID (may be blank),Company Name (normalized),Plan Name,ex_enlink,ex_splink,enlink,splink
+H4102-031-0,VT,5601,PARTCRX,HMO,UnitedHealthcare_Med,UnitedHealthcare,AARP MedicareComplete (HMO),https://www.uhcmedicaresolutions.com/alphadog/AAVT15HM3576732_001,,${enlink},${splink}

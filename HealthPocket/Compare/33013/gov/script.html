@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.healthpocket.com" />
+<title>gov_detail</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">gov_detail</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h2.plan-name</td>
+	<td>plan_name</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.metal &gt; b</td>
+	<td>metal</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=li &gt; b</td>
+	<td>plan_type</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li[contains(text(),'Plan ID')]</td>
+	<td>plan_id</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=p.amount.dollars</td>
+	<td>price</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=p.amount &gt; span.dollars</td>
+	<td>deductible</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//main[@id='skipnav']/div[2]/div/div/div[4]/ol/li/div[3]/div/div/div[3]/p/span</td>
+	<td>oop</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//a[contains(text(),'Summary of Benefits')]@href</td>
+	<td>benefits</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//a[contains(text(),'Plan brochure')]@href</td>
+	<td>brochure</td>
+</tr>
+</tbody></table>
+</body>
+</html>

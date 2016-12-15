@@ -1,0 +1,502 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/AGE</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote &amp; Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare health insurance plans in your area.</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zip}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-primary-age.census-age-input</td>
+	<td>${age}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=p-gender-m</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-payment-section']/div/div/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>//*[@id='c-start']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id='c-start']</td>
+	<td>${start}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>//*[@id='c-start']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>//*[@id='c-end']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//*[@id='c-end']</td>
+	<td>${end}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>//*[@id='c-end']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<!-- -----------------------------------------取start 和end date----------------------------
+<tr>
+	<td>storeAttribute</td>
+	<td>//*[@id='c-start']@value</td>
+	<td>start</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//*[@id='c-end']@value</td>
+	<td>end</td>
+</tr>
+----------------------------------------------------------------------------------------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/quote</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.js-clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]")</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h3.quote-plan-name</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.quote-plan-price</td>
+	<td>quote_P</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=See All Details »</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=plan-details-primary-apply</td>
+	<td>temp1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${temp1}&quot;.substr(&quot;${temp1}&quot;.lastIndexOf(&quot;$&quot;))</td>
+	<td>detail_P</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='applyPlanSummary']/ul/li[4]</td>
+	<td>temp2</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${temp2}&quot;.substr(&quot;${temp2}&quot;.lastIndexOf(&quot;$&quot;))</td>
+	<td>start_P</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primaryDOB</td>
+	<td>${DOB}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=primaryDOB</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=strong</td>
+	<td>${planname}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!-- 如果价格有变，点击弹出窗口的continue ---->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("id=confirm")</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=confirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;; var tmp=&quot;FN&quot;; for (i=0;i&lt;8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
+	<td>FirstName</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;; var tmp=&quot;LN&quot;; for (i=0;i&lt;8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
+	<td>LastName</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;; var tmp=&quot;&quot;; for (i=0;i&lt;8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
+	<td>Add</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;; var tmp=&quot;&quot;; for (i=0;i&lt;8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
+	<td>City</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x=&quot;123456789&quot;; var tmp=&quot;&quot;; for (i=0;i&lt;3;i++) tmp+=x.charAt(Math.ceil(8*Math.random()));tmp;}</td>
+	<td>tel1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x=&quot;123456789&quot;; var tmp=&quot;&quot;; for (i=0;i&lt;3;i++) tmp+=x.charAt(Math.ceil(8*Math.random()));tmp;}</td>
+	<td>tel2</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x=&quot;123456789&quot;; var tmp=&quot;&quot;; for (i=0;i&lt;4;i++) tmp+=x.charAt(Math.ceil(8*Math.random()));tmp;}</td>
+	<td>tel3</td>
+</tr>
+<tr>
+	<td>storeExpression</td>
+	<td>${tel1}-${tel2}-${tel3}</td>
+	<td>Tel</td>
+</tr>
+<!-- 从地址栏取uri的值 ---->
+<tr>
+	<td>storeLocation</td>
+	<td>url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;/&quot;)+1)</td>
+	<td>uri</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[1]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[2]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[3]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[4]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//*[@id='application-body']/div/div/div[1]/ul/li[5]/div/button[1]")</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=.//*[@id='application-body']/div/div/div[1]/ul/li[5]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-app-page-summary']/div/p[11]</td>
+	<td>app1_P</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=summary-censusSummary</td>
+	<td>age1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${age1}'.match(/\d+/)</td>
+	<td>age_app</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 2. Applicant Info</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@value='']</td>
+	<td>${FirstName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@value=''])[2]</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=07</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=member-P-1-lbs</td>
+	<td>21</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-app-page-summary']/div/p[11]</td>
+	<td>app2_P</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Use Bank Draft</td>
+	<td></td>
+</tr>
+<!----------------------------------------------用include代替了
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 3. Payment &amp; Billing</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-first</td>
+	<td>${FirstName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-last</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=credit-card-number</td>
+	<td>4111 1111 1111 1111</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-year</td>
+	<td>label=2024</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-app-page-summary']/div/p[11]</td>
+	<td>app3_P</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+------------------------------------------------------------------------------------------------------->
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 4. Review Your Application</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=agile-terms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=carrier-authorization</td>
+	<td>${FirstName} ${LastName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=form-authorization</td>
+	<td>${FirstName} ${LastName}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-app-page-summary']/div/p[11]</td>
+	<td>app4_P</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Confirmation</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-application-confirmation']/section[2]/div/div/table/tbody/tr[8]/td[2]</td>
+	<td>review_P</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	

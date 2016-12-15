@@ -1,0 +1,306 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Denis/HealthPocket/HP_Regression/Medicare/medicare_flow_999504</title>
+</head>
+<body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">medicare_flow_99504</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicare/quote/2015?zip=99504</td>
+	<td></td>
+</tr>
+<!--选择provider as humana-->
+<tr>
+	<td>click</td>
+	<td>//button[@class='btn dropdown-toggle carriers']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=carrier-Humana</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=carrier-Humana</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Humana</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.planName</td>
+	<td>Humana*</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.amount</td>
+	<td>price</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.planName</td>
+	<td>plan_name</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.deductible.planSection &gt; p</td>
+	<td>deductible</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.premium.planSection &gt; p</td>
+	<td>premium</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.planType.planSection &gt; p</td>
+	<td>coverage_type</td>
+</tr>
+<!--humana detail page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=li.newPlanContainer &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/medicare_delayed_popup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@class='benefitWrapper'][descendant::span[text()='Insurance Type']]/div[2]</td>
+	<td>type</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.planName</td>
+	<td>${plan_name}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div/div[5]/div[2]</td>
+	<td>${deductible}.00</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.amount</td>
+	<td>${premium}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.docker-title</td>
+	<td>${plan_name}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.docker-subtitle</td>
+	<td>${type}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@class='cost']/a</td>
+	<td></td>
+</tr>
+<!--humana plan apply page-->
+<tr>
+	<td>verifyTitle</td>
+	<td>Find Medicare Plan Options - Medicare Healthcare Plans - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>${plan_name}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='planSummary']/div[2]/dl/dd[3]</td>
+	<td>${deductible}.00</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='planSummary']/div[2]/dl/dd[2]</td>
+	<td>${coverage_type}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Continue Searching</td>
+	<td></td>
+</tr>
+<!--消除选项-->
+<tr>
+	<td>waitForVisible</td>
+	<td>css=span.sprite-icon-remove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.sprite-icon-remove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class='btn dropdown-toggle carriers']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=carrier-Aetna_Med</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=carrier-Aetna_Med</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.amount</td>
+	<td>price1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.planName</td>
+	<td>plan_name1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.deductible.planSection &gt; p</td>
+	<td>deductible1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.premium.planSection &gt; p</td>
+	<td>premium1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.planType.planSection &gt; p</td>
+	<td>coverage_type1</td>
+</tr>
+<!--non humana plan detail page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=li.newPlanContainer &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.planDescriptor</td>
+	<td>Prescription Drug Plan</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div/div[5]/div[2]</td>
+	<td>${deductible1}.00</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.amount</td>
+	<td>${premium1}*</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@class='benefitWrapper'][descendant::span[text()='Insurance Type']]/div[2]</td>
+	<td>type1</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=askQuestion</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.docker-title</td>
+	<td>${plan_name1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.docker-subtitle</td>
+	<td>${type1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@class='cost']/a</td>
+	<td></td>
+</tr>
+<!--apply page-->
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>${plan_name1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='planSummary']/div[2]/dl/dd[3]</td>
+	<td>${deductible1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='planSummary']/div[2]/dl/dd[2]</td>
+	<td>${coverage_type1}</td>
+</tr>
+<!--back to quote page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Continue Searching</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading &gt; strong</td>
+	<td>* Medicare Plans Found</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	

@@ -1,0 +1,164 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/City/city_st page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test_city_st</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/city-healthplan-finder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${city_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(@href, '/city-healthplan-finder/short-term-medical-insurance/')]</td>
+	<td></td>
+</tr>
+<!-----
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/st_delayed_popup</td>
+	<td></td>
+</tr>
+------>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.phone.desktopOnly</td>
+	<td>(800) 984-8015</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>Short Term health insurance plans in ${city_name} from $* a day.*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.btn.city-see-all-button</td>
+	<td>See All * Plans</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=a.btn.city-see-all-button</td>
+	<td>count_num</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${count_num}&quot;.replace('See All ','').replace(' Plans','')</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.city-disclaimer</td>
+	<td>* quote price is based on a 35 year old non-smoking male needing coverage for 6 months</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.city-features-header</td>
+	<td>Affordable</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.span4.feature &gt; p</td>
+	<td>Save up to $* a month vs. Obamacare*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='span4 feature'][2]/h2</td>
+	<td>Flexible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='span4 feature'][2]/p</td>
+	<td>Choose from 30 to 160 days of coverage</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='span4 feature'][3]/h2</td>
+	<td>Fast</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='span4 feature'][3]/p</td>
+	<td>Coverage starts as early as tomorrow</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//a[contains(text(),'select')]</td>
+	<td>aa</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@class='plans-list']/h2</td>
+	<td>Showing ${aa} of ${count} short term health insurance plans found in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.more-link</td>
+	<td>See all short term health insurance plans in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[2]/h2</td>
+	<td>${city_name} Short Term Providers</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=js-city-provider-container</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='cityDoctorList']/h2/strong</td>
+	<td>Doctors accepting short term health insurance plans in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div.city-doctors-inner</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.city-doctors &gt; a.more-link</td>
+	<td>See all doctors near ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[4]/h2</td>
+	<td>Community Q&amp;A</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=askQuestion</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//h2[contains(text(),'Related Articles')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//h2[contains(text(),'Related Searches')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@class='shareLinks']</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	

@@ -1,0 +1,138 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/CI/ci_90001</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ci_90001</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/critical-illness-insurance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=location</td>
+	<td>90001</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//div[@id='inputs']/div[2]/div/div/ul/li[7]/a/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='inputs']/div[2]/div/div/ul/li[7]/a/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=findPlans</td>
+	<td></td>
+</tr>
+<!--census-->
+<tr>
+	<td>verifyText</td>
+	<td>id=censusTitle</td>
+	<td>Personalize Your Quote</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.sprite-icon-question.glossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=p.glossaryDefinition</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.glossaryDefinition</td>
+	<td>Prices and availability of plans may vary based on applicant information. Enter your information to get the most accurate results.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=censusTitle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=button.js-collapse-toggle.census-section-toggle</td>
+	<td>No Applicants Entered</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='js-location-container']/div/button[2]</td>
+	<td>Los Angeles County, CA</td>
+</tr>
+<!--quote page-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='otherQuoteOptions']/div/p</td>
+	<td>Other Insurance Plans</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.reset.font-lightGrey</td>
+	<td>Los Angeles, CA 90001</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3</td>
+	<td>Critical Illness Insurance is Not Available in California. Call for Alternative Insurance Options.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.leadCopy</td>
+	<td>Speak with a licensed agent</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='callText']/div/p[2]</td>
+	<td>(800) 984-8015</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.callHours</td>
+	<td>24 hours a day, 7 days a week</td>
+</tr>
+<tr>
+	<td>verifyXpathCount</td>
+	<td>//a[contains(text(),'View Plans')]</td>
+	<td>3</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+
+	
+	

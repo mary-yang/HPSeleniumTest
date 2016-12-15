@@ -1,0 +1,3 @@
+id,state,zip,Plan Category,Plan Type,HP ID (may be blank),Company Name (normalized),Plan Name,ex_enlink,ex_splink,enlink,splink
+S5660-205-0,PR,688,PARTD,PDP,MedcoMedicare,Medco Medicare,Express Scripts Medicare - Choice (PDP),https://host1.medcohealth.com/art/medicare15/pdf/15sob.pdf,,${enlink},${splink}
+S5660-137-0,PR,688,PARTD,PDP,MedcoMedicare,Medco Medicare,Express Scripts Medicare - Value (PDP),https://host1.medcohealth.com/art/medicare15/pdf/15sob.pdf,,${enlink},${splink}

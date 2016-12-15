@@ -1,0 +1,52 @@
+city_name,state,state1,zipcode,count_PPO,count_Indemnity
+Birmingham,Alabama,AL,35215,${count1},${count2}
+Anchorage,Alaska,AK,99504,${count1},${count2}
+Little Rock,Arkansas,AR,72209,${count1},${count2}
+Phoenix,Arizona,AZ,85364,${count1},${count2}
+Los Angeles,California,CA,90011,${count1},${count2}
+Denver,Colorado,CO,80219,${count1},${count2}
+Bridgeport,Connecticut,CT,06606,${count1},${count2}
+Chevy Chase,District Of Columbia,DC,20015,${count1},${count2}
+Wilmington,Delaware,DE,19805,${count1},${count2}
+Jacksonville,Florida,FL,33186,${count1},${count2}
+Atlanta,Georgia,GA,30044,${count1},${count2}
+Honolulu,Hawaii,HI,96818,${count1},${count2}
+Des Moines,Iowa,IA,50317,${count1},${count2}
+Boise,Idaho,ID,83709,${count1},${count2}
+Chicago,Illinois,IL,60629,${count1},${count2}
+Indianapolis,Indiana,IN,46227,${count1},${count2}
+Wichita,Kansas,KS,66062,${count1},${count2}
+Louisville,Kentucky,KY,40214,${count1},${count2}
+New Orleans,Louisiana,LA,70816,${count1},${count2}
+Boston,Massachusetts,MA,02128,${count1},${count2}
+Baltimore,Maryland,MD,21215,${count1},${count2}
+Portland,Maine,ME,04401,${count1},${count2}
+Detroit,Michigan,MI,48228,${count1},${count2}
+Minneapolis,Minnesota,MN,55106,${count1},${count2}
+Kansas City,Missouri,MO,63129,${count1},${count2}
+Jackson,Mississippi,MS,39503,${count1},${count2}
+Billings,Montana,MT,59102,${count1},${count2}
+Charlotte,North Carolina,NC,28269,${count1},${count2}
+Fargo,North Dakota,ND,58103,${count1},${count2}
+Omaha,Nebraska,NE,68104,${count1},${count2}
+Manchester,New Hampshire,NH,03103,${count1},${count2}
+Newark,New Jersey,NJ,08701,${count1},${count2}
+Albuquerque,New Mexico,NM,87121,${count1},${count2}
+Las Vegas,Nevada,NV,89110,${count1},${count2}
+New York,New York,NY,11226,${count1},${count2}
+Columbus,Ohio,OH,43228,${count1},${count2}
+Oklahoma City,Oklahoma,OK,73160,${count1},${count2}
+Portland,Oregon,OR,97229,${count1},${count2}
+Philadelphia,Pennsylvania,PA,19120,${count1},${count2}
+Providence,Rhode Island,RI,02909,${count1},${count2}
+Columbia,South Carolina,SC,29223,${count1},${count2}
+Sioux Falls,South Dakota,SD,57106,${count1},${count2}
+Memphis,Tennessee,TN,37013,${count1},${count2}
+Houston,Texas,TX,79936,${count1},${count2}
+Salt Lake City,Utah,UT,84120,${count1},${count2}
+Virginia Beach,Virginia,VA,23464,${count1},${count2}
+Burlington,Vermont,VT,05401,${count1},${count2}
+Seattle,Washington,WA,98115,${count1},${count2}
+Milwaukee,Wisconsin,WI,53215,${count1},${count2}
+Charleston,West Virginia,WV,25302,${count1},${count2}
+Cheyenne,Wyoming,WY,82001,${count1},${count2}

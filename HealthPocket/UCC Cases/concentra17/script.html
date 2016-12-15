@@ -1,0 +1,1163 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/UCC Cases/concentra17</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">concentra</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://maps.concentra.com/corporate/?address=${zip}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=search-locations-text</td>
+	<td>${zip}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=go-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>waitForText</td>
+	<td>css=#MyLocation &gt; div.row &gt; span</td>
+	<td>My Location</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[1]/@id</td>
+	<td>id1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id1}']/div/div/div/div/a</td>
+	<td>storeid1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id1}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id1}']/div/div/div[2]/div/div</td>
+	<td>Add1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id1}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP1</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id1}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id1}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI1</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${storeid1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI1}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[2]/@id</td>
+	<td>id2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id2}']/div/div/div/div/a</td>
+	<td>storeid2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id2}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id2}']/div/div/div[2]/div/div</td>
+	<td>Add2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id2}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP2</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id2}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id2}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI2</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${storeid2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI2}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[3]/@id</td>
+	<td>id3</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id3}']/div/div/div/div/a</td>
+	<td>storeid3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id3}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id3}']/div/div/div[2]/div/div</td>
+	<td>Add3</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id3}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP3</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id3}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id3}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI3</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+tr>
+	<td>echo</td>
+	<td>${storeid3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI3}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[4]/@id</td>
+	<td>id4</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id4}']/div/div/div/div/a</td>
+	<td>storeid4</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id4}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id4}']/div/div/div[2]/div/div</td>
+	<td>Add4</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id4}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP4</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id4}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id4}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI4</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+tr>
+	<td>echo</td>
+	<td>${storeid4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI4}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[5]/@id</td>
+	<td>id5</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id5}']/div/div/div/div/a</td>
+	<td>storeid5</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id5}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id5}']/div/div/div[2]/div/div</td>
+	<td>Add5</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id5}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP5</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id5}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id5}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI5</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${storeid5}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add5}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP5}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI5}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[6]/@id</td>
+	<td>id6</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id6}']/div/div/div/div/a</td>
+	<td>storeid6</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id6}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id6}']/div/div/div[2]/div/div</td>
+	<td>Add6</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id6}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP6</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id6}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id6}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI6</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${storeid6}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add6}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP6}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI6}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[7]/@id</td>
+	<td>id7</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id7}']/div/div/div/div/a</td>
+	<td>storeid7</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id7}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id7}']/div/div/div[2]/div/div</td>
+	<td>Add7</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id7}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP7</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id7}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id7}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI7</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${storeid7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI7}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[8]/@id</td>
+	<td>id8</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id8}']/div/div/div/div/a</td>
+	<td>storeid8</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id8}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id8}']/div/div/div[2]/div/div</td>
+	<td>Add8</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id8}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP8</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id8}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id8}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI8</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${storeid8}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add8}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP8}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI8}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[9]/@id</td>
+	<td>id9</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id9}']/div/div/div/div/a</td>
+	<td>storeid9</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id9}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id9}']/div/div/div[2]/div/div</td>
+	<td>Add9</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id9}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP9</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id9}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id9}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI9</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${storeid9}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add9}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP9}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI9}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[10]/@id</td>
+	<td>id10</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id10}']/div/div/div/div/a</td>
+	<td>storeid10</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id10}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id10}']/div/div/div[2]/div/div</td>
+	<td>Add10</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id10}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP10</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id10}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id10}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI10</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${storeid10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[11]/@id</td>
+	<td>id11</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id11}']/div/div/div/div/a</td>
+	<td>storeid11</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id11}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id11}']/div/div/div[2]/div/div</td>
+	<td>Add11</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id11}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP11</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id11}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id11}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI11</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${storeid11}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add11}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP11}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI11}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[12]/@id</td>
+	<td>id12</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id12}']/div/div/div/div/a</td>
+	<td>storeid12</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id12}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id12}']/div/div/div[2]/div/div</td>
+	<td>Add12</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id12}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP12</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id12}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id12}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI12</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${storeid12}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add12}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP12}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI12}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[13]/@id</td>
+	<td>id13</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id13}']/div/div/div/div/a</td>
+	<td>storeid13</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id13}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id13}']/div/div/div[2]/div/div</td>
+	<td>Add13</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id13}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP13</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id13}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id13}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI13</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+tr>
+	<td>echo</td>
+	<td>${storeid13}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add13}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP13}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI13}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[14]/@id</td>
+	<td>id14</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id14}']/div/div/div/div/a</td>
+	<td>storeid14</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id14}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id14}']/div/div/div[2]/div/div</td>
+	<td>Add14</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id14}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP14</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id14}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id14}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI14</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+tr>
+	<td>echo</td>
+	<td>${storeid14}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add14}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP14}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI14}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[15]/@id</td>
+	<td>id15</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id15}']/div/div/div/div/a</td>
+	<td>storeid15</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id15}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id15}']/div/div/div[2]/div/div</td>
+	<td>Add15</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id15}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP15</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id15}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id15}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI15</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${storeid15}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add15}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP15}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI15}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[16]/@id</td>
+	<td>id16</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id16}']/div/div/div/div/a</td>
+	<td>storeid16</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id16}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id16}']/div/div/div[2]/div/div</td>
+	<td>Add16</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id16}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP16</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id16}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id16}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI16</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${storeid16}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add16}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP16}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI16}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//div[@id='location-container']/div/div[17]/@id</td>
+	<td>id17</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id17}']/div/div/div/div/a</td>
+	<td>storeid17</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='${id17}']/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id17}']/div/div/div[2]/div/div</td>
+	<td>Add17</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id17}']/div/div/div[2]/div/div[2]</td>
+	<td>HOP17</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent('//div[@id="${id17}"]/div/div/div[3]/div[2]/div','Special Clinic Information')</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='${id17}']/div/div/div[3]/div[2]/div[2]/ul</td>
+	<td>SCI17</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${storeid17}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Add17}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${HOP17}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${SCI17}</td>
+	<td></td>
+</tr>
+
+
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+
+	

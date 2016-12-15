@@ -1,0 +1,347 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/Medicare/medicare_quote_ads</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">medicare_quote_ads</td></tr>
+</thead><tbody>
+<!--case1: sort-->
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicare/quote/2016?zip=90001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/medicare_delayed_popup</td>
+	<td></td>
+</tr>
+
+<!--验证ads显示-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='sort']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//div[@id='sort']/div/div/ul/li[7]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='sort']/div/div/ul/li[7]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<!--css=li.crossSellAdUnit.quote-banner-ad-container is the CSS of ads-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=li.crossSellAdUnit.quote-banner-ad-container</td>
+	<td></td>
+</tr>
+<!--case2: filter-->
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicare/quote/2016?zip=90001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/medicare_delayed_popup</td>
+	<td></td>
+</tr>
+<!--验证没有ads
+<tr>
+	<td>verifyNotVisible</td>
+	<td>css=li.crossSellAdUnit.quote-banner-ad-container</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>css=h4</td>
+	<td></td>
+</tr>
+-->
+<!--filter-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterCarriers']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=carrier-Humana</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=carrier-Humana</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>css=li.crossSellAdUnit.quote-banner-ad-container</td>
+	<td></td>
+</tr>
+
+<!--case3: add condition-->
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicare/quote/2016?zip=90001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/medicare_delayed_popup</td>
+	<td></td>
+</tr>
+<!-- 验证没有ads
+<tr>
+	<td>verifyNotVisible</td>
+	<td>css=li.crossSellAdUnit.quote-banner-ad-container</td>
+	<td></td>
+</tr>
+-->
+
+<!--census-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-conditions-container']/span/span[2]/a</td>
+	<td>Good Health,</td>
+</tr>
+<!--high blood-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-conditions-container']/span/span[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=resp-noCondition</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=resp-condition-hbp</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-conditions-collapse']/div/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-conditions-container']/span/span</td>
+	<td>has</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-conditions-container']/span/span[2]/a</td>
+	<td>High Blood Pressure,</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=li.crossSellAdUnit.quote-banner-ad-container</td>
+	<td></td>
+</tr>
+<!--case 4: add medication-->
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicare/quote/2016?zip=90001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/medicare_delayed_popup</td>
+	<td></td>
+</tr>
+<!--验证没有ads
+<tr>
+	<td>verifyNotVisible</td>
+	<td>css=li.crossSellAdUnit.quote-banner-ad-container</td>
+	<td></td>
+</tr>
+
+
+-->
+<!--add medication-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-medications-container']/span/span[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=responsive-drug-name-input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=responsive-drug-name-input</td>
+	<td>Chry</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Chrysaderm Day</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>link=Chrysaderm Day</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseMove</td>
+	<td>link=Chrysaderm Day</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Chrysaderm Day</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-medications-collapse']/div/div[3]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=resp-drug-quantity-input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-medications-collapse']/div/div[3]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-medications-collapse']/div/div[3]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-medications-container']/span/span</td>
+	<td>taking</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-medications-container']/span/span[2]/a</td>
+	<td>Chrysaderm Day,</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=li.crossSellAdUnit.quote-banner-ad-container</td>
+	<td></td>
+</tr>
+
+<!--case 5: add current plan-->
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicare/quote/2015?zip=90001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/medicare_delayed_popup</td>
+	<td></td>
+</tr>
+<!--验证没有ads
+<tr>
+	<td>verifyNotVisible</td>
+	<td>css=li.crossSellAdUnit.quote-banner-ad-container</td>
+	<td></td>
+</tr>
+
+-->
+
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

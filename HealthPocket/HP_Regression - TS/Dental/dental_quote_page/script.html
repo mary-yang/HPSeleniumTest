@@ -1,0 +1,520 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression - TS/Dental/dental_quote_page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">dt07</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://52.90.125.215:3000/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://52.90.125.215:3000/dental-insurance/california-quote</td>
+	<td></td>
+</tr>
+<!--delayed popup
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/dental_delayed_popup</td>
+	<td></td>
+</tr>
+-->
+<tr>
+	<td>click</td>
+	<td>id=helpTab</td>
+	<td></td>
+</tr>
+<!--census-->
+<tr>
+	<td>verifyText</td>
+	<td>id=census-text-wrapper</td>
+	<td>Find dental insurance for a 35 year old individualDate of BirthAPPLICANT+ Spouse+ ChildUpdate Results<br /><br /><br /> living in californiaZip Code<br /><br />Update Results</td>
+</tr>
+<!--census-zip code-->
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-location-container']/span/span[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=responsive-zip-input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=responsive-zip-input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=responsive-zip-input</td>
+	<td>90001</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-location-collapse']/div/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='js-location-container']/span/span[2]/a</td>
+	<td>Firestone Park, CA</td>
+</tr>
+<!--applicant-->
+<tr>
+	<td>click</td>
+	<td>link=35 year old individual</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=dob-P-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-P-0</td>
+	<td>10101980</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-applicants-collapse']/div/div/button[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.js-collapse-toggle.census-section-toggle</td>
+	<td>35 year old individual</td>
+</tr>
+<!--narrow by tool-->
+<!--monthly cost-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterPlanRanges']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyChecked</td>
+	<td>id=priceRange-viewAll</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.emphasize</td>
+	<td>MONTHLY COST</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='filterPlanRanges']/div/div/ul/li[3]/label</td>
+	<td>cost_filter</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${cost_filter}'.split(' (')[0]</td>
+	<td>cost_link</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterPlanRanges']/div/div/ul/li[3]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=${cost_link}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=${cost_link}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>link=${cost_link}</td>
+	<td></td>
+</tr>
+<!--insurance provider-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterCarriers']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#filterCarriers &gt; div.dropdown-menu &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterCarriers &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#insuranceProviderGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>INSURANCE PROVIDER</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterCarriers &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=carrier-Delta Dental</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=Delta Dental</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=removeAllFilters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--plan type-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterPlanTypes']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=#filterPlanTypes &gt; div.dropdown-menu &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterPlanTypes &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#planTypesGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>PLAN TYPE</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterPlanTypes &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=planType-PPO</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=PPO</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.planText</td>
+	<td>PPO</td>
+</tr>
+<!--Deductible-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterDeductible']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#filterDeductible &gt; div.dropdown-menu &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterDeductible &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#deductibleGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>DEDUCTIBLE</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterPlanTypes &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=deductible-25</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=$25</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.deductible.planSection &gt; p</td>
+	<td>$25</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterDeductible']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#filterDeductible &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; a.clearFilterGroup &gt; span.selectedFilterLabel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterDeductible &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; a.clearFilterGroup &gt; span.selectedFilterLabel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--coverage Max-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterCoverage']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=div.dropdown-menu.pull-right &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=planMaximums-$2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=$2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=removeAllFilters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.coverage.planSection &gt; p.planText</td>
+	<td>$2000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=$2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Enrollment fee-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterFees']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=#filterFees &gt; div.dropdown-menu.pull-right &gt; div.filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterFees &gt; div.dropdown-menu.pull-right &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#enrollmentFeesGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
+	<td>ENROLLMENT FEE</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterFees &gt; div.dropdown-menu.pull-right &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=enrollmentFees-25</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=$25</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.costs.planSection &gt; p.planText</td>
+	<td>$25</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=removeAllFilters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>12000</td>
+	<td></td>
+</tr>
+<!--sort by -->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='sort']/div/button</td>
+	<td>Monthly Cost</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='sort']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=div.dropdown-menu.open</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='sort']/div/div/ul/li[5]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='sort']/div/button</td>
+	<td>Insurance Provider</td>
+</tr>
+<!--select button-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[contains(text(),'Select')]</td>
+	<td></td>
+</tr>
+<!-- Dental online apply is disabled on 2016/04
+<tr>
+	<td>verifyVisible</td>
+	<td>link=CONTINUE ONLINE</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='callText']/div/p[2]</td>
+	<td>(800) 984-8015</td>
+</tr>
+
+-->
+
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	

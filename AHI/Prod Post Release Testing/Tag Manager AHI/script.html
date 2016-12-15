@@ -1,0 +1,427 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Prod Post Release Testing/Tag Manager AHI</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">tagmanager</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>tagmanager.google.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//input[@id='signIn']&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Email</td>
+	<td>denis.yu1111@gmail.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Passwd</td>
+	<td>Think2016</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=signIn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.fill-cell.ng-binding</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//header/div/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//header/div/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//header/div/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//header/div/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='bubble-2']/div/div[2]/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/GetQuote</td>
+	<td></td>
+</tr> 
+
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Select This Plan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*apply*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Get URI</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[1]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[2]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[3]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[4]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[5]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 2. Applicant Info</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@value='']</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=07</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=member-P-1-lbs</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 3. Payment &amp; Billing</td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Use Credit Card</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//p[@class='modal-sub-heading']&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p[@class='modal-sub-heading']</td>
+	<td>*Dental*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=consent-checkbox-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-signature-tab</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;//*[@id='js-app-no-thanks-link']&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//*[@id='js-app-no-thanks-link']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------end------------->
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='js-app-confirmation']/div/h2/span</td>
+	<td>Congratulations*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[2]/div</td>
+	<td>Ad Marketplace Conversion</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[3]/div</td>
+	<td>Ad Prime Conversion</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[4]/div</td>
+	<td>Adnet Conversion</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[5]/div</td>
+	<td>Bankrate Conversion</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[6]/div</td>
+	<td>Bing Conversion</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[7]/div</td>
+	<td>Bing Global</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[8]/div</td>
+	<td>Facebook Conversion</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[9]/div</td>
+	<td>Facebook global</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[10]/div</td>
+	<td>Google App Start</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[11]/div</td>
+	<td>Google Conversion</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[12]/div</td>
+	<td>Google Remarketing</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[13]/div</td>
+	<td>Impact Radius App start</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[14]/div</td>
+	<td>Impact Radius Conversion</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[15]/div</td>
+	<td>Impact Radius Global</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[16]/div</td>
+	<td>Media Alpha Conversion</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[17]/div</td>
+	<td>Rakuten App Start</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[18]/div</td>
+	<td>Rakuten Conversion Tag</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[19]/div</td>
+	<td>Rakuten Global Tag</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[20]/div</td>
+	<td>Rocket Fuel Conversion</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[21]/div</td>
+	<td>Rocket Fuel Global</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[22]/div</td>
+	<td>Surehits conversion</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[23]/div</td>
+	<td>Vantage App Start</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='gtm-debug-id-has-tags']/div/div[24]/div</td>
+	<td>Vantage Conversion</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,145 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/Dental/Dental Apply Flow/Delta Dental Apply</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">city_best_selling</td></tr>
+</thead><tbody>
+<!--Delta Dental Apply Flow-->
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/dental-insurance/quote?zip=35215</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Dental</td>
+	<td></td>
+</tr>
+<!--census-->
+<tr>
+	<td>click</td>
+	<td>link=35 year old individual</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=dob-P-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-P-0</td>
+	<td>10101980</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-applicants-collapse']/div/div/button[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<!--hii plan-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterCarriers']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=.//*[@id='filterCarriers']/div/div[1]/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#filterCarriers span.filterName:contains('Delta')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--detail page-->
+<tr>
+	<td>storeText</td>
+	<td>css=span.amount</td>
+	<td>price</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.planName</td>
+	<td>plan_name</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.carrier.planSection</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.amount</td>
+	<td>${price}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.planName</td>
+	<td>${plan_name}</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<!--apply page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>${plan_name}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=dd</td>
+	<td>${price}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=CONTINUE ONLINE</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

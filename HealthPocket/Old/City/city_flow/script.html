@@ -1,0 +1,897 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/City/city_flow</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+city02</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/city-healthplan-finder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${city_name}</td>
+	<td></td>
+</tr>
+<!--Medicare tab-->
+<!--
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/medicare_delayed_popup</td>
+	<td></td>
+</tr>
+-->
+<tr>
+	<td>verifyTitle</td>
+	<td>Medicare Insurance in ${city_name}, ${state1} - Find Medicare Plans in ${city_name} - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading.cityPage</td>
+	<td>Compare Every Medicare Insurance Plan in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.count &gt; strong</td>
+	<td>* Medicare Plans Found</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h4.count &gt; strong</td>
+	<td>docker_text</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='js-city-provider-container']/div/p/a</td>
+	<td>provider_count</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.planCarriers &gt; strong</td>
+	<td>${provider_count} Medicare Providers Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.doctor-count &gt; strong</td>
+	<td>* Medicare Doctors Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=img[alt=&quot;${city_name}, ${state1}&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.city-resource-header</td>
+	<td>Showing * of * Medicare plans found in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Medicare plans in ${city_name}, ${state1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Medicare plans in ${state}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=2014 Best Selling plans in ${city_name}, ${state1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=askQuestion</td>
+	<td></td>
+</tr>
+<!--docker-->
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=h2.docker-title</td>
+	<td>${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=div.docker-subtitle</td>
+	<td>${docker_text}</td>
+</tr>
+
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=span.docker-phone-copy</td>
+	<td>Call Toll Free</td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=span.docker-phone-number</td>
+	<td>(800) 413-9554</td>
+</tr>
+<!--advanted plans-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Medicare Advantage Plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Medicare Advantage Insurance in ${city_name}, ${state1} - Find Medicare Advantage Plans in ${city_name} - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading.cityPage</td>
+	<td>Compare Every Medicare Advantage Plan in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.count &gt; strong</td>
+	<td>* Medicare Advantage Plans Found</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h4.count &gt; strong</td>
+	<td>docker_text</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='js-city-provider-container']/div/p/a</td>
+	<td>provider_count</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.planCarriers &gt; strong</td>
+	<td>${provider_count} Medicare Advantage Providers Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.doctor-count &gt; strong</td>
+	<td>* Medicare Advantage Doctors Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.city-resource-header</td>
+	<td>Showing * of * Medicare Advantage plans found in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all Medicare Advantage plans in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Medicare Advantage plans in ${city_name}, ${state1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Medicare Advantage plans in ${state}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=2014 Best Selling plans in ${city_name}, ${state1}</td>
+	<td></td>
+</tr>
+<!--docker-->
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=h2.docker-title</td>
+	<td>${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=div.docker-subtitle</td>
+	<td>${docker_text}</td>
+</tr>
+
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=span.docker-phone-copy</td>
+	<td>Call Toll Free</td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=span.docker-phone-number</td>
+	<td>(800) 413-9554</td>
+</tr>
+<!--pdp plan-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Medicare Prescription Drug Plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Medicare Drug Plans in ${city_name}, ${state1} - Find Medicare Drug Plans in ${city_name} - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading.cityPage</td>
+	<td>Compare Every Medicare Part D Plan in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.count &gt; strong</td>
+	<td>* Medicare Part D Plans Found</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h4.count &gt; strong</td>
+	<td>docker_text</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='js-city-provider-container']/div/p/a</td>
+	<td>provider_count</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.planCarriers &gt; strong</td>
+	<td>${provider_count} Medicare Part D Providers Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.doctor-count &gt; strong</td>
+	<td>* Pharmacies accepting Medicare Part D plans</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@class='city-counts-section']/h4[4]/strong</td>
+	<td>* Medicare Doctors Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=img[alt=&quot;${city_name}, ${state1}&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.city-resource-header</td>
+	<td>Showing * of * Medicare Part D plans found in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all Medicare Part D plans in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#cityPharmacyList &gt; h2.city-resource-header &gt; strong</td>
+	<td>Medicare Part D Pharmacies in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Medicare Part D plans in ${city_name}, ${state1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Medicare Part D plans in ${state}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=2014 Best Selling plans in ${city_name}, ${state1}</td>
+	<td></td>
+</tr>
+<!--docker-->
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=h2.docker-title</td>
+	<td>${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=div.docker-subtitle</td>
+	<td>${docker_text}</td>
+</tr>
+
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=span.docker-phone-copy</td>
+	<td>Call Toll Free</td>
+</tr>
+<tr>
+	<td>verifyTextWhenExist</td>
+	<td>css=span.docker-phone-number</td>
+	<td>(800) 413-9554</td>
+</tr>
+<!--Obamacare tab-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Obamacare')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyTitle</td>
+	<td>Obamacare (ACA) Health Insurance in ${city_name}, ${state1} - Find Obamacare Plans in ${city_name} - HealthPocket</td>
+	<td></td>
+</tr>
+
+<!--year button
+<tr>
+	<td>verifyAttribute</td>
+	<td>//a[contains(text(),'2015 Plans')]@class</td>
+	<td>btn selected</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=2014 Plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/city-healthplan-finder/obamacare-2014/california/*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//a[contains(text(),'2014 Plans')]@class</td>
+	<td>btn selected</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=2015 Plans</td>
+	<td></td>
+</tr>
+<!--summary-->
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading.cityPage</td>
+	<td>Compare Every Obamacare Health Insurance Plan in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.count &gt; strong</td>
+	<td>* Obamacare 2015 Plans Found</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='js-city-provider-container']/div/p/a</td>
+	<td>provider_count</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.planCarriers &gt; strong</td>
+	<td>${provider_count} Obamacare 2015 Providers Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.doctor-count &gt; strong</td>
+	<td>* Obamacare 2015 Doctors Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.city-resource-header</td>
+	<td>Showing * of * Obamacare health plans found in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all Obamacare&nbsp;&nbsp;plans in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#cityDoctorList &gt; h2.city-resource-header &gt; strong</td>
+	<td>Obamacare Doctors in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Obamacare&nbsp;&nbsp;plans in ${city_name}, ${state1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Obamacare plans in California</td>
+	<td></td>
+</tr>
+<!--docker-->
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.docker-title</td>
+	<td>${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.docker-subtitle</td>
+	<td>* Obamacare Plans plans</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=strong</td>
+	<td>Don't overpay for your Health Insurance.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.docker-phone-number</td>
+	<td>(800) 984-8015</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.docker-phone-copy</td>
+	<td>Call Toll Free</td>
+</tr>
+<!--bronze plans-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Bronze Plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Obamacare (ACA) Bronze Health Insurance in ${city_name}, ${state1} - Find Obamacare Bronze Plans in ${city_name} - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading.cityPage</td>
+	<td>Compare Every Obamacare bronze Plan in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.count &gt; strong</td>
+	<td>* Obamacare 2015 Bronze Plans Found</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='js-city-provider-container']/div/p/a</td>
+	<td>provider_count</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.planCarriers &gt; strong</td>
+	<td>${provider_count} Obamacare 2015 Bronze Providers Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.doctor-count &gt; strong</td>
+	<td>* Obamacare 2015 Doctors Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@class='plans-list']/h2</td>
+	<td>Showing * of * Obamacare bronze plans found in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all Obamacare bronze plans in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#cityDoctorList &gt; h2.city-resource-header &gt; strong</td>
+	<td>Obamacare Doctors in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Obamacare bronze plans in ${city_name}, ${state1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Obamacare bronze plans in California</td>
+	<td></td>
+</tr>
+<!--docker-->
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.docker-title</td>
+	<td>${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.docker-subtitle</td>
+	<td>* Obamacare Bronze Plans Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=strong</td>
+	<td>Don't overpay for your Health Insurance.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.docker-phone-number</td>
+	<td>(800) 984-8015</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.docker-phone-copy</td>
+	<td>Call Toll Free</td>
+</tr>
+<!--sliver plans--><!--NEED TO ADD TEXT--><!--NEED TO ADD TEXT-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Silver Plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Obamacare (ACA) Silver Health Insurance in ${city_name}, ${state1} - Find Obamacare Silver Plans in ${city_name} - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading.cityPage</td>
+	<td>Compare Every Obamacare silver Plan in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all Obamacare silver plans in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#cityDoctorList &gt; h2.city-resource-header &gt; strong</td>
+	<td>Obamacare Doctors in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Obamacare silver plans in ${city_name}, ${state1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Obamacare silver plans in California</td>
+	<td></td>
+</tr>
+<!--gold plans-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Gold Plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Obamacare (ACA) Gold Health Insurance in ${city_name}, ${state1} - Find Obamacare Gold Plans in ${city_name} - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading.cityPage</td>
+	<td>Compare Every Obamacare gold Plan in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.city-resource-header</td>
+	<td>Showing * of * Obamacare gold plans found in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all Obamacare gold plans in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#cityDoctorList &gt; h2.city-resource-header &gt; strong</td>
+	<td>Obamacare Doctors in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Obamacare gold plans in ${city_name}, ${state1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Obamacare gold plans in California</td>
+	<td></td>
+</tr>
+<!--platinum plans-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Platinum Plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Obamacare (ACA) Platinum Health Insurance in ${city_name}, ${state1} - Find Obamacare Platinum Plans in ${city_name} - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading.cityPage</td>
+	<td>Compare Every Obamacare platinum Plan in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.city-resource-header</td>
+	<td>Showing * of * Obamacare platinum plans found in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all Obamacare platinum plans in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#cityDoctorList &gt; h2.city-resource-header &gt; strong</td>
+	<td>Obamacare Doctors in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Obamacare platinum plans in ${city_name}, ${state1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Obamacare platinum plans in California</td>
+	<td></td>
+</tr>
+<!--Catastrophic Plans-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Catastrophic Plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Obamacare (ACA) Catastrophic Health Insurance in ${city_name}, ${state1} - Find Obamacare Catastrophic Plans in ${city_name} - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading.cityPage</td>
+	<td>Compare Every Obamacare catastrophic Plan in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.city-resource-header</td>
+	<td>Showing * of * Obamacare catastrophic plans found in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all Obamacare catastrophic plans in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#cityDoctorList &gt; h2.city-resource-header &gt; strong</td>
+	<td>Obamacare Doctors in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Obamacare catastrophic plans in ${city_name}, ${state1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Obamacare catastrophic plans in California</td>
+	<td></td>
+</tr>
+<!--Medigap-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Medigap')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Medicare Supplement (Medigap) Insurance in ${city_name}, ${state1} - Find Medigap Plans in ${city_name} - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading.cityPage</td>
+	<td>Compare Every Medigap Plan in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.city-resource-header</td>
+	<td>Showing 10 of * Medicare Supplement plans found in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all Medigap plans in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#cityDoctorList &gt; h2.city-resource-header &gt; strong</td>
+	<td>Doctors in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=See all Medigap plans in ${city_name}, ${state1}</td>
+	<td></td>
+</tr>
+<!--SBG-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Small Business')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!--
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/sbg_delayed_popup</td>
+	<td></td>
+</tr>
+-->
+<tr>
+	<td>verifyTitle</td>
+	<td>Small Business Health Insurance in ${city_name}, ${state1} - Find Small Business Plans in ${city_name} - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading.cityPage</td>
+	<td>Compare Every Group Health Insurance Plan in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.city-resource-header</td>
+	<td>Showing 10 of * small business health plans found in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all small business health plans in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#cityDoctorList &gt; h2.city-resource-header &gt; strong</td>
+	<td>Doctors in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.city-doctors &gt; a.more-link &gt; strong</td>
+	<td>See all doctors near ${city_name}, ${state1}</td>
+</tr>
+<!--
+
+-->
+<!--Dental-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Dental')])[3]</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyTitle</td>
+	<td>Dental Insurance in ${city_name}, ${state1} - Find Dental Plans in ${city_name} - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading.cityPage</td>
+	<td>Compare Every Dental Insurance Plan in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//body[@id='hp-default']/div[6]/div/div/section/h2</td>
+	<td>Showing 10 of * dental plans found in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all dental plans in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#cityDoctorList &gt; h2.city-resource-header &gt; strong</td>
+	<td>Doctors in ${city_name}, ${state1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.city-doctors &gt; a.more-link &gt; strong</td>
+	<td>See all doctors near ${city_name}, ${state1}</td>
+</tr>
+<!--
+ <tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/dental_delayed_popup</td>
+	<td></td>
+ </tr>
+-->
+<!--SBG-->
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
