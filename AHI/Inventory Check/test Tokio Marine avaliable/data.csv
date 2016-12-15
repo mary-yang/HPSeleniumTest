@@ -1,52 +1,52 @@
-provider,state,state1,zipcode,Total,over6,upTo6,Max Duration
-Tokio Marine HCC,Alabama,AL,35215,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Alaska,AK,99504,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Arkansas,AR,72209,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Arizona,AZ,85364,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,California,CA,90011,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Colorado,CO,80219,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Connecticut,CT,6606,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Delaware,DE,19805,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,District Of Columbia,DC,20015,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Florida,FL,33186,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Georgia,GA,30044,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Hawaii,HI,96818,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Iowa,IA,50317,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Idaho,ID,83709,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Illinois,IL,60629,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Indiana,IN,46227,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Kansas,KS,66062,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Kentucky,KY,40214,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Louisiana,LA,70816,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Massachusetts,MA,2128,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Maryland,MD,21215,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Maine,ME,4401,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Michigan,MI,48228,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Minnesota,MN,55106,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Missouri,MO,63129,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Mississippi,MS,39503,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Montana,MT,59102,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,North Carolina,NC,28269,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,North Dakota,ND,58103,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Nebraska,NE,68104,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,New Hampshire,NH,3103,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,New Jersey,NJ,8701,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,New Mexico,NM,87121,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Nevada,NV,89110,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,New York,NY,11226,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Ohio,OH,43228,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Oklahoma,OK,73160,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Oregon,OR,97229,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Pennsylvania,PA,19120,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Rhode Island,RI,2909,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,South Carolina,SC,29223,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,South Dakota,SD,57106,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Tennessee,TN,37013,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Texas,TX,79936,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Utah,UT,84120,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Virginia,VA,23464,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Vermont,VT,5401,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Washington,WA,98115,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Wisconsin,WI,53215,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,West Virginia,WV,25302,${num},${over6},${upTo6},${maxDuration}
-Tokio Marine HCC,Wyoming,WY,82001,${num},${over6},${upTo6},${maxDuration}
+"provider","state","state1","zipcode","Total","over6","upTo6","Max Duration"
+"HCC Life","Alabama","AL","35215","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Alaska","AK","99504","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Arkansas","AR","72209","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Arizona","AZ","85364","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","California","CA","90011","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Colorado","CO","80219","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Connecticut","CT","06606","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Delaware","DE","19805","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","District Of Columbia","DC","20015","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Florida","FL","33186","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Georgia","GA","30044","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Hawaii","HI","96818","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Iowa","IA","50317","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Idaho","ID","83709","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Illinois","IL","60629","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Indiana","IN","46227","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Kansas","KS","66062","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Kentucky","KY","40214","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Louisiana","LA","70816","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Massachusetts","MA","2128","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Maryland","MD","21215","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Maine","ME","04401","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Michigan","MI","48228","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Minnesota","MN","55106","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Missouri","MO","63129","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Mississippi","MS","39503","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Montana","MT","59102","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","North Carolina","NC","28269","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","North Dakota","ND","58103","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Nebraska","NE","68104","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","New Hampshire","NH","30103","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","New Jersey","NJ","08701","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","New Mexico","NM","87121","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Nevada","NV","89110","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","New York","NY","11226","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Ohio","OH","43228","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Oklahoma","OK","73160","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Oregon","OR","97229","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Pennsylvania","PA","19120","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Rhode Island","RI","02909","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","South Carolina","SC","29223","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","South Dakota","SD","57106","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Tennessee","TN","37013","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Texas","TX","79936","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Utah","UT","84120","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Virginia","VA","23464","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Vermont","VT","05401","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Washington","WA","98115","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Wisconsin","WI","53215","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","West Virginia","WV","25302","${num}","${over6}","${upTo6}","${maxDuration}"
+"HCC Life","Wyoming","WY","82001","${num}","${over6}","${upTo6}","${maxDuration}"
