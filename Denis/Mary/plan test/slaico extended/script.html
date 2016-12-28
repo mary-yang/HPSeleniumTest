@@ -1,12 +1,7 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Prod Post Release Testing/Submit Premier Application</title></head><body><table border="1" cellpadding="1" cellspacing="1">
-	<thead>
-<tr>
-	<td colspan="3" rowspan="1">
-sanity4/24</td>
-</tr>
-	</thead>
-	<tbody>
-
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Denis/Mary/plan test/slaico extended</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
 <tr>
 	<td>open</td>
 	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
@@ -53,13 +48,18 @@ sanity4/24</td>
 	<td>blur</td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
 	<td>pause</td>
 	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td>xpath=//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
 <tr>
@@ -73,8 +73,23 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=${carrierid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@id='js-quote-filters']/div[4]/ul/li[1]/label[1]</td>
 	<td></td>
 </tr>
 <tr>
@@ -118,7 +133,7 @@ sanity4/24</td>
 	<td>*${mo}*</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
+	<td>click</td>
 	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
@@ -132,6 +147,7 @@ sanity4/24</td>
 	<td>'${mo}'.match(/\d+.\d+/)</td>
 	<td>mo1</td>
 </tr>
+<!--
 <tr>
 	<td>verifyText</td>
 	<td>//*[@id='apply']/div[3]/div[2]/div[1]/div[1]/div/div[1]/table/tbody/tr[2]/td/a/span</td>
@@ -142,6 +158,7 @@ sanity4/24</td>
 	<td>//*[@id='apply']//tr[descendant::td[1][contains(text(),'Base Premium')]]/td[2]</td>
 	<td>$${mo1}</td>
 </tr>
+-->
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -159,12 +176,12 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>include</td>
-	<td>AHI/Include/Underwriting</td>
+	<td>AHI/Include/Name</td>
 	<td></td>
 </tr>
 <tr>
 	<td>include</td>
-	<td>AHI/Include/Name</td>
+	<td>AHI/Include/Get URI</td>
 	<td></td>
 </tr>
 <tr>
@@ -192,25 +209,14 @@ sanity4/24</td>
 	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[5]/div/button[1]</td>
 	<td></td>
 </tr>
-
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
 <tr>
 	<td>click</td>
 	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[6]/div/button[1]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[7]/div/button[1]</td>
+	<td>IF</td>
+	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
 	<td></td>
 </tr>
 <tr>
@@ -221,6 +227,11 @@ sanity4/24</td>
 <tr>
 	<td>pause</td>
 	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -274,29 +285,55 @@ sanity4/24</td>
 	<td>${Tel}</td>
 </tr>
 <tr>
+	<td>type</td>
+	<td>id=member-P-1-occupation</td>
+	<td>value-added extend bandwidth</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='custom-carrier-questions']/div[2]/div/div/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 3. Payment &amp; Billing</td>
+</tr>
+<!--
+<tr>
+	<td>storeEval</td>
+	<td>{var x="123456789"; var tmp=""; for (i=0;i<18;i++) tmp+=x.charAt(Math.ceil(8*Math.random()));tmp;}</td>
+	<td>account</td>
+</tr>
+-->
 <tr>
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>include</td>
-	<td>AHI/Include/Use Credit Card</td>
-	<td></td>
-</tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------------------->
-<tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;//*[@id='js-app-no-thanks-link']&quot;)</td>
+	<td>verifyElementPresent(id=js-extended-coverage)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//*[@id='js-app-no-thanks-link']</td>
+	<td>//div[@id='js-application-payment']//div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@id='js-application-payment']//div/button[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -304,10 +341,113 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------end------------->
+<!----------先填Bank Draft,用于验证有Bank Draft选项---------------------->
+<tr>
+	<td>type</td>
+	<td>id=account-holder-name</td>
+	<td>${FirstName} ${LastName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bank-name</td>
+	<td>American Bank</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='account-type']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='account-class']/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=routing-number</td>
+	<td>121000248</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=account-number</td>
+	<td>4111022497</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=eft-payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//p[@class='modal-sub-heading']&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p[@class='modal-sub-heading']</td>
+	<td>*Dental*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!----------Edit Payment 改填CreditCard选项---------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Edit')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Use Credit Card</td>
+	<td></td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>id=consent-checkbox-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -332,7 +472,7 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
+	<td>click</td>
 	<td>//*[@id='js-app-no-thanks-link']</td>
 	<td></td>
 </tr>
@@ -343,39 +483,17 @@ sanity4/24</td>
 </tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------end------------->
 <tr>
-	<td>include</td>
-	<td>AHI/Include/Congratulation</td>
+	<td>pause</td>
+	<td>10000</td>
 	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-confirmation']/div/h2/span</td>
+	<td>Congratulations*</td>
 </tr>
 </tbody></table>
 </body>
 </html>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
