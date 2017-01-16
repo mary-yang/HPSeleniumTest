@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression - SPA/QA Sanity/1 Time Payment</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Denis/QA Sanity/1 Time Payment</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -8,12 +8,12 @@ sanity4/24</td>
 	<tbody>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td>http://vince.healthpocket.com/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td>http://vince.healthpocket.com</td>
 	<td></td>
 </tr>
 <tr>
@@ -30,7 +30,7 @@ sanity4/24</td>
 <tr>
 	<td>waitForText</td>
 	<td>css=h1.census-main-heading</td>
-	<td>Compare health insurance plans*</td>
+	<td>Compare Health Insurance Quotes*</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -110,7 +110,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>id=${carrierid}</td>
+	<td>//input[@data-id="${carrierid}"]</td>
 	<td></td>
 </tr>
 <tr>
@@ -119,18 +119,24 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	<td>clickAndWait</td>
+	<td>link=Select This Plan</td>
+	<td></td>
+</tr>
+<!-----------
+<tr>
 	<td>storeText</td>
-	<td>css=h3.quote-plan-name</td>
+	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
 	<td>planname</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=div.quote-plan-price</td>
+	<td>//li/div/div/div[contains(@data-planid, '${carrierid}')]/div</td>
 	<td>mo</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=See All Details »</td>
+	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -140,14 +146,15 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>id=plan-details-primary-apply</td>
-	<td>Apply - ${mo}</td>
+	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
+	<td>*${mo}*</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
+---------->
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -158,39 +165,16 @@ sanity4/24</td>
 	<td>AHI/Include/Go to end</td>
 	<td></td>
 </tr>
-<!----------------------------------------------登陆BO--------------------------------->
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Login BO</td>
-	<td></td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>http://praetemptatus.agilehealthinsurance.com/back-office/reporting?page=1&amp;pageSize=500&amp;dispositionType=A&amp;reportType=A&requireContactInfo=false</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=searchButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>10000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//td[contains(text(),'${uri}')]//parent::tr/td[2]</td>
-	<td>status</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//td[contains(text(),'${uri}')]//parent::tr/td[2]</td>
-	<td>Sent to Carrier</td>
-</tr>
-</tbody>
-</table>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

@@ -1,0 +1,7 @@
+"state","zipcode","carrierid","planname","mo","uri","DOB"
+"AL","35215","carrier-companionprotect-","${planname}","${mo}","${uri}","01/01/1985"
+"AZ","85364","carrier-companionprotect-","${planname}","${mo}","${uri}","01/01/1985"
+"DC","20015","carrier-companionprotect-","${planname}","${mo}","${uri}","01/01/1985"
+"FL","33186","carrier-companionprotect-","${planname}","${mo}","${uri}","01/01/1985"
+"IA","50317","carrier-companionprotect-","${planname}","${mo}","${uri}","01/01/1985"
+"IL","60001","carrier-companionprotect-","${planname}","${mo}","${uri}","01/01/1985"
