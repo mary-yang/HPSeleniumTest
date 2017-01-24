@@ -25,6 +25,17 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	<td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]</td>
 	<td></td>
 </tr>
+
+<tr>
+	<td>click</td>
+	<td>id=planDeductibleRange-5000-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
 <tr>
 	<td>storeText</td>
 	<td>//*[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div[1]/div[2]/div[1]</td>
@@ -74,8 +85,18 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	<td></td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>id=planDeductibleRange-5000-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>storeText</td>
-	<td>//*[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div[1]/div[2]/div[1]</td>
+	<td>//*[@id='js-quote-plans-container']/ul/li[1]/div/div[1]/div[2]/div[1]</td>
 	<td>quote_testprod_rate</td>
 </tr>
 <tr>
@@ -112,6 +133,9 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 </body>
 </html>
 
+	
+	
+	
 	
 	
 	
