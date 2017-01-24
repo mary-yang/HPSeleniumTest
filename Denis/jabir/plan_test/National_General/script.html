@@ -1,7 +1,174 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Include/Go to end - ECD</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Denis/jabir/plan_test/National_General</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/quote?census[location][zip]=${zip}&amp;
+census[member][0][dob]=${DOB}&amp;census[member][0][gender]=F&amp;census[member][0][role]=P</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/quote*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/ul/li[4]</td>
+	<td>Policy_Term_month</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Policy_Term_month}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${Policy_Term_month}'.match(/\d+/g);</td>
+	<td>Policy_Term_month</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Policy_Term_month}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'${provider}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[2]/table/tbody/tr[3]/td[2]</td>
+	<td>effective</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=js-apply-original-effectiveEnd</td>
+	<td>12/*/2017</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var d = new Date();44</td>
+	<td>days_add</td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/add_days</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/quote?census[location][zip]=${zip}&amp;
+census[member][0][dob]=${DOB}&amp;census[member][0][gender]=F&amp;census[member][0][role]=P&census[effective]=${fulldate}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/quote*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/ul/li[4]</td>
+	<td>Policy_Term_month</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Policy_Term_month}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${Policy_Term_month}'.match(/\d+/g);</td>
+	<td>Policy_Term_month</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Policy_Term_month}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'${provider}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
 <tr>
 	<td>verifyLocation</td>
 	<td>*apply*</td>
@@ -151,11 +318,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeText</td>
-	<td>xpath=//*[@id='js-app-page-summary']/div[1]/div[3]/span</td>
-	<td>ECD_P</td>
-</tr>
-<tr>
 	<td>echo</td>
 	<td>${ECD_P}</td>
 	<td></td>
@@ -273,7 +435,29 @@
 </tr>
 </tbody></table>
 </body>
-</html>	
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

@@ -1,0 +1,572 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Denis/jabir/AgileBundles_Regression/App Fields Verification</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+
+<tr>
+	<td>open</td>
+	<td>http://vince.healthpocket.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://vince.healthpocket.com/term-health-insurance/census</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>11/12/1951</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#js-census-over-age &gt; p.heading</td>
+	<td>To compare your term health plan options, please enter a date of birth between 2 and 64 years. If you are 65 years of age or older please call 855-382-4440 to speak with a licensed medicare agent who can assist you in choosing a medicare plan.</td>
+</tr>
+
+<tr>
+	<td>store</td>
+	<td>90010</td>
+	<td>zip</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>DOB</td>
+	<td>01/01/1985</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>07/18/2015</td>
+	<td>start</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>08/18/2015</td>
+	<td>end</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>03/08/1985</td>
+	<td>DOB</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/census</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='census-start-section']/div/div</td>
+	<td>Please provide a valid zip code.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='census-member-section-0']/div/div/div/div[2]</td>
+	<td>Please enter a valid birth date between 2 and 64 yrs.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[4]</td>
+	<td>Please select a gender.</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zip}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>${DOB}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=+ Spouse</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=+ Child</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='census-member-section-1']/div/div/div[2]/div[3]</td>
+	<td>Please select a gender.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='census-member-section-1']/div/div/div/div</td>
+	<td>Please enter a valid birth date between 18 and 64 yrs.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='census-member-section-2']/div/div/div/div</td>
+	<td>Please enter a valid birth date up to 25 yrs.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='census-member-section-2']/div/div/div[2]/div[3]</td>
+	<td>Please select a gender.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.js-remove-member.census-remove-member</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/quote*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Select This Plan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*apply*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[1]/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-page-ineligible']/p</td>
+	<td>Thank you for your interest. Unfortunately, you do not meet the eligibility requirements for coverage.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[1]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[2]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[3]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[4]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[5]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='js-app-page-eligibile']/p</td>
+	<td>Congratulations*</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-member-P-1-firstName</td>
+	<td>Valid first name is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-member-P-1-lastName</td>
+	<td>Valid last name is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-member-P-1-ft</td>
+	<td>Valid height in feet is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-member-P-1-in</td>
+	<td>Valid height in inches is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-member-P-1-lbs</td>
+	<td>Valid weight in pounds is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-address</td>
+	<td>Valid address is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-city</td>
+	<td>Valid city is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-email</td>
+	<td>Valid email address is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-primaryPhone</td>
+	<td>Valid phone number is required</td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-firstName</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=06</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=member-P-1-lbs</td>
+	<td>21</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 3. Payment &amp; Billing</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-credit-card-number</td>
+	<td>Valid credit card number is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-credit-card-first</td>
+	<td>Valid first name is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-credit-card-last</td>
+	<td>Valid last name is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-billing-address</td>
+	<td>Valid address is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-billing-city</td>
+	<td>Valid city is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-billing-state</td>
+	<td>Please enter a valid state abbreviation</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-billing-zip</td>
+	<td>Please enter a valid zip code</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-credit-payment-authorization</td>
+	<td>You must accept the payment authorization</td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-application-payment']//div/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-account-holder-name</td>
+	<td>Valid account holder name is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-bank-name</td>
+	<td>Valid bank name is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-account-type</td>
+	<td>Valid account type is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-account-class</td>
+	<td>Valid account class is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-routing-number</td>
+	<td>Valid routing number is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-account-number</td>
+	<td>Valid account number is required</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-application-payment']//div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Use Bank Draft</td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//p[@class='modal-sub-heading']&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p[@class='modal-sub-heading']</td>
+	<td>*Dental*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-consent-checkbox-0</td>
+	<td>You must accept the Agile Disclaimer</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-carrier-authorization</td>
+	<td>Please click to sign your name</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
