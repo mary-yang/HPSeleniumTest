@@ -89,7 +89,7 @@
 	<td></td>
 </tr>
 
-<!----------------------------------------------登陆BO--------------------------------->
+<!----------------------------------------------登陆BO--------------
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Login BO</td>
@@ -117,7 +117,7 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//td[contains(text(),'${uri}')]//parent::tr/td[3]</td>
+	<td>//div[@id='searchResults']/small/table/tbody/tr[2]/td[3]</td>
 	<td>status</td>
 </tr>
 <tr>
@@ -125,31 +125,56 @@
 	<td>//td[contains(text(),'${uri}')]//parent::tr/td[5]</td>
 	<td>${source}</td>
 </tr>
-<!---------------------------------------------------------直接从url访问----------
+------------------->
+<!---------------------------------------------------------直接从url访问------------------------------------------------------------------------------------------>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Login BO</td>
+	<td></td>
+</tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/back-office/application/${uri}</td>
+	<td>http://${ENV}.agilehealthinsurance.com/back-office/reporting?startDate=2017-01-22&amp;endDate=2017-01-23&amp;reportType=A&amp;dispositionType=AF&amp;requireContactInfo=false&amp;state=all&amp;carrier=A&amp;sortBy=STATUS_DATE_DESC&amp;reProductType=all&amp;riderProduct=&amp;paymentOption=all&amp;duration=all&amp;attribution=&amp;firstName=&amp;lastName=&amp;uri=&amp;page=1&amp;pageSize=10</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>3000</td>
+	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeText</td>
-	<td>xpath=//*[@id='applicationEdit']/div/form/div[2]/div[3]/div/strong</td>
-	<td>status</td>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=uri</td>
+	<td>test-hccadvantage-al-igkq362rae</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>xpath=//*[@id='applicationEdit']/div/form/div[2]/div[3]/div/strong</td>
-	<td>Successfully Enrolled</td>
+	<td>//*[@id='searchResults']/small/table/tbody/tr[2]/td[3]</td>
+	<td>${status}</td>
 </tr>
--------------------------------------------------------------------------------->
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='searchResults']/small/table/tbody/tr[2]/td[3]</td>
+	<td>${source}</td>
+</tr>
+
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
 	
 	
 	

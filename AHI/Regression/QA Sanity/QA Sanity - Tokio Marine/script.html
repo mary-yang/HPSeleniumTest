@@ -151,25 +151,26 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=searchButton</td>
+	<td>link=App Management</td>
 	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=uri</td>
+	<td>${uri}</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>10000</td>
+	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeText</td>
-	<td>//td[contains(text(),'${uri}')]//parent::tr/td[3]</td>
-	<td>status</td>
-</tr>
-<tr>
 	<td>verifyText</td>
-	<td>//td[contains(text(),'${uri}')]//parent::tr/td[3]</td>
+	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
 	<td>Carrier Downloaded App</td>
 </tr>
------>
+
+
 <!----------------------------------到hiiquote.com验证是否成功, 还有问题，提示用户名密码不对
 <tr>
 	<td>include</td>
@@ -179,6 +180,9 @@ sanity4/24</td>
 ------------------>
 	</tbody>
 </table>
+	
+	
+	
 	
 	
 	
