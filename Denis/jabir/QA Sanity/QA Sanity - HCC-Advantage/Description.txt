@@ -1,0 +1,18 @@
+Sanity Test of AHI
+
+Steps:
+
+1. Visit and do verificationHome Page
+2. Visit Census Page
+3. Enter Census Information and go to quote page
+4. Sort/Filter quote result in Quote Page. 
+5. Select a plan, go to plan detail page
+6. Do verification in plan detail page. Click "Apply" Button. Go to apply page.
+7. Enter more Census Information in apply page. Go to online app
+8. Completed and verify eligibility questions. A high issue 
+9. Complete Applicant info
+10. Completed Payment info
+11. Completed Review.
+12. Comfirm and print application
+13. Review the confirmation email
+14. Log on HII site with user id/password, review and verify application information. All application informations are transfered to HII as expected.
