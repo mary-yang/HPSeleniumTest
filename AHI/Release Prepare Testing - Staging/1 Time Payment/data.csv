@@ -1,6 +1,6 @@
 "state","zipcode","carrierid","planname","mo","uri","DOB"
-"##ID","32099","carrier-hccadvantage-","${planname}","${mo}","${uri}","01/01/1985"
-"##ID","83709","carrier-hccflexible-","${planname}","${mo}","${uri}","01/01/1985"
+"##AL","32209","carrier-hccadvantage-","${planname}","${mo}","${uri}","01/01/1985"
+"##IL","60001","carrier-hccflexible-","${planname}","${mo}","${uri}","01/01/1985"
 "IL","60001","carrier-companionprotect-","${planname}","${mo}","${uri}","01/01/1985"
 "##IL","60001","carrier-slaico-","${planname}","${mo}","${uri}","01/01/1985"
 "##IL","60001","carrier-premierstm-","${planname}","${mo}","${uri}","01/01/1985"

@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/1 Time Payment</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Prod Post Release Testing/1 Time Payment</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -43,6 +43,12 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+
+<tr>
 	<td>sendKeys</td>
 	<td>id=dob-0</td>
 	<td>${DOB}</td>
@@ -54,33 +60,26 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[@id='census-payment-section']/div/div/div[2]/label</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>click</td>
 	<td>css=div.census-radio &gt; label</td>
 	<td></td>
 </tr>
 
 
-
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>storeEval</td>
-	<td>var d = new Date(); (2+d.getMonth()) +'/'+ (1+d.getDate()) +'/'+ d.getFullYear();</td>
-	<td>coverage_end_date</td>
-</tr>
 <tr>
 	<td>click</td>
 	<td>//div[@id='census-payment-section']/div/div/div[2]/label</td>
 	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var d = new Date(); (2+d.getMonth()) +'/'+ (1+d.getDate()) +'/'+ d.getFullYear();</td>
+	<td>coverage_end_date</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -92,25 +91,17 @@ sanity4/24</td>
 	<td>id=c-end</td>
 	<td>${coverage_end_date}</td>
 </tr>
+<tr>
 	<td>click</td>
-	<td>id=agile-census</td>
+	<td>css=#census-coverage-end-section &gt; div.census-section-content &gt; span.census-date-container &gt; label.census-calendar-label.sprite-calendar-icon</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=label.census-calendar-label.sprite-calendar-icon</td>
+	<td>css=a.ui-state-default.ui-state-hover</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>id=c-end</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//a[@class='ui-state-default ui-state-active ui-state-hover']</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>pause</td>
 	<td>4000</td>
@@ -123,7 +114,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>7000</td>
+	<td>6000</td>
 	<td></td>
 </tr>
 <tr>
@@ -223,27 +214,27 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//*[@id='js-question-P0-151']/div/button[1]</td>
+	<td>//li[@id='js-question-P0-368']/div/button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//*[@id='js-question-P0-152']/div/button[1]</td>
+	<td>//li[@id='js-question-P0-369']/div/button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//*[@id='js-question-P0-155']/div/button[1]</td>
+	<td>//li[@id='js-question-P0-373']/div/button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//*[@id='js-question-P0-156']/div/button[1]</td>
+	<td>//li[@id='js-question-P0-374']/div/button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//*[@id='js-question-P0-157']/div/button[1]</td>
+	<td>//li[@id='js-question-P0-375']/div/button</td>
 	<td></td>
 </tr>
 <tr>
@@ -355,7 +346,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>include</td>
-	<td>AHI/Include/Use Bank Draft</td>
+	<td>AHI/Include/Use Credit Card</td>
 	<td></td>
 </tr>
 
@@ -436,6 +427,11 @@ sanity4/24</td>
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
 	
 	
 	
