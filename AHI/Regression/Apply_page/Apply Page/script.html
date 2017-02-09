@@ -4,7 +4,7 @@
 </thead><tbody>
 <tr>
 	<td>store</td>
-	<td>99504</td>
+	<td>20015</td>
 	<td>zip</td>
 </tr>
 <tr>
@@ -30,7 +30,7 @@
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
-	<td>55106</td>
+	<td>20015</td>
 </tr>
 <tr>
 	<td>focus</td>
@@ -120,12 +120,12 @@
 
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='apply']//tr[descendant::td[1][contains(text(),'Admin')]]/td[2]</td>
-	<td>mo_Admin</td>
+	<td>//*[@id='apply']//tr[descendant::td[1][contains(text(),'L.I.F.E. Association Fee')]]/td[2]</td>
+	<td>mo_Fee</td>
 </tr>
 <tr>
 	<td>storeEval</td>
-	<td>parseFloat('${mo}'.match(/\d+.\d+/))+parseFloat('${mo_Admin}'.match(/\d+.\d+/))</td>
+	<td>parseFloat('${mo}'.match(/\d+.\d+/))+parseFloat('${mo_Fee}'.match(/\d+.\d+/))</td>
 	<td>mo1</td>
 </tr>
 <tr>
@@ -136,11 +136,16 @@
 <tr>
 	<td>verifyText</td>
 	<td>css=tr.total-row > td.text-right</td>
-	<td>*$${mo1}*</td>
+	<td>*${mo1}*</td>
 </tr>
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
 	
 	
 	
