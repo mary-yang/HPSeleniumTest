@@ -134,7 +134,7 @@
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/back-office/reporting?startDate=2017-01-22&amp;endDate=2017-01-23&amp;reportType=A&amp;dispositionType=AF&amp;requireContactInfo=false&amp;state=all&amp;carrier=A&amp;sortBy=STATUS_DATE_DESC&amp;reProductType=all&amp;riderProduct=&amp;paymentOption=all&amp;duration=all&amp;attribution=&amp;firstName=&amp;lastName=&amp;uri=&amp;page=1&amp;pageSize=10</td>
+	<td>http://${ENV}.agilehealthinsurance.com/back-office/reporting?startDate=2017-01-22&amp;endDate=2017-12-31&amp;reportType=A&amp;dispositionType=AF&amp;requireContactInfo=false&amp;state=all&amp;carrier=A&amp;sortBy=STATUS_DATE_DESC&amp;reProductType=all&amp;riderProduct=&amp;paymentOption=all&amp;duration=all&amp;attribution=&amp;firstName=&amp;lastName=&amp;uri=&amp;page=1&amp;pageSize=10</td>
 	<td></td>
 </tr>
 <tr>
@@ -150,11 +150,11 @@
 <tr>
 	<td>type</td>
 	<td>id=uri</td>
-	<td>test-hccadvantage-al-igkq362rae</td>
+	<td>${uri}</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
@@ -164,13 +164,17 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//*[@id='searchResults']/small/table/tbody/tr[2]/td[3]</td>
+	<td>//*[@id='searchResults']/small/table/tbody/tr[2]/td[5]</td>
 	<td>${source}</td>
 </tr>
 
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
 	
 	
 	
