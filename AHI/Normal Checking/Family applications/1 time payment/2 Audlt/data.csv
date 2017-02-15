@@ -1,5 +1,5 @@
 "state","zip","carrierid","uri","planname","quote_p","confirmation_p"
-"AK","99504","carrier-hccadvantage-","${uri}","${planname}","${mo}","${confirmation_p}"
+"##AK","99504","carrier-hccadvantage-","${uri}","${planname}","${mo}","${confirmation_p}"
 "##FL","32099","carrier-hccflexible-","${uri}","${planname}","${mo}","${confirmation_p}"
-"##AK","99504","carrier-companionprotect-","${uri}","${planname}","${mo}","${confirmation_p}"
+"AZ","85364","carrier-companionprotect-","${uri}","${planname}","${mo}","${confirmation_p}"
 "##FL","32099","carrier-premierstm-","${uri}","${planname}","${mo}","${confirmation_p}"

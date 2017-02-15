@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Include/Go to end - CC</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Include/Go to end_ihc</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
@@ -15,6 +15,11 @@
 <tr>
 	<td>pause</td>
 	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Underwriting</td>
 	<td></td>
 </tr>
 <tr>
@@ -38,6 +43,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=fillApp</td>
 	<td></td>
@@ -57,23 +67,22 @@
 	<td>3000</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>select</td>
-	<td>id=member-P-1-ft</td>
-	<td>label=06</td>
+	<td>id=member-p-marital-status</td>
+	<td>label=Married</td>
 </tr>
-<tr>
-	<td>select</td>
-	<td>id=member-P-1-in</td>
-	<td>label=08</td>
-</tr>
-
-
 
 <tr>
 	<td>type</td>
 	<td>id=email</td>
 	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=mailing-name</td>
+	<td>test mailer</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -91,14 +100,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=.boolean-toggle.btn.js-payment-method.js-bank-field</td>
-	<td></td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>id=credit-card-number</td>
-	<td>4111 1231 2312 3123</td>
+	<td>6545 0010 5147 3152</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -107,17 +111,20 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=credit-payment-authorization</td>
+	<td>css=div.col-sm-12.checkbox &gt; label</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>click</td>
-	<td>xpath=//*[@id='js-app-continue-link']</td>
+	<td>//div[@id='js-signature-tab']/p</td>
 	<td></td>
 </tr>
+
+
 <tr>
-	<td>pause</td>
-	<td>5000</td>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='js-app-continue-link']</td>
 	<td></td>
 </tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
@@ -137,15 +144,20 @@
 	<td></td>
 </tr>
 <tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td>ENDIF</td>
 	<td></td>
 	<td></td>
 </tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
 <tr>
-	<td>click</td>
-	<td>id=fillEsig</td>
-	<td></td>
+	<td>storeText</td>
+	<td>//div[@id='headingapplicantInfo']/div/div/div/ul/li</td>
+	<td>name</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -157,6 +169,7 @@
 	<td>css=p.signature-arrow</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -165,11 +178,6 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
 	<td></td>
 </tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------------------->
@@ -184,8 +192,33 @@
 	<td></td>
 </tr>
 <tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------end------------->
+
+<tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<!--
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+-->
+<tr>
+	<td>IF</td>
+	<td>verifyElementNotPresent(&quot;css=div.app-confirmation-main&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -193,25 +226,123 @@
 	<td></td>
 	<td></td>
 </tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------end------------->
 <tr>
-	<td>pause</td>
-	<td>10000</td>
+	<td>IF</td>
+	<td>verifyElementNotPresent(&quot;css=div.app-confirmation-main&quot;)</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//*[@id='js-app-confirmation']/div/h2/span</td>
-	<td>Congratulations*</td>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
 </tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementNotPresent(&quot;css=div.app-confirmation-main&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementNotPresent(&quot;css=div.app-confirmation-main&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementNotPresent(&quot;css=div.app-confirmation-main&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementNotPresent(&quot;css=div.app-confirmation-main&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='js-app-confirmation']/div/h2/span</td>
+	<td>Thank you for applying for coverage with The IHC Group.</td>
+</tr>
+
+
+
+
 </tbody></table>
 </body>
-</html>
+</html>	
 	
 	
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+
 	
 	
 	

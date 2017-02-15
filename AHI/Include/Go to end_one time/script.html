@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Include/Go to end - ECD</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Include/Go to end_one time</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
@@ -8,13 +8,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeText</td>
-	<td>css=tr.plan-breakdown-divider.total-row &gt; td.text-right</td>
-	<td>apply_P</td>
-</tr>
-
-<tr>
-	<td>click</td>
+	<td>clickAndWait</td>
 	<td>id=applyButton</td>
 	<td></td>
 </tr>
@@ -80,6 +74,21 @@
 	<td>${AutoEmail}</td>
 </tr>
 <tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=06</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=member-P-1-lbs</td>
+	<td>100</td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=mailing-name</td>
 	<td>test mailer</td>
@@ -100,77 +109,22 @@
 	<td></td>
 </tr>
 <tr>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4111 1231 2312 3123</td>
+</tr>
+
+<tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;id=js-extended-coverage&quot;)</td>
+	<td>verifyElementPresent(&quot;link=No Thanks&quot;)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=js-extended-coverage</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>captureEntirePageScreenshot</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>link=No Thanks</td>
 	<td></td>
 </tr>
 
-<tr>
-	<td>storeText</td>
-	<td>css=label</td>
-	<td>toDays</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${toDays}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>&quot;${toDays}&quot;.substr(47,3)</td>
-	<td>toDays</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${toDays}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>xpath=//*[@id='js-app-page-summary']/div[1]/div[3]/span</td>
-	<td>ECD_P</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${ECD_P}</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>type</td>
-	<td>id=credit-card-number</td>
-	<td>4111 1111 1111 1111</td>
-</tr>
-<!----------<tr>
-	<td>type</td>
-	<td>id=credit-card-cvv</td>
-	<td>131</td>
-</tr>--------------------->
 <tr>
 	<td>click</td>
 	<td>id=credit-payment-authorization</td>
@@ -181,8 +135,6 @@
 	<td>id=js-same-billing</td>
 	<td></td>
 </tr>
-
-
 <tr>
 	<td>click</td>
 	<td>css=div.col-sm-12.checkbox &gt; label</td>
@@ -221,6 +173,11 @@
 	<td></td>
 </tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='headingapplicantInfo']/div/div/div/ul/li</td>
+	<td>name</td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>id=consent-checkbox-0</td>
@@ -295,4 +252,20 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 	
