@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Prod Post Release Testing/UHC Applications - Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/UHC Applications - Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -6,6 +6,11 @@ sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
 <tr>
 	<td>open</td>
 	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
@@ -257,15 +262,22 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>id=js-same-billing</td>
-	<td></td>
-</tr>
+
+
 <tr>
 	<td>type</td>
 	<td>id=credit-card-number</td>
 	<td>4111 1111 1111 1111</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.col-sm-12.checkbox &gt; label</td>
+	<td></td>
 </tr>
 
 <tr>
@@ -286,7 +298,7 @@ sanity4/24</td>
 
 <tr>
 	<td>IF</td>
-        <td>verifyText('css=div.col-md-11.terms-cell &gt; p','I hereby enroll for membership in the FEDERATION OF AMERICAN CONSUMERS AND TRAVELERS (FACT) *')</td>
+        <td>verifyText('css=div.col-md-11.terms-cell > p','I hereby enroll for membership in the FEDERATION OF AMERICAN CONSUMERS AND TRAVELERS (FACT) *')</td>
 	<td></td>
 </tr>
 <tr>
@@ -328,6 +340,11 @@ sanity4/24</td>
 </tbody></table>
 </body>
 </html>	
+	
+	
+	
+
+	
 	
 	
 	
