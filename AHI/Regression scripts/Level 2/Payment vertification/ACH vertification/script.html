@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression/CC verification</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Payment vertification/ACH vertification</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
@@ -30,7 +30,7 @@
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
-	<td>55106</td>
+	<td>90001</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -147,20 +147,12 @@
 	<td>id=member-P-1-lastName</td>
 	<td>${LastName}</td>
 </tr>
+
+
 <tr>
 	<td>select</td>
-	<td>id=member-P-1-ft</td>
-	<td>05</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=member-P-1-in</td>
-	<td>06</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=member-P-1-lbs</td>
-	<td>123</td>
+	<td>id=member-p-marital-status</td>
+	<td>label=Married</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -192,60 +184,13 @@
 	<td>3000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>sendKeys</td>
-	<td>xpath=//*[@id='credit-card-number']</td>
-	<td>3782 432108 35021</td>
-</tr>
+
+
+
 <tr>
 	<td>click</td>
-	<td>xpath=//*[@id='js-app-continue-link']</td>
+	<td>xpath=(//button[@type='button'])[2]</td>
 	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=error-credit-card-number</td>
-	<td>Sorry, we only accept Visa and Mastercard at this time</td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>xpath=//*[@id='credit-card-number']</td>
-	<td>38426 6478 86558</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=//*[@id='js-app-continue-link']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=error-credit-card-number</td>
-	<td>Valid credit card number is required</td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=credit-card-number</td>
-	<td>3528 0042 2826 8032 </td>
 </tr>
 <tr>
 	<td>click</td>
@@ -254,24 +199,75 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>id=error-credit-card-number</td>
-	<td>Sorry, we only accept Visa and Mastercard at this time</td>
+	<td>id=error-account-holder-name</td>
+	<td>Valid account holder name is required</td>
 </tr>
 <tr>
-	<td>refreshAndWait</td>
-	<td></td>
+	<td>verifyText</td>
+	<td>id=error-bank-name</td>
+	<td>Valid bank name is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-account-type</td>
+	<td>Valid account type is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-account-class</td>
+	<td>Valid account class is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-routing-number</td>
+	<td>Valid routing number is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-account-number</td>
+	<td>Valid account number is required</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=error-payment-signature</td>
+	<td>Please click to sign and authorize payment</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=account-holder-name</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bank-name</td>
+	<td>test2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='account-type']/button</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>6000</td>
+	<td>click</td>
+	<td>//div[@id='account-class']/button</td>
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
-	<td>id=credit-card-number</td>
-	<td>37114402155125</td>
+	<td>click</td>
+	<td>css=#js-signature-tab &gt; p</td>
+	<td></td>
 </tr>
+<tr>
+	<td>type</td>
+	<td>id=routing-number</td>
+	<td>1111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=account-number</td>
+	<td>2000</td>
+</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
@@ -279,167 +275,35 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>id=error-credit-card-number</td>
-	<td>Valid credit card number is required</td>
+	<td>id=error-routing-number</td>
+	<td>Valid routing number is required</td>
 </tr>
 <tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
+	<td>verifyText</td>
+	<td>id=error-account-number</td>
+	<td>Valid account number is required</td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>id=routing-number</td>
+	<td>121000248</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
+	<td>type</td>
+	<td>id=account-number</td>
+	<td>4111022497</td>
 </tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=credit-card-number</td>
-	<td>4111 1231 2312 3128</td>
-</tr>
+
 <tr>
 	<td>click</td>
 	<td>css=div.col-sm-12.checkbox &gt; label</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=error-credit-card-number</td>
-	<td>Valid credit card number is required</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//div[@id='credit-info']/div/div[2]/div/img</td>
-	<td></td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=credit-card-number</td>
-	<td>5555 5555 5555 4445</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=error-credit-card-number</td>
-	<td>Valid credit card number is required</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//div[@id='credit-info']/div/div[2]/div/img[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=credit-card-number</td>
-	<td>5031 7875 6116 4322</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextNotPresent</td>
-	<td>id=error-credit-card-number</td>
-	<td>Valid credit card number is required</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//div[@id='credit-info']/div/div[2]/div/img[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=credit-card-number</td>
-	<td>4024 0238 8852 1446</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextNotPresent</td>
-	<td>id=error-credit-card-number</td>
-	<td>Valid credit card number is required</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//div[@id='credit-info']/div/div[2]/div/img[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=credit-card-first</td>
-	<td>Test-123</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=credit-card-last</td>
-	<td>${LastName}</td>
-</tr>
 
 <tr>
-	<td>select</td>
-	<td>id=expiration-month</td>
-	<td>02</td>
-</tr>
-
-
-
-
-<tr>
-	<td>select</td>
-	<td>id=expiration-year</td>
-	<td>2025</td>
-</tr>
-<tr>
 	<td>click</td>
-	<td>css=div.col-sm-12.checkbox &gt; label</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=credit-payment-authorization</td>
+	<td>id=payment-signature</td>
 	<td></td>
 </tr>
 <tr>
@@ -491,7 +355,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>id=error-consent-checkbox-0</td>
-	<td>You must accept the Agile Disclaimer</td>
+	<td>You must accept the terms and agreements</td>
 </tr>
 
 <tr>
@@ -560,4 +424,12 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+
 	

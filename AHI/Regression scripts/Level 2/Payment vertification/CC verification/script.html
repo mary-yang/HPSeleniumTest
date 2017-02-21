@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression/CC verification</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/CC verification</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
@@ -30,7 +30,7 @@
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
-	<td>55106</td>
+	<td>90001</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -147,20 +147,12 @@
 	<td>id=member-P-1-lastName</td>
 	<td>${LastName}</td>
 </tr>
+
+
 <tr>
 	<td>select</td>
-	<td>id=member-P-1-ft</td>
-	<td>05</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=member-P-1-in</td>
-	<td>06</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=member-P-1-lbs</td>
-	<td>123</td>
+	<td>id=member-p-marital-status</td>
+	<td>label=Married</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -392,11 +384,18 @@
 	<td>id=credit-card-number</td>
 	<td>4024 0238 8852 1446</td>
 </tr>
+
 <tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//img[contains(@src,'http://d799xvspryvoy.cloudfront.net/assets/visa-706e8a2f23180fbab56974ff6d7c581df3763996.png')]</td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>verifyTextNotPresent</td>
 	<td>id=error-credit-card-number</td>
@@ -407,6 +406,30 @@
 	<td>//div[@id='credit-info']/div/div[2]/div/img[2]</td>
 	<td></td>
 </tr>
+<!-------------------检验mastercard----------------->
+<tr>
+	<td>sendKeys</td>
+	<td>id=credit-card-number</td>
+	<td>5115915246820187</td>
+</tr>
+
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//img[contains(@src,'http://d799xvspryvoy.cloudfront.net/assets/mastercard-d3e88ac39a6baab88f2be89e52a92a3b8eff3278.png')]</td>
+	<td></td>
+</tr>
+<!-------------------检验discovercard----------------->
+	<td>sendKeys</td>
+	<td>id=credit-card-number</td>
+	<td>6545001126468476</td>
+</tr>
+
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//img[contains(@src,'http://d799xvspryvoy.cloudfront.net/assets/discover-968ef8183f0a2402103dc5e1b4e2ee378752dd9b.png')]</td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>sendKeys</td>
 	<td>id=credit-card-first</td>
@@ -437,9 +460,10 @@
 	<td>css=div.col-sm-12.checkbox &gt; label</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>click</td>
-	<td>id=credit-payment-authorization</td>
+	<td>id=payment-signature</td>
 	<td></td>
 </tr>
 <tr>
@@ -491,7 +515,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>id=error-consent-checkbox-0</td>
-	<td>You must accept the Agile Disclaimer</td>
+	<td>You must accept the terms and agreements</td>
 </tr>
 
 <tr>
@@ -534,6 +558,12 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
+	
 	
 	
 	
