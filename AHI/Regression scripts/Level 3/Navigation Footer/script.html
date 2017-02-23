@@ -1,0 +1,189 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Normal Checking/Navigation Footer</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">HomePage</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Short Term Health Insurance</td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='agile-census']/div[3]/section/div/h1</td>
+	<td>Compare Health Insurance Quotes</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Dental Insurance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='agile-census']/div[3]/section/div/h1</td>
+	<td>Compare Dental Insurance Quotes</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Term Health Insurance')])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='agile-front-door']/div[3]/div[1]/div/div/h1</td>
+	<td>Short Term Health Insurance</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'Companion Protect')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='agile-front-door']/div[3]/div[1]/div/div/h1</td>
+	<td>CompanionProtect</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Everest</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='agile-front-door']/div[3]/div[1]/div/div/h1</td>
+	<td>Everest</td>
+
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Everest Prime</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>EverestPrime</td>
+</tr>
+
+
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Standard Life')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='agile-front-door']/div[3]/div[1]/div/div/h1</td>
+	<td>Standard Life Select</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=United HealthCare</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//*[@id='agile-front-door']/div[3]/div[1]/div/div/h1/strong</td>
+	<td>HealthOne</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Dental Insurance')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare Dental Insurance Quotes</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'Nationwide')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='agile-front-door']/div[3]/div[1]/div/div/h1</td>
+	<td>FoundationDental</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'Learning Center')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='learningCenterHero']/div/h1</td>
+	<td>Health Insurance Learning Center</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=About AgileHealthInsurance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='agile-default']/div[3]/div[2]/div/div[1]/div[1]/h2</td>
+	<td>Welcome to AgileHealthInsurance.com!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Contact Us</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Privacy Policy')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='footer']/div/div[1]/ul[1]/h4/a</td>
+	<td>Short Term Health Insurance</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Terms of Use')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='agile-default']/div[3]/div[2]/div/div[1]/h3[1]</td>
+	<td>TERMS OF USE UPDATED*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Licensing Info')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3</td>
+	<td>Licensing Information</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	

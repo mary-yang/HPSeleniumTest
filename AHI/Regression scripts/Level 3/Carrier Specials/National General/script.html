@@ -1,0 +1,206 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 3/Carrier Specials/National General</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">coveragedate_type</td></tr>
+</thead><tbody>
+
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/quote?census[location][zip]=${zipcode}&census[member][0][dob]=01/01/1995&census[member][0][gender]=M&census[member][0][role]=P</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='quoteDisclaimerText']/div[2]/h4</td>
+	<td>National General Specific Disclaimers</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=National General 2500/20/4000/1000000 Extended</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='js-plan-disclaimers']/div/div[2]/h4</td>
+	<td>National General Specific Disclaimers</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=plan-info-docker-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=No, Keep My Deductible</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.disclaimer-header</td>
+	<td>National General Specific Disclaimers</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.js-apply-text.apply-button-text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=fillApp</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.disclaimer-header</td>
+	<td>National General Specific Disclaimers</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4111111111111111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-cvv</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='credit-info']/div/div[2]/div[5]/label</td>
+	<td>exact:CVV *</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-application-payment']/div[3]/p</td>
+	<td>National General Accident &amp; Health markets products underwritten and issued by Time Insurance Company, National Health Insurance Company, Integon National Insurance Company, and Integon Indemnity Corporation.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=credit-payment-authorization</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.col-md-11.terms-cell &gt; p</td>
+	<td>exact:I have read the Agile Health Insurance Terms and Agreements and I agree that by using this site, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature. *</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='accordion']/div[7]</td>
+	<td>National General Specific DisclaimersNational General Accident &amp; Health markets products underwritten and issued by Time Insurance Company, National Health Insurance Company, Integon National Insurance Company, and Integon Indemnity Corporation.</td>
+</tr>
+
+
+
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,5 @@
+"state","zip","carrierid","uri"
+"##FL","32099","carrier-hccadvantage-","${uri}"
+"##FL","32099","carrier-hccflexible-","${uri}"
+"FL","32099","carrier-everest-one-","${uri}"
+"##FL","32099","carrier-premierstm-","${uri}"
