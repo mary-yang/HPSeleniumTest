@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 3/plan test/plan_test_UHC_Copay_value</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 3/plan test/Everest-extended plan</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -6,6 +6,11 @@ sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
 <tr>
 	<td>open</td>
 	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
@@ -26,7 +31,6 @@ sanity4/24</td>
 	<td>3000</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>waitForText</td>
 	<td>css=h1.census-main-heading</td>
@@ -72,7 +76,6 @@ sanity4/24</td>
 	<td>*/quote*</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>pause</td>
 	<td>3000</td>
@@ -84,30 +87,27 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-
-
-<tr>
-	<td>waitForText</td>
-	<td>link=Short Term Medical Copay Value 5000/30/15000</td>
-	<td>Short Term Medical Copay Value 5000/30/15000</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Short Term Medical Copay Value 5000/30/15000</td>
+	<td>pause</td>
+	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>id=plan-details-primary-apply</td>
+	<td>id=maxDuration-Over Six Months-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Select This Plan')])[8]</td>
 	<td></td>
 </tr>
 
-
-
+<tr>
 	<td>pause</td>
 	<td>4000</td>
 	<td></td>
@@ -119,97 +119,66 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>include</td>
-	<td>AHI/Include/Go to end - UHC</td>
+	<td>AHI/Include/Go to end</td>
 	<td></td>
 </tr>
-	
-	
-	
-	
+<!-----------------------------------------------登陆BO---------------------->
 <tr>
-	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/back-office/reporting?page=1&pageSize=1000&dispositionType=A&reportType=A&requireContactInfo=false</td>
+	<td>include</td>
+	<td>AHI/Include/Login BO</td>
 	<td></td>
 </tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent('id=Email')</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=Email</td>
-	<td>denis.yu1111@gmail.com</td>
-</tr>
+
 <tr>
 	<td>click</td>
-	<td>id=next</td>
+	<td>link=App Management</td>
 	<td></td>
 </tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=Passwd</td>
-	<td>Think2016</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=signIn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-
-
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//aside[@id='sidebar']/nav/ul/li[3]/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
-
 <tr>
 	<td>type</td>
 	<td>id=uri</td>
 	<td>${uri}</td>
 </tr>
-
-
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
-	<td>Carrier *</td>
+	<td>Successfully Enrolled</td>
 </tr>
 
+<!----------------------------------到hiiquote.com验证是否成功, 还有问题，提示用户名密码不对
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Login HII</td>
+	<td></td>
+</tr>
+------------------>
+	</tbody>
+</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
-
-
-
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 	
 	
 
