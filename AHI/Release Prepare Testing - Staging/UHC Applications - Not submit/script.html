@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/UHC Applications - Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/UHC Applications - Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -6,11 +6,6 @@ sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
-<tr>
-	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
-	<td></td>
-</tr>
 <tr>
 	<td>open</td>
 	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
@@ -180,33 +175,58 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=fillApp</td>
+	<td>//li[@id='js-question-P0-2']/div/button</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-3']/div/button</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-4']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-5']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-6']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-7']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-8']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=member-P-1-firstName</td>
-	<td>TEST</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;; var tmp=&quot;&quot;; for (i=0;i&lt;8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
+	<td>LastName</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=member-P-1-lastName</td>
-	<td>TEST</td>
+	<td>${LastName}</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -216,12 +236,17 @@ sanity4/24</td>
 <tr>
 	<td>select</td>
 	<td>id=member-P-1-in</td>
-	<td>label=08</td>
+	<td>label=02</td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>id=member-P-1-lbs</td>
 	<td>190</td>
+</tr>
+tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -229,29 +254,15 @@ sanity4/24</td>
 	<td>${AutoEmail}</td>
 </tr>
 <tr>
-	<td>select</td>
-	<td>id=member-P-1-ft</td>
-	<td>label=05</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=member-P-1-in</td>
-	<td>label=08</td>
-</tr>
-
-<tr>
 	<td>type</td>
-	<td>id=member-P-1-lbs</td>
-	<td>162</td>
+	<td>id=city</td>
+	<td>${City}</td>
 </tr>
-
 <tr>
-	<td>type</td>
-	<td>id=address</td>
-	<td>General Delivery</td>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
 </tr>
-
-
 <tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
@@ -262,21 +273,29 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
-
-
 <tr>
 	<td>type</td>
 	<td>id=credit-card-number</td>
-	<td>4111 1111 1111 1111</td>
+	<td>4358806686493800</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
+	<td>select</td>
+	<td>id=expiration-month</td>
+	<td>label=02</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-year</td>
+	<td>label=2024</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=credit-card-charge-date</td>
+	<td>label=7</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=div.col-sm-12.checkbox &gt; label</td>
+	<td>id=js-same-billing</td>
 	<td></td>
 </tr>
 
@@ -292,15 +311,15 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>4000</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;css=div.col-md-11.terms-cell > p&quot;)</td>
 	<td></td>
 </tr>
 
-<tr>
-	<td>IF</td>
-        <td>verifyText('css=div.col-md-11.terms-cell > p','I hereby enroll for membership in the FEDERATION OF AMERICAN CONSUMERS AND TRAVELERS (FACT) *')</td>
-	<td></td>
-</tr>
 <tr>
 	<td>echo</td>
 	<td>${uri}</td>
@@ -340,10 +359,12 @@ sanity4/24</td>
 </tbody></table>
 </body>
 </html>	
-	
-	
-	
 
+	
+	
+	
+	
+	
 	
 	
 	
