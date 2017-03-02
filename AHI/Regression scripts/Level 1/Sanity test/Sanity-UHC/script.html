@@ -18,7 +18,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Quote & Save Today</td>
+	<td>link=Quote &amp; Save Today</td>
 	<td></td>
 </tr>
 <tr>
@@ -26,7 +26,6 @@ sanity4/24</td>
 	<td>3000</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>waitForText</td>
 	<td>css=h1.census-main-heading</td>
@@ -72,7 +71,6 @@ sanity4/24</td>
 	<td>*/quote*</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>pause</td>
 	<td>3000</td>
@@ -80,7 +78,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//input[@data-id="${carrierid}"]</td>
+	<td>//input[@data-id=&quot;${carrierid}&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -129,7 +127,7 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	 <td>include</td>
+	<td>include</td>
 	<td>AHI/Include/Name</td>
 	<td></td>
 </tr>
@@ -143,17 +141,9 @@ sanity4/24</td>
 	<td>link=View Dental Plans Now</td>
 	<td>View Dental Plans Now</td>
 </tr>
-
-
-
-
-	
-	
-	
-	
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/back-office/reporting?page=1&pageSize=1000&dispositionType=A&reportType=A&requireContactInfo=false</td>
+	<td>http://${ENV}.agilehealthinsurance.com/back-office/reporting?page=1&amp;pageSize=1000&amp;dispositionType=A&amp;reportType=A&amp;requireContactInfo=false</td>
 	<td></td>
 </tr>
 <tr>
@@ -186,8 +176,6 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
-
-
 <tr>
 	<td>pause</td>
 	<td>6000</td>
@@ -203,35 +191,13 @@ sanity4/24</td>
 	<td>6000</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>type</td>
 	<td>id=uri</td>
 	<td>${uri}</td>
 </tr>
-
-
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
 	<td>Carrier Notified</td>
 </tr>
-
-
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
