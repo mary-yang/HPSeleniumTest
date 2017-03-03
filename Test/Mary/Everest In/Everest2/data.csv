@@ -1,52 +1,17 @@
-"provider","state","state1","zipcode","Total","over6","upTo6","Max Duration"
-"Everest","Alabama","AL","35215","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Alaska","AK","99504","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Arkansas","AR","72209","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Arizona","AZ","85364","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","California","CA","90011","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Colorado","CO","80219","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Connecticut","CT","06606","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Delaware","DE","19805","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","District Of Columbia","DC","20015","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Florida","FL","33186","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Georgia","GA","30044","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Hawaii","HI","96818","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Iowa","IA","50317","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Idaho","ID","83709","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Illinois","IL","60629","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Indiana","IN","46227","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Kansas","KS","66062","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Kentucky","KY","40214","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Louisiana","LA","70816","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Massachusetts","MA","02128","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Maryland","MD","21215","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Maine","ME","04401","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Michigan","MI","48228","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Minnesota","MN","55106","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Missouri","MO","63129","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Mississippi","MS","39503","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Montana","MT","59102","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","North Carolina","NC","28269","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","North Dakota","ND","58103","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Nebraska","NE","68104","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","New Hampshire","NH","03103","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","New Jersey","NJ","08701","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","New Mexico","NM","87121","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Nevada","NV","89110","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","New York","NY","11226","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Ohio","OH","43228","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Oklahoma","OK","73160","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Oregon","OR","97229","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Pennsylvania","PA","19120","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Rhode Island","RI","02909","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","South Carolina","SC","29223","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","South Dakota","SD","57106","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Tennessee","TN","37013","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Texas","TX","79936","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Utah","UT","84120","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Virginia","VA","23464","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Vermont","VT","05401","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Washington","WA","98115","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Wisconsin","WI","53215","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","West Virginia","WV","25302","${num}","${over6}","${upTo6}","${maxDuration}"
-"Everest","Wyoming","WY","82001","${num}","${over6}","${upTo6}","${maxDuration}"
+Everest,Kansas,KS,66062,${num},${over6},${upTo6},${maxDuration}
+Everest,Kentucky,KY,40214,${num},${over6},${upTo6},${maxDuration}
+Everest,Louisiana,LA,70816,${num},${over6},${upTo6},${maxDuration}
+Everest,Massachusetts,MA,2128,${num},${over6},${upTo6},${maxDuration}
+Everest,Maryland,MD,21215,${num},${over6},${upTo6},${maxDuration}
+Everest,Maine,ME,4401,${num},${over6},${upTo6},${maxDuration}
+Everest,Michigan,MI,48228,${num},${over6},${upTo6},${maxDuration}
+Everest,Minnesota,MN,55106,${num},${over6},${upTo6},${maxDuration}
+Everest,Missouri,MO,63129,${num},${over6},${upTo6},${maxDuration}
+Everest,Mississippi,MS,39503,${num},${over6},${upTo6},${maxDuration}
+Everest,Montana,MT,59102,${num},${over6},${upTo6},${maxDuration}
+Everest,North Carolina,NC,28269,${num},${over6},${upTo6},${maxDuration}
+Everest,North Dakota,ND,58103,${num},${over6},${upTo6},${maxDuration}
+Everest,Nebraska,NE,68104,${num},${over6},${upTo6},${maxDuration}
+Everest,New Hampshire,NH,3103,${num},${over6},${upTo6},${maxDuration}
+Everest,New Jersey,NJ,8701,${num},${over6},${upTo6},${maxDuration}
+Everest,New Mexico,NM,87121,${num},${over6},${upTo6},${maxDuration}
