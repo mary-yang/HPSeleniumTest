@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 3/Carrier Specials/UHC</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 3/Carrier Specials/UHC/UHC -Monthly</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">coveragedate_type</td></tr>
 </thead><tbody>
@@ -190,6 +190,12 @@
 </tr>
 <tr>
 	<td>verifyText</td>
+	<td>//div[@id='credit-info']/div/div[2]/div[3]/p</td>
+	<td>Only select a charge date between the 1st and 28th of the month</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
 	<td>css=#js-alternate-payor &gt; h4</td>
 	<td>Payor Information (If other than Proposed Insured)</td>
 </tr>
@@ -230,6 +236,47 @@
 </tr>
 <tr>
 	<td>verifyText</td>
+	<td>css=span.emphasize</td>
+	<td>Applicant Info</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#headingpayment &gt; h4.panel-title &gt; p.app-section-heading &gt; span.emphasize</td>
+	<td>Payment &amp; Billing Info</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.app-summary-heading</td>
+	<td>Policy Summary</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#headingreview &gt; h4.panel-title &gt; p.app-section-heading &gt; span.emphasize</td>
+	<td>Review &amp; Submit</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.app-form-instructions</td>
+	<td>Please review the information of your application before submitting for approval. To update any of the pervious pages use your browser back button. (tell me more)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.app-terms-text &gt; p.emphasize</td>
+	<td>Statement of Understanding</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.emphasize.font-color-reset</td>
+	<td>Consent to Electronic Transactions</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.font-small</td>
+	<td>By Checking the box and entering my name below, I am indicating my intent to electronically sign the application and the administrative forms(in states where applicable) and represent that all the information I have provided is true, complete, and accurate.</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
 	<td>css=div.col-md-11.terms-cell &gt; p</td>
 	<td>exact:I hereby enroll for membership in the FEDERATION OF AMERICAN CONSUMERS AND TRAVELERS (FACT) *</td>
 </tr>
@@ -253,7 +300,11 @@
 	<td>css=label.font-color-reset.signature-label</td>
 	<td>exact:Proposed Insured's Signature or Parent/Legal Guardian if proposed insured is a child *</td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-application-review']/div/section/div[6]/div[2]/label</td>
+	<td>exact:Date Signed: *</td>
+</tr>
 
 
 
@@ -262,6 +313,7 @@
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	
