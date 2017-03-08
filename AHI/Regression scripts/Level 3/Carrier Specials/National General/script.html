@@ -23,19 +23,20 @@
 	<td>3000</td>
 	<td></td>
 </tr>
+
 <tr>
-	<td>verifyText</td>
-	<td>//div[@id='quoteDisclaimerText']/div[2]/h4</td>
-	<td>National General Specific Disclaimers</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=National General 2500/20/4000/1000000 Extended</td>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${carrierid}')]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>click</td>
+	<td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${carrierid}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -43,6 +44,19 @@
 	<td>//section[@id='js-plan-disclaimers']/div/div[2]/h4</td>
 	<td>National General Specific Disclaimers</td>
 </tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>clickAndWait</td>
 	<td>id=plan-info-docker-apply</td>
@@ -197,6 +211,8 @@
 	
 	
 
+	
+	
 	
 	
 	
