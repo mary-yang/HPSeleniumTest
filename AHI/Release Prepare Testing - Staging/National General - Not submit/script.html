@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/National General - Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/National General - Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -97,24 +97,68 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Select This Plan</td>
+	<td>refreshAndWait</td>
+	<td></td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>storeText</td>
+	<td>css=ul.quote-all-plans-list.js-plans-list > li.quote-plan-container.js-plan-unit > div.quote-plan > div.quote-plan-body > div.quote-plan-carrier > h3.quote-plan-name > a</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div/div[2]/div</td>
+	<td>mo</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
+	<td></td>
+</tr>
 <tr>
 	<td>pause</td>
-	<td>4000</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>include</td>
-	<td>AHI/Include/Name</td>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>${planname}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
+	<td>*${mo}*</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
 <tr>
-	<td>include</td>
-	<td>AHI/Include/Get URI</td>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${mo}'.match(/\d+.\d+/)</td>
+	<td>mo1</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='apply']/div[3]/div[2]/div[1]/div[1]/div/div[1]/table/tbody/tr[2]/td/a/span</td>
+	<td>${planname}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='apply']//tr[descendant::td[1][contains(text(),'Base Premium')]]/td[2]</td>
+	<td>$${mo1}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
@@ -132,6 +176,18 @@ sanity4/24</td>
 	<td>5000</td>
 	<td></td>
 </tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Get URI</td>
+	<td></td>
+</tr>
+
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Underwriting</td>
@@ -301,6 +357,8 @@ sanity4/24</td>
 </tbody></table>
 </body>
 </html>	
+	
+	
 	
 	
 	

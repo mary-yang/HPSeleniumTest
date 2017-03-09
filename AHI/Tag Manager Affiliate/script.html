@@ -32,7 +32,7 @@
 	<td>${url}</td>
 	<td></td>
 </tr>
-<tr>
+tr>
 	<td>open</td>
 	<td>tagmanager.google.com</td>
 	<td></td>
@@ -97,10 +97,14 @@
 	<td>//div[@id='bubble-2']/div/div[2]/div[2]/button</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>open</td>
-	<td>${url}</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com</td>
 	<td></td>
 </tr>
 <tr>
@@ -110,7 +114,7 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>//*[@id='agile-census']/div[3]/section/div/h1</td>
+	<td>css=h1.census-main-heading</td>
 	<td>Compare Health Insurance Quotes</td>
 </tr>
 <tr>
@@ -170,7 +174,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]</td>
+	<td>id=${carrierid}</td>
 	<td></td>
 </tr>
 <tr>
@@ -183,7 +187,11 @@
 	<td></td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>storeText</td>
+	<td>css=ul.quote-all-plans-list.js-plans-list > li.quote-plan-container.js-plan-unit > div.quote-plan > div.quote-plan-body > div.quote-plan-carrier > h3.quote-plan-name > a</td>
+	<td>planname</td>
+</tr>
 
 <tr>
 	<td>clickAndWait</td>
@@ -195,7 +203,11 @@
 	<td>2000</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>${planname}</td>
+</tr>
 
 <tr>
 	<td>click</td>
@@ -208,25 +220,15 @@
 	<td></td>
 </tr>
 
-
 <tr>
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyLocation</td>
-	<td>*apply*</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>clickAndWait</td>
 	<td>id=applyButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Underwriting</td>
 	<td></td>
 </tr>
 <tr>
@@ -424,136 +426,19 @@
 	<td></td>
 </tr>
 <tr>
-	<td>include</td>
-	<td>AHI/Include/Congratulation</td>
-	<td></td>
-</tr>
-<tr>
 	<td>verifyText</td>
 	<td>//*[@id='js-app-confirmation']/div/h2/span</td>
 	<td>Congratulations*</td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[2]/div</td>
-	<td>Ad Marketplace Conversion</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[3]/div</td>
-	<td>Ad Prime Conversion</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[4]/div</td>
-	<td>Adnet Conversion</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[5]/div</td>
-	<td>Bankrate Conversion</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[6]/div</td>
-	<td>Bing Conversion</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[7]/div</td>
-	<td>Bing Global</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[8]/div</td>
-	<td>Facebook Conversion</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[9]/div</td>
-	<td>Facebook global</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[10]/div</td>
-	<td>Google App Start</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[11]/div</td>
-	<td>Google Conversion</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[12]/div</td>
-	<td>Google Remarketing</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[13]/div</td>
-	<td>Impact Radius App start</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[14]/div</td>
-	<td>Impact Radius Conversion</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[15]/div</td>
-	<td>Impact Radius Global</td>
-</tr>
-
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[16]/div</td>
-	<td>Media Alpha Conversion</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[17]/div</td>
-	<td>Rakuten App Start</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[18]/div</td>
-	<td>Rakuten Conversion Tag</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[19]/div</td>
-	<td>Rakuten Global Tag</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[20]/div</td>
-	<td>Rocket Fuel Conversion</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[21]/div</td>
-	<td>Rocket Fuel Global</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[22]/div</td>
-	<td>Surehits conversion</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[23]/div</td>
-	<td>Vantage App Start</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gtm-debug-id-has-tags']/div/div[24]/div</td>
-	<td>Vantage Conversion</td>
+	<td>include</td>
+	<td>AHI/Include/Check ConversionPixel</td>
+	<td></td>
 </tr>
 </tbody></table>
 </body>
 </html>
 
-	
 	
 	
 	
