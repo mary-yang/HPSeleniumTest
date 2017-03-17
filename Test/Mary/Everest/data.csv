@@ -1,0 +1,17 @@
+provider,state,state1,zipcode,Total,over6,upTo6,Max Duration
+Everest,Alabama,AL,35215,${num},${over6},${upTo6},${maxDuration}
+Everest,Alaska,AK,99504,${num},${over6},${upTo6},${maxDuration}
+Everest,Arkansas,AR,72209,${num},${over6},${upTo6},${maxDuration}
+Everest,Arizona,AZ,85364,${num},${over6},${upTo6},${maxDuration}
+Everest,California,CA,90011,${num},${over6},${upTo6},${maxDuration}
+Everest,Colorado,CO,80219,${num},${over6},${upTo6},${maxDuration}
+Everest,Connecticut,CT,6606,${num},${over6},${upTo6},${maxDuration}
+Everest,Delaware,DE,19805,${num},${over6},${upTo6},${maxDuration}
+Everest,District Of Columbia,DC,20015,${num},${over6},${upTo6},${maxDuration}
+Everest,Florida,FL,33186,${num},${over6},${upTo6},${maxDuration}
+Everest,Georgia,GA,30044,${num},${over6},${upTo6},${maxDuration}
+Everest,Hawaii,HI,96818,${num},${over6},${upTo6},${maxDuration}
+Everest,Iowa,IA,50317,${num},${over6},${upTo6},${maxDuration}
+Everest,Idaho,ID,83709,${num},${over6},${upTo6},${maxDuration}
+Everest,Illinois,IL,60629,${num},${over6},${upTo6},${maxDuration}
+Everest,Indiana,IN,46227,${num},${over6},${upTo6},${maxDuration}

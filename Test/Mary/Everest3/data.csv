@@ -1,0 +1,19 @@
+provider,state,state1,zipcode,Total,over6,upTo6,Max Duration
+Everest,Nevada,NV,89110,${num},${over6},${upTo6},${maxDuration}
+Everest,New York,NY,11226,${num},${over6},${upTo6},${maxDuration}
+Everest,Ohio,OH,43228,${num},${over6},${upTo6},${maxDuration}
+Everest,Oklahoma,OK,73160,${num},${over6},${upTo6},${maxDuration}
+Everest,Oregon,OR,97229,${num},${over6},${upTo6},${maxDuration}
+Everest,Pennsylvania,PA,19120,${num},${over6},${upTo6},${maxDuration}
+Everest,Rhode Island,RI,2909,${num},${over6},${upTo6},${maxDuration}
+Everest,South Carolina,SC,29223,${num},${over6},${upTo6},${maxDuration}
+Everest,South Dakota,SD,57106,${num},${over6},${upTo6},${maxDuration}
+Everest,Tennessee,TN,37013,${num},${over6},${upTo6},${maxDuration}
+Everest,Texas,TX,79936,${num},${over6},${upTo6},${maxDuration}
+Everest,Utah,UT,84120,${num},${over6},${upTo6},${maxDuration}
+Everest,Virginia,VA,23464,${num},${over6},${upTo6},${maxDuration}
+Everest,Vermont,VT,5401,${num},${over6},${upTo6},${maxDuration}
+Everest,Washington,WA,98115,${num},${over6},${upTo6},${maxDuration}
+Everest,Wisconsin,WI,53215,${num},${over6},${upTo6},${maxDuration}
+Everest,West Virginia,WV,25302,${num},${over6},${upTo6},${maxDuration}
+Everest,Wyoming,WY,82001,${num},${over6},${upTo6},${maxDuration}
