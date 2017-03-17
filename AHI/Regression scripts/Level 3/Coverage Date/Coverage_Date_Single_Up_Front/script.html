@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Normal Checking/Coverage Date/Coverage_Date_Single_Up_Front</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 3/Coverage Date/Coverage_Date_Single_Up_Front</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">coveragedate_type</td></tr>
 </thead><tbody>
@@ -65,7 +65,7 @@
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
-	<td>60001</td>
+	<td>70816</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -168,6 +168,36 @@
 	<td>id=js-see-plans</td>
 	<td></td>
 </tr>
+
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'everest')]&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+    <td>click</td>
+    <td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'everest')]</td>
+    <td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>clickAndWait</td>
+    <td>xpath=(//a[contains(text(),'Select This Plan')])[3]</td>
+    <td></td>
+</tr>
+
+
+
+
+
+
+
+
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Select This Plan</td>
@@ -353,6 +383,9 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
 	
 	
 	

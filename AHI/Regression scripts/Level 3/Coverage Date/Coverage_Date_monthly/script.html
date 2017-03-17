@@ -102,7 +102,7 @@
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
-	<td>60001</td>
+	<td>70816</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -155,9 +155,25 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Select This Plan')])[1]</td>
-	<td></td>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'everest')]&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+    <td>click</td>
+    <td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'everest')]</td>
+    <td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>clickAndWait</td>
+    <td>xpath=(//a[contains(text(),'Select This Plan')])[3]</td>
+    <td></td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -336,6 +352,9 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
 	
 	
 	

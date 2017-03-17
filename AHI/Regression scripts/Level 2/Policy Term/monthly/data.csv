@@ -1,6 +1,10 @@
 "zipcode","carrierid","policy Term"
 "60001","carrier-companionprotect-","6 Months"
+<<<<<<< HEAD
 "70816","carrier-everest-one-","6 Months"
+=======
+"80219","carrier-everest-one-","6 Months"
+>>>>>>> 8417352c11e56bbc888e121176e041071442db33
 "60001","carrier-everest-","6 Months"
 "60001","carrier-nationalgeneral-","9 Months"
 "60001","carrier-slaico-","6 Months"
