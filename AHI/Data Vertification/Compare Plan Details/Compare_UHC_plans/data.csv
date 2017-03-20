@@ -1,0 +1,6 @@
+state,state1,zipcode,planUri,url1,url2
+Illinois,IL,60629,unitedhealthone-il-value-2500-30-7500,${url1},${url2}
+Illinois,IL,60629,unitedhealthone-il-plus-10000-30-15000,${url1},${url2}
+Illinois,IL,60629,unitedhealthone-il-plus-elite-10000-30-15000,${url1},${url2}
+Illinois,IL,60629,unitedhealthone-il-copay-value-10000-30-20000,${url1},${url2}
+Illinois,IL,60629,unitedhealthone-il-copay-10000-30-20000,${url1},${url2}
