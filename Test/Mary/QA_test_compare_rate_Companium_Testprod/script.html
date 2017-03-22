@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Compare Rates/Spot Test/QA_testprod_Compare_rate/QA_test_compare_rate_Everest</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/QA_test_compare_rate_Companium_Testprod</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">compare_rate</td></tr>
 </thead><tbody>
@@ -8,6 +8,11 @@
 census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_gender}&amp;census[member][0][role]=P&amp;
 census[member][${Spouse_enable}][dob]=${Spouse_dob}&amp;census[member][${Spouse_enable}][gender]=${Spouse_gender}&amp;census[member][${Spouse_enable}][role]=${Spouse}&amp;
 census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_enable}][gender]=${Child_gender}&amp;census[member][${Child_enable}][role]=${Child}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
@@ -59,6 +64,11 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>IF</td>
 	<td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]&quot;)</td>
 	<td></td>
@@ -98,15 +108,30 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
 	<td>Apply_page_testprod_rate</td>
 </tr>
+
+
+
+<tr>
+	<td>storeEval</td>
+	<td>parseFloat('${quote_QA_rate}'.match(/\d+.\d+/))/parseFloat('${quote_testprod_rate}'.match(/\d+.\d+/))</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseFloat('${Apply_page_QA_rate}'.match(/\d+.\d+/))/parseFloat('${Apply_page_testprod_rate}'.match(/\d+.\d+/))</td>
+	<td>b</td>
+</tr>
+
+
 <tr>
 	<td>verifyEval</td>
-	<td>parseFloat('${quote_testprod_rate}'.match(/\d+.\d+/))-parseFloat('${quote_QA_rate}'.match(/\d+.\d+/))</td>
-	<td>0</td>
+	<td>parseFloat('${a}').toFixed(2)</td>
+	<td>${increase}</td>
 </tr>
 <tr>
 	<td>verifyEval</td>
-	<td>parseFloat('${Apply_page_testprod_rate}'.match(/\d+.\d+/))-parseFloat('${Apply_page_QA_rate}'.match(/\d+.\d+/))</td>
-	<td>0</td>
+	<td>parseFloat('${b}').toFixed(2)</td>
+	<td>${increase}</td>
 </tr>
 </tbody></table>
 </body>
@@ -140,6 +165,8 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	
 	
 	
-	
 
+	
+	
+	
 	
