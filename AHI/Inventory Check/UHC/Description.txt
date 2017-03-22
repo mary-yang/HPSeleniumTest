@@ -10,7 +10,4 @@ Copay, Copay value, plus, value, 24 plans.
 
 
 Prod Enable states:
-
-AL,AR,AZ,CT,DE,FL,GA,IA,IL,IN,KS,KY,LA,MI,MO,MS,NC,NE,NV,OH,OK,ORPA,SC,TN,TX,VA,WI,WV,WY
-
-
+AL,AR,AZ,CT,DE,FL,GA,IA,IL,IN,KS,KY,LA,MI,MO,MS,NC,NE,NV,OH,OK,OR,PA,SC,TN,TX,VA,WI,WV,WY

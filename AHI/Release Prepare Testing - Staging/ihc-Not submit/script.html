@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/ihc-Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/ihc-Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -108,43 +108,12 @@ sanity4/24</td>
 	<td>link=Select This Plan</td>
 	<td></td>
 </tr>
-<!-----------
-<tr>
-	<td>storeText</td>
-	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
-	<td>planname</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//li/div/div/div[contains(@data-planid, '${carrierid}')]/div</td>
-	<td>mo</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h1</td>
-	<td>${planname}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
-	<td>*${mo}*</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=plan-details-primary-apply</td>
-	<td></td>
-</tr>
----------->
 <tr>
 	<td>pause</td>
 	<td>4000</td>
 	<td></td>
 </tr>
+
 <tr>
 	 <td>include</td>
 	<td>AHI/Include/Name</td>
@@ -197,30 +166,84 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=fillApp</td>
+	<td>//li[@id='js-question-P0-HasOtherCoverage']/div/button</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-PregnantAdoptionFertility']/div/button</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-PreviouslyDeniedCoverage']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-CoveredByMedicare']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-Weight300ForMale250ForFemale']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-AbnormalTestResults']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-FiveYearSymptoms_HIV_AIDS']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-ApplicantIsLegal']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>3000</td>
+	<td>4000</td>
 	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=member-P-1-firstName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-firstName</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;; var tmp=&quot;&quot;; for (i=0;i&lt;8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
+	<td>LastName</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
 </tr>
 <tr>
 	<td>select</td>
 	<td>id=member-p-marital-status</td>
-	<td>label=Married</td>
+	<td>label=Domestic Partner</td>
 </tr>
-
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
 <tr>
 	<td>type</td>
 	<td>id=email</td>
@@ -228,81 +251,74 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=mailing-name</td>
-	<td>test mailer</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=js-enable-mailing-address</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=//*[@id='js-app-continue-link']</td>
+	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>5000</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=credit-card-number</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=credit-card-number</td>
-	<td>4111 1111 1111 1111</td>
+	<td>id=credit-card-first</td>
+	<td>test</td>
 </tr>
-
+<tr>
+	<td>type</td>
+	<td>id=credit-card-last</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4358806686493800</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-month</td>
+	<td>label=02</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-year</td>
+	<td>label=2024</td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>id=js-same-billing</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>click</td>
-	<td>css=div.col-sm-12.checkbox &gt; label</td>
+	<td>css=p.signature-arrow</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[@id='js-signature-tab']/p</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=//*[@id='js-app-continue-link']</td>
-	<td></td>
-</tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>5000</td>
+	<td>4000</td>
 	<td></td>
-</tr>
-<tr>
-	<td>captureEntirePageScreenshot</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='headingapplicantInfo']/div/div/div/ul/li</td>
-	<td>name</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -315,11 +331,6 @@ sanity4/24</td>
 	<td></td>
 </tr>
 
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
 
 
 </tbody></table>
@@ -349,6 +360,11 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
+	
+	
 	
 	
 	
