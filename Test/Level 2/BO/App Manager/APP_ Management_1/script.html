@@ -1,0 +1,387 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/BO/App Manager/APP_ Management_1</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">BO_app_ Management</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote &amp; Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare Health Insurance Quotes*</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1975</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/quote*</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@data-id="${carrierid}"]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${planname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li/div/div/div[contains(@data-planid, '${carrierid}')]/div</td>
+	<td>mo</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>${planname}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
+	<td>*${mo}*</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Go to end</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${name}&quot;.substr(10)</td>
+	<td>LastName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Lastname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Login BO</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=App Management</td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>mouseDown</td>
+	<td>//*[@id='s2id_stateGroup']/a/span[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>//*[@id='select2-drop']/ul/li[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//*[@id='select2-drop']/ul/li[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>//*[@id='s2id_stateGroup']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//*[@id='select2-drop']/ul/li[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='search']/div[2]/div[5]/input</td>
+	<td>${uri}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[2]</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='email']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@id='uri']</td>
+	<td>${uri}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${uri}&quot;.substring(20,0)+&quot;*&quot;</td>
+	<td>planid</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${planid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[3]</td>
+	<td>*${carrierid}*</td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='search']/div[2]/div[5]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@id='firstName']</td>
+	<td>${FirstName}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${FirstName}*&quot;;</td>
+	<td>FirstName</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td</td>
+	<td>${FirstName}</td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='firstName']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@id='lastName']</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td</td>
+	<td>${name}</td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
