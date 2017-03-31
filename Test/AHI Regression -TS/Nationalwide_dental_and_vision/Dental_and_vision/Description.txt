@@ -1,4 +1,0 @@
-1. go to post submit pop up page
-2. Verify page logo and desclaimer
-3. Verify Dental plan detail
-4. Verify Vision plan detail

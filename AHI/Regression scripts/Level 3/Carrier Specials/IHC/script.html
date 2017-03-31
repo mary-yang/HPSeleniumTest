@@ -29,11 +29,32 @@
 	<td>//div[@id='quoteDisclaimerText']/div[2]/h4</td>
 	<td>IHC Group Specific Disclaimers</td>
 </tr>
+
 <tr>
-	<td>clickAndWait</td>
-	<td>link=IHC Group Secure Short Term (20/2500/4500)</td>
-	<td></td>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'ihc')]&quot;)</td>
+    <td></td>
 </tr>
+<tr>
+    <td>click</td>
+    <td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'ihc')]</td>
+    <td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>clickAndWait</td>
+    <td>xpath=(//a[contains(text(),'Select This Plan')])[2]</td>
+    <td></td>
+</tr>
+
+
+
+
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -216,6 +237,7 @@
 	
 	
 
+	
 	
 	
 	
