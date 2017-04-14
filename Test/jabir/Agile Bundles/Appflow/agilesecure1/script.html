@@ -1,26 +1,21 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Denis/jabir/Agile Bundles/Appflow/agilesecure</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/jabir/Agile Bundles/Appflow/agilesecure</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>http://amoy.agilehealthinsurance.com/api/context/clear</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://amoy.agilehealthinsurance.com</td>
+	<td>http://${ENV}.agilehealthinsurance.com</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Quote &amp; Save Today</td>
 	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//*[@id='agile-census']/div[3]/section/div/h1</td>
-	<td>Compare Health Insurance Quotes</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -134,7 +129,7 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//a[contains(text(),'View Agile Secure')]</td>
+	<td>//a[contains(text(),'Agile Secure')]</td>
 	<td></td>
 </tr>
 <tr>
@@ -281,6 +276,9 @@
 </body>
 </html>
 
+	
+	
+	
 	
 	
 	
