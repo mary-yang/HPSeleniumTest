@@ -29,10 +29,17 @@
 	<td>Golden Rule Specific Disclaimers</td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text &gt; ul &gt; li</td>
+	<td>Golden Rule Insurance Company is the underwriter of plans marketed under the UnitedHealthOne Brand.</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>link=Short Term Medical Value 2500/25/7500</td>
 	<td></td>
 </tr>
+
+
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -42,6 +49,11 @@
 	<td>verifyText</td>
 	<td>//section[@id='js-plan-disclaimers']/div/div[2]/h4</td>
 	<td>Golden Rule Specific Disclaimers</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='js-plan-disclaimers']/div/div[2]/ul/li</td>
+	<td>Golden Rule Insurance Company is the underwriter of plans marketed under the UnitedHealthOne Brand.</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -65,8 +77,13 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[4]/h4</td>
+	<td>//body[@id='apply']/div[2]/div[4]/h4</td>
 	<td>Golden Rule Specific Disclaimers</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//body[@id='apply']/div[2]/div[4]/ul/li</td>
+	<td>Golden Rule Insurance Company is the underwriter of plans marketed under the UnitedHealthOne Brand.</td>
 </tr>
 
 <tr>
@@ -304,6 +321,7 @@
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	

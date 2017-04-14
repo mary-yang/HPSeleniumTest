@@ -41,9 +41,13 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	
-        <td>//div[@id='quoteDisclaimerText']/div[2]/h4</td>
+	<td>//div[@id='disclaimer-container']/div[2]/h4</td>
 	<td>National General Specific Disclaimers</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/p</td>
+	<td>National General Accident &amp; Health markets products underwritten and issued by Time Insurance Company, National Health Insurance Company, Integon National Insurance Company, and Integon Indemnity Corporation.</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -56,6 +60,16 @@
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/h4</td>
+	<td>National General Specific Disclaimers</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/p</td>
+	<td>National General Accident &amp; Health markets products underwritten and issued by Time Insurance Company, National Health Insurance Company, Integon National Insurance Company, and Integon Indemnity Corporation.</td>
 </tr>
 
 <tr>
@@ -83,6 +97,12 @@
 	<td>css=h4.disclaimer-header</td>
 	<td>National General Specific Disclaimers</td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text &gt; p</td>
+	<td>National General Accident &amp; Health markets products underwritten and issued by Time Insurance Company, National Health Insurance Company, Integon National Insurance Company, and Integon Indemnity Corporation.</td>
+</tr>
+
 <tr>
 	<td>clickAndWait</td>
 	<td>css=span.js-apply-text.apply-button-text</td>
@@ -114,6 +134,11 @@
 	<td>National General Specific Disclaimers</td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text &gt; p</td>
+	<td>National General Accident &amp; Health markets products underwritten and issued by Time Insurance Company, National Health Insurance Company, Integon National Insurance Company, and Integon Indemnity Corporation.</td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
@@ -140,7 +165,12 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-application-payment']/div[3]/p</td>
+	<td>css=h4.disclaimer-header</td>
+	<td>National General Specific Disclaimers</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text &gt; p</td>
 	<td>National General Accident &amp; Health markets products underwritten and issued by Time Insurance Company, National Health Insurance Company, Integon National Insurance Company, and Integon Indemnity Corporation.</td>
 </tr>
 <tr>
@@ -212,6 +242,8 @@
 	
 	
 
+	
+	
 	
 	
 	

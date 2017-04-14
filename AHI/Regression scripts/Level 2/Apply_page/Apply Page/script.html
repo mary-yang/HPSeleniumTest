@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression/Apply_page/Apply Page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Apply_page/Apply Page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">Quote Page</td></tr>
 </thead><tbody>
@@ -67,6 +67,10 @@
 	<td>id=js-see-plans</td>
 	<td></td>
 </tr>
+
+
+
+
 <tr>
 	<td>waitForElementPresent</td>
 	<td>link=(edit)</td>
@@ -75,6 +79,12 @@
 <tr>
 	<td>verifyLocation</td>
 	<td>*/quote*</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
@@ -89,7 +99,7 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=(see details)</td>
+	<td>xpath=(//a[contains(text(),'(see details)')])[1]</td>
 	<td></td>
 </tr>
 <tr>
@@ -120,7 +130,7 @@
 
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='apply']//tr[descendant::td[1][contains(text(),'L.I.F.E. Association Fee')]]/td[2]</td>
+	<td>//tr[4]/td[2]</td>
 	<td>mo_Fee</td>
 </tr>
 <tr>
@@ -141,6 +151,12 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
+	
 	
 	
 	

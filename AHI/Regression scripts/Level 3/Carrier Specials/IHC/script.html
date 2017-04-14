@@ -25,12 +25,6 @@
 </tr>
 
 <tr>
-	<td>verifyText</td>
-	<td>//div[@id='quoteDisclaimerText']/div[2]/h4</td>
-	<td>IHC Group Specific Disclaimers</td>
-</tr>
-
-<tr>
     <td>IF</td>
     <td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'ihc')]&quot;)</td>
     <td></td>
@@ -45,31 +39,36 @@
     <td></td>
     <td></td>
 </tr>
-
 <tr>
-    <td>clickAndWait</td>
-    <td>xpath=(//a[contains(text(),'Select This Plan')])[2]</td>
-    <td></td>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/h4</td>
+	<td>IHC Group Specific Disclaimers</td>
 </tr>
 
-
-
-
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='js-plan-disclaimers']/div/div[2]/h4</td>
+	<td>//div[@id='disclaimer-container']/div[2]/h4</td>
 	<td>IHC Group Specific Disclaimers</td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/p[2]</td>
+	<td>THIS IS NOT QUALIFYING HEALTH COVERAGE (\&quot;MINIMUM ESSENTIAL COVERAGE\&quot;) THAT SATISFIES THE HEALTH COVERAGE REQUIREMENT OF THE AFFORDABLE CARE ACT. IF YOU DON\'T HAVE MINIMUM ESSENTIAL COVERAGE, YOU MAY OWE AN ADDITIONAL PAYMENT WITH YOUR TAXES. <br />ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH BENEFIT PLAN THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD. <br />THIS POLICY INCLUDES A PRE-EXISTING CONDITION EXCLUSION PROVISION.</td>
+</tr>
+
+
 <tr>
 	<td>clickAndWait</td>
 	<td>id=plan-info-docker-apply</td>
 	<td></td>
 </tr>
+
+
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -82,9 +81,16 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[4]/h4</td>
+	<td>//div[@id='disclaimer-container']/div[2]/h4</td>
 	<td>IHC Group Specific Disclaimers</td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/p[2]</td>
+	<td>THIS IS NOT QUALIFYING HEALTH COVERAGE (\&quot;MINIMUM ESSENTIAL COVERAGE\&quot;) THAT SATISFIES THE HEALTH COVERAGE REQUIREMENT OF THE AFFORDABLE CARE ACT. IF YOU DON\'T HAVE MINIMUM ESSENTIAL COVERAGE, YOU MAY OWE AN ADDITIONAL PAYMENT WITH YOUR TAXES. <br />ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH BENEFIT PLAN THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD. <br />THIS POLICY INCLUDES A PRE-EXISTING CONDITION EXCLUSION PROVISION.</td>
+</tr>
+
+
 <tr>
 	<td>clickAndWait</td>
 	<td>//a[@id='applyButton']/span[3]</td>
@@ -105,11 +111,7 @@
 	<td>//div[@id='js-app-page-body-content']/div/section/div/div[3]/div/label</td>
 	<td>exact:Marital Status *</td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='js-app-page-body-content']/div/div[4]/h4</td>
-	<td>IHC Group Specific Disclaimers</td>
-</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
@@ -119,6 +121,11 @@
 	<td>select</td>
 	<td>id=member-p-marital-status</td>
 	<td>label=Single</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/h4</td>
+	<td>IHC Group Specific Disclaimers</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -138,8 +145,13 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-application-payment']/div[4]/h4</td>
+	<td>//div[@id='disclaimer-container']/div[2]/h4</td>
 	<td>IHC Group Specific Disclaimers</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/p[2]</td>
+	<td>THIS IS NOT QUALIFYING HEALTH COVERAGE (\&quot;MINIMUM ESSENTIAL COVERAGE\&quot;) THAT SATISFIES THE HEALTH COVERAGE REQUIREMENT OF THE AFFORDABLE CARE ACT. IF YOU DON\'T HAVE MINIMUM ESSENTIAL COVERAGE, YOU MAY OWE AN ADDITIONAL PAYMENT WITH YOUR TAXES. <br />ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH BENEFIT PLAN THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD. <br />THIS POLICY INCLUDES A PRE-EXISTING CONDITION EXCLUSION PROVISION.</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -183,8 +195,13 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='accordion']/div[8]/h4</td>
+	<td>//div[@id='disclaimer-container']/div[2]/h4</td>
 	<td>IHC Group Specific Disclaimers</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/p[2]</td>
+	<td>THIS IS NOT QUALIFYING HEALTH COVERAGE (\&quot;MINIMUM ESSENTIAL COVERAGE\&quot;) THAT SATISFIES THE HEALTH COVERAGE REQUIREMENT OF THE AFFORDABLE CARE ACT. IF YOU DON\'T HAVE MINIMUM ESSENTIAL COVERAGE, YOU MAY OWE AN ADDITIONAL PAYMENT WITH YOUR TAXES. <br />ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH BENEFIT PLAN THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD. <br />THIS POLICY INCLUDES A PRE-EXISTING CONDITION EXCLUSION PROVISION.</td>
 </tr>
 
 
@@ -237,6 +254,9 @@
 	
 	
 
+	
+	
+	
 	
 	
 	
