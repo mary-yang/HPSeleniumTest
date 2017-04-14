@@ -1,0 +1,4 @@
+The current markets that are available are-  
+AL, AR, AZ, CO, DE, DC, FL, GA, IA, IL, LA, MN, MO, MS, NC, ND, NV, OH, OK, PA, SC, SD, TN, TX, VA, WV, WY
+
+https://www.pivotaltracker.com/story/show/140876065
