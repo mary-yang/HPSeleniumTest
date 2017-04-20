@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/IHC-Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Inventory Check/App_Flow/IHC</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -6,11 +6,6 @@ sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
-<tr>
-	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
-	<td></td>
-</tr>
 <tr>
 	<td>open</td>
 	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
@@ -31,15 +26,16 @@ sanity4/24</td>
 	<td>3000</td>
 	<td></td>
 </tr>
+
 <tr>
-	<td>waitForText</td>
+	<td>verifyText</td>
 	<td>css=h1.census-main-heading</td>
 	<td>Compare Health Insurance Quotes*</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
-	<td>${zipcode}</td>
+	<td>${zip}</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -77,14 +73,9 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]&quot;)</td>
-	<td></td>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]&quot;)</td>
+    <td></td>
 </tr>
 <tr>
 	<td>click</td>
@@ -92,116 +83,83 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>ENDIF</td>
-	<td></td>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li[contains(text(),'${provider}')]</td>
 	<td></td>
 </tr>
-
-
 <tr>
-	<td>pause</td>
-	<td>5000</td>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id="js-quote-plans-container"]/ul/li[1]/div/div[2]/div[1]/h3/a[1]</td>
+	<td>PlanName</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'Select This Plan')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Select This Plan</td>
+	<td>//a[contains(text(),'Select This Plan')]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>4000</td>
-	<td></td>
-</tr>
-
-<tr>
-	 <td>include</td>
-	<td>AHI/Include/Name</td>
-	<td></td>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=No, Keep My Deductible&quot;)</td>
+    <td></td>
 </tr>
 <tr>
-	<td>verifyLocation</td>
-	<td>*apply*</td>
+	<td>click</td>
+	<td>link=No, Keep My Deductible</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@id='applyButton']/span[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[2]/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[3]/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[4]/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[5]/div/button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>id=applyButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Underwriting</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyLocation</td>
-	<td>*application*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeLocation</td>
-	<td>url</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;/&quot;)+1)</td>
-	<td>uri</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${uri}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-HasOtherCoverage']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-PregnantAdoptionFertility']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-CoveredByMedicare']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-AbnormalTestResults']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-FiveYearSymptoms_HIV_AIDS']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-ApplicantIsLegal']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>4000</td>
+	 <td>include</td>
+	<td>AHI/Include/Name</td>
 	<td></td>
 </tr>
 <tr>
@@ -311,31 +269,6 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//p[@class='modal-sub-heading']</td>
-	<td>*Add Additional Insurance and Benefits*</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
 	<td>click</td>
 	<td>id=consent-checkbox-0</td>
 	<td></td>
@@ -345,36 +278,27 @@ sanity4/24</td>
 	<td>css=p.signature-arrow</td>
 	<td></td>
 </tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+	</tbody>
+</table>
 
-
-
-</tbody></table>
-</body>
-</html>	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

@@ -13,3 +13,6 @@ Steps:
 9. Complete Payment info with Bank Draft.
 10. Complete Review Page.
 11. Confirm and Verify Monthly premium.
+
+Prod enabled states:
+AL,AZ,CO,DE,HI,IA,IL,IN,KY,LA,MS,ND,NE,NJ,NM,NV,OH,OK,OR,PA,RI,SC,TX,VA,VT,WI,WV,WY
