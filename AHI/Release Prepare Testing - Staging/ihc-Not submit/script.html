@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/ihc-Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/IHC-Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -311,6 +311,31 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p[@class='modal-sub-heading']</td>
+	<td>*Add Additional Insurance and Benefits*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=consent-checkbox-0</td>
 	<td></td>
@@ -350,6 +375,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	

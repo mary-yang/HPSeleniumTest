@@ -341,8 +341,33 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
+	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p[@class='modal-sub-heading']</td>
+	<td>*Add Additional Insurance and Benefits*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -357,6 +382,9 @@ sanity4/24</td>
 </tbody></table>
 </body>
 </html>	
+	
+	
+	
 	
 	
 	
