@@ -4,24 +4,9 @@
 </thead><tbody>
 
 <tr>
-	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td>include</td>
+	<td>AHI/Include/Clear_Session</td>
 	<td></td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/?utm_source=${source}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/show</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=pre</td>
-	<td>*&quot;trafficSource&quot;:&quot;${source}&quot;*</td>
 </tr>
 <tr>
 	<td>open</td>
@@ -125,6 +110,16 @@
 	<td>//td[contains(text(),'${uri}')]//parent::tr/td[5]</td>
 	<td>${source}</td>
 </tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/show</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>*&quot;trafficSource&quot;:&quot;${source}&quot;*</td>
+</tr>
 ------------------->
 <!---------------------------------------------------------直接从url访问------------------------------------------------------------------------------------------>
 <tr>
@@ -171,6 +166,8 @@
 </tbody></table>
 </body>
 </html>
+	
+	
 	
 	
 	
