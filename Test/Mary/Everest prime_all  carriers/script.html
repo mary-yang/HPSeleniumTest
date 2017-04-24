@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 1/Sanity test/Sanity-UHC</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 1/Sanity test/Everest Prime</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -13,12 +13,17 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
 	<td>http://${ENV}.agilehealthinsurance.com</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Quote &amp; Save Today</td>
+	<td>link=Quote & Save Today</td>
 	<td></td>
 </tr>
 <tr>
@@ -78,23 +83,34 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//input[@data-id=&quot;${carrierid}&quot;]</td>
+	<td>//input[@data-id="${carrierid}"]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>refreshAndWait</td>
-	<td></td>
+	<td>pause</td>
+	<td>5000</td>
 	<td></td>
 </tr>
+<tr>
+	<td>click</td>
+	<td>id=planCoverageMax-750000-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Select This Plan')])[8]</td>
+	<td></td>
+</tr>
+<!-----------
 <tr>
 	<td>storeText</td>
 	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
 	<td>planname</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${planname}</td>
-	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
@@ -117,78 +133,35 @@ sanity4/24</td>
 	<td>*${mo}*</td>
 </tr>
 <tr>
-	<td>click</td>
+	<td>clickAndWait</td>
 	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
+---------->
 <tr>
 	<td>pause</td>
 	<td>4000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>include</td>
+	 <td>include</td>
 	<td>AHI/Include/Name</td>
 	<td></td>
 </tr>
 <tr>
 	<td>include</td>
-	<td>AHI/Include/Go to end - UHC</td>
+	<td>AHI/Include/Go to end_add riders</td>
 	<td></td>
 </tr>
+<!-----------------------------------------------登陆BO---------------------->
 <tr>
-	<td>verifyText</td>
-	<td>link=View Dental Plans Now</td>
-	<td>View Dental Plans Now</td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/back-office/reporting?page=1&amp;pageSize=1000&amp;dispositionType=A&amp;reportType=A&amp;requireContactInfo=false</td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent('id=Email')</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=Email</td>
-	<td>denis.yu1111@gmail.com</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=next</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=Passwd</td>
-	<td>Think2016</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=signIn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
+	<td>include</td>
+	<td>AHI/Include/Login BO</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//aside[@id='sidebar']/nav/ul/li[3]/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
+	<td>link=App Management</td>
 	<td></td>
 </tr>
 <tr>
@@ -197,10 +170,54 @@ sanity4/24</td>
 	<td>${uri}</td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>verifyText</td>
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
-	<td>Carrier *</td>
+	<td>Successfully Enrolled</td>
 </tr>
-
+<!----------------------------------到hiiquote.com验证是否成功, 还有问题，提示用户名密码不对
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Login HII</td>
+	<td></td>
+</tr>
+------------------>
+	</tbody>
+</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
