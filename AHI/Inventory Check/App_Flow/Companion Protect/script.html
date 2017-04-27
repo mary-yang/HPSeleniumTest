@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Inventory Check/App_Flow/IHC</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Inventory Check/App_Flow/Companion Protect</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -6,6 +6,41 @@ sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
+<tr>
+	<td>open</td>
+	<td>http://54.225.47.89/yees/caseReport.jsp?path=AHI/Inventory%20Check/App_Flow/Companion%20Protect</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//tr[descendant::th[contains(text(),'${zip}')]]/th[contains(text(),'Deductibles')]</td>
+	<td>Last_Deductible</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${Last_Deductible}'.replace(/Deductibles/g,&quot;&quot;)</td>
+	<td>Last_Deductible</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//tr[descendant::th[contains(text(),'${zip}')]]/th[contains(text(),'Coinsurances')]</td>
+	<td>Last_Coinsurances</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${Last_Coinsurances}'.replace(/Coinsurances/g,&quot;&quot;)</td>
+	<td>Coinsurance_Last_time</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//tr[descendant::th[contains(text(),'${zip}')]]/th[contains(text(),'Max Out of Pocket')]</td>
+	<td>Last_MOOP</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${Last_Coinsurances}'.replace(/Max Out of Pocket/g,&quot;&quot;)</td>
+	<td>Last_MOOP</td>
+</tr>
 <tr>
 	<td>open</td>
 	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
@@ -88,11 +123,6 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-    <td>ENDIF</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
 	<td>storeText</td>
 	<td>//*[@id="js-quote-plans-container"]/ul/li[1]/div/div[2]/div[1]/h3/a[1]</td>
 	<td>PlanName</td>
@@ -109,8 +139,18 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>storeText</td>
+	<td>//div[@id='js-quote-filters']/div[descendant::h3[contains(text(),'Policy Maximum Benefit')]]/ul</td>
+	<td>Policy Maximum Benefit</td>
+</tr>
+<tr>
+	<td>storeText</td>
 	<td>//div[@id='js-quote-filters']/div[descendant::h3[contains(text(),'Max Out of Pocket')]]/ul</td>
-	<td>MOOP</td>
+	<td>Max Out of Pocket</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -300,6 +340,18 @@ sanity4/24</td>
 
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
