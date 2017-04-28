@@ -1,40 +1,15 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/Tag Manager AHI</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/Tag Manager AHI</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">tagmanager</td></tr>
 </thead><tbody>
 <tr>
+	<td>include</td>
+	<td>AHI/Include/Login BO</td>
+	<td></td>
+</tr>
+<tr>
 	<td>open</td>
 	<td>tagmanager.google.com</td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//input[@id='signIn']&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=Email</td>
-	<td>denis.yu1111@gmail.com</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=next</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=Passwd</td>
-	<td>Think2016</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=signIn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -43,28 +18,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAt</td>
-	<td>//header/div/div/div/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>mouseOver</td>
-	<td>//header/div/div/div/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAt</td>
-	<td>//header/div/div/div/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>mouseOver</td>
-	<td>//header/div/div/div/div</td>
-	<td></td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
-	<td>//div[@id='bubble-2']/div/div[2]/div[2]/button</td>
+	<td>//gtm-draft-toolbar/div/button</td>
 	<td></td>
 </tr>
 <tr>
@@ -237,6 +192,16 @@
 	<td></td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[6]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[7]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
 	<td>IF</td>
 	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
 	<td></td>
@@ -404,6 +369,9 @@
 </body>
 </html>
 
+	
+	
+	
 	
 	
 	
