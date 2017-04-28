@@ -3,38 +3,13 @@
 <tr><td rowspan="1" colspan="3">tagmanager</td></tr>
 </thead><tbody>
 <tr>
+	<td>include</td>
+	<td>AHI/Include/Login BO</td>
+	<td></td>
+</tr>
+<tr>
 	<td>open</td>
 	<td>tagmanager.google.com</td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//input[@id='signIn']&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=Email</td>
-	<td>denis.yu1111@gmail.com</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=next</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=Passwd</td>
-	<td>Think2016</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=signIn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -43,28 +18,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAt</td>
-	<td>//header/div/div/div/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>mouseOver</td>
-	<td>//header/div/div/div/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAt</td>
-	<td>//header/div/div/div/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>mouseOver</td>
-	<td>//header/div/div/div/div</td>
-	<td></td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
-	<td>//div[@id='bubble-2']/div/div[2]/div[2]/button</td>
+	<td>//gtm-draft-toolbar/div/button</td>
 	<td></td>
 </tr>
 <tr>
@@ -282,11 +237,6 @@
 	<td>label=08</td>
 </tr>
 <tr>
-	<td>sendKeys</td>
-	<td>id=member-P-1-lbs</td>
-	<td>100</td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>id=address</td>
 	<td>${Add}</td>
@@ -302,9 +252,14 @@
 	<td>${City}</td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>id=primaryPhone</td>
 	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lbs</td>
+	<td>100</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -397,7 +352,7 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-app-confirmation']/div[2]/div/p[4]</td>
+	<td>//div[@id='js-app-confirmation']</td>
 	<td>*Congratulations*</td>
 </tr>
 <tr>
@@ -409,6 +364,13 @@
 </body>
 </html>
 
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
