@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/Companion Protect Applications</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Everest Prime - Collection</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -6,7 +6,11 @@ sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
-
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
 <tr>
 	<td>open</td>
 	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
@@ -45,7 +49,7 @@ sanity4/24</td>
 <tr>
 	<td>sendKeys</td>
 	<td>id=dob-0</td>
-	<td>${DOB}</td>
+	<td>01/01/1985/td>
 </tr>
 <tr>
 	<td>fireEvent</td>
@@ -108,6 +112,12 @@ sanity4/24</td>
 	<td>mo</td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>General DisclaimersThese Short Term Medical plans do not provide coverage for preexisting conditions nor the mandated coverage necessary to avoid a penalty under the Affordable Care Act.<br />Each state has specific mandates for coverage so your plan may include additional benefits. Please consult your state-specific insurance certificate for more information.<br />Short Term Health Insurance products underwritten by their respective companies. Product prices, benefits and availability may vary by state.</td>
+</tr>
+
+<tr>
 	<td>clickAndWait</td>
 	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
 	<td></td>
@@ -119,14 +129,10 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=h1</td>
-	<td>${planname}</td>
+	<td>//section[@id='js-plan-disclaimers']/div</td>
+	<td>${General Disclaimers}</td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
-	<td>*${mo}*</td>
-</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=plan-details-primary-apply</td>
@@ -138,20 +144,11 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>'${mo}'.match(/\d+.\d+/)</td>
-	<td>mo1</td>
-</tr>
-<tr>
 	<td>verifyText</td>
-	<td>//*[@id='apply']/div[3]/div[2]/div[1]/div[1]/div/div[1]/table/tbody/tr[2]/td/a/span</td>
-	<td>${planname}</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${General Disclaimers}</td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='apply']//tr[descendant::td[1][contains(text(),'Base Premium')]]/td[2]</td>
-	<td>$${mo1}</td>
-</tr>
+
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -184,7 +181,27 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//*[@id='js-question-P0-368']/div/button[1]</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[1]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[2]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[3]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[4]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[5]/div/button[1]</td>
 	<td></td>
 </tr>
 <tr>
@@ -194,7 +211,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//*[@id='js-question-P0-369']/div/button[1]</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[6]/div/button[1]</td>
 	<td></td>
 </tr>
 <tr>
@@ -204,7 +221,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//*[@id='js-question-P0-373']/div/button[1]</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[7]/div/button[1]</td>
 	<td></td>
 </tr>
 <tr>
@@ -213,25 +230,11 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//*[@id='js-question-P0-374']/div/button[1]</td>
-	<td></td>
+	<td>verifyText</td>
+	<td>//div[@id='app-underwritingQuestions-form']/div/p</td>
+	<td>${ACA TAX}</td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id='js-question-P0-375']/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>IF</td>
 	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
@@ -252,6 +255,8 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
+
+
 <tr>
 	<td>waitForText</td>
 	<td>css=h3.reset.app-page-heading</td>
@@ -270,7 +275,7 @@ sanity4/24</td>
 <tr>
 	<td>select</td>
 	<td>id=member-P-1-ft</td>
-	<td>label=06</td>
+	<td>label=07</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -303,6 +308,12 @@ sanity4/24</td>
 	<td>${Tel}</td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-page-body-content']/div/p</td>
+	<td>${ACA TAX}</td>
+</tr>
+
+<tr>
 	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
@@ -312,25 +323,26 @@ sanity4/24</td>
 	<td>AHI/Include/Use Credit Card</td>
 	<td></td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-application-payment']/p</td>
+	<td>${ACA TAX}</td>
+</tr>
+
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//p[@class='modal-sub-heading']&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//p[@class='modal-sub-heading']</td>
-	<td>*Add Additional Insurance and Benefits*</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
+	<td>click</td>
 	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>5000</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
@@ -340,52 +352,38 @@ sanity4/24</td>
 </tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
 <tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
+	<td>verifyText</td>
+	<td>//div[@id='js-application-review']/div/section/div/div/div[2]/p</td>
+	<td>exact:I have read the Agile Health Insurance Terms and Agreements and I agree that by using this site, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature. *</td>
 </tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-application-review']/div/section/div/div/div[2]/p</td>
+	<td>CET</td>
+</tr>
+
 <tr>
 	<td>click</td>
-	<td>id=consent-checkbox-0</td>
+	<td>link=Agile Health Insurance Terms and Agreements</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>id=js-signature-tab</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------------------->
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;//*[@id='js-app-no-thanks-link']&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//*[@id='js-app-no-thanks-link']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------end------------->
 <tr>
 	<td>pause</td>
-	<td>10000</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>include</td>
-	<td>AHI/Include/Congratulation</td>
+	<td>selectWindow</td>
+	<td>Short Term Health Insurance, Affordable Health Plans, Affordable Obamacare Supplemental Health Insurance - AgileHealthInsurance.com</td>
 	<td></td>
 </tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div</td>
+	<td>${AHITA}</td>
+</tr>
+
 
 </tbody></table>
 </body>
@@ -415,6 +413,16 @@ sanity4/24</td>
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 	
 	
 	
