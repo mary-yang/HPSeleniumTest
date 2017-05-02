@@ -130,8 +130,13 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
+	<td>//div[@id='customer-disclaimer-container']/div/</td>
+	<td>Important Information About This Quote and Our Plans PLEASE MAKE SURE YOU UNDERSTAND AND AGREE WITH THE TERMS OF THE INSURANCE PLAN. PAY SPECIAL ATTENTION TO THE EFFECTIVE DATE, PREMIUM AMOUNT, BENEFITS, LIMITATIONS, EXCLUSIONS, AND ANY BENEFIT RIDER, IF APPLICABLE. The quote includes premium, monthly fees and a one-time initial enrollment fee. Refunds are not available after your 10-day right to return period as outlined in the first page of your policy unless required by state law. All applications and insurance quotes are subject to final approval by our Policy Administration Department prior to issuance. All quotes shown are estimates ONLY. Premium will not change unless effective date changes or the applicant provides updated information prior to certificate issuance. If the insured selects an optional benefit, that is included in the quote. The quote shown above is for your requested effective date ONLY. If the actual effective date of your policy is different from the requested effective date, the actual cost of your policy may differ from the quote above. If such a cost variance occurs you will be notified of your actual cost of coverage by our Policy Administration Department prior to issuance. The application and initial payment must be received by us prior to the requested effective date. If a monthly billing method has been selected, future payments will be due monthly on the billing date. ENROLLMENT AND MONTHLY FEE DISCLOSURE: A one-time enrollment fee is applied to your initial payment. A separate monthly fee is included in the monthly charge. The enrollment and/or monthly fee will not affect your eligibility for coverage. Replacement of any existing policy: This is not an ACA-qualified plan. If you intend to lapse or otherwise terminate existing health insurance and replace it with a policy to be issued by Standard Security Life Insurance Company of New York, please note that the coverage is not Minimum Essential Coverage as defined by the Affordable Care Act of 2010 (ACA). You may still be subject to the federal tax assessed against individuals without Minimum Essential Coverage. We recommend that you read and understand the terms of the Policy carefully including effective date, premium amount, total monthly cost, benefits, limitations, and exclusions. Short Term Medical (STM) is a limited duration medical expense policy and is non-renewable. STM is not a replacement for the comprehensive health insurance required under the ACA. This coverage has a pre-existing condition limitation provision. These plans are not available in all states and availability in a state is subject to change. If you submit an application for a state where the plan is no longer available, your application and premium (if included) will be returned and coverage will not be effective. Pre-Existing Condition Limitation _ The short-term limited duration medical expense product does not provide portability of prior coverage. Any injury, sickness for which you have incurred charges, received medical treatment, consulted a health care professional, or taken prescription drugs within 5 years (length depends on state) of the effective date of coverage will not be covered. Non-Renewable - If you purchase a new policy, any conditions for which you incurred claims under the prior policy is considered a pre-existing condition. The purchase of a new policy is not guaranteed and you may be ineligible for new coverage based on pre-existing conditions. The new policy will have a new deductible and coinsurance limit to be satisfied according to the policy documents. CA Association*: Communicating for America, Inc., (CA) is a national non-profit advocacy organization that supports affordable healthcare for all Americans. Since 1972, more than 100,000 consumers have trusted CA to help them find affordable health insurance and Gap plans to stretch their healthcare dollar while advocating on their behalf with insurance companies, regulators and lawmakers. *The CA Association does not apply to KS, MD, and ME. About the IHC Group: Independence Holding Company (NYSE: IHC) is a holding company that is principally engaged in underwriting, administering and/or distributing group and individual specialty benefit products, including disability, supplemental health, pet, and group life insurance through its subsidiaries since 1980. The IHC Group owns three insurance companies (Standard Security Life Insurance Company of New York, Madison National Life Insurance Company, Inc. and Independence American Insurance Company), and IHC Specialty Benefits, Inc., a technology-driven insurance sales and marketing company that creates value for insurance producers, carriers and consumers (both individuals and small businesses) through a suite of proprietary tools and products (including ACA plans and small group medical stop-loss). All products are placed with highly rated carriers. About IHC Marketing Name: "IHC" and "The IHC Group" are the brand names for plans, products and services provided by one or more of the subsidiaries and affiliate member companies of The IHC Group ("IHC Entities"). Plans, products and services are solely and only provided by one or more IHC Entities specified on the plan, product or service contract, not The IHC Group. Not all plans, products and services are available in each state. About Standard Security Life Insurance Company of New York: Standard Security Life was founded in 1958, and is domiciled in the State of New York and headquartered in New York City. It is licensed in all 50 states, the District of Columbia, the Virgin Islands, and Puerto Rico. Standard Security Life provides various lines of life, health and disability insurance, including: employer medical stop-loss, disability benefit law (DBL), short-term medical, group major medical, individual and group dental and vision, individual accident and health insurance, group term life, specialty programs designed for volunteer emergency service personnel, including group life insurance and service awards programs. Standard Security Life is rated A- (Excellent) by A.M. Best Company, Inc., a widely recognized rating agency that rates insurance companies on their relative financial strength and ability to meet policyholder obligations (an A++ rating from A.M. Best is its highest rating). About Ebix Health Administration Exchange, Inc. Ebix Health Administration Exchange, Inc. doing business as Ebix Health Administration (\"Ebix HAE\") is an administrative services company that operates in 50 jurisdictions in both the individual and employer markets. Through certain administrative agreements with insurance carriers and its affiliation with Ebix Incorporated, Ebix HAE offers state-of-the-art and highly efficient open health insurance exchanges. Ebix HAE also provides pet insurance solutions that furnish pet owners, specialty pet hospitals, universities and general veterinary practices with the only open exchange in the country.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[2]/</td>
-	<td>${IHCGD}</td>
+	<td>IHC Group Specific DisclaimersSHORT-TERM MEDICAL EXPENSE (STM) THIS IS NOT QUALIFYING HEALTH COVERAGE ("MINIMUM ESSENTIAL COVERAGE") THAT SATISFIES THE HEALTH COVERAGE REQUIREMENT OF THE AFFORDABLE CARE ACT. IF YOU DON'T HAVE MINIMUM ESSENTIAL COVERAGE, YOU MAY OWE AN ADDITIONAL PAYMENT WITH YOUR TAXES. ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH BENEFIT PLAN THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD. THIS POLICY INCLUDES A PRE-EXISTING CONDITION EXCLUSION PROVISION.</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -200,19 +205,40 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//li[@id='js-question-P0-2']/div/button</td>
+	<td>//li[@id='js-question-P0-HasOtherCoverage']/div/button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//li[@id='js-question-P0-3']/div/button</td>
+	<td>//li[@id='js-question-P0-PregnantAdoptionFertility']/div/button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//li[@id='js-question-P0-4']/div/button[2]</td>
+	<td>//li[@id='js-question-P0-CoveredByMedicare']/div/button</td>
 	<td></td>
 </tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-AbnormalTestResults']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-FiveYearSymptoms_HIV_AIDS']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-ApplicantIsLegal']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-ApplicantIsLegal']/div/button</td>
+	<td></td>
+</tr>
+
 
 <tr>
 	<td>verifyText</td>
@@ -245,21 +271,7 @@ sanity4/24</td>
 	<td>id=member-p-marital-status</td>
 	<td>label=Domestic Partner</td>
 </tr>
-<tr>
-	<td>select</td>
-	<td>id=member-P-1-ft</td>
-	<td>label=06</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=member-P-1-in</td>
-	<td>label=02</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=member-P-1-lbs</td>
-	<td>190</td>
-</tr>
+
 tr>
 	<td>type</td>
 	<td>id=address</td>
@@ -302,9 +314,9 @@ tr>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
+	<td>click</td>
 	<td>id=credit-card-number</td>
-	<td>4358806686493800</td>
+	<td></td>
 </tr>
 <tr>
 	<td>type</td>
@@ -317,9 +329,9 @@ tr>
 	<td>test</td>
 </tr>
 <tr>
-	<td>select</td>
-	<td>id=expiration-year</td>
-	<td>label=2024</td>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4358806686493800</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -327,25 +339,31 @@ tr>
 	<td>label=02</td>
 </tr>
 <tr>
+	<td>select</td>
+	<td>id=expiration-year</td>
+	<td>label=2024</td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=js-same-billing</td>
 	<td></td>
 </tr>
-<tr>
-        <td>type</td>
-	<td>id=credit-card-cvv</td>
-	<td>123</td>
-</tr>
 
 <tr>
 	<td>click</td>
-	<td>id=credit-payment-authorization</td>
+	<td>css=p.signature-arrow</td>
 	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>${GeneralDisclaimers}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div</td>
-	<td>${NGGD}</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${IHCGD}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -353,10 +371,16 @@ tr>
 	<td>${ACATAX}</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=p.signature-arrow</td>
-	<td></td>
+	<td>verifyText</td>
+	<td>//div[@id='js-application-payment']/p</td>
+	<td>I understand that this authorization will remain in effect until I cancel it in writing, and I agree to notify the Ebix Health Administration Exchange, Inc. or its designated administrator in writing of any changes in my account information or termination of this authorization at least 15 days prior to the next billing date. If the above noted periodic payment dates fall on a weekend or holiday, I understand that the payment may be executed on the next business day. I understand that because this is an electronic transaction, these funds may be withdrawn from my account as soon as the above noted periodic transaction dates. In the case of an ACH Transaction being rejected for Non-Sufficient Funds (NSF) I understand that the Ebix Health Administration Exchange, Inc. or its designated administrator may at its discretion attempt to process the charge again within 30 days, and agree to an additional $25.00 charge for each attempt returned NSF which will be initiated as a separate transaction from the authorized recurring payment. I acknowledge that the origination of ACH transactions to my account must comply with the provisions of U.S. law. I agree not to dispute this recurring billing with my bank so long as the transactions correspond to the terms indicated in this authorization form.</td>
 </tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-application-payment']/p</td>
+	<td>authorization</td>
+</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
@@ -405,14 +429,39 @@ tr>
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/</td>
+	<td>FRAUD WARNINGAny person who, with intent to defraud or knowing that he is facilitating a fraud against an insurer, submits an application or files a claim containing a false or deceptive statement, or conceals information for the purpose of misleading may be guilty of insurance fraud and subject to criminal and/or civil penalties. California Law prohibits an HIV test from being required or used by health insurance companies as a condition of obtaining health insurance.</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/</td>
+	<td>FRAUD WARNING.</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/</td>
+	<td>ACKNOWLEDGEMENTS</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/</td>
+	<td>ACKNOWLEDGEMENTSI agree that coverage will not become effective for any person whose medical history changes prior to coverage approval, such that the person's answer would be &quot;yes&quot; to any of the Medical History questions in this application. If such person is the Applicant, coverage is automatically declined for all persons included in this application.</td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>css=p.signature-arrow</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div</td>
-	<td>${NGGD}</td>
+	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${IHCGD}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -442,6 +491,12 @@ I understand Short Term Health Insurance is intended for temporary gaps in healt
 </body>
 </html>	
 
+	
+	
+	
+	
+	
+	
 	
 	
 	
