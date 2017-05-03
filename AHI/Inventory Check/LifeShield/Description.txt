@@ -1,4 +1,7 @@
-The current markets that are available are-  
-AL, AR, AZ, CO, DE, DC, FL, GA, IA, IL, LA, MN, MO, MS, NC, ND, NV, OH, OK, PA, SC, SD, TN, TX, VA, WV, WY
-
 https://www.pivotaltracker.com/story/show/140876065
+
+Assc States 18: AL, AR, AZ, DE, DC, FL, GA, IA, IL, MS, OH, OK, PA, SC, TN, TX, VA, WV, WY
+
+Per LifeShield State Supply list - https://drive.google.com/open?id=0BxVK66VpQYQeOFJKSUE5dHpwbjg , we're marketing these states for LifeShield plans.
+
+AL, AR, AZ, CO, DE, DC, FL, GA, IA, IL, LA, MN, MO, MS, NC, ND, NV, OH, OK, PA, SC, SD, TN, TX, VA, WV, WY
