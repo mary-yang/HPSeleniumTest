@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Level 1/Sanity test/QA Sanity- LifeShield</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/LifeShield</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -136,72 +136,9 @@ sanity4/24</td>
 	<td>AHI/Include/Go to end</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>link=View Dental Plans Now</td>
-	<td>View Dental Plans Now</td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/back-office/reporting?page=1&amp;pageSize=1000&amp;dispositionType=A&amp;reportType=A&amp;requireContactInfo=false</td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent('id=Email')</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=Email</td>
-	<td>denis.yu1111@gmail.com</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=next</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=Passwd</td>
-	<td>Think2016</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=signIn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//aside[@id='sidebar']/nav/ul/li[3]/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=uri</td>
-	<td>${uri}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
-	<td>Carrier *</td>
-</tr>
 
+
+	
 	
 	
 	
