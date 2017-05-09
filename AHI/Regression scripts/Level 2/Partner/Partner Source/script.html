@@ -4,9 +4,24 @@
 </thead><tbody>
 
 <tr>
-	<td>include</td>
-	<td>AHI/Include/Clear_Session</td>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
 	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/?utm_source=${source}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/show</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>*&quot;trafficSource&quot;:&quot;${source}&quot;*</td>
 </tr>
 <tr>
 	<td>open</td>
@@ -166,6 +181,7 @@
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	
