@@ -126,7 +126,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div/</td>
-	<td>${GeneralDisclaimers}</td>
+	<td>AHI ${GeneralDisclaimers}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -151,7 +151,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div/</td>
-	<td>${GeneralDisclaimers}</td>
+	<td>AHI ${GeneralDisclaimers}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -314,38 +314,8 @@ tr>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=credit-card-number</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=credit-card-first</td>
-	<td>test</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=credit-card-last</td>
-	<td>test</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=credit-card-number</td>
-	<td>4358806686493800</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=expiration-month</td>
-	<td>label=02</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=expiration-year</td>
-	<td>label=2024</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=js-same-billing</td>
+	 <td>include</td>
+	<td>AHI/Include/Use Bank Draft</td>
 	<td></td>
 </tr>
 
@@ -358,7 +328,7 @@ tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div/</td>
-	<td>${GeneralDisclaimers}</td>
+	<td>AHI ${GeneralDisclaimers}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -367,7 +337,7 @@ tr>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-application-payment']/p</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
 	<td>${ACATAX}</td>
 </tr>
 <tr>
@@ -413,21 +383,7 @@ tr>
 	<td></td>
 </tr>
 
-<tr>
-	<td>click</td>
-	<td>id=consent-checkbox-0</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=consent-checkbox-1</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=consent-checkbox-2</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div/div/</td>
@@ -443,11 +399,39 @@ tr>
 	<td>//div[@id='disclaimers-container']/div/div/div[2]/</td>
 	<td>ACKNOWLEDGEMENTS</td>
 </tr>
+
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimers-container']/div/div/div[2]/</td>
-	<td>ACKNOWLEDGEMENTSI agree that coverage will not become effective for any person whose medical history changes prior to coverage approval, such that the person's answer would be &quot;yes&quot; to any of the Medical History questions in this application. If such person is the Applicant, coverage is automatically declined for all persons included in this application.</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p</td>
+	<td>ACKNOWLEDGEMENTS</td>
 </tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p[2]</td>
+	<td>I agree that coverage will not become effective for any person whose medical history changes prior to coverage approval, such that the person's answer would be &quot;yes&quot; to any of the Medical History questions in this application. If such person is the Applicant, coverage is automatically declined for all persons included in this application.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p[3]</td>
+	<td>I hereby request coverage under the policy issued to the group policyholder by the insurer and understand that if the coverage applied for becomes effective, I agree to all terms of the group policy. I understand that health insurance benefits are excluded for pre-existing conditions.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p[4]</td>
+	<td>I understand that the broker who solicited this application was acting as an independent contractor and not as an agent of the Insurance Company. I further acknowledge that the person who solicited this application and upon whose explanation of benefits, limitations or exclusions we relied, was retained by me as my agent, and that such person has no right to bind or approve coverage or alter any of the terms or conditions of the policy.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p[5]</td>
+	<td>The foregoing statements are true, full and complete to the best of my knowledge and belief. I agree to immediately notify the insurer of any changes in any of the information contained in this form which may occur prior to the approval of coverage.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p[6]</td>
+	<td>All information provided will be held in strictest confidence. Your personal health information is protected at all times and may only be released with your express written authorization to do so. I understand that benefits under this coverage are excluded for pre-existing conditions for any medical condition or sickness for which medical advice, diagnosis, care, or treatment, including the use of prescription drugs, was recommended or received during the 6 months immediately before the insured person's effective date of this insurance. If any insured person has a dispute, disagreement or claim against the Company, its authorized administrator, or any employee or agent of the Company or of its authorized administrator, which has not been resolved or settled after exhaustion of the Company's appeals procedures, then the dispute or disagreement shall be resolved by arbitration. This provision shall be applicable to all claims or controversies arising under the Policy.</td>
+</tr>
+
 <tr>
 	<td>click</td>
 	<td>css=p.signature-arrow</td>
@@ -456,7 +440,7 @@ tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div/</td>
-	<td>${GeneralDisclaimers}</td>
+	<td>AHI ${GeneralDisclaimers}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -470,7 +454,7 @@ tr>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-application-review']/div/section/div/div/div[2]/p</td>
+	<td>//div[@id='js-application-review']/div/section/div/div/div[2]</td>
 	<td>exact:I have read the Terms and Agreements and I agree that by using this site, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature. *
 
 I understand Short Term Health Insurance is intended for temporary gaps in health insurance. It is not compliant with the federal Affordable Care Act and does not cover expenses related to pre-existing conditions.</td>
@@ -491,6 +475,12 @@ I understand Short Term Health Insurance is intended for temporary gaps in healt
 </body>
 </html>	
 
+	
+	
+	
+	
+	
+	
 	
 	
 	
