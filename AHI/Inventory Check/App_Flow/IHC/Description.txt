@@ -1,4 +1,6 @@
 Connect STM product
 States (19): AL, CO, DE, HI, IL, LA, MI, MS, NE, NV, NC, OK, SC, SD, TX, TN, WV, WI, WY
 
-Secure STM States (15): AK, AZ, DC, FL, GA, KS, KY, ME, MD, MO, OH, OR, PA, UT, VA
+Secure STM States (16): AK, AZ, CA, DC, FL, GA, KS, KY, ME, MD, MO, OH, OR, PA, UT, VA
+
+Secure Lite states 1 : CA
