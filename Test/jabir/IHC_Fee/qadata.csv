@@ -1,0 +1,52 @@
+provider,state,state1,zipcode,Total,over6,upTo6,PlanName
+IHC Group,Alabama,AL,35215,${num},${over6},${upTo6},${PlanName}
+IHC Group,Alaska,AK,99504,${num},${over6},${upTo6},${PlanName}
+IHC Group,Arkansas,AR,72209,${num},${over6},${upTo6},${PlanName}
+IHC Group,Arizona,AZ,85364,${num},${over6},${upTo6},${PlanName}
+IHC Group,California,CA,90011,${num},${over6},${upTo6},${PlanName}
+IHC Group,Colorado,CO,80219,${num},${over6},${upTo6},${PlanName}
+IHC Group,Connecticut,CT,6606,${num},${over6},${upTo6},${PlanName}
+IHC Group,Delaware,DE,19805,${num},${over6},${upTo6},${PlanName}
+IHC Group,District Of Columbia,DC,20015,${num},${over6},${upTo6},${PlanName}
+IHC Group,Florida,FL,33186,${num},${over6},${upTo6},${PlanName}
+IHC Group,Georgia,GA,30044,${num},${over6},${upTo6},${PlanName}
+IHC Group,Hawaii,HI,96818,${num},${over6},${upTo6},${PlanName}
+IHC Group,Iowa,IA,50317,${num},${over6},${upTo6},${PlanName}
+IHC Group,Idaho,ID,83709,${num},${over6},${upTo6},${PlanName}
+IHC Group,Illinois,IL,60629,${num},${over6},${upTo6},${PlanName}
+IHC Group,Indiana,IN,46227,${num},${over6},${upTo6},${PlanName}
+IHC Group,Kansas,KS,66062,${num},${over6},${upTo6},${PlanName}
+IHC Group,Kentucky,KY,40214,${num},${over6},${upTo6},${PlanName}
+IHC Group,Louisiana,LA,70816,${num},${over6},${upTo6},${PlanName}
+IHC Group,Massachusetts,MA,2128,${num},${over6},${upTo6},${PlanName}
+IHC Group,Maryland,MD,21215,${num},${over6},${upTo6},${PlanName}
+IHC Group,Maine,ME,4401,${num},${over6},${upTo6},${PlanName}
+IHC Group,Michigan,MI,48228,${num},${over6},${upTo6},${PlanName}
+IHC Group,Minnesota,MN,55106,${num},${over6},${upTo6},${PlanName}
+IHC Group,Missouri,MO,63129,${num},${over6},${upTo6},${PlanName}
+IHC Group,Mississippi,MS,39503,${num},${over6},${upTo6},${PlanName}
+IHC Group,Montana,MT,59102,${num},${over6},${upTo6},${PlanName}
+##IHC Group,North Carolina,NC,28269,${num},${over6},${upTo6},${PlanName}
+IHC Group,North Dakota,ND,58103,${num},${over6},${upTo6},${PlanName}
+IHC Group,Nebraska,NE,68104,${num},${over6},${upTo6},${PlanName}
+IHC Group,New Hampshire,NH,3103,${num},${over6},${upTo6},${PlanName}
+IHC Group,New Jersey,NJ,8701,${num},${over6},${upTo6},${PlanName}
+IHC Group,New Mexico,NM,87121,${num},${over6},${upTo6},${PlanName}
+IHC Group,Nevada,NV,89110,${num},${over6},${upTo6},${PlanName}
+IHC Group,New York,NY,11226,${num},${over6},${upTo6},${PlanName}
+IHC Group,Ohio,OH,43228,${num},${over6},${upTo6},${PlanName}
+IHC Group,Oklahoma,OK,73160,${num},${over6},${upTo6},${PlanName}
+IHC Group,Oregon,OR,97229,${num},${over6},${upTo6},${PlanName}
+IHC Group,Pennsylvania,PA,19120,${num},${over6},${upTo6},${PlanName}
+IHC Group,Rhode Island,RI,2909,${num},${over6},${upTo6},${PlanName}
+IHC Group,South Carolina,SC,29223,${num},${over6},${upTo6},${PlanName}
+IHC Group,South Dakota,SD,57106,${num},${over6},${upTo6},${PlanName}
+IHC Group,Tennessee,TN,37013,${num},${over6},${upTo6},${PlanName}
+IHC Group,Texas,TX,79936,${num},${over6},${upTo6},${PlanName}
+IHC Group,Utah,UT,84120,${num},${over6},${upTo6},${PlanName}
+IHC Group,Virginia,VA,23464,${num},${over6},${upTo6},${PlanName}
+IHC Group,Vermont,VT,5401,${num},${over6},${upTo6},${PlanName}
+IHC Group,Washington,WA,98115,${num},${over6},${upTo6},${PlanName}
+IHC Group,Wisconsin,WI,53215,${num},${over6},${upTo6},${PlanName}
+IHC Group,West Virginia,WV,25302,${num},${over6},${upTo6},${PlanName}
+IHC Group,Wyoming,WY,82001,${num},${over6},${upTo6},${PlanName}
