@@ -79,7 +79,22 @@
 	<td>//section[@id='js-plan-faqs']/div/div/</td>
 	<td>FAQ</td>
 </tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//section[@id='js-plan-state-variations']/div/h2&quot;)</td>
+	<td></td>
+</tr>
 
+<tr>
+	<td>storeText</td>
+	<td>//section[@id='js-plan-state-variations']/div/div/div/</td>
+	<td>StateVariation</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 <tr>
 	<td>open</td>
 	<td>${url2}</td>
@@ -145,11 +160,28 @@
 	<td>//section[@id='js-plan-faqs']/div/div/</td>
 	<td>${FAQ}</td>
 </tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//section[@id='js-plan-state-variations']/div/h2&quot;)</td>
+	<td></td>
+</tr>
 
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='js-plan-state-variations']/div/div/div/</td>
+	<td>${StateVariation}</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 
 </tbody></table>
 </body>
 </html>
+	
+	
 	
 	
 	
