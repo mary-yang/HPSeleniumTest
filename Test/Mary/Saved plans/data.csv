@@ -1,0 +1,4 @@
+"state","zipcode","plan1","plan2","plan3"
+"al","35215","${plan1}","${plan2}","${plan3}"
+"ak","99504","${plan1}","${plan2}","${plan3}"
+"ar","72209","${plan1}","${plan2}","${plan3}"
