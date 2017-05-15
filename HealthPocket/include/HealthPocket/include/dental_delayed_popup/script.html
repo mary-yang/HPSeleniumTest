@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pengujian.healthpocket.com/" />
+<title>dental_delayed_popup</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">dental_delayed_popup</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeText</td>
+	<td>css=p.phone.desktopOnly</td>
+	<td>phoneNum</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=div.popup-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.popup-title</td>
+	<td>exact:Need Help Finding the Right Dental Plan?X</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.popup-body-section.call &gt; div.cta</td>
+	<td>Call a Licensed Insurance Agent 24/7</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.phone &gt; span.desktopOnly</td>
+	<td>${phoneNum}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=ul.reasons &gt; li</td>
+	<td>get free professional advice</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='popup']/div[2]/div/ul/li[2]</td>
+	<td>find the RIGHT plan for you</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='popup']/div[2]/div/ul/li[3]</td>
+	<td>no commitment to buy</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=popupLearnLink</td>
+	<td>LEARN MORE​</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.pull-right.popup-close-control</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>css=div.popup-title</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

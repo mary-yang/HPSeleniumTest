@@ -1,0 +1,206 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Partner/Partner Source</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/?utm_source=${source}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/show</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>*&quot;trafficSource&quot;:&quot;${source}&quot;*</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/census</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>70816</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1985</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	 <td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'Everest')]</td>
+	<td></td>
+</tr>
+<tr>
+	 <td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Select This Plan</td>
+	<td></td>
+</tr>
+<tr>
+	 <td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	 <td>include</td>
+	<td>AHI/Include/Go to end</td>
+	<td></td>
+</tr>
+
+<!----------------------------------------------登陆BO--------------
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Login BO</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/back-office/reporting?page=1&amp;pageSize=1000&amp;dispositionType=A&amp;reportType=A&requireContactInfo=false</td>
+	<td></td>
+</tr>
+<tr>
+	 <td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='searchResults']/small/table/tbody/tr[2]/td[3]</td>
+	<td>status</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[contains(text(),'${uri}')]//parent::tr/td[5]</td>
+	<td>${source}</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/show</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>*&quot;trafficSource&quot;:&quot;${source}&quot;*</td>
+</tr>
+------------------->
+<!---------------------------------------------------------直接从url访问------------------------------------------------------------------------------------------>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Login BO</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/back-office/reporting?startDate=2017-01-22&amp;endDate=2017-12-31&amp;reportType=A&amp;dispositionType=AF&amp;requireContactInfo=false&amp;state=all&amp;carrier=A&amp;sortBy=STATUS_DATE_DESC&amp;reProductType=all&amp;riderProduct=&amp;paymentOption=all&amp;duration=all&amp;attribution=&amp;firstName=&amp;lastName=&amp;uri=&amp;page=1&amp;pageSize=10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=uri</td>
+	<td>${uri}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='searchResults']/small/table/tbody/tr[2]/td[3]</td>
+	<td>${status}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='searchResults']/small/table/tbody/tr[2]/td[5]</td>
+	<td>${source}</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
