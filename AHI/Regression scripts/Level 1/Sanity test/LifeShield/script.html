@@ -139,70 +139,17 @@ sanity4/24</td>
 
 <tr>
 	<td>include</td>
-	<td>AHI/Include/Login BO</td>
+	<td>AHI/Include/BO App Search</td>
 	<td></td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/back-office/reporting?page=1&amp;pageSize=1000&amp;dispositionType=A&amp;reportType=A&amp;requireContactInfo=false</td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent('id=Email')</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=Email</td>
-	<td>denis.yu1111@gmail.com</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=next</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=Passwd</td>
-	<td>Think2016</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=signIn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//aside[@id='sidebar']/nav/ul/li[3]/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=uri</td>
-	<td>${uri}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
-	<td>Carrier *</td>
+	<td>Successfully Enrolled</td>
 </tr>
 
+	
+	
 	
 	
 	
