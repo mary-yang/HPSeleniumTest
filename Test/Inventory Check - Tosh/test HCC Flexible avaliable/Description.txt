@@ -1,4 +1,0 @@
-Check HCC Flexible Inventory:
-
-
-HCC Flexible(36): AL,AK,AR,AZ,DE,DC,FL(6),GA(6),HI,ID,IL,IN(6),KS,KY,LA,ME,MO(6),MS,NC,ND(6),NM(6),NV(6),OH(6),OK,OR(6),PA,SC,SD6),TN(6),TX,UT,VA(6),WI(6),WV,WY

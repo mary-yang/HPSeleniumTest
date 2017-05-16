@@ -1,0 +1,282 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/USA plus Inventory</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Saved plans</td></tr>
+</thead><tbody>
+
+<tr>
+	<td>open</td>
+	<td>http://ahi-tosh.herokuapp.com/api/context/clear</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>open</td>
+	<td>http://ahi-tosh.herokuapp.com/term-health-insurance/enroll/${planuri}?census[location][zip]=${zipcode}&census[member][0][dob]=01/01/1995&census[member][0][gender]=M&census[member][0][role]=P&census[effective]=2017-05-28</td>
+	<td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//div[@id='pageNotFound']/div[2]/div/h2&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://ahi-tosh.herokuapp.com/term-health-insurance/enroll/slaico-${state}-plan-2-2500-20-20000-1000000?census[location][zip]=${zipcode}&census[member][0][dob]=01/01/1995&census[member][0][gender]=M&census[member][0][role]=P&census[effective]=2017-05-28</td>
+	<td></td>
+</tr>
+
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+
+
+
+
+
+
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=fillApp</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=fillApp</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=06</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=01</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lbs</td>
+	<td>150</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=credit-payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=fillApp</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=credit-payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+    <td>click</td>
+    <td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
+    <td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=⊕Add Additional Insurance and Benefits</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'ameritas')]]/div[2]/div[2]/p&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'ameritas')]]/div[2]/div[2]/p</td>
+	<td>plan1</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${plan1}</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'nationwide')]]/div[2]/div[2]/p&quot;)</td>
+    <td></td>
+</tr>
+
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'nationwide')]]/div[2]/div[2]/p</td>
+	<td>plan2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${plan2}</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'secure')]]/div[2]/div[2]/p&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'secure')]]/div[2]/div[2]/p</td>
+	<td>plan3</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${plan3}</td>
+	<td></td>
+</tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'teladoc')]]/div[2]/div[2]/p&quot;)</td>
+    <td></td>
+</tr>
+
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'teladoc')]]/div[2]/div[2]/p</td>
+	<td>plan4</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${plan4}</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+
+
+
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	

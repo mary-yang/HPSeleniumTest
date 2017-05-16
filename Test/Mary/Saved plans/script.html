@@ -1,107 +1,225 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head profile="http://selenium-ide.openqa.org/profiles/test-case">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="http://pengujian.healthpocket.com/" />
-<title>Saved plans</title>
-</head>
-<body>
-<table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/Saved plans</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">Saved plans</td></tr>
 </thead><tbody>
+
 <tr>
 	<td>open</td>
-	<td>/</td>
+	<td>http://ahi-tosh.herokuapp.com/api/context/clear</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>open</td>
+	<td>http://ahi-tosh.herokuapp.com/term-health-insurance/enroll/everest-one-${state}-5000-20-9000-250000?census[location][zip]=${zipcode}&census[member][0][dob]=01/01/1995&census[member][0][gender]=M&census[member][0][role]=P&census[effective]=2017-05-28</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>css=span.savePlansShortLabel</td>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//div[@id='pageNotFound']/div[2]/div/h2&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://ahi-tosh.herokuapp.com/term-health-insurance/enroll/slaico-${state}-plan-2-2500-20-20000-1000000?census[location][zip]=${zipcode}&census[member][0][dob]=01/01/1995&census[member][0][gender]=M&census[member][0][role]=P&census[effective]=2017-05-28</td>
 	<td></td>
 </tr>
+
 <tr>
-	<td>waitForText</td>
-	<td>//div[@id='savedPlansPlanContainer']/p</td>
-	<td>You do not have any saved ifp plans.</td>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
 </tr>
+
+
+
+
+
+
+
+
 <tr>
-	<td>clickAndWait</td>
-	<td>link=HealthPocket</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=location</td>
-	<td>35215</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=35215 - Jefferson County, AL</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=findPlans</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=js-saved-plan-2016-humana-humana-basic-6850-birmingham-ppox-y17r0</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=hpBackdrop</td>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=js-saved-plan-2016-humana-humana-basic-6850-birmingham-ppox-childrens-dental-z6tls</td>
+	<td>id=fillApp</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=hpBackdrop</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=js-saved-plan-2016-unitedhealthcare-catastrophic-compass-6850-4outw</td>
+	<td>id=fillApp</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=hpBackdrop</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=js-saved-plan-2016-unitedhealthcare-life-insurance-company-select-saver-g8vf9</td>
+	<td>id=credit-payment-authorization</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=hpBackdrop</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=js-saved-plan-2016-humana-humana-bronze-6450-birmingham-ppox-c5nl7</td>
+	<td>id=fillApp</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>css=span.savePlansShortLabel</td>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>id=saveThisPlanHeading</td>
-	<td>Save and Compare Plans5 plans saved. Plans you have selected will be saved for up to two weeks.</td>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=credit-payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+    <td>click</td>
+    <td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
+    <td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=⊕Add Additional Insurance and Benefits</td>
+	<td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'ameritas')]]/div[2]/div[2]/p&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'ameritas')]]/div[2]/div[2]/p</td>
+	<td>plan1</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${plan1}</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+
+
+
+
+
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'nationwide')]]/div[2]/div[2]/p&quot;)</td>
+    <td></td>
+</tr>
+
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'nationwide')]]/div[2]/div[2]/p</td>
+	<td>plan2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${plan2}</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+
+
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'secure')]]/div[2]/div[2]/p&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'secure')]]/div[2]/div[2]/p</td>
+	<td>plan3</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${plan3}</td>
+	<td></td>
 </tr>
 
 </tbody></table>
 </body>
 </html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

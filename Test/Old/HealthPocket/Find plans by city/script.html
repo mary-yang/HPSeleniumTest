@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pengujian.healthpocket.com/" />
+<title>Find plans by city</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Find plans by city</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Find plans by city&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=San Francisco</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all Individual plans in San Francisco, California</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Medicare')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all Medicare plans in San Francisco, CA</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Medigap')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=See all Medigap plans in San Francisco, CA</td>
+	<td>See all Medigap plans in San Francisco, CA</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Small Business')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=See all small business health plans in San Francisco, CA</td>
+	<td>See all small business health plans in San Francisco, CA</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Dental')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.more-link &gt; strong</td>
+	<td>See all dental plans in San Francisco, CA</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='doctorList']/h2/strong</td>
+	<td>Doctors in San Francisco, CA</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Individual')])[3]</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
