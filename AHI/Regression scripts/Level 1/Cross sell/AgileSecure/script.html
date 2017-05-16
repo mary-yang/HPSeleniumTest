@@ -117,19 +117,9 @@
 	<td>AHI/Include/Name</td>
 	<td></td>
 </tr>
-<!-----------
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Get URI</td>
-	<td></td>
-</tr>
 
-<tr>
-	<td>storeEval</td>
-	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;/&quot;)+1)</td>
-	<td>uri</td>
-</tr>
----------->
+
+
 <tr>
 	<td>click</td>
 	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[1]/div/button[2]</td>
@@ -154,6 +144,17 @@
 	<td>clickAndWait</td>
 	<td>id=applyButton</td>
 	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Get URI</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;/&quot;)+1)</td>
+	<td>uri</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -270,11 +271,13 @@
 	<td>//div[@id='js-signature-tab']/p</td>
 	<td></td>
 </tr>
+<!-----------
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Get URI</td>
 	<td></td>
 </tr>
+---------->
 <tr>
 	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
@@ -294,6 +297,8 @@
 </body>
 </html>
 
+	
+	
 	
 	
 	
