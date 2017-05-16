@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/UHC Applications - Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/UHC Applications - Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -99,11 +99,6 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeText</td>
-	<td>//li/div/div/div[contains(@data-planid, '${carrierid}')]/div</td>
-	<td>mo</td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
 	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
 	<td></td>
@@ -112,11 +107,6 @@ sanity4/24</td>
 	<td>verifyText</td>
 	<td>css=h1</td>
 	<td>${planname}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
-	<td>*${mo}*</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -309,6 +299,8 @@ sanity4/24</td>
 </body>
 </html>	
 
+	
+	
 	
 	
 	
