@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/NG - Collection</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/LifeShield</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -7,7 +7,7 @@ sanity4/24</td>
 	</thead>
 	<tbody>
 <tr>
-	 <td>include</td>
+	<td>include</td>
 	<td>AHI/Include/Disclaimers</td>
 	<td></td>
 </tr>
@@ -23,19 +23,13 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Quote & Save Today</td>
+	<td>link=Quote &amp; Save Today</td>
 	<td></td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-
 <tr>
 	<td>waitForText</td>
 	<td>css=h1.census-main-heading</td>
-	<td>Compare Health Insurance Quotes*</td>
+	<td>Compare Health Insurance Quotes</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -55,7 +49,7 @@ sanity4/24</td>
 <tr>
 	<td>sendKeys</td>
 	<td>id=dob-0</td>
-	<td>01/01/1975</td>
+	<td>01/01/1985/td>
 </tr>
 <tr>
 	<td>fireEvent</td>
@@ -63,8 +57,23 @@ sanity4/24</td>
 	<td>blur</td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
-	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td>xpath=//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
@@ -73,19 +82,18 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyLocation</td>
-	<td>*/quote*</td>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>click</td>
+	<td>id=${carrierid}</td>
+	<td></td>
+</tr>
 <tr>
 	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//input[@data-id="${carrierid}"]</td>
+	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
@@ -95,30 +103,19 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
+	<td>css=ul.quote-all-plans-list.js-plans-list > li.quote-plan-container.js-plan-unit > div.quote-plan > div.quote-plan-body > div.quote-plan-carrier > h3.quote-plan-name > a</td>
 	<td>planname</td>
 </tr>
-<tr>
-	<td>echo</td>
-	<td>${planname}</td>
-	<td></td>
-</tr>
 
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>//div[@id='disclaimer-container']/div</td>
 	<td>${GeneralDisclaimers}</td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[2]/</td>
-	<td>${NGGD}</td>
-</tr>
-
 
 <tr>
-	<td>click</td>
-	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -134,8 +131,9 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[2]/</td>
-	<td>${NGGD}</td>
+	<td>${LSGD}</td>
 </tr>
+
 <tr>
 	<td>click</td>
 	<td>id=plan-details-primary-apply</td>
@@ -143,10 +141,9 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>4000</td>
+	<td>2000</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div/</td>
@@ -155,16 +152,11 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[2]/</td>
-	<td>${NGGD}</td>
+	<td>${LSGD}</td>
 </tr>
 <tr>
-	 <td>include</td>
-	<td>AHI/Include/Name</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyLocation</td>
-	<td>*apply*</td>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
@@ -174,27 +166,84 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>3000</td>
+	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyLocation</td>
-	<td>*application*</td>
+	<td>include</td>
+	<td>AHI/Include/Underwriting</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeLocation</td>
-	<td>url</td>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;/&quot;)+1)</td>
-	<td>uri</td>
+	<td>include</td>
+	<td>AHI/Include/Get URI</td>
+	<td></td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${uri}</td>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[1]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[2]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[3]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[4]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[5]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[6]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='app-underwritingQuestions-form']/div/p</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
 <tr>
@@ -203,41 +252,21 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-2']/div/button</td>
+	<td>ENDIF</td>
 	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-3']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-4']/div/button[2]</td>
 	<td></td>
 </tr>
 
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='app-underwritingQuestions-form']/div/p</td>
-	<td>${ACATAX}</td>
-</tr>
 
 <tr>
-	<td>click</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 2. Applicant Info</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=member-P-1-firstName</td>
-	<td>Test</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>{var x=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;; var tmp=&quot;&quot;; for (i=0;i&lt;8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
-	<td>LastName</td>
+	<td>//input[@value='']</td>
+	<td>Test-123</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -247,19 +276,19 @@ sanity4/24</td>
 <tr>
 	<td>select</td>
 	<td>id=member-P-1-ft</td>
-	<td>label=06</td>
+	<td>label=07</td>
 </tr>
 <tr>
 	<td>select</td>
 	<td>id=member-P-1-in</td>
-	<td>label=02</td>
+	<td>label=08</td>
 </tr>
 <tr>
-	<td>type</td>
+	<td>sendKeys</td>
 	<td>id=member-P-1-lbs</td>
-	<td>190</td>
+	<td>100</td>
 </tr>
-tr>
+<tr>
 	<td>type</td>
 	<td>id=address</td>
 	<td>${Add}</td>
@@ -281,70 +310,19 @@ tr>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div</td>
-	<td>${NGGD}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
 	<td>//div[@id='js-app-page-body-content']/div/p</td>
 	<td>${ACATAX}</td>
 </tr>
 
 <tr>
-	<td>click</td>
+	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>include</td>
+	<td>AHI/Include/Use Credit Card</td>
 	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=credit-card-number</td>
-	<td>4358806686493800</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=credit-card-first</td>
-	<td>test</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=credit-card-last</td>
-	<td>test</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=expiration-year</td>
-	<td>label=2024</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=expiration-month</td>
-	<td>label=02</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=js-same-billing</td>
-	<td></td>
-</tr>
-<tr>
-        <td>type</td>
-	<td>id=credit-card-cvv</td>
-	<td>123</td>
-</tr>
-
-<tr>
-	<td>click</td>
-	<td>id=credit-payment-authorization</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div</td>
-	<td>${NGGD}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -352,9 +330,15 @@ tr>
 	<td>${ACATAX}</td>
 </tr>
 
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
+	<td></td>
+</tr>
 <tr>
 	<td>click</td>
-	<td>id=js-app-continue-link</td>
+	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
 	<td></td>
 </tr>
 <tr>
@@ -363,42 +347,20 @@ tr>
 	<td></td>
 </tr>
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;css=div.col-md-11.terms-cell > p&quot;)</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>echo</td>
-	<td>${uri}</td>
-	<td></td>
-</tr>
-
-<tr>
 	<td>ENDIF</td>
 	<td></td>
 	<td></td>
 </tr>
-
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-application-review']/div/section/div/div/div[2]/p</td>
-	<td>exact:I have read the Agile Health Insurance Terms and Agreements and I agree that by using this site, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature. *</td>
+	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
+	<td>I have read the Agile Health Insurance Terms and Agreements, I have reviewed my application(s) including the applicant and payment information and confirm that it is correct. I agree that by using this site, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature. *</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-application-review']/div/section/div/div/div[2]/p</td>
+	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
 	<td>CET</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div</td>
-	<td>${NGGD}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='accordion']/p</td>
-	<td>${ACATAX}</td>
 </tr>
 
 <tr>
@@ -422,11 +384,46 @@ tr>
 	<td>//div[@id='disclaimers-container']/div/div</td>
 	<td>${AHITA}</td>
 </tr>
+
+
 </tbody></table>
 </body>
-</html>	
-
+</html>
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 	
 	
 	

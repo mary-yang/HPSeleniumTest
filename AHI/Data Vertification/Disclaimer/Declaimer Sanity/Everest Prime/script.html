@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/LifeShield</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Everest Prime</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -110,7 +110,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div</td>
-	<td>${GeneralDisclaimers}</td>
+	<td>General DisclaimersThese Short Term Medical plans do not provide coverage for preexisting conditions nor the mandated coverage necessary to avoid a penalty under the Affordable Care Act.<br />Each state has specific mandates for coverage so your plan may include additional benefits. Please consult your state-specific insurance certificate for more information.<br />Short Term Health Insurance products underwritten by their respective companies. Product prices, benefits and availability may vary by state.</td>
 </tr>
 
 <tr>
@@ -125,13 +125,8 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div/</td>
-	<td>${GeneralDisclaimers}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[2]/</td>
-	<td>${LSGD}</td>
+	<td>//section[@id='js-plan-disclaimers']/div</td>
+	<td>${General Disclaimers}</td>
 </tr>
 
 <tr>
@@ -146,14 +141,10 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div/</td>
-	<td>${GeneralDisclaimers}</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${General Disclaimers}</td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[2]/</td>
-	<td>${LSGD}</td>
-</tr>
+
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -224,7 +215,11 @@ sanity4/24</td>
 	<td>1000</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[7]/div/button[1]</td>
+	<td></td>
+</tr>
 <tr>
 	<td>pause</td>
 	<td>1000</td>
@@ -233,7 +228,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='app-underwritingQuestions-form']/div/p</td>
-	<td>${ACATAX}</td>
+	<td>${ACA TAX}</td>
 </tr>
 
 <tr>
@@ -311,7 +306,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='js-app-page-body-content']/div/p</td>
-	<td>${ACATAX}</td>
+	<td>${ACA TAX}</td>
 </tr>
 
 <tr>
@@ -327,7 +322,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='js-application-payment']/p</td>
-	<td>${ACATAX}</td>
+	<td>${ACA TAX}</td>
 </tr>
 
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
@@ -354,12 +349,12 @@ sanity4/24</td>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-application-review']/div/section/div/div/div[2]/p</td>
-	<td>exact:I have read the Agile Health Insurance Terms and Agreements and I agree that by using this site, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature. *</td>
+	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
+	<td>I have read the Agile Health Insurance Terms and Agreements, I have reviewed my application(s) including the applicant and payment information and confirm that it is correct. I agree that by using this site, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature. *</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-application-review']/div/section/div/div/div[2]/p</td>
+	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
 	<td>CET</td>
 </tr>
 

@@ -1,0 +1,70 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/TermAndCondition/NG</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/termsAndConditions/${planUri}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='disclaimers-container']/div/div/div/&quot;)</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/</td>
+	<td>ACKNOWLEDGEMENTS</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p[2]</td>
+	<td>I am signing up for an automatic payment plan. I agree AgileHealthInsurance or its authorized agent may automatically debit my bank account or Credit Card for the amount due on or around the payment due date. I can cancel this automatic payment at any time by calling or AgileHealthInsurance or its authorized agent at least 30 days prior to the next due date. I agree that AgileHealthInsurance or my financial institution can cancel automatic payment for my account for any reason, at any time, with or without prior notice to me. I understand that $25.00 will be charged for each transaction rejected for insufficient funds. I acknowledge that the origination of these debits to my account must comply with U.S. laws. I agree that this agreement remains in effect until canceled by AgileHealthInsurance or my financial institution or me. I have a copy of this agreement and I know I can also contact AgileHealthInsurance at support@agilehealthinsurance.com or 800-314-5594 for a copy.</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p[2]</td>
+	<td>Payment</td>
+</tr>
+
+
+	</tbody>
+</table>
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
