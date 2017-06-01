@@ -1,0 +1,12 @@
+Connect STM product
+States (19): AL, CO, DE, HI, IL, LA, MI, MS, NE, NV, NC, OK, SC, SD, TX, TN, WV, WI, WY
+
+Secure STM States (16): AK, AZ, CA, DC, FL, GA, KS, KY, ME, MD, MO, OH, OR, PA, UT, VA
+
+Secure Lite states 1 : CA
+
+1) Fees: AZ, DC, GA, KS, MO, OR, PA, UT, VA
+One-Time Enrollment Fee: $25
+Monthly Marketing Fee: $15
+(One-time $25.00 enrollment fee is required)
+2) No Fees in: AK, FL, KY, ME, MD, OH
