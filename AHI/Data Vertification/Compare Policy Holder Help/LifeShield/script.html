@@ -1,0 +1,225 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Compare Policy Holder Help/LifeShield</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+
+<tr>
+	<td>store</td>
+	<td>http://testprod.agilehealthinsurance.com/term-health-insurance/${carrierid}</td>
+	<td>url1</td>
+</tr>
+
+<tr>
+	<td>store</td>
+	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/${carrierid}</td>
+	<td>url2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${url1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//body[@id='agile-front-door']/div[3]/div[3]/div/div/div</td>
+	<td>WhyChoose</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//body[@id='agile-front-door']/div[3]/div[3]/div/div/div[2]</td>
+	<td>FeatureHighlights</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${url2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.front-door-price</td>
+	<td>Short-Term Medical Insurance Plans</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Start Your Free Quote</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=View Plan Brochure</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//body[@id='agile-front-door']/div[3]/div[3]/div/div/div</td>
+	<td>${WhyChoose}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//body[@id='agile-front-door']/div[3]/div[3]/div/div/div[2]</td>
+	<td>${FeatureHighlights}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Benefits 101</td>
+	<td>Benefits 101</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Exclusions</td>
+	<td>Exclusions</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Explanation of Benefits</td>
+	<td>Explanation of Benefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Brochure</td>
+	<td>Brochure</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Claims</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-main']/div/p</td>
+	<td>Insurance TPA<br />PO BOX 15953<br />Lubbock, TX 79490</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-main']/div[2]/p</td>
+	<td>EDI Payor ID: 39182</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Customer Service</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='js-main']/div</td>
+	<td>BillingPlease call (877) 353-0962</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-main']/div[3]/p</td>
+	<td>Please call (877) 353-0962</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-main']/div[4]/p</td>
+	<td>Please call (877) 353-0962</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-main']/div/h2</td>
+	<td>Billing</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-main']/div[3]/h2</td>
+	<td>Cancellation</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-main']/div[4]/h2</td>
+	<td>ID Cards</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=FAQs</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-main']/h1</td>
+	<td>Frequently Asked Questions</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-main']/div/h2</td>
+	<td>exact:What do I do about a payment error?</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='js-main']/div/p</td>
+	<td>You can update your payment information on the member portal @ www.AgileHealthInsurance.com/customers but if you need to process a payment you do have to call Agile at (877) 353-0962 to process the payment.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-main']/div[2]/h2</td>
+	<td>exact:How do I cancel my policy?</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-main']/div[2]/p</td>
+	<td>You can cancel your policy on the customer portal @ www.AgileHealthInsurance.com/customers.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Provider Network</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-main']/h1</td>
+	<td>Provider Network</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-main']/p</td>
+	<td>PHCS (Private Healthcare Systems) was acquired by Multiplan in October 2006 and the PHCS PPO networks are now part of MultiPlan. Founded in 1980, MultiPlan is the nation's oldest and largest supplier of independent, network-based cost management solutions. MultiPlan has almost 900,000 healthcare providers under contract, an estimated 57 million consumers accessing the network products, and 110 million claims processed through the networks each year, giving them more of the experience and resources healthcare payers and providers need to face today's unprecedented cost and competitive pressures.</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=Search for Providers</td>
+	<td>Search for Providers</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Reapply For Coverage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='js-main']/h1</td>
+	<td>Reapply for Coverage with AgileHealthInsurance</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='js-main']/p</td>
+	<td>Your current insurance policy is short term health insurance. This is a major medical insurance with an expiration date. There is no renewal of coverage. However, in many cases a member can reapply for another term policy. There are a couple of ways to reapply for a new term policy:</td>
+</tr>
+
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
