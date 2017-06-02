@@ -1,48 +1,52 @@
-"state","planuri","zipcode","plan1","plan2"
-"##al","everest-one-${state}-5000-20-9000-250000","35215","${plan1}","${plan2}"
-"ar","slaico-${state}-plan-2-2500-20-20000-1000000","72209","${plan1}","${plan2}"
-"##az","everest-one-${state}-5000-20-9000-250000","85364","${plan1}","${plan2}"
-"##ca","everest-one-${state}-5000-20-9000-250000","90011","${plan1}","${plan2}"
-"##co","everest-one-${state}-5000-20-9000-250000","80219","${plan1}","${plan2}"
-"##ct","everest-one-${state}-5000-20-9000-250000","06606","${plan1}","${plan2}"
-"##de","everest-one-${state}-5000-20-9000-250000","19805","${plan1}","${plan2}"
-"##dc","everest-one-${state}-5000-20-9000-250000","20015","${plan1}","${plan2}"
-"##fl","everest-one-${state}-5000-20-9000-250000","33186","${plan1}","${plan2}"
-"ga","slaico-${state}-plan-2-2500-20-20000-1000000","30044","${plan1}","${plan2}"
-"hi","slaico-${state}-plan-2-2500-20-20000-1000000","96818","${plan1}","${plan2}"
-"##ia","everest-one-${state}-5000-20-9000-250000","50317","${plan1}","${plan2}"
-"##id","everest-one-${state}-5000-20-9000-250000","83709","${plan1}","${plan2}"
-"##il","everest-one-${state}-5000-20-9000-250000","60629","${plan1}","${plan2}"
-"##in","everest-one-${state}-5000-20-9000-250000","46227","${plan1}","${plan2}"
-"ks","slaico-${state}-plan-2-2500-20-20000-1000000","66062","${plan1}","${plan2}"
-"##ky","everest-one-${state}-5000-20-9000-250000","40214","${plan1}","${plan2}"
-"la","slaico-${state}-plan-2-2500-20-20000-1000000","70816","${plan1}","${plan2}"
-"ma","slaico-${state}-plan-2-2500-20-20000-1000000","2128","${plan1}","${plan2}"
-"md","slaico-${state}-plan-2-2500-20-20000-1000000","21215","${plan1}","${plan2}"
-"me","slaico-${state}-plan-2-2500-20-20000-1000000","04401","${plan1}","${plan2}"
-"mi","slaico-${state}-plan-2-2500-20-20000-1000000","48228","${plan1}","${plan2}"
-"##mn","everest-one-${state}-5000-20-9000-250000","55106","${plan1}","${plan2}"
-"##mo","everest-one-${state}-5000-20-9000-250000","63129","${plan1}","${plan2}"
-"##ms","everest-one-${state}-5000-20-9000-250000","39503","${plan1}","${plan2}"
-"mt","slaico-${state}-plan-2-2500-20-20000-1000000","59102","${plan1}","${plan2}"
-"nc","slaico-${state}-plan-2-2500-20-20000-1000000","28269","${plan1}","${plan2}"
-"##nd","everest-one-${state}-5000-20-9000-250000","58103","${plan1}","${plan2}"
-"##ne","everest-one-${state}-5000-20-9000-250000","68104","${plan1}","${plan2}"
-"nh","slaico-${state}-plan-2-2500-20-20000-1000000","03103","${plan1}","${plan2}"
-"nj","slaico-${state}-plan-2-2500-20-20000-1000000","08701","${plan1}","${plan2}"
-"nm","slaico-${state}-plan-2-2500-20-20000-1000000","87121","${plan1}","${plan2}"
-"##nv","everest-one-${state}-5000-20-9000-250000","89110","${plan1}","${plan2}"
-"##oh","everest-one-${state}-5000-20-9000-250000","43228","${plan1}","${plan2}"
-"##ok","everest-one-${state}-5000-20-9000-250000","73160","${plan1}","${plan2}"
-"##or","everest-one-${state}-5000-20-9000-250000","97229","${plan1}","${plan2}"
-"##pa","everest-one-${state}-5000-20-9000-250000","19120","${plan1}","${plan2}"
-"##ri","everest-one-${state}-5000-20-9000-250000","02909","${plan1}","${plan2}"
-"##sc","everest-one-${state}-5000-20-9000-250000","29223","${plan1}","${plan2}"
-"##sd","everest-one-${state}-5000-20-9000-250000","57106","${plan1}","${plan2}"
-"##tn","everest-one-${state}-5000-20-9000-250000","37230","${plan1}","${plan2}"
-"##tx","everest-one-${state}-5000-20-9000-250000","79936","${plan1}","${plan2}"
-"##va","everest-one-${state}-5000-20-9000-250000","23464","${plan1}","${plan2}"
-"##wa","everest-one-${state}-5000-20-9000-250000","98115","${plan1}","${plan2}"
-"##wi","everest-one-${state}-5000-20-9000-250000","53215","${plan1}","${plan2}"
-"##wv","everest-one-${state}-5000-20-9000-250000","25302","${plan1}","${plan2}"
-"wy","slaico-${state}-plan-2-2500-20-20000-1000000","82001","${plan1}","${plan2}"
+state,provider,zip,planuri,Question1,Question2,Question3,Question4,Question5,Question6,Question7,Question8
+AL,National General,35215,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+AK,National General,99504,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+AR,National General,72209,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+AZ,National General,85364,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+CA,National General,90011,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+CO,National General,80219,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+CT,National General,6606,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+DE,National General,19805,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+DC,National General,20015,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+FL,National General,33186,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+GA,National General,30044,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+HI,National General,96818,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+IA,National General,50317,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+ID,National General,83709,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+IL,National General,60629,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+IN,National General,46227,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+KS,National General,66062,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+KY,National General,40214,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+LA,National General,70816,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+MA,National General,2128,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+MD,National General,21215,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+ME,National General,4401,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+MI,National General,48228,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+MN,National General,55106,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+MO,National General,63129,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+MS,National General,39503,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+MT,National General,59102,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+NC,National General,28269,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+ND,National General,58103,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+NE,National General,68104,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+NH,National General,3103,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+NJ,National General,8701,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+NM,National General,87121,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+NV,National General,89110,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+NY,National General,11226,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+OH,National General,43228,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+OK,National General,73160,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+OR,National General,97229,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+PA,National General,19120,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+RI,National General,2909,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+SC,National General,29223,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+SD,National General,57106,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+TN,National General,37013,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+TX,National General,79936,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+UT,National General,84120,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+VA,National General,23464,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+VT,National General,5401,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+WA,National General,98115,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+WI,National General,53215,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+WV,National General,25302,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
+WY,National General,82001,nationalgeneral-${state}-5000-20-7000-1000000,${Question1},${Question2},${Question3},${Question4},${Question5},${Question6},${Question7},${Question8}
