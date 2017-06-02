@@ -14,37 +14,29 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
+	<td>verifyText</td>
+	<td>//div[@id='pageHeader']/h1/strong</td>
+	<td>*Obamacare Health Plans Found</td>
+</tr>
+<tr>
+	<td>verifyNotText</td>
+	<td>//div[@id='pageHeader']/h1/strong</td>
+	<td>0 Obamacare Health Plans Found</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='pageHeader']/h1/strong</td>
-	<td>count</td>
+	<td>//div[@id='filterCarriers']/div/div</td>
+	<td>Carriers</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=2016</td>
+	<td>echo</td>
+	<td>${Carriers}</td>
 	<td></td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='pageHeader']/h1/strong</td>
-	<td>count1</td>
-</tr>
-
 </tbody></table>
 </body>
 </html>
 
-	
 	
 	
 	

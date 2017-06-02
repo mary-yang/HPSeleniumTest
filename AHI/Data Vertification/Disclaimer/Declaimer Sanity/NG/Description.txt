@@ -3,5 +3,3 @@
     Add NG IND States Authorizations #133968667 https://docs.google.com/spreadsheets/d/1KVOA9W33k7PjLN_eXxspe-5gXb7FAgTibUexE-Hhw0Q/edit#gid=30395503
 
     Add NG Assc State Authorizations #133967959 https://docs.google.com/spreadsheets/d/1RN9M0JhS20pn2edPv6-fu0KBhKWRbSYK4yl3NMM5-W4/edit
-13. Review the confirmation email
-14. Log on HII site with user id/password, review and verify application information. All application informations are transfered to HII as expected.
