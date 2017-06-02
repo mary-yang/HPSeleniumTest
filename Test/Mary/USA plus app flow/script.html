@@ -5,13 +5,13 @@
 
 <tr>
 	<td>open</td>
-	<td>http://ahi-tosh.herokuapp.com/api/context/clear</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
 	<td></td>
 </tr>
 
 <tr>
 	<td>open</td>
-	<td>http://ahi-tosh.herokuapp.com/term-health-insurance/enroll/${planuri}?census[location][zip]=${zipcode}&census[member][0][dob]=01/01/1995&census[member][0][gender]=M&census[member][0][role]=P&census[effective]=2017-05-28</td>
+	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/enroll/${planuri}?census[location][zip]=${zipcode}&census[member][0][dob]=01/01/1995&census[member][0][gender]=M&census[member][0][role]=P&census[effective]=2017-05-28</td>
 	<td></td>
 </tr>
 <tr>
@@ -21,7 +21,7 @@
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://ahi-tosh.herokuapp.com/term-health-insurance/enroll/slaico-${state}-plan-2-2500-20-20000-1000000?census[location][zip]=${zipcode}&census[member][0][dob]=01/01/1995&census[member][0][gender]=M&census[member][0][role]=P&census[effective]=2017-05-28</td>
+	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/enroll/slaico-${state}-plan-2-2500-20-20000-1000000?census[location][zip]=${zipcode}&census[member][0][dob]=01/01/1995&census[member][0][gender]=M&census[member][0][role]=P&census[effective]=2017-05-28</td>
 	<td></td>
 </tr>
 
@@ -30,12 +30,6 @@
     <td></td>
     <td></td>
 </tr>
-
-
-
-
-
-
 
 
 <tr>
@@ -163,12 +157,12 @@
 </tr>
 <tr>
     <td>IF</td>
-    <td>verifyElementPresent(&quot;//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'ameritas')]]/div[2]/div[2]/p&quot;)</td>
+    <td>verifyElementPresent(&quot;//div[3]/div/div[2]/div[2]/p&quot;)</td>
     <td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'ameritas')]]/div[2]/div[2]/p</td>
+	<td>//div[3]/div/div[2]/div[2]/p</td>
 	<td>plan1</td>
 </tr>
 <tr>
@@ -184,13 +178,13 @@
 
 <tr>
     <td>IF</td>
-    <td>verifyElementPresent(&quot;//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'nationwide')]]/div[2]/div[2]/p&quot;)</td>
+    <td>verifyElementPresent(&quot;//div[3]/div[2]/div/div[2]/div[2]/p&quot;)</td>
     <td></td>
 </tr>
 
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='js-modal-ancillary-products']/div/div[descendant::div[2]/div[1]/div/div[1]/img[contains(@src,'nationwide')]]/div[2]/div[2]/p</td>
+	<td>//div[3]/div[2]/div/div[2]/div[2]/p</td>
 	<td>plan2</td>
 </tr>
 <tr>
@@ -228,7 +222,7 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>8000</td>
+	<td>60000</td>
 	<td></td>
 </tr>
 
@@ -278,6 +272,9 @@
 	
 	
 
+	
+	
+	
 	
 	
 	
