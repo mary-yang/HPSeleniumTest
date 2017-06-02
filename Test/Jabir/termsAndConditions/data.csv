@@ -1,0 +1,52 @@
+provider,state,state1,zipcode,Total,over6,upTo6,PlanName,state2,Text
+Standard Life,Alabama,AL,35215,${num},${over6},${upTo6},${PlanName},al,${Text}
+Standard Life,Alaska,AK,99504,${num},${over6},${upTo6},${PlanName},ak,${Text}
+Standard Life,Arkansas,AR,72209,${num},${over6},${upTo6},${PlanName},ar,${Text}
+Standard Life,Arizona,AZ,85364,${num},${over6},${upTo6},${PlanName},az,${Text}
+Standard Life,California,CA,90011,${num},${over6},${upTo6},${PlanName},ca,${Text}
+Standard Life,Colorado,CO,80219,${num},${over6},${upTo6},${PlanName},co,${Text}
+Standard Life,Connecticut,CT,6606,${num},${over6},${upTo6},${PlanName},ct,${Text}
+Standard Life,Delaware,DE,19805,${num},${over6},${upTo6},${PlanName},de,${Text}
+Standard Life,District Of Columbia,DC,20015,${num},${over6},${upTo6},${PlanName},dc,${Text}
+Standard Life,Florida,FL,33186,${num},${over6},${upTo6},${PlanName},fl,${Text}
+Standard Life,Georgia,GA,30044,${num},${over6},${upTo6},${PlanName},ga,${Text}
+Standard Life,Hawaii,HI,96818,${num},${over6},${upTo6},${PlanName},hi,${Text}
+Standard Life,Iowa,IA,50317,${num},${over6},${upTo6},${PlanName},ia,${Text}
+Standard Life,Idaho,ID,83709,${num},${over6},${upTo6},${PlanName},id,${Text}
+Standard Life,Illinois,IL,60629,${num},${over6},${upTo6},${PlanName},il,${Text}
+Standard Life,Indiana,IN,46227,${num},${over6},${upTo6},${PlanName},in,${Text}
+Standard Life,Kansas,KS,66062,${num},${over6},${upTo6},${PlanName},ks,${Text}
+Standard Life,Kentucky,KY,40214,${num},${over6},${upTo6},${PlanName},ky,${Text}
+Standard Life,Louisiana,LA,70816,${num},${over6},${upTo6},${PlanName},la,${Text}
+Standard Life,Massachusetts,MA,2128,${num},${over6},${upTo6},${PlanName},ma,${Text}
+Standard Life,Maryland,MD,21215,${num},${over6},${upTo6},${PlanName},md,${Text}
+Standard Life,Maine,ME,4401,${num},${over6},${upTo6},${PlanName},me,${Text}
+Standard Life,Michigan,MI,48228,${num},${over6},${upTo6},${PlanName},mi,${Text}
+Standard Life,Minnesota,MN,55106,${num},${over6},${upTo6},${PlanName},mn,${Text}
+Standard Life,Missouri,MO,63129,${num},${over6},${upTo6},${PlanName},mo,${Text}
+Standard Life,Mississippi,MS,39503,${num},${over6},${upTo6},${PlanName},ms,${Text}
+Standard Life,Montana,MT,59102,${num},${over6},${upTo6},${PlanName},mt,${Text}
+Standard Life,North Carolina,NC,28269,${num},${over6},${upTo6},${PlanName},nc,${Text}
+Standard Life,North Dakota,ND,58103,${num},${over6},${upTo6},${PlanName},nd,${Text}
+Standard Life,Nebraska,NE,68104,${num},${over6},${upTo6},${PlanName},ne,${Text}
+Standard Life,New Hampshire,NH,3103,${num},${over6},${upTo6},${PlanName},nh,${Text}
+Standard Life,New Jersey,NJ,8701,${num},${over6},${upTo6},${PlanName},nj,${Text}
+Standard Life,New Mexico,NM,87121,${num},${over6},${upTo6},${PlanName},nm,${Text}
+Standard Life,Nevada,NV,89110,${num},${over6},${upTo6},${PlanName},nv,${Text}
+Standard Life,New York,NY,11226,${num},${over6},${upTo6},${PlanName},ny,${Text}
+Standard Life,Ohio,OH,43228,${num},${over6},${upTo6},${PlanName},oh,${Text}
+Standard Life,Oklahoma,OK,73160,${num},${over6},${upTo6},${PlanName},ok,${Text}
+Standard Life,Oregon,OR,97229,${num},${over6},${upTo6},${PlanName},or,${Text}
+Standard Life,Pennsylvania,PA,19120,${num},${over6},${upTo6},${PlanName},pa,${Text}
+Standard Life,Rhode Island,RI,2909,${num},${over6},${upTo6},${PlanName},ri,${Text}
+Standard Life,South Carolina,SC,29223,${num},${over6},${upTo6},${PlanName},sc,${Text}
+Standard Life,South Dakota,SD,57106,${num},${over6},${upTo6},${PlanName},sd,${Text}
+Standard Life,Tennessee,TN,37013,${num},${over6},${upTo6},${PlanName},tn,${Text}
+Standard Life,Texas,TX,79936,${num},${over6},${upTo6},${PlanName},tx,${Text}
+Standard Life,Utah,UT,84120,${num},${over6},${upTo6},${PlanName},ut,${Text}
+Standard Life,Virginia,VA,23464,${num},${over6},${upTo6},${PlanName},va,${Text}
+Standard Life,Vermont,VT,5401,${num},${over6},${upTo6},${PlanName},vt,${Text}
+Standard Life,Washington,WA,98115,${num},${over6},${upTo6},${PlanName},wa,${Text}
+Standard Life,Wisconsin,WI,53215,${num},${over6},${upTo6},${PlanName},wi,${Text}
+Standard Life,West Virginia,WV,25302,${num},${over6},${upTo6},${PlanName},wv,${Text}
+Standard Life,Wyoming,WY,82001,${num},${over6},${upTo6},${PlanName},wy,${Text}
