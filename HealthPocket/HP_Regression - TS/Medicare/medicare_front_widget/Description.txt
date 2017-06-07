@@ -1,1 +1,0 @@
-go to medicare quote page from quote page with zip code/city name/state name

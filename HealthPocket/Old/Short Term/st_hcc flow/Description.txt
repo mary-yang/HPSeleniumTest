@@ -1,5 +1,0 @@
-ST online application flow:
-
-1. select a HII ST plan
-2. click start application button
-3. online application for this plan
