@@ -277,7 +277,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>//p[@class='modal-sub-heading']</td>
-	<td>Add Additional Insurance and Benefits</td>
+	<td>Add Dental Coverage and Additional Benefits</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -340,14 +340,20 @@
 	<td>AHI/Include/Congratulation</td>
 	<td></td>
 </tr>
+
 <tr>
-	<td>verifyText</td>
-	<td>//div[@id='js-app-confirmation']/div[2]/ul/li[2]</td>
-	<td>*${success}*</td>
+    <td>verifyElementPresent</td>
+    <td>//li[contains(text(),'${success}')]</td>
+    <td></td>
 </tr>
+
+
+
 </tbody></table>
 </body>
 </html>
+	
+	
 	
 	
 	

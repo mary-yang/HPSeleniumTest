@@ -1,32 +1,18 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Normal Checking/RTB/Plan_detail_RTB</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/UHC gen 5/gen5_detail_page_RTB</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">Plan Detail</td></tr>
 </thead><tbody>
 <tr>
-	<td>include</td>
-	<td>AHI/Include/GetQuote</td>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>3000</td>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/plan/${planuri}?census[location][zip]=${zipcode}&census[member][0][dob]=01/01/1985&census[member][0][gender]=M&census[member][0][role]=P&census[effective]=2017-07-05</td>
 	<td></td>
 </tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${provider}')]]/div/div[2]/div/h3/a[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
-	<td>*${mo}*</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h1</td>
-	<td>${planname}</td>
-</tr>
+
 <tr>
 	<td>verifyText</td>
 	<td>link=View Plan Brochure</td>
@@ -126,3 +112,8 @@
 </body>
 </html>
 
+
+	
+	
+	
+	

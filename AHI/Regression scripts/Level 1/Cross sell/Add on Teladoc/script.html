@@ -248,11 +248,7 @@
 	<td>verifyElementPresent(&quot;xpath=//*[@id='js-app-no-thanks-link']&quot;)</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id="js-ancillary-product-dental-checkbox-0"]</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>verifyText</td>
 	<td>//form[@id='js-modal-ancillary-products']/div[3]/div[2]/div/div[2]/div[2]/p</td>
@@ -317,18 +313,47 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForLocation</td>
+	<td>*/page/6*</td>
+	<td></td>
+</tr>
+
+<tr>
 	<td>include</td>
 	<td>AHI/Include/Congratulation</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-app-confirmation']/div/ul/li/p[2]</td>
-	<td>Additionally, you are enrolled in coverage from Foundation Dental - Protector I and Foundation Vision and Teladoc.</td>
+	<td>//div/p[contains(text(),'application')][descendant::span[contains(text(),'Everest')]]</td>
+	<td>Congratulations*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div/p[contains(text(),'application')][descendant::span[contains(text(),'USA+ Dental Vision Plus')]]</td>
+	<td>Congratulations*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div/p[contains(text(),'application')][descendant::span[contains(text(),'Teladoc')]]</td>
+	<td>Congratulations*</td>
+</tr>
+
+
+
 </tr>
 </tbody></table>
 </body>
 </html>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
