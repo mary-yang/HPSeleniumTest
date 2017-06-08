@@ -1,0 +1,4 @@
+Dental is not available in: AK CO KS MD ME MI MN MT NC NH SD VT WA
+Vision is not available in : AK AR CO FL GA KS MA MD ME MI MN MT NC NH NJ SD UT VA VT WA
+
+NG 37 states:  AL,AR,CA,CT,DC,DE,FL,GA,HI,IA,ID,IL,IN,KY,LA,MA,MO,MS,ND,NE,NJ,NM,NV,NY,OH,OK,OR,PA,RI,SC,TN,TX,UT,VA,WA,WI,WV,WY

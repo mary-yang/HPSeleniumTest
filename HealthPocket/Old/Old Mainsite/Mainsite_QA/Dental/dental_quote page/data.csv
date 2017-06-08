@@ -1,6 +1,0 @@
-ENV,url,city_name,state,state1,zipcode,quote,detail,apply
-${ENV},http://${ENV}.healthpocket.com/,Anchorage,Alaska,AK,99504,(800) 984-8015,(800) 984-8015,(800) 984-8015
-${ENV},http://${ENV}.healthpocket.com/,Los Angeles,California,CA,99504,(800) 984-8015,(800) 984-8015,(800) 984-8015
-${ENV},http://${ENV}.healthpocket.com/,Jacksonville,Florida,FL,99504,(800) 984-8015,(800) 984-8015,(800) 984-8015
-${ENV},http://${ENV}.healthpocket.com/,New York,New York,NY,99504,(800) 984-8015,(800) 984-8015,(800) 984-8015
-${ENV},http://${ENV}.healthpocket.com/,Sioux Falls,South Dakota,SD,99504,(800) 984-8015,(800) 984-8015,(800) 984-8015

@@ -1,7 +1,0 @@
-states,zip,hp_plan_type,gov_plan_type,hp_Companies,gov_Companies
-FL,33186,${hp_plan_type},${gov_plan_type},${hp_Companies},${gov_Companies}
-NY,11226,${hp_plan_type},${gov_plan_type},${hp_Companies},${gov_Companies}
-CA,90011,${hp_plan_type},${gov_plan_type},${hp_Companies},${gov_Companies}
-TX,79936,${hp_plan_type},${gov_plan_type},${hp_Companies},${gov_Companies}
-PA,19120,${hp_plan_type},${gov_plan_type},${hp_Companies},${gov_Companies}
-IL,60629,${hp_plan_type},${gov_plan_type},${hp_Companies},${gov_Companies}

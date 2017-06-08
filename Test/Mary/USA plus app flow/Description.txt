@@ -1,2 +1,0 @@
-State Availability list: https://docs.google.com/a/healthpocket.com/spreadsheets/d/1814yYAw8l7nSmd_nStjT2O2gDxh_I-rMZdH2QiLE78M/edit?usp=sharing
-AL,AZ,CO,DE,HI,IA,IL,IN,KY,LA,MA,MS,ND,NE,NJ,NM,NV,OH,OK,OR,PA,RI,SC,TX,VA,VT,WI,WV,WY
