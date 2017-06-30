@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/HBI/Agile Secure_application flow</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/usa plus dental 2.0/USA Dental Care app flow</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">sanity4/24</td>
@@ -12,7 +12,7 @@
 	<td></td>
 </tr>
 
-<-------------------------------------------------------
+
 <tr>
 	<td>open</td>
 	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
@@ -23,21 +23,11 @@
 	<td>http://${ENV}.agilehealthinsurance.com</td>
 	<td></td>
 </tr>
-------------------------------------------------------->
-<tr>
-	<td>open</td>
-	<td>http://edgedancer.agilehealthinsurance.com/api/context/clear</td>
-	<td></td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>http://edgedancer.agilehealthinsurance.com</td>
-	<td></td>
-</tr>
+
 
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Health Benefit Insurance</td>
+	<td>link=Dental Insurance</td>
 	<td></td>
 </tr>
 <tr>
@@ -99,12 +89,12 @@
 
 <tr>
     <td>IF</td>
-    <td>verifyElementPresent(&quot;//a[contains(@href, 'agilesecure-${state2}')]&quot;)</td>
+    <td>verifyElementPresent(&quot;//a[contains(@href, 'usa-plus-dental-care-${state2}')]&quot;)</td>
     <td></td>
 </tr>
 <tr>
-    <td>click</td>
-    <td>//a[contains(@href, 'agilesecure-${state2}')]</td>
+    <td>clickAndWait</td>
+    <td>//a[contains(@href, 'usa-plus-dental-care-${state2}')]</td>
     <td></td>
 </tr>
 <tr>
@@ -180,36 +170,6 @@
 	<td>${Tel}</td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=primary-beneficiary-first-name</td>
-	<td>test1</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=primary-beneficiary-last-name</td>
-	<td>test2</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=primary-beneficiary-relationship</td>
-	<td>test3</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=contingent-beneficiary-first-name</td>
-	<td>test4</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=contingent-beneficiary-last-name</td>
-	<td>test5</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=contingent-beneficiary-relationship</td>
-	<td>test6</td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
@@ -255,7 +215,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>css=span.emphasize</td>
-	<td>*Congratulations!*</td>
+	<td>Congratulations!</td>
 </tr>
 
 <tr>
@@ -337,6 +297,7 @@
 
 	
 	
+
 	
-	
+
 	
