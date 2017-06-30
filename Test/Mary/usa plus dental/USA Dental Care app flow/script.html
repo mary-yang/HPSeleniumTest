@@ -1,11 +1,18 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/HBI/Cardinal Choice_application flow</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/usa plus dental 2.0/USA Dental Care app flow</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
-<-------------------------------------------------------
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+
+
 <tr>
 	<td>open</td>
 	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
@@ -16,20 +23,11 @@
 	<td>http://${ENV}.agilehealthinsurance.com</td>
 	<td></td>
 </tr>
-------------------------------------------------------->
-<tr>
-	<td>open</td>
-	<td>http://edgedancer.agilehealthinsurance.com/api/context/clear</td>
-	<td></td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>http://edgedancer.agilehealthinsurance.com</td>
-	<td></td>
-</tr>
+
+
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Health Benefit Insurance</td>
+	<td>link=Dental Insurance</td>
 	<td></td>
 </tr>
 <tr>
@@ -91,12 +89,12 @@
 
 <tr>
     <td>IF</td>
-    <td>verifyElementPresent(&quot;//a[contains(@href, 'cardinalchoice-${state2}-750-10-75-3')]&quot;)</td>
+    <td>verifyElementPresent(&quot;//a[contains(@href, 'usa-plus-dental-care-${state2}')]&quot;)</td>
     <td></td>
 </tr>
 <tr>
-    <td>click</td>
-    <td>//a[contains(@href, 'cardinalchoice-${state2}-750-10-75-3')]</td>
+    <td>clickAndWait</td>
+    <td>//a[contains(@href, 'usa-plus-dental-care-${state2}')]</td>
     <td></td>
 </tr>
 <tr>
@@ -124,11 +122,52 @@
 	<td>4000</td>
 	<td></td>
 </tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=No Thanks&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+    <td>click</td>
+    <td>link=No Thanks </td>
+    <td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
 
 <tr>
-	<td>click</td>
-	<td>id=fillApp</td>
-	<td></td>
+	<td>type</td>
+	<td>//input[@value='']</td>
+	<td>${FirstName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -136,13 +175,19 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=credit-payment-authorization</td>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>id=js-app-continue-link</td>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-page-body-content']/h3</td>
+	<td>Step 2. Payment &amp; Billing</td>
+</tr>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Use Credit Card</td>
 	<td></td>
 </tr>
 <tr>
@@ -170,7 +215,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>css=span.emphasize</td>
-	<td>*Congratulations!*</td>
+	<td>Congratulations!</td>
 </tr>
 
 <tr>
@@ -247,6 +292,12 @@
 	
 	
 	
+
+	
+
 	
 	
+
+	
+
 	
