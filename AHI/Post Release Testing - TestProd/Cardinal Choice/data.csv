@@ -1,0 +1,2 @@
+"state","state1","zip","DOB","state2","mon","conf_mon","Planuri"
+"Illinois","IL","60629","03/06/1980","il","${mon}","${conf_mon}","${uri}"
