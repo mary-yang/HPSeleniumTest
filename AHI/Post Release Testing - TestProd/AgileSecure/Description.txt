@@ -1,6 +1,0 @@
-Test Bank Draft
-Test Credit Card
-Test Post Sumbit DT/VS
-
-Prod Enabled states:
- AL,AZ,CO,DE,HI,IA,IL,IN,KY,LA,MA,MS,ND,NE,NJ,NM,NV,OH,OK,OR,PA,RI,SC,TX,VA,VT,WI,WV,WY
