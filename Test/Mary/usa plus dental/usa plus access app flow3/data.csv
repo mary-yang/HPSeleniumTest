@@ -1,0 +1,20 @@
+state,state1,zip,DOB,state2,mon,conf_mon
+New Mexico,NM,87121,03/06/1980,nm,${mon},${conf_mon}
+Nevada,NV,89110,03/06/1980,nv,${mon},${conf_mon}
+New York,NY,11226,03/06/1980,ny,${mon},${conf_mon}
+Ohio,OH,43228,03/06/1980,oh,${mon},${conf_mon}
+Oklahoma,OK,73160,03/06/1980,ok,${mon},${conf_mon}
+Oregon,OR,97229,03/06/1980,or,${mon},${conf_mon}
+Pennsylvania,PA,19120,03/06/1980,pa,${mon},${conf_mon}
+Rhode Island,RI,2909,03/06/1980,ri,${mon},${conf_mon}
+South Carolina,SC,29223,03/06/1980,sc,${mon},${conf_mon}
+South Dakota,SD,57106,03/06/1980,sd,${mon},${conf_mon}
+Tennessee,TN,37013,03/06/1980,tn,${mon},${conf_mon}
+Texas,TX,79936,03/06/1980,tx,${mon},${conf_mon}
+Utah,UT,84120,03/06/1980,ut,${mon},${conf_mon}
+Virginia,VA,23464,03/06/1980,va,${mon},${conf_mon}
+Vermont,VT,5401,03/06/1980,vt,${mon},${conf_mon}
+Washington,WA,98115,03/06/1980,wa,${mon},${conf_mon}
+Wisconsin,WI,53215,03/06/1980,wi,${mon},${conf_mon}
+West Virginia,WV,25302,03/06/1980,wv,${mon},${conf_mon}
+Wyoming,WY,82001,03/06/1980,wy,${mon},${conf_mon}

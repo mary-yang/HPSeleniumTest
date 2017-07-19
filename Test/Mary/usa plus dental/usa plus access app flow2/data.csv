@@ -1,0 +1,17 @@
+state,state1,zip,DOB,state2,mon,conf_mon
+Kansas,KS,66062,03/06/1980,ks,${mon},${conf_mon}
+Kentucky,KY,40214,03/06/1980,ky,${mon},${conf_mon}
+Louisiana,LA,70816,03/06/1980,la,${mon},${conf_mon}
+Massachusetts,MA,2128,03/06/1980,ma,${mon},${conf_mon}
+Maryland,MD,21215,03/06/1980,md,${mon},${conf_mon}
+Maine,ME,4401,03/06/1980,me,${mon},${conf_mon}
+Michigan,MI,48228,03/06/1980,mi,${mon},${conf_mon}
+Minnesota,MN,55106,03/06/1980,mn,${mon},${conf_mon}
+Missouri,MO,63129,03/06/1980,mo,${mon},${conf_mon}
+Mississippi,MS,39503,03/06/1980,ms,${mon},${conf_mon}
+Montana,MT,59102,03/06/1980,mt,${mon},${conf_mon}
+North Carolina,NC,28269,03/06/1980,nc,${mon},${conf_mon}
+North Dakota,ND,58103,03/06/1980,nd,${mon},${conf_mon}
+Nebraska,NE,68104,03/06/1980,ne,${mon},${conf_mon}
+New Hampshire,NH,3103,03/06/1980,nh,${mon},${conf_mon}
+New Jersey,NJ,8701,03/06/1980,nj,${mon},${conf_mon}

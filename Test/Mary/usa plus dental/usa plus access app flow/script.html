@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/usa plus dental 2.0/usa plus access app flow</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/usa plus dental/usa plus access app flow</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">sanity4/24</td>
@@ -123,6 +123,21 @@
 	<td></td>
 </tr>
 <tr>
+	<td>storeLocation</td>
+	<td>url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;/&quot;)+1)</td>
+	<td>uri</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${uri}</td>
+	<td></td>
+</tr>
+<tr>
     <td>IF</td>
     <td>verifyElementPresent(&quot;link=No Thanks&quot;)</td>
     <td></td>
@@ -228,7 +243,16 @@
 	<td>${conf_mon}</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>include</td>
+	<td>AHI/Include/BO App Search_staging</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
+	<td>Successfully Enrolled</td>
+</tr>
 
 
 </tbody></table>
@@ -298,4 +322,6 @@
 	
 	
 
+	
+	
 	
