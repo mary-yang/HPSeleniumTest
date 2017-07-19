@@ -1,4 +1,4 @@
-C	AHI/Data Vertification/Compare Plan Details/all carrier - one plan	praetemptatus	42 9 * * *	N		2
 C	AHI/Data Vertification/Disclaimer/*	praetemptatus	0 10 * * *	N		2
 C	AHI/IncompleteApps/*	praetemptatus	39 15 * * 3,6	N		2
 C	AHI/Regression scripts/*	praetemptatus	0 13 * * 4	N		2
+C	AHI/Data Vertification/Compare Plan Details/All Carriers/*	praetemptatus	0 9 * * *	N		2
