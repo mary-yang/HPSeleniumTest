@@ -1,55 +1,25 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/Tag Manager AHI</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/STM/Tag Manager AHI</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">tagmanager</td></tr>
 </thead><tbody>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Login BO</td>
+	<td></td>
+</tr>
 <tr>
 	<td>open</td>
 	<td>tagmanager.google.com</td>
 	<td></td>
 </tr>
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent('id=identifierId')</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=identifierId</td>
-	<td>denis.yu1111@gmail.com</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=span.RveJvd.snByac</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>name=password</td>
-	<td>Think2016</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=span.RveJvd.snByac</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=a.fill-cell.ng-binding</td>
-	<td></td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
-	<td>//gtm-draft-toolbar/div/button</td>
+	<td>link=www.agilehealthinsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn</td>
 	<td></td>
 </tr>
 <tr>
@@ -186,6 +156,7 @@
 	<td>id=applyButton</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Name</td>
@@ -194,6 +165,21 @@
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Get URI</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;link=No Thanksquot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=No Thanks</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -251,6 +237,7 @@
 	<td></td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>waitForText</td>
 	<td>css=h3.reset.app-page-heading</td>
@@ -277,11 +264,6 @@
 	<td>label=08</td>
 </tr>
 <tr>
-	<td>sendKeys</td>
-	<td>id=member-P-1-lbs</td>
-	<td>100</td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>id=address</td>
 	<td>${Add}</td>
@@ -297,9 +279,14 @@
 	<td>${City}</td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>id=primaryPhone</td>
 	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lbs</td>
+	<td>100</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -326,6 +313,11 @@
 	<td>IF</td>
 	<td>verifyElementPresent(&quot;xpath=//p[@class='modal-sub-heading']&quot;)</td>
 	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p[@class='modal-sub-heading']</td>
+	<td>*Add Dental Coverage and Additional Benefits*</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -386,43 +378,15 @@
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-confirmation']</td>
+	<td>*Congratulations*</td>
+</tr>
+<tr>
 	<td>include</td>
-	<td>AHI/Include/Congratulation</td>
+	<td>AHI/Include/Check ConversionPixel</td>
 	<td></td>
 </tr>
 </tbody></table>
 </body>
-</html>
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+</html>	
