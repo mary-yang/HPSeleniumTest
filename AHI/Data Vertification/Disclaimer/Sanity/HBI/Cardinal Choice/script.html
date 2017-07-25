@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Declaimer Sanity/HBI/Cardinal Choice</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/HBI/Cardinal Choice</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -14,6 +14,11 @@ sanity4/24</td>
 <tr>
 	<td>open</td>
 	<td>http://${ENV}.agilehealthinsurance.com/health-benefit-insurance-quotes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Disclaimers</td>
 	<td></td>
 </tr>
 <tr>
@@ -44,7 +49,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//section[@id='disclaimers']/div/div[2]/p</td>
-	<td>Health Benefit Insurance is not major medical insurance* Health Benefit Insurance is designed to make cash payments to the insured in the event of a covered incident* It does not cover pre-existing conditions* and does not meet the minimum essential coverage under the Affordable Care Act* You may be subject to the ACA*s Shared Responsibility Tax* To learn more about the tax* its exemptions* see here*</td>
+	<td>${HBIGD}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -64,7 +69,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[5]/p</td>
-	<td>Health Benefit Insurance is not major medical insurance* Health Benefit Insurance is designed to make cash payments to the insured in the event of a covered incident* It does not cover pre-existing conditions* and does not meet the minimum essential coverage under the Affordable Care Act* You may be subject to the ACA*s Shared Responsibility Tax* To learn more about the tax* its exemptions* see here*</td>
+	<td>${HBIGD}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -121,11 +126,13 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[3]/div/p</td>
-	<td>Health Benefit Insurance is not major medical insurance* Health Benefit Insurance is designed to make cash payments to the insured in the event of a covered incident* It does not cover pre-existing conditions* and does not meet the minimum essential coverage under the Affordable Care Act* You may be subject to the ACA*s Shared Responsibility Tax* To learn more about the tax* its exemptions* see here*</td>
+	<td>${HBIGD}</td>
 </tr>
 <tr>
 	</tbody>
 </table>
+	
+	
 	
 	
 	
