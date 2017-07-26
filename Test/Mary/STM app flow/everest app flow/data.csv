@@ -1,0 +1,17 @@
+state,zipcode,carrierid,planname,mo,uri,DOB
+AL,35215,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+AK,99504,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+AR,72209,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+AZ,85364,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+CA,90011,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+CO,80219,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+CT,6606,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+DE,19805,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+DC,20015,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+FL,33186,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+GA,30044,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+HI,96818,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+IA,50317,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+ID,83709,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+IL,60629,carrier-everest-one-,${planname},${mo},${uri},01/01/1985
+IN,46227,carrier-everest-one-,${planname},${mo},${uri},01/01/1985

@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Payment vertification/CC verification</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Payment Check/CC verification</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
@@ -30,7 +30,7 @@
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
-	<td>90001</td>
+	<td>70816</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -118,6 +118,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[5]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
 	<td>verifyText</td>
 	<td>//*[@id='js-app-page-eligibile']/p</td>
 	<td>Congratulations*</td>
@@ -169,9 +174,26 @@
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=member-p-marital-status</td>
-	<td>label=Married</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=05</td>
 </tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lbs</td>
+	<td>150</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-occupation</td>
+	<td>test</td>
+</tr>
+
+
 <tr>
 	<td>clickAndWait</td>
 	<td>xpath=//*[@id='js-app-continue-link']</td>
@@ -195,7 +217,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>id=error-credit-card-number</td>
-	<td>Sorry, we only accept Visa, Mastercard and Discover at this time</td>
+	<td>Sorry, we only accept Visa and Mastercard at this time</td>
 </tr>
 <tr>
 	<td>refreshAndWait</td>
@@ -245,7 +267,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>id=error-credit-card-number</td>
-	<td>Sorry, we only accept Visa, Mastercard and Discover at this time</td>
+	<td>Sorry, we only accept Visa and Mastercard at this time</td>
 </tr>
 <tr>
 	<td>refreshAndWait</td>
@@ -416,17 +438,7 @@
 	<td>//img[contains(@src,'mastercard')]</td>
 	<td></td>
 </tr>
-<!-------------------检验discovercard----------------->
-	<td>sendKeys</td>
-	<td>id=credit-card-number</td>
-	<td>6545001126468476</td>
-</tr>
 
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//img[contains(@src,'discover')]</td>
-	<td></td>
-</tr>
 
 <tr>
 	<td>sendKeys</td>
@@ -455,15 +467,16 @@
 </tr>
 <tr>
 	<td>click</td>
+	<td>id=credit-payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>css=div.col-sm-12.checkbox &gt; label</td>
 	<td></td>
 </tr>
 
-<tr>
-	<td>click</td>
-	<td>id=payment-signature</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=js-same-billing</td>
@@ -513,7 +526,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>id=error-consent-checkbox-0</td>
-	<td>You must accept the terms and agreements</td>
+	<td>You must accept the Agile Disclaimer</td>
 </tr>
 
 <tr>
@@ -532,6 +545,7 @@
 	<td>id=js-signature-tab</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
@@ -556,6 +570,15 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
