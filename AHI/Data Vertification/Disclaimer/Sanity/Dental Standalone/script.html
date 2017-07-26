@@ -1,0 +1,266 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/Dental Standalone</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Standalone_Dental</td></tr>
+</thead><tbody>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/dental-insurance-quotes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zip}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>10/10/1980</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gender-m-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//body[@id='agile-census']/div[4]/div/</td>
+	<td>Looking for affordable dental insurance? Get a dental plan from AgileHealthInsuranceDid you know that a good dental insurance plan can save your smile and your wallet? Many major dental procedures can cost thousands, and even basic cleanings can be more than $100! It’s expensive, but it doesn’t have to be. With a low-cost dental insurance plan purchased through AgileHealthInsurance, you can limit these costs. Agile has partnered with some of the best dental insurance companies in the country. Get a quote today, and see how healthy your mouth can be! Dental insurance may be the right choice if you:Have missed the Annual Open Enrollment period for your employerYou’re on Medicare and don’t have a planAre in between jobs or have been laid offAre a part-time or temporary worker or your employer does not offer dental benefitsAre a student, a recent graduate, or have aged out of your parent’s planAre waiting for your employer dental benefits to startGetting a good dental insurance plan is one of the easiest, most affordable things you can do to help curb expensive healthcare costs, and make sure your pearly whites stay sparkling. It only takes a few minutes. Get a quote today.</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${planname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.plan-details-price.js-price-breakdown</td>
+	<td>quote_P</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//tr[4]/td[2]</td>
+	<td>apply_P</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.js-apply-text.apply-button-text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>//input[@id='member-P-1-firstName']</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='member-P-1-lastName']</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primaryPhone</td>
+	<td>213-232-2123</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-page-body-content']/div/p</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@id='js-application-payment']//div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-application-payment']/p</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Use Credit Card</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=consent-checkbox-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#js-signature-tab &gt; p</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='accordion']/p</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Terms and Agreements</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Short Term Health Insurance, Affordable Health Plans, Affordable Obamacare Supplemental Health Insurance - AgileHealthInsurance.com</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div</td>
+	<td>Terms and AgreementsAgile HealthInsurance Terms and AgreementsFRAUD WARNING Any person who knowingly, and with intent to injure, defraud or deceive any insurer, makes any claim for the proceeds of an insurance policy containing any false, incomplete or misleading information may be guilty of insurance fraud. Any person who knowingly and with intent to defraud any insurance company or other person, files an application for insurance or statement of claim containing any materially false information or conceals for the purpose of misleading, information concerning any fact material thereto commits a fraudulent insurance act, which is a crime and subjects such person to criminal and/or civil penalties. ACKNOWLEDGEMENTS I accept and acknowledge that I must understand and agree with the terms of the insurance policy, paying attention to the effective date, premium amount, waiting period, benefits, limitations, exclusions, and riders, if applicable in your state. I accept and acknowledge that the quotes or rates shown above are estimates only. My premium is subject to change based on the optional benefits I selected, if any, and other relevant factors, such as changes in rates that take effect before my coverage start date. The insurance company always determines my actual premium. Insurance companies reserve the right to change the terms of a policy upon proper notification. These rates may include monthly administration fees or Membership dues. I accept and acknowledge that the quotes or rates shown above are for my requested effective date ONLY. If the actual effective date of my policy is different from the requested effective date, the actual premium of my policy may differ from the quote or rate above. The change in amount may be due to premium increases or policy changes from the insurance company and/or one or more family members having a birthday. (Rates are highly dependent on age.) The carrier I selected may not guarantee their rates for any period of time. I accept and acknowledge that coverage effective date is dependent upon approval of my application, which may include qualifying for the coverage and receipt of payment, and may be different than my requested date. The coverage effective date once the application is approved by the carrier may be pushed forward due to each carrier's deadlines and processing times. I accept and acknowledge that carriers cannot guarantee the availability of a provider (or providers), and may add, delete or change a participating provider (or providers) at any time without prior notice to me. I must contact my chosen carrier for updated information before using the services of any provider. I accept and acknowledge that the Copayment, Deductible, and Coinsurance amounts are my share of the costs for covered benefits. I accept and acknowledge that each insurance carrier may have unique Notices and Disclaimers. I will check below for information regarding the plans and carriers I selected. I accept and acknowledge that in several states, these plans are available only to members of an association, an independent consumer organization. If I am not already a member of the association, I must join in order to be eligible for these plans. PAYMENT I am signing up for an automatic payment plan. I agree AgileHealthInsurance or its authorized agent may automatically debit my bank account or Credit Card for the amount due on or around the payment due date. I can cancel this automatic payment at any time by calling or AgileHealthInsurance or its authorized agent at least 30 days prior to the next due date. I agree that AgileHealthInsurance or my financial institution can cancel automatic payment for my account for any reason, at any time, with or without prior notice to me. I understand that $25.00 will be charged for each transaction rejected for insufficient funds. I acknowledge that the origination of these debits to my account must comply with U.S. laws. I agree that this agreement remains in effect until canceled by AgileHealthInsurance or my financial institution or me. I have a copy of this agreement and I know I can also contact AgileHealthInsurance at support@agilehealthinsurance.com or 800-314-5594 for a copy.</td>
+</tr>
+
+
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> 8a05f3a37730742b3f34731daadf3c4cef2c2df9
+	
+	
