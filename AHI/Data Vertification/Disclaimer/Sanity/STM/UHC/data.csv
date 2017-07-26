@@ -1,5 +1,5 @@
 "state","zipcode","carrierid","planname","General Disclaimers","ACA TAX","Golden Rule Specific Disclaimers","Statements"
-"AL","35215","unitedhealthone","${planname}","${GeneralDisclaimers}","${ACATAX}","${UHCGD}",""
+"##AL","35215","unitedhealthone","${planname}","${GeneralDisclaimers}","${ACATAX}","${UHCGD}",""
 "##AK","99504","unitedhealthone","${planname}","${GeneralDisclaimers}","${ACATAX}","${UHCGD}",""
 "##AR","72209","unitedhealthone","${planname}","${GeneralDisclaimers}","${ACATAX}","${UHCGD}",""
 "##AZ","85364","unitedhealthone","${planname}","${GeneralDisclaimers}","${ACATAX}","${UHCGD}",""
