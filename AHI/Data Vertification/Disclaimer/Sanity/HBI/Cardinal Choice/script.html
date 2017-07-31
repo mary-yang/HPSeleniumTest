@@ -41,6 +41,24 @@ sanity4/24</td>
 	<td>id=js-see-plans</td>
 	<td></td>
 </tr>
+<!-----------------------------quote page------------------------------------------->
+<tr>
+	<td>verifyText</td>
+	<td>//body[@id='hbi-quote']/div[*]/p</td>
+	<td>${TELA}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//body[@id='hbi-quote']/div[*]/p[2]</td>
+	<td>${KARI}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[7]/p</td>
+	<td>${HBIGD}</td>
+</tr>
+
+<!-----------------------------detail page------------------------------------------->
 <tr>
 	<td>clickAndWait</td>
 	<td>//a[contains(text(),'${PlanName}')]</td>
@@ -54,13 +72,25 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//section[@id='disclaimers']/div/p[2]</td>
-	<td>${Text1}</td>
+	<td>${CC1}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>//section[@id='disclaimers']/div/p[3]</td>
-	<td>${Text2}</td>
+	<td>${CC2}</td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='disclaimers']/div/div/p</td>
+	<td>${TELA}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='disclaimers']/div/div/p[2]</td>
+	<td>${KARI}</td>
+</tr>
+
+<!-----------------------------apply page------------------------------------------->
 <tr>
 	<td>clickAndWait</td>
 	<td>id=plan-details-primary-apply</td>
@@ -74,18 +104,19 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[4]/p[2]</td>
-	<td>${Text1}</td>
+	<td>${CC1}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[4]/p[3]</td>
-	<td>${Text2}</td>
+	<td>${CC2}</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>id=applyButton</td>
 	<td></td>
 </tr>
+<!-----------------------------application page------------------------------------------->
 <tr>
 	<td>storeText</td>
 	<td>//p/span</td>
@@ -128,9 +159,22 @@ sanity4/24</td>
 	<td>//div[3]/div/p</td>
 	<td>${HBIGD}</td>
 </tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/p</td>
+	<td>${CC1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/p[2]</td>
+	<td>${CC2}</td>
+</tr>
 <tr>
 	</tbody>
 </table>
+	
+	
 	
 	
 	
