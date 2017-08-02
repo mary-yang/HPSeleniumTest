@@ -1,1 +1,8 @@
 AL, AR, AZ, DC, GA, HI, ID, IL, MI(6), NE, NV(6), OK(6), PA, SC, TX, VA, WI
+
+Please add and complete ASAP so these states can go live. 10 new Assc States: IN, KY, LA, MS, NC, ND, OH, TN, WV, WY
+
+CT, IA, KS, ME, MD, MO, NM, OR, SD and UT
+
+CO FL https://www.pivotaltracker.com/story/show/137982537
+

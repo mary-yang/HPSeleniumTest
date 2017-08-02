@@ -1,0 +1,45 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Jabir/BOcheck</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LifeShield</td></tr>
+</thead><tbody>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Login BO</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://backoffice.agilehealthinsurance.com/back-office/application/${Application}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://backoffice.agilehealthinsurance.com/back-office/application/${Application}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='applicationEdit']/div/form/div[2]/div[3]/div/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id="applicationEdit"]/div/form/div[2]/div[3]/div/strong</td>
+	<td>Result</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Result}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
