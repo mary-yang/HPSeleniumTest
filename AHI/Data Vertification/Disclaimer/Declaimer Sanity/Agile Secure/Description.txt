@@ -1,2 +1,0 @@
-Agile Secure:
-Issue: https://www.pivotaltracker.com/story/show/137549745
