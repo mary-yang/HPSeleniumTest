@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/STM/LifeShield</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/Rider/upsellNG</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -333,12 +333,12 @@ sanity4/24</td>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=//a[@class='app-addon-ok btn btn-default']&quot;)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td>//a[@class='app-addon-ok btn btn-default']</td>
 	<td></td>
 </tr>
 <tr>
@@ -414,15 +414,47 @@ sanity4/24</td>
 	<td>//div[@id='disclaimers-container']/div/div/div/p[7]</td>
 	<td>I hereby request coverage under the insurance issued to the Med-Sense Guaranteed Association and underwritten by LifeShield National Insurance Co. I understand this insurance contains a Pre-existing Condition exclusion, a Pre-certification Penalty and other restrictions and exclusions. I agree that coverage will not become effective for me or any dependent whose medical status, prior to the effective date, has changed and therefore results in a &quot;yes&quot; answer to any of the medical questions on this Application. If my medical status changes in this way, coverage will be declined for all individuals included on this Application. I understand that this coverage is not renewable or extendable. I may obtain a complete copy of the Certificate of Insurance upon request to AgileHealthInsurance. I understand that Standard Life and Accident Insurance Company, as underwriter of the plan, is solely liable for the coverage and benefits provided under the insurance. I understand and agree that the insurance agent/broker, if any, assisting with this Application is a representative of the Applicant. If signed by a representative of the Applicant, the undersigned represents his/her capacity to so act. If signed as guardian or proxy of the Applicant, the undersigned represents his/her capacity to so act. By acceptance of coverage and/or submission of any claim for benefits, the Applicant ratifies the authority of the signer to so act and bind the Applicant.</td>
 </tr>
+
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimers-container']/div/div/div[2]</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p</td>
+	<td>Nationwide</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p[2]/b</td>
+	<td>FRAUD WARNING</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p[3]</td>
+	<td>Any person who knowingly, and with intent to injure, defraud or deceive any insurer, makes any claim for the proceeds of an insurance policy containing any false, incomplete or misleading information may be guilty of insurance fraud.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/p[4]</td>
+	<td>${DTFW}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[3]/p</td>
+	<td>AGILE SECURE</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[3]/p[2]</td>
+	<td>FRAUD WARNING</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[4]</td>
 	<td>${AHIGTA}</td>
 </tr>
 
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimers-container']/div/div/div[3]</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[5]</td>
 	<td>${AHIPayment}</td>
 </tr>
 
@@ -465,6 +497,9 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
 	
 	
 	
