@@ -1,0 +1,398 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/STM/UHC</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	 <td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote & Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare Health Insurance Quotes*</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1975</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/quote*</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@data-id="${carrierid}"]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${planname}</td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[5]/</td>
+	<td>${UHCGD}</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/</td>
+	<td>${UHCGD}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/</td>
+	<td>${UHCGD}</td>
+</tr>
+
+<tr>
+	 <td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*apply*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*application*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;/&quot;)+1)</td>
+	<td>uri</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${uri}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-2']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-3']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-4']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-5']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-6']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-7']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-8']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='app-underwritingQuestions-form']/div/p</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-firstName</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;; var tmp=&quot;&quot;; for (i=0;i&lt;8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
+	<td>LastName</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=06</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=02</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lbs</td>
+	<td>190</td>
+</tr>
+tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-page-body-content']/div/p</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	 <td>include</td>
+	<td>AHI/Include/Use Bank Draft</td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>click</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-application-payment']/p</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;css=div.col-md-11.terms-cell > p&quot;)</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>echo</td>
+	<td>${uri}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=consent-before-checkbox-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-consent-review']/div/</td>
+	<td>Review your Application <br />Statement of Understanding<br />I have read this application and represent that the information shown on it is true and complete. I understand that: (a) no insurance will become effective unless my application is approved and the appropriate premium is actually received by Golden Rule with this application; (b) no benefits will be paid for a health condition that exists prior to the date insurance takes effect; and (c) if coverage is issued, the coverage will not be a continuation of any prior coverage.<br />Incorrect or incomplete information on this application may result in voidance of coverage and claim denial. The information provided in this application, and any supplement or amendments to it, will be made a part of any policy/certificate that may be issued. I understand that for an application sent by any electronic means, insurance, if approved, will be effective the later of: (i) the requested effective date; or (ii) the day after receipt by Golden Rule. I understand that for a mailed application, insurance, if approved, will be effective the later of: (i) the requested effective date; or (ii) the day after the postmark date affixed by the U.S. Postal Service. If mailed and not postmarked by the U.S. Postal Service or if the postmark is not legible, the effective date will be the later of: (i) the requested effective date; or (ii) the date received by Golden Rule. I understand that the broker is only authorized to submit the application and initial premium and may not change or waive any right or requirement.<br />Important Notes:<br />- “Postmark date” means the date of the postmark as affixed by the U.S. Postal Service.- No application will be accepted if received by Golden Rule more than 15 days after the date signed.- Altered applications will not be accepted.<br />ELECTRONIC FUNDS TRANSFER (EFT) AUTHORIZATION<br />I (we) hereby authorize FACT or Golden Rule to initiate debit entries to the account indicated below. I also authorize the named financial institution to debit the same to such account. I agree this authorization will remain in effect until you actually receive written notification of its termination from me. NOTE: Some card issuers/financial institutions charge cash advance fees on insurance payments.<br />CREDIT CARD AUTHORIZATION<br />I authorize FACT or Golden Rule Insurance Company to charge my Visa/MasterCard/American Express account for the single payment or monthly payment above.<br />IMPORTANT NOTICE ABOUT YOUR ELECTRONIC SIGNATURE<br />CONSENT TO RECEIVE ELECTRONIC RECORDS AND TO CONDUCT TRANSACTIONS ELECTRONICALLY<br />All of the Communications between the time you submit your consent and withdraw your consent will remain valid and binding on both you and us notwithstanding your withdrawal. If you withdraw this consent, we will do business with you after that in paper form.<br />By electronically signing and submitting a health insurance application or HMO enrollment form through this website, you affirmatively consent to presentation, delivery, storage retrieval and transmission of “Communications” related to “Our Transaction” as electronic records instead of in paper form. “Our Transaction” means the entirety of the business relationship between you and us. “Communications” includes, but is not limited to:<br />Your application or enrollment form, including subsequent amendments;Information related to Our Transaction that we are required to provide or make available in writing such as privacy notices or fraud warnings;Documents related to Our Transaction such as policy, certificate, or evidence of coverage forms, claim forms, explanation of benefit forms, premium notices, or other administrative forms (to the extent permitted by applicable law);Any emails, faxes, recorded telephone calls, or other electronic transmissions of information between you and us and between you and the insurance producer contracted with us, or between us and any third party. Subject to our obligations to protect your privacy, we may, at our sole options, post Communications on a website (in which case they will be sent or received, as the case may be, regardless of whether or not we own, operate or control the website). Or send them in or attached to an email. You must promptly tell us about any change to your electronic or mailing address, or other contact information. You acknowledge that you can receive or access Communications because you have the following:A telephoneA computer and printerA device or computer program for listening to audio CDs, mp3, WAV or other common computer audio filesAn Internet browserAccess to the InternetA valid email addressAdobe Acrobat ReaderYou can request a free paper copy of any Communications, or you may withdraw this consent at any time by sending a written request to:<br />Golden Rule Insurance Company<br /><br />Policy Administration<br />PO Box 31372<br />Salt Lake City, UT 84131-0372<br />FACT MEMBERSHIP - To Continue Your Application for Coverage, You Must Become a Member of FACT.<br />I hereby enroll for Basic ($4 a month) membership in the FEDERATION OF AMERICAN CONSUMERS AND TRAVELERS (FACT). Upon completion of this enrollment form and payment of initial dues, I understand that: (a) I will be entitled to FACT’s benefits; (b) these benefits may change from time to time; (c) some benefits may have a delayed effective date; (d) my membership will become effective on the day this enrollment form is dated and signed; (e) I am eligible to apply for association group insurance; and (f) I authorize the release of my name, address, date of birth, certificate and phone numbers, application date, membership level, and email address listed on the Golden Rule Application for Short Term Medical Insurance to FACT. Note: Accident Insurance is included in your FACT membership and you will have an opportunity to name your beneficiary(ies) by mail or on the FACT website.</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

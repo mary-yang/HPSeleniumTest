@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/STM/Slaico</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/STM/LifeShield</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -73,7 +73,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>4000</td>
 	<td></td>
 </tr>
 <tr>
@@ -110,7 +110,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div</td>
-	<td>General DisclaimersThese Short Term Medical plans do not provide coverage for preexisting conditions nor the mandated coverage necessary to avoid a penalty under the Affordable Care Act.<br />Each state has specific mandates for coverage so your plan may include additional benefits. Please consult your state-specific insurance certificate for more information.<br />Short Term Health Insurance products underwritten by their respective companies. Product prices, benefits and availability may vary by state.</td>
+	<td>${GeneralDisclaimers}</td>
 </tr>
 
 <tr>
@@ -125,8 +125,13 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='js-plan-disclaimers']/div</td>
-	<td>${General Disclaimers}</td>
+	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/</td>
+	<td>${LSGD}</td>
 </tr>
 
 <tr>
@@ -141,10 +146,14 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div</td>
-	<td>${General Disclaimers}</td>
+	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>${GeneralDisclaimers}</td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/</td>
+	<td>${LSGD}</td>
+</tr>
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -224,7 +233,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='app-underwritingQuestions-form']/div/p</td>
-	<td>${ACA TAX}</td>
+	<td>${ACATAX}</td>
 </tr>
 
 <tr>
@@ -281,11 +290,6 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=member-P-1-occupation</td>
-	<td>value-added extend bandwidth</td>
-</tr>
-<tr>
-	<td>type</td>
 	<td>id=address</td>
 	<td>${Add}</td>
 </tr>
@@ -307,7 +311,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='js-app-page-body-content']/div/p</td>
-	<td>${ACA TAX}</td>
+	<td>${ACATAX}</td>
 </tr>
 
 <tr>
@@ -323,7 +327,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='js-application-payment']/p</td>
-	<td>${ACA TAX}</td>
+	<td>${ACATAX}</td>
 </tr>
 
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
@@ -353,7 +357,11 @@ sanity4/24</td>
 	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
 	<td>I have read the Terms and Agreements, I have reviewed my application(s) including the applicant and payment information and confirm that it is correct. I agree that by using this site, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature. *</td>
 </tr>
-
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
+	<td>CET</td>
+</tr>
 
 <tr>
 	<td>click</td>
@@ -371,11 +379,10 @@ sanity4/24</td>
 	<td></td>
 </tr>
 
-
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div/div/p</td>
-	<td>SLAICO</td>
+	<td>LifeShield</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -395,7 +402,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div/div/p[5]</td>
-	<td>THIS IS A SHORT TERM HEALTH BENEFIT PLAN THAT IS NOT INTENDED TO QUALIFY AS THE MINIMUM ESSENTIAL COVERAGE REQUIRED BY THE AFFORDABLE CARE ACT (ACA). UNLESS YOU PURCHASE A PLAN THAT PROVIDES MINIMUM ESSENTIAL COVERAGE IN ACCORDANCE WITH THE ACA, YOU MAY BE SUBJECT TO A FEDERAL TAX PENALTY. ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH BENEFIT PLAN THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD.</td>
+	<td>THIS IS A SHORT-TERM LIMITED DURATION HEALTH INSURANCE POLICY THAT IS NOT INTENDED TO AND DOES NOT QUALIFY AS THE MINIMUM ESSENTIAL COVERAGE REQUIRED BY THE AFFORDABLE CARE ACT (ACA). UNLESS YOU PURCHASE A POLICY THAT PROVIDES MINIMUM ESSENTIAL COVERAGE IN ACCORDANCE WITH THE ACA, YOU MAY BE SUBJECT TO A FEDERAL TAX PENALTY. ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH INSURANCE POLICY THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD.THIS IS A SUPPLEMENT TO HEALTH INSURANCE AND IS NOT A SUBSTITUTE FOR MAJOR MEDICAL COVERAGE. LACK OF MAJOR MEDICAL COVERAGE (OR OTHER MINIMUM ESSENTIAL COVERAGE) MAY RESULT IN AN ADDITIONAL PAYMENT WITH YOUR TAXES. This is a brief summary of LifeShield Short-Term Medical Insurance underwritten by LifeShield National Insurance Co. provided by Policy Form Series LNG- 3001. Availability and terms may vary by state.</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -405,7 +412,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div/div/p[7]</td>
-	<td>I hereby request coverage under the insurance issued to the Med-Sense Guaranteed Association and underwritten by Standard Life and Accident Insurance Company. I understand this insurance contains a Pre-existing Condition exclusion, a Pre-certification Penalty and other restrictions and exclusions. I agree that coverage will not become effective for me or any dependent whose medical status, prior to the effective date, has changed and therefore results in a "yes" answer to any of the medical questions on this Application. If my medical status changes in this way, coverage will be declined for all individuals included on this Application. I understand that this coverage is not renewable or extendable. I may obtain a complete copy of the Certificate of Insurance upon request to AgileHealthInsurance. I understand that Standard Life and Accident Insurance Company, as underwriter of the plan, is solely liable for the coverage and benefits provided under the insurance. I understand and agree that the insurance agent/broker, if any, assisting with this Application is a representative of the Applicant. If signed by a representative of the Applicant, the undersigned represents his/her capacity to so act. If signed as guardian or proxy of the Applicant, the undersigned represents his/her capacity to so act. By acceptance of coverage and/or submission of any claim for benefits, the Applicant ratifies the authority of the signer to so act and bind the Applicant.</td>
+	<td>I hereby request coverage under the insurance issued to the Med-Sense Guaranteed Association and underwritten by LifeShield National Insurance Co. I understand this insurance contains a Pre-existing Condition exclusion, a Pre-certification Penalty and other restrictions and exclusions. I agree that coverage will not become effective for me or any dependent whose medical status, prior to the effective date, has changed and therefore results in a &quot;yes&quot; answer to any of the medical questions on this Application. If my medical status changes in this way, coverage will be declined for all individuals included on this Application. I understand that this coverage is not renewable or extendable. I may obtain a complete copy of the Certificate of Insurance upon request to AgileHealthInsurance. I understand that Standard Life and Accident Insurance Company, as underwriter of the plan, is solely liable for the coverage and benefits provided under the insurance. I understand and agree that the insurance agent/broker, if any, assisting with this Application is a representative of the Applicant. If signed by a representative of the Applicant, the undersigned represents his/her capacity to so act. If signed as guardian or proxy of the Applicant, the undersigned represents his/her capacity to so act. By acceptance of coverage and/or submission of any claim for benefits, the Applicant ratifies the authority of the signer to so act and bind the Applicant.</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -458,72 +465,6 @@ sanity4/24</td>
 	
 	
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
 	
 	
 	
