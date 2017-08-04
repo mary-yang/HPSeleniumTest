@@ -170,11 +170,24 @@
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
+
+<tr>
+	<td>waitForLocation</td>
+	<td>*page/5* </td>
+	<td></td>
+</tr>
 <tr>
 	<td>verifyText</td>
-	<td>//*[@id='js-app-confirmation']/div/h2/span</td>
+	<td>//div[@id='js-app-confirmation']</td>
 	<td>*Congratulations*</td>
 </tr>
+<!---------
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Congratulation</td>
+	<td></td>
+</tr>
+------------->
 <tr>
 	<td>storeText</td>
 	<td>//*[@id='js-app-confirmation']/div[1]/ul/li[1]/div/p[1]/span[2]</td>
@@ -189,6 +202,8 @@
 </body>
 </html>
 
+	
+	
 	
 	
 	

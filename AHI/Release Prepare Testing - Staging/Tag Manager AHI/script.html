@@ -1,12 +1,57 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/LifeShield Applications</title></head><body><table border="1" cellpadding="1" cellspacing="1">
-	<thead>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/Tag Manager AHI</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">tagmanager</td></tr>
+</thead><tbody>
 <tr>
-	<td colspan="3" rowspan="1">
-sanity4/24</td>
+	<td>open</td>
+	<td>tagmanager.google.com</td>
+	<td></td>
 </tr>
-	</thead>
-	<tbody>
-
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('id=identifierId')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=identifierId</td>
+	<td>denis.yu1111@gmail.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.RveJvd.snByac</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>name=password</td>
+	<td>Think2016</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.RveJvd.snByac</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.fill-cell.ng-binding</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//gtm-draft-toolbar/div/button</td>
+	<td></td>
+</tr>
 <tr>
 	<td>open</td>
 	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
@@ -102,11 +147,7 @@ sanity4/24</td>
 	<td>css=ul.quote-all-plans-list.js-plans-list > li.quote-plan-container.js-plan-unit > div.quote-plan > div.quote-plan-body > div.quote-plan-carrier > h3.quote-plan-name > a</td>
 	<td>planname</td>
 </tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li/div/div/div[2]/div</td>
-	<td>mo</td>
-</tr>
+
 <tr>
 	<td>clickAndWait</td>
 	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
@@ -122,11 +163,7 @@ sanity4/24</td>
 	<td>css=h1</td>
 	<td>${planname}</td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
-	<td>*${mo}*</td>
-</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=plan-details-primary-apply</td>
@@ -137,39 +174,16 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>storeEval</td>
-	<td>'${mo}'.match(/\d+.\d+/)</td>
-	<td>mo1</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='apply']/div[3]/div[2]/div[1]/div[1]/div/div[1]/table/tbody/tr[2]/td/a/span</td>
-	<td>${planname}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='apply']//tr[descendant::td[1][contains(text(),'Base Premium')]]/td[2]</td>
-	<td>$${mo1}</td>
-</tr>
+
 <tr>
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>clickAndWait</td>
 	<td>id=applyButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Underwriting</td>
 	<td></td>
 </tr>
 <tr>
@@ -208,24 +222,13 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
 	<td>click</td>
 	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[6]/div/button[1]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[7]/div/button[1]</td>
 	<td></td>
 </tr>
 <tr>
@@ -266,7 +269,7 @@ sanity4/24</td>
 <tr>
 	<td>select</td>
 	<td>id=member-P-1-ft</td>
-	<td>label=07</td>
+	<td>label=06</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -304,8 +307,18 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 3. Payment &amp; Billing</td>
+</tr>
+<tr>
 	<td>include</td>
 	<td>AHI/Include/Use Credit Card</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
 	<td></td>
 </tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
@@ -389,45 +402,35 @@ sanity4/24</td>
 	<td></td>
 </tr>
 ------------->
-
 </tbody></table>
 </body>
 </html>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
