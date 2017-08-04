@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/Dental/Nationwide</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/Dental/USAplus</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">Standalone_Dental</td></tr>
 </thead><tbody>
@@ -50,52 +50,12 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[3]</td>
-	<td>${NWGD}</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${USAPlusGD}</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=carrier-nationwide-</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=${planname}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div</td>
-	<td>${GeneralDisclaimers}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[2]</td>
-	<td>${NWGD}</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=plan-details-primary-apply</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div</td>
-	<td>${GeneralDisclaimers}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[2]</td>
-	<td>${NWGD}</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>css=span.js-apply-text.apply-button-text</td>
-	<td></td>
-</tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Name</td>
+	<td>id=carrier-ameritas-</td>
 	<td></td>
 </tr>
 <tr>
@@ -103,6 +63,50 @@
 	<td>6000</td>
 	<td></td>
 </tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=USA+ Dental Vision Plus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${USAPlusGD}</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${USAPlusGD}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+
 
 <tr>
 	<td>type</td>
@@ -216,7 +220,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div/div/p</td>
-	<td>Nationwide</td>
+	<td>USA+ Dental</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -226,13 +230,19 @@
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div/div/p[3]</td>
-	<td>Any person who knowingly, and with intent to injure, defraud or deceive any insurer, makes any claim for the proceeds of an insurance policy containing any false, incomplete or misleading information may be guilty of insurance fraud.</td>
+	<td>In several states, we are required to advise you of the following: Any person who knowingly and with intent to defraud provides false, incomplete or misleading information in an application for insurance, or who knowingly presents a false or fraudulent claim f or payment of a loss or benefit, is guilty of a crime and may be subject to fines and criminal penalties, including imprisonment. In addition, insurance benefits may be denied if false information provided by an applicant is materially related to a claim.</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div/div/p[4]</td>
-	<td>${FW}</td>
+	<td>MEMBERSHIP AGREEMENT</td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[5]</td>
+	<td>I understand and agree that membership is subject to the terms and conditions of the Membership Agreement. We reserve the right to accept or decline any membership application in accordance with the by-laws that govern our association. In order to ensure that I am able to utilize the benefits, it may be necessary for USA+ to send and/or receive personal information about me to the companies that provide products and services to me. I have 10 day s to evaluate the membership and request a full refund.</td>
+</tr>
+
 
 <tr>
 	<td>verifyText</td>
@@ -308,6 +318,8 @@
 	
 	
 
+	
+	
 	
 	
 	
