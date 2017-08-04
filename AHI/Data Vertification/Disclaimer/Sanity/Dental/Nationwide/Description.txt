@@ -2,3 +2,5 @@ Dental Standalone:
 Issue: https://www.pivotaltracker.com/n/projects/1258602/stories/118604921
 stuff: https://docs.google.com/a/healthpocket.com/spreadsheets/d/19ryTupdoFxzy3mscXSrqLqUcNP68ASu5ovE-Fc5nVyA/edit?usp=sharing
 link: http://praetemptatus.agilehealthinsurance.com/term-health-insurance/termsAndConditions/nationwide-protector-vision-co 
+
+https://docs.google.com/a/healthpocket.com/spreadsheets/d/1WmSxQWfA_LQMAaTx5hDHC7JUSVMtT2-cuJsb6ezpLf8/edit?usp=sharing
