@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Declaimer Sanity/Everest Prime</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/STM/Everest Prime</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -160,11 +160,7 @@ sanity4/24</td>
 	<td>5000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Underwriting</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Name</td>
@@ -176,53 +172,35 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[1]/div/button[1]</td>
+	<td>storeText</td>
+	<td>//p/span</td>
+	<td>Num</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Num}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[2]/div/button[1]</td>
+	<td>storeEval</td>
+	<td>var d;parseFloat('${Num}'.match(/\s+\d+/));</td>
+	<td>Num</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Num}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[3]/div/button[1]</td>
-	<td></td>
+	<td>store</td>
+	<td>0</td>
+	<td>time</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[4]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[5]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[6]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[7]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<=${Num};i++){
+    writeSelenium("include","AHI/Include/clickUnderwriting");
+}</td>
 	<td></td>
 </tr>
 <tr>
@@ -374,15 +352,45 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeText</td>
+	<td>verifyText</td>
+	<td>css=p.disclaimer-label</td>
+	<td>Everest</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=b</td>
+	<td>FRAUD WARNING</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[3]</td>
+	<td>${FW}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[4]/b</td>
+	<td>${AA1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[5]</td>
+	<td>${AA2}</td>
+</tr>
+
+
+
+
+
+<tr>
+	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div/div[2]</td>
-	<td>FW</td>
+	<td>${AHIGTA}</td>
 </tr>
 
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimers-container']/div/div</td>
-	<td>${AHITA}</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[3]</td>
+	<td>${AHIPayment}</td>
 </tr>
 
 
@@ -424,6 +432,9 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
 	
 	
 	

@@ -1,0 +1,285 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/quote page</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote & Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare Health Insurance Quotes*</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1975</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/quote*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>link=Short Term Health Insurance</td>
+	<td>Short Term Health Insurance</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Health Benefit Insurance</td>
+	<td>Health Benefit Insurance</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Dental Insurance</td>
+	<td>Dental Insurance</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Telemedicine</td>
+	<td>Telemedicine</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Help Center</td>
+	<td>Help Center</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.quote-filter-header</td>
+	<td>Narrow Your Results</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.quote-filter-title</td>
+	<td>View Plan Options</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-filters']/div[2]/h3</td>
+	<td>Company</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-filters']/div[3]/h3</td>
+	<td>Monthly Premium</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-filters']/div[4]/h3</td>
+	<td>Deductible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-filters']/div[5]/h3</td>
+	<td>Coinsurance</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-filters']/div[6]/h3</td>
+	<td>Max Out of Pocket</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-filters']/div[7]/h3</td>
+	<td>Policy Maximum Benefit</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Featured</td>
+	<td>Featured</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[2]</td>
+	<td>Monthly Premium</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=carrier-everest-one-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=img.carrier-logo-image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Select This Plan</td>
+	<td>Select This Plan</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.quote-plan-price</td>
+	<td>$98.19/mo</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.plan-info-label</td>
+	<td>Deductible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='featuredPlan']/li/div/div[2]/ul/li[2]/span</td>
+	<td>Coinsurance</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='featuredPlan']/li/div/div[2]/ul/li[3]/span</td>
+	<td>Max Out of Pocket</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.sprite-info-icon-sm.js-glossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=agile-quote</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.sprite-info-icon-sm.js-glossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.glossary-definition</td>
+	<td>The amount you pay before your health insurance plan begins to pay for the services you receive. Not everything you pay (such as your premium and copay) counts toward your deductible. For example, if your deductible is $2500, your plan won't pay anything until you've met your $2500 deductible for covered healthcare services subject to the deductible.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=×</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='featuredPlan']/li/div/div[2]/ul/li[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.glossary-definition</td>
+	<td>Your share of costs for a covered service, typically after you meet your deductible and copayment charges. For example, once you meet your deductible, you might pay 20% and your health insurance plan pays 80%, based on the plan you choose. Once you have met your plan's annual out-of-pocket maximum, your plan pays 100% of the costs for covered services.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=×</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='featuredPlan']/li/div/div[2]/ul/li[3]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.glossary-definition</td>
+	<td>Your share of costs for a covered service, including your deductible. For example, once you meet your deductible, you pay 20% and your health insurance plan pays 80% up to $20,000; then 100% of the costs for covered services are paid thereafter, up to the plan maximum of $1,000,000.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=×</td>
+	<td></td>
+</tr>
+
+
+
+	</tbody>
+</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+
+	
