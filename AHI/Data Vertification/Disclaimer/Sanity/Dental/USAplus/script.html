@@ -1,0 +1,328 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/Dental/USAplus</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Standalone_Dental</td></tr>
+</thead><tbody>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/dental-insurance-quotes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zip}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>10/10/1980</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gender-m-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//body[@id='agile-census']/div[4]/div/</td>
+	<td>Looking for affordable dental insurance? Get a dental plan from AgileHealthInsuranceDid you know that a good dental insurance plan can save your smile and your wallet? Many major dental procedures can cost thousands, and even basic cleanings can be more than $100! It’s expensive, but it doesn’t have to be. With a low-cost dental insurance plan purchased through AgileHealthInsurance, you can limit these costs. Agile has partnered with some of the best dental insurance companies in the country. Get a quote today, and see how healthy your mouth can be! Dental insurance may be the right choice if you:Have missed the Annual Open Enrollment period for your employerYou’re on Medicare and don’t have a planAre in between jobs or have been laid offAre a part-time or temporary worker or your employer does not offer dental benefitsAre a student, a recent graduate, or have aged out of your parent’s planAre waiting for your employer dental benefits to startGetting a good dental insurance plan is one of the easiest, most affordable things you can do to help curb expensive healthcare costs, and make sure your pearly whites stay sparkling. It only takes a few minutes. Get a quote today.</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${USAPlusGD}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=carrier-ameritas-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=USA+ Dental Vision Plus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${USAPlusGD}</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${USAPlusGD}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>type</td>
+	<td>//input[@id='member-P-1-firstName']</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='member-P-1-lastName']</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primaryPhone</td>
+	<td>213-232-2123</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-page-body-content']/div/p</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@id='js-application-payment']//div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-application-payment']/p</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Use Credit Card</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=consent-checkbox-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#js-signature-tab &gt; p</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='accordion']/p</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Terms and Agreements</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Short Term Health Insurance, Affordable Health Plans, Affordable Obamacare Supplemental Health Insurance - AgileHealthInsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p</td>
+	<td>USA+ Dental</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[2]/b</td>
+	<td>FRAUD WARNING</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[3]</td>
+	<td>In several states, we are required to advise you of the following: Any person who knowingly and with intent to defraud provides false, incomplete or misleading information in an application for insurance, or who knowingly presents a false or fraudulent claim f or payment of a loss or benefit, is guilty of a crime and may be subject to fines and criminal penalties, including imprisonment. In addition, insurance benefits may be denied if false information provided by an applicant is materially related to a claim.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[4]</td>
+	<td>MEMBERSHIP AGREEMENT</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[5]</td>
+	<td>I understand and agree that membership is subject to the terms and conditions of the Membership Agreement. We reserve the right to accept or decline any membership application in accordance with the by-laws that govern our association. In order to ensure that I am able to utilize the benefits, it may be necessary for USA+ to send and/or receive personal information about me to the companies that provide products and services to me. I have 10 day s to evaluate the membership and request a full refund.</td>
+</tr>
+
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]</td>
+	<td>${AHIGTA}</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[3]</td>
+	<td>${AHIPayment}</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	

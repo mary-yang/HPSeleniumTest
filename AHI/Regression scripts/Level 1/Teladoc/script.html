@@ -27,9 +27,10 @@
 	<td>link=Telemedicine</td>
 	<td></td>
 </tr>
+<
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Sign Up for an Individual Plan ($9.95/mo)</td>
+	<td>link=Sign Up for an Individual Plan ($14.95/mo)</td>
 	<td></td>
 </tr>
 
@@ -122,6 +123,21 @@
 	<td>${Tel}</td>
 </tr>
 <tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=07</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=member-P-1-lbs</td>
+	<td>100</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
@@ -134,7 +150,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='js-app-page-body-content']/h3</td>
-	<td>Step 3. Payment &amp; Billing</td>
+	<td>Step 2. Payment &amp; Billing</td>
 </tr>
 
 <tr>
@@ -193,6 +209,9 @@
 	
 	
 
+	
+	
+	
 	
 	
 	
