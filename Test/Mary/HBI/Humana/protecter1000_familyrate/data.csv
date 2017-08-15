@@ -1,0 +1,5 @@
+state,state1,zip,DOB,planname,quote_P,apply_P
+Alabama,AL,35215,03/06/1985,Protector 1000,${quote_P},${apply_P}
+Alabama,AL,36310,03/06/1985,Protector 2000,${quote_P},${apply_P}
+Alabama,AL,36310,03/06/1985,Protector 4000,${quote_P},${apply_P}
+Alabama,AL,36310,03/06/1985,Protector 6000,${quote_P},${apply_P}
