@@ -165,6 +165,26 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	<td>storeLocation</td>
+	<td>url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;test&quot;))</td>
+	<td>uri</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${uri}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>pause</td>
 	<td>5000</td>
 	<td></td>
@@ -364,21 +384,10 @@ sanity4/24</td>
 </tr>
 
 <tr>
-	<td>click</td>
-	<td>link=Terms and Agreements</td>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/${uri}/termsAndConditions</td>
 	<td></td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>selectWindow</td>
-	<td>Short Term Health Insurance, Affordable Health Plans, Affordable Obamacare Supplemental Health Insurance - AgileHealthInsurance.com</td>
-	<td></td>
-</tr>
-
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div/div/p</td>
@@ -465,6 +474,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	
