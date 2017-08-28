@@ -44,7 +44,7 @@
 "##TN","37230","carrier-everest-","${planname}","${GeneralDisclaimers}","${ACATAX}","${CET}","${FW}"
 "##TX","79936","carrier-everest-","${planname}","${GeneralDisclaimers}","${ACATAX}","${CET}","${FW}"
 "##UT","84120","carrier-everest-","${planname}","${GeneralDisclaimers}","${ACATAX}","${CET}","${FW}"
-"VA","23464","carrier-everest-","${planname}","${GeneralDisclaimers}","${ACATAX}","${CET}","ANY PERSON WHO, WITH THE INTENT TO DEFRAUD OR KNOWING THAT HE IS FACILITATING A FRAUD AGAINST AN INSURER, SUBMITS AN APPLICATION OR FILES A CLAIM CONTAINING A FALSE OR DECEPTIVE STATEMENT MAY HAVE VIOLATED STATE LAW."
+"##VA","23464","carrier-everest-","${planname}","${GeneralDisclaimers}","${ACATAX}","${CET}","ANY PERSON WHO, WITH THE INTENT TO DEFRAUD OR KNOWING THAT HE IS FACILITATING A FRAUD AGAINST AN INSURER, SUBMITS AN APPLICATION OR FILES A CLAIM CONTAINING A FALSE OR DECEPTIVE STATEMENT MAY HAVE VIOLATED STATE LAW."
 "##VT","5401","carrier-everest-","${planname}","${GeneralDisclaimers}","${ACATAX}","${CET}","${FW}"
 "##WA","98115","carrier-everest-","${planname}","${GeneralDisclaimers}","${ACATAX}","${CET}","${FW}"
 "##WI","53215","carrier-everest-","${planname}","${GeneralDisclaimers}","${ACATAX}","${CET}","${FW}"
