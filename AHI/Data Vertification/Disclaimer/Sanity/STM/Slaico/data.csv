@@ -1,5 +1,5 @@
 "state","zipcode","carrierid","General Disclaimers","ACA TAX","FW"
-"AL","35215","carrier-slaico-","${GeneralDisclaimers}","${ACATAX}","Any person who knowingly presents a false or fraudulent claim for payment of a loss or benefit or who knowingly presents false information in an application for insurance is guilty of a crime and may be subject to restitution fines or confinement in prison, or any combination thereof."
+"##AL","35215","carrier-slaico-","${GeneralDisclaimers}","${ACATAX}","Any person who knowingly presents a false or fraudulent claim for payment of a loss or benefit or who knowingly presents false information in an application for insurance is guilty of a crime and may be subject to restitution fines or confinement in prison, or any combination thereof."
 "##AK","99504","carrier-slaico-","${GeneralDisclaimers}","${ACATAX}","A person who knowingly and with intent to injure, defraud, or deceive an insurance company files a claim containing false, incomplete, or misleading information may be prosecuted under state law."
 "##AR","72209","carrier-slaico-","${GeneralDisclaimers}","${ACATAX}","${FW}"
 "##AZ","85364","carrier-slaico-","${GeneralDisclaimers}","${ACATAX}","${FW}"
