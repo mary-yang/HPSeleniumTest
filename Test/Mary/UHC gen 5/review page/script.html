@@ -1,0 +1,393 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/UHC gen 5/review page</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote &amp; Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare Health Insurance Quotes*</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1975</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/quote*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${carrierid}')]&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+    <td>click</td>
+    <td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${carrierid}')]</td>
+    <td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+
+
+
+
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${planname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li[contains(@data-planid, '${carrierid}')]/div/div/div/div</td>
+	<td>mo</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>${planname}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
+	<td>*${mo}*</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>verifyLocation</td>
+	<td>*apply*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*application*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;/&quot;)+1)</td>
+	<td>uri</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${uri}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=No Thanks&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+    <td>click</td>
+    <td>link=No Thanks </td>
+    <td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+
+<tr>
+	<td>click</td>
+	<td>id=fillApp</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Continue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-firstName</td>
+	<td>TEST</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>TEST</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=06</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=member-P-1-lbs</td>
+	<td>190</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=05</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lbs</td>
+	<td>162</td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>General Delivery</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primaryPhone</td>
+	<td>1111111111</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+
+
+
+<tr>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4111 1111 1111 1111</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.col-sm-12.checkbox &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=credit-payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p[@class='modal-sub-heading']</td>
+	<td>*Add Additional Insurance and Benefits*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-consent-review']/div/p</td>
+	<td>*By checking the boxes and entering my name below, I am indicating my intent to electronically sign the application and the administrative forms provided (in states where applicable) and represent that all the information I have provided is true, complete, and accurate.*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=IMPORTANT NOTICE ABOUT YOUR ELECTRONIC SIGNATURE</td>
+	<td>IMPORTANT NOTICE ABOUT YOUR ELECTRONIC SIGNATURE</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-consent-review']/div[3]/div/div[2]/p</td>
+	<td>*I hereby enroll for membership in the FEDERATION OF AMERICAN CONSUMERS AND TRAVELERS (FACT) *</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.col-md-11.terms-cell &gt; p</td>
+	<td>*For my Short Term application, I have reviewed and understand the Terms and Agreements. I hereby agree to the Statement of Understanding, Electronic Funds Transfer and/or Credit Card Authorization, and Consent to Receive Electronic Records and to Conduct Transactions Electronically. I have reviewed my electronic Short Term Application/Enrollment Form and Plan Benefits, Exclusions and Limitations. I agree that by checking the box and clicking to sign, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature.&nbsp;&nbsp;*</td>
+</tr>
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+	
