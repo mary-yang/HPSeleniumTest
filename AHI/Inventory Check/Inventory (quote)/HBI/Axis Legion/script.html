@@ -76,18 +76,29 @@
 	<td></td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>id=carrier-axis-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//label[@title=&quot;Axis&quot;]/span[2]</td>
+	<td>num</td>
+</tr>
+
+<tr>
 	<td>verifyElementPresent</td>
 	<td>//a[contains(text(),'Legion Limited Medical 500')]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeText</td>
-	<td>//a[contains(text(),'Legion Limited Medical 500')]</td>
-	<td>planname</td>
-</tr>
-<tr>
 	<td>echo</td>
-	<td>${planname}</td>
+	<td>${num}</td>
 	<td></td>
 </tr>
 
@@ -135,6 +146,11 @@
 
 	
 	
+	
+
+	
+	
+
 	
 	
 	

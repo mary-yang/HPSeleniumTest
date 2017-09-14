@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Compare quotes/Dental_and_Vision_have_all</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Inventory Check/Inventory (app)/upsell</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
@@ -84,7 +84,7 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[1]/div[1]/div/img[@alt=&quot;${provider}&quot;]]/div/div[2]/div/h3/a</td>
+	<td>css=h3.quote-plan-name</td>
 	<td>planname</td>
 </tr>
 <tr>
@@ -115,6 +115,11 @@
 <tr>
 	<td>pause</td>
 	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Underwriting</td>
 	<td></td>
 </tr>
 <tr>
@@ -188,6 +193,16 @@
 	<td></td>
 </tr>
 <tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=06</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>xpath=//*[@id='js-app-continue-link']</td>
 	<td></td>
@@ -204,8 +219,18 @@
 </tr>
 <tr>
 	<td>click</td>
+	<td>css=div.col-sm-12.checkbox &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>id=credit-payment-authorization</td>
 	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4111 1231 2312 3123</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -223,16 +248,61 @@
 	<td>verifyElementPresent(&quot;xpath=//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
 	<td></td>
 </tr>
+
 <tr>
-	<td>clickAndWait</td>
-	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td>click</td>
+	<td>id=js-ancillary-product-dental-checkbox-0</td>
 	<td></td>
 </tr>
+<tr>
+	<td>click</td>
+	<td>id=js-ancillary-product-vision-checkbox-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@class='app-addon-ok btn btn-default']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[3]/div[2]/div/div/input</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='js-modal-ancillary-products']/div[1]/div[2]/div/div[2]/div[2]/p</td>
+	<td>upsell1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='js-modal-ancillary-products']/div[2]/div[2]/div/div[2]/div[2]/p</td>
+	<td>upsell2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='js-modal-ancillary-products']/div[3]/div[2]/div/div[2]/div[2]/p</td>
+	<td>upsell3</td>
+</tr>
+
 <tr>
 	<td>pause</td>
 	<td>5000</td>
 	<td></td>
 </tr>
+<!---------
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'(Remove)')])[2]</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'(Remove)')]</td>
+	<td></td>
+</tr>----------------->
 <tr>
 	<td>ENDIF</td>
 	<td></td>
@@ -254,7 +324,6 @@
 	<td>css=p.signature-arrow</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -266,86 +335,39 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>include</td>
+	<td>AHI/Include/Congratulation</td>
 	<td></td>
 </tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------------------->
+
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;//*[@id='js-app-no-thanks-link']&quot;)</td>
-	<td></td>
+	<td>verifyText</td>
+	<td>//div/p[contains(text(),'application')][descendant::span[contains(text(),'Dental')]]</td>
+	<td>Congratulations*</td>
 </tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=See more dental options</td>
-	<td></td>
-</tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------end------------->
-<tr>
-	<td>storeText</td>
-	<td>//*[@id='js-app-page-body-content']/div/div[1]/div[1]/div[2]/div[1]/p/span[2]</td>
-	<td>dentalProtector</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${dentalProtector}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//*[@id='js-dental-collapse']/div[1]/div[2]/div[1]/p/span[2]</td>
-	<td>dentalcollapse</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${dentalcollapse}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//*[@id='js-dental-collapse']/div[2]/div[2]/div[1]/p/span[2]</td>
-	<td>dentaGuardian</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${dentaGuardian}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;//*[@id='js-app-page-body-content']/div/div[5]/div/div[2]/div[1]/p/span[2]&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//*[@id='js-app-page-body-content']/div/div[5]/div/div[2]/div[1]/p/span[2]</td>
-	<td>foundationvision</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${foundationvision}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//*[@id='js-app-no-thanks-link']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
+
 </tr>
 </tbody></table>
 </body>
-</html>
-
+</html>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
