@@ -76,20 +76,32 @@
 	<td></td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>id=carrier-slaicohbi-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//label[@title=&quot;Standard Life&quot;]/span[2]</td>
+	<td>num</td>
+</tr>
+
+<tr>
 	<td>verifyElementPresent</td>
 	<td>//a[contains(text(),'Fixed Cash Benefit 750')]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeText</td>
-	<td>//a[contains(text(),'Fixed Cash Benefit 750')]</td>
-	<td>planname</td>
-</tr>
-<tr>
 	<td>echo</td>
-	<td>${planname}</td>
+	<td>${num}</td>
 	<td></td>
 </tr>
+
 
 </tbody></table>
 </body>
@@ -139,5 +151,7 @@
 	
 	
 
+	
+	
 	
 	
