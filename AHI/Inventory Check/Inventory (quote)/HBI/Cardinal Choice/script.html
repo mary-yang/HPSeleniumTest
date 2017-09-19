@@ -76,20 +76,32 @@
 	<td></td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
-	<td>//a[contains(text(),'Cardinal Choice 750')]</td>
+	<td>click</td>
+	<td>id=carrier-chubb-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//a[contains(text(),'Cardinal Choice 750')]</td>
-	<td>planname</td>
+	<td>//label[@title=&quot;Chubb&quot;]/span[2]</td>
+	<td>num</td>
+</tr>
+
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//a[contains(text(),'Cardinal Choice 1000')]</td>
+	<td></td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${planname}</td>
+	<td>${num}</td>
 	<td></td>
 </tr>
+
 
 </tbody></table>
 </body>
@@ -136,6 +148,11 @@
 	
 	
 
+	
+	
+
+	
+	
 	
 	
 	
