@@ -72,10 +72,20 @@ sanity4/24</td>
 	<td>//li[contains(@class,'js-quote-product-tab quote-info-product-tab active')]</td>
 	<td>defaultProductline</td>
 </tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=HEALTH BENEFIT INSURANCE PLANS&quot;)</td>
+    <td></td>
+</tr>
 
 <tr>
 	<td>click</td>
 	<td>link=HEALTH BENEFIT INSURANCE PLANS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
 	<td></td>
 </tr>
 <tr>
@@ -85,11 +95,31 @@ sanity4/24</td>
 </tr>
 
 <tr>
+	<td>store</td>
+	<td>HBI is available</td>
+	<td>hbiavailability </td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=SHORT TERM HEALTH INSURANCE PLANS&quot;)</td>
+    <td></td>
+</tr>
+
+<tr>
 	<td>click</td>
 	<td>link=SHORT TERM HEALTH INSURANCE PLANS</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
 <tr>
 	<td>verifyText</td>
 	<td>css=p.quote-lead-sentence</td>
@@ -97,12 +127,28 @@ sanity4/24</td>
 </tr>
 
 
+<tr>
+	<td>store</td>
+	<td>STM is available</td>
+	<td>stmavailability </td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
 
 	</tbody>
 </table>
 
 	
 
+	
+	
+	
+	
+	
+	
 	
 	
 	

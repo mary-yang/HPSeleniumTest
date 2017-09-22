@@ -1,10 +1,4 @@
-AL, AR, AZ, DC, GA, HI, ID, IL, MI, NE, NV, OK, PA, SC, TX, VA, WI
+* Make sure AR - Default to HBI Test
+* Make sure STM/HBI quotes displayed according the product State Availability 
 
-Please add and complete ASAP so these states can go live. 10 new Assc States: IN, KY, LA, MS, NC, ND, OH, TN, WV, WY
-
-CT, IA, KS, ME, MD, MO, NM, OR, SD and UT
-
-CO FL https://www.pivotaltracker.com/story/show/137982537
-
-
-AL, AR, AZ, CO,CT,DC, GA,FL, HI, ID, IA,IL,IN, KS,KY,LA, MD,ME,MI, MO,MS,NC,ND,NE, NV, OH,OK, OR,PA, SC, SD,TN,TX, UT,VA, WI,  WV, WY  
+* Make sure these two product line can be toggle.
