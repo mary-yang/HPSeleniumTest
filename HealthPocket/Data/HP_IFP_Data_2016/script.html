@@ -1,0 +1,93 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Jabir/HP_IFP_Data_2016</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Landscape</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/individual-health-insurance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=location</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div/div/div/div/div/ul/li/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div/div/div/div/div/ul/li/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='censusDetailsSummary']/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/individual-health-insurance/quote/2016</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='censusDetailsSummary']/ul/li</td>
+	<td>City</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='pageHeader']/h1/strong</td>
+	<td>Number</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${City}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Number}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='filterCarriers']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='filterCarriers']/div/div</td>
+	<td>Carriers</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Carriers}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
