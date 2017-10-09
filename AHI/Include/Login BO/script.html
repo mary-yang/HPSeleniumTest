@@ -4,24 +4,20 @@
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>http://praetemptatus.agilehealthinsurance.com/back-office/reporting?page=1&pageSize=1000&dispositionType=A&reportType=A&requireContactInfo=false</td>
+	<td>http://praetemptatus.agilehealthinsurance.com/back-office</td>
 	<td></td>
 </tr>
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent('id=identifierId')</td>
+	<td>verifyElementPresent('//div[@id='view_container']/form/div[2]/div/div/div/ul/li/div/div[2]/p[2]')</td>
 	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=identifierId</td>
-	<td>denis.yu1111@gmail.com</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=span.RveJvd.snByac</td>
+	<td>//div[@id='view_container']/form/div[2]/div/div/div/ul/li/div/div[2]/p[2]</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>sendKeys</td>
 	<td>name=password</td>
@@ -45,6 +41,7 @@
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	
