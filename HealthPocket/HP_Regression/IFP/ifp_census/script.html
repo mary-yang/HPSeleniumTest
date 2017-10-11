@@ -21,130 +21,18 @@
 -->
 <!--census-->
 <tr>
-	<td>verifyText</td>
-	<td>id=census-title</td>
-	<td>Find health insurance plans for a:</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='censusDetailsSummary']/ul/li/span</td>
-	<td>*zip code missing*</td>
-</tr>
-<tr>
 	<td>waitForVisible</td>
-	<td>css=a.sprite-dark-info.glossary</td>
-	<td></td>
-</tr>
-<!--applicant-->
-<tr>
-	<td>verifyText</td>
-	<td>//li[@id='js-member-container']/span/span[2]/a</td>
-	<td>35 year old individual</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=35 year old individual</td>
+	<td>id=location</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>clickAt</td>
+	<td>id=location</td>
 	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>id=dob-P-0</td>
-	<td>10/10/1980</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@type='button'])[5]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>4000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//li[@id='js-member-container']/span/span[2]/a</td>
-	<td>36 year old individual</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-member-container']/span/span[2]/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@type='button'])[3]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>id=dob-S-1</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=dob-S-1</td>
-	<td>11/11/1978</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@type='button'])[5]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//li[@id='js-member-container']/span/span[2]/a</td>
-	<td>Family of 2</td>
-</tr>
-<tr>
-	<td>selectWindow</td>
-	<td>null</td>
-	<td></td>
-</tr>
-<!--location-->
-<tr>
-	<td>verifyText</td>
-	<td>//li[@id='js-location-container']/span/span[2]/a</td>
-	<td>California</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-location-container']/span/span[2]/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=responsive-zip-input</td>
+	<td>id=location</td>
 	<td>90001</td>
 </tr>
 <tr>
@@ -159,12 +47,38 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1500</td>
+	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[@id='js-location-collapse']/div/div[2]/button</td>
+	<td>id=submitCensus</td>
+	<td></td>
+</tr>
+<!--applicant-->
+<tr>
+	<td>waitForVisible</td>
+	<td>//div[@id='memberForm-0']/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='memberForm-0']/input</td>
+	<td>36</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submitCensus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
 	<td></td>
 </tr>
 <tr>
@@ -174,13 +88,133 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//li[@id='js-location-container']/span/span[2]/a</td>
-	<td>Firestone Park , CA</td>
+	<td>//div[@id='censusDetailsSummary']/ul/li</td>
+	<td>90001 - Los Angeles, CA</td>
 </tr>
 <tr>
-	<td>selectWindow</td>
-	<td>null</td>
+	<td>verifyText</td>
+	<td>//div[@id='censusDetailsSummary']/ul/li[2]</td>
+	<td>36 years / M</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=editProfile</td>
 	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[contains(text(),'+ Spouse')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>//button[contains(text(),'+ Spouse')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//button[contains(text(),'+ Spouse')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'+ Spouse')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//div[@id='memberForm-1']/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=editProfile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='memberForm-1']/input</td>
+	<td>36</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submitCensus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='censusDetailsSummary']/ul/li[2]</td>
+	<td>36 years / M + 1 Family Member</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=editProfile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[contains(text(),'+ Child')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>//button[contains(text(),'+ Child')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//button[contains(text(),'+ Child')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'+ Child')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//div[@id='memberForm-2']/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='memberForm-2']/input</td>
+	<td>36</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submitCensus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='censusDetailsSummary']/ul/li[2]</td>
+	<td>36 years / M + 2 Family Member</td>
 </tr>
 <!--subsidy-->
 <tr>
@@ -190,7 +224,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=does not qualify</td>
+	<td>id=editProfile</td>
 	<td></td>
 </tr>
 <tr>
@@ -200,17 +234,17 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>id=household-income-label</td>
+	<td>//div[@id='incomeSection']/div/label</td>
 	<td>Annual Household Income</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=applicant-tab-income-input</td>
+	<td>id=income</td>
 	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>id=applicant-tab-income-input</td>
+	<td>id=income</td>
 	<td>20000</td>
 </tr>
 <tr>
@@ -220,7 +254,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=(//button[@type='button'])[7]</td>
+	<td>id=submitCensus</td>
 	<td></td>
 </tr>
 <tr>
@@ -255,23 +289,18 @@
 	<td>does not have health insurance.</td>
 </tr>
 <tr>
-	<td>clickAt</td>
-	<td>css=span.missing</td>
-	<td></td>
-</tr>
-<tr>
 	<td>pause</td>
 	<td>3000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>select</td>
-	<td>css=select.span12.js-carriers-dropdown</td>
-	<td>label=Cigna</td>
+	<td>click</td>
+	<td>//div[@id='filterCarriers']/button</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=(//button[@type='button'])[8]</td>
+	<td>id=carrier-Health Net</td>
 	<td></td>
 </tr>
 <tr>
@@ -281,7 +310,7 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-        <td>xpath=//div[4]/div/div/li[4]/span/span[2]/a</td>	
+        <td>//div[@id='filterCarriers']/button</td>	
 	<td>Cigna California Bronze Plan*</td>
 </tr>
 <tr>
@@ -292,6 +321,21 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

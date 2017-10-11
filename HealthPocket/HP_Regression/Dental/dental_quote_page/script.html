@@ -27,28 +27,28 @@
 <!--census-->
 <tr>
 	<td>verifyText</td>
-	<td>id=census-text-wrapper</td>
-	<td>Find dental insurance for a 35 year old individualDate of BirthAPPLICANT+ Spouse+ ChildUpdate Results<br /><br /><br /> living in californiaZip Code<br /><br />Update Results</td>
+	<td>id=censusCompact</td>
+	<td>Personalize Your Quote zip code missing35 years / M EDIT</td>
 </tr>
 <!--census-zip code-->
 <tr>
 	<td>click</td>
-	<td>//li[@id='js-location-container']/span/span[2]/a</td>
+	<td>id=editProfile</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>id=responsive-zip-input</td>
+	<td>id=location</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAt</td>
-	<td>id=responsive-zip-input</td>
+	<td>id=location</td>
 	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>id=responsive-zip-input</td>
+	<td>id=location</td>
 	<td>90001</td>
 </tr>
 <tr>
@@ -66,27 +66,7 @@
 	<td>1000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='js-location-collapse']/div/div[2]/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//li[@id='js-location-container']/span/span[2]/a</td>
-	<td>Firestone Park, CA</td>
-</tr>
 <!--applicant-->
-<tr>
-	<td>click</td>
-	<td>link=35 year old individual</td>
-	<td></td>
-</tr>
 <tr>
 	<td>waitForVisible</td>
 	<td>id=dob-P-0</td>
@@ -104,7 +84,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[@id='js-applicants-collapse']/div/div/button[3]</td>
+	<td>id=submitCensus</td>
 	<td></td>
 </tr>
 <tr>
@@ -113,9 +93,19 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>verifyText</td>
-	<td>css=a.js-collapse-toggle.census-section-toggle</td>
-	<td>36 year old individual</td>
+	<td>//div[@id='censusDetailsSummary']/ul/li</td>
+	<td>90001 - Los Angeles, CA</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='censusDetailsSummary']/ul/li[2]</td>
+	<td>36 years / M</td>
 </tr>
 <!--narrow by tool-->
 <!--monthly cost-->
@@ -152,9 +142,10 @@
 <tr>
 	<td>storeText</td>
 	<td>//div[@id='filterPlanRanges']/div/div/ul/li[3]/label
-	
-	
-	
-	
+</tr>
+</tbody></table>
+</body>
+</html>
+
 	
 	
