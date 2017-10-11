@@ -1,15 +1,15 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Compare Rates/Spot Test/QA_testprod_Compare_rate/QA_testprod_urFront_Standalone</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Compare Rates/Rate Diff/QA_testprod_Compare_rate/UpFront_Standalone</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">compare_rate</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td>${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/dental-insurance/quote?census[location][zip]=${zipcode}&amp;
+	<td>${ENV}/dental-insurance/quote?census[location][zip]=${zipcode}&amp;
 census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_gender}&amp;census[member][0][role]=P&amp;
 census[member][${Spouse_enable}][dob]=${Spouse_dob}&amp;census[member][${Spouse_enable}][gender]=${Spouse_gender}&amp;census[member][${Spouse_enable}][role]=${Spouse}&amp;
 census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_enable}][gender]=${Child_gender}&amp;census[member][${Child_enable}][role]=${Child}&census[oneTimePaymentSelected]=true</td>
@@ -92,6 +92,8 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 </body>
 </html>
 
+	
+	
 	
 	
 	
