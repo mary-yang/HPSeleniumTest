@@ -1,26 +1,16 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Denis/Mary/Bestseller</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/bestsellers/dental</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td>${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td>${ENV}/dental-insurance-quotes</td>
 	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Quote & Save Today</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=h1.census-main-heading</td>
-	<td>Compare Health Insurance Quotes*</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -85,36 +75,6 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='featuredPlan']/li/div/div[2]/ul/li/span[2]</td>
-	<td>Deductible</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${Deductible}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='featuredPlan']/li/div/div[2]/ul/li[2]/span[2]</td>
-	<td>Coinsurance</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${Coinsurance}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='featuredPlan']/li/div/div[2]/ul/li[3]/span[2]</td>
-	<td>Max_Out_of_Pocket</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${Max_Out_of_Pocket}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
 	<td>//div[@id='js-quote-filters']/div[2]</td>
 	<td>Carriers</td>
 </tr>
@@ -126,38 +86,10 @@
 
 <tr>
 	<td>storeText</td>
-	<td>//ul/li/div/div[2]/div/h3/a</td>
+	<td>//li[2]/div/div[2]/div/h3/a</td>
 	<td>Bestsellername2</td>
 </tr>
 
-<tr>
-	<td>storeText</td>
-	<td>//li[2]/div/div[2]/div/h3/a</td>
-	<td>Bestsellername3</td>
-</tr>
-
-<tr>
-	<td>storeText</td>
-	<td>//li[3]/div/div[2]/div/h3/a</td>
-	<td>Bestsellername4</td>
-</tr>
-
-<tr>
-	<td>storeText</td>
-	<td>//li[4]/div/div[2]/div/h3/a</td>
-	<td>Bestsellername5</td>
-</tr>
-
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(//li[5]/div/div[2]/div/h3/a)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//li[5]/div/div[2]/div/h3/a</td>
-	<td>Bestsellername6</td>
-</tr>
 
 <tr>
 	<td>ENDIF</td>
@@ -237,4 +169,8 @@
 	
 	
 
+	
+	
+
+	
 	

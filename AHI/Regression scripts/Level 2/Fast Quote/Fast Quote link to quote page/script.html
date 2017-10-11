@@ -1,16 +1,16 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression/Fast Quote/Fast Quote link to quote page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Fast Quote/Fast Quote link to quote page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">b</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td>${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
 <!----------------------------------------基本网址----------------->
 <tr>
 	<td>store</td>
-	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/quote?${UTM}census[location][zip]=${zip}&amp;census[oneTimePaymentSelected]=${oneTimePaymentSelected}</td>
+	<td>${ENV}/term-health-insurance/quote?${UTM}census[location][zip]=${zip}&amp;census[oneTimePaymentSelected]=${oneTimePaymentSelected}</td>
 	<td>base</td>
 </tr>
 <!----------------------------------------主要申请人----------------->
@@ -213,7 +213,7 @@
 
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/show</td>
+	<td>${ENV}/api/context/show</td>
 	<td></td>
 </tr>
 <tr>
@@ -224,6 +224,7 @@
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	
