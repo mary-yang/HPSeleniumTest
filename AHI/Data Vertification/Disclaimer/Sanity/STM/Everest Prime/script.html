@@ -120,12 +120,17 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
+	<td>//div[3]/div[3]/div[descendant::p[contains(text(),'Waiting Period for Illnesses')]]</td>
+	<td>Waiting Period for Illnesses 5 days</td>
+</tr>
+<tr>
+	<td>verifyText</td>
 	<td>//section[@id='js-plan-disclaimers']/div</td>
 	<td>${General Disclaimers}</td>
 </tr>
 
 <tr>
-	<td>click</td>
+	<td>clickAndWait</td>
 	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
@@ -133,6 +138,16 @@ sanity4/24</td>
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4</td>
+	<td>exact:*WAITING PERIOD</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.waiting-period &gt; p</td>
+	<td>This plan includes a waiting period for illness. For more information, see Plan Limitations and Exclusions.</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -283,6 +298,17 @@ sanity4/24</td>
 </tr>
 
 <tr>
+	<td>verifyText</td>
+	<td>css=div.waiting-period &gt; h4</td>
+	<td>exact:*WAITING PERIOD</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.waiting-period &gt; p</td>
+	<td>This plan includes a waiting period for illness. For more information, see Plan Limitations and Exclusions.</td>
+</tr>
+
+<tr>
 	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
@@ -429,6 +455,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	
