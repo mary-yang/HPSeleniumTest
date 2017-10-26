@@ -16,6 +16,11 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
     <td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<tr>
     <td>ELSE</td>
     <td></td>
     <td></td>
@@ -60,7 +65,11 @@ census[member][${Spouse_enable}][dob]=${Spouse_dob}&amp;census[member][${Spouse_
 census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_enable}][gender]=${Child_gender}&amp;census[member][${Child_enable}][role]=${Child}</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
 <tr>
     <td>IF</td>
     <td>verifyElementPresent(&quot;//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div/h3/a[contains(text(),'${Plan_name}')]]/div/div/div[2]/div&quot;)</td>
@@ -148,6 +157,7 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	
 	
 
+	
 	
 	
 	
