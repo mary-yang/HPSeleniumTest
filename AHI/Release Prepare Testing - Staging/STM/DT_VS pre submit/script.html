@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/DT_VS pre submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/STM/DT_VS pre submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -8,13 +8,8 @@ sanity4/24</td>
 	<tbody>
 
 <tr>
-	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
-	<td></td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
 	<td></td>
 </tr>
 <tr>
@@ -144,9 +139,10 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//*[@id='apply']/div[3]/div[2]/div[1]/div[1]/div/div[1]/table/tbody/tr[2]/td/a/span</td>
+	<td>//body[@id='apply']/div/div[2]/div/div/div/div/table/tbody/tr[2]/td/a/span</td>
 	<td>${planname}</td>
 </tr>
+
 <tr>
 	<td>verifyText</td>
 	<td>//*[@id='apply']//tr[descendant::td[1][contains(text(),'Base Premium')]]/td[2]</td>
@@ -358,22 +354,10 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForLocation</td>
-	<td>*page/6* </td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='js-app-confirmation']</td>
-	<td>*Congratulations*</td>
-</tr>
-<!---------
-<tr>
 	<td>include</td>
 	<td>AHI/Include/Congratulation</td>
 	<td></td>
 </tr>
-------------->
 <tr>
 	<td>verifyElementNotPresent</td>
 	<td>css=div.app-message-container.warning &gt; p</td>
@@ -384,6 +368,7 @@ sanity4/24</td>
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	

@@ -1,15 +1,15 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/Dental Standalone/National Wide Application</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/Dental Standalone/National Wide Application</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">Standalone_Dental</td></tr>
 </thead><tbody>
 <tr>
-	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/dental-insurance-quotes</td>
+	<td>${ENV}/dental-insurance-quotes</td>
 	<td></td>
 </tr>
 <tr>
@@ -170,24 +170,11 @@
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
-
-<tr>
-	<td>waitForLocation</td>
-	<td>*page/4* </td>
-	<td></td>
-</tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-app-confirmation']</td>
+	<td>//*[@id='js-app-confirmation']/div/h2/span</td>
 	<td>*Congratulations*</td>
 </tr>
-<!---------
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Congratulation</td>
-	<td></td>
-</tr>
-------------->
 <tr>
 	<td>storeText</td>
 	<td>//*[@id='js-app-confirmation']/div[1]/ul/li[1]/div/p[1]/span[2]</td>
@@ -202,7 +189,6 @@
 </body>
 </html>
 
-	
 	
 	
 	
