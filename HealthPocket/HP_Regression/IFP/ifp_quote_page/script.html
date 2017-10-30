@@ -9,7 +9,17 @@
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.healthpocket.com/individual-health-insurance/quote/2016?zip=90001</td>
+	<td>http://${ENV}.healthpocket.com/individual-health-insurance/2017</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=location</td>
+	<td>90001</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.location.selected</td>
 	<td></td>
 </tr>
 <tr>
@@ -40,57 +50,22 @@
 	<td>Monthly Cost</td>
 </tr>
 <!--census-->
+<!--census-->
 <tr>
 	<td>click</td>
-	<td>link=35 year old individual</td>
+	<td>id=editProfile</td>
 	<td></td>
 </tr>
+<!--applicant-->
 <tr>
-	<td>pause</td>
-	<td>1500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=dob-P-0</td>
-	<td>10/10/1980</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@type='button'])[5]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-
-<!--继续census-->
-<tr>
-	<td>click</td>
-	<td>link=does not qualify</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1500</td>
+	<td>waitForVisible</td>
+	<td>//div[@id='memberForm-0']/input</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=applicant-tab-income-input</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=applicant-tab-income-input</td>
-	<td>25000</td>
+	<td>//div[@id='memberForm-0']/input</td>
+	<td>36</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -99,12 +74,188 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=(//button[@type='button'])[7]</td>
+	<td>id=submitCensus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
 	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='censusDetailsSummary']/ul/li</td>
+	<td>90001 - Los Angeles, CA</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='censusDetailsSummary']/ul/li[2]</td>
+	<td>36 years / M</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=editProfile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[contains(text(),'+ Spouse')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>//button[contains(text(),'+ Spouse')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//button[contains(text(),'+ Spouse')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'+ Spouse')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//div[@id='memberForm-1']/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=editProfile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='memberForm-1']/input</td>
+	<td>36</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submitCensus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='censusDetailsSummary']/ul/li[2]</td>
+	<td>36 years / M + 1 Family Member</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=editProfile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[contains(text(),'+ Child')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>//button[contains(text(),'+ Child')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//button[contains(text(),'+ Child')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'+ Child')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//div[@id='memberForm-2']/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='memberForm-2']/input</td>
+	<td>36</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submitCensus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='censusDetailsSummary']/ul/li[2]</td>
+	<td>36 years / M + 2 Family Member</td>
+</tr>
+<!--subsidy-->
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='js-subsidy-container']/span/span[2]/a</td>
+	<td>does not qualify</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=editProfile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='incomeSection']/div/label</td>
+	<td>Annual Household Income</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=income</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=income</td>
+	<td>20000</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submitCensus</td>
 	<td></td>
 </tr>
 <tr>
@@ -332,62 +483,6 @@
 	<td>6000</td>
 	<td></td>
 </tr>
-<!--personal score-->
-<tr>
-	<td>clickAt</td>
-	<td>//button[@class='btn dropdown-toggle planPersonalScore ']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>css=#filterPersonalScore &gt; div.dropdown-menu &gt; div.filters</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=#filterPersonalScore &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#planPersonalScoreGlossary &gt; div.glossaryWrapper &gt; p.emphasize</td>
-	<td>PERSONAL SCORE</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=#filterPersonalScore &gt; div.dropdown-menu &gt; div.filtersContent &gt; div.cta &gt; p.glossaryLink.toggleGlossary</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=planPersonalScore-5</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyVisible</td>
-	<td>link=9 and 10</td>
-	<td></td>
-</tr>
-<tr>
-	<td>selectWindow</td>
-	<td>null</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=9 and 10</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
 <!--Plan Type-->
 <tr>
 	<td>clickAt</td>
@@ -416,7 +511,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=planType-PPO</td>
+	<td>id=planType-EPO</td>
 	<td></td>
 </tr>
 <tr>
@@ -427,11 +522,11 @@
 <tr>
 	<td>verifyText</td>
 	<td>css=span.planType.planSection &gt; p</td>
-	<td>PPO</td>
+	<td>EPO</td>
 </tr>
 <tr>
 	<td>verifyVisible</td>
-	<td>link=PPO</td>
+	<td>link=EPO</td>
 	<td></td>
 </tr>
 <tr>
@@ -441,7 +536,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=PPO</td>
+	<td>link=EPO</td>
 	<td></td>
 </tr>
 <tr>
@@ -600,7 +695,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[@id='sort']/div/div/ul/li[7]/a/span</td>
+	<td>//div[@id='sort']/div/div/ul/li[6]/a/span</td>
 	<td></td>
 </tr>
 <tr>
@@ -663,7 +758,6 @@
 </tbody></table>
 </body>
 </html>	
-	
 	
 	
 	

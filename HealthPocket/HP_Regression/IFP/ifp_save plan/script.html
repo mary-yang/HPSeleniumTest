@@ -9,29 +9,63 @@
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.healthpocket.com/individual-health-insurance/quote/2016?zip=90001</td>
-	<td></td>
-</tr>
-<!--census-->
-<tr>
-	<td>click</td>
-	<td>css=a.js-collapse-toggle.census-section-toggle</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>id=dob-P-0</td>
+	<td>http://${ENV}.healthpocket.com/individual-health-insurance/2017</td>
 	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>id=dob-P-0</td>
-	<td>10/10/1980</td>
+	<td>id=location</td>
+	<td>90001</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--
+<tr>
+	<td>include</td>
+	<td>Denis/HealthPocket/include/ifp_delayed_popup</td>
+	<td></td>
+</tr>
+-->
+<tr>
+	<td>verifyTitle</td>
+	<td>Individual and Family Health Insurance (Obamacare) - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading &gt; strong</td>
+	<td>* Obamacare Health Plans Found</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='sort']/div/button</td>
+	<td>Monthly Cost</td>
+</tr>
+<!--census-->
+<!--census-->
+<tr>
+	<td>click</td>
+	<td>id=editProfile</td>
+	<td></td>
+</tr>
+<!--applicant-->
+<tr>
+	<td>waitForVisible</td>
+	<td>//div[@id='memberForm-0']/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='memberForm-0']/input</td>
+	<td>36</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -40,24 +74,19 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[@id='js-applicants-collapse']/div/div/button[3]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
+	<td>id=submitCensus</td>
 	<td></td>
 </tr>
 <!--save plan-->
 <tr>
 	<td>verifyVisible</td>
-	<td>xpath=//span[9]/div</td>
+	<td>xpath=//span[8]/div</td>
 	<td></td>
 </tr>
 
 <tr>
 	<td>click</td>
-	<td>xpath=//span[9]/div</td>
+	<td>xpath=//span[8]/div</td>
 	<td></td>
 </tr>
 <tr>
@@ -86,12 +115,6 @@
 	<td>Saved Plans</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>8000</td>
-	<td></td>
-</tr>
-
-<tr>
 	<td>verifyText</td>
 	<td>css=span.saveThisPlanCount</td>
 	<td>1</td>
@@ -100,7 +123,7 @@
 
 <tr>
 	<td>click</td>
-	<td>xpath=//li[3]/a/span[9]/div</td>
+	<td>xpath=//li[3]/a/span[8]/div</td>
 	<td></td>
 </tr>
 <tr>
@@ -142,7 +165,7 @@
 
 <tr>
 	<td>click</td>
-	<td>xpath=//li[3]/a/span[9]/div</td>
+	<td>xpath=//li[3]/a/span[8]/div</td>
 	<td></td>
 </tr>
 <tr>
@@ -178,48 +201,28 @@
 <!--add a current plan-->
 <tr>
 	<td>click</td>
-	<td>link=does not have health insurance.</td>
+	<td>id=editProfile</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForVisible</td>
-	<td>id=resp-no-plan</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>10000</td>
+	<td>waitForElementPresent</td>
+	<td>css=select.insuranceBox</td>
 	<td></td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>css=select.span12.js-carriers-dropdown</td>
+	<td>css=select.insuranceBox</td>
 	<td>label=Cigna</td>
 </tr>
 <tr>
-	<td>waitForVisible</td>
-	<td>//label[contains(text(),'Plan')]</td>
+	<td>click</td>
+	<td>css=option[value=&quot;Cigna&quot;]</td>
 	<td></td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>//div[@id='js-current-plan-collapse']/div/div[2]/div/select</td>
-	<td>label=Cigna California Gold (2016)</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[@id='js-current-plan-collapse']/div/div[5]/button</td>
+	<td>id=submitCensus</td>
 	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//li[@class='newPlanContainer metal currentPlan']/a/span[2]/span</td>
-	<td>current_plan_name</td>
 </tr>
 <tr>
 	<td>storeText</td>
@@ -355,6 +358,21 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

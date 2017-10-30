@@ -91,7 +91,7 @@
 <!--census-->
 <tr>
 	<td>click</td>
-	<td>link=does not qualify</td>
+	<td>id=editProfile</td>
 	<td></td>
 </tr>
 <tr>
@@ -100,14 +100,19 @@
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>//div[@id='incomeSection']/div/label</td>
+	<td>Annual Household Income</td>
+</tr>
+<tr>
 	<td>type</td>
-	<td>id=applicant-tab-income-input</td>
+	<td>id=income</td>
 	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>id=applicant-tab-income-input</td>
-	<td>25000</td>
+	<td>id=income</td>
+	<td>20000</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -116,7 +121,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=(//button[@type='button'])[7]</td>
+	<td>id=submitCensus</td>
 	<td></td>
 </tr>
 <tr>
@@ -144,11 +149,15 @@
 	<td></td>
 </tr>
 -->
-
+<tr>
+	<td>click</td>
+	<td>id=editProfile</td>
+	<td></td>
+</tr>
 <!--add current plan-->
 <tr>
 	<td>clickAt</td>
-	<td>css=span.missing</td>
+	<td>css=select.insuranceBox</td>
 	<td></td>
 </tr>
 <tr>
@@ -158,50 +167,24 @@
 </tr>
 <tr>
 	<td>select</td>
-	<td>css=select.span12.js-carriers-dropdown</td>
+	<td>css=select.insuranceBox</td>
 	<td>label=Cigna</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=(//button[@type='button'])[8]</td>
+	<td>id=submitCensus</td>
 	<td></td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=p.census-plan-name</td>
-	<td>current_plan1</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=strong</td>
-	<td>aa</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>'${current_plan1}'.replace('${aa} ','')</td>
-	<td>current_plan</td>
-</tr>
-<tr>
-	<td>refresh</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=span.planName</td>
-	<td>${current_plan}</td>
-</tr>
-
-
 </tbody></table>
 </body>
 </html>
 
+	
+	
+	
+	
+	
+	
 	
 	
 	
