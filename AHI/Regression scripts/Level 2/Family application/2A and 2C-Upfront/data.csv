@@ -1,4 +1,4 @@
-"state","zip","carrierid","uri"
+"state","zipcode","carrierid","uri"
 "##FL","32099","carrier-hccadvantage-","${uri}"
 "##FL","32099","carrier-hccflexible-","${uri}"
 "CO","80219","carrier-everest-one-","${uri}"

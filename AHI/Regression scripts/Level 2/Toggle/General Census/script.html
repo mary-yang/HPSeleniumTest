@@ -74,13 +74,19 @@ sanity4/24</td>
 </tr>
 <tr>
     <td>IF</td>
-    <td>verifyElementPresent(&quot;link=HEALTH BENEFIT INSURANCE PLANS&quot;)</td>
+    <td>verifyElementPresent(&quot;link=Health Benefit Insurance Plans&quot;)</td>
     <td></td>
 </tr>
 
 <tr>
+	<td>store</td>
+	<td>HBI is available</td>
+	<td>hbiavailability</td>
+</tr>
+
+<tr>
 	<td>click</td>
-	<td>link=HEALTH BENEFIT INSURANCE PLANS</td>
+	<td>link=Health Benefit Insurance Plans</td>
 	<td></td>
 </tr>
 <tr>
@@ -91,14 +97,9 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>css=p.quote-lead-sentence</td>
-	<td>Health Benefit Insurance plans provide financial protection for commonly needed medical services. The medical services covered by each plan are highlighted.</td>
+	<td>Health benefit insurance pays you cash for common medical events like visiting the doctor, staying at the hospital or visiting the emergency room.</td>
 </tr>
 
-<tr>
-	<td>store</td>
-	<td>HBI is available</td>
-	<td>hbiavailability </td>
-</tr>
 <tr>
     <td>ENDIF</td>
     <td></td>
@@ -106,13 +107,17 @@ sanity4/24</td>
 </tr>
 <tr>
     <td>IF</td>
-    <td>verifyElementPresent(&quot;link=SHORT TERM HEALTH INSURANCE PLANS&quot;)</td>
+    <td>verifyElementPresent(&quot;link=Short Term Health Insurance Plans&quot;)</td>
     <td></td>
 </tr>
-
+<tr>
+	<td>store</td>
+	<td>STM is available</td>
+	<td>stmavailability</td>
+</tr>
 <tr>
 	<td>click</td>
-	<td>link=SHORT TERM HEALTH INSURANCE PLANS</td>
+	<td>link=Short Term Health Insurance Plans</td>
 	<td></td>
 </tr>
 <tr>
@@ -127,11 +132,7 @@ sanity4/24</td>
 </tr>
 
 
-<tr>
-	<td>store</td>
-	<td>STM is available</td>
-	<td>stmavailability </td>
-</tr>
+
 <tr>
     <td>ENDIF</td>
     <td></td>
@@ -143,6 +144,11 @@ sanity4/24</td>
 
 	
 
+	
+	
+	
+	
+	
 	
 	
 	

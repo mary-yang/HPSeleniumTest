@@ -191,14 +191,24 @@
 	<td></td>
 </tr>
 <tr>
+	<td>clickAndWait</td>
+	<td>id=js-applicant-details-link</td>
+	<td></td>
+</tr>
+<tr>
 	<td>verifyText</td>
-	<td>//*[@id='apply']//table/tbody/tr[descendant::td[1][contains(text(),'Primary Applicant')]]/td[2]</td>
+	<td>//div[@id='applicant-info-container']/div[2]/table/tbody/tr[2]/td[2]/span</td>
 	<td>${DOB1}*</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//*[@id='apply']//table/tbody/tr[descendant::td[1][contains(text(),'Location')]]/td[2]</td>
+	<td>//div[@id='applicant-info-container']/div[2]/table/tbody/tr/td[2]/span</td>
 	<td>${zip}*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-close-button</td>
+	<td></td>
 </tr>
 <tr>
 	<td>storeEval</td>
@@ -224,6 +234,8 @@
 </tbody></table>
 </body>
 </html>
+	
+	
 	
 	
 	
