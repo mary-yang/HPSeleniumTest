@@ -1,0 +1,163 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/hp_toggle</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">medicare_quote_ads</td></tr>
+</thead><tbody>
+<!--case1: sort-->
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/individual-health-insurance/quote/${year}?zip=${zipcode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//ul[@id='plans']/li[2]/a/span/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=See All Short Term Health Plans&quot;)</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>store</td>
+    <td>link to STM page</td>
+    <td>result</td>
+</tr>
+
+<tr>
+    <td>store</td>
+    <td>echo</td>
+    <td>${result}</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=See All Health Benefit Plans&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+    <td>store</td>
+    <td>link to HBI page</td>
+    <td>result</td>
+</tr>
+<tr>
+    <td>store</td>
+    <td>echo</td>
+    <td>${result}</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=healthcare.gov&quot;)</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>store</td>
+    <td>link to GOV page</td>
+    <td>result</td>
+</tr>
+<tr>
+    <td>store</td>
+    <td>echo</td>
+    <td>${result}</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+  <td>verifyEval</td>
+  <td>var b=&quot;${result}&quot;;b=b.match(&quot;${expect}&quot;)</td>
+  <td>${expect}</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
