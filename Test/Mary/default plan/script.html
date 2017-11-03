@@ -4,12 +4,12 @@
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td>${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td>${ENV}</td>
 	<td></td>
 </tr>
 <tr>
@@ -61,6 +61,11 @@
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.quote-info-bar-census</td>
+	<td>${state}*</td>
 </tr>
 <tr>
 	<td>storeText</td>
@@ -182,6 +187,8 @@
 	
 	
 
+	
+	
 	
 	
 	
