@@ -4,12 +4,12 @@
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td>${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td>${ENV}</td>
 	<td></td>
 </tr>
 <tr>
@@ -173,80 +173,68 @@
 	<td></td>
 	<td></td>
 </tr>
-<!--
+
 <tr>
-	<td>storeText</td>
-	<td>//div[descendant::a[contains(text(),'Best Seller')]]/ul/li/div/div[2]/div/h3/a</td>
-	<td>Bestsellername1</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${Bestsellername1}</td>
+	<td>IF</td>
+	<td>verifyElementPresent(//li[5]/div/div[2]/div/h3/a)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[descendant::a[contains(text(),'Best Seller')]]/ul/li[2]/div/div[2]/div/h3/a</td>
-	<td>Bestsellername2</td>
+	<td>//li[6]/div/div[2]/div/h3/a</td>
+	<td>Bestsellername7</td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${Bestsellername2}</td>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(//li[5]/div/div[2]/div/h3/a)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[descendant::a[contains(text(),'Best Seller')]]/ul/li[3]/div/div[2]/div/h3/a</td>
-	<td>Bestsellername3</td>
+	<td>//li[7]/div/div[2]/div/h3/a</td>
+	<td>Bestsellername8</td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${Bestsellername3}</td>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(//li[5]/div/div[2]/div/h3/a)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[descendant::a[contains(text(),'Best Seller')]]/ul/li[4]/div/div[2]/div/h3/a</td>
-	<td>Bestsellername4</td>
+	<td>//li[8]/div/div[2]/div/h3/a</td>
+	<td>Bestsellername9</td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${Bestsellername4}</td>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(//li[5]/div/div[2]/div/h3/a)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[descendant::a[contains(text(),'Best Seller')]]/ul/li[5]/div/div[2]/div/h3/a</td>
-	<td>Bestsellername5</td>
+	<td>//li[9]/div/div[2]/div/h3/a</td>
+	<td>Bestsellername10</td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${Bestsellername5}</td>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
--->
-</tbody></table>
-</body>
-</html>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
