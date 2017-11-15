@@ -53,8 +53,28 @@
 	<td></td>
 </tr>
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
+	<td></td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
-	<td>link=Select This Plan</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Select This Plan')])[3]</td>
 	<td></td>
 </tr>
 <tr>
@@ -182,11 +202,11 @@
 	<td>id=member-P-1-lbs</td>
 	<td>150</td>
 </tr>
-<tr>
+<!--------------<tr>
 	<td>type</td>
 	<td>id=member-P-1-occupation</td>
 	<td>test</td>
-</tr>
+</tr>--------------->
 
 
 <tr>
@@ -565,6 +585,10 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
 	
 	
 	
