@@ -1,4 +1,1 @@
-C	AHI/Data Vertification/Compare Plan Details/All Carriers/*	http://praetemptatus.agilehealthinsurance.com	0 9 * * *	N		2
-C	AHI/Data Vertification/Disclaimer/*	http://praetemptatus.agilehealthinsurance.com	0 10 * * *	N		2
-C	AHI/IncompleteApps/*	http://praetemptatus.agilehealthinsurance.com	39 15 * * 3,6	N		2
-C	AHI/Regression scripts/*	http://praetemptatus.agilehealthinsurance.com	0 13 * * 4	N		2
+C	HealthPocket/Data/HP_IFP_Apply	www	50 9 * * *	N		2
