@@ -130,8 +130,18 @@
 
 <tr>
 	<td>storeText</td>
-	<td>//tr[4]/td[2]</td>
+	<td>//tr[5]/td[2]</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${a}'.substring(0,6)</td>
 	<td>mo_Fee</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${mo_Fee}</td>
+	<td></td>
 </tr>
 <tr>
 	<td>storeEval</td>
@@ -145,12 +155,15 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=tr.total-row > td.text-right</td>
+	<td>//tr[6]/td[2]/span</td>
 	<td>*${mo1}*</td>
 </tr>
 </tbody></table>
 </body>
 </html>
+	
+	
+	
 	
 	
 	

@@ -67,12 +67,27 @@ sanity4/24</td>
 	<td>*/quote*</td>
 	<td></td>
 </tr>
-
 <tr>
-	<td>pause</td>
-	<td>3000</td>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
 	<td></td>
 </tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>clickAndWait</td>
 	<td>//input[@data-id="${carrierid}"]</td>
@@ -203,6 +218,7 @@ sanity4/24</td>
 </body>
 </html>
 
+	
 	
 	
 	

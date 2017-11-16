@@ -77,27 +77,32 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
     <td></td>
 </tr>
 <tr>
-    <td>ELSE</td>
-    <td></td>
-    <td></td>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
 	<td>//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div/h3/a[contains(text(),'${Plan_name}')]]/div/div/div[2]/div</td>
-	<td>quote_QA_rate</td>
+	<td>quote_testprod_rate</td>
 </tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+
 
 <tr>
 	<td>storeText</td>
 	<td>//div[@id='featuredPlan']/li/div/div/div[2]/div</td>
-	<td>quote_QA_rate</td>
+	<td>quote_testprod_rate</td>
 </tr>
 <tr>
     <td>ENDIF</td>
     <td></td>
     <td></td>
 </tr>
-
 <tr>
 	<td>clickAndWait</td>
 	<td>link=${Plan_name}</td>
@@ -158,6 +163,7 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	
 	
 
+	
 	
 	
 	
