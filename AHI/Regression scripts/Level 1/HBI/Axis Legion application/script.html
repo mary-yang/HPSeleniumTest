@@ -119,15 +119,50 @@
 	<td></td>
 </tr>
 <tr>
-	<td>include</td>
-	<td>AHI/Include/UseTestCard</td>
-	<td></td>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4111 1111 1111 1111</td>
 </tr>
 <tr>
 	<td>click</td>
 	<td>id=credit-payment-authorization</td>
 	<td></td>
 </tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyValue('id=billing-zip','${zipcode}')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+
+<!---------<tr>
+	<td>include</td>
+	<td>AHI/Include/UseTestCard</td>
+	<td></td>
+</tr>---------------->
+
+
 <tr>
 	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
@@ -219,6 +254,8 @@
 	
 	
 
+	
+	
 	
 	
 	

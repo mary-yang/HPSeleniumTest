@@ -84,9 +84,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
+	<td>storeText</td>
 	<td>css=h1.dr-details-page-heading</td>
-	<td>${first_name}*</td>
+	<td>Detail_first_name</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>var b=&quot;${Detail_first_name}&quot;.toUpperCase();b=b.match(&quot;${first_name}&quot;)</td>
+	<td>${first_name}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -94,9 +99,19 @@
 	<td>${specialty}</td>
 </tr>
 <tr>
-	<td>verifyText</td>
+	<td>storeText</td>
 	<td>//div[@id='doctorLocation']/p</td>
-	<td>${address}&nbsp;&nbsp;${location}</td>
+	<td>address_location</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>var b="${address_location}".toUpperCase();b=b.match("${address}")</td>
+	<td>${address}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var b=&quot;${address_location}&quot;.toUpperCase();b=b.match(&quot;${location}&quot;)</td>
+	<td>${location}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -187,6 +202,18 @@
 </body>
 </html>
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

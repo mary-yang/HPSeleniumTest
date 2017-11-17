@@ -1,0 +1,4 @@
+"state","zipcode","year","result","expect"
+"AL","35215","2018","${result}","link to STM page"
+"California","90001","2018","${result}","link to HBI page"
+"AK","99504","2018","${result}","link to GOV page"
