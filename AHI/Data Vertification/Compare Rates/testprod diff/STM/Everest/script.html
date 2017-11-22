@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Compare Rates/Rate Diff/QA_testprod_Compare_rate/Everest</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Compare Rates/testprod diff/STM/Everest</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">compare_rate</td></tr>
 </thead><tbody>
@@ -10,6 +10,22 @@ census[member][${Spouse_enable}][dob]=${Spouse_dob}&amp;census[member][${Spouse_
 census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_enable}][gender]=${Child_gender}&amp;census[member][${Child_enable}][role]=${Child}</td>
 	<td></td>
 </tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>IF</td>
 	<td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]&quot;)</td>
@@ -58,6 +74,22 @@ census[member][${Spouse_enable}][dob]=${Spouse_dob}&amp;census[member][${Spouse_
 census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_enable}][gender]=${Child_gender}&amp;census[member][${Child_enable}][role]=${Child}</td>
 	<td></td>
 </tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>IF</td>
 	<td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]&quot;)</td>
@@ -142,6 +174,7 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	
 	
 
+	
 	
 	
 	
