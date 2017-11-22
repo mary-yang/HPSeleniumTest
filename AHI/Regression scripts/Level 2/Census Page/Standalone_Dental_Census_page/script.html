@@ -22,16 +22,7 @@
 	<td>${ENV}/dental-insurance-quotes</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>link=+ Spouse</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=+ Child</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=js-see-plans</td>
@@ -51,6 +42,38 @@
 	<td>verifyText</td>
 	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[4]</td>
 	<td>Please select a gender.</td>
+</tr>
+
+
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>60001</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>10/10/1980</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gender-m-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=+ Spouse</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=+ Child</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-see-plans</td>
+	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -77,21 +100,7 @@
 	<td>//div[@id='census-member-section-2']/div/div/div[2]/div[3]</td>
 	<td>Please select a gender.</td>
 </tr>
-<tr>
-	<td>sendKeys</td>
-	<td>css=input.js-zip.census-zip-input</td>
-	<td>60001</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=dob-0</td>
-	<td>10/10/1980</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=gender-m-0</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>sendKeys</td>
 	<td>id=dob-1</td>
@@ -213,6 +222,8 @@
 </body>
 </html>
 
+	
+	
 	
 	
 	
