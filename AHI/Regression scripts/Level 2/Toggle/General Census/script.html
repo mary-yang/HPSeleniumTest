@@ -63,14 +63,20 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
+	<td>pause</td>
+	<td>1000</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>storeText</td>
 	<td>//li[contains(@class,'js-quote-product-tab quote-info-product-tab active')]</td>
 	<td>defaultProductline</td>
+</tr>
+<tr>
+  <td>verifyEval</td>
+  <td>var b=&quot;${defaultProductline}&quot;;b=b.match(&quot;${expectedproductline}&quot;)</td>
+  <td>${expectedproductline}</td>
 </tr>
 <tr>
     <td>IF</td>
@@ -144,6 +150,8 @@ sanity4/24</td>
 
 	
 
+	
+	
 	
 	
 	
