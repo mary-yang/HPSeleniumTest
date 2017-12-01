@@ -63,15 +63,26 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
+	<td>pause</td>
+	<td>1000</td>
 	<td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=(edit)&quot;)</td>
+    <td></td>
 </tr>
 <tr>
 	<td>storeText</td>
 	<td>//li[contains(@class,'js-quote-product-tab quote-info-product-tab active')]</td>
 	<td>defaultProductline</td>
 </tr>
+<tr>
+  <td>verifyEval</td>
+  <td>var b=&quot;${defaultProductline}&quot;;b=b.match(&quot;${expectedproductline}&quot;)</td>
+  <td>${expectedproductline}</td>
+</tr>
+
 <tr>
     <td>IF</td>
     <td>verifyElementPresent(&quot;link=Health Benefit Insurance Plans&quot;)</td>
@@ -83,7 +94,11 @@ sanity4/24</td>
 	<td>HBI is available</td>
 	<td>hbiavailability</td>
 </tr>
-
+<tr>
+  <td>verifyEval</td>
+  <td>var b=&quot;${hbiavailability}&quot;;b=b.match(&quot;${expectedhbiavaiability}&quot;)</td>
+  <td>${expectedhbiavaiability}</td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>link=Health Benefit Insurance Plans</td>
@@ -100,6 +115,7 @@ sanity4/24</td>
 	<td>Health benefit insurance pays you cash for common medical events like visiting the doctor, staying at the hospital or visiting the emergency room.</td>
 </tr>
 
+
 <tr>
     <td>ENDIF</td>
     <td></td>
@@ -114,6 +130,11 @@ sanity4/24</td>
 	<td>store</td>
 	<td>STM is available</td>
 	<td>stmavailability</td>
+</tr>
+<tr>
+  <td>verifyEval</td>
+  <td>var b=&quot;${stmavailability}&quot;;b=b.match(&quot;${expectedstmavailablity}&quot;)</td>
+  <td>${expectedstmavailablity}</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -144,6 +165,10 @@ sanity4/24</td>
 
 	
 
+	
+	
+	
+	
 	
 	
 	
