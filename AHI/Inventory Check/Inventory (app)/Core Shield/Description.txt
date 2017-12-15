@@ -1,0 +1,18 @@
+Test Goal: Submit HII applications on testprod, including HCC Advantage, HCC Flexible, and Companion.
+
+Steps:
+
+1. Visit Home Page
+2. Visit Census Page
+3. Enter Census Information and go to quote page
+4. Select carrier and filter out plans in Quote Page. Select a plan, go to plan detail page. 
+5. Verify Monthly premium & plan name. Click "Apply" Button. Go to apply page.
+6. Enter more Census Information in apply page.Verify Monthly premium.And then go to online app.
+7. Complete and verify eligibility questions.Verify Monthly premium.
+8. Complete Applicant info
+9. Complete Payment info with Bank Draft.
+10. Complete Review Page.
+11. Confirm and Verify Monthly premium.
+
+Prod enabled states:
+AL,AZ,CO,DE,HI,IA,IL,IN,KY,LA,MS,ND,NE,NJ,NM,NV,OH,OK,OR,PA,RI,SC,TX,VA,VT,WI,WV,WY
