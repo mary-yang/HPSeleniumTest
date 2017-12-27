@@ -49,6 +49,21 @@
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>${DTGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/</td>
+	<td>${USASD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]/</td>
+	<td>${NWSD}</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>link=${planname}</td>
 	<td></td>
@@ -60,8 +75,14 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div</td>
+	<td>//div[@id='disclaimer-container']/div/</td>
 	<td>${DTGD}</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/</td>
+	<td>${NWSD}</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -78,7 +99,11 @@
 	<td>//div[@id='disclaimer-container']/div</td>
 	<td>${DTGD}</td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/</td>
+	<td>${NWSD}</td>
+</tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>css=span.js-apply-text.apply-button-text</td>
@@ -299,6 +324,9 @@
 	
 	
 
+	
+	
+	
 	
 	
 	
