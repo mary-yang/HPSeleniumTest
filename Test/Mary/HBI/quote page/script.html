@@ -1,0 +1,396 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/HBI/quote page</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Health Benefit Insurance</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zip}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>${DOB}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Featured</td>
+	<td>Featured</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Best Seller</td>
+	<td>Best Seller</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=img.carrier-logo-image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.quote-plan-price</td>
+	<td>*/mo</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Select This Plan</td>
+	<td>Select This Plan</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.product-label</td>
+	<td>GET CASH FOR MEDICAL EVENTS</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.plan-info-label</td>
+	<td>Hospital Stays</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='featuredPlan']/li/div/div[2]/ul/li[2]/span</td>
+	<td>Doctor Visits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='featuredPlan']/li/div/div[2]/ul/li[3]/span</td>
+	<td>Emergency Room Visits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='featuredPlan']/li/div/div[2]/div[3]</td>
+	<td>ADDITIONAL BENEFITS AND SERVICES</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.additional-benefits-label</td>
+	<td>Accident Medical Expense</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='featuredPlan']/li/div/div[2]/div[4]/ul/li[2]/a/span</td>
+	<td>Critical Illness Insurance</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.js-glossary.high-light &gt; span.additional-benefits-label</td>
+	<td>Telemedicine</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='featuredPlan']/li/div/div[2]/div[4]/ul/li[4]/a/span</td>
+	<td>Health Concierge</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+	<td>storeText</td>
+	<td>//li[descendant::span[contains(text(),'Best Sellers Only')]]/label[2]/span[2]</td>
+	<td>a</td>
+</tr>
+
+<tr>
+	<td>storeEval</td>
+	<td>parseFloat('${a}'.match(/\d+/g))</td>
+	<td>b</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[descendant::span[contains(text(),'Best Sellers Only')]]/label[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyXpathCount</td>
+	<td>//a[contains(text(),'Select This Plan')]</td>
+	<td>${b}</td>
+</tr>
+
+
+
+
+<tr>
+	<td>storeText</td>
+	<td>//li[descendant::span[contains(text(),'All Plans')]]/label[2]/span[2]</td>
+	<td>a</td>
+</tr>
+
+<tr>
+	<td>storeEval</td>
+	<td>parseFloat('${a}'.match(/\d+/g))</td>
+	<td>b</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[descendant::span[contains(text(),'All Plans')]]/label[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyXpathCount</td>
+	<td>//a[contains(text(),'Select This Plan')]</td>
+	<td>${b}</td>
+</tr>
+
+
+<tr>
+	<td>storeText</td>
+	<td>//li[descendant::span[contains(text(),'Axis')]]/label[2]/span[2]</td>
+	<td>a</td>
+</tr>
+
+<tr>
+	<td>storeEval</td>
+	<td>parseFloat('${a}'.match(/\d+/g))+1</td>
+	<td>b</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[descendant::span[contains(text(),'Axis')]]/label[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyXpathCount</td>
+	<td>//a[contains(text(),'Select This Plan')]</td>
+	<td>${b}</td>
+</tr>
+
+
+
+
+<tr>
+	<td>storeText</td>
+	<td>//li[descendant::span[contains(text(),'Chubb')]]/label[2]/span[2]</td>
+	<td>c</td>
+</tr>
+
+<tr>
+	<td>storeEval</td>
+	<td>parseFloat('${c}'.match(/\d+/g))+parseFloat('${a}'.match(/\d+/g))</td>
+	<td>d</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[descendant::span[contains(text(),'Chubb')]]/label[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyXpathCount</td>
+	<td>//a[contains(text(),'Select This Plan')]</td>
+	<td>${d}</td>
+</tr>
+
+
+<tr>
+	<td>storeText</td>
+	<td>//li[descendant::span[contains(text(),'Humana')]]/label[2]/span[2]</td>
+	<td>e</td>
+</tr>
+
+<tr>
+	<td>storeEval</td>
+	<td>parseFloat('${e}'.match(/\d+/g))+${d}</td>
+	<td>f</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[descendant::span[contains(text(),'Humana')]]/label[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyXpathCount</td>
+	<td>//a[contains(text(),'Select This Plan')]</td>
+	<td>${f}</td>
+</tr>
+
+
+
+
+
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

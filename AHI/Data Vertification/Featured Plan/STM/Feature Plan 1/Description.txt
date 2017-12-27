@@ -4,4 +4,4 @@ Requirement
 
 
 
-https://www.pivotaltracker.com/story/show/146326177
+https://docs.google.com/spreadsheets/d/1L2ur9fKKPsnMWW1pxDy-RkcA5I87ABF3yNLO2NAYAJo/edit#gid=392921727

@@ -1,0 +1,16 @@
+provider,Plan_name,quote_testprod_rate,quote_QA_rate,QA_Apply_page_rate,testprod_Apply_page_rate,state,zipcode,Primary_dob,Primary_gender,Spouse_dob,Spouse_gender,Spouse,Spouse_enable,Child_dob,Child_gender,Child,Child_enable
+Axis,Legion Limited Medical 500,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},AL,35215,1/1/1980,F,,,,,,,,
+Axis,Legion Limited Medical 500,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},KY,40214,1/1/1980,F,,,,,1/1/2000,M,C,2
+Axis,Legion Limited Medical 500,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},OH,43228,1/1/1980,F,,,,,,,,
+Axis,Legion Limited Medical 500,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},SC,29223,1/1/1980,F,1/1/1980,M,S,1,1/1/2000,M,C,2
+Axis,Legion Limited Medical 500,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},WY,82001,1/1/1980,F,,,,,1/1/2000,M,C,2
+##Chubb,Cardinal Choice 750,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},AL,35215,1/1/1980,F,,,,,,,,
+##Chubb,Cardinal Choice 750,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},AL,35215,1/1/1980,F,1/1/1980,M,S,1,,,,
+##Chubb,Cardinal Choice 750,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},AL,35215,1/1/1980,F,1/1/1980,M,S,1,1/1/2000,M,C,2
+##Chubb,Cardinal Choice 750,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},AL,35215,1/1/1980,F,,,,,1/1/2000,M,C,2
+##Chubb,Cardinal Choice 750,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},AL,35215,1/1/1980,F,,,,,1/1/2000,M,C,2
+##Chubb,Cardinal Choice 1500,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},AL,35215,1/1/1980,F,,,,,,,,
+##Chubb,Cardinal Choice 1500,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},AL,35215,1/1/1980,F,1/1/1980,M,S,1,,,,
+##Chubb,Cardinal Choice 1500,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},AL,35215,1/1/1980,F,1/1/1980,M,S,1,1/1/2000,M,C,2
+##Chubb,Cardinal Choice 1500,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},AL,35215,1/1/1980,F,,,,,1/1/2000,M,C,2
+##Chubb,Cardinal Choice 1500,${quote_testprod_rate},${quote_QA_rate},${Apply_page_QA_rate},${Apply_page_testprod_rate},AL,35215,1/1/1980,F,,,,,1/1/2000,M,C,2
