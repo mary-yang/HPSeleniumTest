@@ -12,7 +12,11 @@ Census Page</td>
 	<td>${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
 <tr>
 	<td>open</td>
 	<td>${page_title}&utm_source=${utm_source}</td>
@@ -31,7 +35,7 @@ Census Page</td>
 <tr>
 	<td>verifyText</td>
 	<td>css=p.landing-page-bottom-disclaimer</td>
-	<td>AFFORDABLE CARE ACT TAX. Short Term health insurance is health insurance outside of the Affordable Care Act (&quot;Obamacare&quot;). It does not include all ten of the minimum essential benefits of Obamacare and it does not cover pre-existing conditions. To learn more about the tax, its exemptions, and how to calculate the affordability of short term health with the tax, see here. To learn more about the differences between Short Term health insurance and Obamacare, see here.</td>
+	<td>AFFORDABLE CARE ACT TAX (The 2017 Congressional Tax Reform Act does not eliminate this tax until 2019). Short Term health insurance is health insurance outside of the Affordable Care Act ("Obamacare"). It does not include all ten of the minimum essential benefits of Obamacare and it does not cover pre-existing conditions. To learn more about the tax, its exemptions, and how to calculate the affordability of short term health with the tax, see here. To learn more about the differences between Short Term health insurance and Obamacare, see here.</td>
 </tr>
 <tr>
 	<td>ENDIF</td>
@@ -45,20 +49,10 @@ Census Page</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//body[@id='agile-front-door']/div[3]/div[6]/p[2]</td>
-	<td>GENERAL DISCLAIMERS</td>
+	<td>//body[@id='agile-front-door']/div[3]/div[6]/</td>
+	<td>${General Disclaimers}</td>
 </tr>
 
-<tr>
-	<td>verifyText</td>
-	<td>//body[@id='agile-front-door']/div[3]/div[6]/p[3]</td>
-	<td>These Short Term Medical plans do not provide coverage for preexisting conditions nor the mandated coverage necessary to avoid a penalty under the Affordable Care Act.</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//body[@id='agile-front-door']/div[3]/div[6]/p[4]</td>
-	<td>Each state has specific mandates for coverage so your plan may include additional benefits. Please consult your state-specific insurance certificate for more information.</td>
-</tr>
 <tr>
 	<td>ENDIF</td>
 	<td></td>
@@ -72,6 +66,8 @@ Census Page</td>
 	
 	
 
+	
+	
 	
 	
 	
