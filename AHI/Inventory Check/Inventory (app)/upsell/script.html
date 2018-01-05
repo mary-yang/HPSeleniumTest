@@ -4,12 +4,12 @@
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}/api/context/clear</td>
+	<td>${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}</td>
+	<td>${ENV}</td>
 	<td></td>
 </tr>
 <tr>
@@ -60,6 +60,21 @@
 <tr>
 	<td>pause</td>
 	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -213,15 +228,26 @@
 	<td></td>
 </tr>
 <tr>
+	<td>IF</td>
+	<td>verifyValue('id=billing-zip','${zip}')</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=js-same-billing</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=div.col-sm-12.checkbox &gt; label</td>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
+<tr>
+	<td>click</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=credit-payment-authorization</td>
@@ -336,14 +362,38 @@
 
 <tr>
 	<td>verifyText</td>
-	<td>//div/p[contains(text(),'application')][descendant::span[contains(text(),'Dental')]]</td>
-	<td>Congratulations*</td>
+	<td>//div[@id='js-app-confirmation']/div/div[5]/p[3]/span</td>
+	<td>approved</td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-confirmation']/div/div[3]/p[3]/span</td>
+	<td>approved</td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-app-confirmation']/div/div[7]/p[3]/span&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-confirmation']/div/div[7]/p[3]/span</td>
+	<td>approved</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 </tr>
 </tbody></table>
 </body>
 </html>	
+	
+	
+	
+	
+	
 	
 	
 	
