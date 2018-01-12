@@ -256,32 +256,13 @@
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-app-ancillary-products']/div/div[3]/div/a&quot;)</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>//a[contains(@href, '#collapse-vision-details-0')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//a[contains(@href, '#collapse-dental-details')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td></td>
-	<td>id=js-ancillary-product-dental-checkbox-0</td>
-	<td></td>
-</tr>
-<tr>
-	<td></td>
-	<td>id=js-ancillary-product-vision-checkbox-0</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>clickAndWait</td>
-	<td>//a[@class='app-addon-ok btn btn-default']</td>
+	<td>xpath=//div[@id='js-app-ancillary-products']/div/div[3]/div/a</td>
 	<td></td>
 </tr>
 <tr>
@@ -289,18 +270,7 @@
 	<td>5000</td>
 	<td></td>
 </tr>
-<!---------
-<tr>
-	<td>click</td>
-	<td>xpath=(//a[contains(text(),'(Remove)')])[2]</td>
-	<td></td>
-</tr>
 
-<tr>
-	<td>click</td>
-	<td>//a[contains(text(),'(Remove)')]</td>
-	<td></td>
-</tr>----------------->
 <tr>
 	<td>ENDIF</td>
 	<td></td>
@@ -360,6 +330,13 @@
 </tbody></table>
 </body>
 </html>	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

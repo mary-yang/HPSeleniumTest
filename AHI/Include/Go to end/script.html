@@ -177,12 +177,12 @@
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -203,9 +203,10 @@
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='headingapplicantInfo']/div/div/div/ul/li</td>
+	<td>//div[@id='headingapplicantInfo-summary']/div/div/div/ul/li</td>
 	<td>name</td>
 </tr>
+
 <tr>
 	<td>click</td>
 	<td>id=consent-checkbox-0</td>
@@ -235,7 +236,7 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//*[@id='js-app-no-thanks-link']</td>
+	<td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -266,6 +267,8 @@
 </tbody></table>
 </body>
 </html>	
+	
+	
 	
 	
 	
