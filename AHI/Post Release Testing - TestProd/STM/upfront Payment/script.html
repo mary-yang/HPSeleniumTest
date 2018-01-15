@@ -139,7 +139,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=ul.quote-all-plans-list.js-plans-list > li.quote-plan-container.js-plan-unit > div.quote-plan > div.quote-plan-header > div.quote-plan-price-container.js-price-breakdown > div.quote-plan-price</td>
+	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div/a/div</td>
 	<td>mo</td>
 </tr>
 <tr>
@@ -365,12 +365,12 @@ sanity4/24</td>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -435,6 +435,8 @@ sanity4/24</td>
 </tbody></table>
 </body>
 </html>
+	
+	
 	
 	
 	
