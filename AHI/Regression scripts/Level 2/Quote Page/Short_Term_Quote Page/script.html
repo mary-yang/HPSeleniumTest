@@ -92,7 +92,7 @@
 <!--verify Insurance Provider  filter-->
 <tr>
 	<td>click</td>
-	<td>//div[@id='js-quote-filters']/div[2]/ul/li/input</td>
+	<td>//input[@data-id="everest"]</td>
 	<td></td>
 </tr>
 <tr>
@@ -100,19 +100,10 @@
 	<td></td>
 	<td></td>
 </tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[2]/ul/li/label[2]/span</td>
-	<td>carriername</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${carriername}</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>storeXpathCount</td>
-	<td>//div/div[2]/div[1]/h3/a[contains(text(),'${carriername}')]</td>
+	<td>//div/div[2]/div[1]/h3/a[contains(text(),'Everest Prime')]</td>
 	<td>y</td>
 </tr>
 <tr>
@@ -320,6 +311,8 @@ verify Monthly Premium
 </tbody></table>
 </body>
 </html>
+	
+	
 	
 	
 	
