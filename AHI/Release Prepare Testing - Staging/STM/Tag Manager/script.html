@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/STM/Tag Manager</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/STM/Tag Manager</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">tagmanager</td></tr>
 </thead><tbody>
@@ -18,15 +18,17 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>xpath=(//button[@type='button'])[6]</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h2</td>
-	<td>Now Previewing *</td>
-</tr>
+
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Open website</td>
@@ -311,17 +313,12 @@
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//p[@class='modal-sub-heading']&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//p[@class='modal-sub-heading']</td>
-	<td>*Add Dental Coverage and Additional Benefits*</td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
-	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -390,5 +387,8 @@
 </tbody></table>
 </body>
 </html>	
+	
+	
+	
 	
 	
