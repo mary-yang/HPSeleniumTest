@@ -113,7 +113,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li/div/div/div[2]/div</td>
+	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div/a/div</td>
 	<td>mo</td>
 </tr>
 <tr>
@@ -133,7 +133,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='js-plan-summary']/div/div[3]/div/div/div/div[2]/div</td>
+	<td>//section[@id='js-plan-summary']/div/div[3]/div/div/div/div[2]/a</td>
 	<td>*${mo}*</td>
 </tr>
 <tr>
@@ -153,13 +153,13 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//body[@id='apply']/div/div[2]/div/div/div/div[2]/table/tbody/tr/td/a/span</td>
+	<td>//body[@id='apply']/div/div/div[2]/div/div/div/div[2]/table/tbody/tr/td/a/span</td>
 	<td>${planname}</td>
 </tr>
 
 <tr>
 	<td>verifyText</td>
-	<td>//body[@id='apply']/div/div[2]/div/div/div/div[2]/table/tbody/tr[4]/td[2]</td>
+	<td>//body[@id='apply']/div/div/div[2]/div/div/div/div[2]/table/tbody/tr[4]/td[2]</td>
 	<td>$${mo1}</td>
 </tr>
 <tr>
@@ -325,12 +325,12 @@ sanity4/24</td>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//p[@class='modal-sub-heading']&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -395,6 +395,11 @@ sanity4/24</td>
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
 	
 	
 	
