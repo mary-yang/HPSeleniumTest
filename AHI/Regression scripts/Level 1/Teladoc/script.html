@@ -11,7 +11,6 @@
 	<td>AHI/Include/Open website</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Name</td>
@@ -22,13 +21,11 @@
 	<td>link=Telemedicine</td>
 	<td></td>
 </tr>
-<
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Sign Up for an Individual Plan ($14.95/mo)</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
@@ -69,23 +66,21 @@
 	<td>id=applyButton</td>
 	<td></td>
 </tr>
-
-<<tr>
-    <td>IF</td>
-    <td>verifyElementPresent(&quot;link=No Thanks&quot;)</td>
-    <td></td>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;link=No Thanks&quot;)</td>
+	<td></td>
 </tr>
 <tr>
-    <td>click</td>
-    <td>link=No Thanks </td>
-    <td></td>
+	<td>click</td>
+	<td>link=No Thanks </td>
+	<td></td>
 </tr>
 <tr>
-    <td>ENDIF</td>
-    <td></td>
-    <td></td>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
 </tr>
-
 <tr>
 	<td>type</td>
 	<td>//input[@value='']</td>
@@ -96,7 +91,6 @@
 	<td>id=member-P-1-lastName</td>
 	<td>${LastName}</td>
 </tr>
-
 <tr>
 	<td>type</td>
 	<td>id=address</td>
@@ -147,7 +141,6 @@
 	<td>//div[@id='js-app-page-body-content']/h3</td>
 	<td>Step 2. Payment &amp; Billing</td>
 </tr>
-
 <tr>
 	<td>include</td>
 	<td>AHI/Include/UseTestCard</td>
@@ -168,16 +161,11 @@
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
-
-
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='js-app-confirmation']/div/h2[2]</td>
 	<td>Your application has been accepted and you are now enrolled in Teladoc</td>
 </tr>
-
-
-
 </tbody></table>
 </body>
 </html>

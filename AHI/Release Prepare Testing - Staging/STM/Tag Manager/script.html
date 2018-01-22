@@ -18,10 +18,17 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=button.btn</td>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[6]</td>
+	<td></td>
+</tr>
+
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Open website</td>
@@ -306,17 +313,12 @@
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//p[@class='modal-sub-heading']&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//p[@class='modal-sub-heading']</td>
-	<td>*Add Dental Coverage and Additional Benefits*</td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
-	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -385,4 +387,8 @@
 </tbody></table>
 </body>
 </html>	
+	
+	
+	
+	
 	

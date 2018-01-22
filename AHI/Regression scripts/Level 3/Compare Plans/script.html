@@ -47,6 +47,36 @@
 	<td>xpath=.//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.js-clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 
 <tr>
 	<td>storeText</td>
@@ -55,12 +85,12 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[@id='featuredPlan']/li/div/div[2]/div[3]/label</td>
+	<td>//ul[@id='featuredPlan']/li/div/div[2]/div[3]/label</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='js-quote-plans-container']/ul/li[1]/div/div[2]/div[1]/h3/a[1]</td>
+	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div[2]/div/h3/a</td>
 	<td>b</td>
 </tr>
 <tr>
@@ -70,7 +100,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/div[3]/label</td>
+	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div[2]/div[3]/label</td>
 	<td></td>
 </tr>
 <tr>
@@ -161,4 +191,8 @@
 	
 	
 
+	
+	
+	
+	
 	

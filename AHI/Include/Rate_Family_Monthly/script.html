@@ -4,12 +4,12 @@
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td>http://${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/quote?census[location][zip]=${zip}&amp;census[member][0][dob]=01/01/1985&amp;census[member][0][gender]=M&amp;census[member][0][role]=P&amp;census[member][1][dob]=01/01/1985&amp;census[member][1][gender]=F&amp;census[member][1][role]=S&amp;census[member][2][dob]=01/01/2010&amp;census[member][2][gender]=M&amp;census[member][2][role]=C</td>
+	<td>${ENV}/term-health-insurance/quote?census[location][zip]=${zip}&amp;census[member][0][dob]=01/01/1985&amp;census[member][0][gender]=M&amp;census[member][0][role]=P&amp;census[member][1][dob]=01/01/1985&amp;census[member][1][gender]=F&amp;census[member][1][role]=S&amp;census[member][2][dob]=01/01/2010&amp;census[member][2][gender]=M&amp;census[member][2][role]=C</td>
 	<td></td>
 </tr>
 <tr>
@@ -38,6 +38,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementNotPresent</td>
+	<td>//*[@id='js-page-spinner']/div[2]</td>
+	<td></td>
+</tr>
+<tr>
 	<td>storeText</td>
 	<td>css=h3.quote-plan-name</td>
 	<td>planname</td>
@@ -54,7 +59,7 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Select This Plan</td>
+	<td>xpath=(//a[contains(text(),'Select This Plan')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -67,25 +72,15 @@
 	<td>//*[@id='apply']//tr[descendant::td[1][contains(text(),'Total')]]/td[2]</td>
 	<td>apply_P</td>
 </tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Name</td>
-	<td></td>
-</tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Go to end</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//*[@id='app-confirmation']/div[1]/ul/li[1]/div/p[1]/span[2]</td>
-	<td>review_P</td>
-</tr>
 </tbody></table>
 </body>
 </html>
 
+	
+	
+	
+	
+	
 	
 	
 	

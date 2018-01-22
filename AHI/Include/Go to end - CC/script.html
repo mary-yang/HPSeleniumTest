@@ -205,12 +205,12 @@
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -284,6 +284,7 @@
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	

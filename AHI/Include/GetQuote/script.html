@@ -103,13 +103,20 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>//input[@data-id="everest"]</td>
+	<td></td>
+</tr>
+
+
+<tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]&quot;)</td>
+	<td>verifyElementPresent(&quot;//input[@data-id=&quot;${provider}&quot;]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]</td>
+	<td>//input[@data-id="${provider}"</td>
 	<td></td>
 </tr>
 <tr>
@@ -129,6 +136,8 @@ sanity4/24</td>
 </tr>
 	</tbody>
 </table>	
+	
+	
 	
 	
 	
