@@ -96,12 +96,12 @@
 
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]&quot;)</td>
+	<td>verifyElementPresent(&quot;//span[contains(text(),'${provider}')]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]</td>
+	<td>//span[contains(text(),'${provider}')]</td>
 	<td></td>
 </tr>
 <tr>
@@ -117,12 +117,12 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[1]/div[1]/div/img[@alt="${provider}"]]/div/div[2]/div/h3/a</td>
+	<td>//*[@id='js-quote-plans-container']/ul[2]/li[descendant::div/div[1]/div[1]/div/img[@alt="${provider}"]]/div/div[2]/div[1]/h3/a[1]</td>
 	<td>planname</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[1]/div[1]/div/img[@alt="${provider}"]]/div/div/div[2]/div</td>
+	<td>//*[@id='js-quote-plans-container']/ul[descendant::div/div[1]/div[1]/div/img[@alt="${provider}"]]/li[1]/div/div[1]/a[1]/div[1]</td>
 	<td>quote_P</td>
 </tr>
 <tr>
@@ -164,6 +164,11 @@
 </body>
 </html>
 
+	
+	
+	
+	
+	
 	
 	
 	

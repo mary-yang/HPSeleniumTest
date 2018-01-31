@@ -4,12 +4,17 @@
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td>/${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/plan/${planuri}?census[location][zip]=${zipcode}&census[member][0][dob]=01/01/1985&census[member][0][gender]=M&census[member][0][role]=P&census[effective]=2017-09-15</td>
+	<td>${ENV}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}/term-health-insurance/plan/${planuri}?census[location][zip]=${zipcode}&census[member][0][dob]=01/01/1985&census[member][0][gender]=M&census[member][0][role]=P&census[effective]=2018-02-15</td>
 	<td></td>
 </tr>
 
@@ -113,6 +118,8 @@
 </html>
 
 
+	
+	
 	
 	
 	
