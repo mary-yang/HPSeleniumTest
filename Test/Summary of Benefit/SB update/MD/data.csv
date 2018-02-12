@@ -1,6 +1,0 @@
-id,state,zip,Plan Category,Plan Type,HP ID (may be blank),Company Name (normalized),Plan Name,ex_enlink,ex_splink,enlink,splink
-H2112-001-0,MD,20842,PARTC,HMO,Aetna_Med,Aetna,Aetna Medicare Basic Plan (HMO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/md-hmo-sb-md-2015.pdf,,${enlink},${splink}
-H2112-007-0,MD,20842,PARTCRX,HMO,Aetna_Med,Aetna,Aetna Medicare Standard Plan (HMO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/md-hmo-sb-md-2015.pdf,,${enlink},${splink}
-H2150-021-0,MD,20751,PARTC,AB) (Cost,KaiserPermanente,Kaiser Permanente,Kaiser Permanente Medicare Plus High w/o D (AB) (Cost),https://medicare.kaiserpermanente.org/medicare/pdfs/2015/mid_SB_basic_standard_high_NoD_AB.pdf,,${enlink},${splink}
-H2150-022-0,MD,20751,PARTC,AB) (Cost,KaiserPermanente,Kaiser Permanente,Kaiser Permanente Medicare Plus Std w/o D (AB) (Cost),https://medicare.kaiserpermanente.org/medicare/pdfs/2015/mid_SB_basic_standard_high_NoD_AB.pdf,,${enlink},${splink}
-H2150-017-0,MD,20751,PARTC,AB) (Cost,KaiserPermanente,Kaiser Permanente,Kaiser Permanente Medicare Plus Basic w/o D (AB) (Cost),https://medicare.kaiserpermanente.org/medicare/pdfs/2015/mid_SB_basic_standard_high_NoD_AB.pdf,,${enlink},${splink}

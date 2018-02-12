@@ -1,4 +1,0 @@
-id,state,zip,Plan Category,Plan Type,HP ID (may be blank),Company Name (normalized),Plan Name,ex_enlink,ex_splink,enlink,splink
-H5813-006-0,DE,19938,PARTCRX,HMO,Aetna_Med,Aetna,Aetna Medicare Premier Plan (HMO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/de-hmo-sb-kent-new-castle-2015.pdf,,${enlink},${splink}
-H5813-003-0,DE,19938,PARTCRX,HMO,Aetna_Med,Aetna,Aetna Medicare Standard Plan (HMO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/de-hmo-sb-kent-new-castle-2015.pdf,,${enlink},${splink}
-H5521-095-0,DE,19938,PARTCRX,PPO,Aetna_Med,Aetna,Aetna Medicare Premier Plan (PPO),http://www.aetnamedicare.com/documents/individual/2015/summaryofbenefits/de-ppo-sb-new-castle-2015.pdf,,${enlink},${splink}

@@ -1,5 +1,0 @@
-id,state,zip,Plan Category,Plan Type,HP ID (may be blank),Company Name (normalized),Plan Name,ex_enlink,ex_splink,enlink,splink
-S5660-203-0,AS,96799,PARTD,PDP,MedcoMedicare,Medco Medicare,Express Scripts Medicare - Choice (PDP),https://host1.medcohealth.com/art/medicare15/pdf/15sob.pdf,,${enlink},${splink}
-S5660-135-0,AS,96799,PARTD,PDP,MedcoMedicare,Medco Medicare,Express Scripts Medicare - Value (PDP),https://host1.medcohealth.com/art/medicare15/pdf/15sob.pdf,,${enlink},${splink}
-S5768-195-0,AS,96799,PARTD,PDP,FirstHealth,First Health,First Health Part D Premier Plus (PDP),http://coventry-medicare.coventryhealthcare.com/first-health-part-d/member-benefits/premier-plus-member-benefits/A300617,,${enlink},${splink}
-S5768-198-0,AS,96799,PARTD,PDP,FirstHealth,First Health,First Health Part D Value Plus (PDP),http://coventry-medicare.coventryhealthcare.com/first-health-part-d/member-benefits/value-plus-member-benefits/A300591,,${enlink},${splink}

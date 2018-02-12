@@ -70,19 +70,20 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]</td>
+	<td>css=li.js-clear</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li[contains(text(),'${provider}')]</td>
+	<td>click</td>
+	<td>//*[@id='js-quote-filters']/div[2]/div/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='js-quote-filters']/div[2]/ul/li/label[@title=&quot;${provider}&quot;]/span[2]</td>
+	<td>//*[@id='js-quote-filters']/div[2]/div/ul/li/label[@title=&quot;${provider}&quot;]/span[2]</td>
 	<td>num</td>
 </tr>
+
 
 <tr>
 	<td>echo</td>
@@ -90,16 +91,18 @@ sanity4/24</td>
 	<td></td>
 </tr>
 
-	<td>click</td>
-	<td>//div[@id='js-quote-filters']/div[4]/ul/li/label</td>
-	<td></td>
-</tr>
+
 
 	</tbody>
 </table>
 
 	
 
+	
+	
+	
+	
+	
 	
 	
 	

@@ -1,0 +1,516 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/STM/LifeShield</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Short Term Health Insurance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#agile-census > div.container</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1985/td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=${carrierid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=ul.quote-all-plans-list.js-plans-list > li.quote-plan-container.js-plan-unit > div.quote-plan > div.quote-plan-body > div.quote-plan-carrier > h3.quote-plan-name > a</td>
+	<td>planname</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/</td>
+	<td>LIFESHIELD SPECIFIC DISCLAIMERSTHIS IS A SHORT-TERM LIMITED DURATION HEALTH INSURANCE POLICY THAT IS NOT INTENDED TO AND DOES NOT QUALIFY AS THE MINIMUM ESSENTIAL COVERAGE REQUIRED BY THE AFFORDABLE CARE ACT (ACA). UNLESS YOU PURCHASE A POLICY THAT PROVIDES MINIMUM ESSENTIAL COVERAGE IN ACCORDANCE WITH THE ACA, YOU MAY BE SUBJECT TO A FEDERAL TAX PENALTY. ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH INSURANCE POLICY THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD.THIS IS A SUPPLEMENT TO HEALTH INSURANCE AND IS NOT A SUBSTITUTE FOR MAJOR MEDICAL COVERAGE. LACK OF MAJOR MEDICAL COVERAGE (OR OTHER MINIMUM ESSENTIAL COVERAGE) MAY RESULT IN AN ADDITIONAL PAYMENT WITH YOUR TAXES. This is a brief summary of LifeShield Short-Term Medical Insurance underwritten by LifeShield National Insurance Co. provided by Policy Form Series LNG- 3001. Availability and terms may vary by state.</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/</td>
+	<td>LIFESHIELD SPECIFIC DISCLAIMERSTHIS IS A SHORT-TERM LIMITED DURATION HEALTH INSURANCE POLICY THAT IS NOT INTENDED TO AND DOES NOT QUALIFY AS THE MINIMUM ESSENTIAL COVERAGE REQUIRED BY THE AFFORDABLE CARE ACT (ACA). UNLESS YOU PURCHASE A POLICY THAT PROVIDES MINIMUM ESSENTIAL COVERAGE IN ACCORDANCE WITH THE ACA, YOU MAY BE SUBJECT TO A FEDERAL TAX PENALTY. ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH INSURANCE POLICY THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD.THIS IS A SUPPLEMENT TO HEALTH INSURANCE AND IS NOT A SUBSTITUTE FOR MAJOR MEDICAL COVERAGE. LACK OF MAJOR MEDICAL COVERAGE (OR OTHER MINIMUM ESSENTIAL COVERAGE) MAY RESULT IN AN ADDITIONAL PAYMENT WITH YOUR TAXES. This is a brief summary of LifeShield Short-Term Medical Insurance underwritten by LifeShield National Insurance Co. provided by Policy Form Series LNG- 3001. Availability and terms may vary by state.</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;test&quot;))</td>
+	<td>uri</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${uri}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Underwriting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Get URI</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[1]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[2]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[3]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[4]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[5]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[6]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='app-underwritingQuestions-form']/div/p</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 2. Applicant Info</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@value='']</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=07</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=member-P-1-lbs</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-page-body-content']/div/p</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Use Credit Card</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-application-payment']/p</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
+	<td>I have read the Terms and Agreements, I have reviewed my application(s) including the applicant and payment information and confirm that it is correct. I agree that by checking the box and clicking to sign, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature. *</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
+	<td>CET</td>
+</tr>
+
+<tr>
+	<td>open</td>
+	<td>${ENV}/term-health-insurance/${uri}/termsAndConditions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p</td>
+	<td>LifeShield</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[2]/b</td>
+	<td>FRAUD WARNING</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[3]</td>
+	<td>${FW}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[4]/b</td>
+	<td>UNDERWRITING ACKNOWLEDGMENT</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[5]</td>
+	<td>THIS IS A SHORT-TERM LIMITED DURATION HEALTH INSURANCE POLICY THAT IS NOT INTENDED TO AND DOES NOT QUALIFY AS THE MINIMUM ESSENTIAL COVERAGE REQUIRED BY THE AFFORDABLE CARE ACT (ACA). UNLESS YOU PURCHASE A POLICY THAT PROVIDES MINIMUM ESSENTIAL COVERAGE IN ACCORDANCE WITH THE ACA, YOU MAY BE SUBJECT TO A FEDERAL TAX PENALTY. ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH INSURANCE POLICY THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD.THIS IS A SUPPLEMENT TO HEALTH INSURANCE AND IS NOT A SUBSTITUTE FOR MAJOR MEDICAL COVERAGE. LACK OF MAJOR MEDICAL COVERAGE (OR OTHER MINIMUM ESSENTIAL COVERAGE) MAY RESULT IN AN ADDITIONAL PAYMENT WITH YOUR TAXES. This is a brief summary of LifeShield Short-Term Medical Insurance underwritten by LifeShield National Insurance Co. provided by Policy Form Series LNG- 3001. Availability and terms may vary by state.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[6]</td>
+	<td>ASSOCIATION AGREEMENT</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[7]</td>
+	<td>*I hereby request coverage under the insurance issued to the Med-Sense Guaranteed Association and underwritten by LifeShield National Insurance Co. I understand this insurance contains a Pre-existing Condition exclusion, a Pre-certification Penalty and other restrictions and exclusions. I agree that coverage will not become effective for me or any dependent whose medical status, prior to the effective date, has changed and therefore results in a "yes" answer to any of the medical questions on this Application. If my medical status changes in this way, coverage will be declined for all individuals included on this Application. I understand that this coverage is not renewable or extendable. I may obtain a complete copy of the Certificate of Insurance upon request to AgileHealthInsurance. I understand that LifeShield National Insurance Co., as underwriter of the plan, is solely liable for the coverage and benefits provided under the insurance. I understand and agree that the insurance agent/broker, if any, assisting with this Application is a representative of the Applicant. If signed by a representative of the Applicant, the undersigned represents his/her capacity to so act. If signed as guardian or proxy of the Applicant, the undersigned represents his/her capacity to so act. By acceptance of coverage and/or submission of any claim for benefits, the Applicant ratifies the authority of the signer to so act and bind the Applicant.*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]</td>
+	<td>${AHIGTA}</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[3]</td>
+	<td>${AHIPayment}</td>
+</tr>
+
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

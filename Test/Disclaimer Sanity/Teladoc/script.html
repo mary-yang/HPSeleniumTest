@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/Agile Secure Standalone</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/Teladoc</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">sanity4/24</td>
@@ -8,20 +8,36 @@
 
 <tr>
 	<td>include</td>
-	<td>AHI/Include/Name</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>include</td>
 	<td>AHI/Include/Open website</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Health Benefit Insurance</td>
+	<td>include</td>
+	<td>AHI/Include/Disclaimers</td>
 	<td></td>
 </tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Telemedicine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div/p</td>
+	<td>${TeladocGD}</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign Up for an Individual Plan ($14.95/mo)</td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
@@ -58,71 +74,17 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>id=js-see-plans</td>
-	<td></td>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div/p</td>
+	<td>${TeladocGD}</td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<!----------
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-
-
-<tr>
-    <td>IF</td>
-    <td>verifyElementPresent(&quot;//a[contains(@href, 'agilesecure-${state2}')]&quot;)</td>
-    <td></td>
-</tr>
-<tr>
-    <td>click</td>
-    <td>//a[contains(@href, 'agilesecure-${state2}')]</td>
-    <td></td>
-</tr>
-<tr>
-    <td>ENDIF</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//tr[contains(@class, 'total')]/td[2]</td>
-	<td>mon</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${mon}</td>
-	<td></td>
-</tr>
------->
-<tr>
-	<td>click</td>
-	<td>link=Apply for This Plan</td>
-	<td></td>
-</tr>
-
 <tr>
 	<td>clickAndWait</td>
 	<td>id=applyButton</td>
 	<td></td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>4000</td>
-	<td></td>
-</tr>
-<tr>
+
+<<tr>
     <td>IF</td>
     <td>verifyElementPresent(&quot;link=No Thanks&quot;)</td>
     <td></td>
@@ -170,34 +132,19 @@
 	<td>${Tel}</td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=primary-beneficiary-first-name</td>
-	<td>test1</td>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=07</td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=primary-beneficiary-last-name</td>
-	<td>test2</td>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=primary-beneficiary-relationship</td>
-	<td>test3</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=contingent-beneficiary-first-name</td>
-	<td>test4</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=contingent-beneficiary-last-name</td>
-	<td>test5</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=contingent-beneficiary-relationship</td>
-	<td>test6</td>
+	<td>sendKeys</td>
+	<td>id=member-P-1-lbs</td>
+	<td>100</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -225,40 +172,37 @@
 	<td>id=consent-checkbox-0</td>
 	<td></td>
 </tr>
+
+
 <tr>
 	<td>click</td>
-	<td>css=p.signature-arrow</td>
+	<td>link=Terms and Agreements</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>id=js-app-continue-link</td>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Short Term Health Insurance, Affordable Health Plans, Affordable Obamacare Supplemental Health Insurance - AgileHealthInsurance.com</td>
 	<td></td>
 </tr>
 
 
-<tr>
-	<td>waitForLocation</td>
-	<td>*page/4* </td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>verifyText</td>
-	<td>css=span.emphasize</td>
-	<td>*Congratulations*</td>
+	<td>//div[@id='disclaimers-container']/div/div/div</td>
+	<td>${AHIGTA}</td>
 </tr>
 
 <tr>
-	<td>storeText</td>
-	<td>//p[contains(@class, 'app-payment')]/span[2]</td>
-	<td>conf_mon</td>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]</td>
+	<td>${AHIPayment}</td>
 </tr>
-<tr>
-	<td>echo</td>
-	<td>${conf_mon}</td>
-	<td></td>
-</tr>
-
 
 
 </tbody></table>
@@ -294,6 +238,22 @@
 	
 	
 	
+
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -322,9 +282,22 @@
 	
 	
 	
-
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
