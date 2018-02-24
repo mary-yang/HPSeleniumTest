@@ -1,5 +1,0 @@
-id,state,zip,Plan Category,Plan Type,HP ID (may be blank),Company Name (normalized),Plan Name,ex_enlink,ex_splink,enlink,splink
-H7149-004-0,NE,68007,PARTCRX,HMO,CoventryHealthCare,Coventry Health Care,Coventry Total Care (HMO),http://coventry-medicare.coventryhealthcare.com/A300557,,${enlink},${splink}
-H7149-005-0,NE,51557,PARTCRX,HMO,CoventryHealthCare,Coventry Health Care,Advantra Select Plus (HMO),http://coventry-medicare.coventryhealthcare.com/A300558,,${enlink},${splink}
-H7149-001-0,NE,51557,PARTCRX,HMO,CoventryHealthCare,Coventry Health Care,Coventry Advantra Silver (HMO),http://coventry-medicare.coventryhealthcare.com/A300556,,${enlink},${splink}
-H8393-001-0,NE,68014,PARTCRX,PPO,CoventryHealthCare,Coventry Health Care,Coventry Advantra Platinum (PPO),http://coventry-medicare.coventryhealthcare.com/A300564,,${enlink},${splink}

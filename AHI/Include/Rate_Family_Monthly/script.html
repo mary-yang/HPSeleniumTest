@@ -4,7 +4,7 @@
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}/api/context/clear</td>
+	<td>${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
@@ -49,7 +49,7 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[1]/div[1]/div/img[@alt="${provider}"]]/div/div/div[2]/div</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[1]/div[1]/div/img[@alt="${provider}"]]/div/div/a/div</td>
 	<td>quote_P</td>
 </tr>
 <tr>
@@ -59,7 +59,12 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Select This Plan')])[2]</td>
+	<td>//a[contains(text(),'${provider}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
 <tr>
@@ -69,13 +74,18 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='apply']//tr[descendant::td[1][contains(text(),'Total')]]/td[2]</td>
+	<td>//tr[6]/td[2]/span</td>
 	<td>apply_P</td>
 </tr>
 </tbody></table>
 </body>
 </html>
 
+	
+	
+	
+	
+	
 	
 	
 	
