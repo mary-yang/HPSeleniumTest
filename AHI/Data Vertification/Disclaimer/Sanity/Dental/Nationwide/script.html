@@ -38,7 +38,7 @@
 	<td>Looking for Affordable Dental Insurance? Get a Dental Plan from AgileHealthInsuranceDid you know that a good dental insurance plan can save your smile and your wallet? Many major dental procedures can cost thousands, and even basic cleanings can be more than $100! It’s expensive, but it doesn’t have to be. With a low-cost dental insurance plan purchased through AgileHealthInsurance, you can limit these costs. AgileHealthInsurance has partnered with some of the best dental insurance companies in the country. Get a quote today, and see how healthy your mouth can be!</td>
 <tr>
 	<td>verifyText</td>
-	<td>//body[@id='agile-census']/div[4]/div/div</td>
+	<td>//body[@id='agile-census']/main/div[3]/div/div</td>
 	<td>Dental Insurance May be the Right Choice if You:Have missed the Annual Open Enrollment period for your employerYou’re on Medicare and don’t have a planAre in between jobs or have been laid offAre a part-time or temporary worker or your employer does not offer dental benefitsAre a student, a recent graduate, or have aged out of your parent’s planAre waiting for your employer dental benefits to startGetting a good dental insurance plan is one of the easiest, most affordable things you can do to help curb expensive healthcare costs, and make sure your pearly whites stay sparkling. It only takes a few minutes. Get a quote today.</td>
 
 </tr>
@@ -150,11 +150,7 @@
 	<td>id=primaryPhone</td>
 	<td>213-232-2123</td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='js-app-page-body-content']/div/p</td>
-	<td>${ACATAX}</td>
-</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
@@ -173,8 +169,13 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-application-payment']/p</td>
-	<td>${ACATAX}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${DTGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${NWGD}</td>
 </tr>
 
 <tr>
@@ -211,9 +212,15 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='accordion']/p</td>
-	<td>${ACATAX}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${DTGD}</td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${NWGD}</td>
+</tr>
+
 <tr>
 	<td>click</td>
 	<td>link=Terms and Agreements</td>
@@ -324,6 +331,9 @@
 	
 	
 
+	
+	
+	
 	
 	
 	

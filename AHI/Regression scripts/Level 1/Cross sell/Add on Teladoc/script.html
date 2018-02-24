@@ -78,18 +78,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
+	<td>clickAndWait</td>
+	<td>//input[@data-id="${provider}"]</td>
 	<td></td>
 </tr>
 <tr>
@@ -271,7 +261,7 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Add')])[3]</td>
+	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -340,7 +330,7 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div/p[contains(text(),'application')][descendant::span[contains(text(),'Everest')]]</td>
+	<td>//div/p[contains(text(),'application')][descendant::span[contains(text(),'Life Shield}')]]</td>
 	<td>Congratulations*</td>
 </tr>
 
@@ -356,6 +346,10 @@
 </tbody></table>
 </body>
 </html>	
+	
+	
+	
+	
 	
 	
 	

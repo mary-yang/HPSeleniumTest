@@ -41,11 +41,7 @@ sanity4/24</td>
 	<td>id=gender-m-0</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#agile-census > div.container</td>
-	<td>${HBIGD}</td>
-</tr>
+
 <tr>
 	<td>clickAndWait</td>
 	<td>id=js-see-plans</td>
@@ -60,19 +56,30 @@ sanity4/24</td>
 <!-----------------------------quote page------------------------------------------->
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/div[3]/p</td>
-	<td>${TELA}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${AXIGD}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/div[3]/p[2]</td>
-	<td>${KARI}</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${CHUBBGD}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${HUMANAGD}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/div[4]/p</td>
-	<td>${HBIGD}</td>
+	<td>//div[@id='disclaimer-container']/div[5]</td>
+	<td>*${SUPPLACA}*</td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[4]</td>
+	<td>${SLGD}</td>
+</tr>
+
 
 <!-----------------------------detail page------------------------------------------->
 <tr>
@@ -82,15 +89,15 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/p[2]</td>
-	<td>${HumanaDisclaimers}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${HUMANAGD}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/div/p</td>
-	<td>${HBIGD}</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${SUPPLACA}</td>
 </tr>
-<
+
 
 <!-----------------------------apply page------------------------------------------->
 <tr>
@@ -100,15 +107,14 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//p[2]</td>
-	<td>${HumanaDisclaimers}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${HUMANAGD}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[5]/p</td>
-	<td>${HBIGD}</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${SUPPLACA}</td>
 </tr>
-
 
 
 <!-----------------------------application page------------------------------------------->
@@ -119,15 +125,14 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[3]/div/p</td>
-	<td>${HumanaDisclaimers}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${HUMANAGD}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[3]/div/p[2]</td>
-	<td>${HBIGD}</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${SUPPLACA}</td>
 </tr>
-
 
 <tr>
 	<td>type</td>
@@ -212,6 +217,8 @@ sanity4/24</td>
 	</tbody>
 </table>
 
+	
+	
 	
 	
 	

@@ -16,6 +16,13 @@ sanity4/24</td>
 	<td>AHI/Include/Open website</td>
 	<td></td>
 </tr>
+<!-----------------------------Home page------------------------------------------->
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GACAD}</td>
+</tr>
+<!-----------------------------Census page------------------------------------------->
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Quote &amp; Save Today</td>
@@ -62,6 +69,12 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GACAD}</td>
+</tr>
+<!-----------------------------quote page------------------------------------------->
+<tr>
 	<td>clickAndWait</td>
 	<td>xpath=//*[@id='js-see-plans']</td>
 	<td></td>
@@ -104,8 +117,38 @@ sanity4/24</td>
 
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div</td>
+	<td>css=div.disclaimer-text.</td>
 	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${LSGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${NGGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[4]</td>
+	<td>${NWGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[5]</td>
+	<td>${SlaicolDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[6]</td>
+	<td>${UHCGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[7]</td>
+	<td>${ACATAX}</td>
 </tr>
 
 <tr>
@@ -113,6 +156,7 @@ sanity4/24</td>
 	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
 	<td></td>
 </tr>
+<!-----------------------------detail page------------------------------------------->
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -120,20 +164,25 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>css=div.disclaimer-text.</td>
 	<td>${GeneralDisclaimers}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[2]/</td>
-	<td>LIFESHIELD SPECIFIC DISCLAIMERSTHIS IS A SHORT-TERM LIMITED DURATION HEALTH INSURANCE POLICY THAT IS NOT INTENDED TO AND DOES NOT QUALIFY AS THE MINIMUM ESSENTIAL COVERAGE REQUIRED BY THE AFFORDABLE CARE ACT (ACA). UNLESS YOU PURCHASE A POLICY THAT PROVIDES MINIMUM ESSENTIAL COVERAGE IN ACCORDANCE WITH THE ACA, YOU MAY BE SUBJECT TO A FEDERAL TAX PENALTY. ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH INSURANCE POLICY THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD.THIS IS A SUPPLEMENT TO HEALTH INSURANCE AND IS NOT A SUBSTITUTE FOR MAJOR MEDICAL COVERAGE. LACK OF MAJOR MEDICAL COVERAGE (OR OTHER MINIMUM ESSENTIAL COVERAGE) MAY RESULT IN AN ADDITIONAL PAYMENT WITH YOUR TAXES. This is a brief summary of LifeShield Short-Term Medical Insurance underwritten by LifeShield National Insurance Co. provided by Policy Form Series LNG- 3001. Availability and terms may vary by state.</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${LSGD}</td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
+<!-----------------------------apply page------------------------------------------->
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -141,15 +190,25 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>css=div.disclaimer-text.</td>
 	<td>${GeneralDisclaimers}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[2]/</td>
-	<td>LIFESHIELD SPECIFIC DISCLAIMERSTHIS IS A SHORT-TERM LIMITED DURATION HEALTH INSURANCE POLICY THAT IS NOT INTENDED TO AND DOES NOT QUALIFY AS THE MINIMUM ESSENTIAL COVERAGE REQUIRED BY THE AFFORDABLE CARE ACT (ACA). UNLESS YOU PURCHASE A POLICY THAT PROVIDES MINIMUM ESSENTIAL COVERAGE IN ACCORDANCE WITH THE ACA, YOU MAY BE SUBJECT TO A FEDERAL TAX PENALTY. ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH INSURANCE POLICY THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD.THIS IS A SUPPLEMENT TO HEALTH INSURANCE AND IS NOT A SUBSTITUTE FOR MAJOR MEDICAL COVERAGE. LACK OF MAJOR MEDICAL COVERAGE (OR OTHER MINIMUM ESSENTIAL COVERAGE) MAY RESULT IN AN ADDITIONAL PAYMENT WITH YOUR TAXES. This is a brief summary of LifeShield Short-Term Medical Insurance underwritten by LifeShield National Insurance Co. provided by Policy Form Series LNG- 3001. Availability and terms may vary by state.</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${LSGD}</td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.waiting-period</td>
+	<td>${WP}</td>
+</tr>
+
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>
@@ -305,9 +364,25 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-app-page-body-content']/div/p</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${LSGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
 	<td>${ACATAX}</td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.waiting-period</td>
+	<td>${WP}</td>
+</tr>
+
 
 <tr>
 	<td>clickAndWait</td>
@@ -319,11 +394,7 @@ sanity4/24</td>
 	<td>AHI/Include/Use Credit Card</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='js-application-payment']/p</td>
-	<td>${ACATAX}</td>
-</tr>
+
 
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
@@ -492,6 +563,9 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
 	
 	
 	

@@ -41,11 +41,7 @@ sanity4/24</td>
 	<td>id=gender-m-0</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#agile-census > div.container</td>
-	<td>${HBIGD}</td>
-</tr>
+
 <tr>
 	<td>clickAndWait</td>
 	<td>id=js-see-plans</td>
@@ -54,19 +50,31 @@ sanity4/24</td>
 <!-----------------------------quote page------------------------------------------->
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/div[3]/p</td>
-	<td>${TELA}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${AXIGD}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/div[3]/p[2]</td>
-	<td>${KARI}</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${CHUBBGD}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${HUMANAGD}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/div[4]/p</td>
-	<td>${HBIGD}</td>
+	<td>//div[@id='disclaimer-container']/div[5]</td>
+	<td>*${SUPPLACA}*</td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[4]</td>
+	<td>${SLGD}</td>
+</tr>
+
+
 <!-----------------------------detail page------------------------------------------->
 <tr>
 	<td>clickAndWait</td>
@@ -75,40 +83,13 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/div[2]/p</td>
-	<td>${HBIGD}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${LLMSG}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/p[2]</td>
-	<td>${LLM1}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/p[3]</td>
-	<td>${LLM2}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/p[4]</td>
-	<td>${LLM3}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/p[5]</td>
-	<td>${LLM4}</td>
-</tr>
-
-
-<tr>
-	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/div/p</td>
-	<td>${TELA}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//section[@id='disclaimers']/div/div/p[2]</td>
-	<td>${KARI}</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${SUPPLACA}</td>
 </tr>
 
 
@@ -120,28 +101,13 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[5]/p</td>
-	<td>${HBIGD}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${LLMSG}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//p[2]</td>
-	<td>${LLM1}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//p[3]</td>
-	<td>${LLM2}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//p[4]</td>
-	<td>${LLM3}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//p[5]</td>
-	<td>${LLM4}</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${SUPPLACA}</td>
 </tr>
 
 
@@ -153,45 +119,14 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//p[7]</td>
-	<td>${HBIGD}</td>
-</tr>
-
-<tr>
-	<td>verifyText</td>
-	<td>//div[3]/div/p</td>
-	<td>${LLM1}</td>
-</tr>
-
-<tr>
-	<td>storeText</td>
-	<td>//p[3]</td>
-	<td>ss</td>
-</tr>
-
-<tr>
-	<td>storeEval</td>
-	<td>'${ss}'.toUpperCase();</td>
-	<td>b</td>
-</tr>
-
-<tr>
-	<td>verifyEval</td>
-	<td>'${b}'</td>
-	<td>${LLM2}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${LLMSG}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//p[5]</td>
-	<td>${LLM3}</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${SUPPLACA}</td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//p[6]</td>
-	<td>${LLM4}</td>
-</tr>
-
-
 <tr>
 	<td>type</td>
 	<td>//input[@value='']</td>
@@ -278,6 +213,8 @@ sanity4/24</td>
 
 	</tbody>
 </table>
+	
+	
 	
 	
 	
