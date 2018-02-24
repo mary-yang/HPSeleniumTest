@@ -6,5 +6,6 @@
 PAYMENT AUTHORIZATION
 https://docs.google.com/document/d/1zJcOt1n6HQuyHZvsiJ11nI-1MOASaRD_e7nsSnpcd80/edit#heading=h.gjdgxs
 
-https://www.pivotaltracker.com/story/show/147074417
-https://docs.google.com/document/d/1zJcOt1n6HQuyHZvsiJ11nI-1MOASaRD_e7nsSnpcd80/edit#heading=h.gjdgxs
+NG Special Disclaimer
+https://docs.google.com/document/d/12LIq3fYxY6nEbZzrvELODrJp6cxFlVgM1v6odY1LbGg/edit
+
