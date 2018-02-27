@@ -1,0 +1,3 @@
+state,zipcode,carrierid,uri,AutoEmail,status
+AL,35215,nationalgeneral,${uri},${AutoEmail},${status}
+FL,33186,nationalgeneral,${uri},${AutoEmail},${status}

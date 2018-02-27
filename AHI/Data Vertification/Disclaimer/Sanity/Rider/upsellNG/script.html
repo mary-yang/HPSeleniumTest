@@ -286,7 +286,17 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='app-underwritingQuestions-form']/div/p</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${LSGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
 	<td>${ACATAX}</td>
 </tr>
 
@@ -399,12 +409,12 @@ sanity4/24</td>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//a[@class='app-addon-ok btn btn-default']&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'Add')])[2]']&quot;)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//a[@class='app-addon-ok btn btn-default']</td>
+	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -563,6 +573,10 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
+	
 	
 	
 	

@@ -11,21 +11,19 @@ sanity4/24</td>
 	<td>AHI/Include/Disclaimers</td>
 	<td></td>
 </tr>
+<!-----------------------------Home page------------------------------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Open website</td>
 	<td></td>
 </tr>
+<!-----------------------------Census page------------------------------------------->
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Short Term Health Insurance</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#agile-census > div.container</td>
-	<td>${ACATAX}</td>
-</tr>
+
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
@@ -66,6 +64,7 @@ sanity4/24</td>
 	<td>xpath=//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
+<!-----------------------------quote page------------------------------------------->
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -113,6 +112,7 @@ sanity4/24</td>
 	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
 	<td></td>
 </tr>
+<!-----------------------------detail page------------------------------------------->
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -120,13 +120,18 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//*[@id='disclaimer-container']/div[1]</td>
-	<td>${General Disclaimers}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[2]</td>
 	<td>${SlaicolDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
 </tr>
 
 <tr>
@@ -134,6 +139,7 @@ sanity4/24</td>
 	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
+<!-----------------------------apply page------------------------------------------->
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -141,13 +147,18 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div</td>
-	<td>${General Disclaimers}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[2]</td>
 	<td>${SlaicolDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
 </tr>
 
 <tr>
@@ -160,6 +171,7 @@ sanity4/24</td>
 	<td>id=applyButton</td>
 	<td></td>
 </tr>
+<!-----------------------------u/w page------------------------------------------->
 <tr>
 	<td>pause</td>
 	<td>5000</td>
@@ -228,8 +240,18 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='app-underwritingQuestions-form']/div/p</td>
-	<td>${ACA TAX}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${SlaicolDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
 </tr>
 
 <tr>
@@ -242,6 +264,7 @@ sanity4/24</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -252,6 +275,7 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
+<!-----------------------------application pages------------------------------------------->
 
 
 <tr>
@@ -286,7 +310,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=member-P-1-occupation</td>
+	<td>id=member-P-0-occupation</td>
 	<td>value-added extend bandwidth</td>
 </tr>
 <tr>
@@ -311,10 +335,19 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-app-page-body-content']/div/p</td>
-	<td>${ACA TAX}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${SlaicolDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
@@ -325,26 +358,22 @@ sanity4/24</td>
 	<td>AHI/Include/Use Credit Card</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='js-application-payment']/p</td>
-	<td>${ACA TAX}</td>
-</tr>
+
 
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
@@ -528,6 +557,9 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
 	
 	
 	

@@ -6,11 +6,13 @@ sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
+<!-----------------------------Home page------------------------------------------->
 <tr>
 	 <td>include</td>
 	<td>AHI/Include/Disclaimers</td>
 	<td></td>
 </tr>
+<!-----------------------------Census page------------------------------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Open website</td>
@@ -21,11 +23,7 @@ sanity4/24</td>
 	<td>link=Short Term Health Insurance</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//body[@id='agile-census']/main/div[10]/p</td>
-	<td>${ACATAX}</td>
-</tr>
+
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
@@ -61,6 +59,7 @@ sanity4/24</td>
 	<td>link=(edit)</td>
 	<td></td>
 </tr>
+<!-----------------------------Census page------------------------------------------->
 <tr>
 	<td>verifyLocation</td>
 	<td>*/quote*</td>
@@ -94,37 +93,34 @@ sanity4/24</td>
 </tr>
 
 
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div/</td>
-	<td>${GeneralDisclaimers}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[6]/</td>
-	<td>${UHCGD}</td>
-</tr>
 
 <tr>
 	<td>clickAndWait</td>
 	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
 	<td></td>
 </tr>
+<!-----------------------------detail page------------------------------------------->
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>css=div.disclaimer-text.</td>
 	<td>${GeneralDisclaimers}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[2]/</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
 	<td>${UHCGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
 </tr>
 <tr>
 	<td>click</td>
 	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
+<!-----------------------------apply page------------------------------------------->
 <tr>
 	<td>pause</td>
 	<td>4000</td>
@@ -132,15 +128,19 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>css=div.disclaimer-text.</td>
 	<td>${GeneralDisclaimers}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[2]/</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
 	<td>${UHCGD}</td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
 <tr>
 	 <td>include</td>
 	<td>AHI/Include/Name</td>
@@ -223,7 +223,17 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='app-underwritingQuestions-form']/div/p</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${UHCGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
 	<td>${ACATAX}</td>
 </tr>
 
@@ -232,6 +242,7 @@ sanity4/24</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
+<!-----------------------------application pages------------------------------------------->
 <tr>
 	<td>type</td>
 	<td>id=member-P-1-firstName</td>
@@ -284,7 +295,17 @@ tr>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-app-page-body-content']/div/p</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${UHCGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
 	<td>${ACATAX}</td>
 </tr>
 
@@ -312,11 +333,7 @@ tr>
 </tr>
 
 
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='js-application-payment']/p</td>
-	<td>${ACATAX}</td>
-</tr>
+
 
 <tr>
 	<td>click</td>
@@ -360,6 +377,8 @@ tr>
 </body>
 </html>	
 
+	
+	
 	
 	
 	

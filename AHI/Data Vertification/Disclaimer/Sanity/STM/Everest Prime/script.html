@@ -11,21 +11,19 @@ sanity4/24</td>
 	<td>AHI/Include/Disclaimers</td>
 	<td></td>
 </tr>
+<!-----------------------------Home page------------------------------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Open website</td>
 	<td></td>
 </tr>
+<!-----------------------------Census page------------------------------------------->
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Short Term Health Insurance</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#agile-census > div.container</td>
-	<td>${ACATAX}</td>
-</tr>
+
 
 <tr>
 	<td>sendKeys</td>
@@ -67,6 +65,7 @@ sanity4/24</td>
 	<td>xpath=//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
+<!-----------------------------quote page------------------------------------------->
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -129,6 +128,7 @@ sanity4/24</td>
 	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
 	<td></td>
 </tr>
+<!-----------------------------detail page------------------------------------------->
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -136,13 +136,13 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[3]/div[3]/div[descendant::p[contains(text(),'Waiting Period for Illnesses')]]</td>
-	<td>Waiting Period for Illnesses 5 days</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='js-plan-disclaimers']/div</td>
-	<td>${General Disclaimers}</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${ACATAX}</td>
 </tr>
 
 <tr>
@@ -150,6 +150,7 @@ sanity4/24</td>
 	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
+<!-----------------------------apply page------------------------------------------->
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -157,18 +158,19 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=h4</td>
-	<td>exact:*WAITING PERIOD</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${ACATAX}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=div.waiting-period &gt; p</td>
-	<td>This plan includes a waiting period for illness. For more information, see Plan Limitations and Exclusions.</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div</td>
-	<td>${General Disclaimers}</td>
+	<td>css=div.waiting-period</td>
+	<td>${WP}</td>
 </tr>
 
 <tr>
@@ -181,6 +183,19 @@ sanity4/24</td>
 	<td>id=applyButton</td>
 	<td></td>
 </tr>
+<!-----------------------------u/w page------------------------------------------->
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${ACATAX}</td>
+</tr>
+
 <tr>
 	<td>pause</td>
 	<td>5000</td>
@@ -229,11 +244,6 @@ sanity4/24</td>
 }</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='app-underwritingQuestions-form']/div/p</td>
-	<td>${ACA TAX}</td>
-</tr>
 
 <tr>
 	<td>IF</td>
@@ -255,7 +265,7 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
-
+<!-----------------------------apply page------------------------------------------->
 
 <tr>
 	<td>waitForText</td>
@@ -307,22 +317,7 @@ sanity4/24</td>
 	<td>id=primaryPhone</td>
 	<td>${Tel}</td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='js-app-page-body-content']/div/p</td>
-	<td>${ACA TAX}</td>
-</tr>
 
-<tr>
-	<td>verifyText</td>
-	<td>css=div.waiting-period &gt; h4</td>
-	<td>exact:*WAITING PERIOD</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=div.waiting-period &gt; p</td>
-	<td>This plan includes a waiting period for illness. For more information, see Plan Limitations and Exclusions.</td>
-</tr>
 
 <tr>
 	<td>clickAndWait</td>
@@ -336,24 +331,35 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-application-payment']/p</td>
-	<td>${ACA TAX}</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.waiting-period</td>
+	<td>${WP}</td>
 </tr>
 
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//a[@class='app-addon-no-thanks btn btn-default']&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//a[@class='app-addon-no-thanks btn btn-default']</td>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
@@ -471,6 +477,8 @@ sanity4/24</td>
 	
 	
 
+	
+	
 	
 	
 	
