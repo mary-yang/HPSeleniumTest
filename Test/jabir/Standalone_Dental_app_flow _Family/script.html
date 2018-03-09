@@ -1,25 +1,15 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Denis/jabir/Standalone_Dental_app_flow _Family</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Jabir/Standalone_Dental_app_flow _Family</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">Standalone_Dental</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>http://praetemptatus.agilehealthinsurance.com/api/context/clear</td>
+	<td>${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/quote?census[location][zip]=${zip}&amp;census[member][0][dob]=01/01/1985&amp;census[member][0][gender]=M&amp;census[member][0][role]=P&amp;census[member][1][dob]=01/01/1985&amp;census[member][1][gender]=F&amp;census[member][1][role]=S&amp;census[member][2][dob]=01/01/2010&amp;census[member][2][gender]=M&amp;census[member][2][role]=C</td>
-	<td></td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>http://praetemptatus.agilehealthinsurance.com/dental-insurance-quotes</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=js-see-plans</td>
+	<td>${ENV}/dental-insurance/quote?census[location][zip]=${zip}&amp;census[member][0][dob]=01/01/1985&amp;census[member][0][gender]=M&amp;census[member][0][role]=P&amp;census[member][1][dob]=01/01/1985&amp;census[member][1][gender]=F&amp;census[member][1][role]=S&amp;census[member][2][dob]=01/01/2010&amp;census[member][2][gender]=M&amp;census[member][2][role]=C</td>
 	<td></td>
 </tr>
 <tr>
@@ -42,6 +32,7 @@
 	<td>//tr[4]/td[2]</td>
 	<td>apply_P</td>
 </tr>
+<!----------
 <tr>
 	<td>clickAndWait</td>
 	<td>css=span.js-apply-text.apply-button-text</td>
@@ -202,10 +193,19 @@
 	<td>//*[@id='js-app-confirmation']/div[1]/ul/li[1]/div/p[2]/span[1]</td>
 	<td>review_P_on_going</td>
 </tr>
+------>
 </tbody></table>
 </body>
 </html>
 
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
