@@ -354,7 +354,7 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>5000</td>
+	<td>8000</td>
 	<td></td>
 </tr>
 <tr>
@@ -369,13 +369,13 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>5000</td>
+	<td>8000</td>
 	<td></td>
 </tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
-<tr>
+<!---------<tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//p[@class='modal-sub-heading']&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'Add')])[2]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
@@ -397,6 +397,11 @@
 <tr>
 	<td>ENDIF</td>
 	<td></td>
+	<td></td>
+</tr>---------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
 	<td></td>
 </tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
@@ -456,6 +461,11 @@
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
 	<td>Successfully Enrolled</td>
 </tr>
+	
+	
+	
+	
+	
 	
 	
 	

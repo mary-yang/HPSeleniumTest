@@ -254,9 +254,9 @@
 	<td></td>
 </tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
-<tr>
+<!--------------------------<tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;css=div.modal-header > h3&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'Add')])[2]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
@@ -267,6 +267,11 @@
 <tr>
 	<td>ENDIF</td>
 	<td></td>
+	<td></td>
+</tr>---------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -358,6 +363,8 @@
 	
 	
 
+	
+	
 	
 	
 	
