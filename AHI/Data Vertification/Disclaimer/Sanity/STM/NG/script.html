@@ -71,6 +71,21 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>//input[@data-id="${carrierid}"]</td>
 	<td></td>
@@ -439,12 +454,12 @@ tr>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//*[@id='disclaimers-container']/div/div/div[1]</td>
+	<td>css=div.disclaimer-wrapper</td>
 	<td>*National General FRAUD WARNING Any person who, with intent to defraud or knowing that he is facilitating a fraud against an insurer, submits an application or files a claim containing a false or deceptive statement may be guilty of insurance fraud as determined by a court of law. NATIONAL GENERAL SHORT TERM MEDICAL AUTHORIZATIONS 1. I understand that the Group Short Term Major Medical Plan Covered Persons are covered by group insurance benefits. The group insurance benefits vary depending on plan selected. These benefits are provided under a group insurance policy underwritten by National Health Insurance Company and subject to the exclusions, limitations, terms and conditions of coverage as described in the insurance certificate which includes, but is not limited to, limitations for pre-existing conditions. This is not designated as a substitute for comprehensive major medical coverage. 2. I agree that coverage will not become effective for any person whose medical history changes prior to coverage approval, such that the person's answer would be "yes" to any of the Medical History questions in this application. If such person is the Applicant, coverage is automatically declined for all persons included in this application. 3. I understand that health insurance benefits are excluded for pre-existing conditions, and there are other restrictions and exclusions including a Pre-Authorization Penalty. 4. I understand that the broker who solicited this application was acting as an independent contractor and not as an agent of the Insurance Company. I further acknowledge that the person who solicited this application and upon whose explanation of benefits, limitations or exclusions we relied, was retained by me as my agent, and that such person has no right to bind or approve coverage or alter any of the terms or conditions of the policy. 5. I understand that any intentional misstatement or omission of information material to approval of coverage made on this form will be considered a misrepresentation and may be the basis for later rescission of my coverage and that of my dependents. In the event of rescission or termination for any reason, the Insurer shall have the right to deduct any premiums due and unpaid from any claims payable to me or my dependents. 6. I have read this enrollment application and have verified that all of the information provided in it is complete, true and correct, and is all within my personal knowledge. I agree to immediately notify the insurer of any changes in any of the information contained in this form which may occur prior to the approval of coverage. I understand that this type of plan is NOT considered "minimum essential coverage" under the Affordable Care Act and therefore I may be subject to a tax penalty. This is not designated as a substitute for comprehensive major medical coverage. I understand that this plan does not cover any Pre-Existing Conditions. A Pre-Existing Condition means a condition for which medical advice, diagnosis, care or treatment (includes receiving services and supplies, consultations, diagnostic test or prescription medicines) was recommended or received within the 12 months immediately preceding the Effective Date. I further understand that there are other restrictions and exclusions including a Pre-Authorization Penalty. I understand I will gain immediate access to the plan materials via the member website, a link to the member website will be sent electronically to the email address I provided on my application and I will receive detailed policy information in the mail after my enrollment and payment have been processed. The policy packet will be addressed to the mailing address you provided for your enrollment. I understand it is my responsibility to review all the information to fully understand the benefits and to be sure they are consistent with my understanding of the packages I have purchased. If there is any difference between my understanding of how the policy works, what was presented to me at the time of enrollment, and what is written in the policy certificate, the terms of the policy certificate will govern. I understand that I will have 10 days from the effective date to review the policy materials I can cancel for a full refund, provided I furnish written notification to Member Services within the first 10-day period. Policies cancelled within the 10-day period will be terminated back to the effective date and I will forfeit any potential claims as a result of the cancellation. For cancellations after the first 10-day period, a written cancellation request must be received at least 10 days prior to the policy's anniversary date to take effect for that coverage period. I understand there are no prorated fees or rebates after the first 10 days of coverage. I authorize and request the Company to initiate electronic payments against the indicated bank account or credit card for the payment of premiums and other indicated monthly dues included in the plan(s) being purchased, and to continue to initiate such payments until cancelled by me in writing. I agree that my electronic payment authorization may be terminated by providing written notice to the Company. I agree to submit this application by electronic means. By signing this application electronically, I certify that my answers are correct and complete to the best of my knowledge, including information provided for each applicant applying for benefits. I understand that an electronic signature has the same legal effect and can be enforced in the same way as a written signature. (If you selected OneClick) IMPORTANT INFORMATION ABOUT YOUR SHORT TERM MEDICAL PURCHASE If I am purchasing a standard issue Short Term Medical plan and adding one or more consecutive Short Term Medical policies at this time, then I understand and agree with the following: these are separate policies and deductible and out of pocket limits reset at the start of each new policy's 3 month term; the pre-existing condition lookback period will be based upon the first policy's effective date; that the date in which my payments for my subsequent consecutive Short Term Medical policies is subject to change, and my initial payment for the first month of any new subsequent policy can be withdrawn up to 15 days prior to my subsequent policy's effective date; and I will not be eligible for the subsequent consecutive Short Term policies if: 1) my current policy terminates due to nonpayment; 2) I contact you to terminate my current policy; or 3) I have not completed an application verification online or via telephone. THIS IS NOT AN AFFORDABLE CARE ACT PLAN OR MINIMUM ESSENTIAL COVERAGE I further attest that the responses to the application questions displayed in this verification are accurate as of the date I applied for this Short Term Medical policy, and that such answers will be relied upon by the Insurer to establish my eligibility and my dependents' eligibility for this policy and the subsequent consecutive policies. ASSOCIATION MEMBERSHIP AUTHORIZATION L.I.F.E. Association is a membership organization that provides lifestyle-related benefits and services to its members. Membership in the Association may be required in order to be eligible to purchase insurance coverage. Membership privileges include the opportunity to participate in all programs offered or sponsored by the Association. By applying for L.I.F.E. Association membership, you are requesting enrollment in the L.I.F.E. Association.You understand that dues are required for membership in the Association and if you choose to participate in a sponsored insurance program, then your annual dues may be collected in installments along with your insurance premiums. You also understand that your failure to remit membership dues will result in loss of eligibility to participate in all of the Association sponsored programs and benefits. PAYMENT AUTHORIZATION The accountholder of the bank account or credit card provided during this enrollment process authorizes and requests the Company to initiate automatic electronic payments against such indicated bank account or credit card for the payment of premiums and other indicated monthly dues included in the plan(s) being purchased during this enrollment process. Accountholder agrees that the electronic payment authorization for such automatic payments may be terminated by providing written notice to the Company.*</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimers-container']/div/div/div[2]</td>
+	<td>//div[@id='disclaimers-container']/div/div[3]/div</td>
 	<td>${AHIGTA}</td>
 </tr>
 
@@ -454,6 +469,9 @@ tr>
 </body>
 </html>	
 
+	
+	
+	
 	
 	
 	
