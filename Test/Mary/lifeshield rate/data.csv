@@ -1,0 +1,2 @@
+"provider","Plan_name","quote_testprod_rate","quote_QA_rate","QA_Apply_page_rate","testprod_Apply_page_rate","zipcode","Primary_dob","Primary_gender","Spouse_dob","Spouse_gender","Spouse","Spouse_enable","Child_dob","Child_gender","Child","Child_enable","pre","now","increase"
+"LifeShield","LifeShield Flex 5000/20/9000/750000","${quote_testprod_rate}","${quote_QA_rate}","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","35215","1/1/1980","F","1/1/1980","M","S","1","1/1/2000","M","C","2","1.15","1.1","${increase}"

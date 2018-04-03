@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/STM/Slacio Applications</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/STM/Slacio Applications</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
@@ -382,9 +382,9 @@
 	<td></td>
 </tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
-<tr>
+<!---------<tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'Add')])[2]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
@@ -400,6 +400,11 @@
 <tr>
 	<td>ENDIF</td>
 	<td></td>
+	<td></td>
+</tr>---------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
 	<td></td>
 </tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
@@ -485,6 +490,8 @@
 </body>
 </html>
 
+	
+	
 	
 	
 	

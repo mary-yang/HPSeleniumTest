@@ -217,11 +217,11 @@
 	<td>5000</td>
 	<td></td>
 </tr>
-<tr>
+<!---------<tr>
 	<td>click</td>
 	<td>id=js-same-billing</td>
 	<td></td>
-</tr>
+</tr>------------------->
 <tr>
 	<td>click</td>
 	<td>css=div.col-sm-12.checkbox &gt; label</td>
@@ -247,8 +247,13 @@
 	<td>5000</td>
 	<td></td>
 </tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
+<!----------<tr>
 	<td>IF</td>
 	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
 	<td></td>
@@ -268,7 +273,7 @@
 	<td>pause</td>
 	<td>5000</td>
 	<td></td>
-</tr>
+</tr>--------------------->
 <!---------
 <tr>
 	<td>click</td>
@@ -341,6 +346,8 @@
 </tbody></table>
 </body>
 </html>	
+	
+	
 	
 	
 	
