@@ -11,11 +11,6 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
 	<td>IF</td>
 	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
 	<td></td>
@@ -33,22 +28,27 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]&quot;)</td>
+	<td>verifyElementPresent(&quot;//div[@id='js-quote-filters']/div[2]/div/ul/li[contains(text(),'${provider}')]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]</td>
+	<td>//div[@id='js-quote-filters']/div[2]/div/ul/li[contains(text(),'${provider}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li[contains(text(),'${provider}')]</td>
+	<td>//*[@id='js-quote-plans-container']/ul[2]/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div/a/div</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div[1]/div[2]/div[1]</td>
+	<td>//*[@id='js-quote-plans-container']/ul[2]/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div/a/div</td>
 	<td>quote_QA_rate</td>
 </tr>
 <tr>
@@ -58,7 +58,7 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
 	<td>Apply_page_QA_rate</td>
 </tr>
 <tr>
@@ -86,32 +86,48 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 </tr>
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li[contains(text(),'${provider}')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//*[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div[1]/div[2]/div[1]</td>
-	<td>quote_testprod_rate</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=${Plan_name}</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
 	<td></td>
 </tr>
 <tr>
 	<td>ENDIF</td>
 	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;//div[@id='js-quote-filters']/div[2]/div/ul/li[contains(text(),'${provider}')]&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-filters']/div[2]/div/ul/li[contains(text(),'${provider}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//*[@id='js-quote-plans-container']/ul[2]/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div/a/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='js-quote-plans-container']/ul[2]/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div/a/div</td>
+	<td>quote_testprod_rate</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${Plan_name}</td>
 	<td></td>
 </tr>
 <tr>
@@ -121,7 +137,7 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
 	<td>Apply_page_testprod_rate</td>
 </tr>
 <tr>
@@ -138,6 +154,8 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 </body>
 </html>
 
+	
+	
 	
 	
 	
