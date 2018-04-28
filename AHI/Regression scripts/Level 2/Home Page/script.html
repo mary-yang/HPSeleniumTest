@@ -4,9 +4,15 @@
 </thead><tbody>
 <tr>
 	<td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
 	<td>AHI/Include/Open website</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>verifyText</td>
 	<td>link=Agile Health Insurance</td>
@@ -76,28 +82,40 @@
 </tr>
 <tr>
 	<td>verifyText</td>
+	<td>//body[@id='agile-default']/main/div/div[4]/div[4]/div/div</td>
+	<td>*What are Supplemental Health Products?Supplemental health products are products designed to be purchased in addition to a major medical health plan (such as a short term or an ACA/Obamacare health plan) or a health benefit insurance plan. There are two basic types: supplemental health insurance or non insurance supplemental health products. The most common supplemental health insurance products are dental insurance, vision insurance, and supplemental medical insurance. Supplemental medical insurance includes critical illness and accident insurances that will pay a set amount when you experience a covered medical event. The most common non insurance supplemental health products are telemedicine, which facilitates 24/7 access to medical providers, insurance advocacy services, which help you to better utilize your health plan, and pharmacy benefits, which provides you discounts for prescription and over the counter medications.*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
 	<td>//body[@id='agile-default']/main/div/div[4]/div[3]/div/div</td>
-	<td>What are Supplemental Health Products?Supplemental health products are products designed to be purchased in addition to a major medical health plan (such as a short term or an ACA/Obamacare health plan) or a health benefit insurance plan. There are two basic types: supplemental health insurance or non insurance supplemental health products. The most common supplemental health insurance products are dental insurance, vision insurance, and supplemental medical insurance. Supplemental medical insurance includes critical illness and accident insurances that will pay a set amount when you experience a covered medical event. The most common non insurance supplemental health products are telemedicine, which facilitates 24/7 access to medical providers, insurance advocacy services, which help you to better utilize your health plan, and pharmacy benefits, which provides you discounts for prescription and over the counter medications.</td>
+	<td>*What is a Health Care Sharing Ministry?A Health Care Sharing Ministry (HCSM) is a non-profit organization that facilitates the sharing of qualifying healthcare costs between individual members who have common ethical or religious beliefs. HCSMs have been around for several decades, and have been a trusted option for healthcare protection by consumers across the nation. Monthly membership fees are collected and distributed to help pay members’ medical costs. Members of HCSMs founded before January 1, 2000 are exempt from the individual responsibility tax penalty of the Affordable Care Act (a.k.a. Obamacare) Read more about Health Care Sharing Ministry*</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[4]/div/div/h3</td>
-	<td>exact:Why Agile Health Insurance?</td>
+	<td>//div[5]/div/div/h3</td>
+	<td>*Why Agile Health Insurance?*</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//body[@id='agile-default']/main/div/div[4]/div[5]/div/div</td>
-	<td>We're the experts in Short Term Health Insurance and Health Benefit Insurance plansStart Your Free Quote</td>
+	<td>css=h3.text-center.experts</td>
+	<td>*We're the experts in Short Term Health Insurance and Health Benefit Insurance plans*</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>id=finalCTA</td>
 	<td>Start Your Free Quote</td>
 </tr>
+
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>verifyText</td>
-	<td>//body[@id='agile-default']/main/div/div[4]/div[6]/div[2]/div/p</td>
-	<td>Short Term Health Insurance is health insurance outside of the Affordable Care Act ("Obamacare"). Health Benefit Insurance is comprised of fixed indemnity and may include supplemental insurance products and non insurance supplementary health products/services; it is not major medical insurance. Neither Short Term Health Insurance nor Health Benefit Insurance cover pre-existing conditions, they do not include all ten of the minimum essential benefits of Obamacare, and you may be subject to the Affordable Care Act Uninsured Tax (The 2017 Congressional Tax Reform Act does not eliminate this tax until 2019). You can learn more here.</td>
+	<td>css=div.disclaimer-text</td>
+	<td>${GACAD}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -250,6 +268,11 @@
 </body>
 </html>
 
+	
+	
+	
+	
+	
 	
 	
 	
