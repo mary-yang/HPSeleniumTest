@@ -4,7 +4,7 @@
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>/${ENV}/api/context/clear</td>
+	<td>${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
@@ -63,12 +63,21 @@
 	<td>2000</td>
 	<td></td>
 </tr>
-<!-----------------------------------------
 <tr>
 	<td>clickAndWait</td>
-	<td>//input[@data-id="${carrierid}"]</td>
+	<td>//span[contains(text(),'All Plans')]</td>
 	<td></td>
-</tr>----------------------------------->
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//span[contains(text(),'${carrierid}')]</td>
+	<td></td>
+</tr>
 <tr>
 	<td>pause</td>
 	<td>5000</td>
@@ -128,7 +137,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='headingunderwritingQuestions']/div/div[2]/p[2]</td>
-	<td>*Please answer for you and any of your dependents applying for short term medical insurance through GOLDEN RULE INSURANCE COMPANY, INDIANOPOLIS, IN 46278-1719 If born within 30 days prior to the effective date of coverage, the person will not be covered under the policy/certificate. Applicants must meet our height and weight guidelines to qualify for coverage. Important Notice: The answers to these questions will be electronically transferred to the application for insurance. After the questions are answered, please review the application; sign it; and the related forms, either electronically or by printing them and signing in ink.*</td>
+	<td>*If born within 30 days prior to the effective date of coverage, the person will not be covered under the policy/certificate. Applicants must meet our height and weight guidelines to qualify for coverage.*Important Notice: The answers to these questions will be electronically transferred to the application for insurance. After the questions are answered, please review the application; sign it; and the related forms, either electronically or by printing them and signing in ink.*</td>
 </tr>
 
 </tr>
@@ -143,6 +152,12 @@
 	
 	
 
+	
+	
+	
+	
+	
+	
 	
 	
 	
