@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 1/STM/Slacio</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/slaico_credit card</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
@@ -11,6 +11,11 @@
 	<td>clickAndWait</td>
 	<td>link=Quote &amp; Save Today</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare Health Insurance Quotes</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -127,18 +132,17 @@
 	<td>'${mo}'.match(/\d+.\d+/)</td>
 	<td>mo1</td>
 </tr>
-<!--
 <tr>
 	<td>verifyText</td>
-	<td>//*[@id='apply']/div[3]/div[2]/div[1]/div[1]/div/div[1]/table/tbody/tr[2]/td/a/span</td>
-	<td>${planname}</td>
+	<td>css=span.emphasize</td>
+        <td>${planname}</td>
 </tr>
+
 <tr>
 	<td>verifyText</td>
-	<td>//*[@id='apply']//tr[descendant::td[1][contains(text(),'Base Premium')]]/td[2]</td>
+	<td>//tr[4]/td[2]</td>
 	<td>$${mo1}</td>
 </tr>
--->
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -152,6 +156,11 @@
 <tr>
 	<td>pause</td>
 	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Underwriting</td>
 	<td></td>
 </tr>
 <tr>
@@ -321,55 +330,50 @@
 	<td></td>
 	<td></td>
 </tr>
-<!----------先填Bank Draft,用于验证有Bank Draft选项---------------------->
 <tr>
-	<td>type</td>
-	<td>id=account-holder-name</td>
-	<td>${FirstName} ${LastName}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=bank-name</td>
-	<td>WELLS FARGO BANK, NA</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='account-type']/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='account-class']/button[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=routing-number</td>
-	<td>121000248</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=account-number</td>
-	<td>4111022497</td>
-</tr>
-
-<tr>
-	<td>click</td>
-	<td>id=eft-payment-authorization</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=js-app-continue-link</td>
+	<td>include</td>
+	<td>AHI/Include/Use Credit Card</td>
 	<td></td>
 </tr>
 
-
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
+<!---------<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'Add')])[2]&quot;)</td>
+	<td></td>
+</tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
 	<td></td>
 </tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>---------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!----------Edit Payment 改填CreditCard选项---------------------->
 
 <tr>
 	<td>click</td>
@@ -396,16 +400,42 @@
 	<td>10000</td>
 	<td></td>
 </tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------------------->
 <tr>
-	<td>include</td>
-	<td>AHI/Include/BO App Search</td>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
-	<td>Successfully Enrolled</td>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
+	<td></td>
 </tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------end------------->
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Congratulation</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
 	
 	
 	
@@ -429,4 +459,39 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 	
