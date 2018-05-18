@@ -3,8 +3,13 @@
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
 <tr>
-	<td>include</td>
-	<td>AHI/Include/Open website</td>
+	<td>open</td>
+	<td>${ENV}/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}</td>
 	<td></td>
 </tr>
 <tr>
@@ -35,7 +40,7 @@
 <tr>
 	<td>sendKeys</td>
 	<td>id=dob-0</td>
-	<td>01/01/1985</td>
+	<td>01/01/1981</td>
 </tr>
 <tr>
 	<td>fireEvent</td>
@@ -73,46 +78,8 @@
 	<td>*/quote*</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='js-quote-filters']/div/ul/li/label</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='featuredPlan']/li/div/div[2]/ul/li/span[2]</td>
-	<td>Deductible</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${Deductible}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='featuredPlan']/li/div/div[2]/ul/li[2]/span[2]</td>
-	<td>Coinsurance</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${Coinsurance}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='featuredPlan']/li/div/div[2]/ul/li[3]/span[2]</td>
-	<td>Max_Out_of_Pocket</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${Max_Out_of_Pocket}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='js-quote-filters']/div[2]</td>
-	<td>Carriers</td>
-</tr>
+
+
 <tr>
 	<td>storeText</td>
 	<td>//div[2]/div/h3/a</td>
@@ -121,7 +88,7 @@
 
 <tr>
 	<td>storeText</td>
-	<td>//ul/li/div/div[2]/div/h3/a</td>
+	<td>//ul[2]/li/div/div[2]/div/h3/a</td>
 	<td>Bestsellername2</td>
 </tr>
 
@@ -153,7 +120,6 @@
 	<td>//li[5]/div/div[2]/div/h3/a</td>
 	<td>Bestsellername6</td>
 </tr>
-
 <tr>
 	<td>ENDIF</td>
 	<td></td>
@@ -211,26 +177,56 @@
 	<td></td>
 </tr>
 -->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(//li[5]/div/div[2]/div/h3/a)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li[5]/div/div[2]/div/h3/a</td>
+	<td>Bestsellername6</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li[6]/div/div[2]/div/h3/a</td>
+	<td>Bestsellername7</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li[7]/div/div[2]/div/h3/a</td>
+	<td>Bestsellername8</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li[8]/div/div[2]/div/h3/a</td>
+	<td>Bestsellername9</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li[9]/div/div[2]/div/h3/a</td>
+	<td>Bestsellername10</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(//li[10]/div/div[2]/div/h3/a)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li[10]/div/div[2]/div/h3/a</td>
+	<td>Bestsellername11</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
