@@ -196,6 +196,37 @@
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
+
+<tr>
+	<td>waitForText</td>
+	<td>css=h3</td>
+	<td>Avoid Gaps in Your Coverage. Add Additional Policies Today.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Add 1 Policy Added</td>
+	<td>Add 1 Policy Added</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Add 2 Policies Added</td>
+	<td>Add 2 Policies Added</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Add 3 Policies Added</td>
+	<td>Add 3 Policies Added</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add 3 Policies Added</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=js-policy-summary-3-plan</td>
+	<td>I would like to add 3 additional policies to my application.*I understand that I can cancel any of my policies anytime.</td>
+</tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------------------->
 <tr>
 	<td>IF</td>
@@ -210,6 +241,11 @@
 <tr>
 	<td>ENDIF</td>
 	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-extended-coverage</td>
 	<td></td>
 </tr>
 
@@ -231,6 +267,26 @@
 	<td>include</td>
 	<td>AHI/Include/Congratulation</td>
 	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-confirmation']/div/ul/li/div/div[4]/p/b</td>
+	<td>3rd Additional Policy</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-confirmation']/div/ul/li/div/div[3]/p/b</td>
+	<td>2nd Additional Policy</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-confirmation']/div/ul/li/div/div[2]/p/b</td>
+	<td>1st Additional Policy</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=b</td>
+	<td>Primary Policy</td>
 </tr>
 </tbody></table>
 </body>
@@ -261,6 +317,9 @@
 	
 	
 
+	
+	
+	
 	
 	
 	
