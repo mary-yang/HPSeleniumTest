@@ -1,0 +1,91 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Landing Page/PPC landing Pages</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${ENV}/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}/health-insurance-quotes-lp?${UTM}&amp;census=</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.ppc-landing-h1.padding-top-20</td>
+	<td>Get the healthcare coverage you need at a price you can afford!</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='ppc-landing-page-top-body']/div/div/div/h2</td>
+	<td>Find, compare and apply for health insurance online in minutes</td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>id=zip-input</td>
+	<td>30301</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=dob-0</td>
+	<td>03/03/1987</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ppc-landing-page-top-body</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gender-f-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=(edit)</td>
+	<td>(edit)</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}/api/context/show</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>*&quot;utm&quot;:{&quot;campaign&quot;:&quot;stm_quote&quot;,&quot;medium&quot;:&quot;ppc&quot;}*&quot;trafficSource&quot;:&quot;surehits&quot;*</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
