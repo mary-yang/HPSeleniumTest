@@ -1,0 +1,537 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/Rider/upsellUSAPlus</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+<!-----------------------------Home page------------------------------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote &amp; Save Today</td>
+	<td></td>
+</tr>
+<!-----------------------------Census page------------------------------------------->
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare Health Insurance Quotes</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1985</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!-----------------------------quote page------------------------------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=${carrierid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=ul.quote-all-plans-list.js-plans-list > li.quote-plan-container.js-plan-unit > div.quote-plan > div.quote-plan-body > div.quote-plan-carrier > h3.quote-plan-name > a</td>
+	<td>planname</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
+	<td></td>
+</tr>
+
+<!-----------------------------detail page------------------------------------------->
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${EVERESTSD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
+
+
+<tr>
+	<td>click</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<!-----------------------------apply page------------------------------------------->
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${EVERESTSD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Underwriting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Get URI</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[1]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[2]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[3]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[4]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[5]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[6]/div/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${EVERESTSD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
+
+
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 2. Applicant Info</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@value='']</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=07</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=member-P-1-lbs</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${EVERESTSD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Use Credit Card</td>
+	<td></td>
+</tr>
+
+
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'Add')])[2]']&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
+	<td>I have read the Terms and Agreements, I have reviewed my application(s) including the applicant and payment information and confirm that it is correct. I agree that by checking the box and clicking to sign, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature.*</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
+	<td>CET</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>link=Terms and Agreements</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Short Term Health Insurance, Affordable Health Plans, Affordable Obamacare Supplemental Health Insurance - AgileHealthInsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-wrapper</td>
+	<td>*Everest FRAUD WARNING It is unlawful to knowingly provide false, incomplete or misleading facts or information to an insurance company for the purpose of defrauding or attempting to defraud the company. Penalties may include imprisonment, fines, denial of insurance and civil damages. Any insurance company or agent of an insurance company who knowingly provides false, incomplete, or misleading facts or information to a policy holder or claimant for the purpose of defrauding or attempting to defraud the policy holder or claimant with regard to a settlement or award payable from insurance proceeds shall be reported to the Colorado Division of Insurance within the Department of Regulatory agencies. AUTHORIZATION CERTIFICATION - I/We hereby request coverage under the insurance underwritten by Everest Reinsurance Company (Company). I/We understand this insurance contains a Pre-existing Condition exclusion, a Pre-certification Penalty and other restrictions and exclusions. I/We agree that coverage will not become effective for me or any dependent whose medical status, prior to the effective date, has changed and therefore results in a "yes" answer to any of the medical questions on this Application. If my/our medical status changes in this way, coverage will be declined for all individuals included on this Application. I/We understand that if I/we have elected the Monthly Payment option, my credit card will be charged each month on the due date of the premium for the term of the policy. I/We understand that I/we may terminate the scheduled payments by notifying the insurance company or its authorized agent in writing at least one business day prior to the next scheduled payment date. I/We understand that this coverage is not renewable or extendable. I/We may obtain a complete copy of the Policy upon request. I/We understand that the Company, as underwriter of the plan, is solely liable for the coverage and benefits provided under the insurance. I/We understand and agree that the insurance agent/broker, if any, assisting with this Application is a representative of the Applicant. If coverage is agreed by a representative of the Applicant, the undersigned represents his/her capacity to so act. If coverage is agreed as guardian or proxy of the Applicant, the undersigned represents his/her capacity to so act. By acceptance of coverage and/or submission of any claim for benefits, the Applicant ratifies the authority of the signer to so act and bind the Applicant. If this Enrollment Form is completed electronically, I/we agree that my/our electronic signature serves as my/our original signature. If this Enrollment Form is not completed electronically, I/We agree to provide my/our verbal consent to certify my/our application in lieu of a signature.*</td>
+</tr>
+
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[3]/div</td>
+	<td>USA+ Dental FRAUD WARNING In several states, we are required to advise you of the following: Any person who knowingly and with intent to defraud provides false, incomplete or misleading information in an application for insurance, or who knowingly presents a false or fraudulent claim f or payment of a loss or benefit, is guilty of a crime and may be subject to fines and criminal penalties, including imprisonment. In addition, insurance benefits may be denied if false information provided by an applicant is materially related to a claim. MEMBERSHIP AGREEMENT I understand and agree that membership is subject to the terms and conditions of the Membership Agreement. We reserve the right to accept or decline any membership application in accordance with the by-laws that govern our association. In order to ensure that I am able to utilize the benefits, it may be necessary for USA+ to send and/or receive personal information about me to the companies that provide products and services to me. I have 10 day s to evaluate the membership and request a full refund.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[4]/div</td>
+	<td>AGILE SECURE GENERAL ACKNOWLEDGMENTS Agile Secure and the bundle of products included in this membership are not major medical insurance and are not designed to replace the 'minimum essential coverage' of the Affordable Care Act. It excludes benefits for pre-existing conditions. Med-Sense Guaranteed Association, and Federal Insurance Company, a Chubb Company, are separate legal entities and have sole financial responsibility for their own products. FRAUD WARNING NOTICE It is unlawful to knowingly provide false, incomplete or misleading facts or information to an insurance company for the purpose of defrauding or attempting to defraud the company. Penalties may include imprisonment, fines, denial of insurance and civil damages. Any insurance company or agent of an insurance company who knowingly provides false, incomplete, or misleading facts or information to a policyholder or claimant for the purpose of defrauding or attempting to defraud the policyholder or claimant with regard to a settlement or award payable from insurance proceeds shall be reported to the Colorado Division of Insurance within the Department of Regulatory agencies. MSGA MEMBERSHIP AGREEMENT I hereby enroll for membership in the Med-Sense Guaranteed Association. As a member of MSGA, understand that I will be able to access membership products, benefits and services. I acknowledge that member benefits are subject to change without notice. I accept the Association Terms and Conditions Agreement. MEMBERSHIP ENROLLMENT ACKNOWLEDMENT I also agree to all of the following Terms and Conditions of the Med-Sense Guaranteed Association. This program of services is provided through membership in Med Sense Guaranteed Association (MSGA). Service providers associated with this program are solely responsible for the professional advice and service rendered to members, and MSGA, disclaims liability with respect to such matters. At any time, a participating professional may be eliminated from the program. Providers are subject to change without notice and programs may vary in some states. The discounts are NOT insurance and may be discontinued or modified at any time. Most of the companies providing the services and discounts in this program are not licensed insurers, health maintenance organizations, or other underwriters of health care services. (The exceptions are the insurance carriers that provide the Accident Medical, Accidental Death & Dismemberment, Accident Disability Income, Critical illness, Term Life Insurance, Hospital Indemnity, Limited Medical Benefits, Short-Term Medical, and, if selected, Dental Indemnity benefit and/or Insured Prescription Drug program.) No portion of any provider's fees will be reimbursed or otherwise paid. The discounts contained herein may not be used in conjunction with any other discount plan or program. All listed or quoted prices or discounts are current at time of printing this material, and are subject to change without notice. Savings are based on the provider's usual and customary fees. Actual savings will vary depending on location and specific services or products purchased. Discounts on professional services are not available where prohibited by law. This program does not warrant professional services, nor is it responsible for the quality of service received. This program makes no warranties, express or implied concerning services provided. The program is NOT an insurance plan. However, the program does include certain limited supplemental insured benefits. If the optional Insured Prescription Drug benefit is selected, the pharmacy discounts on brand-name drugs are only available at participating pharmacies. The member shall receive a full refund of membership fees, if membership is canceled within the first 30 days. The program is not available in all states. Membership fees are to be paid when due. If the fees are not received, the member has 31 days from the due date to pay their membership fees; or the membership and any benefits provided will terminate. This plan is not an insurance policy and is not protected by any state Life and Health Guaranty Association. The member is responsible and agrees to pay any taxes that may be required by law as a result of membership. The laws of the State of Missouri shall govern the interpretation, construction and enforcement of this entire plan. Any dispute arising from, out of, or relating to this plan, including but not limited to those disputes regarding or relating to the plan or, Med-Sense Guaranteed Association, shall be resolved by binding, non-appealable arbitration. These provisions shall survive termination of this plan and the member's membership in the plan. Any cause of action the member may have with respect to the plan must be commenced within one (1) year after the claim or cause of action arises. Complaint Procedure: Any complaint regarding the plan or membership should be directed to Member Services at the toll-free number on the ID card or in writing to the address set forth herein. From time to time, certain providers may offer products or services to the general public at prices lower than the discounted prices available through this plan. Discounts on professional services are not available where prohibited by law. Providers are subject to change without notice and services may vary in some states. It is the member's responsibility to verify that the provider is a participant in the plan. No guarantee can be given in regard to the continued participation of any provider. Providers are solely responsible for the professional advice and service rendered to members and liability with respect to such matters is disclaimed. Each member and on behalf of all covered family dependents who are in the plan hereby forever releases, acquits and discharges the plan, Med-Sense Guaranteed Association, and its employees, officers, directors, agents and affiliates from any and all liabilities, claims, demands, actions, and causes of action that such member or covered family member may have by reason of any damage or personal injury sustained as a result of or during the course of the use of any service under the plan. The sole course available to a member or the member's covered family dependents is cancellation of the membership. The member agrees to defend, indemnify and hold harmless the plan and from any and all liabilities, cost, and expenses, including without limitation attorneys' fees and costs, related to or arising from any unauthorized use of member's plan; any violation of the plan by the member or those who access member's plan; or the use of the plan by the member or by those who access the member's plan in a manner contrary to any law or regulation or harmful in any way to the plan or any of its affiliates. The plan may only be used in the United States of America. Med Sense Guaranteed Association has the right to refuse membership to any person for any just or legal cause. Med-Sense Guaranteed Association has the right to refuse membership to any person for any just or legal cause.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[5]/div</td>
+	<td>${AHIGTA}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[6]/div</td>
+	<td>${AHIPayment}</td>
+</tr>
+
+
+
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

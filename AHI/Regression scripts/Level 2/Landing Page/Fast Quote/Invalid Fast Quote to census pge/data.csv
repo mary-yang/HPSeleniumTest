@@ -1,3 +1,3 @@
-"UTM","zip","oneTimePaymentSelected","DOB1","gender1","role1","DOB2","gender2","role2","DOB3","gender3","role3","DOB4","gender4","role4","URL","context"
-"","32099","true","04/01/2015","M","P","","F","","","","","","","","${URL}","${context}"
-"","32099","false","04/01/1999","M","P","04/01/1979","F","","","","","","","","${URL}","${context}"
+"UTM","zip","oneTimePaymentSelected","DOB1","gender1","role1","DOB2","gender2","role2","DOB3","gender3","role3","DOB4","gender4","role4","source","context"
+"partners=1&redirect=1&utm_source=surehits&utm_medium=test&utm_campaign=stm_quote","32099","true","04/01/2015","M","P","","F","","","","","","","","surehits","${context}"
+"","32099","false","04/01/1999","M","P","04/01/1979","F","","","","","","","","direct","${context}"
