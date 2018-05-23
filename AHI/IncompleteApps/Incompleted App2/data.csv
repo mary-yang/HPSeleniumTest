@@ -1,5 +1,0 @@
-"state","zipcode","source","carrierid","uri","user_LastName","AutoEmail"
-"##FL","32099","","carrier-hccadvantage-","${uri}","${LastName}","${AutoEmail}"
-"##IL","60001","","carrier-slaico-","${uri}","${LastName}","${AutoEmail}"
-"FL","32099","impact_radius","carrier-hccflexible-","${uri}","${LastName}","${AutoEmail}"
-"FL","32099","surehits","carrier-companionprotect-","${uri}","${LastName}","${AutoEmail}"

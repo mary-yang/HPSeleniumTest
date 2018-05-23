@@ -1,0 +1,171 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/Lead_Form2</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Landscape</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/landing-page/lead-affordable-health-insurance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@name='zip']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@name='zip']</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@name='zip']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='leadFormLandingPage']/section/div/h1</td>
+	<td>num</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='censusMembers']/div/div/div[2]/label/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>name=name</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=name</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@name='name'])[2]</td>
+	<td>LastName</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@name='name'])[3]</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@name='name'])[4]</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@name='dob']</td>
+	<td>${DOB}</td>
+</tr>
+<tr>
+	<td>doubleClickAt</td>
+	<td>//input[@name='dob']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='censusMembers']/div/div/div[2]/label/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'Continue')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'View Plans')])&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h4.plan-unit-title</td>
+	<td>num1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=p.plan-unit-price</td>
+	<td>premium1</td>
+</tr>
+
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'View Plans')])[2]&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='leadFormLandingPage']/section/div[2]/div/div/div[2]/div/h4</td>
+	<td>num2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='leadFormLandingPage']/section/div[2]/div/div/div[2]/div/p</td>
+	<td>premium2</td>
+</tr>
+
+
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'View Plans')])[3]&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='leadFormLandingPage']/section/div[2]/div/div/div[3]/div/h4</td>
+	<td>num3</td>
+</tr>
+
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='leadFormLandingPage']/section/div[2]/div/div/div[3]/div/p</td>
+	<td>premium3</td>
+</tr>
+
+<
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	

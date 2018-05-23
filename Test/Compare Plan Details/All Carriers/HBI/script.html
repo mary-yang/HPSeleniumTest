@@ -1,0 +1,261 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Compare Plan Details/All Carriers/HBI</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+
+<tr>
+	<td>store</td>
+	<td>http://testprod.agilehealthinsurance.com/health-benefit-insurance/plan/${planUri}?census[location][zip]=${zipcode}&amp;census[oneTimePaymentSelected]=false&amp;census[member][0][dob]=04/01/1965&amp;census[member][0][gender]=M&amp;census[member][0][role]=P&amp;census[member][1][dob]=06/01/1967&amp;census[member][1][gender]=F&amp;census[member][1][role]=S&amp;census[member][2][dob]=2001&amp;census[member][2][gender]=F&amp;census[member][2][role]=C&amp;census[member][3][dob]=2002&amp;census[member][3][gender]=M&amp;census[member][3][role]=C</td>
+	<td>url1</td>
+</tr>
+
+<tr>
+	<td>store</td>
+	<td>${ENV}/health-benefit-insurance/plan/${planUri}?census[location][zip]=${zipcode}&amp;census[oneTimePaymentSelected]=false&amp;census[member][0][dob]=04/01/1965&amp;census[member][0][gender]=M&amp;census[member][0][role]=P&amp;census[member][1][dob]=06/01/1967&amp;census[member][1][gender]=F&amp;census[member][1][role]=S&amp;census[member][2][dob]=2001&amp;census[member][2][gender]=F&amp;census[member][2][role]=C&amp;census[member][3][dob]=2002&amp;census[member][3][gender]=M&amp;census[member][3][role]=C</td>
+	<td>url2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${url1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<<tr>
+	<td>storeText</td>
+	<td>//section[@id='js-plan-benefits']/div</td>
+	<td>overview</td>
+</tr>
+
+<tr>
+	<td>storeText</td>
+	<td>//div[2]/div/section[2]/div</td>
+	<td>WII</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[2]/div/section[3]/div</td>
+	<td>AI</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[2]/div/section[4]/div</td>
+	<td>WIIF</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//section[@id='disclaimers']/div/p/</td>
+	<td>HBIDisclaimer</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Benefit Details')])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Benefit Details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[2]/section/div/</td>
+	<td>plan</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[2]/div[2]/section/div</td>
+	<td>Benefits</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'Physician Network')])[3]&quot;)</td>
+    <td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Physician Network')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/section/div/</td>
+	<td>Network</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Limitations &amp; Exclusions')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[4]/section/div/</td>
+	<td>Limitation</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[4]/section[2]/div/</td>
+	<td>Definitions</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'About the Association')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[5]/section/div/</td>
+	<td>Association</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[5]/section[2]/div/</td>
+	<td>TCforMSGA</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${url2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=View Plan Brochure</td>
+	<td>View Plan Brochure</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='js-plan-benefits']/div</td>
+	<td>${overview}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div/section[2]/div</td>
+	<td>${WII}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div/section[3]/div</td>
+	<td>${AI}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div/section[4]/div</td>
+	<td>${WIIF}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='disclaimers']/div/p/</td>
+	<td>${HBIDisclaimer}</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>link=Benefit Details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/section/div/</td>
+	<td>${plan}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div[2]/section/div</td>
+	<td>${Benefits}</td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'Physician Network')])[3]&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Physician Network')])[3]</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/section/div/</td>
+	<td>${Network}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Limitations &amp; Exclusions')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[4]/section/div/</td>
+	<td>${Limitation}</td>
+
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[4]/section[2]/div/</td>
+	<td>${Definitions}</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'About the Association')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[5]/section/div/</td>
+	<td>${Association}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[5]/section[2]/div/</td>
+	<td>${TCforMSGA}</td>
+</tr>
+
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
