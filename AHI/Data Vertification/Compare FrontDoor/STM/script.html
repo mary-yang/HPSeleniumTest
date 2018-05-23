@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Compare FrontDoor/Front Doors</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Compare FrontDoor/STM</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
@@ -26,14 +26,20 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//body[@id='agile-front-door']/div[3]/div[3]/div/div/div</td>
+	<td>//body[@id='agile-front-door']/main/div/div[3]/div/div/div/</td>
 	<td>WhyChoose</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//body[@id='agile-front-door']/div[3]/div[3]/div/div/div[2]</td>
+	<td>//body[@id='agile-front-door']/main/div/div[3]/div/div/div[2]</td>
 	<td>FeatureHighlights</td>
 </tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='disclaimer-container']</td>
+	<td>disclaimers</td>
+</tr>
+
 <tr>
 	<td>open</td>
 	<td>${url2}</td>
@@ -57,12 +63,12 @@
 
 <tr>
 	<td>verifyText</td>
-	<td>//body[@id='agile-front-door']/div[3]/div[3]/div/div/div</td>
+	<td>//body[@id='agile-front-door']/main/div/div[3]/div/div/div/</td>
 	<td>${WhyChoose}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//body[@id='agile-front-door']/div[3]/div[3]/div/div/div[2]</td>
+	<td>//body[@id='agile-front-door']/main/div/div[3]/div/div/div[2]</td>
 	<td>${FeatureHighlights}</td>
 </tr>
 <tr>
@@ -70,10 +76,18 @@
 	<td>link=Get a free quote to see all the details</td>
 	<td>Get a free quote to see all the details</td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']</td>
+	<td>${disclaimers}</td>
+</tr>
+
 
 </tbody></table>
 </body>
 </html>
+	
+	
 	
 	
 	

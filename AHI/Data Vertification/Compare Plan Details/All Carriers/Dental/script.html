@@ -55,9 +55,19 @@
 	<td>RTB3B</td>
 </tr>
 <tr>
+    <td>IF</td>
+    <td>//section[@id='js-plan-overview']/div/p</td>
+    <td></td>
+</tr>
+<tr>
 	<td>storeText</td>
 	<td>//section[@id='js-plan-overview']/div/p</td>
 	<td>RTB4</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
 </tr>
 
 <tr>
@@ -71,13 +81,21 @@
 	<td>//section[@id='js-plan-limitations']/div/</td>
 	<td>LimitationsExclusions</td>
 </tr>
-<!-----
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//section[@id='js-plan-msga-info']/div/&quot;)</td>
+	<td></td>
+</tr>
 <tr>
 	<td>storeText</td>
-	<td>//section[@id='js-plan-msga-info']/div/h2</td>
+	<td>//section[@id='js-plan-msga-info']/div/</td>
 	<td>MSGA</td>
 </tr>
------>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 <tr>
 	<td>storeText</td>
 	<td>//section[@id='js-plan-faqs']/div/div/</td>
@@ -138,9 +156,19 @@
 	<td>${RTB3B}</td>
 </tr>
 <tr>
+    <td>IF</td>
+    <td>//section[@id='js-plan-overview']/div/p</td>
+    <td></td>
+</tr>
+<tr>
 	<td>verifyText</td>
 	<td>//section[@id='js-plan-overview']/div/p</td>
 	<td>${RTB4}</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
 </tr>
 
 <tr>
@@ -165,16 +193,33 @@
 	<td>//section[@id='js-plan-variations']/div/h2</td>
 	<td>${OtherProducts}</td>
 </tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//section[@id='js-plan-msga-info']/div/&quot;)</td>
+	<td></td>
+</tr>
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='js-plan-msga-info']/div/h2</td>
+	<td>//section[@id='js-plan-msga-info']/div/</td>
 	<td>${MSGA}</td>
 </tr>
------>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
 
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
+	
 	
 	
 	
