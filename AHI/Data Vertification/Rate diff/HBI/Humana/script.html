@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Compare Rates/testprod diff/HBI/Humana</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Rate diff/HBI/Humana</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">compare_rate</td></tr>
 </thead><tbody>
@@ -23,7 +23,7 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='hbi-plan-details-overview']/div/div/div</td>
+	<td>//*[@id='js-quote-plans-container']/ul[2]/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div/a/div</td>
 	<td>Apply_page_QA_rate</td>
 </tr>
 <tr>
@@ -116,6 +116,7 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	
 	
 
+	
 	
 	
 	
