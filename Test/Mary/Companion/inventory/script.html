@@ -287,10 +287,16 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>type</td>
 	<td>id=credit-card-number</td>
 	<td>4358 8066 8649 3800</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=credit-card-number</td>
+	<td>blur</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -312,11 +318,7 @@ sanity4/24</td>
 	<td>id=expiration-month</td>
 	<td>label=02</td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>id=js-same-billing</td>
-	<td></td>
-</tr>
+
 <tr>
         <td>type</td>
 	<td>id=credit-card-cvv</td>
@@ -390,12 +392,22 @@ sanity4/24</td>
 	<td>*page/6* </td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>verifyText</td>
-	<td>css=span.emphasize.capitalize</td>
-	<td>Congratulations*</td>
+	<td>css=h2</td>
+	<td>*You have successfully submitted the following application*</td>
 </tr>
-
+<tr>
+	<td>include</td>
+	<td>AHI/Include/BO App Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
+	<td>Carrier Notified</td>
+</tr>
 
 </tbody></table>
 </body>
@@ -459,6 +471,10 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
+	
 	
 	
 	
