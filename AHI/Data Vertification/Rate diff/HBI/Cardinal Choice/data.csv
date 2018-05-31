@@ -8,7 +8,6 @@
 "Chubb","Cardinal Choice 1500","${quote_testprod_rate}","${quote_QA_rate}","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","IL","60602","1980/1/1","F","1980/1/1","M","S","1","","","",""
 "Chubb","Cardinal Choice 1500","${quote_testprod_rate}","${quote_QA_rate}","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","IL","60602","1980/1/1","F","1980/1/1","M","S","1","2000/1/1","M","C","2"
 "Chubb","Cardinal Choice 1500","${quote_testprod_rate}","${quote_QA_rate}","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","IL","60602","1980/1/1","F","","","","","2000/1/1","M","C","2"
-"Chubb","Cardinal Choice 1000","${quote_testprod_rate}","${quote_QA_rate}","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","IL","60602","1980/1/1","F","","","","","2000/1/1","M","C","2"
 "##Chubb","Cardinal Choice 750","${quote_testprod_rate}","${quote_QA_rate}","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","AL","35215","1980/1/1","F","","","","","","","",""
 "##Chubb","Cardinal Choice 750","${quote_testprod_rate}","${quote_QA_rate}","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","AL","35215","1980/1/1","F","1980/1/1","M","S","1","","","",""
 "##Chubb","Cardinal Choice 750","${quote_testprod_rate}","${quote_QA_rate}","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","AL","35215","1980/1/1","F","1980/1/1","M","S","1","2000/1/1","M","C","2"
