@@ -266,7 +266,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>//input[@value='']</td>
+	<td>id=member-P-1-firstName</td>
 	<td>Test-123</td>
 </tr>
 <tr>
@@ -289,11 +289,7 @@ sanity4/24</td>
 	<td>id=member-P-1-lbs</td>
 	<td>100</td>
 </tr>
-<tr>
-	<td>type</td>
-	<td>id=member-P-0-occupation</td>
-	<td>value-added extend bandwidth</td>
-</tr>
+
 <tr>
 	<td>type</td>
 	<td>id=address</td>
@@ -334,11 +330,50 @@ sanity4/24</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
+
+
 <tr>
-	<td>include</td>
-	<td>AHI/Include/Use Credit Card</td>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[1]</td>
 	<td></td>
 </tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4111 1111 1111 1111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-first</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-last</td>
+	<td>Last</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-month</td>
+	<td>label=12</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-year</td>
+	<td>label=2026</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=credit-payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+
 
 
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
@@ -365,9 +400,10 @@ sanity4/24</td>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
-	<td>I have read the Terms and Agreements, I have reviewed my application(s) including the applicant and payment information and confirm that it is correct. I agree that by checking the box and clicking to sign, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature. *</td>
+	<td>id=consent-checkbox-0-label</td>
+	<td>I have read the Terms and Agreements and Non-Discrimination Statement and I agree to submit this application by electronic means. By signing this application electronically, I certify that my answers are correct and complete to the best of my knowledge, including information provided for each applicant applying for benefits. I understand that an electronic signature has the same legal effect and can be enforced in the same way as a written signature.* </td>
 </tr>
+
 
 
 <tr>
@@ -386,42 +422,12 @@ sanity4/24</td>
 	<td></td>
 </tr>
 
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-wrapper</td>
+	<td>*COMPANION LIFE WARNING Any person who knowingly presents a false or fraudulent claim for payment of a loss or benefit or knowingly presents false information in an application for insurance is guilty of a crime and may be subject to fines and confinement in prison or any combination thereof. AUTHORIZATION I hereby request coverage under the insurance issued to the Communicating for America, Inc. and underwritten by Companion Life Insurance Company (Companion Life). I understand this insurance contains a Pre-existing Condition exclusion, a Pre-certification Penalty and other restrictions and exclusions. I agree that coverage will not become effective for me or any dependent whose medical status, prior to the effective date, has changed and therefore results in a &quot;yes&quot; answer to any of the medical questions on this Application. If my medical status changes in this way, coverage will be declined for all individuals included on this application. I understand that if I have elected the Monthly Payment option, my credit card will be charged each month on the due date of the premium. I understand that I may terminate the scheduled payments by notifying Companion Life in writing at least one business day prior to the next scheduled payment date. I understand that this coverage is not renewable or extendable. I understand that the information contained herein is a summary of the coverage offered in the Certificate of Insurance and that I may obtain a complete copy of the Certificate of Insurance upon request to Companion Life. I understand that Companion Life, as underwriter of the plan, is solely liable for the coverage and benefits provided under the insurance. I understand and agree that the insurance agent/broker, if any, assisting with this Application is a representative of the Applicant. If signed by a representative of the Applicant, the undersigned represents his/her capacity to so act. If signed as guardian or proxy of the Applicant, the undersigned represents his/her capacity to so act. By acceptance of coverage and/or submission of any claim for benefits, the Applicant ratifies the authority of the signer to so act and bind the Applicant. If I am not already a member of the Communicating for America, Inc., I hereby request to be enrolled as a member. I will receive a membership packet after my membership fees are received. NOTICE: THIS IS NOT QUALIFYING HEALTH COVERAGE (&quot;MINIMUM ESSENTIAL COVERAGE&quot;) THAT SATISFIES THE HEALTH COVERAGE REQUIREMENT OF THE AFFORDABLE CARE ACT. IF YOU DON'T HAVE MINIMUM ESSENTIAL COVERAGE, YOU MAY OWE AN ADDITIONAL PAYMENT WITH YOUR TAXES. PAYMENT DISCLAIMER The account holder of the bank account or credit card provided during this enrollment process authorizes and requests the Company to initiate automatic electronic payments against such indicated bank account or credit card for the payment of premiums and other indicated monthly dues included in the plan(s) being purchased during this enrollment process. Account holder agrees that the electronic payment authorization for such automatic payments may be terminated by providing written notice to the Company or Administrator. If a consumer is not satisfied for any reason and no claims have been filed, they may cancel their plan within 10 calendar days from the effective date and receive a full refund. The refund will include the first payment and the application fee.*</td>
+</tr>
 
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimers-container']/div/div/div/p</td>
-	<td>SLAICO</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimers-container']/div/div/div/p[2]/b</td>
-	<td>FRAUD WARNING</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimers-container']/div/div/div/p[3]</td>
-	<td>${FW}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimers-container']/div/div/div/p[4]/b</td>
-	<td>UNDERWRITING ACKNOWLEDGMENT</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimers-container']/div/div/div/p[5]</td>
-	<td>THIS IS A SHORT TERM HEALTH BENEFIT PLAN THAT IS NOT INTENDED TO QUALIFY AS THE MINIMUM ESSENTIAL COVERAGE REQUIRED BY THE AFFORDABLE CARE ACT (ACA). UNLESS YOU PURCHASE A PLAN THAT PROVIDES MINIMUM ESSENTIAL COVERAGE IN ACCORDANCE WITH THE ACA, YOU MAY BE SUBJECT TO A FEDERAL TAX PENALTY. ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH BENEFIT PLAN THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD.</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimers-container']/div/div/div/p[6]</td>
-	<td>ASSOCIATION ACKNOWLEDGMENT</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimers-container']/div/div/div/p[7]</td>
-	<td>I hereby request coverage under the insurance issued to the Med-Sense Guaranteed Association and underwritten by Standard Life and Accident Insurance Company. I understand this insurance contains a Pre-existing Condition exclusion, a Pre-certification Penalty and other restrictions and exclusions. I agree that coverage will not become effective for me or any dependent whose medical status, prior to the effective date, has changed and therefore results in a "yes" answer to any of the medical questions on this Application. If my medical status changes in this way, coverage will be declined for all individuals included on this Application. I understand that this coverage is not renewable or extendable. I may obtain a complete copy of the Certificate of Insurance upon request to AgileHealthInsurance. I understand that Standard Life and Accident Insurance Company, as underwriter of the plan, is solely liable for the coverage and benefits provided under the insurance. I understand and agree that the insurance agent/broker, if any, assisting with this Application is a representative of the Applicant. If signed by a representative of the Applicant, the undersigned represents his/her capacity to so act. If signed as guardian or proxy of the Applicant, the undersigned represents his/her capacity to so act. By acceptance of coverage and/or submission of any claim for benefits, the Applicant ratifies the authority of the signer to so act and bind the Applicant.</td>
-</tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div[3]/div</td>
@@ -584,6 +590,11 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
+	
+	
 	
 	
 	
