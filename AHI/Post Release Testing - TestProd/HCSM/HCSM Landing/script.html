@@ -18,7 +18,7 @@
 </tr>
 <tr>
 	<td>open</td>
-	<td>${ENV}/health-share-quotes</td>
+	<td>${ENV}/health-insurance-quotes</td>
 	<td></td>
 </tr>
 
@@ -77,6 +77,47 @@
 	<td>2000</td>
 	<td></td>
 </tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=Healthcare Sharing Ministry Plans&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Healthcare Sharing Ministry Plans</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Healthcare Sharing Ministry Plans</td>
+	<td>Healthcare Sharing Ministry Plans</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.quote-lead-sentence</td>
+	<td>Healthcare Sharing Ministries (HCSM) are cost-sharing programs where monthly dues are distributed to help members pay their medical expenses. HCSM plans offer broad networks of providers for major medical services such as primary care, hospital care, and surgical care.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=img.carrier-logo-image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.quote-plan-title</td>
+	<td>ONLINE PLAN INFORMATION IS CURRENTLY UNAVAILABLE</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//body[@id='healthshare-quote']/main/div[3]/div/div[2]/div[2]/</td>
+	<td>7 plans found. Save on your health costs, ACA Tax exempt, join today. Please call (800) 314-5594 to find out more about Christian Care Ministry Medi-Share.</td>
+</tr>
+<!----------------------------------------------------
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Unity Healthshare Bronze 10000</td>
@@ -204,7 +245,7 @@
 </tr>
 
 
-
+---------------------------->
 
 </tbody></table>
 </body>
@@ -214,6 +255,10 @@
 	
 	
 
+	
+	
+	
+	
 	
 	
 	

@@ -1,38 +1,20 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/Health Plans/IFP detail</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/Health Plans/IFP_detail</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">medicare_quote_ads</td></tr>
 </thead><tbody>
-<!--case1: sort-->
+
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td>https://${ENV}.healthpocket.com/api/clientData/clear</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.healthpocket.com/individual-health-insurance/plan/florida-blue-hmo-a-bluecross-blueshield-fl-company/myblue-bronze-1602</td>
+	<td>https://${ENV}.healthpocket.com/individual-health-insurance/plan/${carrier_uri}/${plan_uri}</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='js-census-bar']/div/div/div[2]/div[2]/ul/li[2]/button</td>
-	<td>ACA (Obamacare)</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h2.planDescriptor</td>
-	<td>Obamacare Plan in Florida</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>link=Summary of Benefits</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//div[@id='planMarketingMaterial']/div[2]</td>
-	<td></td>
-</tr>
+
+
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/h2</td>
@@ -51,7 +33,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div/div/div[2]</td>
-	<td>myBlue Bronze 1602</td>
+	<td>${plan_name}</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -103,16 +85,7 @@
 	<td>//section[@id='fullDetailsCollapse']/div/div[11]/div/h4</td>
 	<td>Exclusions and Limitations</td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section[3]/h2</td>
-	<td>Physician Directory</td>
-</tr>
-<tr>
-	<td>assertElementPresent</td>
-	<td>id=providerList</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section[4]/h2</td>
@@ -133,8 +106,82 @@
 	<td>id=quoteDisclaimer</td>
 	<td>HealthPocket is a free information source designed to help consumers find medical coverage. Whether you are looking for Medicare, Medicaid or an individual health insurance plan, we will help you find the right healthcare option and save on your out of pocket healthcare costs. We receive our data from government, non-profit and private sources, and you should confirm key provisions of your coverage with your selected health plan. If you select a plan presented on our site, you will be directed (via a click or a call) to one of our partners who can help you with your application. Our website is not a health insurance agency and not affiliated with and does not represent or endorse any health plan.</td>
 </tr>
+<tr>
+	<td>click</td>
+	<td>css=div.row.details-main</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Enter your ZIP Code</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=responsive-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=responsive-zip-input</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;css=a.location.selected&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
 
-
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.planDescriptor</td>
+	<td>Obamacare Plan in ${state}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Summary of Benefits</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='planMarketingMaterial']/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section[3]/h2</td>
+	<td>Physician Directory</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=providerList</td>
+	<td></td>
+</tr>
 
 </tbody></table>
 </body>
@@ -174,6 +221,14 @@
 	
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
