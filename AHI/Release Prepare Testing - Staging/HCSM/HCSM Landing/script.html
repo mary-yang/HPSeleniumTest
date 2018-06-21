@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/HCSM/Unity HealthSharing</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/HCSM/HCSM Landing</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">sanity4/24</td>
@@ -103,20 +103,16 @@
 	<td>Healthcare Sharing Ministries (HCSM) are cost-sharing programs where monthly dues are distributed to help members pay their medical expenses. HCSM plans offer broad networks of providers for major medical services such as primary care, hospital care, and surgical care.</td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
-	<td>css=img.carrier-logo-image</td>
-	<td></td>
+	<td>verifyText</td>
+	<td>//body[@id='healthshare-quote']/main/div[3]/div/div[2]/div[2]/p/</td>
+	<td>7 plans found. Save on your health costs, ACA Tax exempt, join today. Please call (855) 317-6283 to find out more about Christian Care Ministry Medi-Share.</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=div.quote-plan-title</td>
-	<td>ONLINE PLAN INFORMATION IS CURRENTLY UNAVAILABLE</td>
+	<td>//body[@id='healthshare-quote']/main/div[3]/div[2]/div/</td>
+	<td>What Are Health Care Sharing Ministries?A Health Care Sharing Ministry ("HCSM"), also known as faith-based health share ministry, is a type of health protection plan that facilitates sharing of health care costs among individual members. Traditionally these members are bound by mutual religious beliefs and have banded together to help share in the medical costs incurred by other members. By definition, HCSM plans are not health insurance and the organizations do not accept risk or make guarantees. HCSM plans have been around for decades, shared billions of dollars in medical expenses, and throughout that time the members have found the plans to be an affordable alternative to health insurance. When the Affordable Care Act was passed, regulations within the new law exempted members of HCSM plans from the individual mandate (the Obamacare Tax), making them even more attractive to potential members. MembershipMost HCSMs tend to have restrictions such as abstaining from extramarital sex, excessive drinking, and use of tobacco or illegal drugs. They usually require members to be in good health and make a statement of belief as well. All such ministries require that members subscribe to the principles of individual responsibility for their own health and of helping others in need. Tax DeductibilityMonthly share payments are not deductible from US federal income tax as either a medical expense (because it is not a payment for insurance) or a charitable deduction (because it is a payment for goods and services). Call our licensed support team today at (855) 317-6283</td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//body[@id='healthshare-quote']/main/div[3]/div/div[2]/div[2]/</td>
-	<td>7 plans found. Save on your health costs, ACA Tax exempt, join today. Please call (800) 314-5594 to find out more about Christian Care Ministry Medi-Share.</td>
-</tr>
+
 <!----------------------------------------------------
 <tr>
 	<td>clickAndWait</td>
@@ -255,6 +251,10 @@
 	
 	
 
+	
+	
+	
+	
 	
 	
 	
