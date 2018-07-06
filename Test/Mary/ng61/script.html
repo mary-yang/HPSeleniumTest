@@ -1,0 +1,56 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/ng61</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+
+<tr>
+	<td>open</td>
+	<td>${ENV}/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}/term-health-insurance/plan/nationalgeneral-${state}-10000-20-12000-1000000?census[location][zip]=${zip}&amp;census[member][0][dob]=1980-01-01&amp;census[member][0][gender]=F&amp;census[member][0][role]=P</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>price</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${price}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='js-plan-benefits']/div/div/div[6]</td>
+	<td>Coinsurance 20% after deductible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='js-plan-benefits']/div/div/div[10]</td>
+	<td>Max Out of Pocket $12,000 </td>
+</tr>
+
+
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	

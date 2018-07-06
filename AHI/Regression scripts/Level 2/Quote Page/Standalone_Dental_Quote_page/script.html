@@ -37,6 +37,83 @@
 	<td>id=js-see-plans</td>
 	<td></td>
 </tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeXpathCount</td>
+	<td>//a[contains(text(),'Select This Plan')]</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${x}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.quote-heading</td>
+	<td>*12 dental plans found.*</td>
+</tr>
+<!--verify Insurance Provider  filter-->
+<tr>
+	<td>click</td>
+	<td>//input[@data-id="nationwide"]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div/div[2]/div[1]/h3/a[contains(text(),'Foundation Dental')]</td>
+	<td>y</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${y}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//label[descendant::span[contains(text(),'Nationwide')]]/span[2]</td>
+	<td>*${y}*</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>//span[contains(text(),'All Plans')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>verifyElementPresent</td>
 	<td>link=${planname}</td>
@@ -45,7 +122,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='js-quote-plans-container']/ul[2]/li[2]/div/div[2]/ul/li</td>
-	<td>Annual Max Benefit$1,000</td>
+	<td>Annual Max Benefit$500</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -55,27 +132,28 @@
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='js-quote-plans-container']/ul[2]/li[2]/div/div[2]/ul/li[3]</td>
-	<td>Vision CoverageNo</td>
+	<td>Vision CoverageYes</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='js-quote-plans-container']/ul[2]/li[2]/div/div[2]/div[2]/ul/li[3]</td>
-	<td>Major Service Expenses: Not Covered</td>
+	<td>Major Service Expenses: PPO Discount*</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/div[2]/ul/li[2]</td>
 	<td>Basic Service Expenses: 70% Covered</td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/div[2]/ul/li[3]</td>
-	<td>Major Service Expenses:*PPO Discount*</td>
-</tr>
+
 </tbody></table>
 </body>
 </html>
 
+	
+	
+	
+	
+	
 	
 	
 	

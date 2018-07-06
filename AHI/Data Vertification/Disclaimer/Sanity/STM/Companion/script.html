@@ -1,0 +1,540 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/STM/Companion</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	 <td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+<!-----------------------------Home page------------------------------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Short Term Health Insurance</td>
+	<td></td>
+</tr>
+<!-----------------------------Census page------------------------------------------->
+
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1975</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/quote*</td>
+	<td></td>
+</tr>
+<!-----------------------------quote page------------------------------------------->
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@data-id="${carrierid}"]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/pivot-health')])[2]</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${planname}</td>
+	<td></td>
+</tr>
+
+
+
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/pivot-health')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<!-----------------------------detail page------------------------------------------->
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${CPGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
+<tr>
+	<td>click</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<!-----------------------------apply page------------------------------------------->
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${CPGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
+
+<tr>
+	 <td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*apply*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*application*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${CPGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
+<tr>
+	<td>storeLocation</td>
+	<td>url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;/&quot;)+1)</td>
+	<td>uri</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${uri}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-1']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-2']/ul/li[4]/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-3']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-4']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-5']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-firstName</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;; var tmp=&quot;&quot;; for (i=0;i&lt;8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
+	<td>LastName</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=06</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=02</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lbs</td>
+	<td>190</td>
+</tr>
+tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${CPGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4358806686493800</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-first</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-last</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-year</td>
+	<td>label=2024</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-month</td>
+	<td>label=02</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+<tr>
+        <td>type</td>
+	<td>id=credit-card-cvv</td>
+	<td>123</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=credit-payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${CPGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;css=div.col-md-11.terms-cell > p&quot;)</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>echo</td>
+	<td>${uri}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
+	<td>I have read the Terms and Agreements and Non-Discrimination Statement and I agree to submit this application by electronic means. By signing this application electronically, I certify that my answers are correct and complete to the best of my knowledge, including information provided for each applicant applying for benefits. I understand that an electronic signature has the same legal effect and can be enforced in the same way as a written signature.*</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
+	<td>CET</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${CPGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
+
+<tr>
+	<td>click</td>
+	<td>link=Terms and Agreements</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Short Term Health Insurance, Affordable Health Plans, Affordable Obamacare Supplemental Health Insurance - AgileHealthInsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-wrapper</td>
+	<td>*COMPANION LIFE WARNING Any person who knowingly presents a false or fraudulent claim for payment of a loss or benefit or knowingly presents false information in an application for insurance is guilty of a crime and may be subject to fines and confinement in prison or any combination thereof. AUTHORIZATION I hereby request coverage under the insurance issued to the Communicating for America, Inc. and underwritten by Companion Life Insurance Company (Companion Life). I understand this insurance contains a Pre-existing Condition exclusion, a Pre-certification Penalty and other restrictions and exclusions. I agree that coverage will not become effective for me or any dependent whose medical status, prior to the effective date, has changed and therefore results in a "yes" answer to any of the medical questions on this Application. If my medical status changes in this way, coverage will be declined for all individuals included on this application. I understand that if I have elected the Monthly Payment option, my credit card will be charged each month on the due date of the premium. I understand that I may terminate the scheduled payments by notifying Companion Life in writing at least one business day prior to the next scheduled payment date. I understand that this coverage is not renewable or extendable. I understand that the information contained herein is a summary of the coverage offered in the Certificate of Insurance and that I may obtain a complete copy of the Certificate of Insurance upon request to Companion Life. I understand that Companion Life, as underwriter of the plan, is solely liable for the coverage and benefits provided under the insurance. I understand and agree that the insurance agent/broker, if any, assisting with this Application is a representative of the Applicant. If signed by a representative of the Applicant, the undersigned represents his/her capacity to so act. If signed as guardian or proxy of the Applicant, the undersigned represents his/her capacity to so act. By acceptance of coverage and/or submission of any claim for benefits, the Applicant ratifies the authority of the signer to so act and bind the Applicant. If I am not already a member of the Communicating for America, Inc., I hereby request to be enrolled as a member. I will receive a membership packet after my membership fees are received. NOTICE: THIS IS NOT QUALIFYING HEALTH COVERAGE ("MINIMUM ESSENTIAL COVERAGE") THAT SATISFIES THE HEALTH COVERAGE REQUIREMENT OF THE AFFORDABLE CARE ACT. IF YOU DON'T HAVE MINIMUM ESSENTIAL COVERAGE, YOU MAY OWE AN ADDITIONAL PAYMENT WITH YOUR TAXES. PAYMENT DISCLAIMER The account holder of the bank account or credit card provided during this enrollment process authorizes and requests the Company to initiate automatic electronic payments against such indicated bank account or credit card for the payment of premiums and other indicated monthly dues included in the plan(s) being purchased during this enrollment process. Account holder agrees that the electronic payment authorization for such automatic payments may be terminated by providing written notice to the Company or Administrator. If a consumer is not satisfied for any reason and no claims have been filed, they may cancel their plan within 10 calendar days from the effective date and receive a full refund. The refund will include the first payment and the application fee.*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[3]/div</td>
+	<td>${AHIGTA}</td>
+</tr>
+
+
+
+</tbody></table>
+</body>
+</html>	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

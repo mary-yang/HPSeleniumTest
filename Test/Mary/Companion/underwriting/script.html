@@ -4,7 +4,7 @@
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>/${ENV}/api/context/clear</td>
+	<td>${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
@@ -69,20 +69,33 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
 	<td></td>
 </tr>
-<!----------------------------------------
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>//input[@data-id="${carrierid}"]</td>
 	<td></td>
-</tr>------------------------------->
-
+</tr>
 <tr>
 	<td>pause</td>
 	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -178,11 +191,9 @@
 <tr>
 	<td>writeSeleniumScript</td>
 	<td>for(i=1;i<=${Num};i++){
-   writeSelenium("click", //li[${time}]/div/button);
- writeSelenium("storeText", //li[@id='js-question-P0-1']/div/button, ${Question${time}});
+ writeSelenium("include", "AHI/Include/clickuw_companion");
 
 }
-
 
 
 
@@ -210,6 +221,14 @@
 	
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

@@ -1,0 +1,184 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Compare Policy Holder Help/hbi/hbi</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+
+<tr>
+	<td>store</td>
+	<td>https://testprod.agilehealthinsurance.com/help-members/${carrierid}</td>
+	<td>url1</td>
+</tr>
+
+<tr>
+	<td>store</td>
+	<td>${ENV}/help-members/${carrierid}</td>
+	<td>url2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${url1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=BenefitsView »</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=js-main</td>
+	<td>benefits</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Claims</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=js-main</td>
+	<td>claims</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Customer Service</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=js-main</td>
+	<td>customerservice</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=FAQs</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=js-main</td>
+	<td>faqs</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Glossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=js-main</td>
+	<td>glossary</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Health Benefit Insurance Guide</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=js-main</td>
+	<td>hbig</td>
+</tr>
+
+
+<tr>
+	<td>open</td>
+	<td>${url2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=BenefitsView »</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=js-main</td>
+	<td>${benefits}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Claims</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=js-main</td>
+	<td>${claims}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Customer Service</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=js-main</td>
+	<td>${customerservice}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=FAQs</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=js-main</td>
+	<td>${faqs}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Glossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=js-main</td>
+	<td>${glossary}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Health Benefit Insurance Guide</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=js-main</td>
+	<td>${hbig}</td>
+</tr>
+
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
