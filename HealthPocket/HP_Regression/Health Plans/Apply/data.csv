@@ -1,5 +1,5 @@
 "state","zipcode","DOB","year","state1","url","expect","result"
-"Alabama","35215","03/06/1995","2018","AL","individual-health-insurance/plan/blue-cross-blue-shield-of-illinois/blue-focuscare-bronze-209","link to STM page","link to STM page"
+"Alabama","35215","03/06/1995","2018","AL","individual-health-insurance/plan/blue-cross-and-blue-shield-of-alabama/blue-protect","link to STM page","link to STM page"
 "##Arkansas","72209","03/06/1995","2018","AR","individual-health-insurance/plan/blue-cross-blue-shield-of-illinois/blue-focuscare-bronze-209","link to STM page","link to STM page"
 "##Arizona","85364","03/06/1995","2018","AZ","individual-health-insurance/plan/blue-cross-blue-shield-of-illinois/blue-focuscare-bronze-209","link to STM page","link to STM page"
 "##Colorado","80219","03/06/1995","2018","CO","","link to STM page","link to STM page"
