@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/IFP/ifp_apply</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/Health Plans/HP_IFP_Apply</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">medicare_quote_ads</td></tr>
 </thead><tbody>
@@ -14,18 +14,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>//ul[@id='plans']/li[2]/a/span/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/${url}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Select</td>
+	<td>xpath=(//a[contains(text(),'Apply Now')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -96,7 +91,6 @@
     <td></td>
     <td></td>
 </tr>
-
 <tr>
   <td>verifyEval</td>
   <td>var b=&quot;${result}&quot;;b=b.match(&quot;${expect}&quot;)</td>
@@ -105,49 +99,6 @@
 </tbody></table>
 </body>
 </html>
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
