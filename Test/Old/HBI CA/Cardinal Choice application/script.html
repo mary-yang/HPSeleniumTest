@@ -1,0 +1,353 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Old/HBI CA/Cardinal Choice application</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Health Benefit Insurance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zip}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>${DOB}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+
+
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=Cardinal Choice 750&quot;)</td>
+    <td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>//a[contains(@href, '/health-benefit-insurance/apply/cardinalchoice-${state2}-750-22500-75-3')]</td>
+	<td></td>
+</tr>
+
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=input-first-name</td>
+	<td>${FirstName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=input-last-name</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=input-phone-number</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=input-email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-app-page-body-content']/form/div/div[6]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+
+<<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=No Thanks&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+    <td>click</td>
+    <td>link=No Thanks </td>
+    <td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=smsPermission</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4111 1231 2312 3123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-first</td>
+	<td>${FirstName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-last</td>
+	<td>${LasttName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-month</td>
+	<td>label=12</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-year</td>
+	<td>label=2026</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-billing-address']/div[2]/div/label[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing-address</td>
+	<td>test bill</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing-city</td>
+	<td>test city</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=billing-state</td>
+	<td>label=CA</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing-zip</td>
+	<td>90011</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=credit-payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=consent-checkbox-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-signature-tab</td>
+	<td></td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>css=p.emphasize</td>
+	<td>Congratulations Test-123!</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.c-app-sidebar__header</td>
+	<td>Your plan</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=View Plan Brochure</td>
+	<td>View Plan Brochure</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=View HBI Guide</td>
+	<td></td>
+</tr>
+
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
