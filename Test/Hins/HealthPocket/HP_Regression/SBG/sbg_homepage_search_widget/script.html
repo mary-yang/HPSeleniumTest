@@ -1,0 +1,62 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/SBG/sbg_homepage_search_widget</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">dt01</td></tr>
+</thead><tbody>
+<!--go to ST quote page from homepage with values-->
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/small-business-health-insurance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=location</td>
+	<td>${input}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.location.selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='pageHeader']/h3/strong</td>
+	<td>* Small Business/Group Health Plans Found</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	

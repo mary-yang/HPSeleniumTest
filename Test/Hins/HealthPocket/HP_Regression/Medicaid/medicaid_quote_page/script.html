@@ -1,0 +1,112 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/Medicaid/medicaid_quote_page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">medicaid_quote_page</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicaid-public-plans/california-quote</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=helpTab</td>
+	<td></td>
+</tr>
+<!--header-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='pageHeader']/h1/strong</td>
+	<td>*Medicaid &amp; Public Health Programs Found*</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--demographics-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='medicaidDemographics']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='2']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=quoteDisclaimer</td>
+	<td></td>
+</tr>
+<!--clear filter-->
+<!--zip-->
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicaid-public-plans/list?zip=90001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//li[@id='js-location-container']/span/span[2]</td>
+	<td>*CA*</td>
+</tr>
+<!--select button-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//ul[@id='plans']/li/a/span/span/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=Continue Searching</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

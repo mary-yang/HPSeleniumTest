@@ -1,0 +1,256 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/homepage</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--global links-->
+<tr>
+	<td>verifyTitle</td>
+	<td>Find Affordable Health Insurance Plans for 2018 - Healthpocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=Medicare</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Medicare</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Medicare Insurance - Find Affordable Medicare Plans for 2018</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=Medigap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Medigap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Medicare Supplemental Insurance | Medigap - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=Individual</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Individual</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Affordable Individual & Family Health Insurance - Healthpocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=Short Term</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Short Term</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Short Term Health Insurance - Temporary Coverage Health Plans - Healthpocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=Dental</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Dental</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Dental Insurance - Find Dental Coverage - Healthpocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=Small Business</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Small Business</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Small Business and Group Health Insurance - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=More</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>link=More</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>link=More</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='extendedHeaderLinks']/ul/li[1]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Medicaid and Public Health Plans - HealthPocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>link=More</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='extendedHeaderLinks']/ul/li[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Find Health Plans Accepted By Your Doctor - Healthpocket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>link=More</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='extendedHeaderLinks']/ul/li[3]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Find Health Insurance Plans In Your City - Healthpocket</td>
+	<td></td>
+</tr>
+<!--search button-->
+<tr>
+	<td>verifyVisible</td>
+	<td>id=siteSearchIcon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=siteSearchIcon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=siteSearchSubmit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=siteSearchInput</td>
+	<td>medicare</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=siteSearchSubmit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=searchHeading</td>
+	<td>Search Results</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=siteSearchInput</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=siteSearchSubmit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=searchResults</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=HealthPocket</td>
+	<td></td>
+</tr>
+<!--search census-->
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

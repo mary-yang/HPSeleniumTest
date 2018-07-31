@@ -1,0 +1,178 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/Medicare/medicare_front door</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">medicare_front_door</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicare</td>
+	<td></td>
+</tr>
+<!--delayed popup-->
+<tr>
+	<td>include</td>
+	<td>HealthPocket/include/medicare_delayed_popup</td>
+	<td></td>
+</tr>
+<!--global nav-->
+
+<tr>
+	<td>verifyText</td>
+	<td>css=span.savePlansShortLabel</td>
+	<td>Saved Plans</td>
+</tr>
+
+<!--search bar-->
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>Compare every Medicare plan in Your Area</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td>Medicare</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>id=location@placeholder</td>
+	<td>Zip Code, City, or State</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=findPlans</td>
+	<td></td>
+</tr>
+<!--middle-->
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.sectionHeading.resourceHeading</td>
+	<td>About Medicare</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.hpAnalytics.scrollView</td>
+	<td>Medicare Information</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.homeContentWrapper &gt; p</td>
+	<td>Medicare is a government health insurance program for individuals who are 65 and older. This insurance program also provides health coverage for people who have certain disabilities or have permanent kidney failure. The program has four main parts that cover a range of medical services from doctor visits, inpatient hospital stays, surgeries, lab tests, and prescription drug coverage.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='productLinks']/div/p[2]</td>
+	<td>It's important to know the different parts of Medicare coverage, your Medicare rights and protections, and how to find the right Medicare insurance option to reduce your Medicare out of pocket costs. The below articles are simple and consumer-friendly:</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='productLinks']/div[2]/header/h3</td>
+	<td>Assistance for Seniors</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='productLinks']/div[2]/p</td>
+	<td>The government provides assistance to Medicare beneficiaries with limited income and those who suffer from chronic conditions. The following links are to informational pages related to assistance for seniors as well as additional information on Medicare coverage for durable medical equipment, nursing homes, and other assisted living facilities.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.homeContentWrapper.last &gt; header &gt; h3.hpAnalytics.scrollView</td>
+	<td>More Information Regarding Insurance Companies and their Medicare Insurance Plans</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='stateContainer']/h2</td>
+	<td>Find Plans By State</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#healthcare-news &gt; h2.sectionHeading.resourceHeading</td>
+	<td>Resources</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.homeContentWrapper &gt; h3.hpAnalytics.scrollView</td>
+	<td>Medicare Research</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#healthcare-news &gt; div.homeContentWrapper &gt; p</td>
+	<td>With many Medicare Plan Options available, it can be difficult to find the right health plan for your medical needs. HealthPocket provides unbiased consumer-oriented research to empower people to make their wisest decisions regarding Medicare coverage. Additionally, we provide a Medicare premium comparison tool at the top of this page so you can review the cost differences among different Medicare options:</td>
+</tr>
+
+
+<!--find plan by state-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View All States &gt;&gt;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>Find Medicare Plans by State</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=California</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.pageHeading &gt; strong</td>
+	<td>* Medicare Plans Found</td>
+</tr>
+<!--article-->
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicare/what-is-medicare</td>
+	<td></td>
+</tr>
+<!--delayed popup-->
+<tr>
+	<td>include</td>
+	<td>HealthPocket/include/medicare_delayed_popup</td>
+	<td></td>
+</tr>
+<!--docker-->
+<tr>
+	<td>storeText</td>
+	<td>css=h1</td>
+	<td>article_name</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

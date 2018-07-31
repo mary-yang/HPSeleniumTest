@@ -1,0 +1,3 @@
+"ENV","url","city_name","state","state1","zipcode","quote","detail","apply","banner","ifp_docker"
+"${ENV}","http://${ENV}.healthpocket.com/","Burlington","Vermont","VT","5401","(800) 984-8015","(800) 984-8015","(800) 984-8015","(800) 984-8015","(800) 984-8015"
+"##${ENV}","http://${ENV}.healthpocket.com/","Chevy Chase","District Of Columbia","DC","20015","(800) 984-8015","(800) 984-8015","(800) 984-8015","(800) 984-8015","(800) 984-8015"
