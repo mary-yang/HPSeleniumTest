@@ -1,2 +1,0 @@
-*IFP Delayed popup* - a proactive popup message that prompts the user to call.
-PT#81871888
