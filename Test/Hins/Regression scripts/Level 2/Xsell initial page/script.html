@@ -68,59 +68,44 @@
 
 
 <tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-    <td>IF</td>
-    <td>verifyElementPresent(&quot;link=Healthcare Sharing Ministry Plans&quot;)</td>
-    <td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Healthcare Sharing Ministry Plans</td>
-	<td></td>
-</tr>
-<tr>
-    <td>ENDIF</td>
-    <td></td>
-    <td></td>
+	<td>verifyText</td>
+	<td>css=h1.hbi-xsell-heading</td>
+	<td>Thank you for your interest.</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>link=Healthcare Sharing Ministry Plans</td>
-	<td>Healthcare Sharing Ministry Plans</td>
+	<td>css=div.hbi-xsell-box &gt; p</td>
+	<td>Health Benefit Insurance plans offer financial protection against unforeseen medical expenses such as:</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.text-center &gt; p</td>
+	<td>If you are not redirected in * seconds</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=CLICK HERE</td>
+	<td>CLICK HERE</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=CLICK HERE</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Health Benefit Insurance Plans</td>
+	<td>Health Benefit Insurance Plans</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>css=p.quote-lead-sentence</td>
-	<td>Healthcare Sharing Ministries (HCSM) are cost-sharing programs where monthly dues are distributed to help members pay their medical expenses. HCSM plans offer broad networks of providers for major medical services such as primary care, hospital care, and surgical care.</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>css=img.carrier-logo-image</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=div.quote-plan-title</td>
-	<td>ONLINE PLAN INFORMATION IS CURRENTLY UNAVAILABLE</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//body[@id='healthshare-quote']/main/div[3]/div/div[2]/div[2]/</td>
-	<td>7 plans found. Save on your health costs, ACA Tax exempt, join today. Please call (855) 317-6283 to find out more about Christian Care Ministry Medi-Share.</td>
+	<td>Health benefit insurance pays you cash for common medical events like visiting the doctor, staying at the hospital or visiting the emergency room.</td>
 </tr>
 
 
@@ -202,4 +187,5 @@
 	
 	
 
+	
 	
