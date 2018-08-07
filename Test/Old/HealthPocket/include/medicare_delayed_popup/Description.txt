@@ -1,5 +1,0 @@
-PT#81316418
-Delayed popup - a proactive popup message that prompts the user to call.
-
-pt#81724888
-medicare delayed popup - add 'learn more' like to popup

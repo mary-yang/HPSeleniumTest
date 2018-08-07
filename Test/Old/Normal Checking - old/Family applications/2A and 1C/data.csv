@@ -1,5 +1,0 @@
-"state","zip","carrierid","uri","planname","quote_p","confirmation_p"
-"##FL","32099","carrier-hccadvantage-","${uri}","${planname}","${mo}","${confirmation_p}"
-"##FL","32099","carrier-hccflexible-","${uri}","${planname}","${mo}","${confirmation_p}"
-"FL","32099","carrier-companionprotect-","${uri}","${planname}","${mo}","${confirmation_p}"
-"##FL","32099","carrier-premierstm-","${uri}","${planname}","${mo}","${confirmation_p}"
