@@ -1,0 +1,97 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/allstates/Fixed Cash Benefit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>${ENV}/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>10/10/1980</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gender-m-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'${PlanName}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='disclaimers']/div/div[2]/p</td>
+	<td>Health Benefit Insurance is not major medical insurance* Health Benefit Insurance is designed to make cash payments to the insured in the event of a covered incident* It does not cover pre-existing conditions* and does not meet the minimum essential coverage under the Affordable Care Act* You may be subject to the ACA*s Shared Responsibility Tax* To learn more about the tax* its exemptions* see here*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='disclaimers']/div/p[2]</td>
+	<td>${Text1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='disclaimers']/div/p[3]</td>
+	<td>${Text2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[5]/p</td>
+	<td>Health Benefit Insurance is not major medical insurance* Health Benefit Insurance is designed to make cash payments to the insured in the event of a covered incident* It does not cover pre-existing conditions* and does not meet the minimum essential coverage under the Affordable Care Act* You may be subject to the ACA*s Shared Responsibility Tax* To learn more about the tax* its exemptions* see here*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[4]/p[2]</td>
+	<td>${Text1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[4]/p[3]</td>
+	<td>${Text2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/p</td>
+	<td>Health Benefit Insurance is not major medical insurance* Health Benefit Insurance is designed to make cash payments to the insured in the event of a covered incident* It does not cover pre-existing conditions* and does not meet the minimum essential coverage under the Affordable Care Act* You may be subject to the ACA*s Shared Responsibility Tax* To learn more about the tax* its exemptions* see here*</td>
+</tr>
+	</tbody>
+</table>
+	
+	
+	
+	
+	
+	
+	

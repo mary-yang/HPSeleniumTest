@@ -1,0 +1,249 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/HBI/Humana</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>${ENV}/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}/health-benefit-insurance-quotes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>10/10/1980</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gender-m-0</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+
+<tr>
+      <td>pause</td>
+       <td>1000</td>
+ 	<td></td>
+</tr>
+<!-----------------------------quote page------------------------------------------->
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${AXIGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${CHUBBGD}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${HUMANAGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[5]</td>
+	<td>*${SUPPLACA}*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[4]</td>
+	<td>${SLGD}</td>
+</tr>
+
+
+<!-----------------------------detail page------------------------------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'${PlanName}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${HUMANAGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${SUPPLACA}</td>
+</tr>
+
+
+<!-----------------------------apply page------------------------------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${HUMANAGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${SUPPLACA}</td>
+</tr>
+
+
+<!-----------------------------application page------------------------------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${HUMANAGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${SUPPLACA}</td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-firstName</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>test</td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>test@qq.com</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-page-body-content']/h3</td>
+	<td>Step 2. Payment &amp; Billing</td>
+</tr>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Use Credit Card</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Health Insurance Terms and Agreements</td>
+	<td></td>
+</tr>
+<!-----------------------------terms and agreement page------------------------------------------->
+<tr>
+	<td>selectWindow</td>
+	<td>Short Term Health Insurance, Affordable Health Plans, Affordable Obamacare Supplemental Health Insurance - AgileHealthInsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-wrapper</td>
+	<td>*PROTECTOR 360 FRAUD WARNING In several states, we are required to advise you of the following: Any person who knowingly and with intent to defraud provides false, incomplete or misleading information in an application for insurance, or who knowingly presents a false or fraudulent claim for payment of a loss or benefit, is guilty of a crime and may be subject to fines and criminal penalties, including imprisonment. In addition, insurance benefits may be denied if false information provided by an applicant is materially related to a claim. ACKNOWLEDGMENTS I understand that the membership that I have applied for includes coverage under a Group Hospital Indemnity Policy. I understand that coverage under this policy is not provided for loss due to preexisting conditions for 12 months from the membership effective date. The Group Hospital Indemnity Policy is an insurance product with reduced benefits and is not intended to be an alternative to or integrated with comprehensive coverage. This insurance does not coordinate with any other insurance plan. It does not provide major medical or comprehensive medical coverage and is not designed to replace major medical insurance. Further, this insurance is not minimum essential benefits as set forth under the Patient Protection and Affordable Care Act. In several states, we are required to advise you of the following: Any person who knowingly and with intent to defraud provides false, incomplete or misleading information in an application for insurance, or who knowingly presents a false or fraudulent claim for payment of a loss or benefit, is guilty of a crime and may be subject to fines and criminal penalties, including imprisonment. In addition, insurance benefits may be denied if false information provided by an applicant is materially related to a claim. There is a 12-month waiting period for pre-existing conditions. A *Pre-existing Condition* means a condition which a Physician has treated or for which a Physician has advised treatment of the Covered Person within 12 months before the Covered Person's Effective Date of Insurance. Although the benefits you purchased today are valuable benefits, I acknowledge that these benefits are neither a substitute nor a replacement for major medical insurance. They are intended to supplement comprehensive health insurance plans. Further, this insurance is A LIMITED BENEFIT PLAN AND DOES NOT MEET MINIMUM ESSENTIAL COVERAGE AS SET FORTH BY THE PATIENT PROTECTION AND AFFORDABLE CARE ACT. UNITED STATES ASSOCIATION MEMBERSHIP United Service Association is a membership organization that provides you with Hospital Indemnity Insurance Benefits and, non-insurance related services. The monthly association membership fees you will be charged include insurance premiums which are paid to Humana Insurance Company for hospital indemnity insurance coverage as well as non-insurance fees for products and services offered by and paid to the Association. I understand that this membership is subject to the terms and conditions of the Membership Agreement. The Membership Benefit Guide Agreement is only applicable for those services received in the United States, except for those exceptions specifically listed in the Membership Handbook. I understand that in order to ensure that I am able to utilize the benefits, it may be necessary for USA+ to send and/or receive personal information about me to the companies that provide products and services to me. I understand that I have 30 days to evaluate the membership and request a full refund.*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[3]/div</td>
+	<td>${AHIGTA}</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[4]/div</td>
+	<td>${AHIPayment}</td>
+</tr>
+
+	</tbody>
+</table>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

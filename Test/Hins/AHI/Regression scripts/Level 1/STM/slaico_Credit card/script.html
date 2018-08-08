@@ -1,0 +1,194 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 1/slaico_Credit card</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote &amp; Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>${DOB}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=${carrierid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=ul.quote-all-plans-list.js-plans-list > li.quote-plan-container.js-plan-unit > div.quote-plan > div.quote-plan-body > div.quote-plan-carrier > h3.quote-plan-name > a</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div/a/div</td>
+	<td>mo</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>${planname}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='js-plan-summary']/div/div[3]/div/div/div/div[2]/a</td>
+	<td>*${mo}*</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${mo}'.match(/\d+.\d+/)</td>
+	<td>mo1</td>
+</tr>
+<!--
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='apply']/div[3]/div[2]/div[1]/div[1]/div/div[1]/table/tbody/tr[2]/td/a/span</td>
+	<td>${planname}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='apply']//tr[descendant::td[1][contains(text(),'Base Premium')]]/td[2]</td>
+	<td>$${mo1}</td>
+</tr>
+-->
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Go to end</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/BO App Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
+	<td>Successfully Enrolled</td>
+</tr>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	

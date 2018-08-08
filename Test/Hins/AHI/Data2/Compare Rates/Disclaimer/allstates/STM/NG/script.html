@@ -1,0 +1,468 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/allstates/STM/NG</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	 <td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote & Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare Health Insurance Quotes*</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1975</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/quote*</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@data-id="${carrierid}"]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${planname}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]/</td>
+	<td>${NGGD}</td>
+</tr>
+
+
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]/</td>
+	<td>${NGGD}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div/</td>
+	<td>${NGGD}</td>
+</tr>
+
+<tr>
+	 <td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*apply*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*application*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;/&quot;)+1)</td>
+	<td>uri</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${uri}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-2']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-3']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-4']/div/button[2]</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='app-underwritingQuestions-form']/div/p</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-firstName</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;; var tmp=&quot;&quot;; for (i=0;i&lt;8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
+	<td>LastName</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=06</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=02</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lbs</td>
+	<td>190</td>
+</tr>
+tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${NGGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-page-body-content']/div/p</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4358806686493800</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-first</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-last</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-year</td>
+	<td>label=2024</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-month</td>
+	<td>label=02</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+<tr>
+        <td>type</td>
+	<td>id=credit-card-cvv</td>
+	<td>123</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=credit-payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${NGGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-application-payment']/p</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;css=div.col-md-11.terms-cell > p&quot;)</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>echo</td>
+	<td>${uri}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
+	<td>I have read the Terms and Agreements and I agree that by using this site, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature. *</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
+	<td>CET</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${NGGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='accordion']/p</td>
+	<td>${ACATAX}</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>link=Terms and Agreements</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Short Term Health Insurance, Affordable Health Plans, Affordable Obamacare Supplemental Health Insurance - AgileHealthInsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/</td>
+	<td>ACKNOWLEDGEMENTS I accept and acknowledge that I must not cancel any health insurance coverage that I currently have or decline cobra benefits until I receive an approval letter and insurance policy (also known as an insurance contract or certificate) from the insurance company that I have selected. I accept and acknowledge that I must understand and agree with the terms of the insurance policy, paying attention to the effective date, premium amount, waiting period, benefits, limitations, exclusions, and riders, if applicable in your state. I accept and acknowledge that the quotes or rates shown above are estimates only. My premium is subject to change based on the optional benefits I selected, if any, and other relevant factors, such as changes in rates that take effect before my coverage start date. The insurance company always determines my actual premium. Insurance companies reserve the right to change the terms of a policy upon proper notification. These rates may include monthly administration fees or Membership dues. I accept and acknowledge that the quotes or rates shown above are for my requested effective date ONLY. If the actual effective date of my policy is different from the requested effective date, the actual premium of my policy may differ from the quote or rate above. The change in amount may be due to premium increases or policy changes from the insurance company and/or one or more family members having a birthday. (Rates are highly dependent on age.) The carrier I selected may not guarantee their rates for any period of time. I accept and acknowledge that coverage effective date is dependent upon approval of my application, which may include qualifying for the coverage and receipt of payment, and may be different than my requested date. The coverage effective date once the application is approved by the carrier may be pushed forward due to each carrier's deadlines and processing times. I accept and acknowledge that each insurance carrier may have unique Notices and Disclaimers. I will check below for information regarding the plans and carriers I selected. I accept and acknowledge that in several states, these plans are available only to members of an association, an independent consumer organization. If I am not already a member of the association, I must join in order to be eligible for these plans. I accept and acknowledge that if I am not completely satisfied, I can cancel this coverage within the 10-Day Free Look provision, shown in the Certificate of Insurance, for a refund of premiums. I accept and acknowledge that TelaDoc and Cigna Dental Network are optional benefits and are not affiliated with any of the insurance companies. These benefits can be canceled at any time within their 30-Day Free-Look provision for a full refund. Agile Discount Rx Disclaimer: DISCOUNT ONLY. NOT INSURANCE. Discounts are available exclusively through participating pharmacies and providers. The range of the discounts will vary depending on the type of provider and services rendered. This program does not make payments directly to providers. Members are required to pay for all health care services. You may cancel your registration at any time or file a complaint by contacting Customer Care at (800) 314-5594. All prescription drugs are eligible for discount. Any person who, with intent to defraud or knowing that he is facilitating a fraud against an insurer, submits an application or files a claim containing a false or deceptive statement may be guilty of insurance fraud as determined by a court of law. Authorization L.I.F.E. Association is a membership organization that provides lifestyle-related benefits and services to its members. Membership in the Association may be required in order to be eligible to purchase insurance coverage. Membership privileges include the opportunity to participate in all programs offered or sponsored by the Association. By applying for L.I.F.E. Association membership, you are requesting enrollment in the L.I.F.E. Association.You understand that dues are required for membership in the Association and if you choose to participate in a sponsored insurance program, then your annual dues may be collected in installments along with your insurance premiums. You also understand that your failure to remit membership dues will result in loss of eligibility to participate in all of the Association sponsored programs and benefits. I accept and acknowledge that Short-Term health insurance is a temporary plan designed for people who do not currently have health insurance and are waiting for longer term, major medical insurance coverage. Short-term policies do not cover pre-existing conditions. The health insurance plans sold through this Website do not meet the minimum essential coverage under the Patient Protection & Affordable Care Act and you may incur a penalty and be assessed a fee with your federal tax return if you only purchase such plans. I accept and acknowledge that carriers cannot guarantee the availability of a provider (or providers), and may add, delete or change a participating provider (or providers) at any time without prior notice to me. I must contact my chosen carrier for updated information before using the services of any provider. I accept and acknowledge that the Copayment, Deductible, and Coinsurance amounts are my share of the costs for covered benefits. I accept and acknowledge that Teladoc & Cigna Dental Network Access are not insurance benefits. These are lifestyle benefits and are not affiliated with any of the insurance companies. SHORT TERM MEDICAL AUTHORIZATIONS: 1.I understand that the Group Short Term Major Medical Plan Covered Persons are covered by group insurance benefits. The group insurance benefits vary depending on plan selected. These benefits are provided under a group insurance policy underwritten by National Health Insurance Company and subject to the exclusions, limitations, terms and conditions of coverage as described in the insurance certificate which includes, but is not limited to, limitations for pre-existing conditions. This is not designated as a substitute for comprehensive major medical coverage. 2.I agree that coverage will not become effective for any person whose medical history changes prior to coverage approval, such that the person's answer would be "yes" to any of the Medical History questions in this application. If such person is the Applicant, coverage is automatically declined for all persons included in this application. 3.I understand that health insurance benefits are excluded for pre-existing conditions, and there are other restrictions and exclusions including a Pre-Authorization Penalty. 4.I understand that the broker who solicited this application was acting as an independent contractor and not as an agent of the Insurance Company. I further acknowledge that the person who solicited this application and upon whose explanation of benefits, limitations or exclusions we relied, was retained by me as my agent, and that such person has no right to bind or approve coverage or alter any of the terms or conditions of the policy. 5.I understand that any intentional misstatement or omission of information material to approval of coverage made on this form will be considered a misrepresentation and may be the basis for later rescission of my coverage and that of my dependents. In the event of rescission or termination for any reason, the Insurer shall have the right to deduct any premiums due and unpaid from any claims payable to me or my dependents. 6.I have read this enrollment application and have verified that all of the information provided in it is complete, true and correct, and is all within my personal knowledge. I agree to immediately notify the insurer of any changes in any of the information contained in this form which may occur prior to the approval of coverage. I understand that this type of plan is NOT considered "minimum essential coverage" under the Affordable Care Act and therefore I may be subject to a tax penalty. This is not designated as a substitute for comprehensive major medical coverage. I understand that this plan does not cover any Pre-Existing Conditions. A Pre-Existing Condition means a condition for which medical advice, diagnosis, care or treatment (includes receiving services and supplies, consultations, diagnostic test or prescription medicines) was recommended or received within the 12 months immediately preceding the Effective Date. I further understand that there are other restrictions and exclusions including a Pre-Authorization Penalty. I understand I will gain immediate access to the plan materials via the member website, a link to the member website will be sent electronically to the email address I provided on my application and I will receive detailed policy information in the mail after my enrollment and payment have been processed. The policy packet will be addressed to the mailing address you provided for your enrollment. I understand it is my responsibility to review all the information to fully understand the benefits and to be sure they are consistent with my understanding of the packages I have purchased. If there is any difference between my understanding of how the policy works, what was presented to me at the time of enrollment, and what is written in the policy certificate, the terms of the policy certificate will govern. I understand that I will have 10 days from the effective date to review the policy materials I can cancel for a full refund, provided I furnish written notification to Member Services within the first 10-day period. Policies cancelled within the 10-day period will be terminated back to the effective date and I will forfeit any potential claims as a result of the cancellation. For cancellations after the first 10-day period, a written cancellation request must be received at least 10 days prior to the policy's anniversary date to take effect for that coverage period. I understand there are no prorated fees or rebates after the first 10 days of coverage. I authorize and request the Company to initiate electronic payments against the indicated bank account or credit card for the payment of premiums and other indicated monthly dues included in the plan(s) being purchased, and to continue to initiate such payments until cancelled by me in writing. I agree that my electronic payment authorization may be terminated by providing written notice to the Company. I agree to submit this application by electronic means. By signing this application electronically, I certify that my answers are correct and complete to the best of my knowledge, including information provided for each applicant applying for benefits. I understand that an electronic signature has the same legal effect and can be enforced in the same way as a written signature.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div/p[18]</td>
+	<td>SHORT TERM MEDICAL AUTHORIZATIONS:<br />1.I understand that the Group Short Term Major Medical Plan Covered Persons are covered by group insurance benefits. The group insurance benefits vary depending on plan selected. These benefits are provided under a group insurance policy underwritten by National Health Insurance Company and subject to the exclusions, limitations, terms and conditions of coverage as described in the insurance certificate which includes, but is not limited to, limitations for pre-existing conditions. This is not designated as a substitute for comprehensive major medical coverage.<br />2.I agree that coverage will not become effective for any person whose medical history changes prior to coverage approval, such that the person's answer would be &quot;yes&quot; to any of the Medical History questions in this application. If such person is the Applicant, coverage is automatically declined for all persons included in this application.<br />3.I understand that health insurance benefits are excluded for pre-existing conditions, and there are other restrictions and exclusions including a Pre-Authorization Penalty.<br />4.I understand that the broker who solicited this application was acting as an independent contractor and not as an agent of the Insurance Company. I further acknowledge that the person who solicited this application and upon whose explanation of benefits, limitations or exclusions we relied, was retained by me as my agent, and that such person has no right to bind or approve coverage or alter any of the terms or conditions of the policy. <br />5.I understand that any intentional misstatement or omission of information material to approval of coverage made on this form will be considered a misrepresentation and may be the basis for later rescission of my coverage and that of my dependents. In the event of rescission or termination for any reason, the Insurer shall have the right to deduct any premiums due and unpaid from any claims payable to me or my dependents.<br />6.I have read this enrollment application and have verified that all of the information provided in it is complete, true and correct, and is all within my personal knowledge. I agree to immediately notify the insurer of any changes in any of the information contained in this form which may occur prior to the approval of coverage.<br /><br />I understand that this type of plan is NOT considered &quot;minimum essential coverage&quot; under the Affordable Care Act and therefore I may be subject to a tax penalty. This is not designated as a substitute for comprehensive major medical coverage.<br /><br />I understand that this plan does not cover any Pre-Existing Conditions. A Pre-Existing Condition means a condition for which medical advice, diagnosis, care or treatment (includes receiving services and supplies, consultations, diagnostic test or prescription medicines) was recommended or received within the 12 months immediately preceding the Effective Date. I further understand that there are other restrictions and exclusions including a Pre-Authorization Penalty.<br /><br />I understand I will gain immediate access to the plan materials via the member website, a link to the member website will be sent electronically to the email address I provided on my application and I will receive detailed policy information in the mail after my enrollment and payment have been processed. The policy packet will be addressed to the mailing address you provided for your enrollment. I understand it is my responsibility to review all the information to fully understand the benefits and to be sure they are consistent with my understanding of the packages I have purchased. If there is any difference between my understanding of how the policy works, what was presented to me at the time of enrollment, and what is written in the policy certificate, the terms of the policy certificate will govern. <br /><br />I understand that I will have 10 days from the effective date to review the policy materials I can cancel for a full refund, provided I furnish written notification to Member Services within the first 10-day period. Policies cancelled within the 10-day period will be terminated back to the effective date and I will forfeit any potential claims as a result of the cancellation. For cancellations after the first 10-day period, a written cancellation request must be received at least 10 days prior to the policy's anniversary date to take effect for that coverage period. I understand there are no prorated fees or rebates after the first 10 days of coverage.<br /><br />I authorize and request the Company to initiate electronic payments against the indicated bank account or credit card for the payment of premiums and other indicated monthly dues included in the plan(s) being purchased, and to continue to initiate such payments until cancelled by me in writing. I agree that my electronic payment authorization may be terminated by providing written notice to the Company.<br /><br />I agree to submit this application by electronic means. By signing this application electronically, I certify that my answers are correct and complete to the best of my knowledge, including information provided for each applicant applying for benefits. I understand that an electronic signature has the same legal effect and can be enforced in the same way as a written signature.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div/div[2]/</td>
+	<td>PAYMENT The accountholder of the bank account or credit card provided during this enrollment process authorizes and requests the Company to initiate automatic electronic payments against such indicated bank account or credit card for the payment of premiums and other indicated monthly dues included in the plan(s) being purchased during this enrollment process. Accountholder agrees that the electronic payment authorization for such automatic payments may be terminated by providing written notice to the Company.</td>
+</tr>
+
+
+</tbody></table>
+</body>
+</html>	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

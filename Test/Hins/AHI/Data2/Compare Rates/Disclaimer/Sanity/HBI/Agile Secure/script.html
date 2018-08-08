@@ -1,0 +1,248 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/HBI/Agile Secure</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>${ENV}/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}/health-benefit-insurance-quotes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>10/10/1980</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gender-m-0</td>
+	<td></td>
+</tr>
+
+
+
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+
+<tr>
+      <td>pause</td>
+       <td>1000</td>
+ 	<td></td>
+</tr>
+<!-----------------------------quote page------------------------------------------->
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${AGILESECURE}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${SupplD}</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>link=Apply for This Plan</td>
+	<td></td>
+</tr>
+
+
+<!-----------------------------apply page------------------------------------------->
+
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${AGILESECURE}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${SupplD}</td>
+</tr>
+
+
+<!-----------------------------application page------------------------------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${AGILESECURE}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${SupplD}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-firstName</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primary-beneficiary-first-name</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primary-beneficiary-last-name</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primary-beneficiary-relationship</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-beneficiary-first-name</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-beneficiary-last-name</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-beneficiary-relationship</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>test.ryeun@suryani.cn</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-page-body-content']/h3</td>
+	<td>Step 2. Payment &amp; Billing</td>
+</tr>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Use Credit Card</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Agile Secure Terms & Agreements</td>
+	<td></td>
+</tr>
+<!-----------------------------terms and agreement page------------------------------------------->
+<tr>
+	<td>selectWindow</td>
+	<td>Short Term Health Insurance, Affordable Health Plans, Affordable Obamacare Supplemental Health Insurance - AgileHealthInsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-wrapper</td>
+	<td>*AGILE SECURE GENERAL ACKNOWLEDGMENTS Agile Secure and the bundle of products included in this membership are not major medical insurance and are not designed to replace the 'minimum essential coverage' of the Affordable Care Act. It excludes benefits for pre-existing conditions. Med-Sense Guaranteed Association, and Federal Insurance Company, a Chubb Company, are separate legal entities and have sole financial responsibility for their own products. FRAUD WARNING NOTICE Any person who, knowingly and with intent to defraud any insurance company or other person, files an application for insurance containing any false information, or conceals for the purpose of misleading, information concerning any material fact thereto, commits a fraudulent insurance act, which is a crime. Penalties include imprisonment and/or fines. In addition, an insurer may deny insurance benefits if false information materially related to a claim was provided by the enrollee or Insured Person. MSGA MEMBERSHIP AGREEMENT I hereby enroll for membership in the Med-Sense Guaranteed Association. As a member of MSGA, understand that I will be able to access membership products, benefits and services. I acknowledge that member benefits are subject to change without notice. I accept the Association Terms and Conditions Agreement. MEMBERSHIP ENROLLMENT ACKNOWLEDMENT I also agree to all of the following Terms and Conditions of the Med-Sense Guaranteed Association. This program of services is provided through membership in Med Sense Guaranteed Association (MSGA). Service providers associated with this program are solely responsible for the professional advice and service rendered to members, and MSGA, disclaims liability with respect to such matters. At any time, a participating professional may be eliminated from the program. Providers are subject to change without notice and programs may vary in some states. The discounts are NOT insurance and may be discontinued or modified at any time. Most of the companies providing the services and discounts in this program are not licensed insurers, health maintenance organizations, or other underwriters of health care services. (The exceptions are the insurance carriers that provide the Accident Medical, Accidental Death & Dismemberment, Accident Disability Income, Critical illness, Term Life Insurance, Hospital Indemnity, Limited Medical Benefits, Short-Term Medical, and, if selected, Dental Indemnity benefit and/or Insured Prescription Drug program.) No portion of any provider's fees will be reimbursed or otherwise paid. The discounts contained herein may not be used in conjunction with any other discount plan or program. All listed or quoted prices or discounts are current at time of printing this material, and are subject to change without notice. Savings are based on the provider's usual and customary fees. Actual savings will vary depending on location and specific services or products purchased. Discounts on professional services are not available where prohibited by law. This program does not warrant professional services, nor is it responsible for the quality of service received. This program makes no warranties, express or implied concerning services provided. The program is NOT an insurance plan. However, the program does include certain limited supplemental insured benefits. If the optional Insured Prescription Drug benefit is selected, the pharmacy discounts on brand-name drugs are only available at participating pharmacies. The member shall receive a full refund of membership fees, if membership is canceled within the first 30 days. The program is not available in all states. Membership fees are to be paid when due. If the fees are not received, the member has 31 days from the due date to pay their membership fees; or the membership and any benefits provided will terminate. This plan is not an insurance policy and is not protected by any state Life and Health Guaranty Association. The member is responsible and agrees to pay any taxes that may be required by law as a result of membership. The laws of the State of Missouri shall govern the interpretation, construction and enforcement of this entire plan. Any dispute arising from, out of, or relating to this plan, including but not limited to those disputes regarding or relating to the plan or, Med-Sense Guaranteed Association, shall be resolved by binding, non-appealable arbitration. These provisions shall survive termination of this plan and the member's membership in the plan. Any cause of action the member may have with respect to the plan must be commenced within one (1) year after the claim or cause of action arises. Complaint Procedure: Any complaint regarding the plan or membership should be directed to Member Services at the toll-free number on the ID card or in writing to the address set forth herein. From time to time, certain providers may offer products or services to the general public at prices lower than the discounted prices available through this plan. Discounts on professional services are not available where prohibited by law. Providers are subject to change without notice and services may vary in some states. It is the member's responsibility to verify that the provider is a participant in the plan. No guarantee can be given in regard to the continued participation of any provider. Providers are solely responsible for the professional advice and service rendered to members and liability with respect to such matters is disclaimed. Each member and on behalf of all covered family dependents who are in the plan hereby forever releases, acquits and discharges the plan, Med-Sense Guaranteed Association, and its employees, officers, directors, agents and affiliates from any and all liabilities, claims, demands, actions, and causes of action that such member or covered family member may have by reason of any damage or personal injury sustained as a result of or during the course of the use of any service under the plan. The sole course available to a member or the member's covered family dependents is cancellation of the membership. The member agrees to defend, indemnify and hold harmless the plan and from any and all liabilities, cost, and expenses, including without limitation attorneys' fees and costs, related to or arising from any unauthorized use of member's plan; any violation of the plan by the member or those who access member's plan; or the use of the plan by the member or by those who access the member's plan in a manner contrary to any law or regulation or harmful in any way to the plan or any of its affiliates. The plan may only be used in the United States of America. Med Sense Guaranteed Association has the right to refuse membership to any person for any just or legal cause. Med-Sense Guaranteed Association has the right to refuse membership to any person for any just or legal cause.*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[3]/div</td>
+	<td>${AHIGTA}</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[4]/div</td>
+	<td>${AHIPayment}</td>
+</tr>
+
+	</tbody>
+</table>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

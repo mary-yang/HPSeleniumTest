@@ -1,0 +1,197 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Quote Page/Standalone_Dental_Quote_page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Standalone_Dental</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>var d = new Date();(d.getMonth()+2) +'/'+ '01' +'/'+ d.getFullYear();</td>
+	<td>today</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}/dental-insurance-quotes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>60002</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>10/10/1980</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gender-m-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeXpathCount</td>
+	<td>//a[contains(text(),'Select This Plan')]</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${x}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.quote-heading</td>
+	<td>*12 dental plans found.*</td>
+</tr>
+<!--verify Insurance Provider  filter-->
+<tr>
+	<td>click</td>
+	<td>//input[@data-id="nationwide"]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div/div[2]/div[1]/h3/a[contains(text(),'Foundation Dental')]</td>
+	<td>y</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${y}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//label[descendant::span[contains(text(),'Nationwide')]]/span[2]</td>
+	<td>*${y}*</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>//span[contains(text(),'All Plans')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=${planname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul[2]/li[2]/div/div[2]/ul/li</td>
+	<td>Annual Max Benefit$500</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div[2]/ul/li[2]</td>
+	<td>Deductible $0</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul[2]/li[2]/div/div[2]/ul/li[3]</td>
+	<td>Vision CoverageYes</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul[2]/li[2]/div/div[2]/div[2]/ul/li[3]</td>
+	<td>Major Service Expenses: PPO Discount*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/div[2]/ul/li[2]</td>
+	<td>Basic Service Expenses: 70% Covered</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,273 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/HCSM/HCSM Landing</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}/health-insurance-quotes</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zip}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>${DOB}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=Healthcare Sharing Ministry Plans&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Healthcare Sharing Ministry Plans</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Healthcare Sharing Ministry Plans</td>
+	<td>Healthcare Sharing Ministry Plans</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.quote-lead-sentence</td>
+	<td>Healthcare Sharing Ministries (HCSM) are cost-sharing programs where monthly dues are distributed to help members pay their medical expenses. HCSM plans offer broad networks of providers for major medical services such as primary care, hospital care, and surgical care.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//body[@id='healthshare-quote']/main/div[3]/div/div[2]/div[2]/p/</td>
+	<td>7 plans found. Save on your health costs, ACA Tax exempt, join today. Please call (855) 317-6283 to find out more about Christian Care Ministry Medi-Share.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//body[@id='healthshare-quote']/main/div[3]/div[2]/div/</td>
+	<td>What Are Health Care Sharing Ministries?A Health Care Sharing Ministry ("HCSM"), also known as faith-based health share ministry, is a type of health protection plan that facilitates sharing of health care costs among individual members. Traditionally these members are bound by mutual religious beliefs and have banded together to help share in the medical costs incurred by other members. By definition, HCSM plans are not health insurance and the organizations do not accept risk or make guarantees. HCSM plans have been around for decades, shared billions of dollars in medical expenses, and throughout that time the members have found the plans to be an affordable alternative to health insurance. When the Affordable Care Act was passed, regulations within the new law exempted members of HCSM plans from the individual mandate (the Obamacare Tax), making them even more attractive to potential members. MembershipMost HCSMs tend to have restrictions such as abstaining from extramarital sex, excessive drinking, and use of tobacco or illegal drugs. They usually require members to be in good health and make a statement of belief as well. All such ministries require that members subscribe to the principles of individual responsibility for their own health and of helping others in need. Tax DeductibilityMonthly share payments are not deductible from US federal income tax as either a medical expense (because it is not a payment for insurance) or a charitable deduction (because it is a payment for goods and services). Call our licensed support team today at (855) 317-6283</td>
+</tr>
+
+<!----------------------------------------------------
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Unity Healthshare Bronze 10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeText</td>
+	<td>css=div.hbi-price-breakdown.js-price-breakdown</td>
+	<td>mon</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${mon}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.js-apply-text.apply-button-text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Get URI</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-0']/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-1']/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-2']/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-3']/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-4']/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-firstName</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+
+
+
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.app-confirmation-main.hbi-app-confirmation</td>
+	<td>Thank you for submitting an application to join Unity Healthshare.One of our representatives will be calling very soon to finalize your application.<br />If you have questions or have not been contacted within 24 business hours, please call 855-317-6283</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.app-confirmation-main.hbi-app-confirmation &gt; p</td>
+	<td>One of our representatives will be calling very soon to finalize your application.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-confirmation']/div/p[2]</td>
+	<td>If you have questions or have not been contacted within 24 business hours, please call 855-317-6283</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.emphasize</td>
+	<td>exact:NEED HELP?</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-confirmation']/div[2]/p[2]</td>
+	<td>We are committed to providing you great customer service. If you have any questions about the plan you selected, benefits, billing, claims, enrollment materials, or any other questions, then contact us at 800-314-5594 or email us at support@agilehealthinsurance.com.</td>
+</tr>
+
+
+---------------------------->
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

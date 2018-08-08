@@ -1,0 +1,99 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/TermAndCondition/HBI/Agile Secure</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/health-benefit-insurance-quotes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>10/10/1980</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gender-m-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'${PlanName}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//*[@id="applyButton"]/span[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;test&quot;))</td>
+	<td>uri</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${uri}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.agilehealthinsurance.com/term-health-insurance/${uri}/termsAndConditions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div</td>
+	<td>Terms and Agreements AGILE SECURE FRAUD WARNING It is a crime to knowingly provide false* incomplete or misleading information to an insurance company for the purpose of defrauding the company* Penalties include imprisonment* fines and denial of insurance benefits* GENERAL ACKNOWLEDGEMENTS Agile Secure and the bundle of products included in this membership are not major medical insurance and are not designed to replace the 'minimum essential coverage' of the Affordable Care Act* It excludes benefits for pre-existing conditions* Med-Sense Guaranteed Association* Guarantee Trust Life Insurance Company and Federal Insurance Company* a Chubb Company* are separate legal entities and have sole financial responsibility for their own products* SAFEGUARD CRITICAL ILLNESS INSURANCE ACKNOWLEDGEMENTS Underwritten by Federal Insurance Company* a Chubb Company* This Policy does not apply to the extent that trade or economic sanctions or other laws or regulations prohibit the provision of insurance* including but not limited to the payment of claims* SENTRY ACCIDENT ONLY INSURANCE ACKNOWLEDGEMENTS Underwritten by Guarantee Trust Life Insurance Company* MED-SENSE GUARANTEED ASSOCIATION MEMBERSHIP 1* This program of services is provided through membership in Med-Sense Guaranteed Association *MSGA** Service providers associated with this program are solely responsible for the professional advice and service rendered to members* and MSGA* disclaims liability with respect to such matters* 2* At any time* a participating professional may be eliminated from the program* Providers are subject to change without notice and programs may vary in some states* The discounts are NOT insurance and may be discontinued or modified at any time* 3* Most of the companies providing the services and discounts in this program are not licensed insurers* health maintenance organization* or other underwriters of health care services* *The exceptions are the insurance carriers that provide the Accident Medical* Accidental Death & Dismemberment* Accident Disability Income* Critical Illness* Term Life Insurance* Hospital Indemnity* Limited Medical Benefits* Short-Term Medical* and* if selected* Dental Indemnity benefit and/or Insured Prescription Drug program** No portion of any provider's fees will be reimbursed or otherwise paid* 4* The discounts contained herein may not be used in conjunction with any other discount plan or program* All listed or quoted prices or discounts are current at time of printing this material* and are subject to change without notice* 5* Savings are based on the provider's usual and customary fees* Actual savings will vary depending on location and specific services or products purchased* 6* Discounts on professional services are not available where prohibited by law* This program does not warrant professional services* nor is it responsible for the quality of service received* This program makes no warranties* express or implied concerning services provided* 7* The member shall receive a full refund of membership fees* if membership is canceled within the first 10 days* The program is not available in all states* 8* Membership fees are to be paid when due* If the fees are not received* the member has 31 days from the date due to pay their membership fees; or the membership and any benefits provided will terminate* 9* This plan is not an insurance policy and is not protected by any state Life and Health Guaranty Association* 10* The member is responsible and agrees to pay any taxes that may be required by law as a result of membership* 11* The laws of the State of Missouri shall govern the interpretation* construction and enforcement of this entire plan* 12* Any dispute arising from* out of* or relating to this plan* including but not limited to those disputes regarding or relating to the plan or* Med-Sense Guaranteed Association* shall be resolved by binding* non-appealable arbitration* These provisions shall survive termination of this plan and the member's membership in the plan* 13* Any cause of action the member may have with respect to the plan must be commenced within one *1* year after the claim or cause of action arises* 14* Complaint Procedure: Any complaint regarding the plan or membership should be directed to Member Services at the toll-free number on the ID card or in writing to the address set forth herein* 15* From time to time* certain providers may offer products or services to the general public at prices lower than the discounted prices available through this plan* Discounts on professional services are not available where prohibited by law* Providers are subject to change without notice and services may vary in some states* It is the member's responsibility to verify that the provider is a participant in the plan* No guarantee can be given in regard to the continued participation of any provider* Providers are solely responsible for the professional advices and service rendered to members and liability with respect to such matters is disclaimed* 16* Each member and on behalf of all covered family dependents who are in the plan hereby forever releases* acquits and discharges the plan* Med-Sense Guaranteed Association* and its employees* officers* directors* agents and affiliates from any and all liabilities* claims demands* actions and causes of action that such member or covered family member may have by reason of any damage or personal injury sustained as a result of or during the course of the use of any service under the plan* The sole course available to a member or the member's covered family dependents is cancellation of the membership* 17* The member agrees to defend* indemnify* and hold harmless the plan and from any and all liabilities* cost* and expenses* including without limitation attorneys' fees and costs* related to or arising from any unauthorized use of member's plan; any violation of the plan by the member or those who access member's plan; or the use of the plan by the member or by those who access member's plan in a manner contrary to any law or regulation or harmful in any way to the plan or any of its affiliates* 18* The plan may only be used in the United States of America* 19* Med-Sense Guaranteed Association has the right to refuse membership to any person for any just or legal cause* 20* The member consents to receive electronically all notices* communications and other documents of any kind from Med-Sense Guaranteed Association* You have the right to withdraw consent to such electronic transmittals; however* such withdrawal does not retroactively withdraw consent to actions occurring prior to such withdrawal* MSGA DISCLAIMER MSGA membership is not insurance benefits* There are association discount and lifestyle benefits and are not affiliated with any of the insurance companies or Accident Medical* Accidental Death & Dismemberment* Accident Disability Income* Critical Illness* Term Life Insurance* Hospital Indemnity* Limited Medical Benefits* Short-Term Medical* and* if selected* Dental Indemnity benefit and/or Insured Prescription Drug program* AGILEHEALTHINSURANCE TERMS AND ACKNOWLEDGEMENTS GENERAL ACKNOWLEDGMENTS I accept and acknowledge that in several states* these plans are not individual health insurance and are available only to members of an association* an independent consumer organization* If I am not already a member of the association* I must join in order to be eligible for these plans* The association and its fees have been presented to me during my purchasing process* In the event that I am already a member of the organization* I accept and acknowledge that I am not purchasing an additional membership* but may be charged the membership's administrative fee for add-on products* I accept and acknowledge that I must understand and agree with the terms of the insurance policy* paying attention to the effective date* premium amount* waiting period* benefits* limitations* exclusions* and riders* if applicable in my state* I accept and acknowledge that the quotes or rates shown above are estimates only* My premium is subject to change based on the optional benefits I selected* if any* and other relevant factors* such as changes in rates that take effect before my coverage start date* The insurance company always determines my actual premium* Insurance companies reserve the right to change the terms of a policy upon proper notification* These rates may include monthly administration fees or Membership dues* I accept and acknowledge that the quotes or rates shown above are for my requested effective date ONLY* If the actual effective date of my policy is different from the requested effective date* the actual premium of my policy may differ from the quote or rate above* The change in amount may be due to premium increases or policy changes from the insurance company and/or one or more family members having a birthday* *Rates are highly dependent on age** The carrier I selected may not guarantee their rates for any period of time* I accept and acknowledge that coverage effective date is dependent upon approval of my application* which may include qualifying for the coverage and receipt of payment* and may be different than my requested date* The coverage effective date once the application is approved by the carrier may be pushed forward due to each carrier's deadlines and processing times* I accept and acknowledge that carriers cannot guarantee the availability of a provider *or providers** and may add* delete or change a participating provider *or providers* at any time without prior notice to me* I must contact my chosen carrier for updated information before using the services of any provider* I accept and acknowledge that the Copayment* Deductible* and Coinsurance amounts are my share of the costs for covered benefits* I accept and acknowledge that each insurance carrier and product provider may have unique Notices and Disclaimers* I will check for information regarding the plans* products and carriers I selected* I further accept and acknowledge that it is my responsibility to read and understand each plan and product policy selected* I accept and acknowledge that if I am not completely satisfied* in most states* I can cancel this coverage within the 10-Day Free Look provision* shown in the Certificate of Insurance* for a refund of premiums* If this Enrollment Form is completed electronically* I agree that my electronic signature serves as my original signature* I accept and acknowledge that I must not cancel any health insurance coverage that I currently have or decline cobra benefits until I receive an approval letter and insurance policy *also known as an insurance contract or certificate* from the insurance company that I have selected* I have personally completed and reviewed all of my answers to the questions in this enrollment form and represent that all information I have provided is true* complete* and correctly recorded* I understand that this information will be used to determine each person's eligibility and insurability for coverage under the Policy and any false statement or misrepresentation may result in loss of coverage or claim denial* The Applicant *and Spouse or Dependent if coverage elected* must be accepted based on the Company's rules in effect on the date of enrollment and on the Certificate Effective Date* Coverage *or Reinstatement of coverage** if issued and approved by the Company* will become effective on the date recorded in the Certificate Schedule of Benefits and not the date this enrollment form is signed* I understand that no agent or producer can accept risks* modify policies* or waive any rights or requirements of the Company* I accept and acknowledge that the products presented on this website are not those of AgileHealthInsurance* and are owned and administered by the respective companies identified in the applicable product brochure* HEALTH BENEFIT INSURANCE ACKNOWLEDGEMENT If purchasing Health Benefit Insurance* I accept and acknowledge that Health Benefit Insurance is not major medical insurance* Health Benefit Insurance is designed to make cash payments to the insured in the event of a covered incident* It does not cover pre-existing conditions* and does not meet the minimum essential coverage under the Patient Protection & Affordable Care Act and I may incur a penalty and be assessed a fee with my federal tax return if I only purchase such plans* ADDITIONAL ACKNOWLEDGMENTS FOR LIFESTYLE BENEFIT PRODUCTS I accept and acknowledge that products including Teladoc* Karis360* RX Helpline AgileRX* and other supplemental products are not insurance benefits and do not replace health insurance* These are lifestyle benefits and are not affiliated with any of the insurance companies* The range of the discounts will vary depending on the type of provider and services rendered* These programs do not make payments directly to providers* Members are required to pay for all health care services* Teladoc does not replace the primary care physician* Teladoc does not guarantee that a prescription will be written* Teladoc operates subject to state regulation and may not be available in certain states* Teladoc does not prescribe DEA-controlled substances* non-therapeutic drugs and certain other drugs which may be harmful because of their potential for abuse* Teladoc physicians reserve the right to deny care for potential misuse of services* ELECTRONIC COMMUNICATIONS ACKNOWLEDGMENT By electronically signing and submitting an application or enrollment form through this website* you affirmatively consent to presentation* delivery* storage retrieval and transmission of communications from us as electronic records instead of in paper form* You accept and acknowledge that you can receive or access our electronic communications to you because you have the appropriate technology *e*g* telephone* computer* and you will notify us immediately if you change the address at which you receive our communications* You may request to receive communications in paper format* To withdraw your consent* please send a written request to: support@agilehealthinsurance*com Mark the subject line: ELECTRONIC COMMUNICATIONS ACKNOWLEDGMENT PAYMENT ACKNOWLEDGEMENT I am signing up for an automatic payment plan* I agree AgileHealthInsurance or its authorized agent may automatically debit my bank account or Credit Card for the amount due on or around the payment due date* I can cancel this automatic payment at any time by calling or AgileHealthInsurance or its authorized agent at least 30 days prior to the next due date* I agree that AgileHealthInsurance or my financial institution can cancel automatic payment for my account for any reason* at any time* with or without prior notice to me* I understand that $25*00 will be charged for each transaction rejected for insufficient funds* I acknowledge that the origination of these debits to my account must comply with U*S* laws* I agree that this agreement remains in effect until canceled by AgileHealthInsurance or my financial institution or me* I have a copy of this agreement and I know I can also contact AgileHealthInsurance at support@agilehealthinsurance*com or 800-314-5594 for a copy* </td>
+</tr>
+	</tbody>
+</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

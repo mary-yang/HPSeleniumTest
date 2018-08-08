@@ -1,0 +1,486 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/STM/UHC Applications - Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote &amp; Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare Health Insurance Quotes</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1980</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=+ Spouse</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-1']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=+ Child</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-1</td>
+	<td>01/01/1985</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-1</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=+ Child</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-2</td>
+	<td>01/01/2005</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-2</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-3']/div/div/div[2]/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-3</td>
+	<td>01/01/2005</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-3</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-2']/div/div/div[2]/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*/quote*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.js-clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@data-id="${carrierid}"]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${planname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>${planname}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	 <td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*apply*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>*application*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;/&quot;)+1)</td>
+	<td>uri</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${uri}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-G1']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-G2']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-M1']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-M2']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-M3']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-M4']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-O1']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-firstName</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{var x=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;; var tmp=&quot;&quot;; for (i=0;i&lt;8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
+	<td>LastName</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=06</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=02</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lbs</td>
+	<td>190</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-S-2-firstName</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-S-2-lastName</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-S-2-ft</td>
+	<td>label=05</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-S-2-in</td>
+	<td>label=0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-S-2-lbs</td>
+	<td>150</td>
+</tr>
+
+
+<tr>
+	<td>type</td>
+	<td>id=member-C-1-firstName</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-C-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-C-1-ft</td>
+	<td>label=05</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-C-1-in</td>
+	<td>label=01</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-C-1-lbs</td>
+	<td>150</td>
+</tr>
+
+
+<tr>
+	<td>type</td>
+	<td>id=member-C-2-firstName</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-C-2-lastName</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-C-2-ft</td>
+	<td>label=05</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-C-2-in</td>
+	<td>label=01</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-C-2-lbs</td>
+	<td>150</td>
+</tr>
+
+
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4358806686493800</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-month</td>
+	<td>label=02</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=expiration-year</td>
+	<td>label=2024</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=credit-card-charge-date</td>
+	<td>label=7</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=credit-payment-authorization</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

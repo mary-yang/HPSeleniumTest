@@ -1,0 +1,111 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Inventory Check/Inventory (quote)/STM/Everest</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote & Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1975</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<<tr>
+	<td>click</td>
+	<td>css=li.js-clear</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>//*[@id='js-quote-filters']/div[2]/div/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='js-quote-filters']/div[2]/div/ul/li/label[@title=&quot;${provider}&quot;]/span[2]</td>
+	<td>num</td>
+</tr>
+
+<tr>
+	<td>echo</td>
+	<td>${num}</td>
+	<td></td>
+</tr>
+
+	</tbody>
+</table>
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

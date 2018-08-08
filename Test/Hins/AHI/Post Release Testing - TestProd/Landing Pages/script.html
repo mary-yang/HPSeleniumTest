@@ -1,0 +1,82 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/Landing Pages</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+Census Page</td>
+</tr>
+	</thead>
+	<tbody>
+
+<tr>
+	<td>open</td>
+	<td>${ENV}/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${page_title}&utm_source=${utm_source}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Agile Health Insurance</td>
+	<td>Agile Health Insurance</td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;css=p.landing-page-bottom-disclaimer&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.landing-page-bottom-disclaimer</td>
+	<td>AFFORDABLE CARE ACT TAX (The 2017 Congressional Tax Reform Act does not eliminate this tax until 2019). Short Term health insurance is health insurance outside of the Affordable Care Act ("Obamacare"). It does not include all ten of the minimum essential benefits of Obamacare and it does not cover pre-existing conditions. To learn more about the tax, its exemptions, and how to calculate the affordability of short term health with the tax, see here. To learn more about the differences between Short Term health insurance and Obamacare, see here.</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;//body[@id='agile-front-door']/div[3]/div[6]/p[2]&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//body[@id='agile-front-door']/div[3]/div[6]/</td>
+	<td>${General Disclaimers}</td>
+</tr>
+
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody>
+</table>
+
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,187 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Compare Rates/testprod diff/STM/LifeShield</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">compare_rate</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${ENV}/term-health-insurance/quote?census[location][zip]=${zipcode}&amp;
+census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_gender}&amp;census[member][0][role]=P&amp;
+census[member][${Spouse_enable}][dob]=${Spouse_dob}&amp;census[member][${Spouse_enable}][gender]=${Spouse_gender}&amp;census[member][${Spouse_enable}][role]=${Spouse}&amp;
+census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_enable}][gender]=${Child_gender}&amp;census[member][${Child_enable}][role]=${Child}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;//div[@id='js-quote-filters']/div[2]/div/ul/li[contains(text(),'${provider}')]&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-filters']/div[2]/div/ul/li[contains(text(),'${provider}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//*[@id='js-quote-plans-container']/ul[2]/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div/a/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='js-quote-plans-container']/ul[2]/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div/a/div</td>
+	<td>quote_QA_rate</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${Plan_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>Apply_page_QA_rate</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://testprod.agilehealthinsurance.com/term-health-insurance/quote?census[location][zip]=${zipcode}&amp;
+census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_gender}&amp;census[member][0][role]=P&amp;
+census[member][${Spouse_enable}][dob]=${Spouse_dob}&amp;census[member][${Spouse_enable}][gender]=${Spouse_gender}&amp;census[member][${Spouse_enable}][role]=${Spouse}&amp;
+census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_enable}][gender]=${Child_gender}&amp;census[member][${Child_enable}][role]=${Child}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;//div[@id='js-quote-filters']/div[2]/div/ul/li[contains(text(),'${provider}')]&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-filters']/div[2]/div/ul/li[contains(text(),'${provider}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//*[@id='js-quote-plans-container']/ul[2]/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div/a/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='js-quote-plans-container']/ul[2]/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div/a/div</td>
+	<td>quote_testprod_rate</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${Plan_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>Apply_page_testprod_rate</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>parseFloat('${quote_testprod_rate}'.match(/\d+.\d+/))-parseFloat('${quote_QA_rate}'.match(/\d+.\d+/))</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>parseFloat('${Apply_page_testprod_rate}'.match(/\d+.\d+/))-parseFloat('${Apply_page_QA_rate}'.match(/\d+.\d+/))</td>
+	<td>0</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	

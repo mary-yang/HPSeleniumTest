@@ -1,0 +1,7 @@
+"state","zipcode","carrierid","planname","mo","uri","DOB"
+"##AL","32209","carrier-hccadvantage-","${planname}","${mo}","${uri}","01/01/1985"
+"##IL","60002","carrier-hccflexible-","${planname}","${mo}","${uri}","01/01/1985"
+"##IL","60002","carrier-everest-","${planname}","${mo}","${uri}","01/01/1985"
+"##IL","60002","carrier-slaico-","${planname}","${mo}","${uri}","01/01/1985"
+"##IL","60002","carrier-premierstm-","${planname}","${mo}","${uri}","01/01/1985"
+"IL","60002","carrier-everest-","${planname}","${mo}","${uri}","01/01/1985"
