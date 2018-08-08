@@ -12,206 +12,60 @@
 	<td>http://${ENV}.healthpocket.com/doctor-healthplan-finder/quote?zip=${zipcode}</td>
 	<td></td>
 </tr>
-<!--filter-->
 <tr>
-	<td>waitForVisible</td>
-	<td>//input[@value='M']</td>
+	<td>click</td>
+	<td>//*[@id="js-providers"]/ul/li[1]/div/div[1]/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[*]/a/h2[contains(text(),'General Information')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>url</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//input[@value='M']</td>
+	<td>//*[@id="js-details"]/div/div/div/div[4]/div/div[2]/div[1]/div/div[2]/a</td>
 	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>id=clearGender</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementNotPresent</td>
-	<td>//div[@id='page-spinner']/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//input[@value='ifp']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>id=clearInsuranceType</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementNotPresent</td>
-	<td>//div[@id='page-spinner']/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=h2.providerName &gt; a</td>
-	<td>name</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>'${name}'.split(' ')[0]</td>
-	<td>first_name</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>'${name}'.split(' ')[1]</td>
-	<td>last_name</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=p.emphasize</td>
-	<td>specialty</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=p.address</td>
-	<td>address</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//p[@class='address'][2]</td>
-	<td>location</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=p.telephone</td>
-	<td>phone</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//div[@id='providerResults']/div/div/h2/a</td>
+	<td>//div[*]/a[contains(text(),'Plans')]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeText</td>
-	<td>css=h1.dr-details-page-heading</td>
-	<td>Detail_first_name</td>
-</tr>
-<tr>
-	<td>verifyEval</td>
-	<td>var b=&quot;${Detail_first_name}&quot;.toUpperCase();b=b.match(&quot;${first_name}&quot;)</td>
-	<td>${first_name}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=div.dr-details-icon-content &gt; div</td>
-	<td>${specialty}</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='doctorLocation']/p</td>
-	<td>address_location</td>
-</tr>
-<tr>
-	<td>verifyEval</td>
-	<td>var b="${address_location}".toUpperCase();b=b.match("${address}")</td>
-	<td>${address}</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>var b=&quot;${address_location}&quot;.toUpperCase();b=b.match(&quot;${location}&quot;)</td>
-	<td>${location}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=p.dr-details-telephone.font-medium</td>
-	<td>Phone ${phone}</td>
-</tr>
-<!--medicare tab-->
-<!--
-<tr>
-	<td>include</td>
-	<td>HealthPocket/include/medicare_delayed_popup</td>
+	<td>open</td>
+	<td>${url}</td>
 	<td></td>
 </tr>
--->
-<tr>
-	<td>storeEval</td>
-	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1500</td>
-	<td></td>
-</tr>
-<!--obamacare tab-->
 <tr>
 	<td>clickAndWait</td>
-	<td>css=ul.dr-details-product-tabs &gt; li &gt; a</td>
+	<td>//div[*]/a[contains(text(),'doctor')]</td>
 	<td></td>
 </tr>
-<!--
-<tr>
-	<td>include</td>
-	<td>HealthPocket/include/ifp_delayed_popup</td>
-	<td></td>
-</tr>
--->
-<tr>
-	<td>storeEval</td>
-	<td>selenium.browserbot.getCurrentWindow().scrollTo(0,2400)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1500</td>
-	<td></td>
-</tr>
-
-<!--Medigap tab-->
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Medigap')])[2]</td>
-	<td></td>
-</tr>
-<!--SBG tab-->
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Small Business')])[3]</td>
-	<td></td>
-</tr>
-<!--
-<tr>
-	<td>include</td>
-	<td>HealthPocket/include/sbg_delayed_popup</td>
-	<td></td>
-</tr>
--->
-<!--Medicaid tab-->
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Medicaid')])[4]</td>
-	<td></td>
-</tr>
-<!--ST tab-->
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Short Term')])[3]</td>
-	<td></td>
-</tr>
-<!--
-<tr>
-	<td>include</td>
-	<td>HealthPocket/include/st_delayed_popup</td>
-	<td></td>
-</tr>
--->
 </tbody></table>
 </body>
 </html>
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
