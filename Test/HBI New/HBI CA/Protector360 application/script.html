@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Old/HBI CA/Protector360 application</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/HBI New/HBI CA/Protector360 application</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">sanity4/24</td>
@@ -96,201 +96,42 @@
     <td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=input-first-name</td>
-	<td>${FirstName}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=input-last-name</td>
-	<td>${LastName}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=input-phone-number</td>
-	<td>${Tel}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=input-email</td>
-	<td>${AutoEmail}</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='js-app-page-body-content']/form/div/div[6]/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>captureEntirePageScreenshot</td>
-	<td></td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>pause</td>
-	<td>4000</td>
-	<td></td>
-</tr>
-
-<<tr>
-    <td>IF</td>
-    <td>verifyElementPresent(&quot;link=No Thanks&quot;)</td>
-    <td></td>
-</tr>
-<tr>
-    <td>click</td>
-    <td>link=No Thanks </td>
-    <td></td>
-</tr>
-<tr>
-    <td>ENDIF</td>
-    <td></td>
-    <td></td>
-</tr>
-
-<tr>
-	<td>type</td>
-	<td>id=address</td>
-	<td>${Add}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=city</td>
-	<td>${City}</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=smsPermission</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>type</td>
-	<td>id=email</td>
-	<td>${AutoEmail}</td>
-</tr>
-<tr>
-	<td>captureEntirePageScreenshot</td>
-	<td></td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>click</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-
-
-<tr>
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>
 </tr>
-
 <tr>
-	<td>type</td>
-	<td>id=credit-card-number</td>
-	<td>4111 1231 2312 3123</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=credit-card-first</td>
-	<td>${FirstName}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=credit-card-last</td>
-	<td>${LastName}</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=expiration-month</td>
-	<td>label=12</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=expiration-year</td>
-	<td>label=2026</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='js-billing-address']/div[2]/div/label[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=billing-address</td>
-	<td>test bill</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=billing-city</td>
-	<td>test city</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=billing-state</td>
-	<td>label=CA</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=billing-zip</td>
-	<td>90011</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=credit-payment-authorization</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=consent-checkbox-0</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=js-signature-tab</td>
-	<td></td>
-</tr>
-<tr>
-	<td>captureEntirePageScreenshot</td>
-	<td></td>
+	<td>clickAndWait</td>
+	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
 
 <tr>
-	<td>click</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForLocation</td>
-	<td>*page/4* </td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=p.emphasize</td>
-	<td>*Congratulations*</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=div.c-app-sidebar__header</td>
-	<td>Your plan</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>link=View Plan Brochure</td>
-	<td>View Plan Brochure</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>link=View HBI Guide</td>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;id=input-first-name&quot;)</td>
 	<td></td>
 </tr>
 
-
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Go to end - HBI</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Go to end - HBI old</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
@@ -317,6 +158,8 @@
 	
 	
 
+	
+	
 	
 	
 	
