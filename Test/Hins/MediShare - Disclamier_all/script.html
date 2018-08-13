@@ -1,0 +1,118 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Hins/MediShare - Disclamier_all</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">MediShare</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${ENV}/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Health Care Sharing Ministry</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//html/body/main/div[4]/div/p</td>
+	<td>Health Care Sharing Ministries (HCSM) are not insurance. They are cost-sharing programs where monthly dues are distributed to help members of similar religious or ethical beliefs pay their medical expenses. Expense sharing is not guaranteed and you will be responsible for the unshared amounts of your medical bill. The terms and definitions of HCSM are different than those of insurance, please read the membership details of your program. As a member of a HCSM, you are exempt from the ACA Tax.</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=zip-input</td>
+	<td>${zip}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>${DOB}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gender-m-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+                <td>verifyText</td>
+	<td>xpath=/html/body/main/section/div/div/p</td>
+	<td>Health Care Sharing Ministries (HCSM) are not insurance. They are cost-sharing programs where monthly dues are distributed to help members of similar religious or ethical beliefs pay their medical expenses. Expense sharing is not guaranteed and you will be responsible for the unshared amounts of your medical bill. The terms and definitions of HCSM are different than those of insurance, please read the membership details of your program. As a member of a HCSM, you are exempt from the ACA Tax.</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=/html/body/main/div[3]/div/div[2]/div[2]/ul/li[2]/div/div[1]/a[2]</td>
+	<td></td>
+</tr>
+</tr>
+                <td>verifyText</td>
+	<td>xpath=/html/body/main/div[1]/div[3]/div/p</td>
+	<td>Health Care Sharing Ministries (HCSM) are not insurance. They are cost-sharing programs where monthly dues are distributed to help members of similar religious or ethical beliefs pay their medical expenses. Expense sharing is not guaranteed and you will be responsible for the unshared amounts of your medical bill. The terms and definitions of HCSM are different than those of insurance, please read the membership details of your program. As a member of a HCSM, you are exempt from the ACA Tax.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=/html/body/main/div[1]/div[2]/div[1]/div[2]/a/span[3]</td>
+	<td></td>
+</tr>
+</tr>
+                <td>verifyText</td>
+	<td>xpath=/html/body/main/div[3]/div[1]/form/div/div/div/div[1]/div/div[2]/div/div[2]/div/p</td>
+	<td>Health Care Sharing Ministries (HCSM) are not insurance. They are cost-sharing programs where monthly dues are distributed to help members of similar religious or ethical beliefs pay their medical expenses. Expense sharing is not guaranteed and you will be responsible for the unshared amounts of your medical bill. The terms and definitions of HCSM are different than those of insurance, please read the membership details of your program. As a member of a HCSM, you are exempt from the ACA Tax.</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=/html/body/main/div[1]/a[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=/html/body/main/div[3]/div[1]/form/div/div/div/div[1]/div/div[2]/div/div[1]/div[2]/div/div[2]/div/a</td>
+	<td></td>
+</tr>
+</tr>
+                <td>verifyText</td>
+	<td>xpath=/html/body/main/div[3]/div[1]/form/div/div/div/div[1]/div/div[4]/div/p</td>
+	<td>Health Care Sharing Ministries (HCSM) are not insurance. They are cost-sharing programs where monthly dues are distributed to help members of similar religious or ethical beliefs pay their medical expenses. Expense sharing is not guaranteed and you will be responsible for the unshared amounts of your medical bill. The terms and definitions of HCSM are different than those of insurance, please read the membership details of your program. As a member of a HCSM, you are exempt from the ACA Tax.</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>xpath=/html/body/main/div[3]/div[1]/form/div/div/div/div[1]/div/div[2]/div/a</td>
+	<td></td>
+</tr>
+                <td>verifyText</td>
+	<td>xpath=/html/body/main/div[3]/div[1]/form/div/div/div/div[1]/div/div[1]/h2</td>
+	<td>Thank you for submitting an application to join Medi-Share.</td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
