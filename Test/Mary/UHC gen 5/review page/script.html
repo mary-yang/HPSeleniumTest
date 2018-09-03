@@ -72,9 +72,19 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;css=li.js-clear&quot;)</td>
+    <td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>css=li.js-clear</td>
 	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -100,6 +110,16 @@ sanity4/24</td>
 <tr>
 	<td>refreshAndWait</td>
 	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=carrier-unitedhealthone-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
 	<td></td>
 </tr>
 <tr>
@@ -226,16 +246,6 @@ sanity4/24</td>
 	<td>pause</td>
 	<td>3000</td>
 	<td></td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>-- Check EFT---</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//p[contains(@class,'font-small')]</td>
-	<td>${EFT}</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -402,6 +412,8 @@ sanity4/24</td>
 	
 	
 
+	
+	
 	
 	
 	
