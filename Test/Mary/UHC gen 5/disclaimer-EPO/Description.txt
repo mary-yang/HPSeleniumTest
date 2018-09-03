@@ -1,3 +1,9 @@
 UHC Disclaimer:
-https://www.pivotaltracker.com/story/show/141728029
-https://docs.google.com/document/d/1-Fv1t3e28S1dFekEK81BwQ32oU4xsVVgX8cTG_sKAAA/edit
+https://www.pivotaltracker.com/story/show/157274153
+1)       ADD Disclaimers:
+a.       Individual States (8) only: https://docs.google.com/document/d/1e-laVmxpFLPMdmzzzpVry6sGC2Ey2uJjLOW0mYPdvXc/edit
+                                                               i.      Audit these 8 states (I noticed KY might show FACT language and shouldn’t)
+b.       Assc. States: https://docs.google.com/document/d/1PCkiLFH0AJQa5BVsm2WCqvTAOVDntSqI88HexWyYhvM/edit
+
+PPO 22 :  'AL', 'AR', 'CT', 'DE', 'FL', 'GA', 'IN', 'KS', 'KY', 'LA', 'MI', 'MT', 'NC', 'OH', 'OK', 'OR', 'PA', 'SC', 'TN', 'TX', 'VA', 'WY'
+EPO 9:  'AZ', 'IA', 'IL', 'MO', 'MS', 'NE', 'NV', 'WI', 'WV'
