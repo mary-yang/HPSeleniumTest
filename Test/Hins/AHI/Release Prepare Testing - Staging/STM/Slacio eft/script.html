@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/STM/Slacio Applications</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/STM/Slacio eft</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
@@ -312,7 +312,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[@id='js-application-payment']//div/button[2]</td>
+	<td>id=js-extended-coverage</td>
 	<td></td>
 </tr>
 <tr>
@@ -378,13 +378,13 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>5000</td>
+	<td>10000</td>
 	<td></td>
 </tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
-<!---------<tr>
+<tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'Add')])[2]&quot;)</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
@@ -401,11 +401,6 @@
 	<td>ENDIF</td>
 	<td></td>
 	<td></td>
-</tr>---------------------->
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
-	<td></td>
 </tr>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
 <tr>
@@ -414,7 +409,21 @@
 	<td></td>
 </tr>
 <!----------Edit Payment 改填CreditCard选项---------------------->
-
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Edit')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Use Credit Card</td>
+	<td></td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>id=consent-checkbox-0</td>
@@ -476,6 +485,7 @@
 </body>
 </html>
 
+	
 	
 	
 	
