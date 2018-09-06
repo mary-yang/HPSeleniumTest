@@ -82,27 +82,24 @@
 	<td>4000</td>
 	<td></td>
 </tr>
-
-
 <tr>
     <td>IF</td>
     <td>verifyElementPresent(&quot;link=Agile One 750&quot;)</td>
     <td></td>
 </tr>
-
-<!---------------------------
+<!----------------------------------------------------------->
 <tr>
-	<td>click</td>
-	<td>//a[contains(@href, '/health-benefit-insurance/apply/agileone-${state2}-750')]</td>
+	<td>clickAndWait</td>
+	<td>link=Agile One 750</td>
 	<td></td>
 </tr>
--------------------------------->
-<!--------------------Hins add--------------------->
+<!--------------------
 <tr>
 	<td>click</td>
 	<td>xpath=/html/body/main/div[3]/div/div/ul/div[5]/div/div[3]/div[2]/ul/li[2]/div[2]/a</td>
 	<td></td>
 </tr>
+--------------------->
 <!----------------------------------------->
 <tr>
     <td>ENDIF</td>
@@ -118,7 +115,7 @@
 ----------------------------->
 <tr>
 	<td>storeText</td>
-	<td>xpath=/html/body/main/div[1]/div[2]/section[1]/div/div/div/div[1]/div[1]</td>
+	<td>xpath=//div[@id='hbi-plan-details-overview']/div/div/div</td>
 	<td>mon</td>
 </tr>
 
@@ -273,6 +270,8 @@
 </tbody></table>
 </body>
 </html>
+	
+	
 	
 	
 	
