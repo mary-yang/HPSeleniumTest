@@ -69,19 +69,20 @@ sanity4/24</td>
 
 <tr>
 	<td>storeText</td>
-	<td>//a[contains(@href, '/term-health-insurance/plan/${productId}')]</td>
+	<td>css=h1.plan-details-header-name</td>
 	<td>planname</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//li/div/div/div[contains(@data-planid, '${productId}')]/div</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
 	<td>mo</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${productId}')])[2]</td>
+	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>verifyText</td>
 	<td>css=h1</td>
@@ -144,6 +145,8 @@ sanity4/24</td>
 	
 	
 
+	
+	
 	
 	
 	
