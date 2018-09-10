@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Fast Quote/Fast Quote STM and HBI Xsell</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Landing Page/Fast Quote/Fast Quote STM and HBI Xsell</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">b</td></tr>
 </thead><tbody>
@@ -192,14 +192,39 @@
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//*[@id='apply']//table/tbody/tr[descendant::td[1][contains(text(),'Primary Applicant')]]/td[2]</td>
-	<td>${DOB1}*</td>
+	<td>click</td>
+	<td>id=js-applicant-details-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//*[@id='apply']//table/tbody/tr[descendant::td[1][contains(text(),'Location')]]/td[2]</td>
-	<td>${zip}*</td>
+	<td>//td[contains(text(),'Zip Code']/following::td</td>
+	<td>${zip}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[contains(text(),'Applicant']/following::td</td>
+	<td>${DOB1} ${gender1}*</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='applicant-info-container']/div[3]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//a[@id='js-applicant-details-link']/parent::*</td>
+	<td>*${zip}*</td>
 </tr>
 <tr>
 	<td>storeEval</td>
@@ -225,6 +250,7 @@
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	

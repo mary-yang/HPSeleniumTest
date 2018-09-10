@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/STM/UHC</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM Disclaimer/UHC</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -54,64 +54,20 @@ sanity4/24</td>
 	<td>xpath=.//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
 <!-----------------------------Census page------------------------------------------->
 <tr>
-	<td>verifyLocation</td>
-	<td>*/quote*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>clickAndWait</td>
-	<td>//input[@data-id="${carrierid}"]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
+	 <td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
+	<td>css=h1.plan-details-header-name</td>
 	<td>planname</td>
 </tr>
 <tr>
 	<td>echo</td>
 	<td>${planname}</td>
-	<td></td>
-</tr>
-
-
-
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
 	<td></td>
 </tr>
 <!-----------------------------detail page------------------------------------------->
@@ -494,6 +450,7 @@ tr>
 </body>
 </html>	
 
+	
 	
 	
 	

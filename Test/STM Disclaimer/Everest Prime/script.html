@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/STM/Everest Prime</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM Disclaimer/Everest Prime</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -67,66 +67,19 @@ sanity4/24</td>
 </tr>
 <!-----------------------------quote page------------------------------------------->
 <tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=${carrierid}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=ul.quote-all-plans-list.js-plans-list > li.quote-plan-container.js-plan-unit > div.quote-plan > div.quote-plan-body > div.quote-plan-carrier > h3.quote-plan-name > a</td>
-	<td>planname</td>
-</tr>
-
-<tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div</td>
 	<td>General DisclaimersThese Short Term Medical plans do not provide coverage for preexisting conditions nor the mandated coverage necessary to avoid a penalty under the Affordable Care Act.<br />Each state has specific mandates for coverage so your plan may include additional benefits. Please consult your state-specific insurance certificate for more information.<br />Short Term Health Insurance products underwritten by their respective companies. Product prices, benefits and availability may vary by state.</td>
 </tr>
-
 <tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
+	 <td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h1.plan-details-header-name</td>
+	<td>planname</td>
 </tr>
 <!-----------------------------detail page------------------------------------------->
 <tr>
@@ -521,6 +474,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	
