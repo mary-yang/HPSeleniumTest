@@ -1,0 +1,371 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Hins/Regression scripts/Level 2/Quote Page/Short_Term_Quote Page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Quote Page</td></tr>
+</thead><tbody>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote & Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>60002</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1985</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeXpathCount</td>
+	<td>//a[contains(text(),'Select This Plan')]</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${x}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.quote-heading</td>
+	<td>* plans found. Showing * plans*</td>
+</tr>
+<!--verify Insurance Provider  filter-->
+<tr>
+	<td>click</td>
+	<td>//input[@data-id="everest"]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div/div[2]/div[1]/h3/a[contains(text(),'Everest Prime')]</td>
+	<td>y</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${y}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.quote-heading</td>
+	<td>* plans found. Showing ${y} plans*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=li.js-clear</td>
+	<td></td>
+</tr>
+<!--
+verify Monthly Premium
+-->
+<tr>
+	<td>click</td>
+	<td>//span[contains(text(),'above')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.js-clear</td>
+	<td>above $* Monthly Premium</td>
+</tr>
+<!--verify Coninsurance-->
+<tr>
+	<td>click</td>
+	<td>id=planCoinsurance-20-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--Verify sorting-->
+<tr>
+	<td>click</td>
+	<td>id=bestSellers-clear-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+-->
+<tr>
+	<td>click</td>
+	<td>id=navbar</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Coinsurance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/ul/li[2]</td>
+	<td>Coinsurance*%</td>
+</tr>
+
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=img.carrier-logo-image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.quote-plan-price</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Select This Plan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.plan-info-label</td>
+	<td>Deductible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[*]/ul/li[2]/span</td>
+	<td>Coinsurance</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']</td>
+	<td>*Max Out of Pocket*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//a[contains(text(),'Policy Max')]</td>
+	<td>*Policy Max*</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Policy Max')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.glossary-definition</td>
+	<td>The maximum dollar amount that a health insurance company agrees to pay on behalf of a member for covered services during the course of the coverage period.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=×</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//a[contains(text(),'Office Visit Copay')])[2]</td>
+	<td>*Office Visit Copay*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//a[contains(text(),'Urgent Care Visit Copay')]</td>
+	<td>*Urgent Care Visit Copa*</td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--
+<tr>
+	<td>verifyText</td>
+	<td>link=Dental Savings Program</td>
+	<td>Dental Savings Program</td>
+</tr>
+-->
+<tr>
+	<td>click</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Short Term Health Insurance: Find a Short Term Plan In Minutes</td>
+	<td></td>
+</tr>
+
+<!-------------------Hins modify ------------------------->
+<tr>
+	<td>click</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>xpath=/html/body/main/div[1]/div/div/div/form/div[1]/section[1]/div/div/input</td>
+	<td>60002</td>
+</tr>
+<!------------------------------------->
+
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1985</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
