@@ -1,4 +1,4 @@
-"state","state1","zipcode","carrierid","DOB","uri"
-"##Alabama","AL","35215","carrier-everest-","03/06/1995","${uri}"
-"Illinois","IL","60002","carrier-everest-","03/06/1995","${uri}"
-"##Texas","TX","79936","carrier-everest-","03/06/1995","${uri}"
+"state","state1","zipcode","carrierid","DOB","uri","productId"
+"##Alabama","AL","35215","carrier-everest-","03/06/1995","${uri}",""
+"Illinois","IL","60002","carrier-everest-","03/06/1995","${uri}","everest-stm"
+"##Texas","TX","79936","carrier-everest-","03/06/1995","${uri}",""
