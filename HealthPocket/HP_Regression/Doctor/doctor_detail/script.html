@@ -15,37 +15,32 @@
 <!--filter-->
 <tr>
 	<td>waitForVisible</td>
-	<td>//input[@value='M']</td>
+	<td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Farshad Farzam Dds Inc'])[1]/preceding::h1[1]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//input[@value='M']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>id=clearGender</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementNotPresent</td>
-	<td>//div[@id='page-spinner']/div</td>
+	<td>//button[contains(text(),'More Filters')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//input[@value='ifp']</td>
+	<td>//label[contains(text(),'Male')]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForVisible</td>
-	<td>id=clearInsuranceType</td>
+	<td>click</td>
+	<td>//label[contains(text(),'Individual and Family Plans')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Show Doctors')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForElementNotPresent</td>
-	<td>//div[@id='page-spinner']/div</td>
+	<td>//button[contains(text(),'Clear filters')]</td>
 	<td></td>
 </tr>
 <tr>
@@ -212,6 +207,9 @@
 </body>
 </html>
 
+	
+	
+	
 	
 	
 	

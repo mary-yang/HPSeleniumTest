@@ -139,35 +139,9 @@
 </tr>
 
 <tr>
-	<td>type</td>
-	<td>//input[@value='']</td>
-	<td>${FirstName}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=member-P-1-lastName</td>
-	<td>${LastName}</td>
-</tr>
-
-<tr>
-	<td>type</td>
-	<td>id=address</td>
-	<td>${Add}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=city</td>
-	<td>${City}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=email</td>
-	<td>${AutoEmail}</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=primaryPhone</td>
-	<td>${Tel}</td>
+	<td>click</td>
+	<td>id=fillApp</td>
+	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -175,19 +149,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>click</td>
+	<td>id=credit-payment-authorization</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//div[@id='js-app-page-body-content']/h3</td>
-	<td>Step 2. Payment &amp; Billing</td>
-</tr>
-
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Use Credit Card</td>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
 <tr>
@@ -207,7 +175,11 @@
 </tr>
 
 
-
+<tr>
+	<td>waitForLocation</td>
+	<td>*page/4* </td>
+	<td></td>
+</tr>
 <tr>
 	<td>verifyText</td>
 	<td>css=span.emphasize</td>
@@ -230,4 +202,6 @@
 </tbody></table>
 </body>
 </html>
+	
+	
 	

@@ -108,7 +108,6 @@
 	<td>4000</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>click</td>
 	<td>id=fillApp</td>
@@ -120,23 +119,98 @@
 	<td></td>
 </tr>
 <tr>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4111 1111 1111 1111</td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=credit-payment-authorization</td>
 	<td></td>
 </tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyValue('id=billing-zip','${zipcode}')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+
+<!---------<tr>
+	<td>include</td>
+	<td>AHI/Include/UseTestCard</td>
+	<td></td>
+</tr>---------------->
+
+
 <tr>
 	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//a[@class='js-app-add-addons app-addon-ok btn btn-default']&quot;)</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeText</td>
+	<td>//*[@id="js-modal-ancillary-products"]/div[1]/div[2]/div[1]/div[2]/div[2]/p</td>
+	<td>upsell1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id="js-modal-ancillary-products"]/div[2]/div[2]/div[1]/div[2]/div[2]/p</td>
+	<td>upsell2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@class='js-app-add-addons app-addon-ok btn btn-default']</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
 <tr>
 	<td>click</td>
-	<td>id=consent-checkbox-0</td>
+	<td>//*[@id="js-consent-review"]/div/div/div[1]/div/div/label</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=p.signature-arrow</td>
+	<td>//*[@id="js-signature-tab"]/p[1]</td>
 	<td></td>
 </tr>
 <tr>
@@ -144,8 +218,6 @@
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
-
-
 <tr>
 	<td>waitForLocation</td>
 	<td>*page/4* </td>
@@ -167,9 +239,6 @@
 	<td>${conf_mon}</td>
 	<td></td>
 </tr>
-
-
-
 </tbody></table>
 </body>
 </html>
@@ -215,6 +284,8 @@
 	
 	
 
+	
+	
 	
 	
 	
