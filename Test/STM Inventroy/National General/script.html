@@ -84,11 +84,15 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+    <td>IF</td>
+    <td>verifyElementPresent("xpath=//*[@id='js-quote-filters']/div[2]/div/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]")</td>
+    <td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>//*[@id='js-quote-filters']/div[2]/div/ul/li[*]/label[2]/span[1][contains(text(),'${provider}')]</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>pause</td>
 	<td>3000</td>
@@ -99,7 +103,11 @@ sanity4/24</td>
 	<td>//*[@title="${provider}"]/span[2]</td>
 	<td>num</td>
 </tr>
-
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
 <tr>
 	<td>echo</td>
 	<td>${num}</td>
@@ -107,25 +115,26 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div[2]/div/h3/a</td>
+	<td>//img[@alt="${provider}"]/following::*[@class='quote-plan-name']/a</td>
 	<td>plan</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div/a/div</td>
+	<td>//img[@alt="${provider}"]/following::*[@class='quote-plan-price']</td>
 	<td>premium</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div[2]/ul/li[4]/span[2]</td>
+	<td>//img[@alt="${provider}"]/following::*[contains(text(),'Policy Term')]/following::span</td>
 	<td>policyTerm</td>
 </tr>
-
 	</tbody>
 </table>
 
 	
 
+	
+	
 	
 	
 	

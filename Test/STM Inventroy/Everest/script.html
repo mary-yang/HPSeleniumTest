@@ -107,17 +107,17 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div[2]/div/h3/a</td>
+	<td>//img[@alt="${provider}"]/following::*[@class='quote-plan-name']/a</td>
 	<td>plan</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div/a/div</td>
+	<td>//img[@alt="${provider}"]/following::*[@class='quote-plan-price']</td>
 	<td>premium</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div[2]/ul/li[4]/span[2]</td>
+	<td>//img[@alt="${provider}"]/following::*[contains(text(),'Policy Term')]/following::span</td>
 	<td>policyTerm</td>
 </tr>
 
@@ -126,6 +126,7 @@ sanity4/24</td>
 
 	
 
+	
 	
 	
 	
