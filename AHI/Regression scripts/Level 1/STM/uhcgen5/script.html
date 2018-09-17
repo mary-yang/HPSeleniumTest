@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Hins/AHI/Regression scripts/Level 1/STM/uhcgen5</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM New/uhcgen5</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -103,40 +103,22 @@ sanity4/24</td>
 	<td></td>
 </tr>
 --------------------->
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=/html/body/main/div[2]/div[2]/div/p&quot;)</td>
-	<td></td>
-</tr>
+<!--------------------- Quote page----------------------------->
 <tr>
 	<td>include</td>
-	<td>AHI/Include/Go to end - STM old</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
+<!--------------------- Detail page----------------------------->
 <tr>
-	<td>ELSE</td>
-	<td></td>
-	<td></td>
+	<td>storeText</td>
+	<td>css=h1.plan-details-header-name</td>
+	<td>planname</td>
 </tr>
 <tr>
-	<td>include</td>
-	<td>AHI/Include/Go to end - STM</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h1</td>
-	<td>${planname}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>xpath=/html/body/main/div[1]/div[2]/section[1]/div/div[3]/div/div[1]/div[1]/div[2]/a</td>
-	<td>*${mo}*</td>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -145,9 +127,10 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>4000</td>
+	<td>2000</td>
 	<td></td>
 </tr>
+<!--------------------- App page----------------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Name</td>
@@ -177,6 +160,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	
