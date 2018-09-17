@@ -1,0 +1,4 @@
+The current markets that are available are-  
+Everest Prime : 32 states
+
+AL,AZ,CO,DE,DC,FL,GA,IA,ID,IL,IN,KY,LA,MN,MO,MS,ND,NH,NV,OH,OK,OR,PA,SC,SD,TN,TX,VA,WA,WI,WV,WY

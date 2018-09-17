@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Hins/Regression scripts/Level 1/STM/Slacio</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Hins/AHI/Regression scripts/Level 1/STM/Slacio</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
@@ -57,6 +57,7 @@
 	<td>2000</td>
 	<td></td>
 </tr>
+<!---------------------
 <tr>
 	<td>waitForElementPresent</td>
 	<td>link=(edit)</td>
@@ -100,6 +101,32 @@
 <tr>
 	<td>pause</td>
 	<td>2000</td>
+	<td></td>
+</tr>
+----------------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=/html/body/main/div[2]/div[2]/div/p&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Go to end - STM old</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Go to end - STM</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -424,6 +451,14 @@
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
 	<td>Successfully Enrolled</td>
 </tr>
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

@@ -72,6 +72,21 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;css=li.js-clear&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.js-clear</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
 	<td>pause</td>
 	<td>3000</td>
 	<td></td>
@@ -92,14 +107,19 @@ sanity4/24</td>
     <td></td>
 </tr>
 
-
-
-
-
-
 <tr>
 	<td>refreshAndWait</td>
 	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=carrier-unitedhealthone-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
 	<td></td>
 </tr>
 <tr>
@@ -301,6 +321,11 @@ sanity4/24</td>
 	<td></td>
 </tr>
 
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-application-payment']/section/div[2]/div/div/p</td>
+	<td>${EFT}</td>
+</tr>
 
 
 <tr>
@@ -379,6 +404,58 @@ sanity4/24</td>
 	<td>css=div.col-md-11.terms-cell &gt; p</td>
 	<td>*For my Short Term application, I have reviewed and understand the Terms and Agreements. I hereby agree to the Statement of Understanding, Electronic Funds Transfer and/or Credit Card Authorization, and Consent to Receive Electronic Records and to Conduct Transactions Electronically. I have reviewed my electronic Short Term Application/Enrollment Form and Plan Benefits, Exclusions and Limitations. I agree that by checking the box and clicking to sign, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature.&nbsp;&nbsp;*</td>
 </tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//a[contains(text(),'AgileHealthInsurance Terms and Agreements')]@href</td>
+	<td>taurl</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${ENV}${taurl}</td>
+	<td>TAURL</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${TAURL}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//p[@class='disclaimer-label']</td>
+	<td>GOLDEN RULE INSURANCE COMPANY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[2]//p[2]</td>
+	<td>THIS IS NOT QUALIFYING HEALTH COVERAGE (&quot;MINIMUM ESSENTIAL COVERAGE&quot;) THAT SATISFIES THE HEALTH COVERAGE REQUIREMENT OF THE AFFORDABLE CARE ACT. IF YOU DO NOT HAVE MINIMUM ESSENTIAL COVERAGE, YOU MAY OWE AN ADDITIONAL PAYMENT WITH YOUR TAXES.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[2]//p[3]</td>
+	<td>STATEMENT OF UNDERSTANDING</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p/b[contains(text(),'FRAUD WARNING')]/following::p</td>
+	<td>${FW}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p/b[contains(text(),'FACT MEMBERSHIP')]/following::p</td>
+	<td>I hereby enroll for Basic ($4 a month) membership in the FEDERATION OF AMERICAN CONSUMERS AND TRAVELERS (FACT). Upon completion of this enrollment form and payment of initial dues, I understand that: (a) I will be entitled to FACT's benefits; (b) these benefits may change from time to time; (c) some benefits may have a delayed effective date; (d) my membership will become effective on the day this enrollment form is dated and signed; (e) I am eligible to apply for association group insurance; and (f) I authorize the release of my name, address, date of birth, certificate and phone numbers, application date, membership level, and email address listed on the Golden Rule Application for Short Term Medical Insurance to FACT. Note: Accident Insurance is included in your FACT membership and you will have an opportunity to name your beneficiary(ies) by mail or on the FACT website.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p/b[contains(text(),'ELECTRONIC FUNDS TRANSFER (EFT) AUTHORIZATION')]/following::p</td>
+	<td>I (we) hereby authorize FACT or Golden Rule to initiate debit entries to the account indicated below. I also authorize the named financial institution to debit the same to such account. I agree this authorization will remain in effect until you actually receive written notification of its termination from me. NOTE: Some card issuers/financial institutions charge cash advance fees on insurance payments.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p/b[contains(text(),'CREDIT CARD AUTHORIZATION')]/following::p</td>
+	<td>I authorize FACT or Golden Rule Insurance Company to charge my Visa/MasterCard/American Express account for the single payment or monthly payment above.</td>
+</tr>
+</tr>
 	
 	
 	
@@ -387,6 +464,20 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

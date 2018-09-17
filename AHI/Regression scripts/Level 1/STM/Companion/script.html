@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/Companion/application flows</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 1/STM/Companion</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -61,6 +61,7 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
+<!--------------------------------
 <tr>
 	<td>waitForElementPresent</td>
 	<td>link=(edit)</td>
@@ -128,6 +129,33 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
+-------------------------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=/html/body/main/div[2]/div[2]/div/p&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Go to end - STM old</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Go to end - STM</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>verifyText</td>
 	<td>css=h1</td>
@@ -289,11 +317,6 @@ sanity4/24</td>
 </tr>
 
 <tr>
-	<td>type</td>
-	<td>id=credit-card-number</td>
-	<td>4358 8066 8649 3800</td>
-</tr>
-<tr>
 	<td>fireEvent</td>
 	<td>id=credit-card-number</td>
 	<td>blur</td>
@@ -317,6 +340,11 @@ sanity4/24</td>
 	<td>select</td>
 	<td>id=expiration-month</td>
 	<td>label=02</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4358 8066 8649 3800</td>
 </tr>
 
 <tr>
@@ -474,6 +502,10 @@ sanity4/24</td>
 	
 	
 	
+	
+	
+	
+
 	
 	
 	

@@ -154,7 +154,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[3]</td>
-	<td>${ACATAX}</td>
+	<td>${ACANOTICE}</td>
 </tr>
 <tr>
 	 <td>include</td>
@@ -176,6 +176,23 @@ sanity4/24</td>
 	<td>3000</td>
 	<td></td>
 </tr>
+<!------------------------------------------->
+<tr>
+	<td>selectWindow</td>
+	<td>_blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<!------------------------------------------->
 <tr>
 	<td>verifyLocation</td>
 	<td>*application*</td>
@@ -249,7 +266,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[3]</td>
-	<td>${ACATAX}</td>
+	<td>${ACANOTICE}</td>
 </tr>
 
 <tr>
@@ -321,7 +338,7 @@ tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[3]</td>
-	<td>${ACATAX}</td>
+	<td>${ACANOTICE}</td>
 </tr>
 
 <tr>
@@ -334,11 +351,7 @@ tr>
 	<td>2000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>type</td>
-	<td>id=credit-card-number</td>
-	<td>4111 1111 1111 1111</td>
-</tr>
+<!------------------
 <tr>
 	<td>select</td>
 	<td>id=expiration-month</td>
@@ -355,6 +368,11 @@ tr>
 	<td>label=7</td>
 </tr>
 <tr>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4111 1111 1111 1111</td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=js-same-billing</td>
 	<td></td>
@@ -365,7 +383,92 @@ tr>
 	<td>id=credit-payment-authorization</td>
 	<td></td>
 </tr>
-
+------------------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(id=js-extended-coverage)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-application-payment']//div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@id='js-application-payment']//div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(id=account-holder-name)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=account-holder-name</td>
+	<td>${FirstName} ${LastName}</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bank-name</td>
+	<td>American Bank</td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(//div[@id='account-type']/button)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='account-type']/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='account-class']/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=routing-number</td>
+	<td>121000248</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=account-number</td>
+	<td>4111022497</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-same-billing</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=eft-payment-authorization</td>
+	<td></td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
@@ -408,6 +511,24 @@ tr>
 </body>
 </html>	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

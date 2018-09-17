@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Hins/Regression scripts/Level 3/Coverage Date/Coverage_Date_monthly</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 3/Coverage Date/Coverage_Date_monthly</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">coveragedate_type</td></tr>
 </thead><tbody>
@@ -196,6 +196,21 @@
 	<td></td>
 </tr>
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;id=js-returning-user-no&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-returning-user-no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>//li[@id='js-question-P0-2835']/div/button</td>
 	<td></td>
@@ -316,32 +331,30 @@
 	<td></td>
 </tr>
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
-	<td></td>
+                <td>IF</td>
+                <td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
+                <td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
+	<td>click</td>
 	<td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<!-----------------------Hins modify----------------------> 
-<tr>
-	<td>click</td>
-	<td>id=consent-checkbox-0</td>
-	<td></td>
+                <td>pause</td>
+                <td>5000</td>
+                <td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=#js-signature-tab &gt; p</td>
-	<td></td>
+                <td>ENDIF</td>
+                <td></td>
+                <td></td>
 </tr>
-<!---------------------Hins modify------------------------->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>                
 <tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
@@ -364,6 +377,16 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

@@ -24,11 +24,6 @@ sanity4/24</td>
 </tr>
 
 <tr>
-	<td>verifyText</td>
-	<td>css=h1.census-main-heading</td>
-	<td>Compare Health Insurance Quotes*</td>
-</tr>
-<tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
 	<td>${zipcode}</td>
@@ -64,8 +59,28 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;css=li.js-clear&quot;)</td>
+    <td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>css=li.js-clear</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
 	<td></td>
 </tr>
 
@@ -77,7 +92,7 @@ sanity4/24</td>
 
 <tr>
 	<td>pause</td>
-	<td>3000</td>
+	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
@@ -91,12 +106,28 @@ sanity4/24</td>
 	<td>${num}</td>
 	<td></td>
 </tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div[2]/div/h3/a</td>
+	<td>plan</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div/a/div</td>
+	<td>premium</td>
+</tr>
+
 
 	</tbody>
 </table>
 
 	
 
+	
+	
+	
+	
+	
 	
 	
 	

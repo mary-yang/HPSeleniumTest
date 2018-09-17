@@ -1,0 +1,6 @@
+"state","zipcode","carrierid","planname","mo","uri","AutoEmail","productId"
+"##IL","60601","carrier-hccadvantage-","${planname}","${mo}","${uri}","${AutoEmail}",""
+"##IL","60601","carrier-hccflexible-","${planname}","${mo}","${uri}","${AutoEmail}",""
+"AR","70816","everest-one-","${planname}","${mo}","${uri}","${AutoEmail}","everest-prime-stm"
+"##IL","60601","carrier-slaico-","${planname}","${mo}","${uri}","${AutoEmail}",""
+"##IL","60601","unitedhealthone","${planname}","${mo}","${uri}","${AutoEmail}",""
