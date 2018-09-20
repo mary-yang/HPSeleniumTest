@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/BO/Download CSV report</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Level 2 New/BO/Download CSV report</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">BO_app_ Management</td></tr>
 </thead><tbody>
@@ -74,35 +74,27 @@
 	<td>3000</td>
 	<td></td>
 </tr>
+<!-----------------------------quote page------------------------------------------->
 <tr>
-	<td>clickAndWait</td>
-	<td>//input[@data-id="${carrierid}"]</td>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
+
 <tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
+	<td>storeText</td>
+	<td>css=h1.plan-details-header-name</td>
+	<td>planname</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
-	<td>planname</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
 </tr>
 <tr>
 	<td>echo</td>
 	<td>${planname}</td>
 	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h1</td>
-	<td>${planname}</td>
 </tr>
 
 <tr>
@@ -215,6 +207,7 @@
 	
 	
 
+	
 	
 	
 	

@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Apply Page/Apply Page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Level 2 New/Apply Page/Apply Page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">Quote Page</td></tr>
 </thead><tbody>
@@ -68,49 +68,30 @@
 	<td></td>
 </tr>
 
-
-
-
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
 <tr>
 	<td>verifyLocation</td>
 	<td>*/quote*</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>pause</td>
 	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[contains(text(),'See Plan Details')]</td>
+	<td></td>
+</tr>
+<tr>
 	<td>storeText</td>
-	<td>css=h3.quote-plan-name &gt; a</td>
+	<td>css=h1.plan-details-header-name</td>
 	<td>planname</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=div.quote-plan-price</td>
-	<td>mo</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'(see details)')])[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h1</td>
-	<td>${planname}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
 	<td>css=a.plan-details-price.js-price-breakdown</td>
-	<td>*${mo}*</td>
+	<td>mo</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -149,6 +130,11 @@
 	<td>mo1</td>
 </tr>
 <tr>
+	<td>storeEval</td>
+	<td>var mo2=${mo1};mo2.toFixed(2);</td>
+	<td>mo1</td>
+</tr>
+<tr>
 	<td>verifyText</td>
 	<td>css=span.emphasize</td>
 	<td>${planname}</td>
@@ -161,6 +147,8 @@
 </tbody></table>
 </body>
 </html>
+	
+	
 	
 	
 	
