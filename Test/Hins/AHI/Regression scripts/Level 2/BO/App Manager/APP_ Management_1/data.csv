@@ -1,6 +1,0 @@
-"state","zipcode","carrierid","planname","mo","uri","AutoEmail"
-"##IL","60601","carrier-hccadvantage-","${planname}","${mo}","${uri}","${AutoEmail}"
-"##IL","60601","carrier-hccflexible-","${planname}","${mo}","${uri}","${AutoEmail}"
-"IL","60002","everest","${planname}","${mo}","${uri}","${AutoEmail}"
-"##IL","60601","carrier-slaico-","${planname}","${mo}","${uri}","${AutoEmail}"
-"##IL","60601","unitedhealthone","${planname}","${mo}","${uri}","${AutoEmail}"

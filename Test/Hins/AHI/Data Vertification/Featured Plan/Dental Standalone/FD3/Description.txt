@@ -1,6 +1,0 @@
-AL,AR,AZ,CA,CO,CT,DE,DC,DE,DC,FL,GA,HI,IA,ID,IL,IN,KS,KY,LA,ME,MO,MS,MT,NC,ND,NE,NH,NM,NV,OH,OK,OR,PA,SC,SD,TN,TX,UT,VA,WA,WI,WV,WY
-
-Requirement
-
-
-https://docs.google.com/spreadsheets/d/1L2ur9fKKPsnMWW1pxDy-RkcA5I87ABF3yNLO2NAYAJo/edit#gid=392921727

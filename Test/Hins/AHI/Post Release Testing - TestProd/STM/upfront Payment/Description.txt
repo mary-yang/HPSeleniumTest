@@ -1,8 +1,0 @@
-Test Goal: Submit an application with 1 time payment on testprod.
-
-Test Steps:
-1. Go to census page, select 1 time payment
-2. Go to quote page, verify total premium.
-3. Go to apply page, verify total premium.
-4. Apply application
-5. Go to confirmation page, verify total premium.

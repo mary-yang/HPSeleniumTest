@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 1/STM/upFront Payment</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM New/upFront Payment</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -88,83 +88,15 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyLocation</td>
-	<td>*/quote*</td>
+	 <td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=li.js-clear</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-    <td>IF</td>
-    <td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${carrierid}')]&quot;)</td>
-    <td></td>
-</tr>
-<tr>
-    <td>click</td>
-    <td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${carrierid}')]</td>
-    <td></td>
-</tr>
-<tr>
-    <td>ENDIF</td>
-    <td></td>
-    <td></td>
-</tr>
-
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Select This Plan')])[3]</td>
-	<td></td>
-</tr>
-<!-----------
-<tr>
-	<td>storeText</td>
-	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
-	<td>planname</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//li/div/div/div[contains(@data-planid, '${carrierid}')]/div</td>
-	<td>mo</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h1</td>
-	<td>${planname}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
-	<td>*${mo}*</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
 	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
----------->
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -185,6 +117,11 @@ sanity4/24</td>
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
 	<td>Successfully Enrolled</td>
 </tr>
+	
+	
+	
+	
+	
 	
 	
 	

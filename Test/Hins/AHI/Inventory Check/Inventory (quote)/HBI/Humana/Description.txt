@@ -1,4 +1,0 @@
-
-
-Prod enabled states:
-AL,AZ,AR,CA,DE,DC,FL,GA,ID,IL,IN,IA,MS,MO,NE,NV,NC,OH,OK,PA,SC,TN,TX,VA,WI,WY

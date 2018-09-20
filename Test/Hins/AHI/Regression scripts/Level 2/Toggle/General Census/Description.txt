@@ -1,4 +1,0 @@
-* Make sure AR - Default to HBI Test
-* Make sure STM/HBI quotes displayed according the product State Availability 
-
-* Make sure these two product line can be toggle.
