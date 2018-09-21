@@ -1,4 +1,0 @@
-AL, AZ, DE, HI, KY, MS, NE, ND, OH, OR, PA, RI, SC, TX, VA, WI, and WY.
-
-Prod enabled states:
-AL,AZ,CO,DE,HI,IA,IL,IN,KY,LA,MS,ND,NE,NJ,NM,NV,OH,OK,OR,PA,RI,SC,TX,VA,VT,WI,WV,WY

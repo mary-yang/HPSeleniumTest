@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Hins/AHI/Regression scripts/Level 1/STM/slaico_Credit card</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM New/slaico_Credit card</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
@@ -57,87 +57,22 @@
 	<td>2000</td>
 	<td></td>
 </tr>
-<!-------------------
+<!------------------- quote page----------------------------->
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=${carrierid}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
+<!------------------- detail page----------------------------->
 <tr>
 	<td>storeText</td>
-	<td>css=ul.quote-all-plans-list.js-plans-list > li.quote-plan-container.js-plan-unit > div.quote-plan > div.quote-plan-body > div.quote-plan-carrier > h3.quote-plan-name > a</td>
+	<td>css=h1.plan-details-header-name</td>
 	<td>planname</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul[2]/li/div/div/a/div</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
 	<td>mo</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
------------------------------>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=/html/body/main/div[2]/div[2]/div/p&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Go to end - STM old</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ELSE</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Go to end - STM</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h1</td>
-	<td>${planname}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//section[@id='js-plan-summary']/div/div[3]/div/div/div/div[2]/a</td>
-	<td>*${mo}*</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -149,6 +84,7 @@
 	<td>2000</td>
 	<td></td>
 </tr>
+<!------------------- app page----------------------------->
 <tr>
 	<td>storeEval</td>
 	<td>'${mo}'.match(/\d+.\d+/)</td>
@@ -218,6 +154,7 @@
 	
 	
 
+	
 	
 	
 	

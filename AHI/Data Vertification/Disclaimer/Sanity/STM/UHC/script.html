@@ -54,65 +54,22 @@ sanity4/24</td>
 	<td>xpath=.//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
+<!-----------------------------quote page------------------------------------------->
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
-<!-----------------------------Census page------------------------------------------->
-<tr>
-	<td>verifyLocation</td>
-	<td>*/quote*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
 
 <tr>
-	<td>clickAndWait</td>
-	<td>//input[@data-id="${carrierid}"]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
 	<td>storeText</td>
-	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
+	<td>css=h1.plan-details-header-name</td>
 	<td>planname</td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${planname}</td>
-	<td></td>
-</tr>
-
-
-
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
-	<td></td>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
 </tr>
 <!-----------------------------detail page------------------------------------------->
 <tr>
@@ -506,11 +463,50 @@ tr>
 	<td>//div[@id='app-review-summary-form']/div</td>
 	<td>Please review the information of your application before submitting for approval. To update any of the previous pages use your browser back button. (tell me more) Consent to Electronic Transactions By checking the boxes and entering my name below, I am indicating my intent to electronically sign the application and the administrative forms provided (in states where applicable) and represent that all the information I have provided is true, complete, and accurate. IMPORTANT NOTICE ABOUT YOUR ELECTRONIC SIGNATURE I hereby enroll for membership in the FEDERATION OF AMERICAN CONSUMERS AND TRAVELERS (FACT) * For my Short Term application, I have reviewed and understand the Statement of Understanding and AgileHealthInsurance Terms and Agreements. I have reviewed my electronic Short Term Application/Enrollment Form and Plan Benefits, Exclusions and Limitations, and I hereby agree to the Electronic Funds Transfer and/or Credit Card Authorization, and Consent to Receive Electronic Records and to Conduct Transactions Electronically. I agree that by checking the box and clicking to sign, I represent that all information I have provided is true, complete and accurate and my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature. Proposed Insured's Signature or Parent/Legal Guardian if proposed insured is a child *CLICK TO SIGN ↓ Date Signed: * ↑↑Please correct the above↑↑ Submit Your Application</td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACANOTICE}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=AgileHealthInsurance Terms and Agreements</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Short Term Health Insurance, Affordable Health Plans, Affordable Obamacare Supplemental Health Insurance - AgileHealthInsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[3]/div</td>
+	<td>${ACANOTICE_TA}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[4]/div</td>
+	<td>${AHIGTA}</td>
+</tr>
 
 </tbody></table>
 </body>
 </html>	
 
+	
+	
+	
+	
 	
 	
 	

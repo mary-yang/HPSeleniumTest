@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Family application/2A and 2C-Upfront</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Level 2 New/Family application/2A and 2C-Upfront</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -192,45 +192,22 @@ sanity4/24</td>
 	<td></td>
 </tr>
 
+<!-----------------------------quote page------------------------------------------->
 <tr>
-	<td>pause</td>
-	 <td>2000</td>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=${carrierid}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='js-quote-plans-container']/ul/li[1]/div/div[2]/div[1]/h3/a[1]</td>
+	<td>css=h1.plan-details-header-name</td>
 	<td>planname</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=div.quote-plan-price</td>
-	<td>mo</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//*[@id='js-quote-plans-container']/ul/li[1]/div/div[2]/div[1]/h3/a[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h1</td>
-	<td>${planname}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
 	<td>css=a.plan-details-price.js-price-breakdown</td>
-	<td>*${mo}*</td>
+	<td>mo</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -269,6 +246,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	

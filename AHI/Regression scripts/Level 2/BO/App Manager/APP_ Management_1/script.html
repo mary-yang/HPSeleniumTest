@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/BO/App Manager/APP_ Management_1</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Level 2 New/BO/App Manager/APP_ Management_1</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">BO_app_ Management</td></tr>
 </thead><tbody>
@@ -62,43 +62,29 @@
 	<td>*/quote*</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>captureEntirePageScreenshot</td>
 	<td></td>
 	<td></td>
 </tr>
+<!-----------------------------quote page------------------------------------------->
+<tr>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
+	<td></td>
+</tr>
 
 <tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//input[@data-id="${carrierid}"]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
-	<td></td>
+	<td>storeText</td>
+	<td>css=h1.plan-details-header-name</td>
+	<td>planname</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=h1</td>
-	<td>${planname}</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
 </tr>
-<tr>
-	<td>storeText</td>
-	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
-	<td>*${mo}*</td>
-</tr>
+<!-----------------------------detail page------------------------------------------->
 <tr>
 	<td>click</td>
 	<td>id=plan-details-primary-apply</td>
@@ -121,12 +107,13 @@
 </tr>
 <tr>
 	<td>storeEval</td>
-	<td>&quot;${name}&quot;.substr(10)</td>
+	<td>&quot;${name}&quot;.substr(9)</td>
 	<td>LastName</td>
 </tr>
+
 <tr>
 	<td>echo</td>
-	<td>${Lastname}</td>
+	<td>${LastName}</td>
 	<td></td>
 </tr>
 <tr>
@@ -208,6 +195,11 @@
 	<td>${uri}</td>
 </tr>
 <tr>
+	<td>fireEvent</td>
+	<td>id=uri</td>
+	<td>blur</td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=searchButton</td>
 	<td></td>
@@ -258,6 +250,11 @@
 	<td>${FirstName}</td>
 </tr>
 <tr>
+	<td>fireEvent</td>
+	<td>//input[@id='firstName']</td>
+	<td>blur</td>
+</tr>
+<tr>
 	<td>storeEval</td>
 	<td>&quot;${FirstName}*&quot;;</td>
 	<td>FirstName</td>
@@ -293,6 +290,11 @@
 	<td>${LastName}</td>
 </tr>
 <tr>
+	<td>fireEvent</td>
+	<td>//input[@id='lastName']</td>
+	<td>blur</td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=searchButton</td>
 	<td></td>
@@ -322,6 +324,13 @@
 </body>
 </html>
 
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

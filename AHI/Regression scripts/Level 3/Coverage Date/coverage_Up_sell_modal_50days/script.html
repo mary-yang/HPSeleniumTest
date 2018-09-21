@@ -133,53 +133,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
-	<td></td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
-	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;//span[contains(text(),'${provider}')]&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//span[contains(text(),'${provider}')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[1]/div[1]/div/img[@alt="${provider}"]]/div/div[2]/div/h3/a</td>
-	<td>planname</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//*[@id='js-quote-plans-container']/ul[descendant::div/div[1]/div[1]/div/img[@alt="Everest"]]/li[1]/div/div[1]/a[1]/div[1]</td>
-	<td>mo</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Select This Plan')])[2]</td>
+	<td>xpath=//button[@data-id='everest']</td>
 	<td></td>
 </tr>
 <tr>
@@ -349,6 +304,21 @@
 	<td>4111 1111 1111 1111</td>
 </tr>
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;id=credit-card-cvv&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-cvv</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>css=div.col-sm-12.checkbox &gt; label</td>
 	<td></td>
@@ -468,6 +438,8 @@
 </body>
 </html>
 
+	
+	
 	
 	
 	

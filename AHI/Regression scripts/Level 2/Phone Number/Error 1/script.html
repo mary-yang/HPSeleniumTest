@@ -50,12 +50,7 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//input[@data-id="everest"]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Select This Plan')])[2]</td>
+	<td>//button[@data-id="everest"]</td>
 	<td></td>
 </tr>
 <tr>
@@ -134,6 +129,21 @@
 	<td>type</td>
 	<td>id=credit-card-number</td>
 	<td>4111 1111 1111 1111</td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;id=credit-card-cvv&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-cvv</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -224,6 +234,8 @@
 	
 	
 
+	
+	
 	
 	
 	

@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Quote Page/Short_Term_Quote Page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Hins/Regression scripts/Level 2/Quote Page/Short_Term_Quote Page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">Quote Page</td></tr>
 </thead><tbody>
@@ -282,11 +282,27 @@ verify Monthly Premium
 	<td>Short Term Health Insurance: Find a Short Term Plan In Minutes</td>
 	<td></td>
 </tr>
+
+<!-------------------Hins modify ------------------------->
+<tr>
+	<td>click</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>type</td>
-	<td>css=input.js-zip.census-zip-input</td>
+	<td>xpath=/html/body/main/div[1]/div/div/div/form/div[1]/section[1]/div/div/input</td>
 	<td>60002</td>
 </tr>
+<!------------------------------------->
+
 <tr>
 	<td>focus</td>
 	<td>id=dob-0</td>
@@ -311,6 +327,11 @@ verify Monthly Premium
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
 	
 	
 	

@@ -67,66 +67,20 @@ sanity4/24</td>
 </tr>
 <!-----------------------------quote page------------------------------------------->
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
+
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=${carrierid}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
+	<td>storeText</td>
+	<td>css=h1.plan-details-header-name</td>
+	<td>planname</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=ul.quote-all-plans-list.js-plans-list > li.quote-plan-container.js-plan-unit > div.quote-plan > div.quote-plan-body > div.quote-plan-carrier > h3.quote-plan-name > a</td>
-	<td>planname</td>
-</tr>
-
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div</td>
-	<td>General DisclaimersThese Short Term Medical plans do not provide coverage for preexisting conditions nor the mandated coverage necessary to avoid a penalty under the Affordable Care Act.<br />Each state has specific mandates for coverage so your plan may include additional benefits. Please consult your state-specific insurance certificate for more information.<br />Short Term Health Insurance products underwritten by their respective companies. Product prices, benefits and availability may vary by state.</td>
-</tr>
-
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
-	<td></td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
 </tr>
 <!-----------------------------detail page------------------------------------------->
 <tr>
@@ -422,7 +376,21 @@ sanity4/24</td>
 	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
 	<td>CET</td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${CPGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACANOTICE}</td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>link=Terms and Agreements</td>
@@ -468,17 +436,21 @@ sanity4/24</td>
 	<td>//div[@id='disclaimers-container']/div/div/div/p[6]</td>
 	<td>I/We understand that if I/we have elected the Monthly Payment option, my credit card will be charged each month on the due date of the premium for the term of the policy. I/We understand that I/we may terminate the scheduled payments by notifying the insurance company or its authorized agent in writing at least one business day prior to the next scheduled payment date. I/We understand that this coverage is not renewable or extendable. I/We may obtain a complete copy of the Certificate of Insurance upon request. I/We understand that the Company, as underwriter of the plan, is solely liable for the coverage and benefits provided under the insurance. I/We understand and agree that the insurance agent/broker, if any, assisting with this Application is a representative of the Applicant. If coverage is agreed by a representative of the Applicant, the undersigned represents his/her capacity to so act. If coverage is agreed as guardian or proxy of the Applicant, the undersigned represents his/her capacity to so act. By acceptance of coverage and/or submission of any claim for benefits, the Applicant ratifies the authority of the signer to so act and bind the Applicant. If I/we am/are not already a member of the Med-Sense Guaranteed Association, I/we hereby request to be enrolled as a member. I/We will receive a membership packet after my/our membership fees of $19.99 per month are received. If this Enrollment Form is completed electronically, I/we agree that my/our electronic signature serves as my/our original signature. If this Enrollment Form is not completed electronically, I/We agree to provide my/our verbal consent to certify my/our application in lieu of a signature. </td>
 </tr>
-
-
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div[3]/div</td>
-	<td>${AHIGTA}</td>
+	<td>${ACANOTICE_TA}</td>
 </tr>
 
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div[4]/div</td>
+	<td>${AHIGTA}</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[5]/div</td>
 	<td>${AHIPayment}</td>
 </tr>
 
@@ -521,6 +493,10 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
+	
 	
 	
 	
