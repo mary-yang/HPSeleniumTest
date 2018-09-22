@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM New/uhcgen5</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM 10-1/upFront Payment</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -13,14 +13,15 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Quote &amp; Save Today</td>
+	<td>link=Quote & Save Today</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>3000</td>
+	<td>4000</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>waitForText</td>
 	<td>css=h1.census-main-heading</td>
@@ -44,7 +45,7 @@ sanity4/24</td>
 <tr>
 	<td>sendKeys</td>
 	<td>id=dob-0</td>
-	<td>01/01/1975</td>
+	<td>01/01/1985</td>
 </tr>
 <tr>
 	<td>fireEvent</td>
@@ -52,64 +53,47 @@ sanity4/24</td>
 	<td>blur</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>xpath=.//*[@id='js-see-plans']</td>
-	<td></td>
-</tr>
-<!-------------------------------
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyLocation</td>
-	<td>*/quote*</td>
+	<td>click</td>
+	<td>//div[@id='census-payment-section']/div/div/div[2]/label</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>3000</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=c-end</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@id='ui-datepicker-div']/div/a[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=1</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//input[@data-id=&quot;${carrierid}&quot;]</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
-	<td>planname</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${planname}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//li[contains(@data-planid, '${carrierid}')]/div/div/div/div</td>
-	<td>mo</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
-	<td></td>
-</tr>
---------------------->
-<!--------------------- Quote page----------------------------->
+<!--------------------Quote Page--------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
-<!--------------------- Detail page----------------------------->
+<!--------------------Plan Detail  Page--------------------->
 <tr>
 	<td>storeText</td>
 	<td>css=h1.plan-details-header-name</td>
@@ -130,18 +114,11 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
-<!--------------------- App page----------------------------->
 <tr>
 	<td>include</td>
-	<td>AHI/Include/Name</td>
+	<td>AHI/Include/Go to end_one time</td>
 	<td></td>
 </tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/go to end_gen5</td>
-	<td></td>
-</tr>
-
 <tr>
 	<td>include</td>
 	<td>AHI/Include/BO App Search</td>
@@ -150,16 +127,25 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
-	<td>Carrier *</td>
+	<td>Successfully Enrolled</td>
 </tr>
-
 	
 	
 	
 	
 	
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
