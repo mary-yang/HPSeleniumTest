@@ -7,50 +7,37 @@ sanity4/24</td>
 	</thead>
 	<tbody>
 <tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
     <td>IF</td>
-    <td>verifyElementPresent(&quot;id=applyButton&quot;)</td>
+    <td>verifyElementPresent(&quot;xpath=//label[@id='js-see-plans']&quot;)</td>
     <td></td>
 </tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=applyButton</td>
-	<td></td>
-</tr>
-<tr>
-    <td>ELSE</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>click</td>
-	<td>id=js-see-plans</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=js-see-plans-latch</td>
+	<td>xpath=//label[@id='js-see-plans']</td>
 	<td></td>
 </tr>
 
 <tr>
-	<td>verifyText</td>
-	<td>//div[@id='js-sidebar']/div/table/tbody/tr[2]/td[2]</td>
-	<td>${mo}</td>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--------------------Apply  Page--------------------->
+<tr>
+	<td>storeEval</td>
+	<td>'${mo}'.match(/\d+.\d+/)</td>
+	<td>mo</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=span.emphasize</td>
-	<td${planname}</td>
+	<td>//div[@id='js-sidebar']/div/table/tbody/tr[2]/td[2]</td>
+	<td>$${mo}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.c-addon__heading</td>
+	<td>extendedInfo</td>
 </tr>
 
 <tr>
@@ -59,32 +46,37 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='js-sidebar']/div/table/tbody/tr[6]/td[2]/span</td>
-	<td>mo</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//body[@id='apply']/main/div/div[2]/div/div/ul/li/div/div/div[3]/div/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=div.c-addon__heading</td>
-	<td>extendInfo</td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
 	<td>css=span.js-apply-text.apply-button-text</td>
 	<td></td>
 </tr>
 
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${mo}'.match(/\d+.\d+/)</td>
+	<td>mo1</td>
+</tr>
+<!--
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='apply']/div[3]/div[2]/div[1]/div[1]/div/div[1]/table/tbody/tr[2]/td/a/span</td>
+	<td>${planname}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id='apply']//tr[descendant::td[1][contains(text(),'Base Premium')]]/td[2]</td>
+	<td>$${mo1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
 <tr>
     <td>ENDIF</td>
     <td></td>
@@ -96,6 +88,7 @@ sanity4/24</td>
 
 	</tbody>
 </table>	
+	
 	
 	
 	
