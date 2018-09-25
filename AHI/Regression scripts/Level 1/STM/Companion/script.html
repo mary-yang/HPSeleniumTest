@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM New/Companion</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM 10-1/Companion</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -61,12 +61,23 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
+<!--------------------Quote Page--------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
-
+<!--------------------Plan Detail  Page--------------------->
+<tr>
+	<td>storeText</td>
+	<td>css=h1.plan-details-header-name</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>id=plan-details-primary-apply</td>
@@ -77,28 +88,13 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
-
-
+<!--------------------Apply Page--------------------->
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>include</td>
+	<td>AHI/Include/STM Apply</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyLocation</td>
-	<td>*apply*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=applyButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
+<!--------------------App Pages--------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Name</td>
@@ -148,6 +144,11 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>click</td>
+	<td>//li[@id='js-question-P0-2']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>//li[@id='js-question-P0-3']/div/button</td>
 	<td></td>
 </tr>
@@ -161,16 +162,7 @@ sanity4/24</td>
 	<td>//li[@id='js-question-P0-5']/div/button</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-2']/ul/li[4]/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
@@ -346,6 +338,11 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
+	
+	
 	
 	
 	

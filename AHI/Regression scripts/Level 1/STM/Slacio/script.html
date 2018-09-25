@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM New/Slacio</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM 10-1/Slacio</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
@@ -84,56 +84,13 @@
 	<td>2000</td>
 	<td></td>
 </tr>
-<!--------------------- App page----------------------------->
+<!--------------------Apply Page--------------------->
 <tr>
-	<td>storeEval</td>
-	<td>'${mo}'.match(/\d+.\d+/)</td>
-	<td>mo1</td>
-</tr>
-<!--
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='apply']/div[3]/div[2]/div[1]/div[1]/div/div[1]/table/tbody/tr[2]/td/a/span</td>
-	<td>${planname}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='apply']//tr[descendant::td[1][contains(text(),'Base Premium')]]/td[2]</td>
-	<td>$${mo1}</td>
-</tr>
--->
-<tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>include</td>
+	<td>AHI/Include/STM Apply</td>
 	<td></td>
 </tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=applyButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<!------------------------------------------->
-<tr>
-	<td>selectWindow</td>
-	<td>_blank</td>
-	<td></td>
-</tr>
-<tr>
-	<td>close</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>selectWindow</td>
-	<td>null</td>
-	<td></td>
-</tr>
-<!------------------------------------------->
+<!--------------------App Pages--------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Name</td>
@@ -404,6 +361,8 @@
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
 	<td>Successfully Enrolled</td>
 </tr>
+	
+	
 	
 	
 	

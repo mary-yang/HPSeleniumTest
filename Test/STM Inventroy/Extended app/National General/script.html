@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Inventory Check/Inventory (app)/Short_Term/Everest</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM Inventroy/Extended app/National General</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -11,11 +11,7 @@ sanity4/24</td>
 	<td>${ENV}/term-health-insurance/apply/${planid}?census[location][zip]=${zipcode}&census[oneTimePaymentSelected]=false&census[member][0][dob]=02/01/1985&census[member][0][gender]=F&census[member][0][role]=P&census[member][1][dob]=07/01/1988&census[member][1][gender]=M&census[member][1][role]=S</td>
 	<td></td>
 </tr>
-<tr>
-	 <td>captureEntirePageScreenshot</td>
-	<td></td>
-	<td></td>
-</tr>
+
 <tr>
 	 <td>storeText</td>
 	<td>xpath=//body[@id='apply']/main/div/div[2]/div/div/div[3]/div/div[5]/div[2]</td>
@@ -42,10 +38,16 @@ sanity4/24</td>
 	<td>extendedInfo</td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>css=button.js-add-extended.c-addon__add-button</td>
+	<td></td>
+</tr>
+<tr>
 	<td>ENDIF</td>
 	<td></td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>click</td>
 	<td>css=span.js-apply-text.apply-button-text</td>
