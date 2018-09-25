@@ -28,22 +28,27 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>IF</td>
+	<td>verifyElementPresent(xpath=//li[@id='js-group-${productId}']/div/div/div[3]/form/div[2]/div[2]/button)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[@id='js-group-${productId}']/div/div/div[3]/form/div[2]/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
 	<td>verifyElementPresent(xpath=//li[@id='js-group-${productId}']/div/div/div[2]/form/div[2]/div[2]/button)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>//li[@id='js-group-${productId}']/div/div/div[2]/form/div[2]/div[2]/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ELSE</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//li[@id='js-group-${productId}']/div/div/div[3]/form/div[2]/div[2]/button</td>
 	<td></td>
 </tr>
 
@@ -64,6 +69,8 @@ sanity4/24</td>
 
 	</tbody>
 </table>	
+	
+	
 	
 	
 	

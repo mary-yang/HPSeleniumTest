@@ -11,14 +11,40 @@ sanity4/24</td>
 	<td>${ENV}/term-health-insurance/apply/${planid}?census[location][zip]=${zipcode}&census[oneTimePaymentSelected]=false&census[member][0][dob]=02/01/1985&census[member][0][gender]=F&census[member][0][role]=P&census[member][1][dob]=07/01/1988&census[member][1][gender]=M&census[member][1][role]=S</td>
 	<td></td>
 </tr>
+
+<tr>
+	 <td>storeText</td>
+	<td>xpath=//body[@id='apply']/main/div/div[2]/div/div/div[3]/div/div[5]/div[2]</td>
+	<td>duration</td>
+</tr>
+<tr>
+	 <td>storeText</td>
+	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr[2]/td[2]</td>
+	<td>premium</td>
+</tr>
+<tr>
+	 <td>storeText</td>
+	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr/td</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=div.c-addon__heading')</td>
+	<td></td>
+</tr>
 <tr>
 	<td>storeText</td>
 	<td>css=div.c-addon__heading</td>
 	<td>extendedInfo</td>
 </tr>
 <tr>
-	 <td>include</td>
-	<td>AHI/Include/STM Apply</td>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.js-apply-text.apply-button-text</td>
 	<td></td>
 </tr>
 <tr>
@@ -26,28 +52,31 @@ sanity4/24</td>
 	<td>AHI/Include/Name</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Go to end</td>
 	<td></td>
 </tr>
-<tr>
-	 <td>storeText</td>
-	<td>//div[@id='js-app-confirmation']/div/div/div[2]/p[2]/span[2]</td>
-	<td>price</td>
-</tr>
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/BO App Search</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
+	<td>storeText</td>
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
-	<td>Successfully Enrolled</td>
+	<td>status</td>
 </tr>
 	</tbody>
 </table>
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
