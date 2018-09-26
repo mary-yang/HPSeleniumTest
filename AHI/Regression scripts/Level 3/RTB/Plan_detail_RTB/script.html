@@ -17,10 +17,22 @@
 	<td>3000</td>
 	<td></td>
 </tr>
+<!-----------------------------quote page------------------------------------------->
 <tr>
-	<td>clickAndWait</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${provider}')]]/div/div[2]/div/h3/a[2]</td>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
+</tr>
+
+<tr>
+	<td>storeText</td>
+	<td>css=h1.plan-details-header-name</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -132,6 +144,7 @@
 </html>
 
 
+	
 	
 	
 	

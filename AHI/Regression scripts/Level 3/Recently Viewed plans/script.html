@@ -48,71 +48,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
-	<td></td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
-	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//input[@data-id="nationalgeneral"]</td>
-	<td></td>
-</tr>
-
-
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//a[contains(text(),'National General 5000/50/8750/250000')]</td>
+	<td>//*[@id='js-group-national-general-short-term-medical']/descendant::*[contains(text(),'See Plan Details')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>css=a.recently-viewed-plan-name</td>
-	<td>National General 5000/50/8750/250000</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=« Back to Short-Term Health Insurance Plans</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-    <td>click</td>
-    <td>//input[@data-id="nationalgeneral"]</td>
-    <td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Everest 5000/20/9000/250000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=a.recently-viewed-plan-name</td>
-	<td>Everest 5000/20/9000/250000</td>
+	<td>National General *</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -126,13 +69,33 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Everest 5000/20/8000/250000</td>
+	<td>//*[@id='js-group-everest-stm']/descendant::*[contains(text(),'See Plan Details')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.recently-viewed-plan-name</td>
+	<td>Everest *</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=« Back to Short-Term Health Insurance Plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//*[@id='js-group-everest-prime-stm']/descendant::*[contains(text(),'See Plan Details')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[2]/div[2]/a</td>
-	<td>Everest 5000/20/8000/250000</td>
+	<td>Everest Prime *</td>
 </tr>
 </tbody></table>
 </body>
@@ -157,6 +120,7 @@
 	
 	
 
+	
 	
 	
 	
