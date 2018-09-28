@@ -80,7 +80,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>writeSeleniumScript</td>
-	<td>for(i=1;i<=${productNum};i++){writeSelenium("storeText","xpath=//ul[@class='l-plans-list js-plans-list']/li["+i+"]/descendant::*[@class='c-product-unit__name']","product"+i+"");writeSelenium("echo","${product"+i+"}");writeSelenium("storeText","xpath=//ul[@class='l-plans-list js-plans-list']/li["+i+"]/descendant::*[@class='c-ribbon__content']","dur");writeSelenium("click","xpath=//ul[@class='l-plans-list js-plans-list']/li["+i+"]/descendant::*[@class='js-select-button quote-plan-buy']");writeSelenium("pause","2000");writeSelenium("IF","verifyElementPresent('xpath=//label[@id="js-see-plans"]')");writeSelenium("clickAndWait","xpath=//label[@id='js-see-plans']");writeSelenium("ENDIF");writeSelenium("storeText","xpath=//div[@class='c-apply-summary__info-table']/div/div[5]/div[2]","duration");writeSelenium("store","${product"+i+"} ${dur}, duration: ${duration}","product"+i+"");writeSelenium("IF","verifyElementPresent('css=div.c-addon__heading')");writeSelenium("storeText","css=div.c-addon__heading","extendedInfo");writeSelenium("store","${product"+i+"} extendedInfo: ${extendedInfo}","product"+i+"");writeSelenium("ENDIF");writeSelenium("echo","${product"+i+"}");writeSelenium("clickAndWait","xpath=//a[@id='js-apply-continue-shopping-link']")}</td>
+	<td>for(i=1;i<=${productNum};i++){writeSelenium("storeText","xpath=//ul[@class='l-plans-list js-plans-list']/li["+i+"]/descendant::*[@class='c-product-unit__name']","product"+i+"");writeSelenium("echo","${product"+i+"}");writeSelenium("storeXpathCount","xpath=//ul[@class='l-plans-list js-plans-list']/li["+i+"]/descendant::*[@class='c-ribbon__content']","conNum");writeSelenium("IF","${conNum}>0");writeSelenium("storeText","xpath=//ul[@class='l-plans-list js-plans-list']/li["+i+"]/descendant::*[@class='c-ribbon__content']","dur");writeSelenium("store","${product"+i+"}, ${dur}","product"+i+"");writeSelenium("ENDIF");writeSelenium("click","xpath=//ul[@class='l-plans-list js-plans-list']/li["+i+"]/descendant::*[@class='js-select-button quote-plan-buy']");writeSelenium("pause","2000");writeSelenium("storeXpathCount","xpath=//label[@id='js-see-plans']","conNum");writeSelenium("IF","${conNum}>0");writeSelenium("clickAndWait","xpath=//label[@id='js-see-plans']");writeSelenium("ENDIF");writeSelenium("storeText","xpath=//div[@class='c-apply-summary__info-table']/div/div[5]/div[2]","duration");writeSelenium("store","${product"+i+"}, Duration: ${duration}","product"+i+"");writeSelenium("storeXpathCount","xpath=//div[@class='c-addon__heading']","conNum");writeSelenium("IF","${conNum}>0");writeSelenium("storeText","css=div.c-addon__heading","extendedInfo");writeSelenium("store","${product"+i+"}, Extended: ${extendedInfo}","product"+i+"");writeSelenium("ENDIF");writeSelenium("echo","${product"+i+"}");writeSelenium("clickAndWait","xpath=//a[@id='js-apply-continue-shopping-link']")}</td>
 	<td></td>
 </tr>
 </tbody></table>
@@ -121,6 +121,16 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
