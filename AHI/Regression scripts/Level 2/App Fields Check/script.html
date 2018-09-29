@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Level 2 New/App Fields Check</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/App Fields Check</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
@@ -39,11 +39,7 @@
 	<td>To compare your term health plan options, please enter a date of birth between 2 and 64 years. If you are 65 years of age or older please call 855-382-4440 to speak with a licensed medicare agent who can assist you in choosing a medicare plan.</td>
 </tr>
 
-<tr>
-	<td>store</td>
-	<td>20015</td>
-	<td>zip</td>
-</tr>
+
 <tr>
 	<td>store</td>
 	<td>DOB</td>
@@ -181,54 +177,48 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>10000</td>
+	<td>3000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyLocation</td>
-	<td>*/quote*</td>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
+</tr>
+
+<tr>
+	<td>storeText</td>
+	<td>css=h1.plan-details-header-name</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=.//*[contains(text(),'Select Plan')]</td>
+	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>10000</td>
+	<td>2000</td>
 	<td></td>
 </tr>
+<!--------------------Apply Page--------------------->
 <tr>
-	<td>verifyLocation</td>
-	<td>*apply*</td>
+	<td>include</td>
+	<td>AHI/Include/STM Apply</td>
 	<td></td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>4000</td>
-	<td></td>
-</tr>
+<!--------------------App Pages--------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Name</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>id=applyButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>4000</td>
-	<td></td>
-</tr>
-<tr>
-	<td></td>
-	<td></td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>click</td>
 	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[1]/div/button[2]</td>
@@ -491,16 +481,7 @@
 	<td>AHI/Include/Use Bank Draft</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='eft-authorization']/div/div/div/label</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
+
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
 <tr>
 	<td>IF</td>
@@ -547,6 +528,11 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
 	
 	
 	
