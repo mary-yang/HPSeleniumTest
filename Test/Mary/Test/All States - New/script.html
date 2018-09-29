@@ -1,0 +1,170 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/Test/All States - New</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote &amp; Save Today</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1975</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h1.quote-heading.quote-heading--large</td>
+	<td>planCount</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//ul[@class='l-plans-list js-plans-list']/li</td>
+	<td>productNum</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${productNum}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<=${productNum};i++){writeSelenium("storeText","xpath=//ul[@class='l-plans-list js-plans-list']/li["+i+"]/descendant::*[@class='c-product-unit__name']","product"+i+"");writeSelenium("echo","${product"+i+"}");writeSelenium("storeXpathCount","xpath=//ul[@class='l-plans-list js-plans-list']/li["+i+"]/descendant::*[@class='c-ribbon__content']","conNum");writeSelenium("IF","${conNum}>0");writeSelenium("storeText","xpath=//ul[@class='l-plans-list js-plans-list']/li["+i+"]/descendant::*[@class='c-ribbon__content']","dur");writeSelenium("store","${product"+i+"}, ${dur}","product"+i+"");writeSelenium("ENDIF");writeSelenium("click","xpath=//ul[@class='l-plans-list js-plans-list']/li["+i+"]/descendant::*[@class='js-select-button quote-plan-buy']");writeSelenium("pause","2000");writeSelenium("storeXpathCount","xpath=//label[@id='js-see-plans']","conNum");writeSelenium("IF","${conNum}>0");writeSelenium("clickAndWait","xpath=//label[@id='js-see-plans']");writeSelenium("ENDIF");writeSelenium("storeText","xpath=//div[@class='c-apply-summary__info-table']/div/div[5]/div[2]","duration");writeSelenium("store","${product"+i+"}, Duration: ${duration}","product"+i+"");writeSelenium("storeXpathCount","xpath=//div[@class='c-addon__heading']","conNum");writeSelenium("IF","${conNum}>0");writeSelenium("storeText","css=div.c-addon__heading","extendedInfo");writeSelenium("store","${product"+i+"}, Extended: ${extendedInfo}","product"+i+"");writeSelenium("ENDIF");writeSelenium("echo","${product"+i+"}");writeSelenium("clickAndWait","xpath=//a[@id='js-apply-continue-shopping-link']")}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

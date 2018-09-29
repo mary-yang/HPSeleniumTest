@@ -12,6 +12,58 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	 <td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	 <td>storeText</td>
+	<td>xpath=//body[@id='apply']/main/div/div[2]/div/div/div[3]/div/div[5]/div[2]</td>
+	<td>duration</td>
+</tr>
+<tr>
+	 <td>storeText</td>
+	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr[2]/td[2]</td>
+	<td>premium</td>
+</tr>
+<tr>
+	 <td>storeText</td>
+	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr/td</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=div.c-addon__heading')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.c-addon__heading</td>
+	<td>extendedInfo</td>
+</tr>
+<!---------------extended option------------------>
+<tr>
+	<td>click</td>
+	<td>//button[@class='js-add-extended c-addon__add-button']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!---------------extended option------------------>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.js-apply-text.apply-button-text</td>
+	<td></td>
+</tr>
+<tr>
 	 <td>include</td>
 	<td>AHI/Include/Name</td>
 	<td></td>
@@ -21,23 +73,29 @@ sanity4/24</td>
 	<td>AHI/Include/Go to end</td>
 	<td></td>
 </tr>
-<tr>
-	 <td>storeText</td>
-	<td>//*[@id="js-app-confirmation"]/div/div/ul/li[1]/div/div/p[2]/span[1]</td>
-	<td>price</td>
-</tr>
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/BO App Search</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
+	<td>storeText</td>
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
-	<td>Successfully Enrolled</td>
+	<td>status</td>
 </tr>
 	</tbody>
 </table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
