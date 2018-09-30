@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 1/STM/upFront Payment</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM 10-1/upFront Payment</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -89,38 +89,8 @@ sanity4/24</td>
 </tr>
 <!--------------------Quote Page--------------------->
 <tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h1.quote-heading.quote-heading--large</td>
-	<td>*Short Term Health insurance products*</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(xpath=//li[@id='js-group-${productId}']/div/div/div[2]/form/div[2]/div[2]/button)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//li[@id='js-group-${productId}']/div/div/div[2]/form/div[2]/div[2]/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
 <!--------------------Plan Detail  Page--------------------->
@@ -166,7 +136,6 @@ sanity4/24</td>
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
 	<td>Successfully Enrolled</td>
 </tr>
-	
 	
 	
 	
