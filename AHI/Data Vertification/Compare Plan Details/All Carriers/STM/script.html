@@ -60,6 +60,11 @@
 	<td>BenefitCoverage</td>
 </tr>
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//section[@id='js-plan-expenses']/div/div&quot;)</td>
+	<td></td>
+</tr>
+<tr>
 	<td>storeText</td>
 	<td>//section[@id='js-plan-expenses']/div/div</td>
 	<td>CoveredExpenses</td>
@@ -68,6 +73,11 @@
 	<td>storeText</td>
 	<td>//section[@id='js-plan-limitations']/div/</td>
 	<td>LimitationsExclusions</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
@@ -141,6 +151,11 @@
 	<td>${BenefitCoverage}</td>
 </tr>
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=//section[@id='js-plan-expenses']/div/div&quot;)</td>
+	<td></td>
+</tr>
+<tr>
 	<td>verifyText</td>
 	<td>//section[@id='js-plan-expenses']/div/div</td>
 	<td>${CoveredExpenses}</td>
@@ -149,6 +164,11 @@
 	<td>verifyText</td>
 	<td>//section[@id='js-plan-limitations']/div/</td>
 	<td>${LimitationsExclusions}</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -180,6 +200,8 @@
 </tbody></table>
 </body>
 </html>
+	
+	
 	
 	
 	
