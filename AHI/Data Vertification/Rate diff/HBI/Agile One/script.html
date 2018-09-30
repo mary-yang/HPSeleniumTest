@@ -12,7 +12,7 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 </tr>
 <tr>
     <td>IF</td>
-    <td>verifyElementPresent(&quot;//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div/h3/a[contains(text(),'${Plan_name}')]]/div/div/div[2]/div&quot;)</td>
+    <td>verifyElementPresent(&quot;//li[descendant::div/label/div/div/div/a[contains(text(),'${Plan_name}')]]/div/label/div/div/div[5]/a&quot;)</td>
     <td></td>
 </tr>
 <tr>
@@ -22,7 +22,7 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div/h3/a[contains(text(),'${Plan_name}')]]/div/div/div[2]/div</td>
+	<td>//li[descendant::div/label/div/div/div/a[contains(text(),'${Plan_name}')]]/div/label/div/div/div[5]/a</td>
 	<td>quote_QA_rate</td>
 </tr>
 <tr>
@@ -73,7 +73,7 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 </tr>
 <tr>
     <td>IF</td>
-    <td>verifyElementPresent(&quot;//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div/h3/a[contains(text(),'${Plan_name}')]]/div/div/div[2]/div&quot;)</td>
+    <td>verifyElementPresent(&quot;//li[descendant::div/label/div/div/div/a[contains(text(),'${Plan_name}')]]/div/label/div/div/div[5]/a&quot;)</td>
     <td></td>
 </tr>
 <tr>
@@ -83,7 +83,7 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div/h3/a[contains(text(),'${Plan_name}')]]/div/div/div[2]/div</td>
+	<td>//li[descendant::div/label/div/div/div/a[contains(text(),'${Plan_name}')]]/div/label/div/div/div[5]/a</td>
 	<td>quote_testprod_rate</td>
 </tr>
 <tr>
@@ -95,7 +95,7 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='js-quote-plans-container']/ul[2]/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div/a/div</td>
+	<td>//li[descendant::div/label/div/div/div/a[contains(text(),'${Plan_name}')]]/div/label/div/div/div[5]/a</td>
 	<td>quote_testprod_rate</td>
 </tr>
 <tr>
@@ -132,27 +132,3 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 </tbody></table>
 </body>
 </html>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
