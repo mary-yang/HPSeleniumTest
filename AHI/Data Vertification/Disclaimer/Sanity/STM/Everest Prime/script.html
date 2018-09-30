@@ -111,6 +111,11 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
 	<td>verifyText</td>
 	<td>css=div.disclaimer-text.</td>
 	<td>${GeneralDisclaimers}</td>
@@ -166,6 +171,7 @@ sanity4/24</td>
 	<td>AHI/Include/Get URI</td>
 	<td></td>
 </tr>
+<!--------------------------------------------------------------------------------------
 <tr>
 	<td>storeText</td>
 	<td>//p/span</td>
@@ -219,8 +225,34 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
-
-
+----------------------------------------------------------------------------------------->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//li[contains(@id,'js-question-')]</td>
+	<td>num</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${num}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<=${Num};i++){
+    writeSelenium("click","xpath=//li[contains(@id,'js-question-')]["+i+"]/div/button");
+}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
 
 <!-----------------------------apply page------------------------------------------->
 
@@ -448,6 +480,9 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
 	
 	
 	

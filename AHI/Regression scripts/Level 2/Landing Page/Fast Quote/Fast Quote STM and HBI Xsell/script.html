@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Level 2 New/Landing Page/Fast Quote/Fast Quote STM and HBI Xsell</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Landing Page/Fast Quote/Fast Quote STM and HBI Xsell</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">b</td></tr>
 </thead><tbody>
@@ -180,27 +180,7 @@
 	<td>css=h1</td>
 	<td>* plans found*</td>
 </tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//button[contains(text(),'See Plan Details')]</td>
-	<td></td>
-</tr>
 
-<tr>
-	<td>clickAndWait</td>
-	<td>id=plan-details-primary-apply</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='apply']//table/tbody/tr[descendant::td[1][contains(text(),'Primary Applicant')]]/td[2]</td>
-	<td>${DOB1}*</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='apply']//table/tbody/tr[descendant::td[1][contains(text(),'Location')]]/td[2]</td>
-	<td>${zip}*</td>
-</tr>
 <tr>
 	<td>storeEval</td>
 	<td>var d = new Date(); d.getHours() +':'+ d.getMinutes() +':'+ d.getSeconds();</td>
@@ -225,6 +205,7 @@
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	
