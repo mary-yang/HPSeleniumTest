@@ -171,64 +171,10 @@ sanity4/24</td>
 	<td>AHI/Include/Get URI</td>
 	<td></td>
 </tr>
-<!--------------------------------------------------------------------------------------
-<tr>
-	<td>storeText</td>
-	<td>//p/span</td>
-	<td>Num</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${Num}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>var d;parseFloat('${Num}'.match(/\s+\d+/));</td>
-	<td>Num</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${Num}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>0</td>
-	<td>time</td>
-</tr>
-<tr>
-	<td>writeSeleniumScript</td>
-	<td>for(i=1;i<=${Num};i++){
-    writeSelenium("include","AHI/Include/clickUnderwriting");
-}</td>
-	<td></td>
-</tr>
 
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
------------------------------------------------------------------------------------------>
-<tr>
 	<td>storeXpathCount</td>
-	<td>//li[contains(@id,'js-question-')]</td>
+	<td>xpath=//li[contains(@id,'js-question-')]</td>
 	<td>num</td>
 </tr>
 <tr>
@@ -238,7 +184,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>writeSeleniumScript</td>
-	<td>for(i=1;i<=${Num};i++){
+	<td>for(i=1;i<=${num};i++){
     writeSelenium("click","xpath=//li[contains(@id,'js-question-')]["+i+"]/div/button");
 }</td>
 	<td></td>
@@ -480,6 +426,9 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
 	
 	
 	
