@@ -67,21 +67,21 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
-
+<!--------------------Quote Page--------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
-
+<!--------------------Plan Detail  Page--------------------->
 <tr>
 	<td>storeText</td>
-	<td>css=h1</td>
+	<td>css=h1.plan-details-header-name</td>
 	<td>planname</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//section[@id='js-plan-summary']/div/div[3]/div/div/div/div[2]/a</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
 	<td>mo</td>
 </tr>
 <tr>
@@ -94,38 +94,14 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>storeEval</td>
-	<td>'${mo}'.match(/\d+.\d+/)</td>
-	<td>mo1</td>
-</tr>
 
+<!--------------------Apply Page--------------------->
 <tr>
-	<td>verifyText</td>
-	<td>css=span.emphasize</td>
-        <td>${planname}</td>
-</tr>
-
-<tr>
-	<td>verifyText</td>
-	<td>//tr[4]/td[2]</td>
-	<td>$${mo1}</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>include</td>
+	<td>AHI/Include/STM Apply</td>
 	<td></td>
 </tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=applyButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
+<!--------------------App Pages--------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Underwriting</td>
@@ -379,6 +355,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	

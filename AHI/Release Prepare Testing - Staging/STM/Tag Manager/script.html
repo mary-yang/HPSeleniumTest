@@ -93,19 +93,23 @@
 	<td>2000</td>
 	<td></td>
 </tr>
-<!------------------- quote page----------------------------->
+<!--------------------Quote Page--------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
-<!------------------- detail page----------------------------->
+<!--------------------Plan Detail  Page--------------------->
 <tr>
 	<td>storeText</td>
-	<td>css=h1</td>
+	<td>css=h1.plan-details-header-name</td>
 	<td>planname</td>
 </tr>
-
+<tr>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>id=plan-details-primary-apply</td>
@@ -117,17 +121,13 @@
 	<td></td>
 </tr>
 
+<!--------------------Apply Page--------------------->
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>include</td>
+	<td>AHI/Include/STM Apply</td>
 	<td></td>
 </tr>
-
-<tr>
-	<td>clickAndWait</td>
-	<td>id=applyButton</td>
-	<td></td>
-</tr>
+<!--------------------App Pages--------------------->
 
 <tr>
 	<td>include</td>
@@ -357,6 +357,7 @@
 </tbody></table>
 </body>
 </html>	
+	
 	
 	
 	
