@@ -62,21 +62,21 @@
 	<td>2000</td>
 	<td></td>
 </tr>
-<!------------------- quote page----------------------------->
+<!--------------------Quote Page--------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
-<!------------------- detail page----------------------------->
+<!--------------------Plan Detail  Page--------------------->
 <tr>
 	<td>storeText</td>
-	<td>css=h1</td>
+	<td>css=h1.plan-details-header-name</td>
 	<td>planname</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//section[@id='js-plan-summary']/div/div[3]/div/div/div/div[2]/a</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
 	<td>mo</td>
 </tr>
 <tr>
@@ -89,37 +89,15 @@
 	<td>2000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>storeEval</td>
-	<td>'${mo}'.match(/\d+.\d+/)</td>
-	<td>mo1</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=span.emphasize</td>
-        <td>${planname}</td>
-</tr>
 
+<!--------------------Apply Page--------------------->
 <tr>
-	<td>verifyText</td>
-	<td>//tr[4]/td[2]</td>
-	<td>$${mo1}</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>include</td>
+	<td>AHI/Include/STM Apply</td>
 	<td></td>
 </tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=applyButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
+<!--------------------App Pages--------------------->
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Underwriting</td>
@@ -267,31 +245,7 @@
 	<td>2000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(id=js-extended-coverage)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=js-extended-coverage</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ELSE</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=//div[@id='js-application-payment']//div/button[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
+
 <!----------先填Bank Draft,用于验证有Bank Draft选项---------------------->
 <tr>
 	<td>type</td>
@@ -340,52 +294,10 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>10000</td>
+	<td>2000</td>
 	<td></td>
 </tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<!----------Edit Payment 改填CreditCard选项---------------------->
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Edit')])[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Use Credit Card</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=consent-checkbox-0</td>
@@ -408,36 +320,10 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>10000</td>
+	<td>6000</td>
 	<td></td>
 </tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------------------->
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 2---------end------------->
-<tr>
-	<td>pause</td>
-	<td>10000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>10000</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Congratulation</td>
@@ -447,6 +333,9 @@
 </body>
 </html>
 
+	
+	
+	
 	
 	
 	
