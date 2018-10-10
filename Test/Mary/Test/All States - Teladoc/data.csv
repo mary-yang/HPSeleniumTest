@@ -1,0 +1,52 @@
+state,state1,zipcode,product,teladoc,teladocOption
+Alabama,AL,35215,lifeshield,${teladoc},${teladocOption}
+##Alaska,AK,99504,lifeshield,${teladoc},${teladocOption}
+Arkansas,AR,72209,lifeshield,${teladoc},${teladocOption}
+Arizona,AZ,85364,lifeshield,${teladoc},${teladocOption}
+##California,CA,90011,lifeshield,${teladoc},${teladocOption}
+Colorado,CO,80219,lifeshield,${teladoc},${teladocOption}
+Connecticut,CT,6606,lifeshield,${teladoc},${teladocOption}
+Delaware,DE,19805,lifeshield,${teladoc},${teladocOption}
+District Of Columbia,DC,20015,lifeshield,${teladoc},${teladocOption}
+Florida,FL,33186,lifeshield,${teladoc},${teladocOption}
+Georgia,GA,30044,lifeshield,${teladoc},${teladocOption}
+Hawaii,HI,96818,lifeshield,${teladoc},${teladocOption}
+Iowa,IA,50317,lifeshield,${teladoc},${teladocOption}
+Idaho,ID,83709,lifeshield,${teladoc},${teladocOption}
+Illinois,IL,60629,lifeshield,${teladoc},${teladocOption}
+Indiana,IN,46227,lifeshield,${teladoc},${teladocOption}
+Kansas,KS,66062,lifeshield,${teladoc},${teladocOption}
+Kentucky,KY,40214,lifeshield,${teladoc},${teladocOption}
+Louisiana,LA,70816,lifeshield,${teladoc},${teladocOption}
+##Massachusetts,MA,2128,lifeshield,${teladoc},${teladocOption}
+Maryland,MD,21215,lifeshield,${teladoc},${teladocOption}
+Maine,ME,4401,lifeshield,${teladoc},${teladocOption}
+Michigan,MI,48228,lifeshield,${teladoc},${teladocOption}
+Minnesota,MN,55106,lifeshield,${teladoc},${teladocOption}
+Missouri,MO,63129,lifeshield,${teladoc},${teladocOption}
+Mississippi,MS,39503,lifeshield,${teladoc},${teladocOption}
+Montana,MT,59102,lifeshield,${teladoc},${teladocOption}
+North Carolina,NC,28269,lifeshield,${teladoc},${teladocOption}
+North Dakota,ND,58103,lifeshield,${teladoc},${teladocOption}
+Nebraska,NE,68104,lifeshield,${teladoc},${teladocOption}
+New Hampshire,NH,3103,lifeshield,${teladoc},${teladocOption}
+##New Jersey,NJ,8701,lifeshield,${teladoc},${teladocOption}
+New Mexico,NM,87121,lifeshield,${teladoc},${teladocOption}
+Nevada,NV,89110,lifeshield,${teladoc},${teladocOption}
+##New York,NY,11226,lifeshield,${teladoc},${teladocOption}
+Ohio,OH,43228,lifeshield,${teladoc},${teladocOption}
+Oklahoma,OK,73160,lifeshield,${teladoc},${teladocOption}
+Oregon,OR,97229,lifeshield,${teladoc},${teladocOption}
+Pennsylvania,PA,19120,lifeshield,${teladoc},${teladocOption}
+##Rhode Island,RI,2909,lifeshield,${teladoc},${teladocOption}
+South Carolina,SC,29223,lifeshield,${teladoc},${teladocOption}
+South Dakota,SD,57106,lifeshield,${teladoc},${teladocOption}
+Tennessee,TN,37013,lifeshield,${teladoc},${teladocOption}
+Texas,TX,79936,lifeshield,${teladoc},${teladocOption}
+Utah,UT,84120,lifeshield,${teladoc},${teladocOption}
+Virginia,VA,23464,lifeshield,${teladoc},${teladocOption}
+##Vermont,VT,5401,lifeshield,${teladoc},${teladocOption}
+##Washington,WA,98115,lifeshield,${teladoc},${teladocOption}
+Wisconsin,WI,53215,lifeshield,${teladoc},${teladocOption}
+West Virginia,WV,25302,lifeshield,${teladoc},${teladocOption}
+Wyoming,WY,82001,lifeshield,${teladoc},${teladocOption}

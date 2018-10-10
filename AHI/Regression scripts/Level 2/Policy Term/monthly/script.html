@@ -24,28 +24,15 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>id=${carrierid}</td>
-	<td></td>
-</tr>
-
-
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'see details')])[2]</td>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
 
 <tr>
 	<td>verifyText</td>
 	<td>//*[@id='js-plan-benefits']/div/div/div[descendant::a[contains(text(),'Policy Term')]]</td>
-	<td>*Policy Term 3 Months*</td>
+	<td>*Policy Term ${policyTerm}*</td>
 </tr>
 
 </tbody></table>
@@ -61,6 +48,7 @@
 	
 	
 
+	
 	
 	
 	

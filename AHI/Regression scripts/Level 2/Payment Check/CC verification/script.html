@@ -74,13 +74,34 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Select This Plan')])[3]</td>
+	<td>xpath=//*[contains(text(),'Select Plan')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;xpath=//label[@id='js-see-plans']&quot;)</td>
+    <td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>xpath=//label[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
 </tr>
 <tr>
 	<td>verifyLocation</td>
@@ -419,7 +440,6 @@
 	<td>id=credit-card-number</td>
 	<td>4024 0238 8852 1446</td>
 </tr>
-
 <tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
@@ -501,6 +521,11 @@
 	<td>click</td>
 	<td>css=div.col-sm-12.checkbox &gt; label</td>
 	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-cvv</td>
+	<td>111</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -585,6 +610,10 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
 	
 	
 	
