@@ -64,9 +64,29 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;xpath=//button[@data-id='lifeshield' and contains(text(),'Select Plan')]&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>Lifeshield</td>
+	<td>product</td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>//button[@data-id='lifeshield' and contains(text(),'Select Plan')]</td>
 	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
 </tr>
 <tr>
     <td>IF</td>
@@ -90,7 +110,7 @@ sanity4/24</td>
 </tr>
 <tr>
     <td>IF</td>
-    <td>verifyElementPresent("css=h4.c-addon__h")</td>
+    <td>verifyElementPresent(&quot;xpath=//button[contains(@class,'js-add-teladoc c-addon__add-button')]&quot;)</td>
     <td></td>
 </tr>
 <tr>
@@ -199,5 +219,8 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
 	
 	
