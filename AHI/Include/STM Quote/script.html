@@ -6,21 +6,8 @@ sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h1.quote-heading.quote-heading--large</td>
-	<td>*Short Term Health insurance products*</td>
-</tr>
+<--------------quote page------------------->
+
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -28,48 +15,58 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(xpath=//li[@id='js-group-${productId}']/div/div/div[3]/form/div[2]/div[2]/button)</td>
+	<td>verifyElementPresent(&quot;//div[@id='js-quote-header']/div[2]/div/p&quot;)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//li[@id='js-group-${productId}']/div/div/div[3]/form/div[2]/div[2]/button</td>
+	<td>//input[@data-id="${carrierid}"]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>ENDIF</td>
-	<td></td>
+	<td>pause</td>
+	<td>5000</td>
 	<td></td>
 </tr>
-<!------
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent(xpath=//li[@id='js-group-${productId}']/div/div/div[3]/form/div[2]/div[2]/button)</td>
+	<td>refreshAndWait</td>
+	<td></td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>clickAndWait</td>
-	<td>//li[@id='js-group-${productId}']/div/div/div[3]/form/div[2]/div[2]/button</td>
+	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
 	<td></td>
 </tr>
-
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-
------>
 <tr>
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>
 </tr>
--------------------------------------->
-
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/STM Quote - Old</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 
 	</tbody>
 </table>	
+	
+	
+	
+	
+	
 	
 	
 	
