@@ -100,9 +100,27 @@
 	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
-	<td>pause</td>
-	<td>4000</td>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;xpath=//label[@id='js-see-plans']&quot;)</td>
+    <td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>xpath=//label[@id='js-see-plans']</td>
 	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -128,6 +146,7 @@
 </body>
 </html>
 
+	
 	
 	
 	

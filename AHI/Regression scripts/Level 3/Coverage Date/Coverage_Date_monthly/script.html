@@ -56,7 +56,7 @@
 </tr>
 <tr>
 	<td>storeEval</td>
-	<td>var d = new Date();d.setDate(1);d.getMonth(d.setMonth(${month}+3));</td>
+	<td>var d = new Date();d.setDate(1);d.getMonth(d.setMonth(${month}+6));</td>
 	<td>month</td>
 </tr>
 <tr>
@@ -114,6 +114,7 @@
 	<td>id=c-start</td>
 	<td>${the_first_coverage_start_date}</td>
 </tr>
+<!---------------
 <tr>
 	<td>click</td>
 	<td>id=agile-census</td>
@@ -134,21 +135,33 @@
 	<td>//a[@class='ui-state-default']</td>
 	<td></td>
 </tr>
+-------->
 <tr>
 	<td>clickAndWait</td>
 	<td>id=js-see-plans</td>
 	<td></td>
 </tr>
+<!-----------------------------quote page------------------------------------------->
+<tr>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
+	<td></td>
+</tr>
 
 <tr>
-    <td>click</td>
-    <td>xpath=//button[@data-id='everest']</td>
-    <td></td>
+	<td>storeText</td>
+	<td>css=h1.plan-details-header-name</td>
+	<td>planname</td>
 </tr>
 <tr>
-                <td>pause</td>
-                <td>2000</td>
-                <td></td>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
 </tr>
 <!--------------------Apply Page--------------------->
 <tr>
@@ -228,7 +241,7 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=a.js-change-effective-date-start</td>
+	<td>xpath=(//div[@class='tr summary-effective-dates'])[1]/div[2]</td>
 	<td>${verify_the_first_coverage_start_date}*</td>
 </tr>
 <tr>
@@ -283,7 +296,7 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='js-app-page-summary']/div/div/p[8]</td>
+	<td>xpath=(//div[@class='tr summary-effective-dates'])[2]/div[2]</td>
 	<td>${verify_the_first_coverage_end_date}*</td>
 </tr>
 <tr>
@@ -343,6 +356,9 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
 	
 	
 	
