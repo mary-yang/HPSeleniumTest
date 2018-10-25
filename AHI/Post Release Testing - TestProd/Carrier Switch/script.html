@@ -55,29 +55,18 @@
 </tr>
 <tr>
 	<td>verifyText</td>
+	<td>css=td.productLine</td>
+	<td>stm</td>
+</tr>
+<tr>
+	<td>verifyText</td>
 	<td>css=td.status</td>
 	<td>true</td>
 </tr>
 <tr>
-	<td>verifyText</td>
+	<td>assertText</td>
 	<td>css=td.states</td>
-	<td>AL,AR,AZ,DC,DE,FL,GA,IA,ID,IL,IN,KY,LA,MI,MO,MS,NC,NE,NV,OH,OK,OR,PA,TN,TX,VA,WV,WY</td>
-</tr>
-
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='stm-1stmed']/td</td>
-	<td>Companion Life (HII)</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='stm-1stmed']/td[4]</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='stm-companionprotect']/td</td>
-	<td>Companion Protect</td>
+	<td>AL,AR,AZ,DC,DE,FL,GA,ID,IL,IN,KY,LA,MI,MO,MS,NC,NV,OH,OK,OR,PA,TN,TX,VA,WV,WY</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -85,7 +74,7 @@
 	<td>Everest</td>
 </tr>
 <tr>
-	<td>verifyText</td>
+	<td>assertText</td>
 	<td>css=#stm-everest-one &gt; td.states</td>
 	<td>CO,DC,DE,ID,ME,MN,NE,NH,OR,SD,WI,WV</td>
 </tr>
@@ -101,53 +90,13 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=#stm-hccadvantage &gt; td.carrier</td>
-	<td>HCC Advantage</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-hccadvantage &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-hccflexible &gt; td.carrier</td>
-	<td>HCC Flexible</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-hccflexible &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-healthemed &gt; td.carrier</td>
-	<td>HCC Life (HII)</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-healthemed &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-ihc &gt; td.carrier</td>
-	<td>IHC Group</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-ihc &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
 	<td>css=#stm-lifeshield &gt; td.carrier</td>
 	<td>LifeShield</td>
 </tr>
 <tr>
-	<td>verifyText</td>
+	<td>assertText</td>
 	<td>css=#stm-lifeshield &gt; td.states</td>
-	<td>AL,AR,AZ,CO,DC,DE,FL,GA,IA,IL,IN,KY,LA,MN,MO,MS,NC,OH,OK,OR,PA,SD,TN,TX,VA,WV,WY</td>
+	<td>AL,AR,AZ,CO,DC,DE,FL,GA,IA,IL,IN,KY,LA,MN,MO,MS,NC,OH,OK,OR,PA,SD,TN,TX,VA,WV</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -157,27 +106,17 @@
 <tr>
 	<td>verifyText</td>
 	<td>css=#stm-nationalgeneral &gt; td.states</td>
-	<td>AL,AR,AZ,CO,CT,DC,FL,GA,HI,IA,ID,IL,KS,KY,LA,MD,MO,MS,NC,NM,NV,OH,OK,OR,PA,SC,SD,TN,TX,UT,VA,WI,WV,WY</td>
+	<td>AL,AR,AZ,CO,CT,DC,FL,GA,IA,ID,IL,KS,KY,LA,MD,MO,MS,MT,NC,NM,NV,OH,OK,OR,PA,SC,SD,TN,TX,UT,VA,WI,WV,WY</td>
 </tr>
 <tr>
-	<td>verifyText</td>
+	<td>verifyElementPresent</td>
 	<td>css=#stm-slaico &gt; td.carrier</td>
-	<td>Standard Life</td>
+	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>css=#stm-slaico &gt; td.states</td>
 	<td>AL,AR,AZ,DC,DE,FL,IA,ID,IL,IN,KY,LA,MI,MS,ND,NE,NV,OH,OK,PA,SC,TN,TX,VA,WV,WY</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-premierstm &gt; td.carrier</td>
-	<td>Unified Premier</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-premierstm &gt; td.states</td>
-	<td>No Available</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -187,13 +126,9 @@
 <tr>
 	<td>verifyText</td>
 	<td>css=#stm-unitedhealthone &gt; td.states</td>
-	<td>No Restrictions</td>
+	<td>AL,AR,DE,FL,IA,IL,IN,KS,KY,LA,MO,MT,NC,NE,NV,OK,OR,PA,VA,WI,WV,WY</td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='stm-companionprotect']/td[4]</td>
-	<td>No Available</td>
-</tr>
+
 <tr>
 	<td>click</td>
 	<td>link=Health Benefit Insurance</td>
@@ -396,31 +331,16 @@
 	<td>css=#teladocRider-teladoc &gt; td.states</td>
 	<td>AL,AK,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KY,LA,ME,MD,MI,MN,MS,MO,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,PR,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY</td>
 </tr>
-<tr>
-	<td></td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Health Share Ministry</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#healthshare-medishare &gt; td.carrier</td>
-	<td>Medi-Share</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#healthshare-medishare &gt; td.states</td>
-	<td>AL,AK,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,PR,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY</td>
-</tr>
+
 
 
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
 	
 	
 	
