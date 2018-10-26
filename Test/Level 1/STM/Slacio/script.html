@@ -219,11 +219,73 @@
 	<td></td>
 	<td></td>
 </tr>
+<!----------先填Bank Draft,用于验证有Bank Draft选项---------------------->
 <tr>
-	<td>include</td>
-	<td>AHI/Include/Use Bank Draft/td>
+	<td>type</td>
+	<td>id=account-holder-name</td>
+	<td>${FirstName} ${LastName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bank-name</td>
+	<td>WELLS FARGO BANK, NA</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='account-type']/button</td>
 	<td></td>
 </tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='account-class']/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=routing-number</td>
+	<td>121000248</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=account-number</td>
+	<td>4111022497</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=eft-payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+
+<!-----------------
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
+	<td></td>
+</tr>
+--------------------->
+<!------------------Hins add---------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(xpath=//*[@id="js-app-ancillary-products"]/div/div[3]/div/a[1])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//*[@id="js-app-ancillary-products"]/div/div[3]/div/a[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------------------------------------->
 
 <tr>
 	<td>click</td>
@@ -260,7 +322,6 @@
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
 	<td>Successfully Enrolled</td>
 </tr>
-	
 	
 	
 	

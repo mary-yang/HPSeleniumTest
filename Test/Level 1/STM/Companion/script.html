@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/STM/National General - Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 1/STM/Companion</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -21,40 +21,10 @@ sanity4/24</td>
 	<td>3000</td>
 	<td></td>
 </tr>
-
+<!--------------------STM Census Page--------------------->
 <tr>
-	<td>sendKeys</td>
-	<td>css=input.js-zip.census-zip-input</td>
-	<td>${zipcode}</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
-	<td></td>
-</tr>
-<tr>
-	<td>focus</td>
-	<td>id=dob-0</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=dob-0</td>
-	<td>01/01/1975</td>
-</tr>
-<tr>
-	<td>fireEvent</td>
-	<td>id=dob-0</td>
-	<td>blur</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=.//*[@id='js-see-plans']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>include</td>
+	<td>AHI/Include/STM Census</td>
 	<td></td>
 </tr>
 <!--------------------Quote Page--------------------->
@@ -84,7 +54,6 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
-
 <!--------------------Apply Page--------------------->
 <tr>
 	<td>include</td>
@@ -92,7 +61,6 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <!--------------------App Pages--------------------->
-
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Name</td>
@@ -135,12 +103,6 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
-
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-0']/div/button</td>
-	<td></td>
-</tr>
 <tr>
 	<td>click</td>
 	<td>//li[@id='js-question-P0-1']/div/button</td>
@@ -158,9 +120,15 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//li[@id='js-question-P0-4']/div/button[2]</td>
+	<td>//li[@id='js-question-P0-4']/div/button</td>
 	<td></td>
 </tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-5']/div/button</td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
@@ -218,74 +186,48 @@ sanity4/24</td>
 	<td></td>
 </tr>
 
-
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent(id=js-extended-coverage)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='js-application-payment']//div/button[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ELSE</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='js-application-payment']//div/button[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(id=account-holder-name)</td>
-	<td></td>
+	<td>fireEvent</td>
+	<td>id=credit-card-number</td>
+	<td>blur</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=account-holder-name</td>
-	<td>${FirstName} ${LastName}</td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
+	<td>id=credit-card-first</td>
+	<td>test</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=bank-name</td>
-	<td>American Bank</td>
+	<td>id=credit-card-last</td>
+	<td>test</td>
 </tr>
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent(//div[@id='account-type']/button)</td>
-	<td></td>
+	<td>select</td>
+	<td>id=expiration-year</td>
+	<td>label=2024</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//div[@id='account-type']/button</td>
-	<td></td>
+	<td>select</td>
+	<td>id=expiration-month</td>
+	<td>label=02</td>
 </tr>
 <tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
+	<td>type</td>
+	<td>id=credit-card-number</td>
+	<td>4358 8066 8649 3800</td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='account-class']/button[2]</td>
-	<td></td>
-</tr>
-<
 
+<tr>
+        <td>type</td>
+	<td>id=credit-card-cvv</td>
+	<td>123</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=credit-payment-authorization</td>
+	<td></td>
+</tr>
 
 
 </tbody></table>
@@ -333,6 +275,35 @@ sanity4/24</td>
 	
 	
 	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 	
 	
 	
