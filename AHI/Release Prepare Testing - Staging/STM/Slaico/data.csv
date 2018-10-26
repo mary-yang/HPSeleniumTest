@@ -13,7 +13,7 @@
 "##NV","89001","carrier-slaico-","${uri}","${AutoEmail}","",""
 "##OH","43011","carrier-slaico-","${uri}","${AutoEmail}","",""
 "##OK","73010","carrier-slaico-","${uri}","${AutoEmail}","",""
-"PA","15001","carrier-slaico-","${uri}","${AutoEmail}","01/01/1985","standard-life-select-stm-plan-2"
+"PA","15001","slaico","${uri}","${AutoEmail}","01/01/1985","standard-life-select-stm-plan-2"
 "##SC","29010","carrier-slaico-","${uri}","${AutoEmail}","01/01/1985",""
 "##TN","37014","carrier-slaico-","${uri}","${AutoEmail}","",""
 "##TX","77566","carrier-slaico-","${uri}","${AutoEmail}","",""

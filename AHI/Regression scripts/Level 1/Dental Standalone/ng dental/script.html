@@ -7,14 +7,33 @@
 	<tbody>
 
 <tr>
-	<td>include</td>
-	<td>AHI/Include/Name</td>
+	<td>open</td>
+	<td>${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>open</td>
-	<td>${ENV}/dental-insurance/quote?census[location][zip]=${zip}&census[oneTimePaymentSelected]=false&census[member][0][dob]=04/01/1965&census[member][0][gender]=M&census[member][0][role]=P&census[effective]=2018-04-17</td>
+	<td>${ENV}/dental-insurance-quotes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zip}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>10/10/1980</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gender-m-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
 	<td></td>
 </tr>
 
@@ -43,6 +62,7 @@
 	<td>4000</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Get URI</td>
@@ -55,32 +75,20 @@
 	<td>uri</td>
 </tr>
 <tr>
-    <td>IF</td>
-    <td>verifyElementPresent(&quot;link=No Thanks&quot;)</td>
-    <td></td>
-</tr>
-<tr>
-    <td>click</td>
-    <td>link=No Thanks </td>
-    <td></td>
-</tr>
-<tr>
-    <td>ENDIF</td>
-    <td></td>
-    <td></td>
-</tr>
-
-<tr>
-	<td>type</td>
-	<td>//input[@value='']</td>
-	<td>${FirstName}</td>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=member-P-1-lastName</td>
+	<td>//input[@id='member-P-1-firstName']</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='member-P-1-lastName']</td>
 	<td>${LastName}</td>
 </tr>
-
 <tr>
 	<td>type</td>
 	<td>id=address</td>
@@ -97,9 +105,34 @@
 	<td>${AutoEmail}</td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>id=primaryPhone</td>
-	<td>${Tel}</td>
+	<td>213-232-2123</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/UseTestCard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=consent-checkbox-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#js-signature-tab &gt; p</td>
+	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -112,37 +145,11 @@
 	<td></td>
 </tr>
 <tr>
-	<td>include</td>
-	<td>AHI/Include/Use Bank Draft</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=consent-checkbox-0</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=p.signature-arrow</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-
-
-<tr>
-	<td>waitForLocation</td>
-	<td>*page/4* </td>
-	<td></td>
-</tr>
-<tr>
 	<td>verifyText</td>
-	<td>css=span.emphasize</td>
-	<td>Congratulations!</td>
+	<td>//*[@id='js-app-confirmation']/div/h2/span</td>
+	<td>Congratulations*</td>
 </tr>
+
 
 <tr>
 	<td>storeText</td>
@@ -237,6 +244,9 @@
 	
 	
 
+	
+	
+	
 	
 	
 	
