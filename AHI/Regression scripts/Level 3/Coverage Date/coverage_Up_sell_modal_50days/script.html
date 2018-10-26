@@ -221,6 +221,7 @@
 	<td>3000</td>
 	<td></td>
 </tr>
+<!------------------------------------old --------------------
 <tr>
 	<td>click</td>
 	<td>xpath=(//input[@name='extendedChoice'])[2]</td>
@@ -256,6 +257,49 @@
 	<td>var d = new Date(); '*' + ${month} +'/'+ '*' + ${date} +'/'+${year}+'*' ;</td>
 	<td>coverage_end_date</td>
 </tr>
+-------------------------------------old------------------------------------------->
+<!---------------------------------------new ------------------------------------------------------>
+<tr>
+	<td>click</td>
+	<td>//a[@class='js-change-effective-date-end']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;//span[contains(text(),'Next')]&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[contains(text(),'Next')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//td[@data-event='click'])[last()]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=(//div[@class='tr summary-effective-dates'])[2]/div[2]</td>
+	<td>coverage_end_date</td>
+</tr>
+<!---------------------------------------new ------------------------------------------------------>
 <tr>
 	<td>type</td>
 	<td>id=email</td>
@@ -277,12 +321,6 @@
 	<td>label=08</td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//div[@id='js-app-page-summary']/div/div/p[8]</td>
-
-	<td>${coverage_end_date}</td>
-</tr>
-<tr>
 	<td>click</td>
 	<td>id=js-enable-mailing-address</td>
 	<td></td>
@@ -291,11 +329,6 @@
 	<td>clickAndWait</td>
 	<td>xpath=//*[@id='js-app-continue-link']</td>
 	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>var d = new Date(); '*' + ${month} +'/'+ '*' + ${date} +'/'+${year} +'*';</td>
-	<td>coverage_end_date</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -375,7 +408,11 @@
 	<td>//div[@id='headingapplicantInfo-summary']/div/div/div/ul/li</td>
 	<td>name</td>
 </tr>
-
+<tr>
+	<td>verifiyText</td>
+	<td>xpath=(//div[@class='tr summary-effective-dates'])[2]/div[2]</td>
+	<td>coverage_end_date</td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>id=consent-checkbox-0</td>
@@ -452,6 +489,8 @@
 </body>
 </html>
 
+	
+	
 	
 	
 	
