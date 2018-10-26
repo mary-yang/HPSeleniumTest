@@ -1,0 +1,84 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Compare FrontDoor/Home Page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+
+<tr>
+	<td>store</td>
+	<td>https://testprod.agilehealthinsurance.com</td>
+	<td>url1</td>
+</tr>
+
+<tr>
+	<td>store</td>
+	<td>${ENV}</td>
+	<td>url2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://www.copyscape.com/compare.php</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=url1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=url1</td>
+	<td>${url1}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=url2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=url2</td>
+	<td>${url2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=docompare</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//td[2]/p[2]</td>
+	<td>*100% matched</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//td[3]/p[2]</td>
+	<td>*100% matched</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
