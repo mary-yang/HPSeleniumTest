@@ -22,7 +22,7 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
+	<td>click</td>
 	<td>//input[@value='${carrierid}']</td>
 	<td></td>
 </tr>
@@ -31,12 +31,32 @@ sanity4/24</td>
 	<td>3000</td>
 	<td></td>
 </tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(xpath=(//a[contains(@href,'/plan/${productId}')])[2])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(@href,'/plan/${productId}')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>xpath=(//a[contains(@href,'/plan/${carrierid}')])[2]</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 
 <tr>
 	<td>pause</td>
@@ -48,6 +68,9 @@ sanity4/24</td>
 
 	</tbody>
 </table>	
+	
+	
+	
 	
 	
 	
