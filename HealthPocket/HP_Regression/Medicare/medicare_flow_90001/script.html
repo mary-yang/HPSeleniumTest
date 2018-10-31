@@ -12,103 +12,11 @@
 	<td>http://${ENV}.healthpocket.com/medicare/quote/${year}?zip=90001</td>
 	<td></td>
 </tr>
-<!--选择provider as humana-->
-<tr>
-	<td>click</td>
-	<td>//button[@class='btn dropdown-toggle carriers']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>id=carrier-Humana</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=carrier-Humana</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>link=Humana</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=span.planName</td>
-	<td>Humana*</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//ul[@id='plans']/li[5]/a/span/p/span</td>
-	<td>price</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//*[@id='plans']/li[5]/a/span[2]/span</td>
-	<td>plan_name</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//ul[@id='plans']/li[5]/a/span[6]/p</td>
-	<td>deductible</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//ul[@id='plans']/li[5]/a/span[5]/p</td>
-	<td>premium</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//ul[@id='plans']/li[5]/a/span[4]/p</td>
-	<td>coverage_type</td>
-</tr>
-<!--humana detail page-->
-<tr>
-	<td>clickAndWait</td>
-	<td>//ul[@id='plans']/li[5]/a/span/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>include</td>
-	<td>HealthPocket/include/medicare_delayed_popup</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='detailsContainer'][descendant::span[text()='Insurance Type']]/div[2]</td>
-	<td>type</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h1.planName</td>
-	<td>${plan_name}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='detailsContainer']/div[3]/div[2]/div[3]/div/section/div/table/tbody/tr[6]/td</td>
-	<td>${deductible}*</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=span.amount</td>
-	<td>${premium}</td>
-</tr>
-
 </tbody></table>
 </body>
 </html>
 
+	
 	
 	
 	

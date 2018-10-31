@@ -1,0 +1,193 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/IFP/IFP_Detail_90001</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">medicare_quote_ads</td></tr>
+</thead><tbody>
+<!--case1: sort-->
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/individual-health-insurance/quote/2018?zip=90001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=a.js-details-button.c-plan-unit__plan-name</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-plans']/ul/li/div/div[2]/ul/li/div[2]</td>
+	<td>deductible</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-plans']/ul/li/div/div[2]/ul/li[2]/div[2]</td>
+	<td>outofpocket</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-plans']/ul/li/div/div[2]/ul/li[3]/div[2]</td>
+	<td>metal_level</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-plans']/ul/li/div/div[2]/ul/li[4]/div[2]</td>
+	<td>plan_type</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a.js-details-button.c-plan-unit__plan-name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-benefits']/div/table/tbody/tr[2]/td[2]</td>
+	<td>${planname}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-benefits']/div/table/tbody/tr[6]/td[2]</td>
+	<td>${metal_level}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-benefits']/div/table/tbody/tr[7]/td[2]</td>
+	<td>${plan_type}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-benefits']/div/table/tbody/tr[8]/td[2]</td>
+	<td>${deductible}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-benefits']/div/table/tbody/tr[9]/td[2]</td>
+	<td>${outofpocket}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'See All Coverage Details')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//h2[contains(text(),'Costs for Medical Care')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//h2[contains(text(),'Prescription drug coverage')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//h2[contains(text(),'Access to doctors and hospitals')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//h2[contains(text(),'Hospital services')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-more-details']/table/tbody/tr[2]/td[2]</td>
+	<td>$0 Copay with deductible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-more-details']/table/tbody/tr[3]/td[2]</td>
+	<td>0.00% Coinsurance after deductible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-more-details']/table/tbody/tr[4]/td[2]</td>
+	<td>0.00% Coinsurance after deductible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-more-details']/table/tbody/tr[5]/td[2]</td>
+	<td>0.00% Coinsurance after deductible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-more-details']/table/tbody/tr[6]/td[2]</td>
+	<td>0.00% Coinsurance after deductible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-more-details']/table/tbody/tr[7]/td[2]</td>
+	<td>$14700 per group</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-more-details']/table/tbody/tr[8]/td[2]</td>
+	<td>$14700 per group</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-more-details']/table[2]/tbody/tr[2]/td[2]</td>
+	<td>0.00% Coinsurance after deductible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-more-details']/table[2]/tbody/tr[3]/td[2]</td>
+	<td>0.00% Coinsurance after deductible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-more-details']/table[2]/tbody/tr[4]/td[2]</td>
+	<td>0.00% Coinsurance after deductible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-more-details']/table[2]/tbody/tr[5]/td[2]</td>
+	<td>0.00% Coinsurance after deductible</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

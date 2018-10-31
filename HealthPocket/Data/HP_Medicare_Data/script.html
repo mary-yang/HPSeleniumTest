@@ -29,17 +29,17 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>//div[@id='js-location-container']/span/span[2]/a</td>
+	<td>//*[@id="js-census-bar"]/div/div[1]/div[1]/ul/li/button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-location-container']/span/span[2]/a</td>
+	<td>//*[@id="js-census-bar"]/div/div[1]/div[1]/ul/li/button</td>
 	<td>City</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='pageHeader']/h1/strong</td>
+	<td>//*[@id="js-plans-header"]/div/div[1]/div/h1</td>
 	<td>Number</td>
 </tr>
 <tr>
@@ -54,12 +54,17 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[@id='filterCarriers']/button</td>
+	<td>xpath=//li[3]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//*[@id="js-filter-company-popover"]/form/div/div/div[1]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='filterCarriers']/div/div</td>
+	<td>xpath=//div[3]/form/div/div</td>
 	<td>Carriers</td>
 </tr>
 <tr>
@@ -67,48 +72,7 @@
 	<td>${Carriers}</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>link=(Show Special Needs Plans)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=(Hide Special Needs Plans)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementNotPresent</td>
-	<td>//*[@id='page-spinner']/div[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='pageHeader']/h1/strong</td>
-	<td>Number1</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${Number1}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//li[2]/a/span[2]/span</td>
-	<td></td>
-</tr>
 </tbody></table>
 </body>
 </html>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	

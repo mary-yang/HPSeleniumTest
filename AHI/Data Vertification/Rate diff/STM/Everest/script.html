@@ -21,18 +21,24 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
+	<td>clickAndWait</td>
 	<td>link=Apply for This Plan</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;//*[@id="js-see-plans"]&quot;)</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
 	<td>//*[@id="js-see-plans"]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>//*[@id="js-see-plans"]</td>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -69,13 +75,18 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>//*[@id="js-see-plans"]</td>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;//*[@id="js-see-plans"]&quot;)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>//*[@id="js-see-plans"]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -101,6 +112,7 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	

@@ -1,7 +1,8 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/Data/HP_IFP_Data</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">Landscape</td></tr>
+<tr><td rowspan="1" colspan="3">medicare_quote_ads</td></tr>
 </thead><tbody>
+<!--case1: sort-->
 <tr>
 	<td>open</td>
 	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
@@ -9,85 +10,87 @@
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.healthpocket.com/individual-health-insurance</td>
+	<td>http://${ENV}.healthpocket.com/individual-health-insurance/quote/2018?zip=${zipcode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-plans-header']/div/div/div/h1</td>
+	<td>Number</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@id='js-census-bar']/div/div/div/ul/li[2]/button/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>id=location</td>
-	<td>${zipcode}</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input</td>
+	<td>1</td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>//div/div/div/div/div/ul/li/a</td>
-	<td></td>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[2]</td>
+	<td>1</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>//div/div/div/div/div/ul/li/a</td>
-	<td></td>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
+	<td>1</td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>//div[@id='censusDetailsSummary']/ul/li</td>
-	<td></td>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
+	<td>9</td>
 </tr>
 <tr>
-	<td>open</td>
-	<td>http://${ENV}.healthpocket.com/individual-health-insurance/quote</td>
-	<td></td>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
+	<td>8</td>
 </tr>
 <tr>
-	<td>storeText</td>
-	<td>//div[@id='censusDetailsSummary']/ul/li</td>
-	<td>City</td>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
+	<td>0</td>
 </tr>
 <tr>
-	<td>storeText</td>
-	<td>//div[@id='pageHeader']/h1/strong</td>
-	<td>Number</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${City}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${Number}</td>
+	<td>click</td>
+	<td>//div[5]/div/div/div/div/ul/li[2]/div/form/div[2]/div/div/div[3]/ul/li[2]/div/label</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[@id='filterCarriers']/button</td>
+	<td>xpath=(//button[@type='submit'])[5]</td>
 	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-census-bar']/div/div/div[2]/div[2]/ul/li[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-plans-header']/div/div/div/h1</td>
+	<td>${Number}</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='filterCarriers']/div/div</td>
-	<td>Carriers</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${Carriers}</td>
-	<td></td>
+	<td>//div[@id='js-plans-header']/div/div/div/h1</td>
+	<td>Number1</td>
 </tr>
 </tbody></table>
 </body>
 </html>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
