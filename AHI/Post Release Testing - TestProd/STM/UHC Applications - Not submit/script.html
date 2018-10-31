@@ -21,11 +21,7 @@ sanity4/24</td>
 	<td>link=Quote &amp; Save Today</td>
 	<td></td>
 </tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=h1.census-main-heading</td>
-	<td>Compare Health Insurance Quotes</td>
-</tr>
+
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
@@ -142,17 +138,22 @@ sanity4/24</td>
 	<td>xpath=//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
-<!------------------- quote page----------------------------->
+<!--------------------Quote Page--------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
-<!------------------- detail page----------------------------->
+<!--------------------Plan Detail  Page--------------------->
 <tr>
 	<td>storeText</td>
-	<td>css=h1</td>
+	<td>css=h1.plan-details-header-name</td>
 	<td>planname</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -161,27 +162,20 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>4000</td>
+	<td>2000</td>
 	<td></td>
 </tr>
+
+<!--------------------Apply Page--------------------->
 <tr>
-	 <td>include</td>
+	<td>include</td>
+	<td>AHI/Include/STM Apply</td>
+	<td></td>
+</tr>
+<!--------------------App Pages--------------------->
+<tr>
+	<td>include</td>
 	<td>AHI/Include/Name</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyLocation</td>
-	<td>*apply*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=applyButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
 	<td></td>
 </tr>
 <tr>
@@ -426,6 +420,9 @@ sanity4/24</td>
 </body>
 </html>	
 
+	
+	
+	
 	
 	
 	

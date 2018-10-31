@@ -8,14 +8,15 @@ sanity4/24</td>
 	<tbody>
 <tr>
 	<td>open</td>
-	<td>${ENV}/term-health-insurance/apply/${planid}?census[location][zip]=${zipcode}&census[oneTimePaymentSelected]=true&census[member][0][dob]=02/01/1985&census[member][0][gender]=F&census[member][0][role]=P&census[member][1][dob]=07/01/1988&census[member][1][gender]=M&census[member][1][role]=S&census[effective]=2018-10-17&census[effectiveEnd]=2019-04-14</td>
+	<td>${ENV}/term-health-insurance/apply/${planid}?census[location][zip]=${zipcode}&census[oneTimePaymentSelected]=false&census[member][0][dob]=02/01/1985&census[member][0][gender]=F&census[member][0][role]=P&census[member][1][dob]=07/01/1988&census[member][1][gender]=M&census[member][1][role]=S</td>
 	<td></td>
 </tr>
 <tr>
 	 <td>storeText</td>
-	<td>xpath=//body[@id='apply']/main/div/div[2]/div/div/div[3]/div/div[5]/div[2]</td>
+	<td>xpath=//div[@id='js-apply-overview']/div[3]/div/div[5]/div[2]</td>
 	<td>duration</td>
 </tr>
+
 <tr>
 	 <td>storeText</td>
 	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr[2]/td[2]</td>
@@ -75,6 +76,9 @@ sanity4/24</td>
 </tr>
 	</tbody>
 </table>
+	
+	
+	
 	
 	
 	

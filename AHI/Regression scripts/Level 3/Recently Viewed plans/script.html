@@ -47,15 +47,16 @@
 	<td>xpath=.//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
+<!-----------------------------quote page------------------------------------------->
 <tr>
-	<td>clickAndWait</td>
-	<td>//*[@id='js-group-national-general-short-term-medical']/descendant::*[contains(text(),'See Plan Details')]</td>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>css=a.recently-viewed-plan-name</td>
-	<td>National General *</td>
+	<td>${planName}</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -66,36 +67,6 @@
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//*[@id='js-group-everest-stm']/descendant::*[contains(text(),'See Plan Details')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=a.recently-viewed-plan-name</td>
-	<td>Everest *</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=« Back to Short-Term Health Insurance Plans</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//*[@id='js-group-everest-prime-stm']/descendant::*[contains(text(),'See Plan Details')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[2]/div[2]/a</td>
-	<td>Everest Prime *</td>
 </tr>
 </tbody></table>
 </body>
@@ -120,6 +91,8 @@
 	
 	
 
+	
+	
 	
 	
 	

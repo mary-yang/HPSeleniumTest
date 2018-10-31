@@ -61,96 +61,22 @@ sanity4/24</td>
 	<td>xpath=.//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
+<!--------------------- Quote page----------------------------->
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyLocation</td>
-	<td>*/quote*</td>
-	<td></td>
-</tr>
-<tr>
-    <td>IF</td>
-    <td>verifyElementPresent(&quot;css=li.js-clear&quot;)</td>
-    <td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=li.js-clear</td>
-	<td></td>
-</tr>
-<tr>
-    <td>ENDIF</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
-    <td>IF</td>
-    <td>verifyElementPresent(&quot;//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${carrierid}')]&quot;)</td>
-    <td></td>
-</tr>
-<tr>
-    <td>click</td>
-    <td>//*[@id='js-quote-filters']/div[2]/ul/li[*]/label[2]/span[1][contains(text(),'${carrierid}')]</td>
-    <td></td>
-</tr>
-<tr>
-    <td>ENDIF</td>
-    <td></td>
-    <td></td>
-</tr>
-
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=carrier-unitedhealthone-</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
+<!--------------------- Detail page----------------------------->
 <tr>
 	<td>storeText</td>
-	<td>//a[contains(@href, '/term-health-insurance/plan/${carrierid}')]</td>
+	<td>css=h1.plan-details-header-name</td>
 	<td>planname</td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${planname}</td>
-	<td></td>
-</tr>
-<tr>
 	<td>storeText</td>
-	<td>//li[contains(@data-planid, '${carrierid}')]/div/div/div/div</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
 	<td>mo</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(@href, '/term-health-insurance/plan/${carrierid}')])[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h1</td>
-	<td>${planname}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='js-plan-summary']/div/div[3]/div/div[1]/div[2]</td>
-	<td>*${mo}*</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -162,71 +88,17 @@ sanity4/24</td>
 	<td>4000</td>
 	<td></td>
 </tr>
+<!--------------------Apply Page--------------------->
+<tr>
+	<td>include</td>
+	<td>AHI/Include/STM Apply</td>
+	<td></td>
+</tr>
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Name</td>
 	<td></td>
 </tr>
-
-
-<tr>
-	<td>verifyLocation</td>
-	<td>*apply*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=applyButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyLocation</td>
-	<td>*application*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeLocation</td>
-	<td>url</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;/&quot;)+1)</td>
-	<td>uri</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${uri}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-    <td>IF</td>
-    <td>verifyElementPresent(&quot;link=No Thanks&quot;)</td>
-    <td></td>
-</tr>
-<tr>
-    <td>click</td>
-    <td>link=No Thanks </td>
-    <td></td>
-</tr>
-<tr>
-    <td>ENDIF</td>
-    <td></td>
-    <td></td>
-</tr>
-
-
-
 <tr>
 	<td>click</td>
 	<td>id=fillApp</td>
@@ -464,6 +336,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	

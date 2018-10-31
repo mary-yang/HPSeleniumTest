@@ -52,29 +52,27 @@
 	<td>id=js-see-plans</td>
 	<td></td>
 </tr>
+
+<!--------------------Quote Page--------------------->
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
+
 <tr>
-	<td>clickAndWait</td>
-	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
-	<td></td>
+	<td>storeText</td>
+	<td>css=h1.plan-details-header-name</td>
+	<td>planname</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
 </tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Select This Plan')])[3]</td>
+
+	<td>click</td>
+	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
 <tr>
@@ -82,21 +80,13 @@
 	<td>2000</td>
 	<td></td>
 </tr>
+<!--------------------Apply Page--------------------->
 <tr>
-	<td>verifyLocation</td>
-	<td>*apply*</td>
+	<td>include</td>
+	<td>AHI/Include/STM Apply</td>
 	<td></td>
 </tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=applyButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
+<!--------------------App Pages--------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Underwriting</td>
@@ -419,7 +409,6 @@
 	<td>id=credit-card-number</td>
 	<td>4024 0238 8852 1446</td>
 </tr>
-
 <tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
@@ -501,6 +490,11 @@
 	<td>click</td>
 	<td>css=div.col-sm-12.checkbox &gt; label</td>
 	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-cvv</td>
+	<td>111</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -585,6 +579,12 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
+	
 	
 	
 	

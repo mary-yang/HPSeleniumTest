@@ -13,7 +13,7 @@
 "##HI","96818","carrier-everest-","${planname}","${mo}","${uri}","01/01/1985",""
 "##IA","50317","carrier-everest-","${planname}","${mo}","${uri}","01/01/1985",""
 "##ID","83709","carrier-everest-","${planname}","${mo}","${uri}","01/01/1985",""
-"IL","60629","carrier-everest-","${planname}","${mo}","${uri}","01/01/1985","everest-prime-stm"
+"IL","60629","everest","${planname}","${mo}","${uri}","01/01/1985","everest-prime-stm"
 "##IN","46227","carrier-everest-","${planname}","${mo}","${uri}","01/01/1985",""
 "##KS","66062","carrier-everest-","${planname}","${mo}","${uri}","01/01/1985",""
 "##KY","40214","carrier-everest-","${planname}","${mo}","${uri}","01/01/1985",""

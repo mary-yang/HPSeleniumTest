@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM 10-1/Everest Prime</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 1/STM/Everest Prime</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -17,63 +17,21 @@ sanity4/24</td>
 	<td>link=Quote &amp; Save Today</td>
 	<td></td>
 </tr>
+<!--------------------STM Census Page--------------------->
 <tr>
-	<td>waitForText</td>
-	<td>css=h1.census-main-heading</td>
-	<td>Compare Health Insurance Quotes</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>css=input.js-zip.census-zip-input</td>
-	<td>${zipcode}</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td>include</td>
+	<td>AHI/Include/STM Census</td>
 	<td></td>
 </tr>
-<tr>
-	<td>focus</td>
-	<td>id=dob-0</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=dob-0</td>
-	<td>01/01/1985</td>
-</tr>
-<tr>
-	<td>fireEvent</td>
-	<td>id=dob-0</td>
-	<td>blur</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=div.census-radio &gt; label</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=//*[@id='js-see-plans']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
+
+<!--------------------STM Quote Page--------------------->
 
 <tr>
 	<td>include</td>
 	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
-
+<!--------------------Plan Detail  Page--------------------->
 <tr>
 	<td>storeText</td>
 	<td>css=h1.plan-details-header-name</td>
@@ -85,15 +43,17 @@ sanity4/24</td>
 	<td>mo</td>
 </tr>
 <tr>
-	<td>click</td>
+	<td>clickAndWait</td>
 	<td>id=plan-details-primary-apply</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>
 </tr>
+
 <!--------------------Apply Page--------------------->
 <tr>
 	<td>include</td>
@@ -246,28 +206,7 @@ sanity4/24</td>
 	<td>AHI/Include/Use Credit Card</td>
 	<td></td>
 </tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
+
 <tr>
 	<td>pause</td>
 	<td>3000</td>
@@ -354,13 +293,6 @@ sanity4/24</td>
 	
 	
 
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

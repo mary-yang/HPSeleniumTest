@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+carrierid,productId
+everest-one,everest-stm
+=======
+"state","zip","carrierid","uri","productId"
+"##FL","32099","carrier-hccadvantage-","${uri}",""
+"##FL","32099","carrier-hccflexible-","${uri}",""
+"CO","80219","everest","${uri}","everest-stm"
+"##FL","32099","carrier-premierstm-","${uri}",""
+>>>>>>> a3de3e74887aa3a45aed6b610a4c1d4ba26671b3

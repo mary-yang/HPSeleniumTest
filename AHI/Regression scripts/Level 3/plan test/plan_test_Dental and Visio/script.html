@@ -102,71 +102,13 @@
 	<td>2000</td>
 	<td></td>
 </tr>
+<!------------------------------------------------------------------------------>
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent(id=js-extended-coverage)</td>
+	<td>include</td>
+	<td>AHI/Include/Use Credit Card</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='js-application-payment']//div/button[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ELSE</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=//div[@id='js-application-payment']//div/button[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=account-holder-name</td>
-	<td>${FirstName} ${LastName}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=bank-name</td>
-	<td>American Bank</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='account-type']/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='account-class']/button[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=routing-number</td>
-	<td>121000248</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=account-number</td>
-	<td>4111022497</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=eft-payment-authorization</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
+<!------------------------------------------------------------------------------>
 <tr>
 	<td>pause</td>
 	<td>5000</td>
@@ -189,17 +131,17 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//*[@id='js-app-confirmation']/div/h2/span</td>
+	<td>//*[@id='js-app-confirmation']/div[2]/h2/span</td>
 	<td>Congratulations*</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='js-app-confirmation']/div[1]/ul/li[1]/div/p[1]/span[2]</td>
+	<td>//*[@id='js-app-confirmation']/div[2]/ul/li[1]/div/p[1]/span[2]</td>
 	<td>review_P_initial</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='js-app-confirmation']/div[1]/ul/li[1]/div/p[2]/span[1]</td>
+	<td>//*[@id='js-app-confirmation']/div[2]/ul/li[1]/div/p[2]/span[1]</td>
 	<td>review_P_on_going</td>
 </tr>
 </tbody></table>
@@ -249,4 +191,6 @@
 	
 	
 
+	
+	
 	

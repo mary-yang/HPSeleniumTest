@@ -1,0 +1,52 @@
+state,state1,zipcode,product,teladoc,teladocOption
+Alabama,AL,35215,${product},${teladoc},${teladocOption}
+##Alaska,AK,99504,${product},${teladoc},${teladocOption}
+Arkansas,AR,72209,${product},${teladoc},${teladocOption}
+Arizona,AZ,85364,${product},${teladoc},${teladocOption}
+##California,CA,90011,${product},${teladoc},${teladocOption}
+Colorado,CO,80219,${product},${teladoc},${teladocOption}
+Connecticut,CT,6606,${product},${teladoc},${teladocOption}
+Delaware,DE,19805,${product},${teladoc},${teladocOption}
+District Of Columbia,DC,20015,${product},${teladoc},${teladocOption}
+Florida,FL,33186,${product},${teladoc},${teladocOption}
+Georgia,GA,30044,${product},${teladoc},${teladocOption}
+Hawaii,HI,96818,${product},${teladoc},${teladocOption}
+Iowa,IA,50317,${product},${teladoc},${teladocOption}
+Idaho,ID,83709,${product},${teladoc},${teladocOption}
+Illinois,IL,60629,${product},${teladoc},${teladocOption}
+Indiana,IN,46227,${product},${teladoc},${teladocOption}
+Kansas,KS,66062,${product},${teladoc},${teladocOption}
+Kentucky,KY,40214,${product},${teladoc},${teladocOption}
+Louisiana,LA,70816,${product},${teladoc},${teladocOption}
+##Massachusetts,MA,2128,${product},${teladoc},${teladocOption}
+Maryland,MD,21215,${product},${teladoc},${teladocOption}
+Maine,ME,4401,${product},${teladoc},${teladocOption}
+Michigan,MI,48228,${product},${teladoc},${teladocOption}
+Minnesota,MN,55106,${product},${teladoc},${teladocOption}
+Missouri,MO,63129,${product},${teladoc},${teladocOption}
+Mississippi,MS,39503,${product},${teladoc},${teladocOption}
+Montana,MT,59102,${product},${teladoc},${teladocOption}
+North Carolina,NC,28269,${product},${teladoc},${teladocOption}
+North Dakota,ND,58103,${product},${teladoc},${teladocOption}
+Nebraska,NE,68104,${product},${teladoc},${teladocOption}
+New Hampshire,NH,3103,${product},${teladoc},${teladocOption}
+##New Jersey,NJ,8701,${product},${teladoc},${teladocOption}
+New Mexico,NM,87121,${product},${teladoc},${teladocOption}
+Nevada,NV,89110,${product},${teladoc},${teladocOption}
+##New York,NY,11226,${product},${teladoc},${teladocOption}
+Ohio,OH,43228,${product},${teladoc},${teladocOption}
+Oklahoma,OK,73160,${product},${teladoc},${teladocOption}
+Oregon,OR,97229,${product},${teladoc},${teladocOption}
+Pennsylvania,PA,19120,${product},${teladoc},${teladocOption}
+##Rhode Island,RI,2909,${product},${teladoc},${teladocOption}
+South Carolina,SC,29223,${product},${teladoc},${teladocOption}
+South Dakota,SD,57106,${product},${teladoc},${teladocOption}
+Tennessee,TN,37013,${product},${teladoc},${teladocOption}
+Texas,TX,79936,${product},${teladoc},${teladocOption}
+Utah,UT,84120,${product},${teladoc},${teladocOption}
+Virginia,VA,23464,${product},${teladoc},${teladocOption}
+##Vermont,VT,5401,${product},${teladoc},${teladocOption}
+##Washington,WA,98115,${product},${teladoc},${teladocOption}
+Wisconsin,WI,53215,${product},${teladoc},${teladocOption}
+West Virginia,WV,25302,${product},${teladoc},${teladocOption}
+Wyoming,WY,82001,${product},${teladoc},${teladocOption}
