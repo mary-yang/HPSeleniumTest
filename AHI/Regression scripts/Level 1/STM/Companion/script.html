@@ -68,167 +68,19 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>include</td>
-	<td>AHI/Include/Get URI</td>
+	<td>AHI/Include/Go to end</td>
 	<td></td>
 </tr>
-
-
 <tr>
 	<td>include</td>
-	<td>AHI/Include/Underwriting</td>
+	<td>AHI/Include/BO App Search</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyLocation</td>
-	<td>*application*</td>
-	<td></td>
+	<td>verifyText</td>
+	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
+	<td>Successfully Enrolled</td>
 </tr>
-<tr>
-	<td>storeLocation</td>
-	<td>url</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;/&quot;)+1)</td>
-	<td>uri</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${uri}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-1']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-2']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-3']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-4']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-5']/div/button</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>click</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=member-P-1-firstName</td>
-	<td>Test</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=member-P-1-lastName</td>
-	<td>${LastName}</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=member-P-1-ft</td>
-	<td>label=05</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=member-P-1-in</td>
-	<td>label=07</td>
-</tr>
-
-<tr>
-	<td>type</td>
-	<td>id=address</td>
-	<td>${Add}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=city</td>
-	<td>${City}</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=primaryPhone</td>
-	<td>${Tel}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=email</td>
-	<td>${AutoEmail}</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>fireEvent</td>
-	<td>id=credit-card-number</td>
-	<td>blur</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=credit-card-first</td>
-	<td>test</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=credit-card-last</td>
-	<td>test</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=expiration-year</td>
-	<td>label=2024</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=expiration-month</td>
-	<td>label=02</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=credit-card-number</td>
-	<td>4358 8066 8649 3800</td>
-</tr>
-
-<tr>
-        <td>type</td>
-	<td>id=credit-card-cvv</td>
-	<td>123</td>
-</tr>
-
-<tr>
-	<td>click</td>
-	<td>id=credit-payment-authorization</td>
-	<td></td>
-</tr>
-
 
 </tbody></table>
 </body>
@@ -304,6 +156,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	
