@@ -76,7 +76,7 @@
 
 <tr>
 	<td>storeXpathCount</td>
-	<td>//a[contains(text(),'Select Plan')]</td>
+	<td>//a[contains(text(),'Select This Plan')]</td>
 	<td>x</td>
 </tr>
 <tr>
@@ -87,53 +87,153 @@
 <tr>
 	<td>verifyText</td>
 	<td>css=h1.quote-heading</td>
-	<td>* plans found from * Short Term Health insurance products.*</td>
+	<td>* plans found. Showing * plans*</td>
+</tr>
+<!--verify Insurance Provider  filter-->
+<tr>
+	<td>click</td>
+	<td>//input[@data-id="everest"]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
 </tr>
 
-<!--verify max coverage badge-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div/div[2]/div[1]/h3/a[contains(text(),'Everest Prime')]</td>
+	<td>y</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${y}</td>
+	<td></td>
+</tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=div.c-ribbon__content</td>
-	<td>Up to<br />*<br />Months</td>
+	<td>css=h1.quote-heading</td>
+	<td>* plans found. Showing ${y} plans*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=li.js-clear</td>
+	<td></td>
+</tr>
+<!--
+verify Monthly Premium
+-->
+<tr>
+	<td>click</td>
+	<td>//span[contains(text(),'above')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.js-clear</td>
+	<td>above $* Monthly Premium</td>
+</tr>
+<!--verify Coninsurance-->
+<tr>
+	<td>click</td>
+	<td>id=planCoinsurance-20-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--Verify sorting-->
+<!-------------------------
+<tr>
+	<td>click</td>
+	<td>id=bestSellers-clear-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+-------------------->
+<!--
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+-->
+<tr>
+	<td>click</td>
+	<td>id=navbar</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Coinsurance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[2]/ul/li[2]</td>
+	<td>Coinsurance*%</td>
+</tr>
+
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=img.carrier-logo-image</td>
+	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>css=h2.c-product-unit__name</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=p.c-product-unit__underwriting</td>
-	<td>Underwritten by *</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=span.js-glossary</td>
-	<td>Coinsurance Options</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=span.js-glossary</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=p.glossary-definition</td>
-	<td>Your share of costs for a covered service, typically after you meet your deductible and copayment charges. For example, once you meet your deductible, you might pay 20% and your health insurance plan pays 80%, based on the plan you choose. Once you have met your plan's annual out-of-pocket maximum, your plan pays 100% of the costs for covered services.</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=a.glossary-x.js-popover-x</td>
+	<td>css=div.quote-plan-price</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>//*[contains(text(),'Max Coverage Options')]</td>
+	<td>link=Select This Plan</td>
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>css=span.plan-info-label</td>
+	<td>Deductible</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']/ul/li/div/div[*]/ul/li[2]/span</td>
+	<td>Coinsurance</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-quote-plans-container']</td>
+	<td>*Max Out of Pocket*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//a[contains(text(),'Policy Max')]</td>
+	<td>*Policy Max*</td>
+</tr>
+<tr>
 	<td>click</td>
-	<td>//*[contains(text(),'Max Coverage Options')]</td>
+	<td>//a[contains(text(),'Policy Max')]</td>
 	<td></td>
 </tr>
 <tr>
@@ -143,146 +243,55 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=a.glossary-x.js-popover-x</td>
+	<td>link=×</td>
 	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//a[contains(text(),'Office Visit Copay')])[2]</td>
+	<td>*Office Visit Copay*</td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
-	<td>//*[contains(text(),'Available Plans')]</td>
+	<td>verifyText</td>
+	<td>//a[contains(text(),'Urgent Care Visit Copay')]</td>
+	<td>*Urgent Care Visit Copa*</td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
 	<td></td>
 </tr>
+<!--
+<tr>
+	<td>verifyText</td>
+	<td>link=Dental Savings Program</td>
+	<td>Dental Savings Program</td>
+</tr>
+-->
 <tr>
 	<td>click</td>
-	<td>//*[@data-glossary='shortTerm.deductible']</td>
+	<td>link=(edit)</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>css=p.glossary-definition</td>
-	<td>The amount you pay before your health insurance plan begins to pay for the services you receive. Not everything you pay (such as your premium and copay) counts toward your deductible. For example, if your deductible is $1,000, your plan won't pay anything until you've met your $1,000 deductible for covered healthcare services subject to the deductible.</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=a.glossary-x.js-popover-x</td>
+	<td>refreshAndWait</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//*[@data-glossary='shortTerm.outOfPocketMax']</td>
+	<td>verifyTitle</td>
+	<td>Short Term Health Insurance: Find a Short Term Plan In Minutes</td>
 	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=p.glossary-definition</td>
-	<td>The money you pay out of your own pocket when you get medical care. Out-of-pocket costs include deductibles, coinsurance, and copayments. Most health insurance plans have a cap on the total out-of-pocket costs you pay during your coverage period. This is often called your Max Out-of-Pocket or Out-of-Pocket Max.</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=a.glossary-x.js-popover-x</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@data-glossary='shortTerm.premium']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=p.glossary-definition</td>
-	<td>Also known as 'Premium', it is the fixed amount you pay to have health insurance. You pay your premium even if you don't receive any medical care. If you have selected the monthly payment option, this is the amount that you must pay monthly. If you have selected the single up-front payment option, this is the total amount of the policy.</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=a.glossary-x.js-popover-x</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@class='c-product-unit__table-row']/div[1]</td>
-	<td>*</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@class='c-product-unit__table-row']/div[3]</td>
-	<td>*K/*/*K/*K*</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@class='c-product-unit__table-row']/div[4]</td>
-	<td>$*</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@class='c-product-unit__table-row']/div[5]</td>
-	<td>$*</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@class='c-product-unit__table-row']/div[6]</td>
-	<td>$*</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=span.c-product-unit__more-plans</td>
-	<td>More Plans</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=span.c-product-unit__more-plans</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//*[contains(text(),'Less Plans')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[contains(text(),'Less Plans')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=p.c-product-unit__small-header</td>
-	<td>Plan Highlights</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//p[@class='c-product-unit__small-header']/following::*[@class='c-product-unit__feature-list']/li[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//p[@class='c-product-unit__small-header']/following::*[@class='c-product-unit__feature-list']/li[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//p[@class='c-product-unit__small-header']/following::*[@class='c-product-unit__feature-list']/li[3]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//p[@class='c-product-unit__small-header']/following::*[@class='c-product-unit__feature-list']/li[4]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>xpath=(//button[@type='submit'])[2]</td>
-	<td>See Plan Details</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=button.js-select-button.quote-plan-buy</td>
-	<td>Select Plan</td>
-</tr>
-<tr>
-	<td>verifyAttribute</td>
-	<td>//*[contains(@class,'js-brochure-link c-product-unit__brochure')]@href</td>
-	<td>/term-health-insurance/plan-brochure/*.pdf</td>
 </tr>
 
 <!-------------------Hins modify ------------------------->
+<tr>
+	<td>click</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>clickAndWait</td>
 	<td>link=(edit)</td>
@@ -302,7 +311,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
+	<td>sendKeys</td>
 	<td>id=dob-0</td>
 	<td>01/01/1985</td>
 </tr>
@@ -316,10 +325,11 @@
 	<td>xpath=.//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
+	
+	
 	
 	
 	

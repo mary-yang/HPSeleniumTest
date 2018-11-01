@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Census Page/Standalone_Dental_Census_page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Census Page/Dental</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">Standalone_Dental</td></tr>
 </thead><tbody>
@@ -7,7 +7,11 @@
 	<td>var d = new Date();d.getMonth(d.setMonth(d.getMonth()+2)) +'/'+ '01' +'/'+ d.getFullYear();</td>
 	<td>today</td>
 </tr>
-
+<tr>
+	<td>echo</td>
+	<td>${today}</td>
+	<td></td>
+</tr>
 <tr>
 	<td>open</td>
 	<td>${ENV}/api/context/clear</td>
@@ -218,6 +222,9 @@
 </body>
 </html>
 
+	
+	
+	
 	
 	
 	
