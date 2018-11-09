@@ -1,3 +1,3 @@
-"Affiliate_url","state","state1","zipcode","carrierid","DOB","uri"
-"##http://agilehealthinsurance.7eer.net/c/163375/207594/3530","Illinois","IL","60001","carrier-everest-","03/06/1995","${uri}"
-"http://agilehealthinsurance.7eer.net/c/163375/207594/3530","Colorado","CO","80219","carrier-lifeshield-","03/06/1995","${uri}"
+"Affiliate_url","state","state1","zipcode","carrierid","DOB","uri","productId"
+"##http://agilehealthinsurance.7eer.net/c/163375/207594/3530","Illinois","IL","60001","carrier-everest-","03/06/1995","${uri}",""
+"http://agilehealthinsurance.7eer.net/c/163375/207594/3530","Colorado","CO","80219","lifeshield","03/06/1995","${uri}",""

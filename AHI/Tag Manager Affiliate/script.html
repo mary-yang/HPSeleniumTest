@@ -67,11 +67,7 @@
 	<td>link=Quote &amp; Save Today</td>
 	<td></td>
 </tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=h1.census-main-heading</td>
-	<td>Compare Health Insurance Quotes</td>
-</tr>
+
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
@@ -117,53 +113,23 @@
 	<td>2000</td>
 	<td></td>
 </tr>
+<!--------------------Quote Page--------------------->
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
+<!--------------------Plan Detail  Page--------------------->
 <tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=${carrierid}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
+	<td>storeText</td>
+	<td>css=h1.plan-details-header-name</td>
+	<td>planname</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=ul.quote-all-plans-list.js-plans-list > li.quote-plan-container.js-plan-unit > div.quote-plan > div.quote-plan-body > div.quote-plan-carrier > h3.quote-plan-name > a</td>
-	<td>planname</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
 </tr>
-
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h1</td>
-	<td>${planname}</td>
-</tr>
-
 <tr>
 	<td>click</td>
 	<td>id=plan-details-primary-apply</td>
@@ -175,17 +141,14 @@
 	<td></td>
 </tr>
 
+<!--------------------Apply Page--------------------->
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>include</td>
+	<td>AHI/Include/STM Apply</td>
 	<td></td>
 </tr>
+<!--------------------App Pages--------------------->
 
-<tr>
-	<td>clickAndWait</td>
-	<td>id=applyButton</td>
-	<td></td>
-</tr>
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Name</td>
@@ -194,6 +157,21 @@
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Get URI</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;link=No Thanksquot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=No Thanks</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -251,6 +229,7 @@
 	<td></td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>waitForText</td>
 	<td>css=h3.reset.app-page-heading</td>
@@ -277,11 +256,6 @@
 	<td>label=08</td>
 </tr>
 <tr>
-	<td>sendKeys</td>
-	<td>id=member-P-1-lbs</td>
-	<td>100</td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>id=address</td>
 	<td>${Add}</td>
@@ -297,9 +271,14 @@
 	<td>${City}</td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>id=primaryPhone</td>
 	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lbs</td>
+	<td>100</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -313,7 +292,7 @@
 </tr>
 <tr>
 	<td>include</td>
-	<td>AHI/Include/Use Credit Card</td>
+	<td>AHI/Include/UseByPassCard</td>
 	<td></td>
 </tr>
 <tr>
@@ -329,7 +308,12 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
+	<td>xpath=(//a[contains(text(),'Add')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
@@ -380,7 +364,11 @@
 	<td>10000</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-app-confirmation']</td>
+	<td>*Congratulations*</td>
+</tr>
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Check ConversionPixel</td>
@@ -388,8 +376,10 @@
 </tr>
 </tbody></table>
 </body>
-</html>
-
+</html>	
+	
+	
+	
 	
 	
 	
