@@ -1,0 +1,161 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/Test/bestseller-stm</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${ENV}/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote & Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare Health Insurance Quotes*</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1981</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}//term-health-insurance/quote?redirect=2&_ga_variation=2&filter[extendedDuration]=false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>var h = $(document).height()-$(window).height();$(document).scrollTop(h);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>var h = $(document).height()-$(window).height();$(document).scrollTop(h);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>var h = $(document).height()-$(window).height();$(document).scrollTop(h);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=//div[@class='c-plan-unit-v3__best-seller']</td>
+	<td>cnt</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${cnt}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<=${cnt};i++)
+	{writeSelenium("storeAttribute","xpath=(//div[@class='c-plan-unit-v3__best-seller'])["+i+"]/ancestor::*[@class='c-plan-unit-v3__table']/descendant::*[@class='js-price-breakdown c-plan-unit-v3__plan-price']@data-planname","Bestsellername"+i+"");}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
