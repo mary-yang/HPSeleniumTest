@@ -42,16 +42,15 @@ sanity4/24</td>
 	<td>css=button.js-add-extended.c-addon__add-button</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent('
-xpath=(//img[contains(@src,'https://cumulus.agilehealthinsurance.com/teladoc')])[2]')</td>
+	<td>verifyElementPresent("//h4[contains(text(),'Telemedicine Option')]")</td>
 	<td></td>
 </tr>
 
+
 <tr>
-	<td>storetext</td>
+	<td>storeText</td>
 	<td>//body[@id='apply']/main/div[2]/div[2]/div/div/ul/li[2]/div/div/div[4]/div</td>
 	<td>teladocPrice</td>
 </tr>
@@ -90,13 +89,13 @@ xpath=(//img[contains(@src,'https://cumulus.agilehealthinsurance.com/teladoc')])
 </tr>
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent('
-xpath=(//img[contains(@src,'https://cumulus.agilehealthinsurance.com/teladoc')])[2]')</td>
+	<td>verifyElementPresent("//h4[contains(text(),'Telemedicine Option')]")</td>
 	<td></td>
 </tr>
 
+
 <tr>
-	<td>storetext</td>
+	<td>storeText</td>
 	<td>//body[@id='apply']/main/div[2]/div[2]/div/div/ul/li/div/div/div[4]/div</td>
 	<td>teladocPrice</td>
 </tr>
@@ -163,6 +162,14 @@ xpath=(//img[contains(@src,'https://cumulus.agilehealthinsurance.com/teladoc')])
 -------------->
 	</tbody>
 </table>
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

@@ -8,19 +8,19 @@
 	<td></td>
 </tr>
 <tr>
-	<td>open</td>
-	<td>${ENV}</td>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Quote &amp; Save Today</td>
+	<td>link=Health Benefit Insurance</td>
 	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=h1.census-main-heading</td>
-	<td>Compare Health Insurance Quotes*</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -48,13 +48,18 @@
 	<td>blur</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>xpath=//*[@id='js-see-plans']</td>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyLocation</td>
-	<td>*/quote*</td>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
 	<td></td>
 </tr>
 <tr>
@@ -63,45 +68,11 @@
 	<td></td>
 </tr>
 <tr>
-	<td>open</td>
-	<td>${ENV}/health-benefit-insurance/quote</td>
+	<td>include</td>
+	<td>AHI/Include/HBI Quote</td>
 	<td></td>
 </tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id="featuredPlan"]/li/div/div[2]/div[1]/h3/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//*[@id="plan-details-primary-apply"]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//*[@id="applyButton"]/span[3]</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>pause</td>
 	<td>3000</td>
@@ -121,6 +92,11 @@
 	<td>type</td>
 	<td>id=credit-card-number</td>
 	<td>4111 1111 1111 1111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-cvv</td>
+	<td>111</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -241,6 +217,10 @@
 </tbody></table>
 </body>
 </html>	
+	
+	
+	
+	
 	
 	
 	
