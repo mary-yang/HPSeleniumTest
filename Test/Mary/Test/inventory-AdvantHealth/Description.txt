@@ -1,0 +1,5 @@
+The current markets that are available are-  
+Everest (28) : AL, AR, AZ(6),CO(6),DC, DE, FL, GA, IL, IN(6),IA, KY,LA(6),MN(6),MO((6)) MS, ND(6),NE,NV(6), OH(6), OK(6), OR, PA, SC(11), TX, VA, WI, WV,
+
+https://www.pivotaltracker.com/story/show/141633741
+CO,DE,DC,ID,ME,MN,NE,NH,OR,SD,WA,WI,WV
