@@ -1,6 +1,5 @@
 Docs:
-https://www.pivotaltracker.com/story/show/93239078
-https://docs.google.com/spreadsheets/d/1vpUscJ3swmhX2tczVZ-2JEfr9srWlLFAI7f-HKxTsUU/edit#gid=1359384448
+https://www.pivotaltracker.com/n/projects/1258602/stories/161614655
+https://docs.google.com/document/d/1Wqvmr8_QiqGUVTswqS5wE-Kfps0T6IokHLnWI6MRc0U/edit
 
-https://docs.google.com/document/d/11SxLtClFyPVO0xzIHDPvY3KUSKj8cDVkJwhvbHNeFLY/edit
-https://docs.google.com/a/healthpocket.com/spreadsheets/d/1azJRZ53qCWzR1gCBXw3rAGeLwxnU7IrOhHycmjkupOI/edit?usp=sharing
+https://docs.google.com/spreadsheets/d/1JpCnemNH-0cOG4sBjlnWcPfdnLtT4VNToA-TWi0ccYU/edit#gid=630036244
