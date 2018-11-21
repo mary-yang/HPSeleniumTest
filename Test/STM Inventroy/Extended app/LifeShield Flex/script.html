@@ -114,8 +114,23 @@ sanity4/24</td>
 	<td>duration</td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>css=.js-add-teladoc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.btn-remove-cancel</td>
+	<td></td>
+</tr>
+<tr>
 	 <td>storeText</td>
-	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr[10]/td[2]/span</td>
+	<td>xpath=//tr[@class='c-price-table__border-row c-price-table__total']/td[2]/span</td>
 	<td>premium</td>
 </tr>
 <tr>
@@ -188,6 +203,11 @@ sanity4/24</td>
 	<td>css=li.green-check > div > div > p > span.emphasize</td>
 	<td>${premium}</td>
 </tr>
+<tr>
+	<td>storeText</td>
+	<td>css=li.green-check > div > div > p > span.emphasize</td>
+	<td>${finalPrice}</td>
+</tr>
 
 <tr>
 	<td>include</td>
@@ -201,6 +221,9 @@ sanity4/24</td>
 </tr>
 	</tbody>
 </table>
+	
+	
+	
 	
 	
 	
