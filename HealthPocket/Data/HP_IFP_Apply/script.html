@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/IFP/ifp_apply</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/Data/HP_IFP_Apply</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">medicare_quote_ads</td></tr>
 </thead><tbody>
@@ -10,22 +10,32 @@
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.healthpocket.com/individual-health-insurance/quote/${year}?zip=${zipcode}</td>
+	<td>http://${ENV}.healthpocket.com/individual-health-insurance/quote/2019?zip=${zipcode}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//ul[@id='plans']/li[2]/a/span/button</td>
+	<td>css=a.js-details-button.c-plan-unit__plan-name</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>storeLocation</td>
+	<td>url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${url}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Select</td>
+	<td>xpath=(//a[contains(text(),'Apply Now')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -35,7 +45,7 @@
 </tr>
 <tr>
     <td>IF</td>
-    <td>verifyElementPresent(&quot;link=See All Short Term Health Plans&quot;)</td>
+    <td>verifyElementPresent(&quot;link=See All Short Term Medical Insurance Plans&quot;)</td>
     <td></td>
 </tr>
 
@@ -44,11 +54,10 @@
     <td>link to STM page</td>
     <td>result</td>
 </tr>
-
 <tr>
-    <td>store</td>
     <td>echo</td>
     <td>${result}</td>
+    <td></td>
 </tr>
 <tr>
     <td>ENDIF</td>
@@ -57,7 +66,7 @@
 </tr>
 <tr>
     <td>IF</td>
-    <td>verifyElementPresent(&quot;link=See All Health Benefit Plans&quot;)</td>
+    <td>verifyElementPresent(&quot;link=See All Health Benefit Indemnity Insurance Plans&quot;)</td>
     <td></td>
 </tr>
 <tr>
@@ -66,9 +75,9 @@
     <td>result</td>
 </tr>
 <tr>
-    <td>store</td>
     <td>echo</td>
     <td>${result}</td>
+    <td></td>
 </tr>
 <tr>
     <td>ENDIF</td>
@@ -77,7 +86,7 @@
 </tr>
 <tr>
     <td>IF</td>
-    <td>verifyElementPresent(&quot;css=span.no-more-plan-bang&quot;)</td>
+    <td>verifyElementNotPresent(&quot;//div[@id='applyBody']/div/div/section/div/div[2]&quot;)</td>
     <td></td>
 </tr>
 
@@ -87,16 +96,15 @@
     <td>result</td>
 </tr>
 <tr>
-    <td>store</td>
     <td>echo</td>
     <td>${result}</td>
+    <td></td>
 </tr>
 <tr>
     <td>ENDIF</td>
     <td></td>
     <td></td>
 </tr>
-
 <tr>
   <td>verifyEval</td>
   <td>var b=&quot;${result}&quot;;b=b.match(&quot;${expect}&quot;)</td>
@@ -105,54 +113,6 @@
 </tbody></table>
 </body>
 </html>
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

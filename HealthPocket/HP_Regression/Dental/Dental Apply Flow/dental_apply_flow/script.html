@@ -14,12 +14,12 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//div[@id='plans']/ul/li/a/span/button</td>
+	<td>link=Select</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=Continue Online</td>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Apply Now')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -47,203 +47,12 @@
 	<td>*dental-insurance-quotes?utm_source=healthpocket*</td>
 	<td></td>
 </tr>
-<!--  Dental apply is disable on 2016/04
-<tr>
-	<td>verifyVisible</td>
-	<td>link=CONTINUE ONLINE</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeAttribute</td>
-	<td>//div[@id=&quot;online&quot;]/div[1]/a/@href</td>
-	<td>herf</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${herf}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>${herf}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyLocation</td>
-	<td>*&amp;affiliateid=2155</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>name=buttonApplyNow</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCustomerFName</td>
-	<td>John</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCustomerMInit</td>
-	<td>d</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCustomerLName</td>
-	<td>Smith</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCustomerCity</td>
-	<td>Sacramento</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCustomerAddress1</td>
-	<td>1 Main St.</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCustomerAddress2</td>
-	<td>6431 W</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCustomerPhone1Area</td>
-	<td>916</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCustomerPhone1Prefix</td>
-	<td>551</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCustomerPhone1Suffix</td>
-	<td>6668</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCustomerEmail</td>
-	<td>damon.zheng@suryani.cn</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>name=selectCensusGender0</td>
-	<td>label=F</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCensusDobMonth0</td>
-	<td>10</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCensusDobDay0</td>
-	<td>10</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCensusDobYear0</td>
-	<td>1980</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCensusDentistID10</td>
-	<td>1098</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCensusDentistID20</td>
-	<td>1187</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>name=selectCensusStudent0</td>
-	<td>label=N</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>name=btnContinue</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>name=rdoPayTypeFrequencyInitial</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>name=rdoPayTypeFrequencyOngoing</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>name=btnContinue</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCCAccountNumber</td>
-	<td>4457010000000009</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCCAccountName</td>
-	<td>John Smith</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>name=selectCCExpMonth</td>
-	<td>label=10</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>name=selectCCExpYear</td>
-	<td>label=2022</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCCCvcNum</td>
-	<td>349</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>name=selectCCAccountType</td>
-	<td>label=Visa</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtCCPayeeSignature</td>
-	<td>John Smith</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtAuthorizeName2</td>
-	<td>John Smith</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=txtAuthorizeName2</td>
-	<td>John d Smith</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>name=btnSubmit</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h2</td>
-	<td>Your application has been submitted...</td>
-</tr>
- 
---->
 </tbody></table>
 </body>
 </html>
 
+	
+	
 	
 	
 	

@@ -12,11 +12,64 @@
 	<td>http://${ENV}.healthpocket.com/medicare/quote/${year}?zip=90001</td>
 	<td></td>
 </tr>
+<tr>
+	<td>click</td>
+	<td>//li[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//*[@class="c-loading-bar c-loading-bar--bright is-hidden"]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//label[contains(text(),'below $100')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//label[contains(text(),'below $100')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@id="js-filter-annual-cost-popover"]/form/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//button[contains(text(),'below $100')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[3]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//*[@id="js-filter-company-popover"]/form/div/div/ul/li[1]/div/div[1]/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//*[@id="js-filter-company-popover"]/form/div/div/ul/li[1]/div/div[1]/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[3]/form/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//button[contains(text(),'1 Provider')]</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
-	
-	
 	
 	
 	

@@ -1,16 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head profile="http://selenium-ide.openqa.org/profiles/test-case">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="http://www.healthpocket.com" />
-<title>doctor_quote page</title>
-</head>
-<body>
-<table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/Doctor/doctor_quote page</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">doctor_quote page</td></tr>
+<tr><td rowspan="1" colspan="3">medicare_quote_ads</td></tr>
 </thead><tbody>
+<!--case1: sort-->
 <tr>
 	<td>open</td>
 	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
@@ -18,210 +10,116 @@
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.healthpocket.com/doctor-healthplan-finder/quote?zip=90001</td>
+	<td>http://${ENV}.healthpocket.com/doctor-healthplan-finder/quote?zip=${zipcode}</td>
 	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>//div[@id='genderFilter']/label[3]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyVisible</td>
-	<td>link=View Profile</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyVisible</td>
-	<td>//div[2]/a/img</td>
-	<td></td>
-</tr>
-<!--census-->
-<tr>
-	<td>verifyVisible</td>
-	<td>id=censusContainer</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyValue</td>
-	<td>id=zipcode</td>
-	<td>90001</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=distance</td>
-	<td>5 Miles10 Miles25 Miles</td>
-</tr>
-<!--title-->
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='pageBreadcrumb']/a</td>
-	<td>Home</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='pageBreadcrumb']/span</td>
-	<td>Find a Doctor(beta)</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=p.resultsRange</td>
-	<td>Showing * results</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=p.resultsRange</td>
-	<td>amount</td>
+	<td>//div[@id='js-plans-header']/div/div/div/h1</td>
+	<td>Doctor_Num</td>
 </tr>
-<tr>
-	<td>storeEval</td>
-	<td>'${amount}'.replace('Showing ','').replace(' results','')</td>
-	<td>aa</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h3.pageHeading</td>
-	<td>${aa} Doctors Found Within 5 miles of 90001</td>
-</tr>
-<!--filter-->
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='specialty']/div/p</td>
-	<td>Specialty</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='gender']/div/p</td>
-	<td>Gender</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='insuranceTypes']/div/p</td>
-	<td>Insurance Type</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='insuranceProvider']/div/p</td>
-	<td>Insurance Providers</td>
-</tr>
-<!--select gender as male-->
 <tr>
 	<td>click</td>
-	<td>//input[@value='M']</td>
+	<td>//div[2]/ul/li/button</td>
 	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>4500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyChecked</td>
-	<td>//input[@value='M']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=clearGender</td>
-	<td>Clear</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=p.gender</td>
-	<td>Male</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=#genderFilter &gt; span.filterCount</td>
-	<td>male_a</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>'${male_a}'.replace('(','').replace(')','')</td>
-	<td>aa</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h3.pageHeading</td>
-	<td>${aa} Doctors Found Within 5 miles of 90001</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=p.resultsRange</td>
-	<td>Showing ${aa} results</td>
-</tr>
-<!--select insurance type as Medicare-->
-<tr>
-	<td>click</td>
-	<td>//input[@value='medicare']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=clearInsuranceType</td>
-	<td>Clear</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>4000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyChecked</td>
-	<td>//input[@value='medicare']</td>
-	<td></td>
+	<td>//form/div/div/ul/li/div/label</td>
+	<td>MonthlyCost</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=clearInsuranceType</td>
+	<td>//form/button[2]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>4000</td>
+	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyNotChecked</td>
-	<td>//input[@value='medicare']</td>
+	<td>verifyText</td>
+	<td>//div[@id='js-census-bar']/div/div/div[2]/div[2]/ul/li[2]/button</td>
+	<td>${MonthlyCost}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[2]/button</td>
 	<td></td>
 </tr>
-<!--search a doctor with name-->
+<tr>
+	<td>click</td>
+	<td>//div[2]/form/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[3]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[3]/form/div/div/ul/li/div/label</td>
+	<td></td>
+</tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='providerResults']/div[3]/div/h2/a</td>
-	<td>name_0</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>'${name_0}'.split(' ')[0]</td>
-	<td>first_name</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${first_name}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=firstName</td>
-	<td>${first_name}</td>
+	<td>//div[3]/form/div/div/ul/li/div/label</td>
+	<td>Deductible</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=searchProviders</td>
+	<td>//div[3]/form/button[2]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>4000</td>
+	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=h2.providerName &gt; a</td>
-	<td>${name_0}</td>
+	<td>//div[@id='js-census-bar']/div/div/div[2]/div[2]/ul/li[3]/button</td>
+	<td>${Deductible}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[3]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[3]/form/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[3]/form/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
 </tr>
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
+	
+	

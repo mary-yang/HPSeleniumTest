@@ -12,135 +12,70 @@
 	<td>http://${ENV}.healthpocket.com/dental-insurance/california-quote</td>
 	<td></td>
 </tr>
-<!--delayed popup
-<tr>
-	<td>include</td>
-	<td>Denis/HealthPocket/include/dental_delayed_popup</td>
-	<td></td>
-</tr>
--->
 <tr>
 	<td>click</td>
-	<td>id=helpTab</td>
-	<td></td>
-</tr>
-<!--census-->
-<tr>
-	<td>verifyText</td>
-	<td>id=censusCompact</td>
-	<td>Personalize Your Quote zip code missing35 years / M EDIT</td>
-</tr>
-<!--census-zip code-->
-<tr>
-	<td>click</td>
-	<td>id=editProfile</td>
+	<td>xpath=//div[@id='js-census-bar']/div/div/div/ul/li[2]/button/span</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForVisible</td>
-	<td>id=location</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAt</td>
-	<td>id=location</td>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>id=location</td>
-	<td>90001</td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>css=a.location.selected</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=a.location.selected</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<!--applicant-->
-<tr>
-	<td>waitForVisible</td>
-	<td>id=dob-P-0</td>
-	<td></td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input</td>
+	<td>1</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>id=dob-P-0</td>
-	<td>10101980</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=submitCensus</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='censusDetailsSummary']/ul/li</td>
-	<td>90001 - Los Angeles, CA</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='censusDetailsSummary']/ul/li[2]</td>
-	<td>37 years / M</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=editProfile</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>//button[contains(text(),'+ Spouse')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>focus</td>
-	<td>//button[contains(text(),'+ Spouse')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>mouseOver</td>
-	<td>//button[contains(text(),'+ Spouse')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//button[contains(text(),'+ Spouse')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>id=dob-S-1</td>
-	<td></td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input</td>
+	<td>10</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>id=dob-S-1</td>
-	<td>10101978</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[2]</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[2]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[5]/div/div/div/div/ul/li[2]/div/form/div[2]/div/div/div[3]/ul/li[2]/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='submit'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-census-bar']/div/div/div[2]/div[2]/ul/li[2]/button</td>
+	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -149,79 +84,28 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=submitCensus</td>
+	<td>//div[2]/ul/li[2]/button</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>3000</td>
+	<td>waitForElementPresent</td>
+	<td>//button[contains(text(),'1 Applicant')]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//div[@id='censusDetailsSummary']/ul/li[2]</td>
-	<td>37 years / M + 1 Family Member</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=editProfile</td>
+	<td>clickAndWait</td>
+	<td>link=Select</td>
 	<td></td>
 </tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>//button[contains(text(),'+ Child')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>focus</td>
-	<td>//button[contains(text(),'+ Child')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>mouseOver</td>
-	<td>//button[contains(text(),'+ Child')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//button[contains(text(),'+ Child')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>id=dob-C-2</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=dob-C-2</td>
-	<td>01012010</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=submitCensus</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='censusDetailsSummary']/ul/li[2]</td>
-	<td>37 years / M + 2 Family Member</td>
-</tr>
-
 </tbody></table>
 </body>
 </html>
 
+	
+	
+	
+	
+	
 	
 	
 	

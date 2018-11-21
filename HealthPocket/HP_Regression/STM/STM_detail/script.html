@@ -15,77 +15,18 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=//div[@id='js-census-bar']/div/div/div/ul/li[2]/button/span</td>
+	<td>//a[contains(text(),'Select')]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//a[contains(text(),'Apply Now')])[2]</td>
 	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[2]</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
-	<td>9</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
-	<td>8</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
-	<td>0</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id="js-member-popover"]/form/div[2]/div/div/div[3]/ul/li[1]/div/label</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@type='submit'])[5]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//*[@id="js-plans"]/ul/li[1]/div/div[2]/div/a</td>
-	<td>PlanName</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//*[@id="js-plans"]/ul/li[1]/div/div[2]/div/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeLocation</td>
-	<td>url</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>&quot;${url}&quot;.substr(&quot;${url}&quot;.lastIndexOf(&quot;/&quot;)+1)</td>
-	<td>uri</td>
 </tr>
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	
