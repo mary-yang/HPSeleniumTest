@@ -38,6 +38,27 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>IF</td>
+	<td>verifyElementPresent('css=button.js-add-extended.c-addon__add-button')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.c-addon__heading</td>
+	<td>extendedInfo</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.js-add-extended.c-addon__add-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>IF</td>
 	<td>verifyElementPresent("//h4[@class='c-addon__h' and text()='Coverage Option']")</td>
 	<td></td>
 </tr>
@@ -61,26 +82,7 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent('css=button.js-add-extended.c-addon__add-button')</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=div.c-addon__heading</td>
-	<td>extendedInfo</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=button.js-add-extended.c-addon__add-button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>IF</td>
 	<td>verifyElementPresent("//h4[contains(text(),'Telemedicine Option')]")</td>
@@ -88,7 +90,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//body[@id='apply']/main/div[2]/div[2]/div/div/ul/li[2]/div/div/div[4]/div</td>
+	<td>//h4[@class='c-addon__h' and text()='Telemedicine Option']/following::div/div[4]/div</td>
 	<td>teladocPrice</td>
 </tr>
 <tr>
@@ -108,7 +110,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//body[@id='apply']/main/div[2]/div[2]/div/div/ul/li[3]/div/div/div[4]/div</td>
+	<td>//h4[@class='c-addon__h' and text()='Dental Option']/following::div/div[4]/div</td>
 	<td>dentalPrice</td>
 </tr>
 
@@ -180,5 +182,6 @@ sanity4/24</td>
 
 	
 
+	
 	
 	

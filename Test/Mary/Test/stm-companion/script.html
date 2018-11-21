@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/STM/UHC Applications - Not submit</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/Mary/Test/stm-companion</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -6,11 +6,7 @@ sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Open website</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Open website</td>
@@ -40,7 +36,7 @@ sanity4/24</td>
 <tr>
 	<td>sendKeys</td>
 	<td>id=dob-0</td>
-	<td>01/01/1980</td>
+	<td>${DOB}</td>
 </tr>
 <tr>
 	<td>fireEvent</td>
@@ -138,6 +134,11 @@ sanity4/24</td>
 	<td>xpath=//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
 <!--------------------Quote Page--------------------->
 <tr>
 	<td>include</td>
@@ -165,6 +166,14 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
+
+<!--------------------Apply Page--------------------
+<tr>
+	<td>include</td>
+	<td>AHI/Include/STM Apply</td>
+	<td></td>
+</tr>
+---------------->
 <!----------------------fast first page----------------------->
 <tr>
 	<td>storeAttribute</td>
@@ -198,35 +207,79 @@ sanity4/24</td>
 	<td></td>
 </tr>
 
-<!--------------------Apply Page--------
+<!--------------------App Pages--------------------
 <tr>
 	<td>include</td>
-	<td>AHI/Include/STM Apply</td>
+	<td>AHI/Include/Underwriting</td>
 	<td></td>
 </tr>
-
-<tr>
-	<td>include</td>
-	<td>AHI/Include/STM App Page 1</td>
-	<td></td>
-</tr>
----------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Name</td>
 	<td></td>
 </tr>
-
-
 <tr>
-	<td>type</td>
-	<td>id=member-P-1-firstName</td>
-	<td>Test</td>
+	<td>include</td>
+	<td>AHI/Include/Get URI</td>
+	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>{var x=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;; var tmp=&quot;&quot;; for (i=0;i&lt;8;i++) tmp+=x.charAt(Math.ceil(51*Math.random()));tmp;}</td>
-	<td>LastName</td>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-1']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-2']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-3']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-4']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-5']/div/button</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+----------->
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 2. Applicant Info</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@value='']</td>
+	<td>Test-123</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -236,22 +289,22 @@ sanity4/24</td>
 <tr>
 	<td>select</td>
 	<td>id=member-P-1-ft</td>
-	<td>label=06</td>
+	<td>label=07</td>
 </tr>
 <tr>
 	<td>select</td>
 	<td>id=member-P-1-in</td>
-	<td>label=02</td>
+	<td>label=08</td>
 </tr>
 <tr>
-	<td>type</td>
+	<td>sendKeys</td>
 	<td>id=member-P-1-lbs</td>
-	<td>190</td>
+	<td>100</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=member-S-2-firstName</td>
-	<td>Test</td>
+	<td>Test-123</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -278,7 +331,7 @@ sanity4/24</td>
 <tr>
 	<td>type</td>
 	<td>id=member-C-1-firstName</td>
-	<td>Test</td>
+	<td>Test-123</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -305,7 +358,7 @@ sanity4/24</td>
 <tr>
 	<td>type</td>
 	<td>id=member-C-2-firstName</td>
-	<td>Test</td>
+	<td>Test-123</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -329,6 +382,7 @@ sanity4/24</td>
 </tr>
 
 
+
 <tr>
 	<td>type</td>
 	<td>id=address</td>
@@ -350,13 +404,8 @@ sanity4/24</td>
 	<td>${Tel}</td>
 </tr>
 <tr>
-	<td>click</td>
+	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
@@ -365,9 +414,14 @@ sanity4/24</td>
 	<td>4358806686493800</td>
 </tr>
 <tr>
-	<td>select</td>
-	<td>id=expiration-month</td>
-	<td>label=02</td>
+	<td>type</td>
+	<td>id=credit-card-first</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit-card-last</td>
+	<td>test</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -376,13 +430,18 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=credit-card-charge-date</td>
-	<td>label=7</td>
+	<td>id=expiration-month</td>
+	<td>label=02</td>
 </tr>
 <tr>
 	<td>click</td>
 	<td>id=js-same-billing</td>
 	<td></td>
+</tr>
+<tr>
+        <td>type</td>
+	<td>id=credit-card-cvv</td>
+	<td>123</td>
 </tr>
 
 <tr>
@@ -391,9 +450,46 @@ sanity4/24</td>
 	<td></td>
 </tr>
 
+
+
+
 </tbody></table>
 </body>
-</html>	
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	
 	
@@ -409,6 +505,10 @@ sanity4/24</td>
 	
 	
 	
+	
+	
+	
+
 	
 	
 	

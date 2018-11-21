@@ -88,58 +88,33 @@
 </tr>
 <!--------------------App Pages--------------------->
 <tr>
-	<td>include</td>
-	<td>AHI/Include/Underwriting</td>
-	<td></td>
-</tr>
-<tr>
 	<td>verifyLocation</td>
 	<td>*application*</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[1]/div/button[1]</td>
-	<td></td>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//h2[contains(text(),'36 Month Duration Acknowledgement')]&quot;)</td>
+    <td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[2]/div/button[1]</td>
+	<td>id=i-acknowledge</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[3]/div/button[1]</td>
+	<td>clickAndWait</td>
+	<td>//button[@class='c-consecutive-modal__continue']</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[4]/div/button[1]</td>
-	<td></td>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[5]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[5]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='js-app-page-eligibile']/p</td>
-	<td>Congratulations*</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>4000</td>
+	<td>include</td>
+	<td>AHI/Include/STM App Page 1</td>
 	<td></td>
 </tr>
 <tr>
@@ -579,6 +554,7 @@
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	
