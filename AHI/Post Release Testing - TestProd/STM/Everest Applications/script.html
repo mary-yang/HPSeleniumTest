@@ -169,6 +169,41 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
+<<<<<<< HEAD
+=======
+<!----------------------fast first page----------------------->
+<tr>
+	<td>storeAttribute</td>
+	<td>//a[@class='c-apply-button btn js-apply-button hide h-optimize__variant']@href</td>
+	<td>applyUrl</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}${applyUrl}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//span[@class='c-radio-button__label' and text()='No']</td>
+	<td>qNum</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${qNum}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<=${qNum};i++)
+	{writeSelenium("click","xpath=(//span[@class='c-radio-button__label' and text()='No'])["+i+"]","");}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+>>>>>>> 64c2e7f4cbf8fe5df098083e388c16b5293f8f87
 
 <tr>
 	<td>include</td>
@@ -465,7 +500,10 @@ sanity4/24</td>
 	
 	
 	
+<<<<<<< HEAD
 	
 	
 	
+=======
+>>>>>>> 64c2e7f4cbf8fe5df098083e388c16b5293f8f87
 	
