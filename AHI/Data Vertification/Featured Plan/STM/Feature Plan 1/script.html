@@ -64,17 +64,17 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
+	<td>//div/h1[contains(text(),'Short Term Health Insurance Plans')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>link=Featured</td>
-	<td>Featured</td>
+	<td>//*[@id="js-group-"]/div/div[2]</td>
+	<td>*featured*</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//ul[@id='featuredPlan']/li/div/div[2]/div/h3/a</td>
+	<td>//td[2]/a[contains(@href, '/term-health-insurance/plan/')]</td>
 	<td>featureplanname</td>
 </tr>
 <tr>
@@ -85,19 +85,3 @@ sanity4/24</td>
 
 	</tbody>
 </table>
-
-
-
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
