@@ -119,9 +119,10 @@ sanity4/24</td>
 	<td>//div[@id='disclaimer-container']/div[7]</td>
 	<td>${ACATAX}</td>
 </tr>
+
 <tr>
-	<td>click</td>
-	<td>//li[contains(@id, ${productId})]/descendant::*[contains(text(),'See Plan Details')]</td>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
 	<td></td>
 </tr>
 
@@ -157,11 +158,18 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
+<!----------add NG Dental------------------------------->
 <tr>
-	<td>clickAndWait</td>
-	<td>id=js-see-plans</td>
+	<td>click</td>
+	<td>//button[@class='js-add-dental c-addon__add-button ']</td>
 	<td></td>
 </tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>verifyText</td>
 	<td>css=div.disclaimer-text.</td>
@@ -189,7 +197,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>id=applyButton</td>
+	<td>css=span.js-apply-text.apply-button-text</td>
 	<td></td>
 </tr>
 <tr>
@@ -511,6 +519,8 @@ sanity4/24</td>
 	
 	
 
+	
+	
 	
 	
 	
