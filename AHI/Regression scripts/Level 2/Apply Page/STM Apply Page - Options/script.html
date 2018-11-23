@@ -1,0 +1,364 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 2/Apply Page/STM Apply Page - Options</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote &amp; Save Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare Health Insurance Quotes*</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1975</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<!--------------------Quote Page--------------------->
+<tr>
+	<td>include</td>
+	<td>AHI/Include/STM Quote</td>
+	<td></td>
+</tr>
+<!--------------------Plan Detail  Page--------------------->
+<tr>
+	<td>storeText</td>
+	<td>css=h1.plan-details-header-name</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<!--------------------Apply Page- store price-------------------->
+<tr>
+	<td>storeText</td>
+	<td>//table[@class='c-price-table']/tbody/tr/td</td>
+	<td>planName</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//table[@class='c-price-table']/tbody/tr[2]/td[2]</td>
+	<td>monthlyPremium</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//table[@class='c-price-table']/tbody/tr[3]/td[2]</td>
+	<td>monthlyFee</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h4[@class='c-addon__h' and text()='Coverage Option']/following::div/div[4]/div</td>
+	<td>waiverPrice</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h4[@class='c-addon__h' and text()='Telemedicine Option']/following::div/div[4]/div</td>
+	<td>teladocPrice</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h4[@class='c-addon__h' and text()='Dental Option']/following::div/div[4]/div</td>
+	<td>dentalPrice</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${waiverPrice}'.match(/\d+.\d+/)</td>
+	<td>waiverPrice</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${teladocPrice}'.match(/\d+.\d+/)</td>
+	<td>teladocPrice</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${dentalPrice}'.match(/\d+.\d+/)</td>
+	<td>dentalPrice</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${monthlyPremium}'.match(/\d+.\d+/)</td>
+	<td>monthlyPremium</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${monthlyFee}'.match(/\d+.\d+/)</td>
+	<td>monthlyFee</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${planName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${monthlyPremium}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${monthlyFee}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${waiverPrice}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${teladocPrice}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${dentalPrice}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div/a[contains(text(),'Coverage Duration')]/following::div</td>
+	<td>36 Months</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@class='c-price-table__gray' and text()='Coverage Option']/following::tr</td>
+	<td>None$0</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@class='c-price-table__gray' and text()='Telemedicine Benefits']/following::tr</td>
+	<td>Teladoc$${teladocPrice}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@class='c-price-table__gray' and text()='Dental Benefits']/following::tr</td>
+	<td>None$0</td>
+</tr>
+<!--------------------Apply Page- change options-------------------->
+<tr>
+	<td>click</td>
+	<td>//button[@class='js-add-pre-x c-addon__add-button']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@class='c-price-table__gray' and text()='Coverage Option']/following::tr</td>
+	<td>Pre-Existing Conditions Waiver$${waiverPrice}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class='js-add-teladoc c-addon__add-button is-selected']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=reallySave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@class='c-price-table__gray' and text()='Telemedicine Benefits']/following::tr</td>
+	<td>None$0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class='js-add-dental c-addon__add-button ']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@class='c-price-table__gray' and text()='Dental Benefits']/following::tr</td>
+	<td>Foundation Dental - Protector I$${dentalPrice}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class='js-add-teladoc c-addon__add-button']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@class='c-price-table__gray' and text()='Telemedicine Benefits']/following::tr</td>
+	<td>Teladoc$${teladocPrice}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var total = Number('${monthlyPremium}')+Number('${monthlyFee}')+Number('${waiverPrice}')+Number('${teladocPrice}')+Number('${dentalPrice}'); total.toFixed(2);</td>
+	<td>total</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${total}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@class='c-price-table__border-row c-price-table__total']/td[2]</td>
+	<td>$${total}</td>
+</tr>
+
+<!--------------------Apply Page--------------------->
+<tr>
+	<td>include</td>
+	<td>AHI/Include/STM Apply</td>
+	<td></td>
+</tr>
+<!--------------------App Pages--------------------->
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Go to end - LifeShield</td>
+	<td></td>
+</tr>
+<!---------------confirmation page -------------------------------->
+<tr>
+	<td>storeEval</td>
+	<td>var monPrice=Number('${monthlyPremium}')+Number('${monthlyFee}')+Number('${waiverPrice}');monPrice.toFixed(2);</td>
+	<td>monthlyCharge</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${monthlyCharge}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//ul[@class='app-confirmation-enrollment-info']/li/div/div/p</td>
+	<td>Note: You will be charged $${monthlyCharge} immediately for your first month of coverage</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//ul[@class='app-confirmation-enrollment-info']/li/div/div/p[2]</td>
+	<td>Future charges to your account of $${monthlyCharge} will be made on the 24th of each month starting *</td>
+</tr>
+<!--------------------------------------------------------------------------------------->
+<tr>
+	<td>include</td>
+	<td>AHI/Include/BO App Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
+	<td>Successfully Enrolled</td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/BO App Info Validatation</td>
+	<td></td>
+</tr>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
