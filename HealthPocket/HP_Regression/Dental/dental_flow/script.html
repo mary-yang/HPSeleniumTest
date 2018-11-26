@@ -19,89 +19,84 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=span.amount</td>
+	<td>css=div.c-plan-unit__price</td>
 	<td>price</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=span.planName</td>
+	<td>//div[@id='js-plans']/ul/li/div/div[2]/div/a</td>
 	<td>plan_name</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=p.planText</td>
+	<td>//li[2]/div[2]</td>
 	<td>plan_type</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>css=p.planCost</td>
+	<td>link=Select</td>
 	<td></td>
 </tr>
 <!--plan detail-->
 <tr>
 	<td>verifyText</td>
-	<td>css=h1.planName</td>
+	<td>css=h1.c-plan-details__h1</td>
 	<td>${plan_name}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=span.amount</td>
+	<td>css=div.c-plan-details__price</td>
 	<td>${price}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section/div/div/div[3]/div[2]</td>
+	<td>//div[2]/div/div[2]/div/div/div/table/tbody/tr/td[2]</td>
 	<td>${plan_type}</td>
 </tr>
 <tr>
 	<td>verifyVisible</td>
-	<td>link=Select</td>
+	<td>xpath=(//a[contains(text(),'Apply Now')])[2]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=h2.details-section-header</td>
+	<td>css=h2.c-collapse__header-text</td>
 	<td>*Benefits &amp; Coverage</td>
 </tr>
 <tr>
 	<td>clickAt</td>
-	<td>link=+ See All Coverage Details</td>
+	<td>//div[2]/a/h2</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//section[@id='fullDetailsCollapse']/div/h2/div</td>
+	<td>//div[2]/a/h2</td>
 	<td>Cost & Coverage</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=+ See All Coverage Details</td>
+	<td>//div[3]/a/h2</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='detailsContainer']/div[3]/div[2]/article/section[3]</td>
-	<td>Dentist Directory*</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='detailsContainer']/div[3]/div[2]/article/section[4]</td>
+	<td>//div[4]/a/h2</td>
 	<td>Similar Plans*</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//*[@id='detailsContainer']/div[3]/div[2]/article/section[5]</td>
+	<td>//div[5]/a/h2</td>
 	<td>Related Articles*</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//*[@id='detailsContainer']/div[3]/div[2]/article/section[6]</td>
+	<td>//div[6]/a/h2</td>
 	<td>Related Searches*</td>
 </tr>
 <!--apply page-->
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Select</td>
+	<td>xpath=(//a[contains(text(),'Apply Now')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -110,62 +105,31 @@
 	<td>${plan_name}</td>
 </tr>
 <tr>
-	<td>verifyText</td>
+	<td>storeText</td>
 	<td>css=dd</td>
-	<td>${price}</td>
+	<td>price_apply</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>parseFloat('${price}'.match(/\d+.\d+/))-parseFloat('${price_apply}'.match(/\d+.\d+/))</td>
+	<td>0</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='planSummary']/div[2]/dl/dd[2]</td>
 	<td>${plan_type}</td>
 </tr>
-<!-- Dental apply is disabled on 2016/04
-<tr>
-	<td>verifyVisible</td>
-	<td>link=CONTINUE ONLINE</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeAttribute</td>
-	<td>//a[@class='button btn applyButton dental js-continue-online']/@href</td>
-	<td>herf</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${herf}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>${herf}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h2</td>
-	<td>Information on your chosen plan...</td>
-</tr>
-<tr>
-	<td>goBack</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=Continue Searching</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Continue Searching</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTitle</td>
-	<td>Get ${state} Dental Insurance Quotes - Healthpocket</td>
-	<td></td>
-</tr>
--->
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

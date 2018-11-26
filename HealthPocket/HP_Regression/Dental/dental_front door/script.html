@@ -12,78 +12,36 @@
 	<td>http://${ENV}.healthpocket.com/dental-insurance</td>
 	<td></td>
 </tr>
-<!--delayed popup
-<tr>
-	<td>include</td>
-	<td>Denis/HealthPocket/include/dental_delayed_popup</td>
-	<td></td>
-</tr>
--->
-<!--global nav-->
 <tr>
 	<td>verifyText</td>
-	<td>id=globalPhoneNumber</td>
-	<td>Licensed Agents Available! (800) 984-8015</td>
+	<td>//div[@id='counts']/h1</td>
+	<td>Compare Dental Plans in Your Area</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=span.savePlansShortLabel</td>
-	<td>Saved Plans</td>
-</tr>
-<tr>
-	<td>verifyAttribute</td>
-	<td>xpath=//ul[@id='headerLinks']/li[6]/a@class</td>
-	<td>selected</td>
-</tr>
-<!--search bar-->
-<tr>
-	<td>verifyText</td>
-	<td>css=h1</td>
-	<td>Compare Dental plans in Your Area</td>
+	<td>//div[@id='counts']/h2</td>
+	<td>One step to finding the right health plan for you</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>xpath=(//button[@type='button'])[3]</td>
-	<td>Dental</td>
-</tr>
-<tr>
-	<td>verifyAttribute</td>
-	<td>id=location@placeholder</td>
-	<td>Zip Code, City, or State</td>
-</tr>
-<tr>
-	<td>verifyVisible</td>
-	<td>id=findPlans</td>
-	<td></td>
-</tr>
-<!--middle-->
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='productLinks']/h2</td>
-	<td>About Dental Insurance</td>
+	<td>//div[5]/div/div/h2</td>
+	<td>What Is Dental Insurance?</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=h4.hpAnalytics.scrollView</td>
-	<td>exact:Why Buy Dental Coverage?</td>
+	<td>//div[6]/div/div[1]/h2</td>
+	<td>Why Buy Dental Coverage?</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='productLinks']/div[2]/header/h4</td>
-	<td>exact:Is Dental Insurance Right for You?</td>
+	<td>//div[6]/div/div[2]/h2</td>
+	<td>Is Dental Insurance Right for You?</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='stateContainer']/h3</td>
+	<td>//div[2]/div/h2</td>
 	<td>Find Plans By State</td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=img.mapImg</td>
-	<td></td>
-</tr>
-
-
 <!--find plan by state-->
 <tr>
 	<td>clickAndWait</td>
@@ -102,13 +60,17 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=h3.pageHeading &gt; span</td>
+	<td>css=h1.c-small-header.h-no-margin</td>
 	<td>* Dental Plans Found</td>
 </tr>
 </tbody></table>
 </body>
 </html>
 
+	
+	
+	
+	
 	
 	
 	

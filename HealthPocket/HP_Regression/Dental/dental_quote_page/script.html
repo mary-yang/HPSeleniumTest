@@ -12,53 +12,55 @@
 	<td>http://${ENV}.healthpocket.com/dental-insurance/california-quote</td>
 	<td></td>
 </tr>
-<!--delayed popup
-<tr>
-	<td>include</td>
-	<td>Denis/HealthPocket/include/dental_delayed_popup</td>
-	<td></td>
-</tr>
--->
-<tr>
-	<td>click</td>
-	<td>id=helpTab</td>
-	<td></td>
-</tr>
-<!--census-->
-<tr>
-	<td>verifyText</td>
-	<td>id=censusCompact</td>
-	<td>Personalize Your Quote zip code missing35 years / M EDIT</td>
-</tr>
 <!--census-zip code-->
 <tr>
 	<td>click</td>
-	<td>id=editProfile</td>
+	<td>//div[@id='js-census-bar']/div/div/div/ul/li/button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>id=location</td>
+	<td>xpath=(//input[@id='zip-code-input'])[2]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAt</td>
-	<td>id=location</td>
+	<td>xpath=(//input[@id='zip-code-input'])[2]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>id=location</td>
-	<td>90001</td>
+	<td>xpath=(//input[@id='zip-code-input'])[2]</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@id='zip-code-input'])[2]</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@id='zip-code-input'])[2]</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@id='zip-code-input'])[2]</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@id='zip-code-input'])[2]</td>
+	<td>1</td>
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>css=a.location.selected</td>
+	<td>//*[@id="zip-code-input"]/option[contains(text(),'Los Angeles County')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=a.location.selected</td>
+	<td>xpath=(//button[@type='submit'])[4]</td>
 	<td></td>
 </tr>
 <tr>
@@ -68,33 +70,58 @@
 </tr>
 <!--applicant-->
 <tr>
-	<td>waitForVisible</td>
-	<td>id=dob-P-0</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=dob-P-0</td>
-	<td>10101980</td>
-</tr>
-<tr>
 	<td>pause</td>
-	<td>1000</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=submitCensus</td>
+	<td>//div[@id='js-census-bar']/div/div/div/ul/li[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[2]</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='js-member-popover']/form/div[2]/div/div/div[2]/div/input[3]</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[5]/div/div/div/div/ul/li[2]/div/form/div[2]/div/div/div[3]/ul/li[2]/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='submit'])[5]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
+	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
@@ -107,26 +134,19 @@
 	<td>//div[@id='censusDetailsSummary']/ul/li[2]</td>
 	<td>37 years / M</td>
 </tr>
-<!--narrow by tool-->
-<!--monthly cost-->
 <tr>
 	<td>click</td>
-	<td>//div[@id='filterPlanRanges']/button</td>
+	<td>css=span.filter-option.pull-left</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>css=div.filters</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyChecked</td>
-	<td>id=priceRange-viewAll</td>
+	<td>//div[2]/div/div/ul/li/a/span</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=p.glossaryLink.toggleGlossary</td>
+	<td>//li[3]/a/span</td>
 	<td></td>
 </tr>
 <tr>
@@ -136,17 +156,20 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=p.emphasize</td>
-	<td>MONTHLY COST</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='filterPlanRanges']/div/div/ul/li[3]/label
+	<td>//div[11]/div/div/div[2]/div/button/span</td>
+	<td>Deductible</td>
 </tr>
 </tbody></table>
 </body>
 </html>
 
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
