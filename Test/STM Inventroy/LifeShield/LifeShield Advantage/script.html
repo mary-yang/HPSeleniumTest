@@ -102,6 +102,7 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
+
 <!--------------------Plan Detail  Page--------------------->
 
 <tr>
@@ -122,12 +123,17 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=.btn-remove-cancel</td>
+	<td>id=reallySave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
@@ -157,6 +163,11 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
 	<td></td>
 	<td></td>
 </tr>
@@ -200,7 +211,11 @@ sanity4/24</td>
 	<td>AHI/Include/Go to end</td>
 	<td></td>
 </tr>
-
+<tr>
+	 <td>verifyText</td>
+	<td>css=li.green-check > div > div > p > span.emphasize</td>
+	<td>${premium}</td>
+</tr>
 <tr>
 	 <td>storeText</td>
 	<td>css=li.green-check > div > div > p > span.emphasize</td>
@@ -218,26 +233,4 @@ sanity4/24</td>
 </tr>
 	</tbody>
 </table>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
