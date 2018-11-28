@@ -1,0 +1,195 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM Inventroy/upsell/upsell- HIIQ</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>${ENV}/term-health-insurance/apply/${planid}?census[location][zip]=${zipcode}&census[oneTimePaymentSelected]=false&census[member][0][dob]=02/01/1985&census[member][0][gender]=F&census[member][0][role]=P&census[member][1][dob]=07/01/1988&census[member][1][gender]=M&census[member][1][role]=S</td>
+	<td></td>
+</tr>
+
+<tr>
+	 <td>storeText</td>
+	<td>//div[@id='js-apply-overview']/div[3]/div/div[5]/div[2]</td>
+	<td>duration</td>
+</tr>
+<tr>
+	 <td>storeText</td>
+	<td>//div[@id='js-sidebar']/div/table/tbody/tr[2]/td[2]</td>
+	<td>premium</td>
+</tr>
+<tr>
+	 <td>storeText</td>
+	<td>css=span.emphasize</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=button.js-add-extended.c-addon__add-button')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.c-addon__heading</td>
+	<td>extendedInfo</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.js-add-extended.c-addon__add-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//h4[contains(text(),'Telemedicine Option')]")</td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>storeText</td>
+	<td>//body[@id='apply']/main/div[2]/div[2]/div/div/ul/li[2]/div/div/div[4]/div</td>
+	<td>teladocPrice</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=button.js-add-dental.c-addon__add-button')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.js-add-dental.c-addon__add-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//body[@id='apply']/main/div[2]/div[2]/div/div/ul/li[3]/div/div/div[4]/div</td>
+	<td>dentalPrice</td>
+</tr>
+
+
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//h4[contains(text(),'Telemedicine Option')]")</td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>storeText</td>
+	<td>//body[@id='apply']/main/div[2]/div[2]/div/div/ul/li/div/div/div[4]/div</td>
+	<td>teladocPrice</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=button.js-add-dental.c-addon__add-button')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.js-add-dental.c-addon__add-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//body[@id='apply']/main/div[2]/div[2]/div/div/ul/li[2]/div/div/div[4]/div</td>
+	<td>dentalPrice</td>
+</tr>
+
+
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>css=span.js-apply-text.apply-button-text</td>
+	<td></td>
+</tr>
+<tr>
+	 <td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Go to end</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/BO App Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
+	<td>status</td>
+</tr>
+
+	</tbody>
+</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
