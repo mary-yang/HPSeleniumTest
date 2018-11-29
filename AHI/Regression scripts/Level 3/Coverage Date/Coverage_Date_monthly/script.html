@@ -109,25 +109,35 @@
 	<td>id=p-monthly</td>
 	<td></td>
 </tr>
-<!----------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------->
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-payment-section']/div/div/div[1]/label</td>
+	<td></td>
+</tr>
 <tr>
 	<td>type</td>
 	<td>id=c-start</td>
 	<td>${the_first_coverage_start_date}</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>sendKeys</td>
+	<td>id=c-start</td>
+	<td>${the_first_coverage_start_date}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=agile-census</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//button[contains(text(),'Close')]</td>
+	<td>css=div.census-radio &gt; label</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>click</td>
+	<td>//div[@id='census-payment-section']/div/div/div[1]/label</td>
 	<td></td>
 </tr>
 <tr>
@@ -136,18 +146,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
 	<td>click</td>
-	<td>//a[@class='ui-state-default ui-state-active']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>//a[contains(@class,'ui-state-default ui-state-active')]</td>
 	<td></td>
 </tr>
 
@@ -361,6 +361,12 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
+	
 	
 	
 	
