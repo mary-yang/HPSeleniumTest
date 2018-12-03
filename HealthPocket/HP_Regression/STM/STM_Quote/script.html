@@ -99,88 +99,107 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id="js-census-bar"]/div/div[1]/div[2]/div[2]/ul/li[1]/button</td>
-	<td>${MonthlyCost}</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[2]/ul/li[2]/button</td>
+	<td>waitForElementPresent</td>
+	<td>//button[contains(text(),'${MonthlyCost}')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[2]/form/button</td>
+	<td>//span[contains(text(),'Clear filters ')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>//button[contains(text(),'${MonthlyCost}')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//form/button[2]</td>
+	<td>//li[3]/button</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[2]/ul/li[3]/button</td>
+	<td>waitForElementPresent</td>
+	<td>//div[4]/form/div/div/ul/li/div/label</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[3]/form/div/div/ul/li/div/label</td>
+	<td>//div[4]/form/div/div/ul/li/div/label</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[3]/form/div/div/ul/li/div/label</td>
-	<td>Deductible</td>
+	<td>//div[4]/form/div/div/ul/li/div/label</td>
+	<td>DEDUCTIBLE</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[3]/form/button[2]</td>
+	<td>xpath=(//button[@type='submit'])[7]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id="js-census-bar"]/div/div[1]/div[2]/div[2]/ul/li[2]/button</td>
-	<td>${Deductible}</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[2]/ul/li[3]/button</td>
+	<td>waitForElementPresent</td>
+	<td>//button[contains(text(),'${DEDUCTIBLE}')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[3]/form/button</td>
+	<td>//span[contains(text(),'Clear filters ')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>//button[contains(text(),'${DEDUCTIBLE}')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[3]/form/button[2]</td>
+	<td>//li[4]/button</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>waitForElementPresent</td>
+	<td>//ul[2]/li/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul[2]/li/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//ul[2]/li/div/label</td>
+	<td>MaxOutofPocket</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='submit'])[8]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//button[contains(text(),'More Filters • 1')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[contains(text(),'Clear filters ')]</td>
 	<td></td>
 </tr>
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
