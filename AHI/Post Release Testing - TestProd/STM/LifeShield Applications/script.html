@@ -178,7 +178,31 @@ sanity4/24</td>
 	<td>AHI/Include/STM App Page 1</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('id=i-acknowledge')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.c-consecutive-modal__header</td>
+	<td>* Month Duration Acknowledgement</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=i-acknowledge</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.c-consecutive-modal__continue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 
 <tr>
 	<td>include</td>
@@ -471,5 +495,6 @@ sanity4/24</td>
 	
 =======
 >>>>>>> 64c2e7f4cbf8fe5df098083e388c16b5293f8f87
+	
 	
 	
