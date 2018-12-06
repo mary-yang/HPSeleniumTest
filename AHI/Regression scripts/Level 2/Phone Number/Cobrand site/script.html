@@ -19,10 +19,14 @@
 </tr>
 <tr>
 	<td>open</td>
-	<td>${ENV}/?utm_source=impact_radius</td>
+	<td>${ENV}/?utm_source=${utmSource}</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>css=p.agent-phone-number</td>
+	<td>${nav}</td>
+</tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>//a[contains(text(),'Quote & Save Today')]</td>
@@ -32,6 +36,11 @@
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.agent-phone-number</td>
+	<td>${nav}</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -68,60 +77,11 @@
 	<td>4000</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>verifyText</td>
-	<td>link=Help Center</td>
-	<td>Help Center</td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>http://praetemptatus.agilehealthinsurance.com/api/context/clear</td>
-	<td></td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>http://praetemptatus.agilehealthinsurance.com/?utm_source=impact_radius</td>
-	<td></td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>http://praetemptatus.agilehealthinsurance.com/short-term-health-insurance-quotes</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>css=input.js-zip.census-zip-input</td>
-	<td>80219</td>
-</tr>
-<tr>
-	<td>focus</td>
-	<td>id=dob-0</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=dob-0</td>
-	<td>01/01/1985</td>
-</tr>
-<tr>
-	<td>fireEvent</td>
-	<td>id=dob-0</td>
-	<td>blur</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=js-see-plans</td>
-	<td></td>
+	<td>css=p.agent-phone-number</td>
+	<td>${nav}</td>
 </tr>
 <!-----------------------------quote page------------------------------------------->
 <tr>
@@ -131,6 +91,11 @@
 </tr>
 
 <!-----------------------------detail page------------------------------------------->
+<tr>
+	<td>verifyText</td>
+	<td>css=p.agent-phone-number</td>
+	<td>${nav}</td>
+</tr>
 <tr>
 	<td>storeText</td>
 	<td>css=h1.plan-details-header-name</td>
@@ -153,6 +118,11 @@
 </tr>
 <!--------------------Apply Page--------------------->
 <tr>
+	<td>verifyText</td>
+	<td>css=p.agent-phone-number</td>
+	<td>${nav}</td>
+</tr>
+<tr>
 	<td>include</td>
 	<td>AHI/Include/STM Apply</td>
 	<td></td>
@@ -167,7 +137,11 @@
 	<td>AHI/Include/STM App Page 1</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>css=p.agent-phone-number</td>
+	<td>${nav}</td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>id=fillApp</td>
@@ -286,33 +260,8 @@
 	<td>2000</td>
 	<td></td>
 </tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//p[@class='modal-sub-heading']&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//p[@class='modal-sub-heading']</td>
-	<td>Add Dental Coverage and Additional Benefits</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
+
+
 <tr>
 	<td>click</td>
 	<td>id=consent-checkbox-0</td>
@@ -333,21 +282,7 @@
 	<td>2000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//*[@id='js-app-no-thanks-link']&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//*[@id='js-app-no-thanks-link']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>pause</td>
 	<td>10000</td>
@@ -358,7 +293,11 @@
 	<td>AHI/Include/Congratulation</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>css=p.agent-phone-number</td>
+	<td>${nav}</td>
+</tr>
 <tr>
     <td>verifyElementPresent</td>
     <td>//li[contains(text(),'${success}')]</td>
@@ -370,6 +309,7 @@
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	
