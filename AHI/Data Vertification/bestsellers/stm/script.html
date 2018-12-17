@@ -68,20 +68,22 @@
 	<td>1000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>verifyLocation</td>
 	<td>*/quote*</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>click</td>
-	<td>id=bestSellers-true-</td>
+	<td>name=filter[bestSellers]</td>
 	<td></td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//div[@id='js-sidebar-best-sellers']/div/form/label/div/input@checked</td>
+	<td>checked</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -91,42 +93,42 @@
 
 <tr>
 	<td>storeText</td>
-	<td>//div[2]/div/h3/a</td>
+	<td>//li[@id='js-group-']/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
 	<td>Bestsellername1</td>
 </tr>
 
 <tr>
 	<td>storeText</td>
-	<td>//ul[2]/li/div/div[2]/div/h3/a</td>
+	<td>//ul[2]/li/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
 	<td>Bestsellername2</td>
 </tr>
 
 <tr>
 	<td>storeText</td>
-	<td>//li[2]/div/div[2]/div/h3/a</td>
+	<td>//li[2]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
 	<td>Bestsellername3</td>
 </tr>
 
 <tr>
 	<td>storeText</td>
-	<td>//li[3]/div/div[2]/div/h3/a</td>
+	<td>//li[3]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
 	<td>Bestsellername4</td>
 </tr>
 
 <tr>
 	<td>storeText</td>
-	<td>//li[4]/div/div[2]/div/h3/a</td>
+	<td>//li[4]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
 	<td>Bestsellername5</td>
 </tr>
 
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(//li[5]/div/div[2]/div/h3/a)</td>
+	<td>verifyElementPresent(//li[5]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//li[5]/div/div[2]/div/h3/a</td>
+	<td>//li[5]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
 	<td>Bestsellername6</td>
 </tr>
 <tr>
@@ -188,32 +190,32 @@
 -->
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(//li[5]/div/div[2]/div/h3/a)</td>
+	<td>verifyElementPresent(//li[5]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//li[5]/div/div[2]/div/h3/a</td>
+	<td>//li[5]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
 	<td>Bestsellername6</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//li[6]/div/div[2]/div/h3/a</td>
+	<td>//li[6]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
 	<td>Bestsellername7</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//li[7]/div/div[2]/div/h3/a</td>
+	<td>//li[7]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
 	<td>Bestsellername8</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//li[8]/div/div[2]/div/h3/a</td>
+	<td>//li[8]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
 	<td>Bestsellername9</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//li[9]/div/div[2]/div/h3/a</td>
+	<td>//li[9]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
 	<td>Bestsellername10</td>
 </tr>
 <tr>
@@ -223,12 +225,12 @@
 </tr>
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(//li[10]/div/div[2]/div/h3/a)</td>
+	<td>verifyElementPresent(//li[10]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//li[10]/div/div[2]/div/h3/a</td>
+	<td>//li[10]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
 	<td>Bestsellername11</td>
 </tr>
 <tr>
@@ -239,6 +241,9 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
 	
 	
 	

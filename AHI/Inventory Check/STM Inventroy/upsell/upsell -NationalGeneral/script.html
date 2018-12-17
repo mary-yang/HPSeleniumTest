@@ -36,11 +36,9 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
-
-
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent('css=button.js-add-dental.c-addon__add-button')</td>
+	<td>verifyElementPresent("css=button.js-add-dental.c-addon__add-button")</td>
 	<td></td>
 </tr>
 <tr>
@@ -53,7 +51,21 @@ sanity4/24</td>
 	<td>//h4[@class='c-addon__h' and text()='Dental Option']/following::div/div[4]/div</td>
 	<td>dentalPrice</td>
 </tr>
-
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("xpath=//div[contains(text(),'Teladoc')]")</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//div[contains(text(),'Teladoc')]</td>
+	<td>teladocPrice</td>
+</tr>
 <tr>
 	<td>ENDIF</td>
 	<td></td>
@@ -89,6 +101,12 @@ sanity4/24</td>
 -------------->
 	</tbody>
 </table>
+	
+	
+	
+	
+	
+	
 	
 	
 	
