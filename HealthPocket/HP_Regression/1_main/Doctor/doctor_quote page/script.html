@@ -13,64 +13,61 @@
 	<td>http://${ENV}.healthpocket.com/doctor-healthplan-finder/quote?zip=${zipcode}</td>
 	<td></td>
 </tr>
+<!--filter-->
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=//h1[contains(text(),'Doctors, Dentists and Facilities Found')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'More Filters')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//label[contains(text(),'Male')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//label[contains(text(),'Individual and Family Plans')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Show Doctors')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>//button[contains(text(),'Clear filters')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='js-plans-header']/div/div/div/h1</td>
-	<td>Doctor_Num</td>
+	<td>xpath=//a[contains(@href, '/facility-finder/')]</td>
+	<td>name</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//div[2]/ul/li/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div/div[2]/label</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//button[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//span[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='js-census-bar']/div/div/div[2]/div[2]/ul/li[2]/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[2]/ul/li/div/div/div/label</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[2]/form/button[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//span[2]</td>
-	<td></td>
+	<td>storeText</td>
+	<td>xpath=//li/div[2]</td>
+	<td>specialty</td>
 </tr>
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	

@@ -1,0 +1,167 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/1_main/Medicare/medicare_flow_90001</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">medicare_flow_90001</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/medicare/quote/${year}?zip=90001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Aetna Medicare Prime Plan (HMO)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-benefits']/div/table/tbody/tr/td[2]</td>
+	<td>Medicare Advantage Plan (Part C w/ RX)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/a/h2</td>
+	<td>Plan Details</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[2]/td/span</td>
+	<td>Inpatient hospital coverage</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[3]/td/span</td>
+	<td>Outpatient hospital coverage</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[4]/td/span</td>
+	<td>Doctor visits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[5]/td/span</td>
+	<td>Preventive care</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[6]/td/span</td>
+	<td>Emergency care/Urgent care</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[7]/td/span</td>
+	<td>Diagnostic procedures/lab services/imaging</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[8]/td/span</td>
+	<td>Mental health services</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[9]/td/span</td>
+	<td>Skilled Nursing Facility</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[10]/td/span</td>
+	<td>Rehabilitation services</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[11]/td/span</td>
+	<td>Ambulance</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[12]/td/span</td>
+	<td>Transportation</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[13]/td/span</td>
+	<td>Foot care (podiatry services)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[14]/td/span</td>
+	<td>Medical equipment/supplies</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[15]/td/span</td>
+	<td>Wellness programs (e.g., fitness, nursing hotline)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[2]/tbody/tr[16]/td/span</td>
+	<td>Medicare Part B drugs</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-planDetails']/div/h4</td>
+	<td>Costs and Other Important Information</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[3]/tbody/tr/td/span</td>
+	<td>State</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[3]/tbody/tr[2]/td/span</td>
+	<td>County</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-planDetails']/div/h4[2]</td>
+	<td>Benefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='collapse-planDetails']/div/h4[3]</td>
+	<td>Coverage Area for Aetna Medicare Prime (HMO)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/a/h2</td>
+	<td>Cost Sharing Information</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[4]/a/h2</td>
+	<td>CMS Ratings</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[5]/a/h2</td>
+	<td>Physician Finder</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[6]/a/h2</td>
+	<td>Similar Plans</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[7]/a/h2</td>
+	<td>Related Articles</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[8]/a/h2</td>
+	<td>Related Searches</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	

@@ -1,13 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head profile="http://selenium-ide.openqa.org/profiles/test-case">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="http://pengujian.healthpocket.com" />
-<title>sbg08</title>
-</head>
-<body>
-<table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/HP_Regression/SBG/sbg_quote_apply</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">sbg08</td></tr>
 </thead><tbody>
@@ -22,13 +13,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForVisible</td>
-	<td>//div[@id='plans']/ul/li/a/span/button</td>
-	<td></td>
-</tr>
-<tr>
 	<td>storeText</td>
-	<td>css=span.planName</td>
+	<td>css=a.js-details-button.c-plan-unit__plan-name</td>
 	<td>plan_name</td>
 </tr>
 <tr>
@@ -38,18 +24,18 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=span.deductible.planSection &gt; p.planText</td>
+	<td>//li[2]/div[2]/p</td>
 	<td>deductible</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=span.oopMax.planSection &gt; p.planText</td>
+	<td>//li[4]/div[2]/p</td>
 	<td>oop_max</td>
 </tr>
 <!--go to apply page from quote page-->
 <tr>
 	<td>clickAndWait</td>
-	<td>//div[@id='plans']/ul/li/a/span/button</td>
+	<td>link=Select</td>
 	<td></td>
 </tr>
 <tr>
@@ -80,3 +66,8 @@
 </tbody></table>
 </body>
 </html>
+
+	
+	
+	
+	
