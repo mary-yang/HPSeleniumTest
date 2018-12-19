@@ -15,7 +15,7 @@
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
-	<td>60002</td>
+	<td>82001</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -83,7 +83,7 @@
 <tr>
 	<td>verifyValue</td>
 	<td>//input[@class='js-zip c-filter-v3__input']</td>
-	<td>60002</td>
+	<td>82001</td>
 </tr>
 <tr>
 	<td>verifyValue</td>
@@ -137,7 +137,7 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//h1[@class='c-quote-v3-heading reset pull-left']</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
 	<td>head</td>
 </tr>
 <tr>
@@ -177,7 +177,7 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//h1[@class='c-quote-v3-heading reset pull-left']</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
 	<td>head</td>
 </tr>
 <tr>
@@ -242,7 +242,7 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//h1[@class='c-quote-v3-heading reset pull-left']</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
 	<td>head</td>
 </tr>
 <tr>
@@ -371,12 +371,12 @@
 <tr>
 	<td>verifyText</td>
 	<td>css=ul.c-plan-unit-v3__plan-info</td>
-	<td>* Deductible*% Coinsurance$* Out of Pocket Max$* Coverage Max6 Month Policy Term</td>
+	<td>* Deductible*% Coinsurance$* Out of Pocket Max$* Coverage Max6 Months Coverage Duration</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>css=td.c-plan-unit-v3__cell.is-last</td>
-	<td>$* + feesper month</td>
+	<td>$* + feesper month*</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -386,7 +386,12 @@
 <tr>
 	<td>verifyText</td>
 	<td>css=ul.c-plan-unit-v3__feature-list</td>
-	<td>$50 Annual Exam Available No Network Restrictions Unlimited Office Visits Physical Therapy Benefits</td>
+	<td>* Benefit</td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
@@ -398,20 +403,17 @@
 	<td>1000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>captureEntirePageScreenshot</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//a[@aria-label='Close popup']</td>
-	<td></td>
-</tr>
+
 
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
+	
 	
 	
 	
