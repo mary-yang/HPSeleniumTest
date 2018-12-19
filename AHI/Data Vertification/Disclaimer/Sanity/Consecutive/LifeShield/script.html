@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/STM/LifeShield</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/Consecutive/LifeShield</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -67,11 +67,104 @@ sanity4/24</td>
 </tr>
 <!-----------------------------quote page------------------------------------------->
 <tr>
-	<td>include</td>
-	<td>AHI/Include/STM Quote</td>
+	<td>click</td>
+	<td>css=#js-sidebar-carrier .js-toggle-button</td>
 	<td></td>
 </tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='${carrierid}']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!------------------TX no badge, others have badge------------------------------------->
+<tr>
+	<td>IF</td>
+	<td>'${state}'=='TX'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[contains(@class,'c-duration-badge c-duration-badge--')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[contains(@class,'c-duration-badge c-duration-badge--')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[contains(@class,'c-duration-badge c-duration-badge--')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p[@class='glossary-definition']</td>
+	<td>${acknowledgement}</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<!-----------------------------------------glossary------------------------------------------------->
+<tr>
+	<td>verifyText</td>
+	<td>//td[@class='c-plan-unit-v3__cell c-plan-unit-v3__middle-cell']/descendant::*[@class='js-glossary c-plan-unit-v3__normal-glossary']</td>
+	<td>${conNUM} Consecutive Policies for ${maxDuration} Months Coverage Duration</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//td[@class='c-plan-unit-v3__cell c-plan-unit-v3__middle-cell']/descendant::*[@class='js-glossary c-plan-unit-v3__normal-glossary']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p[@class='glossary-definition']</td>
+	<td>${acknowledgement}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[1]</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>LIFESHIELD SPECIFIC DISCLAIMERSTHIS IS A SHORT-TERM LIMITED DURATION HEALTH INSURANCE POLICY THAT IS NOT INTENDED TO AND DOES NOT QUALIFY AS THE MINIMUM ESSENTIAL COVERAGE REQUIRED BY THE AFFORDABLE CARE ACT (ACA). UNLESS YOU PURCHASE A POLICY THAT PROVIDES MINIMUM ESSENTIAL COVERAGE IN ACCORDANCE WITH THE ACA, YOU MAY BE SUBJECT TO A FEDERAL TAX PENALTY. ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH INSURANCE POLICY THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD.THIS IS A SUPPLEMENT TO HEALTH INSURANCE AND IS NOT A SUBSTITUTE FOR MAJOR MEDICAL COVERAGE. LACK OF MAJOR MEDICAL COVERAGE (OR OTHER MINIMUM ESSENTIAL COVERAGE) MAY RESULT IN AN ADDITIONAL PAYMENT WITH YOUR TAXES. This is a brief summary of LifeShield Short-Term Medical Insurance underwritten by LifeShield National Insurance Co. provided by Policy Form Series LNG- 3001. Availability and terms may vary by state.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
 
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(@href,'/plan/${carrierid}')])[2]</td>
+	<td></td>
+</tr>
+<!----------------------------------------plan detail--------------------------------------------------------->
 <tr>
 	<td>storeText</td>
 	<td>css=h1.plan-details-header-name</td>
@@ -82,7 +175,6 @@ sanity4/24</td>
 	<td>css=a.plan-details-price.js-price-breakdown</td>
 	<td>mo</td>
 </tr>
-<!-----------------------------detail page------------------------------------------->
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -103,7 +195,6 @@ sanity4/24</td>
 	<td>//div[@id='disclaimer-container']/div[3]</td>
 	<td>${ACATAX}</td>
 </tr>
-
 <tr>
 	<td>click</td>
 	<td>id=plan-details-primary-apply</td>
@@ -114,6 +205,11 @@ sanity4/24</td>
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='waiting-period']</td>
+	<td>*WAITING PERIODThis plan includes a waiting period for illness. For more information, see Plan Limitations and Exclusions.</td>
 </tr>
 
 <tr>
@@ -149,15 +245,16 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-  <td>IF</td>
-  <td>verifyElementPresent('id=i-acknowledge')</td>
-  <td></td>
-</tr>
-<tr>
   <td>verifyText</td>
   <td>css=h2.c-consecutive-modal__header</td>
-  <td>* Month Duration Acknowledgement</td>
+  <td>${maxDuration} Month Duration Acknowledgement</td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.c-consecutive-modal__p</td>
+	<td>${acknowledgement}</td>
+</tr>
+
 <tr>
   <td>click</td>
   <td>id=i-acknowledge</td>
@@ -168,11 +265,7 @@ sanity4/24</td>
   <td>css=button.c-consecutive-modal__continue</td>
   <td></td>
 </tr>
-<tr>
-  <td>ENDIF</td>
-  <td></td>
-  <td></td>
-</tr>
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Underwriting</td>
@@ -186,52 +279,6 @@ sanity4/24</td>
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Get URI</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[1]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[2]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[3]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[4]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[5]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[6]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>pause</td>
-	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
@@ -249,28 +296,12 @@ sanity4/24</td>
 	<td>//div[@id='disclaimer-container']/div[3]</td>
 	<td>${ACANOTICE}</td>
 </tr>
-
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=js-app-continue-link</td>
+	<td>include</td>
+	<td>AHI/Include/STM App Page 1</td>
 	<td></td>
 </tr>
 
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
 <!-----------------------------application pages------------------------------------------->
 
 
@@ -327,6 +358,11 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
+	<td>//div[@class='waiting-period']</td>
+	<td>*WAITING PERIODThis plan includes a waiting period for illness. For more information, see Plan Limitations and Exclusions.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
 	<td>css=div.disclaimer-text.</td>
 	<td>${GeneralDisclaimers}</td>
 </tr>
@@ -346,34 +382,31 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>//div[@class='waiting-period']</td>
+	<td>*WAITING PERIODThis plan includes a waiting period for illness. For more information, see Plan Limitations and Exclusions.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${LSGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACANOTICE}</td>
+</tr>
+<tr>
 	<td>include</td>
 	<td>AHI/Include/UseByPassCard</td>
 	<td></td>
 </tr>
 
-
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
@@ -410,7 +443,6 @@ sanity4/24</td>
 	<td>Short Term Health Insurance, Affordable Health Plans, Affordable Obamacare Supplemental Health Insurance - AgileHealthInsurance.com</td>
 	<td></td>
 </tr>
-
 
 <tr>
 	<td>verifyText</td>
@@ -450,16 +482,22 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div[3]/div</td>
-	<td>${ACANOTICE_TA}</td>
+	<td>EXTENDED DURATION IF YOU SELECTED THE EXTENDED DURATION OPTION You have opted to auto-renew your plan for additional policy term(s). Upon expiration of your current policy, a second policy will issue so that you will be covered under back-to-back policies with no gap in your health insurance coverage. Please be aware that each subsequent policy constitutes separate coverage. Prices may change at the start of each new policy. Be sure to read the terms of your subsequent policy as your deductible and coinsurance and all benefit limits may reset with each policy term. If available, we strongly recommend that you add a pre-existing waiver rider to your policies; this will protect you in case you develop a medical condition during a current policy that requires treatment during a subsequent policy. YOU CAN CANCEL YOUR POLICIES AT ANYTIME.</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div[4]/div</td>
-	<td>${AHIGTA}</td>
+	<td>${ACANOTICE_TA}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div[5]/div</td>
+	<td>${AHIGTA}</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimers-container']/div/div[6]/div</td>
 	<td>${AHIPayment}</td>
 </tr>
 
@@ -616,6 +654,18 @@ sanity4/24</td>
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 	
 	
 	

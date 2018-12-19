@@ -27,7 +27,7 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
-<!---------------------------------------------------------------------------------------------->
+<!------------------------------------------if carrier not disable---------------------------------------
 <tr>
 	<td>click</td>
 	<td>css=#js-sidebar-carrier .js-toggle-button</td>
@@ -61,6 +61,40 @@ sanity4/24</td>
 <tr>
 	<td>ENDIF</td>
 	<td></td>
+	<td></td>
+</tr>
+-------------------------------------------------->
+
+<!-------------------------select 6 months-------------------------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//div[@id='js-sidebar-duration']/div/a")</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-sidebar-duration']/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=i-6-less-sidebar</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>css=#js-sidebar-carrier .js-toggle-button</td>
 	<td></td>
 </tr>
 <tr>
@@ -105,11 +139,12 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
--------------------------------------->
+
 
 
 	</tbody>
 </table>	
+	
 	
 	
 	
