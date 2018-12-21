@@ -6,9 +6,16 @@ sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
+<!--------------------
 <tr>
 	<td>storeEval</td>
 	<td>var d = new Date(); (3+d.getMonth()) +'/'+ (1+d.getDate()) +'/'+ d.getFullYear();</td>
+	<td>verify_coverage_end_date</td>
+</tr>
+----------------------->
+<tr>
+	<td>storeEval</td>
+	<td>var now=new Date;now.setDate(now.getDate()+60);var y=now.getFullYear();var m=now.getMonth()+1;var m=(m>9)?m:"0"+m;var dd=now.getDate();var dd=(dd>9)?dd:"0"+dd;m+"/"+dd+"/"+y;</td>
 	<td>verify_coverage_end_date</td>
 </tr>
 <tr>
@@ -136,7 +143,11 @@ sanity4/24</td>
 	<td>css=div.census-radio &gt; label</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>echo</td>
+	<td>${verify_coverage_end_date}</td>
+	<td></td>
+</tr>
 <tr>
 	<td>type</td>
 	<td>id=c-end</td>
@@ -242,6 +253,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	
