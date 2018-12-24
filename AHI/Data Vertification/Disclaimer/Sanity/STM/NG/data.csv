@@ -8,7 +8,7 @@
 "##CT","6606","unitedhealthone","${planname}","${GeneralDisclaimers}","${ACATAX}","${NGGD}","${CET}",""
 "##DE","19805","unitedhealthone","${planname}","${GeneralDisclaimers}","${ACATAX}","${NGGD}","${CET}",""
 "##DC","20015","unitedhealthone","${planname}","${GeneralDisclaimers}","${ACATAX}","${NGGD}","${CET}",""
-"FL","33186","unitedhealthone","${planname}","${GeneralDisclaimers}","${ACATAX}","${NGGD}","${CET}",""
+"FL","33186","nationalgeneral","${planname}","${GeneralDisclaimers}","${ACATAX}","${NGGD}","${CET}","national-general-short-term-medical"
 "##GA","30044","unitedhealthone","${planname}","${GeneralDisclaimers}","${ACATAX}","${NGGD}","${CET}",""
 "##HI","96818","unitedhealthone","${planname}","${GeneralDisclaimers}","${ACATAX}","${NGGD}","${CET}",""
 "##IA","50317","unitedhealthone","${planname}","${GeneralDisclaimers}","${ACATAX}","${NGGD}","${CET}",""
