@@ -66,6 +66,11 @@ sanity4/24</td>
 </tr>
 <!------------------quote page disclaimer----------------------------->
 <tr>
+	<td>include</td>
+	<td>AHI/Include/STM Select Carrier</td>
+	<td></td>
+</tr>
+<tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[1]</td>
 	<td>${GeneralDisclaimers}</td>
@@ -76,15 +81,20 @@ sanity4/24</td>
 	<td>${AdvantHealthDisclaimers}</td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
 	<td>captureEntirePageScreenshot</td>
 	<td></td>
 	<td></td>
 </tr>
 
-<!-----------------------------quote page------------------------------------------->
+<!-----------------------------detail page------------------------------------------->
 <tr>
 	<td>include</td>
-	<td>AHI/Include/STM Quote</td>
+	<td>AHI/Include/STM Select Product</td>
 	<td></td>
 </tr>
 
@@ -98,7 +108,7 @@ sanity4/24</td>
 	<td>css=a.plan-details-price.js-price-breakdown</td>
 	<td>mo</td>
 </tr>
-<!-----------------------------detail page------------------------------------------->
+
 <tr>
 	<td>pause</td>
 	<td>2000</td>
@@ -539,6 +549,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	

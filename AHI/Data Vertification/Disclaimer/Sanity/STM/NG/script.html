@@ -54,7 +54,13 @@ sanity4/24</td>
 	<td>xpath=.//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
-<!-----------------------------quote page------------------------------------------->
+
+<!------------------quote page disclaimer----------------------------->
+<tr>
+	<td>include</td>
+	<td>AHI/Include/STM Select Carrier</td>
+	<td></td>
+</tr>
 <tr>
 	<td>verifyText</td>
 	<td>css=div.disclaimer-text.</td>
@@ -63,40 +69,23 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[2]</td>
-	<td>LIFESHIELD SPECIFIC DISCLAIMERSTHIS IS A SHORT-TERM LIMITED DURATION HEALTH INSURANCE POLICY THAT IS NOT INTENDED TO AND DOES NOT QUALIFY AS THE MINIMUM ESSENTIAL COVERAGE REQUIRED BY THE AFFORDABLE CARE ACT (ACA). UNLESS YOU PURCHASE A POLICY THAT PROVIDES MINIMUM ESSENTIAL COVERAGE IN ACCORDANCE WITH THE ACA, YOU MAY BE SUBJECT TO A FEDERAL TAX PENALTY. ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH INSURANCE POLICY THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD.THIS IS A SUPPLEMENT TO HEALTH INSURANCE AND IS NOT A SUBSTITUTE FOR MAJOR MEDICAL COVERAGE. LACK OF MAJOR MEDICAL COVERAGE (OR OTHER MINIMUM ESSENTIAL COVERAGE) MAY RESULT IN AN ADDITIONAL PAYMENT WITH YOUR TAXES. This is a brief summary of LifeShield Short-Term Medical Insurance underwritten by LifeShield National Insurance Co. provided by Policy Form Series LNG- 3001. Availability and terms may vary by state.</td>
-</tr>
-
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[3]</td>
 	<td>${NGGD}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[4]</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
 	<td>${ACATAX}</td>
 </tr>
-<!-----------------------------------------------
 <tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[5]</td>
-	<td>${SlaicolDisclaimers}</td>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[6]</td>
-	<td>${UHCGen5EPODisclaimer}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[7]</td>
-	<td>ILLINOIS NOTICE FOR SHORT TERM HEALTH INSURANCETHE SHORT-TERM, LIMITED-DURATION INSURANCE BENEFITS UNDER THIS COVERAGE DO NOT MEET ALL FEDERAL REQUIREMENTS TO QUALIFY AS "MINIMUM ESSENTIAL COVERAGE" FOR HEALTH INSURANCE UNDER THE AFFORDABLE CARE ACT. THIS PLAN OF COVERAGE DOES NOT INCLUDE ALL ESSENTIAL HEALTH BENEFITS AS REQUIRED BY THE AFFORDABLE CARE ACT. PREEXISTING CONDITIONS ARE NOT COVERED UNDER THIS PLAN OF COVERAGE. BE SURE TO CHECK YOUR POLICY CAREFULLY TO MAKE SURE YOU UNDERSTAND WHAT THE POLICY DOES AND DOES NOT COVER. IF THIS COVERAGE EXPIRES OR YOU LOSE ELIGIBILITY FOR THIS COVERAGE, YOU MIGHT HAVE TO WAIT UNTIL THE NEXT OPEN ENROLLMENT PERIOD TO GET OTHER HEALTH INSURANCE COVERAGE. YOU MAY BE ABLE TO GET LONGER TERM INSURANCE THAT QUALIFIES AS "MINIMUM ESSENTIAL COVERAGE" FOR HEALTH INSURANCE UNDER THE AFFORDABLE CARE ACT NOW AND HELP TO PAY FOR IT AT WWW.HEALTHCARE.GOV.</td>
-</tr>
--------------------------------------------->
 
+<!-----------------------------detail page------------------------------------------->
 <tr>
 	<td>include</td>
-	<td>AHI/Include/STM Quote</td>
+	<td>AHI/Include/STM Select Product</td>
 	<td></td>
 </tr>
 
@@ -126,7 +115,7 @@ sanity4/24</td>
 	<td>//div[@id='disclaimer-container']/div[3]</td>
 	<td>${ACATAX}</td>
 </tr>
-<tr>
+
 <tr>
 	<td>click</td>
 	<td>id=plan-details-primary-apply</td>
@@ -450,6 +439,7 @@ tr>
 </body>
 </html>	
 
+	
 	
 	
 	

@@ -56,49 +56,10 @@ sanity4/24</td>
 </tr>
 <!-----------------------------quote page------------------------------------------->
 <tr>
-	<td>verifyText</td>
-	<td>css=div.disclaimer-text.</td>
-	<td>${GeneralDisclaimers}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[2]</td>
-	<td>${AdvantHealthDisclaimers}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[3]</td>
-	<td>LIFESHIELD SPECIFIC DISCLAIMERSTHIS IS A SHORT-TERM LIMITED DURATION HEALTH INSURANCE POLICY THAT IS NOT INTENDED TO AND DOES NOT QUALIFY AS THE MINIMUM ESSENTIAL COVERAGE REQUIRED BY THE AFFORDABLE CARE ACT (ACA). UNLESS YOU PURCHASE A POLICY THAT PROVIDES MINIMUM ESSENTIAL COVERAGE IN ACCORDANCE WITH THE ACA, YOU MAY BE SUBJECT TO A FEDERAL TAX PENALTY. ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH INSURANCE POLICY THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD.THIS IS A SUPPLEMENT TO HEALTH INSURANCE AND IS NOT A SUBSTITUTE FOR MAJOR MEDICAL COVERAGE. LACK OF MAJOR MEDICAL COVERAGE (OR OTHER MINIMUM ESSENTIAL COVERAGE) MAY RESULT IN AN ADDITIONAL PAYMENT WITH YOUR TAXES. This is a brief summary of LifeShield Short-Term Medical Insurance underwritten by LifeShield National Insurance Co. provided by Policy Form Series LNG- 3001. Availability and terms may vary by state.</td>
-</tr>
-
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[4]</td>
-	<td>${NGGD}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[5]</td>
-	<td>${ACATAX}</td>
-</tr>
-
-<tr>
 	<td>include</td>
-	<td>AHI/Include/STM Quote</td>
+	<td>AHI/Include/STM Select Carrier</td>
 	<td></td>
 </tr>
-
-<tr>
-	<td>storeText</td>
-	<td>css=h1.plan-details-header-name</td>
-	<td>planname</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=a.plan-details-price.js-price-breakdown</td>
-	<td>mo</td>
-</tr>
-<!-----------------------------detail page------------------------------------------->
 <tr>
 	<td>verifyText</td>
 	<td>css=div.disclaimer-text.</td>
@@ -115,6 +76,44 @@ sanity4/24</td>
 	<td>${ACATAX}</td>
 </tr>
 <tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<!-----------------------------detail page------------------------------------------->
+<tr>
+	<td>include</td>
+	<td>AHI/Include/STM Select Product</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeText</td>
+	<td>css=h1.plan-details-header-name</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${CPGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=plan-details-primary-apply</td>
@@ -476,6 +475,7 @@ tr>
 </body>
 </html>	
 
+	
 	
 	
 	
