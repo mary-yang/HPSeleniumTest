@@ -36,7 +36,7 @@
 "##UHC","ny","unitedhealthone-${state}-value-select-a-5000-30-10000","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","11226","1/1/1980","F","","","","","","","",""
 "UHC","oh","unitedhealthone-${state}-value-select-a-5000-30-10000","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","43228","1/1/1980","F","","","","","","","",""
 "UHC","ok","unitedhealthone-${state}-value-select-a-5000-30-10000","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","73160","1/1/1980","F","","","","","","","",""
-"UHC","or","unitedhealthone-${state}-value-10000-30-20000","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","97229","1/1/1980","F","","","","","","","",""
+"UHC","or","unitedhealthone-${state}-value-select-a-5000-30-10000","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","97229","1/1/1980","F","","","","","","","",""
 "UHC","pa","unitedhealthone-${state}-value-select-a-5000-30-10000","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","19120","1/1/1980","F","","","","","","","",""
 "##UHC","ri","unitedhealthone-${state}-value-select-a-5000-30-10000","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","2909","1/1/1980","F","","","","","","","",""
 "UHC","sc","unitedhealthone-${state}-value-select-a-5000-30-10000","${Apply_page_QA_rate}","${Apply_page_testprod_rate}","29223","1/1/1980","F","","","","","","","",""

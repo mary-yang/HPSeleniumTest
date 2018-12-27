@@ -1,0 +1,193 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Rate diff/STM/Upsell/LifeShield</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">compare_rate</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${ENV}/term-health-insurance/apply/${planid}?census[location][zip]=${zipcode}&amp;
+census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_gender}&amp;census[member][0][role]=P&amp;
+census[member][${Spouse_enable}][dob]=${Spouse_dob}&amp;census[member][${Spouse_enable}][gender]=${Spouse_gender}&amp;census[member][${Spouse_enable}][role]=${Spouse}&amp;
+census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_enable}][gender]=${Child_gender}&amp;census[member][${Child_enable}][role]=${Child}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=button.js-add-extended.c-addon__add-button')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.js-add-extended.c-addon__add-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//h4[@class='c-addon__h' and text()='Coverage Option']")</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//h4[@class='c-addon__h' and text()='Coverage Option']/following::div/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//button[@class='js-add-teladoc c-addon__add-button']")</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class='js-add-teladoc c-addon__add-button']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=button.js-add-dental.c-addon__add-button')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.js-add-dental.c-addon__add-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//tr[@class='c-price-table__border-row c-price-table__total']/td[2]</td>
+	<td>Apply_page_QA_rate</td>
+</tr>
+
+<tr>
+	<td>open</td>
+	<td>https://www.agilehealthinsurance.com/term-health-insurance/apply/${planid}?census[location][zip]=${zipcode}&amp;
+census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_gender}&amp;census[member][0][role]=P&amp;
+census[member][${Spouse_enable}][dob]=${Spouse_dob}&amp;census[member][${Spouse_enable}][gender]=${Spouse_gender}&amp;census[member][${Spouse_enable}][role]=${Spouse}&amp;
+census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_enable}][gender]=${Child_gender}&amp;census[member][${Child_enable}][role]=${Child}&isTest=y</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=button.js-add-extended.c-addon__add-button')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.js-add-extended.c-addon__add-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//h4[@class='c-addon__h' and text()='Coverage Option']")</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//h4[@class='c-addon__h' and text()='Coverage Option']/following::div/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//button[@class='js-add-teladoc c-addon__add-button']")</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class='js-add-teladoc c-addon__add-button']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=button.js-add-dental.c-addon__add-button')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.js-add-dental.c-addon__add-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//tr[@class='c-price-table__border-row c-price-table__total']/td[2]</td>
+	<td>Apply_page_testprod_rate</td>
+</tr>
+
+<tr>
+	<td>verifyEval</td>
+	<td>parseFloat('${Apply_page_testprod_rate}'.match(/\d+.\d+/))-parseFloat('${Apply_page_QA_rate}'.match(/\d+.\d+/))</td>
+	<td>0</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
