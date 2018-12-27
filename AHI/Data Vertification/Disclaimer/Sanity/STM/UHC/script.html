@@ -55,22 +55,6 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <!-----------------------------quote page------------------------------------------->
-<tr>
-	<td>verifyText</td>
-	<td>css=div.disclaimer-text.</td>
-	<td>${GeneralDisclaimers}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[2]</td>
-	<td>${NGGD}</td>
-</tr>
-
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[3]</td>
-	<td>${ACATAX}</td>
-</tr>
 
 
 <tr>
@@ -88,6 +72,27 @@ sanity4/24</td>
 	<td>storeText</td>
 	<td>css=a.plan-details-price.js-price-breakdown</td>
 	<td>mo</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${GRSD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
 </tr>
 <!-----------------------------detail page------------------------------------------->
 <tr>
@@ -400,6 +405,11 @@ tr>
 </body>
 </html>	
 
+	
+	
+	
+	
+	
 	
 	
 	
