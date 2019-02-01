@@ -2,6 +2,7 @@
 <thead>
 <tr><td rowspan="1" colspan="3">Up_sell_modal</td></tr>
 </thead><tbody>
+<!------------------------------------------------------
 <tr>
 	<td>storeEval</td>
 	<td>var d = new Date();60</td>
@@ -17,6 +18,14 @@
 	<td>var d = new Date(); ${month} +'/'+ ${date} +'/'+${year};</td>
 	<td>coverage_end_date</td>
 </tr>
+----------------------------------->
+
+<tr>
+    <td>storeEval</td>
+    <td>var now=new Date;now.setDate(now.getDate()+60);var y=now.getFullYear();var m=now.getMonth()+1;var m=(m&gt;9)?m:&quot;0&quot;+m;var dd=now.getDate();var dd=(dd&gt;9)?dd:&quot;0&quot;+dd;m+&quot;/&quot;+dd+&quot;/&quot;+y;</td>
+    <td>coverage_end_date</td>
+</tr>
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Open website</td>
@@ -238,25 +247,16 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>var d = new Date(); ${days_add}+15;</td>
-	<td>days_add</td>
+    <td>storeEval</td>
+    <td>var now=new Date;now.setDate(now.getDate()+1+10);var y=now.getFullYear();var m=now.getMonth()+1;var m=(m&gt;9)?m:&quot;0&quot;+m;var dd=now.getDate();var dd=(dd&gt;9)?dd:&quot;0&quot;+dd;m+&quot;/&quot;+dd+&quot;/&quot;+y;</td>
+    <td>coverage_end_date</td>
 </tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/add_days</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>var d = new Date(); '*' + ${month} +'/'+ '*' + ${date} +'/'+${year}+'*' ;</td>
-	<td>coverage_end_date</td>
-</tr>
+
 -------------------------------------old------------------------------------------->
 <!---------------------------------------new ------------------------------------------------------>
 <tr>
 	<td>click</td>
-	<td>//a[@class='js-change-effective-date-end']</td>
+	<td>//a[@class='js-change-effective-date-start']</td>
 	<td></td>
 </tr>
 <tr>
@@ -292,7 +292,7 @@
 <tr>
 	<td>storeText</td>
 	<td>xpath=(//div[@class='tr summary-effective-dates'])[2]/div[2]</td>
-	<td>coverage_end_date</td>
+	<td>duration</td>
 </tr>
 <!---------------------------------------new ------------------------------------------------------>
 <tr>
@@ -471,19 +471,36 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>var d = new Date();${date}+1;</td>
-	<td>date</td>
+    <td>storeEval</td>
+    <td>var now=new Date;now.setDate(now.getDate()+60);var y=now.getFullYear();var m=now.getMonth()+1;var m=(m&gt;9)?m:&quot;0&quot;+m;var dd=now.getDate();var dd=(dd&gt;9)?dd:&quot;0&quot;+dd;y+&quot;-&quot;+m+&quot;-&quot;+dd;</td>
+    <td>coverage_end_date</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>xpath=/html/body/pre</td>
-	<td>*"effectiveEnd":"${year}-*${month}-*${date}*</td>
+	<td>*"effectiveEnd":"${coverage_end_date}*</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>"${duration}".substr(0,2)</td>
+	<td>durationDays</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=/html/body/pre</td>
+	<td>*"daysOfCoverage":${durationDays}*</td>
 </tr>
 </tbody></table>
 </body>
 </html>
 
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
