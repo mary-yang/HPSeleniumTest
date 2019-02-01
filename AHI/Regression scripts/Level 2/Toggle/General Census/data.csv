@@ -5,7 +5,7 @@
 "Arizona","AZ","85364","${defaultProductline}","${stmavailability}","${hbiavailability}","Short Term Health Insurance Plans","STM is available","HBI is available"
 "California","CA","90011","${defaultProductline}","${stmavailability}","${hbiavailability}","Health Benefit Indemnity Insurance Plans","STM is available","HBI is available"
 "##Colorado","CO","80219","${defaultProductline}","${stmavailability}","${hbiavailability}","Short Term Health Insurance Plans","${stmavailability}","${hbiavailability}"
-"Connecticut","CT","06606","${defaultProductline}","${stmavailability}","${hbiavailability}","Short Term Health Insurance Plans","STM is available","HBI is available"
+"##Connecticut","CT","06606","${defaultProductline}","${stmavailability}","${hbiavailability}","Short Term Health Insurance Plans","STM is available","HBI is available"
 "Delaware","DE","19805","${defaultProductline}","${stmavailability}","${hbiavailability}","","",""
 "##District Of Columbia","DC","20015","${defaultProductline}","${stmavailability}","${hbiavailability}","","",""
 "##Florida","FL","33186","${defaultProductline}","${stmavailability}","${hbiavailability}","","",""

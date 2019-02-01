@@ -1,7 +1,16 @@
 "source","uri","status","zipcode","productId","carrierid"
+<<<<<<< HEAD
 "impact_radius","${uri}","Successfully Enrolled","35215","everest-prime-stm","everest"
 "vantage","${uri}","Successfully Enrolled","35215","everest-prime-stm","everest"
 "mediaalpha","${uri}","Successfully Enrolled","35215","everest-prime-stm","everest"
 "Google_Adwords","${uri}","Successfully Enrolled","35215","everest-prime-stm","everest"
 "healthinsurance_org","${uri}","Successfully Enrolled","35215","everest-prime-stm","everest"
 "surehits","${uri}","Successfully Enrolled","35215","everest-prime-stm","everest"
+=======
+"impact_radius","${uri}","Successfully Enrolled","83709","everest-prime-stm","everest"
+"vantage","${uri}","Successfully Enrolled","83709","everest-prime-stm","everest"
+"mediaalpha","${uri}","Successfully Enrolled","83709","everest-prime-stm","everest"
+"Google_Adwords","${uri}","Successfully Enrolled","83709","everest-prime-stm","everest"
+"healthinsurance_org","${uri}","Successfully Enrolled","83709","everest-prime-stm","everest"
+"surehits","${uri}","Successfully Enrolled","83709","everest-prime-stm","everest"
+>>>>>>> 52410a6f081c48b2401df9ed6a7df722353f1156
