@@ -62,7 +62,7 @@
 
 <tr>
     <td>storeEval</td>
-    <td>var now=new Date;now.setDate(now.getDate()+${coverage_date_start_add_days});var y=now.getFullYear();var m=now.getMonth()+1;var m=(m&gt;9)?m:&quot;0&quot;+m;var dd=now.getDate();var dd=(dd&gt;9)?dd:&quot;0&quot;+dd;m+&quot;/&quot;+dd+&quot;/&quot;+y;</td>
+    <td>var now=new Date;now.setDate(now.getDate()+1+${coverage_date_start_add_days});var y=now.getFullYear();var m=now.getMonth()+1;var m=(m&gt;9)?m:&quot;0&quot;+m;var dd=now.getDate();var dd=(dd&gt;9)?dd:&quot;0&quot;+dd;m+&quot;/&quot;+dd+&quot;/&quot;+y;</td>
     <td>the_first_coverage_start_date</td>
 </tr>
 <tr>
@@ -99,6 +99,21 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-payment-section']/div/div/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=c-start</td>
 	<td>${the_first_coverage_start_date}</td>
@@ -113,16 +128,7 @@
 	<td>id=agile-census</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>css=div.census-radio &gt; label</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='census-payment-section']/div/div/div[2]/label</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=c-start</td>
@@ -385,6 +391,10 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
 	
 	
 	
