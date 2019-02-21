@@ -95,7 +95,7 @@
 	<td></td>
 </tr>
 
-<!----------------------------------------------登陆BO--------------
+<!----------------------------------------------登陆BO-------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Login BO</td>
@@ -103,8 +103,13 @@
 </tr>
 <tr>
 	<td>open</td>
-	<td>${ENV}/back-office/reporting?page=1&amp;pageSize=1000&amp;dispositionType=A&amp;reportType=A&requireContactInfo=false</td>
+	<td>${ENV}/back-office/reporting?page=1&amp;pageSize=1000&amp;dispositionType=AF&amp;reportType=A</td>
 	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=uri</td>
+	<td>${uri}</td>
 </tr>
 <tr>
 	 <td>pause</td>
@@ -128,7 +133,7 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//td[contains(text(),'${uri}')]//parent::tr/td[5]</td>
+	<td>//td[contains(text(),'${uri}')]//parent::tr/td[8]</td>
 	<td>${source}</td>
 </tr>
 <tr>
@@ -141,8 +146,8 @@
 	<td>css=pre</td>
 	<td>*&quot;trafficSource&quot;:&quot;${source}&quot;*</td>
 </tr>
-------------------->
-<!---------------------------------------------------------直接从url访问------------------------------------------------------------------------------------------>
+
+<!---------------------------------------------------------直接从url访问-------------------------------------
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Login BO</td>
@@ -183,7 +188,7 @@
 	<td>//*[@id='searchResults']/small/table/tbody/tr[2]/td[8]</td>
 	<td>${source}</td>
 </tr>
-
+----------------------------------------------------->
 <tr>
 	<td>open</td>
 	<td>${ENV}/api/context/clear</td>
@@ -193,6 +198,10 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
 	
 	
 	
