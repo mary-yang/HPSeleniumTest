@@ -1,1 +1,3 @@
 Verified the elements of homepage.
+
+https://www.pivotaltracker.com/n/projects/1258602/stories/163796562
