@@ -68,7 +68,11 @@
 	<td>3000</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('name=filter[bestSellers]')</td>
+	<td></td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>name=filter[bestSellers]</td>
@@ -80,10 +84,14 @@
 	<td>2000</td>
 	<td></td>
 </tr>
-
 <tr>
-	<td>verifyLocation</td>
-	<td>*/quote*</td>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('link=Coverage length')</td>
 	<td></td>
 </tr>
 <tr>
@@ -107,138 +115,70 @@
 	<td>1000</td>
 	<td></td>
 </tr>
-
-<tr>
-	<td>storeText</td>
-	<td>//li[@id='js-group-']/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
-	<td>Bestsellername1</td>
-</tr>
-
-<tr>
-	<td>storeText</td>
-	<td>//ul[2]/li/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
-	<td>Bestsellername2</td>
-</tr>
-
-<tr>
-	<td>storeText</td>
-	<td>//li[2]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
-	<td>Bestsellername3</td>
-</tr>
-
-<tr>
-	<td>storeText</td>
-	<td>//li[3]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
-	<td>Bestsellername4</td>
-</tr>
-
-<tr>
-	<td>storeText</td>
-	<td>//li[4]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
-	<td>Bestsellername5</td>
-</tr>
-
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(//li[5]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//li[5]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
-	<td>Bestsellername6</td>
-</tr>
 <tr>
 	<td>ENDIF</td>
 	<td></td>
 	<td></td>
 </tr>
-<!--
+
 <tr>
 	<td>storeText</td>
-	<td>//div[descendant::a[contains(text(),'Best Seller')]]/ul/li/div/div[2]/div/h3/a</td>
+	<td>xpath=(//div[@data-glossary='shortTerm.bestSeller'])[1]/ancestor::tr[@class='c-plan-unit-v3__row']/descendant::div[@class='c-plan-unit-v3__plan-name']</td>
 	<td>Bestsellername1</td>
 </tr>
-<tr>
-	<td>echo</td>
-	<td>${Bestsellername1}</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>storeText</td>
-	<td>//div[descendant::a[contains(text(),'Best Seller')]]/ul/li[2]/div/div[2]/div/h3/a</td>
+	<td>xpath=(//div[@data-glossary='shortTerm.bestSeller'])[2]/ancestor::tr[@class='c-plan-unit-v3__row']/descendant::div[@class='c-plan-unit-v3__plan-name']</td>
 	<td>Bestsellername2</td>
 </tr>
-<tr>
-	<td>echo</td>
-	<td>${Bestsellername2}</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>storeText</td>
-	<td>//div[descendant::a[contains(text(),'Best Seller')]]/ul/li[3]/div/div[2]/div/h3/a</td>
+	<td>xpath=(//div[@data-glossary='shortTerm.bestSeller'])[3]/ancestor::tr[@class='c-plan-unit-v3__row']/descendant::div[@class='c-plan-unit-v3__plan-name']</td>
 	<td>Bestsellername3</td>
 </tr>
-<tr>
-	<td>echo</td>
-	<td>${Bestsellername3}</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>storeText</td>
-	<td>//div[descendant::a[contains(text(),'Best Seller')]]/ul/li[4]/div/div[2]/div/h3/a</td>
+	<td>xpath=(//div[@data-glossary='shortTerm.bestSeller'])[4]/ancestor::tr[@class='c-plan-unit-v3__row']/descendant::div[@class='c-plan-unit-v3__plan-name']</td>
 	<td>Bestsellername4</td>
 </tr>
-<tr>
-	<td>echo</td>
-	<td>${Bestsellername4}</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>storeText</td>
-	<td>//div[descendant::a[contains(text(),'Best Seller')]]/ul/li[5]/div/div[2]/div/h3/a</td>
+	<td>xpath=(//div[@data-glossary='shortTerm.bestSeller'])[5]/ancestor::tr[@class='c-plan-unit-v3__row']/descendant::div[@class='c-plan-unit-v3__plan-name']</td>
 	<td>Bestsellername5</td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${Bestsellername5}</td>
-	<td></td>
-</tr>
--->
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(//li[5]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a)</td>
-	<td></td>
-</tr>
-<tr>
 	<td>storeText</td>
-	<td>//li[5]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
+	<td>xpath=(//div[@data-glossary='shortTerm.bestSeller'])[6]/ancestor::tr[@class='c-plan-unit-v3__row']/descendant::div[@class='c-plan-unit-v3__plan-name']</td>
 	<td>Bestsellername6</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//li[6]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
+	<td>xpath=(//div[@data-glossary='shortTerm.bestSeller'])[7]/ancestor::tr[@class='c-plan-unit-v3__row']/descendant::div[@class='c-plan-unit-v3__plan-name']</td>
 	<td>Bestsellername7</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//li[7]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
+	<td>xpath=(//div[@data-glossary='shortTerm.bestSeller'])[8]/ancestor::tr[@class='c-plan-unit-v3__row']/descendant::div[@class='c-plan-unit-v3__plan-name']</td>
 	<td>Bestsellername8</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//li[8]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
+	<td>xpath=(//div[@data-glossary='shortTerm.bestSeller'])[9]/ancestor::tr[@class='c-plan-unit-v3__row']/descendant::div[@class='c-plan-unit-v3__plan-name']</td>
 	<td>Bestsellername9</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//li[9]/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a</td>
+	<td>xpath=(//div[@data-glossary='shortTerm.bestSeller'])[10]/ancestor::tr[@class='c-plan-unit-v3__row']/descendant::div[@class='c-plan-unit-v3__plan-name']</td>
 	<td>Bestsellername10</td>
 </tr>
 <tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
+	<td>storeText</td>
+	<td>xpath=(//div[@data-glossary='shortTerm.bestSeller'])[11]/ancestor::tr[@class='c-plan-unit-v3__row']/descendant::div[@class='c-plan-unit-v3__plan-name']</td>
+	<td>Bestsellername11</td>
 </tr>
 <tr>
 	<td>IF</td>
@@ -258,6 +198,10 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
 	
 	
 	
