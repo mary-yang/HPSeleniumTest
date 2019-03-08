@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/HBI/Legion Limited Medical</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/HBI/Agile One</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -67,13 +67,9 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[3]</td>
-	<td>${SLGD}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[4]</td>
 	<td>*${SUPPLACA}*</td>
 </tr>
+
 
 
 <!-----------------------------detail page------------------------------------------->
@@ -85,7 +81,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>css=div.disclaimer-text.</td>
-	<td>${LLMSG}</td>
+	<td>${AOSG}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -103,7 +99,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>css=div.disclaimer-text.</td>
-	<td>${LLMSG}</td>
+	<td>${AOSG}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -121,7 +117,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>css=div.disclaimer-text.</td>
-	<td>${LLMSG}</td>
+	<td>${AOSG}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -160,6 +156,46 @@ sanity4/24</td>
 	<td>${Tel}</td>
 </tr>
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;id=primary-beneficiary-first-name&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primary-beneficiary-first-name</td>
+	<td>test1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primary-beneficiary-last-name</td>
+	<td>test2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primary-beneficiary-relationship</td>
+	<td>test3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-beneficiary-first-name</td>
+	<td>test4</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-beneficiary-last-name</td>
+	<td>test5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-beneficiary-relationship</td>
+	<td>test6</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
@@ -179,30 +215,31 @@ sanity4/24</td>
 	<td>AHI/Include/UseByPassCard</td>
 	<td></td>
 </tr>
+
 <tr>
-        <td>IF</td>
-        <td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
-        <td></td>
+  <td>IF</td>
+  <td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
+  <td></td>
 </tr>
 <tr>
-        <td>clickAndWait</td>
-        <td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
-        <td></td>
+  <td>clickAndWait</td>
+  <td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
+  <td></td>
 </tr>
 <tr>
-       <td>pause</td>
-       <td>5000</td>
-      <td></td>
+  <td>pause</td>
+  <td>5000</td>
+  <td></td>
 </tr>
 
 <tr>
-       <td>ENDIF</td>
-       <td></td>
-       <td></td>
+  <td>ENDIF</td>
+  <td></td>
+  <td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=Health Insurance Terms and Agreements</td>
+	<td>link=Agile One Terms and Agreements</td>
 	<td></td>
 </tr>
 <!-----------------------------terms and agreement page------------------------------------------->
@@ -214,7 +251,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>css=div.disclaimer-wrapper</td>
-	<td>${LLMTA}</td>
+	<td>${AOTA}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -234,6 +271,7 @@ sanity4/24</td>
 
 	</tbody>
 </table>
+	
 	
 	
 	
