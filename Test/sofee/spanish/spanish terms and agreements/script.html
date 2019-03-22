@@ -142,7 +142,7 @@ sanity4/24</td>
 <!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
 <tr>
 	<td>click</td>
-	<td>link=Health Insurance Terms and Agreements</td>
+	<td>//div[@id='consent-checkbox-0-label']/p/a</td>
 	<td></td>
 </tr>
 <tr>
@@ -162,9 +162,30 @@ sanity4/24</td>
 	<td>TÉRMINOS Y ACUERDOS</td>
 </tr>
 <tr>
+  <td>IF</td>
+  <td>'${state1}'=='CO'</td>
+  <td></td>
+</tr>
+<tr>
 	<td>verifyText</td>
 	<td>css=div.disclaimer-wrapper</td>
-	<td>TÉRMINOS Y ACUERDOS DE LEGION LIMITED MEDICAL AVISOS DE ADVERTENCIA DE FRAUDE ${FW}${ACUSA}</td>
+	<td>TÉRMINOS Y ACUERDOS DE LEGION LIMITED MEDICAL AVISOS DE ADVERTENCIA DE FRAUDE Es ilegal proporcionar deliberadamente datos o información falsa, incompleta o engañosa a una compañía aseguradora con el propósito de defraudar o intentar defraudar a la compañía. Las sanciones pueden incluir encarcelamiento, multas, negación del seguro y daños civiles. Cualquier compañía aseguradora o agente de una compañía aseguradora que deliberadamente proporcione datos o información falsa, incompleta o engañosa a un titular de la póliza o demandante con el fin de defraudar o intentar defraudar al titular de la póliza o demandante respecto a un acuerdo o indemnización pagadera del producto del seguro se deberá denunciar ante la División de Seguros de Colorado dentro del Departamento de Agencias Reguladoras. Las sanciones incluyen encarcelamiento y/o multas. Además, una compañía aseguradora puede negar los beneficios del seguro si el solicitante proporcionó información materialmente falsa relacionada con una reclamación. ${ACUSA}</td>
+</tr>
+<tr>
+  <td>ELSE</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-wrapper</td>
+	<td>TÉRMINOS Y ACUERDOS DE LEGION LIMITED MEDICAL AVISOS DE ADVERTENCIA DE FRAUDE ${FW} ${ACUSA}</td>
+</tr>
+
+<tr>
+  <td>ENDIF</td>
+  <td></td>
+  <td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -199,6 +220,12 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
+	
+	
+	
 	
 	
 	

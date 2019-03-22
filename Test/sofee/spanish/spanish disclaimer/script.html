@@ -11,6 +11,7 @@ sanity4/24</td>
 	<td>Test/sofee/_include/spanish_disclaimer</td>
 	<td></td>
 </tr>
+<!------------------front door----------------------------------------->
 <tr>
 	<td>open</td>
 	<td>https://pruebas.asegumed.com/health-benefit-insurance/axis-legion-limited-medical</td>
@@ -26,10 +27,21 @@ sanity4/24</td>
 	<td>//div[@id='disclaimer-container']/div[2]</td>
 	<td>${ACA DISCLAIMER}</td>
 </tr>
+<!------------------------------home--------------------------------------------->
 <tr>
 	<td>open</td>
-	<td>https://pruebas.asegumed.com/health-benefit-insurance-quotes</td>
+	<td>https://pruebas.asegumed.com/</td>
 	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${ACA DISCLAIMER}</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -87,8 +99,13 @@ sanity4/24</td>
 	<td>${SUPPLEMENTAL_SERVICES_DISCLAIMER} ${ACA DISCLAIMER}</td>
 </tr>
 <tr>
-	<td>open</td>
-	<td>https://pruebas.asegumed.com/health-benefit-insurance/plan/legion-al-500-30-100-3</td>
+	<td>clickAndWait</td>
+	<td>//p[@class='carrierGroup-quote--planDetailsLink']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
@@ -253,6 +270,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	
