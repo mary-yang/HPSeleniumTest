@@ -65,10 +65,33 @@ sanity4/24</td>
 	<td>xpath=//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
-<!-----------------------------quote page------------------------------------------->
+
+<!------------------quote page disclaimer----------------------------->
 <tr>
 	<td>include</td>
-	<td>AHI/Include/STM Quote</td>
+	<td>AHI/Include/STM Select Carrier</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${ACATAX}</td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<!-----------------------------detail page------------------------------------------->
+<tr>
+	<td>include</td>
+	<td>AHI/Include/STM Select Product</td>
 	<td></td>
 </tr>
 
@@ -422,6 +445,10 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
+	
 	
 	
 	

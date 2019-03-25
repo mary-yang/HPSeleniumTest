@@ -6,51 +6,103 @@ sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
-
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
+<!--------------best seller------------------------------------------------------------>
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent(&quot;//div[@id='js-quote-header']/div[2]/div/p&quot;)</td>
+	<td>verifyElementPresent("//input[contains(@id,'i-best-sellers') and @checked='checked']")</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=li.js-clear</td>
+	<td>//input[contains(@id,'i-best-sellers')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>3000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>//input[@data-id="${carrierid}"]</td>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------------------------------------------if carrier not disabled--------------------------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("css=#js-sidebar-carrier .js-toggle-button")</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#js-sidebar-carrier .js-toggle-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//input[@value='${carrierid}' and @disabled='']")</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='js-sidebar-duration']/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=i-6-less-sidebar</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>5000</td>
+	<td>3000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>refreshAndWait</td>
+	<td>click</td>
+	<td>css=#js-sidebar-carrier .js-toggle-button</td>
 	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//input[@value='${carrierid}']")</td>
 	<td></td>
 </tr>
 
 <tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'(see details)')])[2]</td>
+	<td>click</td>
+	<td>//input[@value='${carrierid}']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("xpath=(//a[contains(@href,'/plan/${productId}')])[2]")</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(@href,'/plan/${productId}')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -59,8 +111,8 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>include</td>
-	<td>AHI/Include/STM Quote V3</td>
+	<td>click</td>
+	<td>xpath=(//a[contains(@href,'/plan/${carrierid}')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -68,6 +120,14 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
+
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+
+
 
 	</tbody>
 </table>	
@@ -115,10 +175,17 @@ sanity4/24</td>
 	
 	
 	
-<<<<<<< HEAD
-=======
 	
->>>>>>> 5503445e2d97525a1761e6496afac655684c7a32
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

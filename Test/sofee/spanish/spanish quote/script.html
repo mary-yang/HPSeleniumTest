@@ -1,0 +1,251 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/sofee/spanish/spanish quote</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>https://pruebas.asegumed.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://pruebas.asegumed.com/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>35215</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1980</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!-----------------------------------quote page-------------------------------------------------------->
+	
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote-benefitsGlance']/h4</td>
+	<td>Beneficios</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote-benefitsGlance']/p[1]</td>
+	<td>Paciente interno diario</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote-benefitsGlance']/p[2]</td>
+	<td>UCI (5 días)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote-benefitsGlance']/p[3]</td>
+	<td>Cirugía de hospitalización</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote-benefitsGlance']/p[4]</td>
+	<td>Visitas al consultorio</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote-benefitsGlance']/p[5]</td>
+	<td>Beneficios de bienestar</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote-benefitsGlance']/p[6]</td>
+	<td>Costo Mensual</td>
+</tr>
+	
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote--details']/h4</td>
+	<td>Plan_2</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote--details']/div/p[1]</td>
+	<td>$500 por día x 30 días</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote--details']/div/p[2]</td>
+	<td>$500 por día x 5 días</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote--details']/div/p[3]</td>
+	<td>$500</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote--details']/div/p[4]</td>
+	<td>$100 por día x 3 días</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote--details']/div/p[5]</td>
+	<td>$50por día x 1 días</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote--details']/div/p[6]</td>
+	<td>$100.82</td>
+</tr>
+	
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='carrierGroup-quote--details'])[2]/h4</td>
+	<td>Plan_3</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='carrierGroup-quote--details'])[2]/div/p[1]</td>
+	<td>$1,000 por día x 30 días</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='carrierGroup-quote--details'])[2]/div/p[2]</td>
+	<td>$750 por día x 5 días</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='carrierGroup-quote--details'])[2]/div/p[3]</td>
+	<td>$1,000</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='carrierGroup-quote--details'])[2]/div/p[4]</td>
+	<td>$100 por día x 5 días</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='carrierGroup-quote--details'])[2]/div/p[5]</td>
+	<td>$50por día x 2 días</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='carrierGroup-quote--details'])[2]/div/p[6]</td>
+	<td>$182.52</td>
+</tr>
+	
+	
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='carrierGroup-quote--details'])[3]/h4</td>
+	<td>Plan_4</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='carrierGroup-quote--details'])[3]/div/p[1]</td>
+	<td>$1,000 por día x 30 días</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='carrierGroup-quote--details'])[3]/div/p[2]</td>
+	<td>$750 por día x 5 días</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='carrierGroup-quote--details'])[3]/div/p[3]</td>
+	<td>$1,500</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='carrierGroup-quote--details'])[3]/div/p[4]</td>
+	<td>$100 por día x 3 días</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='carrierGroup-quote--details'])[3]/div/p[5]</td>
+	<td>$50por día x 2 días</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='carrierGroup-quote--details'])[3]/div/p[6]</td>
+	<td>$250.40</td>
+</tr>
+
+<!----------------included benefit--------------------------------------------------------->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote--includedBenefits']/h3</td>
+	<td>INCLUIDO CON TODAS LOS OPCIONES DE COBERTURA</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote--includedBenefits']/div/div[1]</td>
+	<td>Elige cualquier doctor
+Este es un plan de indemnización. Puede visitar casi cualquier médico u hospital que desee. La compañía de seguros luego paga una parte fija de sus cargos totales.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote--includedBenefits']/div/div[2]</td>
+	<td>Conserje de salud
+Este plan incluye a Karis360. Para asistencia ilimitada de su asesor personal de salud.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='carrierGroup-quote--includedBenefits']/div/div[3]</td>
+	<td>Licenciado MD 24/7
+Este plan incluye Teladoc. Un proveedor de telesalud que le permite hablar con un médico autorizado por teléfono en cualquier momento, cualquier día.</td>
+</tr>
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	

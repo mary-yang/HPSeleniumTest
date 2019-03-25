@@ -78,29 +78,34 @@
 	<td>//div[@id='js-quote-filters']/div[2]</td>
 	<td>Carriers</td>
 </tr>
+
 <tr>
 	<td>storeText</td>
-	<td>//div[2]/div/h3/a</td>
+	<td>xpath=(//a[@data-glossary='dental.bestSeller'])[1]/following::h3/a</td>
 	<td>Bestsellername1</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//ul[2]/li/div/div[2]/div/h3/a</td>
+	<td>xpath=(//a[@data-glossary='dental.bestSeller'])[2]/following::h3/a</td>
 	<td>Bestsellername2</td>
 </tr>
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent("xpath=(//a[@data-glossary='dental.bestSeller'])[3]/following::h3/a")</td>
+	<td></td>
+</tr>
+<tr>
 	<td>storeText</td>
-	<td>//li[2]/div/div[2]/div/h3/a</td>
+	<td>xpath=(//a[@data-glossary='dental.bestSeller'])[3]/following::h3/a</td>
 	<td>Bestsellername3</td>
 </tr>
-
-
 <tr>
 	<td>ENDIF</td>
 	<td></td>
 	<td></td>
 </tr>
-<!--
+
+<!---------------------------
 <tr>
 	<td>storeText</td>
 	<td>//div[descendant::a[contains(text(),'Best Seller')]]/ul/li/div/div[2]/div/h3/a</td>
@@ -122,6 +127,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent('//div[descendant::a[contains(text(),'Best Seller')]]/ul/li[3]/div/div[2]/div/h3/a')</td>
+	<td></td>
+</tr>
+<tr>
 	<td>storeText</td>
 	<td>//div[descendant::a[contains(text(),'Best Seller')]]/ul/li[3]/div/div[2]/div/h3/a</td>
 	<td>Bestsellername3</td>
@@ -129,6 +139,11 @@
 <tr>
 	<td>echo</td>
 	<td>${Bestsellername3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -151,7 +166,7 @@
 	<td>${Bestsellername5}</td>
 	<td></td>
 </tr>
--->
+--------------------------------------->
 </tbody></table>
 </body>
 </html>
@@ -176,6 +191,8 @@
 	
 	
 
+	
+	
 	
 	
 	

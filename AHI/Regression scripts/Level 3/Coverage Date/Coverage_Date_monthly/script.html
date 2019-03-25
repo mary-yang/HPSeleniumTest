@@ -8,6 +8,8 @@
 	<td>${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
+
+<!------------------------------------------------------------
 <tr>
 	<td>storeEval</td>
 	<td>var d = new Date();'0'+ (1+d.getMonth()) +'/'+ (1+d.getDate()) +'/'+ d.getFullYear();</td>
@@ -84,6 +86,19 @@
 	<td>${the_first_coverage_end_date}</td>
 	<td></td>
 </tr>
+------------------------------------------------------------------>
+<tr>
+    <td>storeEval</td>
+    <td>var now=new Date;now.setDate(now.getDate()+1+${add_days});var y=now.getFullYear();var m=now.getMonth()+1;var m=(m&gt;9)?m:&quot;0&quot;+m;var dd=now.getDate();var dd=(dd&gt;9)?dd:&quot;0&quot;+dd;m+&quot;/&quot;+dd+&quot;/&quot;+y;</td>
+    <td>the_first_coverage_start_date</td>
+</tr>
+
+<tr>
+    <td>storeEval</td>
+    <td>var now=new Date;now.setDate(now.getDate()+1+${add_days}+180);var y=now.getFullYear();var m=now.getMonth()+1;var m=(m&gt;9)?m:&quot;0&quot;+m;var dd=now.getDate();var dd=(dd&gt;9)?dd:&quot;0&quot;+dd;m+&quot;/&quot;+dd+&quot;/&quot;+y;</td>
+    <td>the_first_coverage_end_date</td>
+</tr>
+<!-------------------------------start ------------------------------------------------>
 <tr>
 	<td>open</td>
 	<td>${ENV}/term-health-insurance/census</td>
@@ -92,7 +107,7 @@
 <tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
-	<td>80219</td>
+	<td>85364</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -109,7 +124,7 @@
 	<td>id=p-monthly</td>
 	<td></td>
 </tr>
-<!----------------------------------------------------------------->
+<!-------------------------------change start date---------------------------------->
 <tr>
 	<td>click</td>
 	<td>//div[@id='census-payment-section']/div/div/div[1]/label</td>
@@ -184,11 +199,7 @@
 	<td>AHI/Include/STM Apply</td>
 	<td></td>
 </tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Underwriting</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>IF</td>
 	<td>verifyElementPresent(&quot;id=js-returning-user-no&quot;)</td>
@@ -205,48 +216,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-2835']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-2836']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-2840']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-2841']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-2842']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-2843']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-2837.2838']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-2837.2839']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=js-app-continue-link</td>
+	<td>include</td>
+	<td>AHI/Include/STM App Page 1</td>
 	<td></td>
 </tr>
 <tr>
@@ -257,7 +228,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>xpath=(//div[@class='tr summary-effective-dates'])[1]/div[2]</td>
-	<td>${verify_the_first_coverage_start_date}*</td>
+	<td>${the_first_coverage_start_date}*</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -312,7 +283,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>xpath=(//div[@class='tr summary-effective-dates'])[2]/div[2]</td>
-	<td>${verify_the_first_coverage_end_date}*</td>
+	<td>6 Months*</td>
 </tr>
 <tr>
 	<td>include</td>
@@ -361,6 +332,9 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
 	
 	
 	

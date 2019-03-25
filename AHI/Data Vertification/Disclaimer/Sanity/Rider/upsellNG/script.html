@@ -92,8 +92,9 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[2]</td>
-	<td>LIFESHIELD SPECIFIC DISCLAIMERSTHIS IS A SHORT-TERM LIMITED DURATION HEALTH INSURANCE POLICY THAT IS NOT INTENDED TO AND DOES NOT QUALIFY AS THE MINIMUM ESSENTIAL COVERAGE REQUIRED BY THE AFFORDABLE CARE ACT (ACA). UNLESS YOU PURCHASE A POLICY THAT PROVIDES MINIMUM ESSENTIAL COVERAGE IN ACCORDANCE WITH THE ACA, YOU MAY BE SUBJECT TO A FEDERAL TAX PENALTY. ALSO, THE TERMINATION OR LOSS OF THIS POLICY DOES NOT ENTITLE YOU TO A SPECIAL ENROLLMENT PERIOD TO PURCHASE A HEALTH INSURANCE POLICY THAT QUALIFIES AS MINIMUM ESSENTIAL COVERAGE OUTSIDE OF AN OPEN ENROLLMENT PERIOD.THIS IS A SUPPLEMENT TO HEALTH INSURANCE AND IS NOT A SUBSTITUTE FOR MAJOR MEDICAL COVERAGE. LACK OF MAJOR MEDICAL COVERAGE (OR OTHER MINIMUM ESSENTIAL COVERAGE) MAY RESULT IN AN ADDITIONAL PAYMENT WITH YOUR TAXES. This is a brief summary of LifeShield Short-Term Medical Insurance underwritten by LifeShield National Insurance Co. provided by Policy Form Series LNG- 3001. Availability and terms may vary by state.</td>
+	<td>${AdvantHealthDisclaimers}</td>
 </tr>
+
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[3]</td>
@@ -101,31 +102,10 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[4]</td>
-	<td>${CPGD}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[5]</td>
 	<td>${ACATAX}</td>
 </tr>
-<!------------
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[5]</td>
-	<td>${SlaicolDisclaimers}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[6]</td>
-	<td>${UHCGen5EPODisclaimer}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[7]</td>
-	<td>${ACATAX}</td>
-</tr>
--------------------------->
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/STM Quote</td>
@@ -146,7 +126,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[2]</td>
-	<td>${LSGD}</td>
+	<td>${LSGD_ADVANTAGE}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -184,7 +164,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[2]</td>
-	<td>${LSGD}</td>
+	<td>${LSGD_ADVANTAGE}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -256,7 +236,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[2]</td>
-	<td>${LSGD}</td>
+	<td>${LSGD_ADVANTAGE}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -327,7 +307,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[2]</td>
-	<td>${LSGD}</td>
+	<td>${LSGD_ADVANTAGE}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -411,7 +391,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimers-container']/div/div[3]/div</td>
-	<td>EXTENDED DURATION IF YOU SELECTED THE EXTENDED DURATION OPTION You have opted to auto-renew your plan for additional policy term(s). Upon expiration of your current policy, a second policy will issue so that you will be covered under back-to-back policies with no gap in your health insurance coverage. Please be aware that each subsequent policy constitutes separate coverage. Prices may change at the start of each new policy. Be sure to read the terms of your subsequent policy as your deductible and coinsurance and all benefit limits may reset with each policy term. If available, we strongly recommend that you add a pre-existing waiver rider to your policies; this will protect you in case you develop a medical condition during a current policy that requires treatment during a subsequent policy. YOU CAN CANCEL YOUR POLICIES AT ANYTIME.</td>
+	<td>${EXTENDDUR}</td>
 </tr>
 
 <tr>
@@ -475,6 +455,11 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
+	
+	
 	
 	
 	

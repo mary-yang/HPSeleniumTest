@@ -176,6 +176,9 @@ sanity4/24</td>
 <!--------------------App Pages--------------------->
 <tr>
 	<td>include</td>
+<<<<<<< HEAD
+	<td>AHI/Include/STM App Page 1</td>
+=======
 	<td>AHI/Include/Underwriting</td>
 	<td></td>
 </tr>
@@ -190,28 +193,20 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-1']/div/button</td>
+	<td>storeXpathCount</td>
+	<td>xpath=//li[contains(@id,'js-question-')]</td>
+	<td>num</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${num}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-2']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-3']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-4']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-5']/div/button</td>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<=${num};i++){
+    writeSelenium("click","xpath=//li[contains(@id,'js-question-')]["+i+"]/div/button");
+}</td>
 	<td></td>
 </tr>
 
@@ -233,6 +228,7 @@ sanity4/24</td>
 <tr>
 	<td>ENDIF</td>
 	<td></td>
+>>>>>>> a2032e2bba9447b5ab8d85020690cbe4ed59026b
 	<td></td>
 </tr>
 <tr>
@@ -473,6 +469,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	

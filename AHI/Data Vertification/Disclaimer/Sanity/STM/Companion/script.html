@@ -57,21 +57,9 @@ sanity4/24</td>
 <!-----------------------------quote page------------------------------------------->
 <tr>
 	<td>include</td>
-	<td>AHI/Include/STM Quote</td>
+	<td>AHI/Include/STM Select Carrier</td>
 	<td></td>
 </tr>
-
-<tr>
-	<td>storeText</td>
-	<td>css=h1.plan-details-header-name</td>
-	<td>planname</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=a.plan-details-price.js-price-breakdown</td>
-	<td>mo</td>
-</tr>
-<!-----------------------------detail page------------------------------------------->
 <tr>
 	<td>verifyText</td>
 	<td>css=div.disclaimer-text.</td>
@@ -88,6 +76,44 @@ sanity4/24</td>
 	<td>${ACATAX}</td>
 </tr>
 <tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<!-----------------------------detail page------------------------------------------->
+<tr>
+	<td>include</td>
+	<td>AHI/Include/STM Select Product</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>storeText</td>
+	<td>css=h1.plan-details-header-name</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=a.plan-details-price.js-price-breakdown</td>
+	<td>mo</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>css=div.disclaimer-text.</td>
+	<td>${GeneralDisclaimers}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${CPGD}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
+	<td>${ACATAX}</td>
+</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=plan-details-primary-apply</td>
@@ -179,30 +205,23 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-1']/div/button</td>
+	<td>storeXpathCount</td>
+	<td>xpath=//li[contains(@id,'js-question-')]</td>
+	<td>num</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${num}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-2']/div/button</td>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<=${num};i++){
+    writeSelenium("click","xpath=//li[contains(@id,'js-question-')]["+i+"]/div/button");
+}</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-3']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-4']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@id='js-question-P0-5']/div/button</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>click</td>
 	<td>id=js-app-continue-link</td>
@@ -449,6 +468,10 @@ tr>
 </body>
 </html>	
 
+	
+	
+	
+	
 	
 	
 	
