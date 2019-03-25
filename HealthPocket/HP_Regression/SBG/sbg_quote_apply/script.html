@@ -28,8 +28,18 @@
 	<td>deductible</td>
 </tr>
 <tr>
+	<td>storeEval</td>
+	<td>var a='${deductible}';a=a.replace(/ to /,'*');</td>
+	<td>deductible</td>
+</tr>
+<tr>
 	<td>storeText</td>
 	<td>//li[4]/div[2]/p</td>
+	<td>oop_max</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var a='${oop_max}';a=a.replace(/ to /,'*');</td>
 	<td>oop_max</td>
 </tr>
 <!--go to apply page from quote page-->
@@ -45,28 +55,30 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=div.planSummaryBottom &gt; dl &gt; dd</td>
+	<td>//*[@id="applyBody"]/div/div[2]/div/div/div/div/ul/li[2]/text()</td>
 	<td>${plan_type}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=p.value</td>
+	<td>//*[@id="applyBody"]/div/div[2]/div/div/div/div/ul/li[3]/text()</td>
 	<td>${deductible}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='planSummary']/div[2]/dl/dd[3]/p</td>
+	<td>//*[@id="applyBody"]/div/div[2]/div/div/div/div/ul/li[4]/text()</td>
 	<td>${oop_max}</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Continue Searching</td>
-	<td></td>
 </tr>
 </tbody></table>
 </body>
 </html>
 
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

@@ -1,0 +1,133 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>HealthPocket/Data/HP_Short_Term_Data</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Landscape</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>praetemptatus.agilehealthinsurance.com/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>praetemptatus.agilehealthinsurance.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote &amp; Save Today</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1975</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Coverage length</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/ul/li/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/ul/li/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>planCount</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/api/clientData/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${ENV}.healthpocket.com/short-term-health-insurance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=location</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div/div/div/div/div/ul/li/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div/div/div/div/div/ul/li/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='js-plans-header']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[contains(text(),'$')]</td>
+	<td>price</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='js-plans-header']/div/div/div/h1</td>
+	<td>Num</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
