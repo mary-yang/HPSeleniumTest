@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Fee/Everest_One_Fee</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data2/Fee/Everest_One_Fee</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -8,12 +8,12 @@ sanity4/24</td>
 	<tbody>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com/api/context/clear</td>
+	<td>${ENV}/api/context/clear</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://${ENV}.agilehealthinsurance.com</td>
+	<td>${ENV}</td>
 	<td></td>
 </tr>
 <tr>
@@ -25,12 +25,6 @@ sanity4/24</td>
 	<td>pause</td>
 	<td>3000</td>
 	<td></td>
-</tr>
-
-<tr>
-	<td>verifyText</td>
-	<td>css=h1.census-main-heading</td>
-	<td>Compare Health Insurance Quotes*</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -60,11 +54,6 @@ sanity4/24</td>
 <tr>
 	<td>clickAndWait</td>
 	<td>xpath=.//*[@id='js-see-plans']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
 	<td></td>
 </tr>
 <tr>
@@ -345,6 +334,7 @@ sanity4/24</td>
 
 	
 
+	
 	
 	
 	

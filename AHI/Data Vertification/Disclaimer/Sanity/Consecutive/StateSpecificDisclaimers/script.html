@@ -233,16 +233,29 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>IF</td>
+	<td>verifyElementPresent('xpath=//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[7]/div/button[1]')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[7]/div/button[1]</td>
 	<td></td>
 </tr>
 
+
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 <tr>
 	<td>pause</td>
 	<td>1000</td>
 	<td></td>
 </tr>
+
+
 <tr>
 	<td>verifyText</td>
 	<td>css=div.disclaimer-text.</td>
@@ -255,11 +268,7 @@ sanity4/24</td>
 	<td>${SSD}</td>
 </tr>
 
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
@@ -271,11 +280,7 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
+
 <!-----------------------------application pages------------------------------------------->
 
 
@@ -565,6 +570,8 @@ sanity4/24</td>
 	
 	
 
+	
+	
 	
 	
 	
