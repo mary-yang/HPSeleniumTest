@@ -40,7 +40,6 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	<td>0</td>
 </tr>
 ------------------------------------------>
-
 <tr>
 	<td>open</td>
 	<td>${ENV}/term-health-insurance/apply/${planid}?census[location][zip]=${zipcode}&amp;
@@ -51,6 +50,16 @@ census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_ge
 	<td>storeText</td>
 	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr[2]/td[2]</td>
 	<td>Apply_page_QA_rate</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr[3]</td>
+	<td>QA_fee</td>
+</tr>
+<tr>
+	 <td>storeText</td>
+	<td>//div[@id='js-apply-overview']/div[3]/div/div[5]/div[2]</td>
+	<td>QA_duration</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -69,13 +78,30 @@ census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_ge
 	<td>Apply_page_testprod_rate</td>
 </tr>
 <tr>
+	<td>storeText</td>
+	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr[3]</td>
+	<td>testprod_fee</td>
+</tr>
+<tr>
+	 <td>storeText</td>
+	<td>//div[@id='js-apply-overview']/div[3]/div/div[5]/div[2]</td>
+	<td>Prod_duration</td>
+</tr>
+<tr>
 	<td>verifyEval</td>
 	<td>parseFloat('${Apply_page_testprod_rate}'.match(/\d+.\d+/))-parseFloat('${Apply_page_QA_rate}'.match(/\d+.\d+/))</td>
 	<td>0</td>
 </tr>
+
+<tr>
+	<td>storeEval</td>
+	<td>parseFloat('${Apply_page_QA_rate}'.match(/\d+.\d+/))/parseFloat('${Apply_page_testprod_rate}'.match(/\d+.\d+/))</td>
+	<td>trendFactor</td>
+</tr>
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	

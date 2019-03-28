@@ -14,6 +14,11 @@ census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_ge
 	<td>Apply_page_QA_rate</td>
 </tr>
 <tr>
+	<td>storeText</td>
+	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr[3]</td>
+	<td>QA_fee</td>
+</tr>
+<tr>
 	 <td>storeText</td>
 	<td>//div[@id='js-apply-overview']/div[3]/div/div[5]/div[2]</td>
 	<td>QA_duration</td>
@@ -35,6 +40,11 @@ census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_ge
 	<td>Apply_page_testprod_rate</td>
 </tr>
 <tr>
+	<td>storeText</td>
+	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr[3]</td>
+	<td>testprod_fee</td>
+</tr>
+<tr>
 	 <td>storeText</td>
 	<td>//div[@id='js-apply-overview']/div[3]/div/div[5]/div[2]</td>
 	<td>Prod_duration</td>
@@ -44,6 +54,7 @@ census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_ge
 	<td>parseFloat('${Apply_page_testprod_rate}'.match(/\d+.\d+/))-parseFloat('${Apply_page_QA_rate}'.match(/\d+.\d+/))</td>
 	<td>0</td>
 </tr>
+
 <tr>
 	<td>storeEval</td>
 	<td>parseFloat('${Apply_page_QA_rate}'.match(/\d+.\d+/))/parseFloat('${Apply_page_testprod_rate}'.match(/\d+.\d+/))</td>
@@ -52,6 +63,7 @@ census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_ge
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	
