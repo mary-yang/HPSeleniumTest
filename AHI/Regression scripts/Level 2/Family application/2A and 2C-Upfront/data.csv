@@ -1,5 +1,5 @@
 "state","zip","carrierid","uri","productId"
 "##FL","32099","carrier-hccadvantage-","${uri}",""
-"##FL","32099","carrier-hccflexible-","${uri}",""
-"CO","80219","lifeshield","${uri}","lifeshield-flex"
+"FL","32099","lifeshield-flex-${state}-5000-20-9000-750000","${uri}","lifeshield-flex"
+"##CO","80219","lifeshield","${uri}","lifeshield-flex"
 "##FL","32099","carrier-premierstm-","${uri}",""
