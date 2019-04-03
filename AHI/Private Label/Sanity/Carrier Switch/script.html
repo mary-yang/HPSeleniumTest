@@ -1,0 +1,526 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Private Label/Sanity/Carrier Switch</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Appcreate</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://oathbringer.agilehealthinsurance.com/back-office/carrier-switch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('id=identifierId')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=identifierId</td>
+	<td>denis.yu1111@gmail.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#identifierNext &gt; content.CwaK9 &gt; span.RveJvd.snByac</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.RveJvd.snByac</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>name=password</td>
+	<td>Think2016</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.RveJvd.snByac</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-advanthealth &gt; td.carrier</td>
+	<td>AdvantHealth</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td.productLine</td>
+	<td>stm</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td.status</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=td.states</td>
+	<td>AL,AR,AZ,GA,KY,MS,NC,NE,NV,OH,OK,TX,WI</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-pivotcompanion &gt; td.carrier</td>
+	<td>Companion Life</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td.productLine</td>
+	<td>stm</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td.status</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#stm-pivotcompanion &gt; td.states</td>
+	<td>AL,AR,AZ,FL,GA,ID,IL,IN,KY,LA,MI,MO,MS,NC,NE,NV,OH,OK,OR,PA,TN,TX,WI,WV,WY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-everest-one &gt; td.carrier</td>
+	<td>Everest</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#stm-everest-one &gt; td.states</td>
+	<td>ID,ME,MN,NE,NH,OR,SD,WI,WV</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-everest &gt; td.carrier</td>
+	<td>Everest Prime</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-everest &gt; td.states</td>
+        <td>AL,AR,AZ,FL,GA,ID,IL,IN,LA,MN,MO,MS,NC,NE,NH,OH,OK,OR,PA,SC,SD,TN,TX,WI,WV,WY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-lifeshield &gt; td.carrier</td>
+	<td>LifeShield</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#stm-lifeshield &gt; td.states</td>
+	<td>AL,AR,AZ,FL,GA,IL,IN,KY,LA,MN,MO,MS,NC,NV,OK,PA,SC,SD,TN,TX,VA,WV</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-nationalgeneral &gt; td.carrier</td>
+	<td>National General</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-nationalgeneral &gt; td.states</td>
+	<td>AL,AR,AZ,DC,FL,GA,IA,IL,KS,KY,LA,MD,MO,MS,MT,NC,NE,NM,NV,OH,OK,OR,SC,SD,TN,TX,UT,VA,WI,WV,WY</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#stm-slaico &gt; td.carrier</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-slaico &gt; td.states</td>
+	<td>AR,AZ,DE,FL,IA,ID,IL,IN,KY,LA,MI,MS,ND,NE,NV,OH,OK,PA,SC,TN,TX,VA,WV,WY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-unitedhealthone &gt; td.carrier</td>
+	<td>UnitedHealthcare</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-unitedhealthone &gt; td.states</td>
+	<td>No Available</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>link=Health Benefit Insurance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-cardinalchoice &gt; td.carrier</td>
+	<td>Cardinal Choice</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-cardinalchoice &gt; td.states</td>
+	<td>AL,AZ,AR,DE,DC,FL,GA,HI,IL,IN,IA,KY,LA,MI,MS,MO,NE,NV,NM,NC,ND,OH,OK,OR,PA,RI,SC,TN,TX,UT,VA,WV,WI,WY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-legion &gt; td.carrier</td>
+	<td>Legion Limited Medical</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-legion &gt; td.states</td>
+	<td>AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,IL,IN,IA,KY,LA,MI,MN,MS,NE,NM,OH,PA,SC,TN,TX,VA,WV,WI,WY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-agilesecure &gt; td.carrier</td>
+	<td>Agile Secure</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-agilesecure &gt; td.states</td>
+	<td>NJ,VT</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-agileone &gt; td.carrier</td>
+	<td>Agile One</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-agileone &gt; td.productLine</td>
+	<td>hbi</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-agileone &gt; td.status</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-agileone &gt; td.states</td>
+	<td>AL,AZ,DE,HI,KY,MS,NE,ND,OH,OR,PA,RI,SC,TX,VA,WI,WY</td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-slaicohbi &gt; td.carrier</td>
+	<td>Fixed Cash Benefit</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-slaicohbi &gt; td.states</td>
+	<td>AZ,AR,DE,FL,GA,IL,IA,KY,LA,MI,MS,NE,NM,OK,PA,SC,TN,VA,WV,WI,WY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-coreshield &gt; td.carrier</td>
+	<td>Core Shield</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-coreshield &gt; td.states</td>
+	<td>AL,AZ,AR,CA,DE,DC,FL,GA,HI,IL,IN,KY,LA,MI,MS,NE,NM,OH,PA,SC,TN,VA,WV,WI,WY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-protector360 &gt; td.carrier</td>
+	<td>Protector</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#hbi-protector360 &gt; td.states</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dental Insurance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dentalVision-ameritas &gt; td.carrier</td>
+	<td>Ameritas</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dentalVision-ameritas &gt; td.states</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dental-nationwide &gt; td.carrier</td>
+	<td>Nationwide</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dental-nationwide &gt; td.states</td>
+	<td>AL,AZ,AR,CA,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KY,LA,MS,MO,NE,NV,NJ,NM,ND,OH,OK,OR,PA,PR,RI,SC,TN,TX,VA,WV,WI,WY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dental-nationalgeneral &gt; td.carrier</td>
+	<td>National General</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dental-nationalgeneral &gt; td.states</td>
+	<td>AL,AR,AZ,DC,FL,GA,ID,IL,IN,MI,MO,MS,NE,NV,OK,PA,SC,TX,WI,WY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dental-unitedhealthone &gt; td.carrier</td>
+	<td>UnitedHealthcare</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dental-unitedhealthone &gt; td.productLine</td>
+	<td>dental</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dental-unitedhealthone &gt; td.status</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dental-unitedhealthone &gt; td.states</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Telemedicine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#teladoc-teladoc &gt; td.carrier</td>
+	<td>Teladoc</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#teladoc-teladoc &gt; td.states</td>
+	<td>AL,AK,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KY,LA,ME,MD,MI,MN,MS,MO,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,PR,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add-on Products</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#agileBundleRider-agileone &gt; td.carrier</td>
+	<td>Agile One</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#agileBundleRider-agileone &gt; td.states</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#agileBundleRider-agilesecure &gt; td.carrier</td>
+	<td>Agile Secure</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#agileBundleRider-agilesecure &gt; td.states</td>
+	<td>AL,AZ,CO,DE,IL,IN,IA,KY,LA,MS,NE,NV,ND,OH,OR,PA,SC,TX,VA,WV,WI,WY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dentalVisionRider-ameritas &gt; td.carrier</td>
+	<td>Ameritas</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dentalVisionRider-ameritas &gt; td.states</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dentalRider-nationwide &gt; td.carrier</td>
+	<td>Nationwide</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dentalRider-nationwide &gt; td.states</td>
+	<td>AL,AZ,AR,CA,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KY,LA,MI,MS,MO,NE,NV,NJ,NM,ND,OH,OK,OR,PA,PR,RI,SC,TN,TX,VA,WV,WI,WY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#visionRider-nationwide &gt; td.carrier</td>
+	<td>Nationwide</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#visionRider-nationwide &gt; td.states</td>
+	<td>AR,AL,AZ,CA,CT,DE,DC,GA,HI,IA,ID,IL,IN,KY,LA,MI,MO,MS,ND,NE,NM,NV,OH,OK,OR,PA,RI,SC,TN,TX,WI,WV,WY</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#teladocRider-teladoc &gt; td.carrier</td>
+	<td>Teladoc</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#teladocRider-teladoc &gt; td.states</td>
+	<td>AL,AK,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KY,LA,ME,MD,MI,MN,MS,MO,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,PR,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-everest-one-llbenefits &gt; td.carrier</td>
+	<td>Everest</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-everest-one-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-everest-one-llbenefits &gt; td.states</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-everest-llbenefits &gt; td.carrier</td>
+	<td>Everest Prime</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-everest-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-everest-llbenefits &gt; td.states</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-nationalgeneral-llbenefits &gt; td.carrier</td>
+	<td>National General</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-nationalgeneral-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-nationalgeneral-llbenefits &gt; td.states</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-unitedhealthone-llbenefits &gt; td.carrier</td>
+	<td>UnitedHealthcare</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-unitedhealthone-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-unitedhealthone-llbenefits &gt; td.states</td>
+	<td>No Available</td>
+</tr>
+
+
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
