@@ -1,0 +1,199 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Spanish Site/Regression/spanish plan detail</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>https://pruebas.asegumed.com/health-benefit-insurance-quotes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>35215</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1980</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!---------------plan 2------------------------------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Plan 2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//li[contains(@class,'nav-item ')])[1]</td>
+	<td>Resumen</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='plan-details-intro']</td>
+	<td>Legion Limited Medical*Suscrito por: AXIS Insurance Company
+Un plan de indemnización de beneficios médicos limitados que puede pagarle una cantidad de dinero fija como beneficio, cuando incurra en costos debido a pérdidas con cobertura específica por accidente, enfermedad o por servicios provistos por médicos y hospitales. Ese dinero puede ayudarlo a lidiar con tales gastos médicos y hospitalarios u otros gastos relacionados. Su cobertura de Legion Limited Medical es un beneficio de la membresía de la asociación.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='row divider']/preceding::h2</td>
+	<td>Incluye lo siguiente</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='row divider'])[1]</td>
+	<td>Beneficios por estadías en el hospital Este plan incluye un beneficio por estadías en el hospital, lo que significa que usted recibirá una cantidad fija cuando se encuentre internado en un hospital. Los beneficios se le pagan directamente a usted o a la persona que usted designe. Estadía como paciente hospitalizado:$500/día*Días máximos del beneficio (por Año del plan): 30*Cantidad máxima del beneficio (por Año del plan): $15,000</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='row divider'])[2]</td>
+	<td>Beneficios de consultas médicas Este plan incluye un beneficio de consultas médicas, lo que significa que recibirá una cantidad fija si tiene que ir a una consulta con un médico. Los beneficios se le pagan directamente a usted o a la persona que usted designe. Visita al consultorio de un médico: $100/visita*Cantidad máxima de visitas (por Año del plan): 3*Cantidad máxima del beneficio (por Año del plan): 300*Detalles</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@class='row plan-details-also-included-row']/preceding::h2</td>
+	<td>También se incluye</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='row plan-details-also-included-row'])[1]</td>
+	<td>Teladoc Una solución de telemedicina que resuelve los tres problemas más grandes en la atención médica: acceso, costo y calidad:
+Disponibilidad las 24 horas del día, los 365 días del año*Disponible en todos los estados*Cómo funciona *Solicite una consulta con un médico las 24 horas del día, los 365 días del año, por Internet, teléfono o aplicación móvil. ¿Desea ver a un médico? Elija "video" como el método para su consulta. ¿No le gustan las cámaras? Elija "teléfono". ¿Tiene una agenda muy ocupada? Elija la hora que más le convenga seleccionando "horario" en lugar de "tan pronto como sea posible". Buscaremos en nuestra red nacional de médicos, dermatólogos y terapeutas certificados por la junta de los Estados Unidos y lo pondremos en contacto con un médico certificado en su estado. El médico revisará su historial médico. Dicho historial brinda información valiosa para el médico con respecto a enfermedades pasadas, medicamentos, alergias, así como información sobre sus antecedentes médicos familiares.*Hable con el médico. Puede hablar cuanto necesite, ¡No hay límites de tiempo! El conjunto de servicios de telesalud más completo de la industria nos convierte en los líderes del mercado. Puede recibir atención conveniente y de calidad provista por una variedad de profesionales de atención médica certificados.*Si es médicamente necesario, se enviará una receta a la farmacia de su elección. Reciba el tratamiento que necesita de manera conveniente y oportuna. Además, puede enviar los resultados de su consulta a su médico de atención primaria.*Todo lo que debe hacer es llamar al 1-800-Teladoc y proporcionar  la información de su cuenta Teladoc.
+</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='row plan-details-also-included-row'])[2]</td>
+	<td>Karis360*La razón de Karis360 es hacer de la atención médica algo fácil al ayudar a los miembros a hacer preguntas sobre reclamaciones de seguros, facturación médica y a dónde pueden acudir para recibir atención:*Servicios de asistencia personal para los miembros, de manera que no tengan que lidiar con sus preguntas y problemas de atención médica por sí solos.*Asistencia ilimitada de un Asesor personal que trabaja directamente con los proveedores de atención médica del miembro para ayudar a reducir los desembolsos directos de sus facturas médicas.
+</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='overview']/section[4]</td>
+	<td>¿Para quién se diseñó este plan?*Legion Limited Medical es ideal para las personas que buscan:*Una consulta de bienestar para un hijo asegurado menor de 4 años: Si tiene un hijo pequeño, este plan le proporcionará una visita anual al consultorio para monitorear y mantener la salud de su hijo, con un copago de $50.*Acceso a una red nacional de proveedores para minimizar los costos de desembolso directo:  First Health tiene acceso a más de 5,000 hospitales, más de 90,000 instalaciones complementarias y más de 1 millón de centros de servicios profesionales de atención médica en los Estados Unidos.*Beneficios de diagnóstico, radiografías y laboratorio: Dos días de cobertura para la clase I y clase II y un día para la clase IV. El pago del beneficio es de $50 por día.
+</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//li[contains(@class,'nav-item ')])[2]</td>
+	<td>Beneficio Detalles</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//li[contains(@class,'nav-item ')])[3]</td>
+	<td>Red de médicos</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//li[contains(@class,'nav-item ')])[3]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pasue</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='physicianNetwork']/section</td>
+	<td>First Health Network*First Health Network es un programa de descuentos que ofrece ahorros adicionales cuando se utilizan proveedores e instalaciones participantes para la prestación de servicios médicos. Cualquier descuento de First Health aplicado a su servicio médico es adicional a su cobertura de seguro Core Shield, el cual paga directamente a usted un beneficio de indemnización fija por servicios médicos con cobertura Esto no es un Seguro y no lo proporciona AXIS Insurance Company.
+Con su tarjeta de membresía, tendrá acceso a los proveedores participantes de la Red. Puede buscarlos las 24 horas del día aquí en First Health Network. Los miembros deben presentar su tarjeta de identificación cada vez que soliciten servicios de un proveedor participante para asegurarse de que reciben el valor total de First Health Network.
+</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//li[@role='presentation'])[4]</td>
+	<td>Exclusiones y Limitaciones</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//li[@role='presentation'])[5]</td>
+	<td>Acerca de la Asociación</td>
+</tr>
+<!---------------plan 3------------------------------------------->
+<tr>
+	<td>open</td>
+	<td>https://pruebas.asegumed.com/health-benefit-insurance/plan/legion-al-1000-30-100-5</td>
+	<td></td>
+</tr>
+<!---------------plan 4------------------------------------------->
+<tr>
+	<td>open</td>
+	<td>https://pruebas.asegumed.com/health-benefit-insurance/plan/legion-al-1000-30-50-5</td>
+	<td></td>
+</tr>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
