@@ -124,29 +124,10 @@ sanity4/24</td>
 	<td>//div[@id='js-apply-overview']/div[3]/div/div[5]/div[2]</td>
 	<td>duration</td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>css=.js-add-teladoc</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=reallySave</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
+
 <tr>
 	 <td>storeText</td>
-	<td>xpath=//tr[@class='c-price-table__border-row c-price-table__total']/td[2]/span</td>
+	<td>//td/span[contains(text(),'Monthly Total')]/following::td</td>
 	<td>premium</td>
 </tr>
 <tr>
@@ -221,12 +202,12 @@ sanity4/24</td>
 </tr>
 <tr>
 	 <td>verifyText</td>
-	<td>css=li.green-check > div > div > p > span.emphasize</td>
+	<td>css=li.green-check > div > div > p.reset > span.emphasize</td>
 	<td>${premium}</td>
 </tr>
 <tr>
 	 <td>storeText</td>
-	<td>css=li.green-check > div > div > p > span.emphasize</td>
+	<td>css=li.green-check > div > div > p.reset > span.emphasize</td>
 	<td>finalPrice</td>
 </tr>
 <tr>
@@ -271,5 +252,8 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
 	
 	
