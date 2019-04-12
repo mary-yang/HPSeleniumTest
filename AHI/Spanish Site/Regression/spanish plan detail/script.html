@@ -86,7 +86,7 @@ Un plan de indemnización de beneficios médicos limitados que puede pagarle una
 <tr>
 	<td>verifyText</td>
 	<td>xpath=(//div[@class='row divider'])[1]</td>
-	<td>Beneficios por estadías en el hospital Este plan incluye un beneficio por estadías en el hospital, lo que significa que usted recibirá una cantidad fija cuando se encuentre internado en un hospital. Los beneficios se le pagan directamente a usted o a la persona que usted designe. Estadía como paciente hospitalizado:$500/día*Días máximos del beneficio (por Año del plan): 30*Cantidad máxima del beneficio (por Año del plan): $15,000</td>
+	<td>Beneficios por estadías en el hospital Este plan incluye un beneficio por estadías en el hospital, lo que significa que usted recibirá una cantidad fija cuando se encuentre internado en un hospital. Los beneficios se le pagan directamente a usted o a la persona que usted designe. Estadía como paciente hospitalizado: $500/día*Días máximos del beneficio (por Año del plan): 30*Cantidad máxima del beneficio (por Año del plan): $15,000</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -150,6 +150,21 @@ Con su tarjeta de membresía, tendrá acceso a los proveedores participantes de 
 	<td>Exclusiones y Limitaciones</td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>xpath=(//li[contains(@class,'nav-item ')])[4]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pasue</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//li[@role='presentation'])[5]</td>
+	<td>Acerca de la Asociación</td>
+</tr>
+<tr>
 	<td>verifyText</td>
 	<td>xpath=(//li[@role='presentation'])[5]</td>
 	<td>Acerca de la Asociación</td>
@@ -174,6 +189,8 @@ Con su tarjeta de membresía, tendrá acceso a los proveedores participantes de 
 	
 	
 
+	
+	
 	
 	
 	
