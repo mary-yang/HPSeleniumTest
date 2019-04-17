@@ -69,6 +69,11 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=#js-sidebar-carrier .js-toggle-button')</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>css=#js-sidebar-carrier .js-toggle-button</td>
 	<td></td>
@@ -83,7 +88,11 @@ sanity4/24</td>
 	<td>3000</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 
 <tr>
 	<td>click</td>
@@ -112,7 +121,7 @@ sanity4/24</td>
 
 <tr>
 	 <td>storeText</td>
-	<td>//div[@id='js-apply-overview']/div[3]/div/div[5]/div[2]</td>
+	<td>//td/span[contains(text(),'Monthly Total')]/following::td</td>
 	<td>duration</td>
 </tr>
 
@@ -213,6 +222,8 @@ sanity4/24</td>
 </tr>
 	</tbody>
 </table>
+	
+	
 	
 	
 	
