@@ -8,7 +8,7 @@ sanity4/24</td>
 	<tbody>
 <tr>
 	<td>include</td>
-	<td>AHI/Include/Open website</td>
+	<td>AHI/Include/PrivateLabelSite</td>
 	<td></td>
 </tr>
 <tr>
@@ -100,7 +100,7 @@ sanity4/24</td>
 
 <tr>
 	 <td>storeText</td>
-	<td>xpath=//tr[5]/td[2]/span</td>
+	<td>//td/span[contains(text(),'Monthly Total')]/following::td</td>
 	<td>premium</td>
 </tr>
 <tr>
@@ -108,11 +108,7 @@ sanity4/24</td>
 	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr/td</td>
 	<td>planname</td>
 </tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent('css=div.c-addon__heading')</td>
-	<td></td>
-</tr>
+
 
 <tr>
 	<td>captureEntirePageScreenshot</td>
@@ -181,6 +177,10 @@ sanity4/24</td>
 </tr>
 	</tbody>
 </table>
+	
+	
+	
+	
 	
 	
 	
