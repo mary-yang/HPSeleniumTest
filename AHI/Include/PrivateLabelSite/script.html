@@ -4,9 +4,25 @@
 </thead><tbody>
 
 <!---------------open PL site------------------>
+<tr>
 <td>store</td>
 <td>https://${PLID}--${ENV}.storefront.mybenefitskeeper.com</td>
 <td>PL_URL</td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>("${ENV}"=="testprod")</td>
+	<td></td>
+</tr>
+<tr>
+<td>store</td>
+<td>https://${PLID}.storefront.mybenefitskeeper.com</td>
+<td>PL_URL</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
 </tr>
 <tr>
 	<td>open</td>
@@ -24,4 +40,5 @@
 	<td></td>
 </tr>
 
+	
 	
