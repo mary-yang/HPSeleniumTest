@@ -1,0 +1,166 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AseguMed/_include/spanish_go to end - hbi</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Get URI</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AseguMed/_include/spanish_NAME</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>//input[@value='']</td>
+	<td>${FirstName}</td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;id=primary-beneficiary-first-name&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primary-beneficiary-first-name</td>
+	<td>test1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primary-beneficiary-last-name</td>
+	<td>test2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primary-beneficiary-relationship</td>
+	<td>test3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-beneficiary-first-name</td>
+	<td>test4</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-beneficiary-last-name</td>
+	<td>test5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-beneficiary-relationship</td>
+	<td>test6</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Use Credit Card</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/upsellriders</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=consent-checkbox-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=p.signature-arrow</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>waitForLocation</td>
+	<td>*page/4* </td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>css=span.emphasize</td>
+	<td>*Felicitaciones*</td>
+</tr>
+</tbody></table>
+</body>
+</html>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
