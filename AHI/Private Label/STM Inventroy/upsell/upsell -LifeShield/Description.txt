@@ -1,1 +1,0 @@
-All NatGen states except CO, CT, IA, KS, MO, NM, MD,MT, OR, SD, UT, WI are association.NG individual states will upsell Teladoc

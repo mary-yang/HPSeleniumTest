@@ -13,6 +13,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>IF</td>
+	<td>("${logoClickable}"=="yes")</td>
+	<td></td>
+</tr>
+<tr>
 	<td>verifyAttribute</td>
 	<td>//nav[@id='global-navbar']/div/div[2]/a/img@src</td>
 	<td>*${affiliatename}*</td>
@@ -32,11 +37,46 @@
 	<td>//nav[@id='global-navbar']/div/div[2]/a/img@src</td>
 	<td>*${affiliatename}*</td>
 </tr>
-
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//nav[@id='global-navbar']/div/div[2]/img@src</td>
+	<td>*${affiliatename}*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=primaryCTA</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//nav[@id='global-navbar']/div/div[2]/img@src</td>
+	<td>*${affiliatename}*</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
 
+	
+	
+	
+	
+	
+	
 	
 	
 	

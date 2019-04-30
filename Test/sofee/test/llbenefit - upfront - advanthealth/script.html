@@ -1,0 +1,168 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/sofee/test/llbenefit - upfront - advanthealth</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">compare_rate</td></tr>
+</thead><tbody>
+
+<!--------AdvantHealth: Rate = base rate + Teladoc + RX + Chiro + NCE + one-time fee------>
+
+<tr>
+	<td>open</td>
+	<td>https://praetemptatus.agilehealthinsurance.com/term-health-insurance/apply/${planid}?census[location][zip]=${zipcode}&amp;
+&census[oneTimePaymentSelected]=true&census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_gender}&amp;census[member][0][role]=P</td>
+	<td></td>
+</tr>
+<!-------------------
+<tr>
+  <td>IF</td>
+  <td>verifyElementPresent("//button[@class='js-add-teladoc c-addon__add-button is-selected']")</td>
+  <td></td>
+</tr>
+<tr>
+  <td>click</td>
+  <td>//button[@class='js-add-teladoc c-addon__add-button is-selected']</td>
+  <td></td>
+</tr>
+<tr>
+  <td>pause</td>
+  <td>1000</td>
+  <td></td>
+</tr>
+<tr>
+  <td>click</td>
+  <td>id=reallySave</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ENDIF</td>
+  <td></td>
+  <td></td>
+</tr>
+--------------------------->
+<tr>
+	<td>storeText</td>
+	<td>//table[@class='c-price-table']/tbody/tr[2]/td[2]</td>
+	<td>monthlyPremium</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//table[@class='c-price-table']/tbody/tr[3]/td[2]</td>
+	<td>monthlyFee</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${monthlyPremium}'.match(/\d+.\d+/)</td>
+	<td>monthlyPremium</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${monthlyFee}'.match(/\d+.\d+/)</td>
+	<td>monthlyFee</td>
+</tr>
+
+<tr>
+  <td>IF</td>
+  <td>'${state}'=='ak' || '${state}'=='ar' || '${state}'=='fl' || '${state}'=='ma' || '${state}'=='mt' || '${state}'=='ut' || '${state}'=='vt' || '${state}'=='wa'</td>
+  <td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>ChiroFee</td>
+</tr>
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>39</td>
+	<td>ChiroFee</td>
+</tr>
+<tr>
+  <td>ENDIF</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+	<td>storeEval</td>
+	<td>var Rate=Number('${monthlyPremium}')+Number('${monthlyFee}')+Number('58.99')+Number('53.85')+Number('${ChiroFee}')+Number('15');Rate.toFixed(2);</td>
+	<td>ExpectRate</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://llbenefits--edgedancer.storefront.mybenefitskeeper.com/term-health-insurance/apply/${planid}?census[location][zip]=${zipcode}&amp;
+&census[oneTimePaymentSelected]=true&census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_gender}&amp;census[member][0][role]=P</td>
+	<td></td>
+</tr>
+<tr>
+	<tr>
+  <td>IF</td>
+  <td>verifyElementPresent("//button[@class='js-add-teladoc c-addon__add-button is-selected']")</td>
+  <td></td>
+</tr>
+<tr>
+  <td>click</td>
+  <td>//button[@class='js-add-teladoc c-addon__add-button is-selected']</td>
+  <td></td>
+</tr>
+<tr>
+  <td>pause</td>
+  <td>1000</td>
+  <td></td>
+</tr>
+<tr>
+  <td>click</td>
+  <td>id=reallySave</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ENDIF</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@class='c-price-table__border-row c-price-table__total']/td[2]/span</td>
+	<td>$${ExpectRate}</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

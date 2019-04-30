@@ -6,29 +6,14 @@ sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Disclaimers</td>
-	<td></td>
-</tr>
+
 <!-----------------------------Home page------------------------------------------->
 <tr>
 	<td>include</td>
-	<td>AHI/Include/PrivateLabel</td>
+	<td>AHI/Include/PrivateLabelSite</td>
 	<td></td>
 </tr>
-<!----
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Open website</td>
-	<td></td>
-</tr>
----->
-<tr>
-	<td>open</td>
-	<td>${PL_URL}</td>
-	<td></td>
-</tr>
+
 <!-----------------------------Census page------------------------------------------->
 <tr>
 	<td>clickAndWait</td>
@@ -76,6 +61,16 @@ sanity4/24</td>
 	<td>xpath=//*[@id='js-see-plans']</td>
 	<td></td>
 </tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/PrivateLabel</td>
+	<td></td>
+</tr>
 <!------------------quote page disclaimer----------------------------->
 <tr>
 	<td>include</td>
@@ -95,7 +90,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[3]</td>
-	<td>${ACATAX}</td>
+	<td>${ACANOTICE}</td>
 </tr>
 <tr>
 	<td>captureEntirePageScreenshot</td>
@@ -134,7 +129,7 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[3]</td>
-	<td>${ACATAX}</td>
+	<td>${ACANOTICE}</td>
 </tr>
 
 <tr>
@@ -556,6 +551,11 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
+	
+	
 	
 	
 	

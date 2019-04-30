@@ -1,0 +1,77 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AseguMed/Post Release Testing/AppCreationTest</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Appcreate</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>https://www.asegumed.com/back-office</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('id=identifierId')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=identifierId</td>
+	<td>denis.yu1111@gmail.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#identifierNext &gt; content.CwaK9 &gt; span.RveJvd.snByac</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.RveJvd.snByac</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>name=password</td>
+	<td>Think2016</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.RveJvd.snByac</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://www.asegumed.com/api/test/appCreation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=status</td>
+	<td>OK*</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
