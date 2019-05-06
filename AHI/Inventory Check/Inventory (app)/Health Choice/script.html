@@ -143,6 +143,23 @@
 	<td></td>
 </tr>
 <tr>
+	<td>storeLocation</td>
+	<td>url</td>
+	<td></td>
+</tr>
+<!-----------
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${url}&quot;.substr(0,&quot;${url}&quot;.indexOf(&quot;?&quot;))</td>
+	<td>url</td>
+</tr>
+------------------>
+<tr>
+	<td>storeEval</td>
+	<td>var b;b="${url}".match("test[^/]+")</td>
+	<td>uri</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
@@ -228,5 +245,6 @@
 </tbody></table>
 </body>
 </html>
+	
 	
 	
