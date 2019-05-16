@@ -3,7 +3,7 @@
 "legion","${url1}","${url2}"
 "cardinalchoice","${url1}","${url2}"
 "coreshield","${url1}","${url2}"
-"protector360","${url1}","${url2}"
+"##protector360","${url1}","${url2}"
 "slaicohbi","${url1}","${url2}"
 "##hcc-advantage","${url1}","${url2}"
 "##hcc-flexible","${url1}","${url2}"

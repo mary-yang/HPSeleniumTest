@@ -34,7 +34,7 @@
 "##Everest","nm","everest-${state}-5000-20-10000-750000","${Apply_page_QA_rate}","${QA_fee}","${QA_duration}","${Apply_page_testprod_rate}","${testprod_fee}","${Prod_duration}","${trendFactor}","87121","1/1/1980","F"
 "##Everest","nv","everest-${state}-5000-20-10000-750000","${Apply_page_QA_rate}","${QA_fee}","${QA_duration}","${Apply_page_testprod_rate}","${testprod_fee}","${Prod_duration}","${trendFactor}","89110","1/1/1980","F"
 "##Everest","ny","everest-${state}-5000-20-10000-750000","${Apply_page_QA_rate}","${QA_fee}","${QA_duration}","${Apply_page_testprod_rate}","${testprod_fee}","${Prod_duration}","${trendFactor}","11226","1/1/1980","F"
-"Everest","oh","everest-${state}-5000-20-10000-750000","${Apply_page_QA_rate}","${QA_fee}","${QA_duration}","${Apply_page_testprod_rate}","${testprod_fee}","${Prod_duration}","${trendFactor}","43228","1/1/1980","F"
+"Everest","oh","everest-${state}-5000-30-10000-750000","${Apply_page_QA_rate}","${QA_fee}","${QA_duration}","${Apply_page_testprod_rate}","${testprod_fee}","${Prod_duration}","${trendFactor}","43228","1/1/1980","F"
 "Everest","ok","everest-${state}-5000-20-10000-750000","${Apply_page_QA_rate}","${QA_fee}","${QA_duration}","${Apply_page_testprod_rate}","${testprod_fee}","${Prod_duration}","${trendFactor}","73160","1/1/1980","F"
 "Everest","or","everest-${state}-5000-20-10000-750000","${Apply_page_QA_rate}","${QA_fee}","${QA_duration}","${Apply_page_testprod_rate}","${testprod_fee}","${Prod_duration}","${trendFactor}","97229","1/1/1980","F"
 "Everest","pa","everest-${state}-5000-20-10000-750000","${Apply_page_QA_rate}","${QA_fee}","${QA_duration}","${Apply_page_testprod_rate}","${testprod_fee}","${Prod_duration}","${trendFactor}","19120","1/1/1980","F"

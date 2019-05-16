@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Rate diff/HBI/Core Shield</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Rate diff/HBI/Agile Secure</title></head><body><table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">compare_rate</td></tr>
 </thead><tbody>
@@ -8,20 +8,22 @@
 census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_gender}&amp;census[member][0][role]=P</td>
 	<td></td>
 </tr>
+
+
 <tr>
 	<td>storeText</td>
-	<td>//a[@class='js-view-details' and text()='${Plan_name}']/following::div/a[@class='js-price-breakdown plan-price']</td>
+	<td>//div[@class='quote-plan-price']</td>
 	<td>quote_QA_rate</td>
 </tr>
 
 <tr>
 	<td>clickAndWait</td>
-	<td>link=${Plan_name}</td>
+	<td>link=Apply for This Plan</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='hbi-plan-details-overview']/div/div/div</td>
+	<td>//div[@class='hbi-price-breakdown js-price-breakdown']</td>
 	<td>Apply_page_QA_rate</td>
 </tr>
 
@@ -43,13 +45,13 @@ census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_ge
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//a[@class='js-view-details' and text()='${Plan_name}']/following::div/a[@class='js-price-breakdown plan-price']</td>
+	<td>//div[@class='quote-plan-price']</td>
 	<td>quote_testprod_rate</td>
 </tr>
 
 <tr>
 	<td>clickAndWait</td>
-	<td>link=${Plan_name}</td>
+	<td>link=Apply for This Plan</td>
 	<td></td>
 </tr>
 
@@ -60,7 +62,7 @@ census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_ge
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//div[@id='hbi-plan-details-overview']/div/div/div</td>
+	<td>//div[@class='hbi-price-breakdown js-price-breakdown']</td>
 	<td>Apply_page_testprod_rate</td>
 </tr>
 <tr>
