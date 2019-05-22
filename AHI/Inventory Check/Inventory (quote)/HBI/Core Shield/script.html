@@ -13,7 +13,7 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Health Benefit Insurance</td>
+	<td>link=Health Benefit Indemnity Insurance</td>
 	<td></td>
 </tr>
 <tr>
@@ -61,41 +61,11 @@
 	<td>2000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=carrier-axis-</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//ul[@id='carrier-filter']/li/label[@title=&quot;Axis&quot;]/span[2]</td>
-	<td>num</td>
-</tr>
 
 <tr>
-	<td>verifyElementPresent</td>
-	<td>//a[contains(text(),'Core Shield')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//a[contains(text(),'Legion')]</td>
-	<td></td>
+	<td>storeXpathCount</td>
+	<td>//li[@class='container-fluid js-plan' and @data-carrier='coreshield']</td>
+	<td>num</td>
 </tr>
 <tr>
 	<td>echo</td>
@@ -152,6 +122,12 @@
 	
 	
 
+	
+	
+	
+	
+	
+	
 	
 	
 	
