@@ -45,7 +45,7 @@
 <tr>
 	<td>sendKeys</td>
 	<td>id=dob-0</td>
-	<td>${DOB}</td>
+	<td>03/06/1980</td>
 </tr>
 <tr>
 	<td>fireEvent</td>
@@ -70,16 +70,6 @@
 <tr>
 	<td>pause</td>
 	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>4000</td>
 	<td></td>
 </tr>
 
@@ -271,12 +261,24 @@
 	<td>${conf_mon}</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>include</td>
+	<td>AHI/Include/BO App Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
+	<td>status</td>
+</tr>
 
 
 </tbody></table>
 </body>
 </html>
+	
+	
+	
 	
 	
 	

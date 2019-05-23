@@ -150,26 +150,6 @@ sanity4/24</td>
 	<td>planname</td>
 </tr>
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent('css=div.c-addon__heading')</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=div.c-addon__heading</td>
-	<td>extendedInfo</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=button.js-add-pre-x.c-addon__add-button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
 	<td>captureEntirePageScreenshot</td>
 	<td></td>
 	<td></td>
@@ -215,13 +195,18 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
 	 <td>verifyText</td>
-	<td>css=li.green-check > div > div > p > span.emphasize</td>
+	<td>//li[@class='green-check']/div/div/p[2]/span</td>
 	<td>${premium}</td>
 </tr>
 <tr>
 	 <td>storeText</td>
-	<td>css=li.green-check > div > div > p > span.emphasize</td>
+	<td>//li[@class='green-check']/div/div/p[2]/span</td>
 	<td>finalPrice</td>
 </tr>
 <tr>
@@ -266,5 +251,7 @@ sanity4/24</td>
 	
 	
 
+	
+	
 	
 	

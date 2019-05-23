@@ -55,6 +55,11 @@ sanity4/24</td>
 <!--------------------Quote Page--------------------->
 
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=#js-sidebar-carrier .js-toggle-button')</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>css=#js-sidebar-carrier .js-toggle-button</td>
 	<td></td>
@@ -69,7 +74,11 @@ sanity4/24</td>
 	<td>3000</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 <tr>
 	<td>IF</td>
 	<td>verifyElementPresent(xpath=(//a[contains(@href,'/plan/lifeshield-flex}')])[2])</td>
@@ -121,19 +130,20 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=.btn-remove-cancel</td>
+	<td>id=reallySave</td>
 	<td></td>
 </tr>
 <tr>
-	 <td>storeText</td>
-	<td>xpath=//tr[@class='c-price-table__border-row c-price-table__total']/td[2]/span</td>
-	<td>premium</td>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
 </tr>
+
 <tr>
 	 <td>storeText</td>
 	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr/td</td>
@@ -150,6 +160,16 @@ sanity4/24</td>
 	<td>extendedInfo</td>
 </tr>
 <tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=button.js-add-pre-x.c-addon__add-button')</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>css=button.js-add-pre-x.c-addon__add-button</td>
 	<td></td>
@@ -159,7 +179,16 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
-<!--------------------
+<tr>
+	 <td>storeText</td>
+	<td>xpath=//tr[@class='c-price-table__border-row c-price-table__total']/td[2]/span</td>
+	<td>premium</td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>css=span.js-apply-text.apply-button-text</td>
@@ -200,13 +229,16 @@ sanity4/24</td>
 	<td>AHI/Include/Go to end</td>
 	<td></td>
 </tr>
-
 <tr>
-	<td>storeText</td>
-	<td>css=li.green-check > div > div > p > span.emphasize</td>
-	<td>${finalPrice}</td>
+	 <td>verifyText</td>
+	<td>//li[@class='green-check']/div/div/p[2]/span</td>
+	<td>${premium}</td>
 </tr>
-
+<tr>
+	 <td>storeText</td>
+	<td>//li[@class='green-check']/div/div/p[2]/span</td>
+	<td>finalPrice</td>
+</tr>
 <tr>
 	<td>include</td>
 	<td>AHI/Include/BO App Search</td>
@@ -217,29 +249,8 @@ sanity4/24</td>
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
 	<td>status</td>
 </tr>
--------------->
 	</tbody>
 </table>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
