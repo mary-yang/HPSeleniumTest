@@ -6,6 +6,88 @@ sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
+<!--------------------------------------------------store carrier switch---------------------------
+<tr>
+	<td>open</td>
+	<td>https://praetemptatus.agilehealthinsurance.com/back-office/carrier-switch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('id=identifierId')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=identifierId</td>
+	<td>denis.yu1111@gmail.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#identifierNext &gt; content.CwaK9 &gt; span.RveJvd.snByac</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.RveJvd.snByac</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>name=password</td>
+	<td>Think2016</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.RveJvd.snByac</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#stm-advanthealth &gt; td.carrier</td>
+	<td>AdvantHealth</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=td.states</td>
+	<td>carrier_switch</td>
+</tr>
+
+
+<tr>
+	<td>storeEval</td>
+	<td>'${state}'.toUpperCase()</td>
+	<td>state1</td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>'${carrier_switch}'.indexOf('${state1}')<0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>END_CASE</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+---------------------------------------------------------------------------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/PrivateLabelSite</td>
@@ -220,6 +302,11 @@ sanity4/24</td>
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
 	<td>status</td>
 </tr>
+<tr>
+	<td>label</td>
+	<td>END_CASE</td>
+	<td></td>
+</tr>
 	</tbody>
 </table>
 	
@@ -252,6 +339,17 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

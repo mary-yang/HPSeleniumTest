@@ -13,7 +13,7 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Health Benefit Insurance</td>
+	<td>link=Health Benefit Indemnity Insurance</td>
 	<td></td>
 </tr>
 <tr>
@@ -72,24 +72,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=carrier-chubb-</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//label[@title=&quot;Chubb&quot;]/span[2]</td>
+	<td>storeXpathCount</td>
+	<td>//li[@class='container-fluid js-plan' and @data-carrier='agileone']</td>
 	<td>num</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//a[contains(text(),'Agile One')]</td>
-	<td></td>
 </tr>
 <tr>
 	<td>echo</td>
@@ -146,6 +131,7 @@
 	
 	
 
+	
 	
 	
 	

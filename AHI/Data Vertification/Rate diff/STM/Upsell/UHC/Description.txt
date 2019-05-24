@@ -1,2 +1,0 @@
-fast apply 
-${ENV} vs testprod
