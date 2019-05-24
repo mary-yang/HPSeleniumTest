@@ -1,7 +1,7 @@
 "state","zipcode","planid","premium","duration","extendedInfo/pre-ex","uri","status","carrierid","finalPrice","PLID"
 "al","35215","advanthealth-plan-1-${state}-5000-20-9000-1000000","${premium}","${duration}","${extendedInfo}","${uri}","${status}","advanthealth","${finalPrice}","spark"
 "##ak","99504","advanthealth-plan-1-${state}-5000-20-9000-1000000","${premium}","${duration}","${extendedInfo}","${uri}","${status}","advanthealth","${finalPrice}","spark"
-"ar","72209","advanthealth-plan-1-${state}-5000-20-9000-1000000","${premium}","${duration}","${extendedInfo}","${uri}","${status}","advanthealth","${finalPrice}","spark"
+"##ar","72209","advanthealth-plan-1-${state}-5000-20-9000-1000000","${premium}","${duration}","${extendedInfo}","${uri}","${status}","advanthealth","${finalPrice}","spark"
 "az","85364","advanthealth-plan-1-${state}-5000-20-9000-1000000","${premium}","${duration}","${extendedInfo}","${uri}","${status}","advanthealth","${finalPrice}","spark"
 "##ca","90011","advanthealth-plan-1-${state}-5000-20-9000-1000000","${premium}","${duration}","${extendedInfo}","${uri}","${status}","advanthealth","${finalPrice}","spark"
 "##co","80219","advanthealth-plan-1-${state}-5000-20-9000-1000000","${premium}","${duration}","${extendedInfo}","${uri}","${status}","advanthealth","${finalPrice}","spark"
