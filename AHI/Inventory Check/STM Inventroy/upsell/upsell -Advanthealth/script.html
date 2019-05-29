@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Inventory Check/STM Inventroy/upsell/upsell -NationalGeneral</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Inventory Check/STM Inventroy/upsell/upsell -LifeShield</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -13,7 +13,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent("xpath=//div[@id='js-apply-overview']/div[3]/div/div[5]/div[2]")</td>
+	<td>verifyElementPresent("//div[@id='js-apply-overview']/div[3]/div/div[5]/div[2]")</td>
 	<td></td>
 </tr>
 <tr>
@@ -98,10 +98,9 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>IF</td>
-	<td>verifyElementPresent("css=button.js-add-dental.c-addon__add-button")</td>
+	<td>verifyElementPresent('css=button.js-add-dental.c-addon__add-button')</td>
 	<td></td>
 </tr>
 <tr>
@@ -114,8 +113,6 @@ sanity4/24</td>
 	<td>//h4[@class='c-addon__h' and text()='Dental Option']/following::div/div[4]/div</td>
 	<td>dentalPrice</td>
 </tr>
-
-
 
 <tr>
 	<td>ENDIF</td>
@@ -135,7 +132,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>include</td>
-	<td>AHI/Include/Go to end_national general</td>
+	<td>AHI/Include/Go to end</td>
 	<td></td>
 </tr>
 
@@ -149,7 +146,7 @@ sanity4/24</td>
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
 	<td>status</td>
 </tr>
----------------------->
+-------------->
 	</tbody>
 </table>
 	
@@ -182,19 +179,10 @@ sanity4/24</td>
 	
 	
 	
+
 	
 	
 	
-	
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-	
-	
-	
->>>>>>> ebd3c0eee5c2085b8caf0628e0d7223cbece4aa6
->>>>>>> e19e35689a508ea8c5427076de99b49aad523b40
 	
 	
 	
