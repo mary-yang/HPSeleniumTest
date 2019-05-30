@@ -8,15 +8,29 @@ sanity4/24</td>
 	<tbody>
 <tr>
 	<td>open</td>
-	<td>https://www.healthpocket.com/healthcare-research</td>
+	<td>https://pengujian.healthpocket.com/healthcare-research</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
 	<td>id=researchHome</td>
-	<td>researchText_prod</td>
+	<td>content_prod</td>
 </tr>
-
+<tr>
+	<td>storeTitle</td>
+	<td>title_prod</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//meta[@name='description']@content</td>
+	<td>description_prod</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//meta[@name='Keywords']@content</td>
+	<td>keywords_prod</td>
+</tr>
 <tr>
 	<td>open</td>
 	<td>https://lightweaver.healthpocket.com/healthcare-research</td>
@@ -25,7 +39,22 @@ sanity4/24</td>
 <tr>
 	<td>verifyText</td>
 	<td>id=researchHome</td>
-	<td>${researchText_prod}</td>
+	<td>${content_prod}</td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>${title_prod}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//meta[@name='description']@content</td>
+	<td>${description_prod}</td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//meta[@name='Keywords']@content</td>
+	<td>${keywords_prod}</td>
 </tr>
 	
 	
@@ -43,7 +72,6 @@ sanity4/24</td>
 	
 	
 	
-	
 
 	
 	
@@ -73,5 +101,8 @@ sanity4/24</td>
 
 	
 
+	
+	
+	
 	
 	

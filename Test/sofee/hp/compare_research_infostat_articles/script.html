@@ -8,7 +8,7 @@ sanity4/24</td>
 	<tbody>
 <tr>
 	<td>open</td>
-	<td>https://www.healthpocket.com/healthcare-research/infostat</td>
+	<td>https://pengujian.healthpocket.com/healthcare-research/infostat</td>
 	<td></td>
 </tr>
 <tr>
@@ -25,7 +25,7 @@ sanity4/24</td>
 <tr>
 	<td>writeSeleniumScript</td>
 	<td>for(i=1;i<=${article_num};i++)
-	{writeSelenium("clickAndWait","xpath=(//ul[@class='article-list']/li)["+i+"]/div/div[2]/div/a","article_content_"+i+"");writeSelenium("open","https://www.healthpocket.com/healthcare-research/infostat","");}</td>
+	{writeSelenium("clickAndWait","xpath=(//ul[@class='article-list']/li)["+i+"]/div/div[2]/div/a","");writeSelenium("storeText","//div[@id='infoStat']/div/div","article_content_"+i+"");writeSelenium("storeTitle","title_prod_"+i+"","");writeSelenium("storeAttribute","//meta[@name='description']@content","description_prod_"+i+"");writeSelenium("storeAttribute","//meta[@name='Keywords']@content","keywords_prod_"+i+"");writeSelenium("open","https://pengujian.healthpocket.com/healthcare-research/infostat","");}</td>
 	<td></td>
 </tr>
 <tr>
@@ -33,15 +33,17 @@ sanity4/24</td>
 	<td>https://lightweaver.healthpocket.com/healthcare-research/infostat</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[@class='hidden-xs']/div[@class='col-sm-3 col-md-2 static-side-nav']</td>
-	<td>${nav_prod}</td>
+<<tr>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<=${article_num};i++)
+	{writeSelenium("verifyAttribute","xpath=(//ul[@class='article-list']/li)["+i+"]/div/div[2]/div/a@href","${article_href_"+i+"}");}</td>
+	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//div[@class='col-xs-12 static-content']</td>
-	<td>${content_prod}</td>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<=${article_num};i++)
+	{writeSelenium("clickAndWait","xpath=(//ul[@class='article-list']/li)["+i+"]/div/div[2]/div/a","");writeSelenium("verifyTitle","${title_prod_"+i+"}","");writeSelenium("verifyAttribute","//meta[@name='description']@content","${description_prod_"+i+"}");writeSelenium("verifyAttribute","//meta[@name='Keywords']@content","${keywords_prod_"+i+"}");writeSelenium("verifyText","//div[@id='infoStat']/div/div","${article_content_"+i+"}");writeSelenium("open","https://lightweaver.healthpocket.com/healthcare-research/infostat","");}</td>
+	<td></td>
 </tr>
 	
 	
@@ -58,7 +60,6 @@ sanity4/24</td>
 	
 	
 	
-	
 
 	
 	
@@ -90,6 +91,14 @@ sanity4/24</td>
 
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

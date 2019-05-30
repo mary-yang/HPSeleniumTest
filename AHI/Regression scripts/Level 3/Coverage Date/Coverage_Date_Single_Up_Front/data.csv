@@ -1,4 +1,4 @@
-"coverage_date_start","coverage_date_start_add_days","coverage_date_end","coverage_date_end_add_days","productId","carrierid"
+"coverage_date_start","coverage_date_start_add_days","coverage_date_end","Duration","productId","carrierid"
 "${the_first_coverage_start_date}","1","${coverage_end_date}","30","everest-stm","everest-one"
 "${the_first_coverage_start_date}","41","${coverage_end_date}","31","everest-stm","everest-one"
 "${the_first_coverage_start_date}","41","${coverage_end_date}","135","everest-stm","everest-one"

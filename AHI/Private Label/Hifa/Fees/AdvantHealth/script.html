@@ -1,0 +1,93 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Private Label/TriStar/Fees/AdvantHealth</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">compare_rate</td></tr>
+</thead><tbody>
+
+<tr>
+	<td>open</td>
+	<td>https://${PLID}--qa.storefront.mybenefitskeeper.com/term-health-insurance/apply/${planid}?census[location][zip]=${zipcode}&census[member][0][dob]=1/1/1980&census[member][0][gender]=F&census[member][0][role]=P</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr[2]/td[2]</td>
+	<td>PL_rate</td>
+</tr>
+<tr>
+	 <td>storeText</td>
+	<td>//div[@id='js-apply-overview']/div[3]/div/div[5]/div[2]</td>
+	<td>PL_duration</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://praetemptatus.agilehealthinsurance.com/term-health-insurance/apply/${planid}?census[location][zip]=${zipcode}&census[member][0][dob]=1/1/1980&census[member][0][gender]=F&census[member][0][role]=P&isTest=y</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr[2]/td[2]</td>
+	<td>AHI_rate</td>
+</tr>
+<tr>
+	 <td>storeText</td>
+	<td>//div[@id='js-apply-overview']/div[3]/div/div[5]/div[2]</td>
+	<td>AHI_duration</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(parseFloat('${AHI_rate}'.match(/\d+.\d+/))+parseFloat(${TelaDoc_Fee})+parseFloat(${RxAdvocacy_Fee})+parseFloat(${Chiro_Fee})+parseFloat(${Freedom_Elite_Fee})+parseFloat(${NCE_Fee})+parseFloat(${VBP_Fee})).toFixed(2)</td>
+	<td>Expected_Rate</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseFloat('${PL_rate}'.match(/\d+.\d+/))-parseFloat(${Expected_Rate})</td>
+	<td>Diff</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>parseFloat('${PL_rate}'.match(/\d+.\d+/))-parseFloat(${Expected_Rate})</td>
+	<td>0</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
