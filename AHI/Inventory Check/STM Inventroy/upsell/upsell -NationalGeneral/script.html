@@ -36,7 +36,68 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=button.js-add-extended.c-addon__add-button')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.c-addon__heading</td>
+	<td>extendedInfo</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.js-add-extended.c-addon__add-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//h4[@class='c-addon__h' and text()='Coverage Option']")</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//h4[@class='c-addon__h' and text()='Coverage Option']/following::div/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h4[@class='c-addon__h' and text()='Coverage Option']/following::div/div[4]/div</td>
+	<td>prexPrice</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${prexPrice}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//h4[contains(text(),'Telemedicine Option')]")</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h4[@class='c-addon__h' and text()='Telemedicine Option']/following::div/div[4]/div</td>
+	<td>teladocPrice</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 
 <tr>
 	<td>IF</td>
@@ -53,20 +114,15 @@ sanity4/24</td>
 	<td>//h4[@class='c-addon__h' and text()='Dental Option']/following::div/div[4]/div</td>
 	<td>dentalPrice</td>
 </tr>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<!-------------------
-=======
->>>>>>> ebd3c0eee5c2085b8caf0628e0d7223cbece4aa6
->>>>>>> e19e35689a508ea8c5427076de99b49aad523b40
+
+
 <tr>
 	<td>ENDIF</td>
 	<td></td>
 	<td></td>
 </tr>
-
+<!-------------------
 <tr>
 	<td>click</td>
 	<td>css=span.js-apply-text.apply-button-text</td>
@@ -93,7 +149,7 @@ sanity4/24</td>
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
 	<td>status</td>
 </tr>
-
+---------------------->
 	</tbody>
 </table>
 	
@@ -139,4 +195,6 @@ sanity4/24</td>
 	
 >>>>>>> ebd3c0eee5c2085b8caf0628e0d7223cbece4aa6
 >>>>>>> e19e35689a508ea8c5427076de99b49aad523b40
+	
+	
 	

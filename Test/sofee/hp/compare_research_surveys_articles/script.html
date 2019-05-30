@@ -1,0 +1,103 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/sofee/hp/compare_research_surveys_articles</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>https://www.healthpocket.com/healthcare-research/surveys</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=//ul[@class='article-list']/li</td>
+	<td>article_num</td>
+</tr>
+<tr>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<=${article_num};i++)
+	{writeSelenium("storeAttribute","xpath=(//ul[@class='article-list']/li)["+i+"]/div/div[2]/div/a@href","article_href_"+i+"");}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<=${article_num};i++)
+	{writeSelenium("clickAndWait","xpath=(//ul[@class='article-list']/li)["+i+"]/div/div[2]/div/a","");writeSelenium("storeText","id=infoStat","article_content_"+i+"");writeSelenium("storeTitle","title_prod_"+i+"","");writeSelenium("storeAttribute","//meta[@name='description']@content","description_prod_"+i+"");writeSelenium("storeAttribute","//meta[@name='Keywords']@content","keywords_prod_"+i+"");writeSelenium("open","https://www.healthpocket.com/healthcare-research/surveys","");}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://lightweaver.healthpocket.com/healthcare-research/surveys</td>
+	<td></td>
+</tr>
+<<tr>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<=${article_num};i++)
+	{writeSelenium("verifyAttribute","xpath=(//ul[@class='article-list']/li)["+i+"]/div/div[2]/div/a@href","${article_href_"+i+"}");}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<=${article_num};i++)
+	{writeSelenium("clickAndWait","xpath=(//ul[@class='article-list']/li)["+i+"]/div/div[2]/div/a","");writeSelenium("verifyTitle","${title_prod_"+i+"}","");writeSelenium("verifyAttribute","//meta[@name='description']@content","${description_prod_"+i+"}");writeSelenium("verifyAttribute","//meta[@name='Keywords']@content","${keywords_prod_"+i+"}");writeSelenium("verifyText","id=infoStat","${article_content_"+i+"}");writeSelenium("open","https://lightweaver.healthpocket.com/healthcare-research/surveys","");}</td>
+	<td></td>
+</tr>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+	
+	
+	
+
+	
+	
+	

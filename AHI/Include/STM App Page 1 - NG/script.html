@@ -37,37 +37,6 @@ sanity4/24</td>
   <td></td>
 </tr>
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent("//span[@class='c-radio-button__label' and text()='No']")</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeXpathCount</td>
-	<td>//span[@class='c-radio-button__label' and text()='No']</td>
-	<td>qNum</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${qNum}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>writeSeleniumScript</td>
-	<td>for(i=1;i<${qNum};i++)
-	{writeSelenium("click","xpath=(//span[@class='c-radio-button__label' and text()='No'])["+i+"]","");}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//span[@class='c-radio-button__label' and text()='Yes'])[${qNum}]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ELSE</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
 	<td>storeXpathCount</td>
 	<td>//div[@class='question-toggle-group']</td>
 	<td>qNum</td>
@@ -77,9 +46,53 @@ sanity4/24</td>
 	<td>${qNum}</td>
 	<td></td>
 </tr>
+<!-------------------------
 <tr>
 	<td>writeSeleniumScript</td>
-	<td>for(i=1;i<${qNum};i++)
+	<td>for(i=1;i<(${qNum}-1);i++)
+	{writeSelenium("click","xpath=(//div[@class='question-toggle-group'])["+i+"]/button","");}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//div[@class='question-toggle-group'])[(${qNum}-1)]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//div[@class='question-toggle-group'])[${qNum}]/button[1]</td>
+	<td></td>
+</tr>
+-------------------------------------->
+<tr>
+  <td>IF</td>
+  <td>'${qNum}'=='7'</td>
+  <td></td>
+</tr>
+<tr>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<(${qNum}-1);i++)
+	{writeSelenium("click","xpath=(//div[@class='question-toggle-group'])["+i+"]/button","");}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//div[@class='question-toggle-group'])[(${qNum}-1)]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//div[@class='question-toggle-group'])[${qNum}]/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+  <td>ELSE</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<(${qNum});i++)
 	{writeSelenium("click","xpath=(//div[@class='question-toggle-group'])["+i+"]/button","");}</td>
 	<td></td>
 </tr>
@@ -89,13 +102,18 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+  <td>ENDIF</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
 	<td>pause</td>
 	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>ENDIF</td>
-	<td></td>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
 
@@ -154,5 +172,12 @@ sanity4/24</td>
 	
 	
 
+	
+	
+	
+	
+	
+	
+	
 	
 	

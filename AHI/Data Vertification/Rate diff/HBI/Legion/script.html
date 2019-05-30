@@ -5,43 +5,16 @@
 <tr>
 	<td>open</td>
 	<td>${ENV}/health-benefit-insurance/quote?census[location][zip]=${zipcode}&amp;
-census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_gender}&amp;census[member][0][role]=P&amp;
-census[member][${Spouse_enable}][dob]=${Spouse_dob}&amp;census[member][${Spouse_enable}][gender]=${Spouse_gender}&amp;census[member][${Spouse_enable}][role]=${Spouse}&amp;
-census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_enable}][gender]=${Child_gender}&amp;census[member][${Child_enable}][role]=${Child}</td>
+census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_gender}&amp;census[member][0][role]=P</td>
 	<td></td>
 </tr>
-<tr>
-    <td>IF</td>
-    <td>verifyElementPresent(&quot;//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div/h3/a[contains(text(),'${Plan_name}')]]/div/div/div[2]/div&quot;)</td>
-    <td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div/h3/a[contains(text(),'${Plan_name}')]]/div/div/div[2]/div</td>
-	<td>quote_QA_rate</td>
-</tr>
-<tr>
-    <td>ELSE</td>
-    <td></td>
-    <td></td>
-</tr>
-
 
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='js-quote-plans-container']/ul[2]/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div/a/div</td>
+	<td>//a[@class='js-view-details' and text()='${Plan_name}']/following::div/a[@class='js-price-breakdown plan-price']</td>
 	<td>quote_QA_rate</td>
 </tr>
-<tr>
-    <td>ENDIF</td>
-    <td></td>
-    <td></td>
-</tr>
+
 <tr>
 	<td>clickAndWait</td>
 	<td>link=${Plan_name}</td>
@@ -61,9 +34,7 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 <tr>
 	<td>open</td>
 	<td>https://www.agilehealthinsurance.com/health-benefit-insurance/quote?census[location][zip]=${zipcode}&amp;
-census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_gender}&amp;census[member][0][role]=P&amp;
-census[member][${Spouse_enable}][dob]=${Spouse_dob}&amp;census[member][${Spouse_enable}][gender]=${Spouse_gender}&amp;census[member][${Spouse_enable}][role]=${Spouse}&amp;
-census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_enable}][gender]=${Child_gender}&amp;census[member][${Child_enable}][role]=${Child}</td>
+census[member][0][dob]=${Primary_dob}&amp;census[member][0][gender]=${Primary_gender}&amp;census[member][0][role]=P</td>
 	<td></td>
 </tr>
 <tr>
@@ -71,38 +42,14 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	<td>6000</td>
 	<td></td>
 </tr>
-<tr>
-    <td>IF</td>
-    <td>verifyElementPresent(&quot;//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div/h3/a[contains(text(),'${Plan_name}')]]/div/div/div[2]/div&quot;)</td>
-    <td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>6000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='js-quote-plans-container']/ul/li[descendant::div/div[2]/div/h3/a[contains(text(),'${Plan_name}')]]/div/div/div[2]/div</td>
-	<td>quote_testprod_rate</td>
-</tr>
-<tr>
-    <td>ELSE</td>
-    <td></td>
-    <td></td>
-</tr>
 
 
 <tr>
 	<td>storeText</td>
-	<td>//*[@id='js-quote-plans-container']/ul[2]/li[descendant::div/div[2]/div[1]/h3/a[contains(text(),'${Plan_name}')]]/div/div/a/div</td>
+	<td>//a[@class='js-view-details' and text()='${Plan_name}']/following::div/a[@class='js-price-breakdown plan-price']</td>
 	<td>quote_testprod_rate</td>
 </tr>
-<tr>
-    <td>ENDIF</td>
-    <td></td>
-    <td></td>
-</tr>
+
 <tr>
 	<td>clickAndWait</td>
 	<td>link=${Plan_name}</td>
@@ -147,6 +94,8 @@ census[member][${Child_enable}][dob]=${Child_dob}&amp;census[member][${Child_ena
 	
 	
 
+	
+	
 	
 	
 	

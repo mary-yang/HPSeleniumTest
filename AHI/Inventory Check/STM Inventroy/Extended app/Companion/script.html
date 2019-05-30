@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/STM Inventroy/Extended app/Companion</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Inventory Check/STM Inventroy/Extended app/Companion</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -55,6 +55,11 @@ sanity4/24</td>
 <!--------------------Quote Page--------------------->
 
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=#js-sidebar-carrier .js-toggle-button')</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>css=#js-sidebar-carrier .js-toggle-button</td>
 	<td></td>
@@ -69,17 +74,15 @@ sanity4/24</td>
 	<td>3000</td>
 	<td></td>
 </tr>
-
-
 <tr>
-	<td>click</td>
-	<td>xpath=(//a[contains(@href,'/plan/pivot-health-choice')])</td>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 
 <tr>
-	<td>ENDIF</td>
-	<td></td>
+	<td>click</td>
+	<td>xpath=(//a[contains(@href,'/plan/pivot-health-choice')])</td>
 	<td></td>
 </tr>
 
@@ -153,7 +156,7 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
-<--------------------
+
 <tr>
 	<td>click</td>
 	<td>css=span.js-apply-text.apply-button-text</td>
@@ -196,12 +199,12 @@ sanity4/24</td>
 </tr>
 <tr>
 	 <td>verifyText</td>
-	<td>css=li.green-check > div > div > p > span.emphasize</td>
+	<td>//div[@class='app-confirmation-enrollment-info']/p[3]/span</td>
 	<td>${premium}</td>
 </tr>
 <tr>
 	 <td>storeText</td>
-	<td>css=li.green-check > div > div > p > span.emphasize</td>
+	<td>//div[@class='app-confirmation-enrollment-info']/p[3]/span</td>
 	<td>finalPrice</td>
 </tr>
 <tr>
@@ -214,9 +217,13 @@ sanity4/24</td>
 	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
 	<td>status</td>
 </tr>
---------------->
+
 	</tbody>
 </table>
+	
+	
+	
+	
 	
 	
 	

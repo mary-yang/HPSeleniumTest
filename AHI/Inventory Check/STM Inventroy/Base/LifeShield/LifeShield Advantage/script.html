@@ -54,6 +54,11 @@ sanity4/24</td>
 </tr>
 <!--------------------Quote Page--------------------->
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent('link=Coverage length')</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Coverage length</td>
 	<td></td>
@@ -66,6 +71,16 @@ sanity4/24</td>
 <tr>
 	<td>click</td>
 	<td>//form/ul/li/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=#js-sidebar-carrier .js-toggle-button')</td>
 	<td></td>
 </tr>
 <tr>
@@ -83,17 +98,15 @@ sanity4/24</td>
 	<td>3000</td>
 	<td></td>
 </tr>
-
-
 <tr>
-	<td>click</td>
-	<td>xpath=(//a[contains(@href,'/plan/lifeshield-advantage')])</td>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 
 <tr>
-	<td>ENDIF</td>
-	<td></td>
+	<td>click</td>
+	<td>xpath=(//a[contains(@href,'/plan/lifeshield-advantage')])</td>
 	<td></td>
 </tr>
 
@@ -151,6 +164,17 @@ sanity4/24</td>
 	<td>verifyElementPresent('css=div.c-addon__heading')</td>
 	<td></td>
 </tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.c-addon__heading</td>
+	<td>extendedInfo</td>
+</tr>
+
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
 
 <tr>
 	<td>captureEntirePageScreenshot</td>
@@ -199,12 +223,12 @@ sanity4/24</td>
 </tr>
 <tr>
 	 <td>verifyText</td>
-	<td>css=li.green-check > div > div > p > span.emphasize</td>
+	<td>//li[@class='green-check']/div/div/p[2]/span</td>
 	<td>${premium}</td>
 </tr>
 <tr>
 	 <td>storeText</td>
-	<td>css=li.green-check > div > div > p > span.emphasize</td>
+	<td>//li[@class='green-check']/div/div/p[2]/span</td>
 	<td>finalPrice</td>
 </tr>
 <tr>
@@ -219,5 +243,8 @@ sanity4/24</td>
 </tr>
 	</tbody>
 </table>
+	
+	
+	
 	
 	
