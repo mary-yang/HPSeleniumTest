@@ -3,8 +3,28 @@
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
 <tr>
+	<td>IF</td>
+	<td>'${ENV}'=='https://www.agilehealthinsurance.com/?isTest=y'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://backoffice.agilehealthinsurance.com/back-office</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td>open</td>
 	<td>${ENV}/back-office</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -66,6 +86,7 @@
 </tbody></table>
 </body>
 </html>
+	
 	
 	
 	

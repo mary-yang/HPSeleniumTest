@@ -1,0 +1,335 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Inventory Check/Inventory (app)/Vitala Care</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+
+<tr>
+	<td>open</td>
+	<td>llbenefitss--windrunner.storefront.mybenefitskeeper.com/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>llbenefitss--windrunner.storefront.mybenefitskeeper.com/health-benefit-insurance-quotes</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zip}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>${DOB}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-see-plans</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=(edit)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+
+
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=Vitala Care 100A&quot;)</td>
+    <td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>//a[contains(@href, '/health-benefit-insurance/plan/vitalacare-${state2}-100a-100-30-50-3')]</td>
+	<td></td>
+</tr>
+
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='hbi-plan-details-overview']/div/div/div</td>
+	<td>mon</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${mon}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Apply for This Plan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@id='applyButton']/span[3]</td>
+	<td></td>
+</tr>
+<<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=No Thanks&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+    <td>click</td>
+    <td>link=No Thanks </td>
+    <td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=fillApp</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>url</td>
+	<td></td>
+</tr>
+<!-----------
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${url}&quot;.substr(0,&quot;${url}&quot;.indexOf(&quot;?&quot;))</td>
+	<td>url</td>
+</tr>
+------------------>
+<tr>
+	<td>storeEval</td>
+	<td>var b;b="${url}".match("test[^/]+")</td>
+	<td>uri</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=credit-payment-authorization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1---------------------->
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(&quot;xpath=(//a[contains(text(),'No Thanks')])[2]&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'No Thanks')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<!----------如果出现Exclusive Offers popup 点no thanks ------------popup 1-----end----------------->
+<tr>
+	<td>click</td>
+	<td>id=consent-checkbox-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=p.signature-arrow</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>waitForNotLocation</td>
+	<td>*page/3* </td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.emphasize</td>
+	<td>*Congratulations*</td>
+</tr>
+<<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//p[contains(@class, 'app-payment')]/span[2]&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//p[contains(@class, 'app-payment')]/span[2]</td>
+	<td>conf_mon</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${conf_mon}</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+	<td>open</td>
+	<td>windrunner.agilehealthinsurance.com/back-office</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('id=identifierId')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=identifierId</td>
+	<td>jabir.gong@gmail.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.RveJvd.snByac</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('name=password')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=password</td>
+	<td>cbx660319()</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.RveJvd.snByac</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
