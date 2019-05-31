@@ -67,7 +67,7 @@
 </tr>
 <tr>
     <td>storeEval</td>
-    <td>var now=new Date;now.setDate(now.getDate()+${coverage_date_start_add_days}+${coverage_date_end_add_days});var y=now.getFullYear();var m=now.getMonth()+1;var m=(m&gt;9)?m:&quot;0&quot;+m;var dd=now.getDate();var dd=(dd&gt;9)?dd:&quot;0&quot;+dd;m+&quot;/&quot;+dd+&quot;/&quot;+y;</td>
+    <td>var now=new Date;now.setDate(now.getDate()+${coverage_date_start_add_days}+${Duration});var y=now.getFullYear();var m=now.getMonth()+1;var m=(m&gt;9)?m:&quot;0&quot;+m;var dd=now.getDate();var dd=(dd&gt;9)?dd:&quot;0&quot;+dd;m+&quot;/&quot;+dd+&quot;/&quot;+y;</td>
     <td>coverage_end_date</td>
 </tr>
 
@@ -264,6 +264,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>include</td>
+	<td>AHI/Include/Get URI</td>
+	<td></td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=member-P-1-firstName</td>
 	<td>TestJabir</td>
@@ -332,7 +337,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>xpath=(//div[@class='tr summary-effective-dates'])[2]/div[2]</td>
-	<td>${coverage_date_end_add_days}*</td>
+	<td>${Duration}*</td>
 </tr>
 <tr>
 	<td>include</td>
@@ -391,6 +396,8 @@
 </tbody></table>
 </body>
 </html>
+	
+	
 	
 	
 	
