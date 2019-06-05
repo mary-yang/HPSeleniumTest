@@ -1,0 +1,211 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Private Label/TriStar/STM Inventory/Extended/LifeShield/LifeShield Flex</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/PrivateLabelSite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=primaryCTA</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1975</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<!--------------------Quote Page--------------------->
+
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent(xpath=(//a[contains(@href,'/plan/lifeshield-flex}')])[2])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(@href,'/plan/lifeshield-flex')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(@href,'/plan/${carrierid}')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--------------------Plan Detail  Page--------------------->
+
+<tr>
+	<td>clickAndWait</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+
+<tr>
+	 <td>storeText</td>
+	<td>//div[@id='js-apply-overview']/div[3]/div/div[5]/div[2]</td>
+	<td>duration</td>
+</tr>
+
+<tr>
+	 <td>storeText</td>
+	<td>//td/span[contains(text(),'Monthly Total')]/following::td</td>
+	<td>premium</td>
+</tr>
+<tr>
+	 <td>storeText</td>
+	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr/td</td>
+	<td>planname</td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=div.c-addon__heading')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.c-addon__heading</td>
+	<td>extendedInfo</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.js-add-pre-x.c-addon__add-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.js-apply-text.apply-button-text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('id=i-acknowledge')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.c-consecutive-modal__header</td>
+	<td>* Month Duration Acknowledgement</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=i-acknowledge</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.c-consecutive-modal__continue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	 <td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Go to end</td>
+	<td></td>
+</tr>
+<tr>
+	 <td>verifyText</td>
+	<td>css=li.green-check > div > div > p.reset > span.emphasize</td>
+	<td>${premium}</td>
+</tr>
+<tr>
+	 <td>storeText</td>
+	<td>css=li.green-check > div > div > p.reset > span.emphasize</td>
+	<td>finalPrice</td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/BO App Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='searchResults']/div/small/table/tbody/tr[2]/td[4]</td>
+	<td>status</td>
+</tr>
+	</tbody>
+</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	

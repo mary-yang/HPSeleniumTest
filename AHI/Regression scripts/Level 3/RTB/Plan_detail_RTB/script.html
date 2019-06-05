@@ -1,0 +1,61 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Regression scripts/Level 3/RTB/Plan_detail_RTB</title></head><body><table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Plan Detail</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${ENV}/api/context/clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${ENV}/term-health-insurance/plan/${planname}?census[location][zip]=${zipcode}&census[member][0][dob]=01/01/1995&census[member][0][gender]=M&census[member][0][role]=P</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[contains(@class,'js-details-overview-flip card details-overview')])[1]/div/div</td>
+	<td>${RTBtittle1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[contains(@class,'js-details-overview-flip card details-overview')])[1]/div/div[2]</td>
+	<td>${RTBcontent1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[contains(@class,'js-details-overview-flip card details-overview')])[2]/div/div</td>
+	<td>${RTBtittle2}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[contains(@class,'js-details-overview-flip card details-overview')])[2]/div/div[2]</td>
+	<td>${RTBcontent2}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[contains(@class,'js-details-overview-flip card details-overview')])[3]/div/div</td>
+	<td>${RTBtittle3}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[contains(@class,'js-details-overview-flip card details-overview')])[3]/div/div[2]</td>
+	<td>${RTBcontent3}</td>
+</tr>
+
+
+</tbody></table>
+</body>
+</html>
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
