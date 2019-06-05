@@ -68,6 +68,11 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;link=Coverage length&quot;)</td>
+    <td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Coverage length</td>
 	<td></td>
@@ -83,24 +88,29 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;css=h1.c-quote-v3-heading.reset.pull-left&quot;)</td>
+    <td></td>
+</tr>
+<tr>
 	<td>storeText</td>
 	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
 	<td>planCount</td>
 </tr>
 <tr>
-    <td>IF</td>
-    <td>verifyElementPresent(&quot;//*[@id='js-sidebar-carrier']/div/button&quot;)</td>
-    <td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id='js-sidebar-carrier']/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
+	<td>storeEval</td>
+	<td>'${planCount}'.match(/\d+/);</td>
+	<td>planCount</td>
 </tr>
 <tr>
     <td>ENDIF</td>
@@ -126,6 +136,21 @@ sanity4/24</td>
 <tr>
 	<td>storeText</td>
 	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>advanthealth</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${advanthealth}'.match(/\d+/);</td>
+	<td>advanthealth</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='advanthealth' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
 	<td>advanthealth</td>
 </tr>
 <tr>
@@ -155,6 +180,21 @@ sanity4/24</td>
 	<td>pivotcompanion</td>
 </tr>
 <tr>
+	<td>storeEval</td>
+	<td>'${pivotcompanion}'.match(/\d+/);</td>
+	<td>pivotcompanion</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='pivotcompanion' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
+	<td>pivotcompanion</td>
+</tr>
+<tr>
     <td>ENDIF</td>
     <td></td>
     <td></td>
@@ -178,6 +218,21 @@ sanity4/24</td>
 <tr>
 	<td>storeText</td>
 	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>everest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${everest}'.match(/\d+/);</td>
+	<td>everest</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='everest' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
 	<td>everest</td>
 </tr>
 <tr>
@@ -207,6 +262,21 @@ sanity4/24</td>
 	<td>everestone</td>
 </tr>
 <tr>
+	<td>storeEval</td>
+	<td>'${everestone}'.match(/\d+/);</td>
+	<td>everestone</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='everest-one' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
+	<td>everestone</td>
+</tr>
+<tr>
     <td>ENDIF</td>
     <td></td>
     <td></td>
@@ -230,6 +300,21 @@ sanity4/24</td>
 <tr>
 	<td>storeText</td>
 	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>lifeshield</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${lifeshield}'.match(/\d+/);</td>
+	<td>lifeshield</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='lifeshield' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
 	<td>lifeshield</td>
 </tr>
 <tr>
@@ -259,6 +344,21 @@ sanity4/24</td>
 	<td>nationalgeneral</td>
 </tr>
 <tr>
+	<td>storeEval</td>
+	<td>'${nationalgeneral}'.match(/\d+/);</td>
+	<td>nationalgeneral</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='nationalgeneral' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
+	<td>nationalgeneral</td>
+</tr>
+<tr>
     <td>ENDIF</td>
     <td></td>
     <td></td>
@@ -285,30 +385,19 @@ sanity4/24</td>
 	<td>slaico</td>
 </tr>
 <tr>
-    <td>ENDIF</td>
+	<td>storeEval</td>
+	<td>'${slaico}'.match(/\d+/);</td>
+	<td>slaico</td>
+</tr>
+<tr>
+    <td>ELSE</td>
     <td></td>
     <td></td>
 </tr>
-<!-----------unitedhealthone--------------------------------------->
 <tr>
-    <td>IF</td>
-    <td>verifyElementPresent(&quot;//input[@name='filter[carrier]' and @value='unitedhealthone' and @type='checkbox']&quot;)</td>
-    <td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//input[@name='filter[carrier]' and @value='unitedhealthone' and @type='checkbox']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
-	<td>unitedhealthone</td>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='slaico' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
+	<td>slaico</td>
 </tr>
 <tr>
     <td>ENDIF</td>
@@ -382,4 +471,5 @@ sanity4/24</td>
 	
 	
 
+	
 	
