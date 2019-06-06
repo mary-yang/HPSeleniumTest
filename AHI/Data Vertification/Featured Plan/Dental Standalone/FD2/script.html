@@ -63,19 +63,19 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
+	<td>IF</td>
+	<td>verifyElementPresent("//ul[@id='featuredPlan']/li/div/div[2]/div/h3/a")</td>
 	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>link=Featured</td>
-	<td>Featured</td>
 </tr>
 <tr>
 	<td>storeText</td>
 	<td>//ul[@id='featuredPlan']/li/div/div[2]/div/h3/a</td>
 	<td>featureplanname</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
 </tr>
 <tr>
 	<td>echo</td>
@@ -100,6 +100,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	

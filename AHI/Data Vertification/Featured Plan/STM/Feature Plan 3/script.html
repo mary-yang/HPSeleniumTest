@@ -7,11 +7,6 @@ sanity4/24</td>
 	</thead>
 	<tbody>
 <tr>
-	<td>open</td>
-	<td>https://www.agilehealthinsurance.com/api/context/clear</td>
-	<td></td>
-</tr>
-<tr>
 	<td>include</td>
 	<td>AHI/Include/Open website</td>
 	<td></td>
@@ -25,12 +20,6 @@ sanity4/24</td>
 	<td>pause</td>
 	<td>3000</td>
 	<td></td>
-</tr>
-
-<tr>
-	<td>verifyText</td>
-	<td>css=h1.census-main-heading</td>
-	<td>Compare Health Insurance Quotes*</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -68,13 +57,8 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>open</td>
-	<td>${ENV}/term-health-insurance/quote?redirect=1&_ga_variation=1</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>//div/h1[contains(text(),'Short Term Health Insurance Plans')]</td>
+	<td>IF</td>
+	<td>verifyElementPresent("link=Coverage length")</td>
 	<td></td>
 </tr>
 <tr>
@@ -93,14 +77,24 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//*[@data-glossary='shortTerm.featuredPlan']</td>
-	<td>*featured*</td>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//*[@data-glossary='shortTerm.featuredPlan']/following::table/descendant::div[@class='c-plan-unit-v3__plan-name']")</td>
+	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
 	<td>//*[@data-glossary='shortTerm.featuredPlan']/following::table/descendant::div[@class='c-plan-unit-v3__plan-name']</td>
 	<td>featureplanname</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
 </tr>
 <tr>
 	<td>echo</td>
@@ -110,6 +104,7 @@ sanity4/24</td>
 
 	</tbody>
 </table>
+	
 	
 	
 	

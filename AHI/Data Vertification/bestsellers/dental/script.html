@@ -59,13 +59,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyLocation</td>
-	<td>*/quote*</td>
+	<td>IF</td>
+	<td>verifyElementPresent("//div[@id='js-quote-filters']/div/div/ul/li/label[2]/span")</td>
 	<td></td>
 </tr>
 <tr>
@@ -74,20 +69,54 @@
 	<td></td>
 </tr>
 <tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//div[@id='js-quote-filters']/div[2]")</td>
+	<td></td>
+</tr>
+<tr>
 	<td>storeText</td>
 	<td>//div[@id='js-quote-filters']/div[2]</td>
 	<td>Carriers</td>
 </tr>
-
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("xpath=(//a[@data-glossary='dental.bestSeller'])[1]/following::h3/a")</td>
+	<td></td>
+</tr>
 <tr>
 	<td>storeText</td>
 	<td>xpath=(//a[@data-glossary='dental.bestSeller'])[1]/following::h3/a</td>
 	<td>Bestsellername1</td>
 </tr>
 <tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent("xpath=(//a[@data-glossary='dental.bestSeller'])[2]/following::h3/a")</td>
+	<td></td>
+</tr>
+<tr>
 	<td>storeText</td>
 	<td>xpath=(//a[@data-glossary='dental.bestSeller'])[2]/following::h3/a</td>
 	<td>Bestsellername2</td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
 </tr>
 <tr>
 	<td>IF</td>
@@ -191,6 +220,7 @@
 	
 	
 
+	
 	
 	
 	

@@ -7,14 +7,12 @@
 	<td>AHI/Include/Open website</td>
 	<td></td>
 </tr>
-
+<!------------------------------------------navigtion------------------------------------------------------------------------->
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Short Term Health Insurance</td>
 	<td></td>
 </tr>
-
-
 <tr>
 	<td>waitForText</td>
 	<td>css=h1.census-main-heading</td>
@@ -30,8 +28,6 @@
 	<td>css=h1.census-main-heading</td>
 	<td>Compare Health Benefit Indemnity Insurance Quotes*</td>
 </tr>
-
-
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Dental Insurance</td>
@@ -47,6 +43,7 @@
 	<td>${ENV}</td>
 	<td></td>
 </tr>
+<!---------------------------------------------------footer----------------------------------------------------------->
 <tr>
 	<td>clickAndWait</td>
 	<td>xpath=(//a[contains(text(),'Term Health Insurance')])[4]</td>
@@ -71,6 +68,17 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
+	<td>//footer[@id='footer']/div/div/div/ul/li[3]/a[contains(text(),'Companion Life')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>Companion Life</td>
+
+</tr>
+<tr>
+	<td>clickAndWait</td>
 	<td>//footer[@id='footer']/div/div/div/ul/li[4]/a[contains(text(),'Everest')]</td>
 	<td></td>
 </tr>
@@ -91,7 +99,26 @@
 	<td>css=h1.front-door-h1</td>
 	<td>EverestPrime</td>
 </tr>
-
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'LifeShield')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>LifeShield Flex and LifeShield Advantage</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'National General')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>National General Accident & Health</td>
+</tr>
 
 <tr>
 	<td>clickAndWait</td>
@@ -104,20 +131,110 @@
 	<td>Standard Life Select</td>
 </tr>
 
-
 <tr>
 	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Dental Insurance')])[1]</td>
+	<td>xpath=//ul[@class='footer-list footer-health-benefit']/li/h4/a[contains(text(),'Health Benefit Indemnity Insurance')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>css=h1.census-main-heading</td>
-	<td>Compare Dental Insurance Quotes</td>
+	<td>Compare Health Benefit Indemnity Insurance Quotes*</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//a[contains(text(),'Nationwide')]</td>
+	<td>xpath=//ul[@class='footer-list footer-health-benefit']/li/a[contains(text(),'LifeShield VitalaCare')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>VitalaCare Limited Benefit Medical</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list footer-health-benefit']/li/a[contains(text(),'AFSLIC Health Choice+')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>Health Choice Plus Limited Benefit Medical</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list footer-health-benefit']/li/a[contains(text(),'Axis Core Shield')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>Core Shield</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list footer-health-benefit']/li/a[contains(text(),'Axis Legion Limited Medical')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>Legion Limited Medical</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list footer-health-benefit']/li/a[contains(text(),'Agile Secure')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>Agile Secure</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list footer-health-benefit']/li/a[contains(text(),'Chubb Agile One')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>Agile One</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list footer-health-benefit']/li/a[contains(text(),'Chubb Cardinal Choice')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>Cardinal Choice</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list footer-health-benefit']/li/a[contains(text(),'Standard Life Fixed Cash Benefit')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>Standard Life Fixed Cash Benefit</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list']/li/h4/a[contains(text(),'Dental Insurance')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.census-main-heading</td>
+	<td>Compare Dental Insurance Quotes*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list']/li/a[contains(text(),'Nationwide')]</td>
 	<td></td>
 </tr>
 <tr>
@@ -127,7 +244,58 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//a[contains(text(),'Learning Center')]</td>
+	<td>xpath=//ul[@class='footer-list']/li/a[contains(text(),'National General')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>National General</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list']/li/a[contains(text(),'USA+ Membership')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>USA+ Dental Membership</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list']/li/h4/a[contains(text(),'Telemedicine')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>Teladoc</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list']/li/a[contains(text(),'Teladoc')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.front-door-h1</td>
+	<td>Teladoc</td>
+</tr>
+<!----------------------about us------------------------------------------------------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list footer-about']/li/h4/a[contains(text(),'Help Center')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//h1[@class='care-center-hero-h1']</td>
+	<td>Shopping for Health Insurance?We can help you!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list footer-about']/li/a[contains(text(),'Learning Center')]</td>
 	<td></td>
 </tr>
 <tr>
@@ -135,6 +303,17 @@
 	<td>//div[@id='learningCenterHero']/div/h1</td>
 	<td>Health Insurance Learning Center</td>
 </tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//ul[@class='footer-list footer-about']/li/a[contains(text(),'Policyholder Help')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//h1[@class='care-center-hero-h1']</td>
+	<td>Need Help With Your Existing Policy?We can help you!</td>
+</tr>
+
 <tr>
 	<td>clickAndWait</td>
 	<td>link=About AgileHealthInsurance</td>
@@ -189,6 +368,16 @@
 	
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

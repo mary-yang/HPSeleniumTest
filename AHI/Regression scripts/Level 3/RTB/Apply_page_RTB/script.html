@@ -8,162 +8,46 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Quote & Save Today</td>
+	<td>open</td>
+	<td>${ENV}/term-health-insurance/apply/advanthealth-plan-1-${state}-5000-20-9000-500000?census[location][zip]=${zipcode}&census[member][0][dob]=1/1/1980&census[member][0][gender]=F&census[member][0][role]=P</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>css=h1.census-main-heading</td>
-	<td>Compare Health Insurance Quotes*</td>
+	<td>verifyAttribute</td>
+	<td>//div[@class='col-md-8']/div[2]/div/div/a@href</td>
+	<td>http://fortune.com/100-fastest-growing-companies/health-insurance-innovations/</td>
 </tr>
 <tr>
-	<td>sendKeys</td>
-	<td>css=input.js-zip.census-zip-input</td>
-	<td>${zipcode}</td>
+	<td>verifyAttribute</td>
+	<td>//div[@class='col-md-8']/div[2]/div/div[2]/a@href</td>
+	<td>https://www.bbb.org/losangelessiliconvalley/business-reviews/insurance-health/agile-health-insurance-in-mountain-view-ca-648490</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td>verifyElementPresent</td>
+	<td>//div[@class='col-md-8']/div[2]/div/div[1]/a/img</td>
 	<td></td>
 </tr>
 <tr>
-	<td>focus</td>
-	<td>id=dob-0</td>
+	<td>verifyElementPresent</td>
+	<td>//div[@class='col-md-8']/div[2]/div/div[2]/a/img</td>
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
-	<td>id=dob-0</td>
-	<td>01/01/1985</td>
-</tr>
-<tr>
-	<td>fireEvent</td>
-	<td>id=dob-0</td>
-	<td>blur</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=div.census-radio &gt; label</td>
+	<td>verifyElementPresent</td>
+	<td>//div[@class='col-md-8']/div[2]/div/div[3]/img</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>verifyElementPresent</td>
+	<td>//div[@class='col-md-8']/div[2]/div/div[4]/img</td>
 	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=js-see-plans</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=(edit)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyLocation</td>
-	<td>*/quote*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;xpath=//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//div[@id='js-quote-header']/div[2]/div/div/h1/ul/li</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(&quot;//span[contains(text(),'${provider}')]&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//span[contains(text(),'${provider}')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//*[@id='js-quote-plans-container']/ul[2]/li[descendant::div/div[1]/div[1]/div/img[@alt="${provider}"]]/div/div[2]/div[1]/h3/a[1]</td>
-	<td>planname</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//*[@id='js-quote-plans-container']/ul[descendant::div/div[1]/div[1]/div/img[@alt="${provider}"]]/li[1]/div/div[1]/a[1]/div[1]</td>
-	<td>quote_P</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Select This Plan')])[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=span.emphasize</td>
-	<td>${planname}</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>&quot;${quote_P}&quot;.substr(0,6)</td>
-	<td>quote_P</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[4]/td[2]</td>
-	<td>*${quote_P}*</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[2]/div/div/ul/li</td>
-	<td>${RTB1}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[2]/div/div/ul/li[2]</td>
-	<td>${RTB2}</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div[2]/div/div/ul/li[3]</td>
-	<td>${RTB3}</td>
 </tr>
 </tbody></table>
 </body>
 </html>
 
+	
+	
 	
 	
 	
