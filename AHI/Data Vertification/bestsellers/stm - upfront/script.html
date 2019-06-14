@@ -23,6 +23,11 @@
 	<td>Compare Health Insurance Quotes*</td>
 </tr>
 <tr>
+	<td>type</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td></td>
+</tr>
+<tr>
 	<td>sendKeys</td>
 	<td>css=input.js-zip.census-zip-input</td>
 	<td>${zipcode}</td>
@@ -34,6 +39,11 @@
 </tr>
 <tr>
 	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
 	<td>id=dob-0</td>
 	<td></td>
 </tr>
@@ -78,8 +88,28 @@
 	<td></td>
 </tr>
 <tr>
+	<td>IF</td>
+	<td>verifyElementPresent("//td[contains(@class,'ui-datepicker-days-cell-over')]/a")</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
-	<td>//td[@class=' ui-datepicker-days-cell-over ']/a</td>
+	<td>//td[contains(@class,'ui-datepicker-days-cell-over')]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@class='ui-state-default ui-state-active']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -293,6 +323,10 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
 	
 	
 	

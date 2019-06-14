@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Private Label/TriStar/STM Inventory/Base/LifeShield/LifeShield Flex</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/sofee/Aspen/inventory/Aspen - extended</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -8,12 +8,12 @@ sanity4/24</td>
 	<tbody>
 <tr>
 	<td>include</td>
-	<td>AHI/Include/PrivateLabelSite</td>
+	<td>AHI/Include/Open website</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>id=primaryCTA</td>
+	<td>link=Quote &amp; Save Today</td>
 	<td></td>
 </tr>
 <tr>
@@ -53,41 +53,30 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <!--------------------Quote Page--------------------->
+
 <tr>
 	<td>click</td>
-	<td>link=Coverage length</td>
+	<td>css=#js-sidebar-carrier .js-toggle-button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//form/ul/li/div/input</td>
+	<td>//input[@value='${carrierid}']</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1000</td>
+	<td>3000</td>
 	<td></td>
 </tr>
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent(xpath=(//a[contains(@href,'/plan/lifeshield-flex}')])[2])</td>
-	<td></td>
-</tr>
+
+
 <tr>
 	<td>click</td>
-	<td>xpath=(//a[contains(@href,'/plan/lifeshield-flex')])[2]</td>
+	<td>xpath=(//a[contains(@href,'/plan/aspen-plan-3')])</td>
 	<td></td>
 </tr>
-<tr>
-	<td>ELSE</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//a[contains(@href,'/plan/${carrierid}')])[2]</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>ENDIF</td>
 	<td></td>
@@ -115,15 +104,34 @@ sanity4/24</td>
 
 <tr>
 	 <td>storeText</td>
-	<td>//td/span[contains(text(),'Monthly Total')]/following::td</td>
-	<td>premium</td>
-</tr>
-<tr>
-	 <td>storeText</td>
 	<td>xpath=//div[@id='js-sidebar']/div/table/tbody/tr/td</td>
 	<td>planname</td>
 </tr>
-
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('css=div.c-addon__heading')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.c-addon__heading</td>
+	<td>extendedInfo</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.js-add-pre-x.c-addon__add-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	 <td>storeText</td>
+	<td>xpath=//tr[@class='c-price-table__border-row c-price-table__total']/td[2]/span</td>
+	<td>premium</td>
+</tr>
 <tr>
 	<td>captureEntirePageScreenshot</td>
 	<td></td>
@@ -171,12 +179,12 @@ sanity4/24</td>
 </tr>
 <tr>
 	 <td>verifyText</td>
-	<td>css=li.green-check > div > div > p.reset > span.emphasize</td>
+	<td>//li[@class='green-check']/div/div/p[2]/span</td>
 	<td>${premium}</td>
 </tr>
 <tr>
 	 <td>storeText</td>
-	<td>css=li.green-check > div > div > p.reset > span.emphasize</td>
+	<td>//li[@class='green-check']/div/div/p[2]/span</td>
 	<td>finalPrice</td>
 </tr>
 <tr>
@@ -202,4 +210,27 @@ sanity4/24</td>
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 	
