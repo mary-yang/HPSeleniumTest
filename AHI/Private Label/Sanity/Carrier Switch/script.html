@@ -3,71 +3,51 @@
 <tr><td rowspan="1" colspan="3">Appcreate</td></tr>
 </thead><tbody>
 <tr>
-	<td>open</td>
-	<td>https://praetemptatus.agilehealthinsurance.com/back-office/carrier-switch</td>
+	<td>include</td>
+	<td>AHI/Include/Login BO</td>
 	<td></td>
 </tr>
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent('id=identifierId')</td>
-	<td></td>
+        <td>click</td>
+        <td>//a[contains(text(),'Carrier Switch')]</td>
+        <td></td>
 </tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=identifierId</td>
-	<td>denis.yu1111@gmail.com</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=#identifierNext &gt; content.CwaK9 &gt; span.RveJvd.snByac</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=span.RveJvd.snByac</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>name=password</td>
-	<td>Think2016</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=span.RveJvd.snByac</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
-
 <tr>
 	<td>pause</td>
 	<td>3000</td>
 	<td></td>
 </tr>
+<!------------------------------LLBenefits----------------------------------------------------------------->
+<tr>
+        <td>mouseDown</td>
+        <td>css=#s2id_affiliates-stm b</td>
+        <td></td>
+</tr>
+<tr>
+        <td>clickAt</td>
+        <td>//*[@id='select2-drop']/ul/li[3]/div</td>
+        <td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
 
 <tr>
 	<td>verifyText</td>
-	<td>css=#stm-everest-one-llbenefits &gt; td.carrier</td>
-	<td>Everest</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='stm-everest-one-llbenefits']/td[5]</td>
+	<td>//div[@id='s2id_affiliates-stm']/a/span</td>
 	<td>llbenefits</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=#stm-everest-one-llbenefits &gt; td.states</td>
-	<td>No Available</td>
+	<td>//tr[@id='stm-everest-llbenefits']/td[1]</td>
+	<td>Everest Prime</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=#stm-everest-llbenefits &gt; td.carrier</td>
-	<td>Everest Prime</td>
+	<td>//tr[@id='stm-everest-llbenefits']/td[4]</td>
+	<td>No Available</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -76,28 +56,13 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=#stm-everest-llbenefits &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-nationalgeneral-llbenefits &gt; td.carrier</td>
-	<td>National General</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='stm-nationalgeneral-llbenefits']/td[5]</td>
-	<td>llbenefits</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-nationalgeneral-llbenefits &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-unitedhealthone-llbenefits &gt; td.carrier</td>
+	<td>//tr[@id='stm-unitedhealthone-llbenefits']/td[1]</td>
 	<td>UnitedHealthcare</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-unitedhealthone-llbenefits']/td[4]</td>
+	<td>No Available</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -106,8 +71,290 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=#stm-unitedhealthone-llbenefits &gt; td.states</td>
+	<td>//tr[@id='stm-pivotcompanion-llbenefits']/td[1]</td>
+	<td>Companion Life</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-pivotcompanion-llbenefits']/td[4]</td>
 	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-pivotcompanion-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-slaico-llbenefits']/td[1]</td>
+	<td>Standard Life</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-slaico-llbenefits']/td[4]</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-slaico-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-lifeshield-llbenefits']/td[1]</td>
+	<td>LifeShield</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-lifeshield-llbenefits']/td[4]</td>
+	<td>AL,AR,AZ,FL,GA,IL,IN,KY,LA,MO,MS,NC,NV,OK,PA,SC,SD,TN,TX,WV</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-lifeshield-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-nationalgeneral-llbenefits']/td[1]</td>
+	<td>National General</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-nationalgeneral-llbenefits']/td[4]</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-nationalgeneral-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-everest-one-llbenefits']/td[1]</td>
+	<td>Everest</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-everest-one-llbenefits']/td[4]</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-everest-one-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-advanthealth-llbenefits']/td[1]</td>
+	<td>AdvantHealth</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-advanthealth-llbenefits']/td[4]</td>
+	<td>AL,AR,AZ,GA,KY,MS,NC,NE,NV,OH,OK,TX,WI</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='stm-advanthealth-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>id=tab-hbi</td>
+	<td</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+        <td>mouseDown</td>
+        <td>css=#s2id_affiliates-hbi b</td>
+        <td></td>
+</tr>
+<tr>
+        <td>clickAt</td>
+        <td>//*[@id='select2-drop']/ul/li[2]/div</td>
+        <td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='s2id_affiliates-hbi']/a/span</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-protector360-llbenefits']/td[1]</td>
+	<td>Protector</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-protector360-llbenefits']/td[4]</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-protector360-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-coreshield-llbenefits']/td[1]</td>
+	<td>Core Shield</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-coreshield-llbenefits']/td[4]</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-coreshield-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-slaicohbi-llbenefits']/td[1]</td>
+	<td>Fixed Cash Benefit</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-slaicohbi-llbenefits']/td[4]</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-slaicohbi-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-agileone-llbenefits']/td[1]</td>
+	<td>Agile One</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-agileone-llbenefits']/td[4]</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-agileone-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-agilesecure-llbenefits']/td[1]</td>
+	<td>Agile Secure</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-agilesecure-llbenefits']/td[4]</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-agilesecure-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-legion-llbenefits']/td[1]</td>
+	<td>Legion Limited Medical</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-legion-llbenefits']/td[4]</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-legion-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-cardinalchoice-llbenefits']/td[1]</td>
+	<td>Cardinal Choice</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-cardinalchoice-llbenefits']/td[4]</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-cardinalchoice-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-vitalacare-llbenefits']/td[1]</td>
+	<td>Vitala Care</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-vitalacare-llbenefits']/td[4]</td>
+	<td>FL</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-vitalacare-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-healthchoiceplus-llbenefits']/td[1]</td>
+	<td>Health Choice+</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-healthchoiceplus-llbenefits']/td[4]</td>
+	<td>No Available</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='hbi-healthchoiceplus-llbenefits']/td[5]</td>
+	<td>llbenefits</td>
+</tr>
+<!-------------------------------spark------------------------------------------------------------------------>
+<tr>
+	<td>click</td>
+	<td>id=tab-stm</td>
+	<td</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+        <td>mouseDown</td>
+        <td>css=#s2id_affiliates-stm b</td>
+        <td></td>
+</tr>
+<tr>
+        <td>clickAt</td>
+        <td>//*[@id='select2-drop']/ul/li[4]/div</td>
+        <td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='s2id_affiliates-stm']/a/span</td>
+	<td>spark</td>
 </tr>
 
 
@@ -115,6 +362,31 @@
 </tbody></table>
 </body>
 </html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
