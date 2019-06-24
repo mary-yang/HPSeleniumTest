@@ -89,6 +89,47 @@ sanity4/24</td>
     <td></td>
     <td></td>
 </tr>
+<!-----------aspen--------------------------------------->
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//input[@name='filter[carrier]' and @value='aspen' and @type='checkbox']&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@name='filter[carrier]' and @value='aspen' and @type='checkbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>aspen</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${aspen}'.match(/\d+/);</td>
+	<td>aspen</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='aspen' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
+	<td>aspen</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
 <!-----------advanthealth--------------------------------------->
 <tr>
     <td>IF</td>
@@ -441,6 +482,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	
