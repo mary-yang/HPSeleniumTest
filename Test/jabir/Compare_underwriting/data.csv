@@ -1,8 +1,0 @@
-"state","state1","zip","provider","planname","quote_P","start","DOB","Question1","Question2","Question3","Question4","Question5","Question6","Question7","Question8"
-"##Illinois","IL","60001","Unified Premier","${planname}","${quote_P}","10/01/2015","12/21/1969","${Question1}","${Question2}","${Question3}","${Question4}","${Question5}","${Question6}","${Question7}","${Question8}"
-"##Illinois","IL","60001","Companion Protect","${planname}","${quote_P}","10/01/2015","12/21/1969","${Question1}","${Question2}","${Question3}","${Question4}","${Question5}","${Question6}","${Question7}","${Question8}"
-"##Illinois","IL","60001","HCC Advantage","${planname}","${quote_P}","10/01/2015","12/21/1969","${Question1}","${Question2}","${Question3}","${Question4}","${Question5}","${Question6}","${Question7}","${Question8}"
-"Illinois","IL","60001","Everest Prime","${planname}","${quote_P}","10/01/2015","12/21/1969","${Question1}","${Question2}","${Question3}","${Question4}","${Question5}","${Question6}","${Question7}","${Question8}"
-"##Illinois","IL","60001","HCC Flexible","${planname}","${quote_P}","10/01/2015","12/21/1969","${Question1}","${Question2}","${Question3}","${Question4}","${Question5}","${Question6}","${Question7}","${Question8}"
-"Illinois","IL","60001","Standard Life","${planname}","${quote_P}","10/01/2015","12/21/1969","${Question1}","${Question2}","${Question3}","${Question4}","${Question5}","${Question6}","${Question7}","${Question8}"
-"##Illinois","IL","60001","UnitedHealthOne","${planname}","${quote_P}","10/01/2015","12/21/1969","${Question1}","${Question2}","${Question3}","${Question4}","${Question5}","${Question6}","${Question7}","${Question8}"

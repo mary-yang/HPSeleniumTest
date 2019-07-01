@@ -1,5 +1,0 @@
-"state","zipcode","carrierid","uri","AutoEmail","status"
-"FL","32099","hccadvantage","${uri}","${AutoEmail}","${status}"
-"##FL","32099","carrier-hccflexible-","${uri}","${AutoEmail}","${status}"
-"##FL","32099","companionprotect","${uri}","${AutoEmail}","${status}"
-"##FL","32099","carrier-slaico-","${uri}","${AutoEmail}","${status}"

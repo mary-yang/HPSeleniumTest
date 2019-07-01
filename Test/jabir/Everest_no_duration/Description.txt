@@ -1,4 +1,0 @@
-no duration states：
-      AZ,CO,                   IN,   LA,MI,MN,MO,ND,NE,NH,NV,OH,                                  SD,
-enable states
-AL,AR,AZ,CO,DE,FL,GA,IL,       IN,IA,LA,MS,NV,               OH,OK,OR,PA,SC,TX,VA,DC, WV,WI,MO,ND,SD
