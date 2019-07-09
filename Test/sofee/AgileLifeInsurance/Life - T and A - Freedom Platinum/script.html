@@ -1,0 +1,533 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/sofee/AgileLifeInsurance/Life - T and A - Freedom Platinum</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Disclaimers</td>
+	<td></td>
+</tr>
+<!-----------------------------Home page------------------------------------------->
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+<!-----------------------------Census page------------------------------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=primaryCTA</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>sendKeys</td>
+	<td>id=zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1985</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<!------------------quote page disclaimer----------------------------->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[1]</td>
+	<td>${AmalgamatedLifeDisclaimer}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${FederalDisclaimer}</td>
+</tr>
+
+<!-----------------------------detail page------------------------------------------->
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@class='js-view-details' and contains(@href,'/life-insurance/plan/amalgamated-life-freedom-platinum')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[1]</td>
+	<td>${AmalgamatedLifeDisclaimer}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${FederalDisclaimer}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=plan-details-primary-apply</td>
+	<td></td>
+</tr>
+<!-----------------------------apply page------------------------------------------->
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[1]</td>
+	<td>${AmalgamatedLifeDisclaimer}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${FederalDisclaimer}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=applyButton</td>
+	<td></td>
+</tr>
+<!-----------------------------applicatoin pages------------------------------------------->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[1]</td>
+	<td>${AmalgamatedLifeDisclaimer}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${FederalDisclaimer}</td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Get URI</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@value='']</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=member-P-1-m</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=07</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=member-P-1-lbs</td>
+	<td>100</td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>id=primary-beneficiary-first-name</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primary-beneficiary-last-name</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=primary-beneficiary-relationship</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-beneficiary-first-name</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-beneficiary-last-name</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=contingent-beneficiary-relationship</td>
+	<td>test</td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[1]</td>
+	<td>${AmalgamatedLifeDisclaimer}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${FederalDisclaimer}</td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/UseByPassCard</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[1]</td>
+	<td>${AmalgamatedLifeDisclaimer}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${FederalDisclaimer}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='js-consent-review']/div/div/div[2]/p</td>
+	<td>I have read the Terms and Agreements, I have reviewed my application(s) including the applicant and payment information and confirm that it is correct. I agree that by checking the box and clicking to sign, my agreement and consent will be legally binding and enforceable and the legal equivalent of my handwritten signature. *</td>
+</tr>
+
+
+<tr>
+	<td>click</td>
+	<td>link=Terms and Agreements</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Default Page Title</td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='col-xs-12 disclaimer-major-section'])[1]</td>
+	<td>FEDERAL INSURANCE COMPANY
+
+AD&D Insurance Acceptance and Electronic Fulfillment Disclosure and Authorization:
+
+Please sign me up for the insurance plan I selected. I have read, understand and agree to the terms and conditions of insurance coverage located on the Description of Coverage page, including the limitations and exclusions. I understand that benefits will be paid up to the maximum benefit limits, and that I will be responsible for any changes above those limits as defined in this plan. I request and authorize all insurance premium(s) to be charged to the credit card account I provided to pay for the premium(s). I acknowledge that I am the owner or authorized signer on the credit card account information provided and have full rights and privileges to use the account. I acknowledge that it is my responsibility to ensure that credit card account information is accurate and current. Health Insurance Innovations, the administrator of this insurance plan, reserves the right to refuse or terminate electronic payment services. I agree that this Authorization is to remain in full force until revoked by me in writing and until Health Insurance Innovations has the opportunity to act on the revocation. By electronically acknowledging this authorization, I acknowledge that I have read and agree to the terms and conditions set forth in this agreement.
+
+The Accidental Death and Dismemberment benefits are underwritten by FEDERAL INSURANCE COMPANY, a member insurer of the Chubb Group of Companies. This information is a brief description of the important features of this insurance plan. It is not an insurance contract. Coverage may not be available in all states or certain terms may be different where required by state law. Chubb NA is the U.S.-based operating division of the Chubb Group of Companies, headed by Chubb Ltd. (NYSE:CB) Insurance products and services are provided by Chubb insurance underwriting companies and not by the parent company itself.
+
+Consent to Electronic Delivery for Federal Insurance Company:
+I agree to the electronic insurance transaction and delivery of my policy(s) and related documents electronically. By choosing secure electronic delivery of your policy, we will not send Chubb policy paper or related documents by regular mail except those which we are required by law to provide in a paper format. There is no fee to receive your Chubb policy(s) or related documents electronically. We will provide your Chubb policy(s) or related documents via a PDF download available online. At any time, you can: change your email address; request a paper document; and unenroll from electronic delivery of your policy and related documents by calling MyBenefitsKeeper Customer Service Center at 1-844-792-6985 or emailing to: support@mybk.com. You do not need any special software to open your secure electronic Chubb documents, just a personal computer with an Adobe PDF Reader. Where required by law, customer privacy policies will be attached to your insurance policy. By choosing to receive your policy(s) and related documents electronically, you agree to receive and acknowledge receipt of Chubb privacy policy notices electronically. I agree I have read, acknowledged and understood the above.*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='col-xs-12 disclaimer-major-section'])[2]</td>
+	<td>AGILELIFEINSURANCE TERMS AND AGREEMENTS
+GENERAL ACKNOWLEDGMENTS
+ 
+ 
+I accept and acknowledge that I must understand and agree with the terms of the life insurance policy, paying attention to the effective date, premium amount, waiting period, benefits, limitations, exclusions, and riders, if applicable in my state.
+I accept and acknowledge that the quotes or rates shown above are estimates only. My applicable Fees is subject to change based on the optional benefits I selected, if any, and other relevant factors, such as changes in rates that take effect before my coverage start date. The insurance company always determines my actual Fees. Insurance companies reserve the right to change the terms of a policy upon proper notification. These rates may include monthly administration fees or membership dues.
+I accept and acknowledge that the quotes or rates shown on this website are for my requested effective date ONLY. If the actual effective date of my policy is different from the requested effective date, the actual Fees of my policy may differ from the quote or rate above. The change in amount may be due to Fee increases or policy changes from the insurance company and/or one or more family members having a birthday. (Rates are highly dependent on age.) The carrier I selected may not guarantee their rates for any period of time.
+I accept and acknowledge that coverage effective date is dependent upon approval of my application, which may include qualifying for the coverage and receipt of payment, and may be different than my requested date. The coverage effective date once the application is approved by the carrier may be pushed forward due to each carrier’s deadlines and processing times.
+I accept and acknowledge that each insurance carrier may have unique Notices and Disclaimers. I will check for information regarding the plans, products and carriers I selected. I further accept and acknowledge that it is my responsibility to read and understand each plan and product policy selected. 
+I accept and acknowledge that if I am not completely satisfied, in most states, I can cancel this coverage within the Free Look provision, shown in the Certificate of Insurance, for a refund of premiums.
+If this Enrollment Form is completed electronically, I agree that my electronic signature serves as my original signature. 
+I have personally completed and reviewed all of my answers to the questions in this enrollment form and represent that all information I have provided is true, complete, and correctly recorded. I understand that this information will be used to determine each person’s eligibility and insurability for coverage under the Policy and any false statement or misrepresentation may result in loss of coverage or claim denial. The Applicant (and Spouse or Dependent if coverage elected) must be accepted based on the Company’s rules in effect on the date of enrollment and on the Certificate Effective Date. Coverage (or Reinstatement of coverage), if issued and approved by the Company, will become effective on the date recorded in the Certificate Schedule of Benefits and not the date this enrollment form is signed. I understand that no agent or producer can accept risks, modify policies, or waive any rights or requirements of the Company.
+I accept and acknowledge that the products presented on this website are not those of Agilelifeinsurance.com (or it’s agency, HealthPocket Agency d/b/a AgileHealthInsurance) and are owned and administered by the respective companies identified in the applicable product brochure. 
+ELECTRONIC COMMUNICATIONS ACKNOWLEDGMENT
+By electronically signing and submitting an application or enrollment form through this website, you affirmatively consent to presentation, delivery, storage retrieval and transmission of communications from us as electronic records instead of in paper form. You accept and acknowledge that you can receive or access our electronic communications to you because you have the appropriate technology (e.g. telephone, computer) and you will notify us immediately if you change the address at which you receive our communications.
+To receive communications in paper format, please e-mail support@agilelifeinsurance.com. In the subject header of the e-mail, please indicate "Policy Reprint" and include your policy(s) number. In the body of the e-mail please provide us with the particular notice or document you are requesting.
+To withdraw your consent, please send a written request to: support@agilelifeinsurance.com
+Mark the subject line: ELECTRONIC COMMUNICATIONS ACKNOWLEDGMENT
+</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@class='col-xs-12 disclaimer-major-section'])[3]</td>
+	<td>PAYMENT ACKNOWLEDGMENT
+I am signing up for an automatic payment plan. I agree that AgileLifeInsurance or its authorized agent may automatically debit my bank account or credit card for the amount due on or around the payment due date. I understand that this authorization will remain in effect until I cancel it in writing, and I agree to notify AgileHealthInsurance or its authorized agent in writing of any changes in my account information or termination of this authorization, which must be received by AgileHealthInsurance or its agent at least 7 days prior to the next billing date. If the above-noted periodic payment dates fall on a weekend or holiday, I understand that the payment may be executed on the next business day. I understand that because this is an electronic transaction, these funds may be withdrawn from my account as soon as the above-noted periodic transaction dates. The charge will appear on my statement as Health Insurance Innov. I agree that AgileHealthInsurance or my financial institution can cancel automatic payment for my account for any reason, at any time, with or without prior notice to me. In the case of an ACH Transaction being rejected for Non-Sufficient Funds (NSF), I understand that AgileLifeInsurance or its agent may, at its discretion, attempt to process the charge again within 30 days, and I agree to an additional $25.00 charge for each attempt, which will be initiated as a separate transaction from the authorized recurring payment. I acknowledge that the origination of these debits to my account must comply with U.S. laws. This payment authorization is for the type of bill indicated above. I certify that I am an authorized user of this credit card or bank account. I agree not to dispute this recurring billing with my bank or card issuer so long as the transactions correspond to the terms indicated in this authorization form. I have a copy of this agreement and I know I can also contact AgileLifeInsurance at support@agilelifeinsurance.com or 800-314-5594 for a copy.</td>
+</tr>
+
+<tr>
+	<td>click</td>
+	<td>link=Description of Coverage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Voluntary Accidental Death & Dismemberment Insurance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=description-of-coverage</td>
+	<td>*Voluntary Accidental Death & Dismemberment Insurance*</td>
+</tr>
+
+
+
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

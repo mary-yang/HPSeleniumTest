@@ -2,5 +2,5 @@
 "##AL","35216","lifeshield-advantage","${planname}","${mo}","${uri}","${AutoEmail}","lifeshield-advantage","spark"
 "IL","60601","lifeshield","${planname}","${mo}","${uri}","${AutoEmail}","lifeshield-advantage","spark"
 "FL","33186","lifeshield","${planname}","${mo}","${uri}","${AutoEmail}","lifeshield-advantage","llbenefits"
-"##IL","60601","carrier-slaico-","${planname}","${mo}","${uri}","${AutoEmail}","",""
+"IL","60601","lifeshield","${planname}","${mo}","${uri}","${AutoEmail}","lifeshield-flex","tristar"
 "##IL","60601","unitedhealthone","${planname}","${mo}","${uri}","${AutoEmail}","",""
