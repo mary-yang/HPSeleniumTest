@@ -86,7 +86,7 @@
 <tr>
 	<td>assertText</td>
 	<td>css=#stm-pivotcompanion &gt; td.states</td>
-	<td>AL,AR,AZ,FL,GA,IA,ID,IL,IN,KY,LA,MI,MO,MS,NC,NE,NV,OH,OK,OR,PA,TN,TX,VA,WI,WV,WY</td>
+	<td>AL,AR,AZ,DE,FL,GA,IA,ID,IL,IN,KY,LA,MI,MO,MS,NC,NE,NV,OH,OK,OR,PA,TN,TX,VA,WI,WV,WY</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -96,7 +96,7 @@
 <tr>
 	<td>assertText</td>
 	<td>css=#stm-everest-one &gt; td.states</td>
-	<td>ID,ME,MN,NE,NH,OR,SD,WI,WV</td>
+	<td>ID,ME,NE,OR,SD,WI,WV</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -106,7 +106,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>css=#stm-everest &gt; td.states</td>
-        <td>AL,AR,AZ,FL,GA,ID,IL,IN,LA,MN,MO,MS,NC,ND,NE,NH,NV,OH,OK,OR,PA,SC,SD,TN,TX,WI,WV,WY</td>
+        <td>AL,AR,AZ,FL,GA,ID,IL,IN,LA,MO,MS,NC,ND,NE,NV,OH,OK,OR,PA,SC,SD,TN,TX,WI,WV,WY</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -116,7 +116,7 @@
 <tr>
 	<td>assertText</td>
 	<td>css=#stm-lifeshield &gt; td.states</td>
-	<td>AL,AR,AZ,FL,GA,IL,IN,KY,LA,MO,MS,NC,NV,OK,PA,SC,SD,TN,TX,WV</td>
+	<td>AL,AR,AZ,FL,GA,IL,KY,LA,MO,MS,NC,NV,OK,PA,SC,SD,TN,TX,WV</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -126,7 +126,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>css=#stm-nationalgeneral &gt; td.states</td>
-	<td>AL,AR,AZ,DC,FL,GA,IA,IL,KS,KY,LA,MD,MI,MO,MS,MT,NC,NE,NM,NV,OH,OK,OR,SC,SD,TN,TX,UT,VA,WI,WV,WY</td>
+	<td>AL,AR,AZ,DC,FL,GA,IA,IL,KS,KY,LA,MD,MI,MO,MS,MT,NC,NE,NV,OH,OK,OR,SC,SD,TN,TX,UT,VA,WI,WV,WY</td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
@@ -172,7 +172,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>css=#hbi-legion &gt; td.states</td>
-	<td>AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,IL,IN,IA,KY,LA,MI,MN,MS,NE,NM,OH,PA,SC,TN,TX,VA,WV,WI,WY</td>
+	<td>AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,IL,IN,IA,KY,LA,MI,MN,MS,NE,NM,OH,PA,SC,TN,TX,VT,VA,WV,WI,WY</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -372,11 +372,27 @@
 </tr>
 <!-------------------------------       sthi        ------------------------------------>
 <tr>
-	<td>verifyText</td>
-	<td>//tr[@id='stm-nationalgeneral-sthi']/td[5]</td>
-	<td>sthi</td>
+        <td>mouseDown</td>
+        <td>css=#s2id_affiliates-stm b</td>
+        <td></td>
 </tr>
 <tr>
+        <td>clickAt</td>
+        <td>//*[@id='select2-drop']/ul/li[5]/div</td>
+        <td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='s2id_affiliates-stm']/a/span</td>
+	<td>sthi</td>
+</tr>
+
 	<td>verifyText</td>
 	<td>css=#stm-nationalgeneral-sthi &gt; td.carrier</td>
 	<td>National General</td>
@@ -388,7 +404,7 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//tr[@id='stm-unitedhealthone-sthi']/td[5]</td>
+	<td>//tr[@id='stm-unitedhealthone-sthi']/td[6]</td>
 	<td>sthi</td>
 </tr>
 <tr>
@@ -403,7 +419,7 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//tr[@id='stm-everest-sthi']/td[5]</td>
+	<td>//tr[@id='stm-everest-sthi']/td[6]</td>
 	<td>sthi</td>
 </tr>
 <tr>
@@ -418,7 +434,7 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//tr[@id='stm-everest-one-sthi']/td[5]</td>
+	<td>//tr[@id='stm-everest-one-sthi']/td[6]</td>
 	<td>sthi</td>
 </tr>
 <tr>
@@ -433,7 +449,7 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//tr[@id='stm-pivotcompanion-sthi']/td[5]</td>
+	<td>//tr[@id='stm-pivotcompanion-sthi']/td[6]</td>
 	<td>sthi</td>
 </tr>
 <tr>
@@ -448,7 +464,7 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//tr[@id='stm-advanthealth-sthi']/td[5]</td>
+	<td>//tr[@id='stm-advanthealth-sthi']/td[6]</td>
 	<td>sthi</td>
 </tr>
 <tr>
@@ -463,7 +479,7 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//tr[@id='stm-lifeshield-sthi']/td[5]</td>
+	<td>//tr[@id='stm-lifeshield-sthi']/td[6]</td>
 	<td>sthi</td>
 </tr>
 <tr>
@@ -478,7 +494,7 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//tr[@id='stm-slaico-sthi']/td[5]</td>
+	<td>//tr[@id='stm-slaico-sthi']/td[6]</td>
 	<td>sthi</td>
 </tr>
 <tr>
@@ -492,179 +508,13 @@
 	<td>No Available</td>
 </tr>
 
-<!-----------------------llbenefits-----------------
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-everest-one-llbenefits &gt; td.carrier</td>
-	<td>Everest</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='stm-everest-one-llbenefits']/td[5]</td>
-	<td>llbenefits</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-everest-one-llbenefits &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-everest-llbenefits &gt; td.carrier</td>
-	<td>Everest Prime</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='stm-everest-llbenefits']/td[5]</td>
-	<td>llbenefits</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-everest-llbenefits &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-nationalgeneral-llbenefits &gt; td.carrier</td>
-	<td>National General</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='stm-nationalgeneral-llbenefits']/td[5]</td>
-	<td>llbenefits</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-nationalgeneral-llbenefits &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-unitedhealthone-llbenefits &gt; td.carrier</td>
-	<td>UnitedHealthcare</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='stm-unitedhealthone-llbenefits']/td[5]</td>
-	<td>llbenefits</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#stm-unitedhealthone-llbenefits &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='hbi-protector360-llbenefits']/td[5]</td>
-	<td>llbenefits</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#hbi-protector360-llbenefits &gt; td.carrier</td>
-	<td>Protector</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#hbi-protector360-llbenefits &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='hbi-coreshield-llbenefits']/td[5]</td>
-	<td>llbenefits</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#hbi-coreshield-llbenefits &gt; td.carrier</td>
-	<td>Core Shield</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#hbi-coreshield-llbenefits &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='hbi-slaicohbi-llbenefits']/td[5]</td>
-	<td>llbenefits</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#hbi-slaicohbi-llbenefits &gt; td.carrier</td>
-	<td>Fixed Cash Benefit</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#hbi-slaicohbi-llbenefits &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='hbi-agileone-llbenefits']/td[5]</td>
-	<td>llbenefits</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#hbi-agileone-llbenefits &gt; td.carrier</td>
-	<td>Agile One</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#hbi-agileone-llbenefits &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='hbi-agilesecure-llbenefits']/td[5]</td>
-	<td>llbenefits</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#hbi-agilesecure-llbenefits &gt; td.carrier</td>
-	<td>Agile Secure</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#hbi-agilesecure-llbenefits &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='hbi-legion-llbenefits']/td[5]</td>
-	<td>llbenefits</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#hbi-legion-llbenefits &gt; td.carrier</td>
-	<td>Legion Limited Medical</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#hbi-legion-llbenefits &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tr[@id='hbi-cardinalchoice-llbenefits']/td[5]</td>
-	<td>llbenefits</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#hbi-cardinalchoice-llbenefits &gt; td.carrier</td>
-	<td>Cardinal Choice</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#hbi-cardinalchoice-llbenefits &gt; td.states</td>
-	<td>No Available</td>
-</tr>
-
--------------------->
-
 
 </tbody></table>
 </body>
 </html>
+	
+	
+	
 	
 	
 	
