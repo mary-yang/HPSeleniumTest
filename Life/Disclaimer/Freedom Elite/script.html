@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/sofee/AgileLifeInsurance/Life - T and A - Freedom Elite</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Life/Disclaimer/Freedom Elite</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -17,13 +17,22 @@ sanity4/24</td>
 	<td>AHI/Include/Open website</td>
 	<td></td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${LifeGeneralDisclaimer}</td>
+</tr>
 <!-----------------------------Census page------------------------------------------->
 <tr>
 	<td>clickAndWait</td>
 	<td>id=primaryCTA</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${LifeGeneralDisclaimer}</td>
+</tr>
 <tr>
 	<td>sendKeys</td>
 	<td>id=zip-input</td>
@@ -57,12 +66,17 @@ sanity4/24</td>
 <!------------------quote page disclaimer----------------------------->
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[1]</td>
-	<td>${AmalgamatedLifeDisclaimer}</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${LifeGeneralDisclaimer}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='disclaimer-container']/div[2]</td>
+	<td>${AmalgamatedLifeDisclaimer}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[3]</td>
 	<td>${FederalDisclaimer}</td>
 </tr>
 
@@ -74,7 +88,12 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[1]</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${LifeGeneralDisclaimer}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
 	<td>${AmalgamatedLifeDisclaimer}</td>
 </tr>
 <tr>
@@ -90,7 +109,12 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[1]</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${LifeGeneralDisclaimer}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
 	<td>${AmalgamatedLifeDisclaimer}</td>
 </tr>
 
@@ -107,7 +131,12 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[1]</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${LifeGeneralDisclaimer}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
 	<td>${AmalgamatedLifeDisclaimer}</td>
 </tr>
 
@@ -136,6 +165,7 @@ sanity4/24</td>
 	<td>id=member-P-1-m</td>
 	<td></td>
 </tr>
+<!--------------------------------
 <tr>
 	<td>select</td>
 	<td>id=member-P-1-ft</td>
@@ -151,7 +181,7 @@ sanity4/24</td>
 	<td>id=member-P-1-lbs</td>
 	<td>100</td>
 </tr>
-
+------------------------------------------>
 <tr>
 	<td>type</td>
 	<td>id=primary-beneficiary-first-name</td>
@@ -211,7 +241,12 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[1]</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${LifeGeneralDisclaimer}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
 	<td>${AmalgamatedLifeDisclaimer}</td>
 </tr>
 
@@ -220,10 +255,14 @@ sanity4/24</td>
 	<td>AHI/Include/UseByPassCard</td>
 	<td></td>
 </tr>
-
 <tr>
 	<td>verifyText</td>
-	<td>//div[@id='disclaimer-container']/div[1]</td>
+	<td>//div[@id='disclaimer-container']/div</td>
+	<td>${LifeGeneralDisclaimer}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='disclaimer-container']/div[2]</td>
 	<td>${AmalgamatedLifeDisclaimer}</td>
 </tr>
 
@@ -477,6 +516,10 @@ I am signing up for an automatic payment plan. I agree that AgileLifeInsurance o
 	
 	
 	
+	
+	
+	
+
 	
 	
 	
