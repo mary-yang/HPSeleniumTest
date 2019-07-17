@@ -1,7 +1,7 @@
 "state","zipcode","carrierid","uri","AutoEmail","status","productId","PLID"
 "AL","35215","advanthealth","${uri}","${AutoEmail}","${status}","advanthealth-plan-1","llbenefits"
 "##AK","99504","advanthealth","${uri}","${AutoEmail}","${status}","",""
-"##AR","72209","advanthealth","${uri}","${AutoEmail}","${status}","",""
+"AR","72209","advanthealth","${uri}","${AutoEmail}","${status}","advanthealth-plan-2","tristar"
 "AZ","85364","advanthealth","${uri}","${AutoEmail}","${status}","advanthealth-plan-1","spark"
 "##CA","90011","lifeshield","${uri}","${AutoEmail}","${status}","",""
 "CO","80219","lifeshield","${uri}","${AutoEmail}","${status}","advanthealth-plan-1","hifa"

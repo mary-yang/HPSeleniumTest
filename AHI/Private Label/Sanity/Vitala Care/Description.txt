@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Test Goal: Submit HII applications on testprod, including HCC Advantage, HCC Flexible, and Companion.
 
 Steps:
@@ -16,3 +17,7 @@ Steps:
 
 Prod enabled states:
 AL,AZ,CO,DE,HI,IA,IL,IN,KY,LA,MS,ND,NE,NJ,NM,NV,OH,OK,OR,PA,RI,SC,TX,VA,VT,WI,WV,WY
+=======
+Health Choice+ and Vitala Care T&A:
+https://docs.google.com/spreadsheets/d/1-eXycrgTwVkpgUtR-QqZRZ1gzaQYiTDlsR6FyROd7J0/edit#gid=1418805157
+>>>>>>> 82197a29f643f11bda9e9e54fa5be3ec10149ede
