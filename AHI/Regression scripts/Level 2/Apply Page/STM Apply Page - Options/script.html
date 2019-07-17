@@ -94,11 +94,13 @@ sanity4/24</td>
 	<td>//table[@class='c-price-table']/tbody/tr[3]/td[2]</td>
 	<td>monthlyFee</td>
 </tr>
+<!---------------
 <tr>
 	<td>storeText</td>
 	<td>//h4[@class='c-addon__h' and text()='Extended Coverage Option']/following::div/div[4]/div</td>
 	<td>extendedPrice</td>
 </tr>
+------------------->
 <tr>
 	<td>storeText</td>
 	<td>//h4[@class='c-addon__h' and text()='Coverage Option']/following::div/div[4]/div</td>
@@ -114,11 +116,13 @@ sanity4/24</td>
 	<td>//h4[@class='c-addon__h' and text()='Dental Option']/following::div/div[4]/div</td>
 	<td>dentalPrice</td>
 </tr>
+<!----------------------
 <tr>
 	<td>storeEval</td>
 	<td>'${extendedPrice}'.match(/\d+.\d+/)</td>
 	<td>extendedPrice</td>
 </tr>
+------------------>
 <tr>
 	<td>storeEval</td>
 	<td>'${waiverPrice}'.match(/\d+.\d+/)</td>
@@ -179,16 +183,7 @@ sanity4/24</td>
 	<td>${dentalPrice}</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//div/a[contains(text(),'Coverage Duration')]/following::div</td>
-	<td>6 Months</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//span[@class='c-price-table__gray' and text()='Extended Coverage Option']/following::tr</td>
-	<td>None$0</td>
-</tr>
+
 <tr>
 	<td>verifyText</td>
 	<td>//span[@class='c-price-table__gray' and text()='Telemedicine Benefits']/following::tr</td>
@@ -202,6 +197,7 @@ sanity4/24</td>
 <!--------------------Apply Page- change options-------------------->
 
 <!------------------extended coverage----------------------------------->
+<!----------------------
 <tr>
 	<td>click</td>
 	<td>css=button.js-add-extended.c-addon__add-button</td>
@@ -212,6 +208,7 @@ sanity4/24</td>
 	<td>1000</td>
 	<td></td>
 </tr>
+
 <tr>
 	<td>verifyVisible</td>
 	<td>//h4[text()='Coverage Option']</td>
@@ -242,6 +239,7 @@ sanity4/24</td>
 	<td>//span[@class='c-price-table__gray' and text()='Dental Benefits']/following::tr</td>
 	<td>None$0</td>
 </tr>
+------------->
 <!---------------------pre-existing waiver------------------------------------------------->
 <tr>
 	<td>click</td>
@@ -315,7 +313,7 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>storeEval</td>
-	<td>var total = Number('${monthlyPremium}')+Number('${monthlyFee}')+Number('${extendedPrice}')+Number('${waiverPrice}')+Number('${teladocPrice}')+Number('${dentalPrice}'); total.toFixed(2);</td>
+	<td>var total = Number('${monthlyPremium}')+Number('${monthlyFee}')+Number('${waiverPrice}')+Number('${teladocPrice}')+Number('${dentalPrice}'); total.toFixed(2);</td>
 	<td>total</td>
 </tr>
 <tr>
@@ -400,6 +398,8 @@ sanity4/24</td>
 	
 	
 
+	
+	
 	
 	
 	

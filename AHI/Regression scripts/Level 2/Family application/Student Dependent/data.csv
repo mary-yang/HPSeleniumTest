@@ -1,5 +1,5 @@
 "state","zip","carrierid","uri","productId"
 "##FL","32099","carrier-hccadvantage-","${uri}",""
 "##FL","32099","carrier-hccflexible-","${uri}",""
-"LA","70816","everest","${uri}","everest-prime-stm"
-"##FL","32099","carrier-premierstm-","${uri}",""
+"##LA","70816","everest","${uri}","everest-prime-stm"
+"KY","40214","everest","${uri}","everest-prime-stm"
