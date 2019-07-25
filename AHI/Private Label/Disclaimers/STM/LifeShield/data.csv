@@ -1,5 +1,5 @@
 "state","zipcode","carrierid","planname","General Disclaimers","ACA TAX","Consent to Electronic Transactions","FW","productId","PLID","PL_CN"
-"##AL","35215","lifeshield","${planname}","${GeneralDisclaimers}","${ACATAX}","${CET}","${FW}","lifeshield-advantage","",""
+"AL","35215","lifeshield","${planname}","${GeneralDisclaimers}","${ACATAX}","${CET}","${FW}","lifeshield-advantage","ica","ica"
 "##AK","99504","carrier-lifeshieldt-","${planname}","${GeneralDisclaimers}","${ACATAX}","${CET}","${FW}","","",""
 "##AR","72209","carrier-everest-","${planname}","${GeneralDisclaimers}","${ACATAX}","${CET}","${FW}","","",""
 "AZ","85364","lifeshield","${planname}","${GeneralDisclaimers}","${ACATAX}","${CET}","${FW}","lifeshield-advantage","spark","Spark"
