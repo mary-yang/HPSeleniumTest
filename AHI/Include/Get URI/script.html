@@ -7,21 +7,44 @@
 	<td>url</td>
 	<td></td>
 </tr>
-<!-----------
+
 <tr>
 	<td>storeEval</td>
-	<td>&quot;${url}&quot;.substr(0,&quot;${url}&quot;.indexOf(&quot;?&quot;))</td>
-	<td>url</td>
+	<td>var b;b="${url}".match("test[^/^?]+")</td>
+	<td>uri</td>
 </tr>
------------------->
+<!-----------
+<tr>
+	<td>IF</td>
+	<td>("${ENV}"=="https://praetemptatus.agilehealthinsurance.com")</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var b;b="${url}".match("test[^?]+")</td>
+	<td>uri</td>
+</tr>
+<tr>
+	<td>ELSE</td>
+	<td></td>
+	<td></td>
+</tr>
 <tr>
 	<td>storeEval</td>
 	<td>var b;b="${url}".match("test[^/]+")</td>
 	<td>uri</td>
 </tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+	<td></td>
+</tr>
+------------------>
 </tbody></table>
 </body>
 </html>
+	
+	
 	
 	
 	
