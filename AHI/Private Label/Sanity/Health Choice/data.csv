@@ -6,7 +6,7 @@
 "##California","CA","90011","03/06/1980","${uri}","ca","spark"
 "##Colorado","CO","80219","03/06/1980","${uri}","co","spark"
 "##Connecticut","CT","06606","03/06/1980","${uri}","ct","spark"
-"Delaware","DE","19805","03/06/1980","${uri}","de","tristar"
+"##Delaware","DE","19805","03/06/1980","${uri}","de","tristar"
 "##District Of Columbia","DC","20015","03/06/1980","${uri}","dc","spark"
 "##Florida","FL","33186","03/06/1980","${uri}","fl","spark"
 "##Georgia","GA","30044","03/06/1980","${uri}","ga","spark"

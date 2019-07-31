@@ -9,7 +9,7 @@
 "##DE","19805","lifeshield","${uri}","${AutoEmail}","${status}","",""
 "##DC","20015","lifeshield","${uri}","${AutoEmail}","${status}","",""
 "FL","33186","lifeshield","${uri}","${AutoEmail}","${status}","lifeshield-advantage","llbenefits"
-"GA","30044","lifeshield","${uri}","${AutoEmail}","${status}","lifeshield-advantage","tristar"
+"##GA","30044","lifeshield","${uri}","${AutoEmail}","${status}","lifeshield-advantage","tristar"
 "##HI","96818","lifeshield","${uri}","${AutoEmail}","${status}","",""
 "##IA","50317","lifeshield","${uri}","${AutoEmail}","${status}","",""
 "##ID","83709","lifeshield","${uri}","${AutoEmail}","${status}","",""

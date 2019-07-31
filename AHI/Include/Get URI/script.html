@@ -2,26 +2,35 @@
 <thead>
 <tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
+
 <tr>
 	<td>storeLocation</td>
 	<td>url</td>
 	<td></td>
 </tr>
-<!-----------
+
+
 <tr>
 	<td>storeEval</td>
 	<td>&quot;${url}&quot;.substr(0,&quot;${url}&quot;.indexOf(&quot;?&quot;))</td>
 	<td>url</td>
 </tr>
------------------->
+
 <tr>
 	<td>storeEval</td>
 	<td>var b;b="${url}".match("test[^/]+")</td>
 	<td>uri</td>
 </tr>
+<tr>
+	<td>echo</td>
+	<td>${uri}</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
+	
+	
 	
 	
 	
