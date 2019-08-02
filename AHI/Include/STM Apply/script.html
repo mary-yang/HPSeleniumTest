@@ -6,25 +6,6 @@ sanity4/24</td>
 </tr>
 	</thead>
 	<tbody>
-<!----------------
-<tr>
-    <td>IF</td>
-    <td>verifyElementPresent(&quot;xpath=//label[@id='js-see-plans']&quot;)</td>
-    <td></td>
-</tr>
-
-<tr>
-	<td>click</td>
-	<td>xpath=//label[@id='js-see-plans']</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
---------------------->
 
 <!--------------------Apply  Page--------------------->
 <tr>
@@ -42,13 +23,6 @@ sanity4/24</td>
 	<td>//div[@id='js-sidebar']/div/table/tbody/tr[2]/td[2]</td>
 	<td>$${mo}</td>
 </tr>
-
-
-<tr>
-	<td>clickAndWait</td>
-	<td>css=span.js-apply-text.apply-button-text</td>
-	<td></td>
-</tr>
 <tr>
     <td>ELSE</td>
     <td></td>
@@ -59,19 +33,31 @@ sanity4/24</td>
 	<td>'${mo}'.match(/\d+.\d+/)</td>
 	<td>mo1</td>
 </tr>
-
-<tr>
-	<td>clickAndWait</td>
-	<td>id=applyButton</td>
-	<td></td>
-</tr>
 <tr>
     <td>ENDIF</td>
     <td></td>
     <td></td>
 </tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@id='applyButton']/span[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
 	</tbody>
 </table>	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

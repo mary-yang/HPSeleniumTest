@@ -178,91 +178,11 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <tr>
-  <td>IF</td>
-  <td>verifyElementPresent('id=i-acknowledge')</td>
-  <td></td>
-</tr>
-<tr>
-  <td>verifyText</td>
-  <td>css=h2.c-consecutive-modal__header</td>
-  <td>* Month Duration Acknowledgement</td>
-</tr>
-<tr>
-  <td>click</td>
-  <td>id=i-acknowledge</td>
-  <td></td>
-</tr>
-<tr>
-  <td>clickAndWait</td>
-  <td>css=button.c-consecutive-modal__continue</td>
-  <td></td>
-</tr>
-<tr>
-  <td>ENDIF</td>
-  <td></td>
-  <td></td>
-</tr>
-<tr>
 	<td>include</td>
-	<td>AHI/Include/Underwriting</td>
-	<td></td>
-</tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Name</td>
-	<td></td>
-</tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Get URI</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[1]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[2]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[3]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[4]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[5]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//form/div/div/div/div/div/div[2]/div/div/div[2]/div/div/ul/li[6]/div/button[1]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>AHI/Include/stmConsecutiveAcknowledge</td>
 	<td></td>
 </tr>
 
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
 <tr>
 	<td>verifyText</td>
 	<td>css=div.disclaimer-text.</td>
@@ -280,26 +200,21 @@ sanity4/24</td>
 </tr>
 
 <tr>
-	<td>IF</td>
-	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
+	<td>include</td>
+	<td>AHI/Include/stmUnderWriting</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>id=js-app-continue-link</td>
+	<td>include</td>
+	<td>AHI/Include/Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Get URI</td>
 	<td></td>
 </tr>
 
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
-	<td></td>
-</tr>
 <!-----------------------------application pages------------------------------------------->
 
 
@@ -602,6 +517,8 @@ sanity4/24</td>
 	
 	
 
+	
+	
 	
 	
 	

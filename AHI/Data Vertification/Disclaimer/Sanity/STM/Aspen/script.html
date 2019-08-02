@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Test/sofee/Aspen/Aspen - disclaimer</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Data Vertification/Disclaimer/Sanity/STM/Aspen</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -176,6 +176,11 @@ sanity4/24</td>
 </tr>
 <tr>
 	<td>include</td>
+	<td>AHI/Include/stmConsecutiveAcknowledge</td>
+	<td></td>
+</tr>
+<tr>
+	<td>include</td>
 	<td>AHI/Include/Name</td>
 	<td></td>
 </tr>
@@ -184,11 +189,7 @@ sanity4/24</td>
 	<td>AHI/Include/Get URI</td>
 	<td></td>
 </tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/STM App Page 1</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>verifyText</td>
 	<td>css=div.disclaimer-text.</td>
@@ -204,7 +205,11 @@ sanity4/24</td>
 	<td>//div[@id='disclaimer-container']/div[3]</td>
 	<td>${ACANOTICE}</td>
 </tr>
-
+<tr>
+	<td>include</td>
+	<td>AHI/Include/stmUnderWriting</td>
+	<td></td>
+</tr>
 <tr>
 	<td>IF</td>
 	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
@@ -591,4 +596,6 @@ sanity4/24</td>
 
 	
 	
+	
+
 	
