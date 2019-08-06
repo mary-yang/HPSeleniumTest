@@ -1,0 +1,39 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Private Label/Fees</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+
+
+<tr>
+	<td>store</td>
+	<td>http://34.224.222.4/workspace/report/${PLID}/fee</td>
+	<td>Report_URL</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${Report_URL}/?C=M;O=D</td>
+	<td></td>
+</tr>
+<tr>
+  <td>clickAndWait</td>
+  <td>//table/tbody/tr[4]/td[2]/a</td>
+  <td></td>
+</tr>
+<tr>
+  <td>pause</td>
+  <td>1000</td>
+  <td></td>
+</tr>
+<tr>
+  <td>verifyElementNotPresent</td>
+  <td>//tr[bgcolor="FF0000"]</td>
+  <td></td>
+</tr>
+	
+	
+	
+	

@@ -1,0 +1,529 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Inventory Check/STM Inventroy/all states/All States -Over 6 months - Limited</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+<tr>
+	<td colspan="3" rowspan="1">
+sanity4/24</td>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td>open</td>
+	<td>https://www.agilehealthinsurance.com/api/context/clear</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Open website</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Quote &amp; Save Today</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.js-zip.census-zip-input</td>
+	<td>${zipcode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='census-member-section-0']/div/div/div[2]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>id=dob-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=dob-0</td>
+	<td>01/01/1975</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=dob-0</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.census-radio &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='js-see-plans']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>quoteUrl</td>
+	<td></td>
+</tr>
+<tr>
+	<td>openAndWait</td>
+	<td>${quoteUrl}&_ga_variation=2</td>
+	<td></td>
+</tr>
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;css=h1.c-quote-v3-heading.reset.pull-left&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>planCount</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${planCount}'.match(/\d+/);</td>
+	<td>planCount</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<!-----------aspen--------------------------------------->
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//input[@name='filter[carrier]' and @value='aspen' and @type='checkbox']&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@name='filter[carrier]' and @value='aspen' and @type='checkbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>aspen</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${aspen}'.match(/\d+/);</td>
+	<td>aspen</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='aspen' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
+	<td>aspen</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<!-----------advanthealth--------------------------------------->
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//input[@name='filter[carrier]' and @value='advanthealth' and @type='checkbox']&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@name='filter[carrier]' and @value='advanthealth' and @type='checkbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>advanthealth</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${advanthealth}'.match(/\d+/);</td>
+	<td>advanthealth</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='advanthealth' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
+	<td>advanthealth</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<!-----------companion --------------------------------------->
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//input[@name='filter[carrier]' and @value='pivotcompanion' and @type='checkbox']&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@name='filter[carrier]' and @value='pivotcompanion' and @type='checkbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>pivotcompanion</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${pivotcompanion}'.match(/\d+/);</td>
+	<td>pivotcompanion</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='pivotcompanion' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
+	<td>pivotcompanion</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<!-----------everest prime--------------------------------------->
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//input[@name='filter[carrier]' and @value='everest' and @type='checkbox']&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@name='filter[carrier]' and @value='everest' and @type='checkbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>everest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${everest}'.match(/\d+/);</td>
+	<td>everest</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='everest' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
+	<td>everest</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<!-----------everest--------------------------------------->
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//input[@name='filter[carrier]' and @value='everest-one' and @type='checkbox']&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@name='filter[carrier]' and @value='everest-one' and @type='checkbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>everestone</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${everestone}'.match(/\d+/);</td>
+	<td>everestone</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='everest-one' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
+	<td>everestone</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<!-----------lifeshield--------------------------------------->
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//input[@name='filter[carrier]' and @value='lifeshield' and @type='checkbox']&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@name='filter[carrier]' and @value='lifeshield' and @type='checkbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>lifeshield</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${lifeshield}'.match(/\d+/);</td>
+	<td>lifeshield</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='lifeshield' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
+	<td>lifeshield</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<!-----------nationalgeneral--------------------------------------->
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//input[@name='filter[carrier]' and @value='nationalgeneral' and @type='checkbox']&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@name='filter[carrier]' and @value='nationalgeneral' and @type='checkbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>nationalgeneral</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${nationalgeneral}'.match(/\d+/);</td>
+	<td>nationalgeneral</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='nationalgeneral' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
+	<td>nationalgeneral</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<!-----------slaico--------------------------------------->
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//input[@name='filter[carrier]' and @value='slaico' and @type='checkbox']&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@name='filter[carrier]' and @value='slaico' and @type='checkbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>slaico</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${slaico}'.match(/\d+/);</td>
+	<td>slaico</td>
+</tr>
+<tr>
+    <td>ELSE</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@data-id='slaico' and contains(@class,'c-plan-unit-v3 h-relative js-plan-unit')]</td>
+	<td>slaico</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+<!-----------unitedhealthone-----------------
+<tr>
+    <td>IF</td>
+    <td>verifyElementPresent(&quot;//input[@name='filter[carrier]' and @value='unitedhealthone' and @type='checkbox']&quot;)</td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@name='filter[carrier]' and @value='unitedhealthone' and @type='checkbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h1.c-quote-v3-heading.reset.pull-left</td>
+	<td>unitedhealthone</td>
+</tr>
+<tr>
+    <td>ENDIF</td>
+    <td></td>
+    <td></td>
+</tr>
+---------------------->
+</tbody></table>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
