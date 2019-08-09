@@ -102,16 +102,69 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <!--------------------App Pages--------------------->
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Underwriting</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Name</td>
 	<td></td>
 </tr>
+
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.reset.app-page-heading</td>
+	<td>Step 1. Applicant Info</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@value='']</td>
+	<td>Test-123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=member-P-1-lastName</td>
+	<td>${LastName}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-ft</td>
+	<td>label=07</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=member-P-1-in</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=member-P-1-lbs</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>${Add}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>${AutoEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>${City}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=primaryPhone</td>
+	<td>${Tel}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Get URI</td>
@@ -187,61 +240,7 @@ sanity4/24</td>
 	<td></td>
 	<td></td>
 </tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=h3.reset.app-page-heading</td>
-	<td>Step 2. Applicant Info</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>//input[@value='']</td>
-	<td>Test-123</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=member-P-1-lastName</td>
-	<td>${LastName}</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=member-P-1-ft</td>
-	<td>label=07</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=member-P-1-in</td>
-	<td>label=08</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=member-P-1-lbs</td>
-	<td>100</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=address</td>
-	<td>${Add}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=email</td>
-	<td>${AutoEmail}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=city</td>
-	<td>${City}</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=primaryPhone</td>
-	<td>${Tel}</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/UseByPassCard</td>
@@ -355,6 +354,7 @@ sanity4/24</td>
 	
 	
 
+	
 	
 	
 	

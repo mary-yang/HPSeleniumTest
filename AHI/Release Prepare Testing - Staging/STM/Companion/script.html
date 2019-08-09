@@ -174,67 +174,17 @@ sanity4/24</td>
 	<td></td>
 </tr>
 <!--------------------App Pages--------------------->
-<tr>
-	<td>include</td>
-<<<<<<< HEAD
-	<td>AHI/Include/STM App Page 1</td>
-=======
-	<td>AHI/Include/Underwriting</td>
-	<td></td>
-</tr>
+
 <tr>
 	<td>include</td>
 	<td>AHI/Include/Name</td>
 	<td></td>
 </tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/Get URI</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeXpathCount</td>
-	<td>xpath=//li[contains(@id,'js-question-')]</td>
-	<td>num</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${num}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>writeSeleniumScript</td>
-	<td>for(i=1;i<=${num};i++){
-    writeSelenium("click","xpath=//li[contains(@id,'js-question-')]["+i+"]/div/button");
-}</td>
-	<td></td>
-</tr>
 
-<tr>
-	<td>IF</td>
-	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=js-app-continue-link</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>ENDIF</td>
-	<td></td>
->>>>>>> a2032e2bba9447b5ab8d85020690cbe4ed59026b
-	<td></td>
-</tr>
 <tr>
 	<td>waitForText</td>
 	<td>css=h3.reset.app-page-heading</td>
-	<td>Step 2. Applicant Info</td>
+	<td>Step 1. Applicant Info</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -341,8 +291,6 @@ sanity4/24</td>
 	<td>150</td>
 </tr>
 
-
-
 <tr>
 	<td>type</td>
 	<td>id=address</td>
@@ -368,6 +316,52 @@ sanity4/24</td>
 	<td>id=js-app-continue-link</td>
 	<td></td>
 </tr>
+
+<tr>
+	<td>include</td>
+	<td>AHI/Include/Get URI</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=//li[contains(@id,'js-question-')]</td>
+	<td>num</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${num}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>writeSeleniumScript</td>
+	<td>for(i=1;i<=${num};i++){
+    writeSelenium("click","xpath=//li[contains(@id,'js-question-')]["+i+"]/div/button");
+}</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>IF</td>
+	<td>verifyElementPresent('xpath=//*[@id="js-app-page-eligibile"][@class="app-page-cta-container"]')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ENDIF</td>
+	<td></td>
+>>>>>>> a2032e2bba9447b5ab8d85020690cbe4ed59026b
+	<td></td>
+</tr>
+
 <tr>
 	<td>type</td>
 	<td>id=credit-card-number</td>
@@ -469,6 +463,8 @@ sanity4/24</td>
 	
 	
 
+	
+	
 	
 	
 	
