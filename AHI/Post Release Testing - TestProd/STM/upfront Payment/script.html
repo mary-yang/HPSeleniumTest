@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Post Release Testing - TestProd/STM/upfront Payment</title></head><body><table border="1" cellpadding="1" cellspacing="1">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AHI/Release Prepare Testing - Staging/STM/upfront Payment</title></head><body><table border="1" cellpadding="1" cellspacing="1">
 	<thead>
 <tr>
 	<td colspan="3" rowspan="1">
@@ -136,16 +136,13 @@ sanity4/24</td>
 	<td></td>
 </tr>
 
+<!--------------------Apply Page--------------------->
 <tr>
 	<td>include</td>
 	<td>AHI/Include/STM Apply</td>
 	<td></td>
 </tr>
-<tr>
-	<td>include</td>
-	<td>AHI/Include/STM App Page 1</td>
-	<td></td>
-</tr>
+<!--------------------App Pages--------------------->
 
 <tr>
 	<td>include</td>
@@ -159,10 +156,11 @@ sanity4/24</td>
 </tr>
 
 
+
 <tr>
 	<td>waitForText</td>
 	<td>css=h3.reset.app-page-heading</td>
-	<td>Step 2. Applicant Info</td>
+	<td>Step 1. Applicant Info</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -219,6 +217,54 @@ sanity4/24</td>
 	<td>2000</td>
 	<td></td>
 </tr>
+
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-2829']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-2827']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-2828']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-2834']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-2833']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-2830.2831']/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='js-question-P0-2830.2832']/div/button</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>clickAndWait</td>
+	<td>id=js-app-continue-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+
 <tr>
 	<td>verifyText</td>
 	<td>//div[@id='js-app-page-body-content']/h3</td>
@@ -352,13 +398,5 @@ sanity4/24</td>
 	
 	
 	
-	
-	
-<<<<<<< HEAD
-	
-	
-	
-=======
->>>>>>> 64c2e7f4cbf8fe5df098083e388c16b5293f8f87
 	
 	
